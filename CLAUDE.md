@@ -1,6 +1,6 @@
 # JC OS — Juan Cruz's Personal Operating System
 
-> This is the schema layer. Claude reads this file automatically at session start. It defines who Juan is, how the wiki works, and every workflow.
+> This is the root schema. Claude reads this file automatically at session start. It routes between two spaces and defines shared rules.
 
 ## About Juan Cruz
 - **Based in:** Madrid, Spain (originally from Argentina)
@@ -11,26 +11,57 @@
 - **Time zone:** CET/CEST — company is US-based, Juan works across time zones
 - **Languages:** Spanish (native), English (professional)
 
-## Three-Layer Architecture
+## Two Spaces
+
+JC OS is split into two spaces. Read the relevant index before drilling into pages.
+
+### life/ — Professional & Personal
+Career, role, team, projects, learning, goals, finances, personal development. Everything about who Juan is and what he's building.
+
+- **Index:** `life/wiki/index.md`
+- **Wiki:** `life/wiki/` — identity, professional context, projects, learning tracks
+- **Raw:** `life/raw/` — articles, notes, screenshots, data
+- **Memory:** `life/memory/` — log and compiled knowledge
+
+### content/ — Content & Exploration
+Ideas for content Juan wants to create, topics to explore, research for articles/posts/videos, drafts, references. The creative workshop.
+
+- **Index:** `content/wiki/index.md`
+- **Wiki:** `content/wiki/` — topic pages, content ideas, research
+- **Raw:** `content/raw/` — reference articles, inspiration, drafts
+- **Memory:** `content/memory/` — log of content activity
+
+## Architecture
 
 ```
 JCG-OS/
-├── raw/                    # Layer 1: Immutable source documents
-│   ├── articles/           #   Web clips, saved articles
-│   ├── notes/              #   Meeting notes, voice memos, scratch
-│   ├── screenshots/        #   Screenshots, images
-│   └── data/               #   CSVs, exports, datasets
-├── wiki/                   # Layer 2: LLM-compiled wiki
-│   ├── index.md            #   Master catalog — update on every change
-│   ├── identity.md         #   Who Juan is
-│   ├── professional.md     #   Mars Men context, role, team
-│   ├── projects.md         #   Personal/side projects
-│   └── learning.md         #   Active learning tracks
-├── memory/                 # Append-only operational logs
-│   ├── log.md              #   Chronological activity log
-│   └── wiki.md             #   Compiled knowledge topics
-├── CLAUDE.md               # Layer 3: This file — the schema
-├── SETUP.md                # Setup instructions
+├── CLAUDE.md                # This file — root schema
+├── life/                    # Space 1: Professional & Personal
+│   ├── wiki/
+│   │   ├── index.md         #   Master catalog for life/
+│   │   ├── identity.md      #   Who Juan is
+│   │   ├── professional.md  #   Mars Men context, role, team
+│   │   ├── projects.md      #   Personal/side projects
+│   │   └── learning.md      #   Active learning tracks
+│   ├── raw/                 #   Immutable sources
+│   │   ├── articles/
+│   │   ├── notes/
+│   │   ├── screenshots/
+│   │   └── data/
+│   └── memory/
+│       ├── log.md           #   Chronological activity log
+│       └── wiki.md          #   Compiled knowledge topics
+├── content/                 # Space 2: Content & Exploration
+│   ├── wiki/
+│   │   ├── index.md         #   Master catalog for content/
+│   │   └── ...              #   Topic pages, content ideas
+│   ├── raw/
+│   │   ├── articles/        #   Reference material
+│   │   ├── references/      #   Inspiration, examples
+│   │   └── drafts/          #   Work-in-progress drafts
+│   └── memory/
+│       └── log.md           #   Content activity log
+├── SETUP.md
 └── .gitignore
 ```
 
@@ -44,10 +75,11 @@ JCG-OS/
 
 ## Navigation Rules
 1. **Always start here.** Read this CLAUDE.md first.
-2. **Check the index.** Read `wiki/index.md` to find relevant pages — scan descriptions, only open what's needed.
-3. **Read frontmatter first.** Every wiki page starts with YAML frontmatter including a description. Read ONLY the description to decide if you need the full file.
-4. **Follow cross-links.** Pages link to other pages. When a topic spans files, follow the links.
-5. **Keep raw/ immutable.** Read from `raw/` but NEVER modify files there.
+2. **Determine which space.** Is the conversation about life/career/learning or about content/exploration? Route accordingly.
+3. **Check the index.** Read the relevant `wiki/index.md` to find pages — scan descriptions, only open what's needed.
+4. **Read frontmatter first.** Every wiki page has YAML frontmatter with a description. Read ONLY the description to decide if you need the full file.
+5. **Cross-reference between spaces.** Content ideas often draw from professional knowledge. Use `[[life/wiki/page]]` or `[[content/wiki/page]]` to link across spaces.
+6. **Keep raw/ immutable.** Read from `raw/` but NEVER modify files there.
 
 ## Page Conventions
 
@@ -57,7 +89,7 @@ All wiki pages use this frontmatter:
 ---
 title: Page Title
 description: One-line summary for index scanning
-type: identity | professional | project | concept | source-summary | comparison
+type: identity | professional | project | concept | source-summary | comparison | content-idea | topic
 sources: []          # raw/ files referenced, if any
 related: []          # other wiki pages this connects to
 created: YYYY-MM-DD
@@ -70,40 +102,40 @@ confidence: high | medium | low
 
 ### Morning Briefing
 When Juan says "morning briefing" or "what's on my plate":
-1. Read `wiki/index.md` to orient
-2. Read `wiki/professional.md` and `wiki/projects.md` for current priorities
-3. Read `memory/log.md` for recent entries (last 5-7 days)
+1. Read both `life/wiki/index.md` and `content/wiki/index.md`
+2. Read `life/wiki/professional.md` and `life/wiki/projects.md` for priorities
+3. Read `life/memory/log.md` and `content/memory/log.md` for recent entries
 4. Surface: today's priorities + context, what changed since last session
 5. Flag stale entries, open decisions, or "to be filled" sections
 
 ### Ingest Workflow
-When Juan says "ingest [filename]" or drops content into `raw/`:
-1. Read the source file in `raw/`
+When Juan says "ingest [filename]":
+1. Read the source file in the relevant `raw/` folder
 2. Discuss key takeaways with Juan
-3. Create or update relevant wiki pages (a single source might touch 5-15 pages)
-4. Update `wiki/index.md` with any new or changed pages
-5. Append structured entry to `memory/log.md`
+3. Create or update relevant wiki pages (a single source might touch 5-15 pages across both spaces)
+4. Update the relevant `wiki/index.md`
+5. Append structured entry to the relevant `memory/log.md`
 
 ### Query Workflow
 When Juan asks a question:
-1. Read `wiki/index.md` to find relevant pages
+1. Read the relevant `wiki/index.md` to find pages (check both spaces if topic spans them)
 2. Read those pages
 3. Synthesize answer citing wiki pages as `[[page-name]]`
-4. Answers can take different forms depending on the question — a markdown page, a comparison table, a chart, a structured analysis. Pick the format that fits.
-5. **Important: good answers should be filed back into the wiki.** A comparison you ran, an analysis, a connection you discovered — these are valuable and shouldn't disappear into chat history. Offer to file them. This way explorations compound just like ingested sources do.
+4. Answers can take different forms — markdown page, comparison table, chart, structured analysis. Pick the format that fits.
+5. **Good answers should be filed back into the wiki.** Offer to file them. Explorations compound just like ingested sources.
 
 ### Lint Workflow
 When Juan says "lint" or "health check":
 1. Scan for contradictions between pages
-2. Find orphan pages (no inbound links from other pages)
+2. Find orphan pages (no inbound links)
 3. List concepts mentioned 3+ times without their own page
 4. Check for stale claims or "to be filled" placeholders
 5. Suggest questions to investigate or sources to ingest next
-6. Append lint results to `memory/log.md`
+6. Append lint results to the relevant `memory/log.md`
 
 ### Compile Workflow
 When Juan says "compile":
-1. Read recent `memory/log.md` entries
+1. Read recent `memory/log.md` entries from both spaces
 2. Extract recurring patterns, themes, or insights
 3. Create or update topic pages in `memory/wiki.md`
 4. Cross-link with relevant wiki pages
@@ -111,7 +143,7 @@ When Juan says "compile":
 ### Update Protocol
 - **After a conversation:** Claude summarizes what changed -> Juan approves -> Claude writes with today's date
 - **Weekly lint:** Juan can ask Claude to review the whole system
-- **Compile cycle:** Claude reads log and compiles patterns into knowledge pages
+- **Compile cycle:** Claude reads logs and compiles patterns into knowledge pages
 
 ## Log Format
 
@@ -135,5 +167,5 @@ The tedious part of maintaining a knowledge base is not the reading or the think
 
 ## Git Protocol
 - After updating files, ask Juan if he wants to commit
-- Commit messages: `update professional.md — added Q2 goals`
+- Commit messages: `update life/professional.md — added Q2 goals`
 - Never force push. Never amend without asking.

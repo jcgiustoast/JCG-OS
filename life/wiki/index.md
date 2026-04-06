@@ -1,12 +1,12 @@
 ---
-title: Wiki Index
-description: Master catalog of all wiki pages. Scan this to find relevant pages.
+title: Life Wiki Index
+description: Master catalog of all life/professional/personal wiki pages.
 type: index
 created: 2026-04-06
 updated: 2026-04-06
 ---
 
-# Wiki Index
+# Life Wiki Index
 
 ## Identity & Context
 - [identity](identity.md) — Who Juan is: Argentine in Madrid, values, thinking style, communication preferences. (confidence: high)
@@ -21,3 +21,6 @@ updated: 2026-04-06
 ## Memory
 - [log](../memory/log.md) — Chronological activity log. Most recent first.
 - [wiki](../memory/wiki.md) — Compiled knowledge topics from log patterns.
+
+## Cross-space links
+- See also: [content/wiki/index](../../content/wiki/index.md) for content ideas that draw from professional knowledge.

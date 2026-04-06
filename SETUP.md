@@ -35,10 +35,19 @@ claude
 
 Claude Code automatically reads CLAUDE.md at session start. No setup needed.
 
+## Two Spaces
+
+JC OS has two spaces in one vault:
+
+- **life/** — Professional & personal: career, role, learning, projects, goals
+- **content/** — Content creation & exploration: ideas, topics, research, drafts
+
+Both are visible in Obsidian's graph view. Cross-references between spaces work naturally.
+
 ## Daily Workflow
 
 1. Open terminal, `cd JCG-OS`, run `claude`
-2. Say "morning briefing" -> Claude reads your priorities and recent memory
+2. Say "morning briefing" -> Claude reads both spaces and surfaces priorities
 3. Have your conversation
 4. At the end, Claude proposes file updates -> you approve
 5. Claude commits the changes (or you do it manually)
@@ -48,10 +57,10 @@ Claude Code automatically reads CLAUDE.md at session start. No setup needed.
 
 | Say this | Claude does this |
 |----------|-----------------|
-| "morning briefing" | Reads priorities, recent log, surfaces context |
-| "ingest [filename]" | Processes raw/ source into wiki pages |
+| "morning briefing" | Reads priorities from both spaces, recent logs, surfaces context |
+| "ingest [filename]" | Processes raw/ source into wiki pages (routes to correct space) |
 | "lint" or "health check" | Scans for contradictions, stale entries, gaps |
-| "compile" | Extracts patterns from log into knowledge topics |
+| "compile" | Extracts patterns from logs into knowledge topics |
 
 ## Reference Links
 

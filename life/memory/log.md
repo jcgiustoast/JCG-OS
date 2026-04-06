@@ -1,16 +1,22 @@
 ---
-title: Memory Log
-description: Append-only chronological activity log. Most recent first. Parseable prefixes for grep.
+title: Life Memory Log
+description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
 updated: 2026-04-06
 ---
 
-# Memory Log
+# Life Memory Log
 
 *Append-only. Most recent entries at the top. Never edit past entries.*
 
 ---
+
+## [2026-04-06] update | Split JC OS into two spaces (life + content)
+- Restructured repo: life/ for professional & personal, content/ for content creation & exploration
+- Root CLAUDE.md now routes between both spaces
+- All existing wiki pages moved under life/
+- Created content/ space with wiki/, raw/, memory/ scaffolding
 
 ## [2026-04-06] update | Aligned JC OS with Karpathy's LLM Wiki pattern
 - Restructured CLAUDE.md as proper schema layer with three-layer architecture
