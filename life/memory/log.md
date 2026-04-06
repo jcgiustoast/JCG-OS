@@ -12,6 +12,10 @@ updated: 2026-04-06
 
 ---
 
+## [2026-04-06] update | Pushed 4 commits to remote
+- Pushed all session work to origin/master: strategic planning session, 1-5 year strategy doc, client narrative & OPSEC, boundary script refinement.
+- All files now synced with GitHub.
+
 ## [2026-04-06] update | Added client narrative, OPSEC rules, and stealth acquisition playbook
 - UNIT 1 CEO flagged optics issue: Juan's LinkedIn shows Mars Men, Tincho's shows 18PM. Neither looks committed to ASTEROI.
 - Created "Client Narrative & OPSEC" section in projects.md with: operator-led narrative (reframe structure as advantage, not weakness), Mars Men firewall rules (boundary script for clients, LinkedIn privacy settings, never name Mars Men), stealth client acquisition playbook (content inbound, referrals, platforms, Tincho post-18PM, DTC communities, conferences; avoid cold outbound and public agency positioning).
