@@ -102,7 +102,7 @@ Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing 
 
 **Boundary script (deliver to every client during onboarding or now for existing clients):**
 
-> "Quick housekeeping -- my operator role is at a venture-backed brand under standard confidentiality and non-compete terms. I keep my consulting work completely separate to maintain clean professional boundaries. I'd ask that you don't reach out to anyone at that company or reference our engagement to them. If you need references, I'm happy to connect you with other clients."
+> "By the way -- I keep my consulting and my operator role totally separate. I don't mix the two worlds. Same way I'd never share anything about your brand with another client, I keep things compartmentalized. So just keep our work between us. If you ever need a reference, I'll connect you with other clients I work with."
 
 **Rules:**
 1. Never name Mars Men in any ASTEROI context -- calls, proposals, decks, Slack, email.
