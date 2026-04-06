@@ -8,14 +8,31 @@ updated: 2026-04-06
 
 # Content Wiki Index
 
+## Published Content
+
+### Subscription eCommerce Lab (jcgiusto.com)
+Juan's personal content hub focused on subscription eCommerce — his niche specialization.
+- **URL:** https://jcgiusto.com/the-subscription-ecommerce-lab/
+- **Page:** [subscription-lab](subscription-lab.md)
+
+### ASTEROI Blog — English (asteroi.co/en)
+Agency blog positioning ASTEROI as experts in profitable eComm growth.
+- **URL:** https://asteroi.co/en/ecom-growth-blog/
+- **Page:** [asteroi-blog-en](asteroi-blog-en.md)
+
+### ASTEROI Blog — Spanish (asteroi.co)
+Spanish-language blog with additional Meta Ads, forecasting, and incrementality content.
+- **URL:** https://asteroi.co/ecom-growth-blog/
+- **Page:** [asteroi-blog-es](asteroi-blog-es.md)
+
 ## Topics
-*No topics yet. As Juan explores ideas and creates content, pages will be added here.*
+*No topic exploration pages yet.*
 
 ## Content Ideas
 *No ideas filed yet. Use the ingest workflow to process inspiration, or just tell Claude about an idea to start a page.*
 
 ## Research
-*No research pages yet. When Juan goes deep on a topic for content, research pages will accumulate here.*
+*No research pages yet.*
 
 ## Memory
 - [log](../memory/log.md) — Content activity log. Most recent first.

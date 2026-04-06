@@ -12,6 +12,18 @@ updated: 2026-04-06
 
 ---
 
+## [2026-04-06] session | Strategic planning session — 1-5 year life strategy
+- Deep strategy conversation covering financial reality, Mars Men constraints, ASTEROI scaling path, and content positioning.
+- **Financial snapshot captured:** ~$100K savings (going to mortgage), $7K/month burn, ~$15K/month savings rate, ~$22.7K/month total personal income.
+- **Mars Men constraints documented:** Non-compete (subscription brands in US only — current clients don't conflict), no equity path, ~12 month exit timeline. Content constraint: can discuss CRO/experimentation/subscription eComm publicly, cannot discuss Meta Ads (Raheel's domain, optics issue).
+- **Tincho/18PM blocker identified:** Tincho owns 18PM agency, can't publicly represent ASTEROI until he leaves. Needs 1-2 more ASTEROI clients to sustain him full-time. This is the critical bottleneck for scaling.
+- **Tool usage clarified:** Only 3 of 6 tools actively used by clients (Ad Creative System, Meta Ads Deployer, Sense). Also using Google Sheets + Looker for forecasting (manual). Priority: make active tools runnable by Tincho, stop building new tools.
+- **Client acquisition channels:** 1 from The Starters (freelancer platform), 2 from LinkedIn inbound.
+- **AURAL details:** $25K invested, $2K/month burn, just started. Marito operates full-time, Juan is strategist only. Keep as asymmetric bet.
+- **Two-phase strategic plan created:** Phase 1 "Stealth Build" (now-Q1 2027) — build personal brand, resolve Tincho, reach $25-30K/month ASTEROI gross. Phase 2 "Transition" (Q2-Q4 2027) — leave Mars Men, go public, scale to 5-8 clients, $50-60K/month gross.
+- **$5M path modeled:** Achievable by 2030-2031 (age 35-36) if ASTEROI scales to $2M/year revenue. Juan's 65% equity at 3-5x multiple = $3.9-6.5M + ~$2.4M accumulated savings.
+- Pages updated: wiki/identity.md, wiki/professional.md, wiki/projects.md
+
 ## [2026-04-06] update | Split JC OS into two spaces (life + content)
 - Restructured repo: life/ for professional & personal, content/ for content creation & exploration
 - Root CLAUDE.md now routes between both spaces

@@ -1,12 +1,12 @@
 ---
 title: Active Projects
-description: Reserved for personal/side projects. Work projects (CRO, retention, acquisition, LP/website) are managed at Mars Men.
+description: ASTEROI agency + product suite building toward a CTC-like SEAN. Three clients (~$13.3K/month gross, ~$10.2K Juan's take). Tincho blocked by 18PM ownership. AURAL venture ($2K/month burn). Six tools, three active. Two-phase strategic plan targeting Mars Men exit by Q1-Q2 2027.
 type: project
 sources: []
-related: [professional.md]
+related: [professional.md, identity.md, learning.md]
 created: 2026-04-05
 updated: 2026-04-06
-confidence: low
+confidence: high
 ---
 
 # Active Projects
@@ -14,12 +14,220 @@ confidence: low
 ## Notes
 Juan manages active work projects at Mars Men (CRO & experimentation, retention & subscription optimization, acquisition support, LP & website leadership). Those are tracked within Mars Men's own systems, not here.
 
-This file is reserved for personal projects or side initiatives that Juan may add over time.
+This file tracks side projects and agency work. **Mars Men is not aware of these engagements.**
+
+---
+
+## Strategic Vision: Build a SEAN — Better Than CTC
+
+**Financial objective:** ASTEROI is the vehicle to reach $5M-$10M net worth within 10 years (by 2036).
+
+**Thesis:** Juan believes in **SEANs — Software-Enabled Agency Networks**. The term was popularized by Taylor Holiday (CTC founder), who argues SEANs are the next wave of 9-figure exits in eCommerce — outcompeting pure brands, pure SaaS, and traditional agencies.
+
+**What a SEAN is:**
+- A service company powered by proprietary software
+- Outcome-based pricing tied to results, not time/labor
+- Moat = proprietary platform + specialized talent (not just relationships)
+- Gross margins of 60-70% (better than traditional agency 40-50%, slightly below pure SaaS 90%)
+- Net revenue retention >100% (SaaS-like stickiness)
+- AI and automation reduce opex while improving outcomes
+
+**CTC's implementation (the model to beat):**
+- **Statlas** — proprietary analytics/BI platform. Consolidates Shopify, Meta, Google, etc. into unified database. Key features: Calendar Report (daily actuals vs. forecast across 15+ KPIs), Paid Media Report (all ad platforms with goal comparison), hourly BFCM tracking, cohort-specific LTV analysis, contribution margin forecasting, benchmarking against 250+ eComm brands. Available as Shopify app. Core philosophy: "data in context of expectation" — always shows actuals vs. forecast, never data in isolation.
+- **Prophit Engine** — operating system layered on Statlas. Three layers: data (Statlas), methodology (CTC's metrics hierarchy from $3B+ managed revenue), execution (a "Prophit Engineer" per client). Delivers 12-month P&L forecasts, daily marketing calendars, channel strategies, cohort retention models. Claims 3% forecast variance across $3B managed GMV.
+- **4x400** — brand holding company. CTC owns and operates DTC brands (Bambu Earth, Slick Products, etc.) alongside client work. Gives real-time operating credibility.
+- **Scale:** ~108 employees, Acacia Group strategic investment (July 2025), targets $10M-$100M DTC brands.
+
+**ASTEROI's approach:** Build the tech stack first, use it on clients, then scale the agency on top of proprietary tooling. The goal is to combine all tools into a platform that surpasses Statlas — because Juan is building each component as a standalone product, then integrating them.
+
+| CTC / Statlas Capability | ASTEROI Product | Status | In active use by clients? |
+|--------------------------|-----------------|--------|--------------------------|
+| Statlas Calendar/Reporting | Triple Whale Clone | Active | No — not yet |
+| Statlas Paid Media Report | AsteroiAds / Sense | Production | YES |
+| Media buying ops | Meta Ads Deployer | Production | YES |
+| Creative production | Ad Creative System | Production (V6.2) | YES |
+| Incrementality / MMM | Meta Robyn Wrapper | Complete | No — not yet |
+| Forecasting (daily P&L) | Google Sheets + Looker (manual) | In use | YES (manual workflow) |
+| LP production | Mars Men LP Generator | Active | No — Mars Men only |
+
+**Current priority:** Make the 3 active tools (Ad Creative System, Meta Ads Deployer, Sense) deliverable by Tincho without Juan's involvement. SOPs, playbooks, documentation > new features. Stop building the other tools until leverage is unlocked.
+
+**Key advantage over CTC:** Juan is building each tool as a modular product with AI-native architecture. When combined, the integrated platform will have capabilities Statlas doesn't — AI creative generation, automated ad deployment, MMM modeling, and analytics in one system.
+
+---
+
+## ASTEROI (asteroi.co)
+
+**What:** eCommerce growth agency. Optimizes for P&L and marginal contribution, not vanity metrics. Services: financial growth strategy, performance marketing (Google/Facebook Ads), creative strategy, CRO, marketing automation.
+
+**Ownership:** Juan Cruz (65%) + Martin Olmedo aka "Tincho" (35%)
+
+**Positioning:** Targets eComm brands doing 1M-10M EUR/year. Commission-based pricing tied to measurable financial results. Caps intake at 6 new clients per quarter.
+
+**Tincho's situation (as of April 2026):**
+- Tincho is also owner of **18PM**, another Argentinian agency. He wants to leave 18PM but needs ASTEROI to sustain him full-time first.
+- He **cannot publicly represent ASTEROI** while he's still associated with 18PM — conflict of interest.
+- Currently: helps build tools + services UNIT 1. Not selling or doing outbound.
+- **Plan:** Get 1-2 more clients so Tincho can leave 18PM, become the public face of ASTEROI, handle sales and client delivery. This unblocks Juan to stay stealth at Mars Men and later transition out.
+
+**Juan's capacity:** At maximum. Cannot take on even one more client personally. All new clients must be serviceable by Tincho (or future hires) using the ASTEROI tool suite.
+
+**Client acquisition so far:**
+- GLAMRDiP: came from **The Starters** (freelancer platform)
+- BAIA Food + UNIT 1: **inbound via LinkedIn** — prospects reached out after seeing Juan active on the platform
+
+**Clients served through ASTEROI:**
+- BAIA Food
+- UNIT 1
+
+---
+
+## Active Clients
+
+### GLAMRDiP (direct client, not through ASTEROI)
+- **What:** At-home dip powder nail system. Australian-based DTC brand on Shopify. 650K+ customers, 10K+ reviews. Operates in 7+ markets (AU, US, NZ, UK, Nordics). Estimated $5M-$20M+ annual revenue.
+- **Service:** CRO
+- **Revenue:** $4,500/month
+- **Duration:** 4 months (as of April 2026)
+- **Website:** glamrdip.com
+
+### BAIA Food (through ASTEROI)
+- **What:** Natural powdered supplements (gut health, collagen, sleep, sports). Madrid-based, founded 2013. Acquired by Seaya Ventures in April 2025 (~70% stake, ~14M EUR valuation). ~20 employees.
+- **Service:** CRO
+- **Revenue:** 3,500 EUR/month
+- **Website:** baiafood.com
+
+### UNIT 1 (through ASTEROI)
+- **What:** Smart helmets for bikes, e-bikes, and urban mobility. Integrated lights, turn signals, crash detection. Price range $99-$259. Founded 2017, pivoted from snow sports to urban mobility. Early investment from Adidas family.
+- **Service:** Performance marketing
+- **Revenue:** $5,000/month
+- **Website:** unit1gear.com
+
+---
+
+## Monthly Side Revenue Summary
+| Client | Service | Gross/month | Juan's take (65% if ASTEROI) | Channel |
+|--------|---------|-------------|------------------------------|---------|
+| GLAMRDiP | CRO | $4,500 | $4,500 (100% — direct) | Direct |
+| BAIA Food | CRO | ~$3,800 (3,500 EUR) | ~$2,470 | ASTEROI |
+| UNIT 1 | Performance marketing | $5,000 | $3,250 | ASTEROI |
+| **Total** | | **~$13,300** | **~$10,220** | |
+
+---
+
+## AURAL (myaural.com)
+
+**What:** eCommerce brand in Argentina selling premium 20-stage filtered shower heads (Jolie clone). Positioned as beauty/wellness, not utilitarian. Targets women 25-45 concerned with water quality's impact on hair and skin. Based in Cordoba, Argentina.
+
+**Ownership:**
+- Cis Group LatinoAmerica (Juan's father's company): 50%
+- Juan Cruz: 25%
+- Mario Fernandes aka "Marito": 25%
+
+**Status: Pre-profit. Currently losing money.** Marito quit his job to work full-time on AURAL. Top priority: figure out how to scale it profitably. Marito's livelihood depends on it.
+
+**Investment & burn:**
+- Total capital invested: $25,000
+- Monthly burn rate: ~$2,000
+- Just started — needs time to find product-market fit
+
+**Juan's involvement:** Acts as strategist only. Low time commitment. Marito is the full-time operator.
+
+**Confidentiality:** Nobody knows about this project.
+
+**Assessment:** Asymmetric bet. $2K/month burn is affordable given Juan's savings rate. Filter replacement subscription creates recurring revenue potential. Keep it, don't let it take more than a few hours per week of Juan's time.
+
+**Product details:**
+- Core: filtered shower heads (~$79,000 ARS per unit)
+- Replacement filters every 3 months (~$25,000 ARS)
+- Subscription/repeat purchase potential via filters
+- 1,000+ customers, 4.8-star rating
+- Financing available (3-month installments)
+
+---
+
+## ASTEROI Product Suite
+
+These are the internal tools Juan is building to power ASTEROI's service delivery. They map to CTC's Prophit Engine and Statlas.
+
+### Ad Creative System
+- **Repo:** `C:\Users\jcgiu\Documents\ad-creative-system`
+- **Purpose:** Multi-agent AI system generating 150-300+ unique Meta ad creative briefs per batch. Persona + Motivator + Territory + Scenario + Hook + Format = structured creative output.
+- **Stack:** Python, FastAPI, SQLite, Claude + Gemini 2.5 Pro, React frontend
+- **Status:** V6.2 production. 2,131 tests passing. Full research pipeline, review mining, 6-language support, creator briefs (video/UGC), concept slate (185 concepts), remix, translation, template image prompts.
+- **Live:** ad-creative-system-production.up.railway.app
+- **Maps to:** CTC's creative production capability
+
+### Meta Ads Deployer
+- **Repo:** `C:\Users\jcgiu\Documents\meta-ads-deployer`
+- **Purpose:** CLI/web tool that deploys ad creatives to Meta Ads as PAUSED campaigns. Reads YAML config or wizard form, outputs campaign structure on Meta.
+- **Stack:** Python 3.11+, FastAPI, facebook-python-business-sdk, Pydantic v2, React frontend
+- **Status:** Phases 1-11 complete, Phase 12 (deployment history) in progress. 351 tests passing. Full CRUD, asset upload, naming convention engine, bulk upload, ABO/Advantage+ support.
+- **Live:** meta-ads-deployer-production.up.railway.app
+- **Maps to:** CTC's media buying operations
+
+### Meta Robyn Wrapper
+- **Repo:** `C:\Users\jcgiu\Documents\meta-robyn-wrapper`
+- **Purpose:** Web UI for Meta's Robyn MMM R package. Upload CSV, configure, fit models, analyze results without R expertise. Enables Marketing Mix Modeling for ASTEROI clients.
+- **Stack:** R Plumber (backend), Next.js 16 + React 19 + TypeScript (frontend), SQLite, Docker Compose
+- **Status:** All 15 phases complete. Production-ready. 36 API endpoints, EDA step, variable classification, trifecta feature selection, VIF checks, budget allocator, response curves, model comparison, monthly planner.
+- **Maps to:** CTC's incrementality/measurement capability
+
+### AsteroiAds / Sense
+- **Repo:** `C:\Users\jcgiu\Documents\asteroi-ads` (backend) + `C:\Users\jcgiu\Documents\asteroi-ads-insights` (frontend)
+- **Purpose:** Meta Ads insights and analytics platform. Query ad performance, visualize dashboards, generate reports. The "Sense" product.
+- **Stack:** Python 3.12 (FastAPI), React (Vite/Lovable), PostgreSQL, PyJWT auth, facebook-business SDK
+- **Status:** Python backend rewrite complete. 53 tests. 12-step insights pipeline, breakdowns, scatter plots, portfolio health metrics, saved reports.
+- **Live:** asteroi-ads-production.up.railway.app (backend) + sense-frontend-production.up.railway.app (frontend)
+- **Maps to:** CTC's Statlas analytics platform
+
+### Triple Whale Clone
+- **Repo:** `C:\Users\jcgiu\Documents\triple-whale-clone`
+- **Purpose:** Multi-client analytics dashboard aggregating Shopify, Meta Ads, Google Ads, Klaviyo, and GA4. Replaces current Excel/Sheets/Looker forecasting and reporting stack.
+- **Stack:** Python 3.11+ / FastAPI (backend), React 18 / Vite / TypeScript (frontend), PostgreSQL, APScheduler
+- **Status:** Multi-client architecture, sync engine with daily granularity, blended metrics, demo mode, Railway-ready.
+- **Maps to:** CTC's Statlas + forecasting. Replacement for manual Excel/Sheets/Looker workflow.
+
+### Mars Men LP Generator
+- **Repo:** `C:\Users\jcgiu\Documents\mars-men-lp-generator`
+- **Purpose:** Team tool generating "10 Reasons" listicle landing pages. Strategists upload concepts, AI generates headlines + reasons, strategists curate, app publishes to Shopify.
+- **Stack:** Python 3.11+ / FastAPI, React 19 / Vite, Claude Opus (text), Gemini 2.5 Flash (vision), Gemini 3 Pro (images), SQLite
+- **Status:** Active. Workflow-driven pipeline with static context files, image generation + curation, Shopify integration.
+- **Note:** Built for Mars Men but architecture is reusable for ASTEROI clients.
+
+### Brief Generator
+- **Repo:** `C:\Users\jcgiu\Documents\brief-generator`
+- **Stack:** Next.js, React, TypeScript, Tailwind
+- **Status:** Early-stage bootstrap. Exploratory.
+
+---
+
+## Strategic Phases (as of April 2026)
+
+### Phase 1: "The Stealth Build" (April 2026 - Q1 2027, ~12 months)
+- **Objective:** Build personal brand, resolve Tincho/18PM bottleneck, get ASTEROI to $25-30K/month gross.
+- **Content:** Restart Twitter/X (English, US audience) + LinkedIn. Talk about CRO, experimentation, subscription eComm, eComm finance. Avoid Meta Ads topics. Leverage Mars Men credibility ("Head of eComm at 9-figure brand").
+- **Tincho:** Months 1-3 wind down 18PM. Months 3-6 become operational face for new clients. Months 6-12 bring on 1-2 new clients.
+- **Tools:** Focus on making existing 3 tools (Ad Creative System, Meta Ads Deployer, Sense) runnable by Tincho. SOPs > new features.
+- **Financial target:** ASTEROI at $25-30K/month gross. Juan's total personal take: ~$29-32K/month.
+- **Decision gate:** Is ASTEROI generating enough for both Juan and Tincho? If yes, trigger Phase 2.
+
+### Phase 2: "The Transition" (Q2 2027 - Q4 2027, ~6-9 months)
+- **Objective:** Leave Mars Men, go public with ASTEROI, scale to 5-8 clients.
+- **Trigger:** ASTEROI at $25-30K/month, Tincho operational, personal brand generating inbound.
+- **What changes:** Juan goes public as ASTEROI founder. Content constraint disappears — can discuss full-stack growth including Meta Ads. Takes on 2-3 clients directly. Moves to outcome-based pricing.
+- **Financial target:** ASTEROI at $50-60K/month gross. Juan's take: $32-39K/month (~$400-470K/year).
+
+### Long-term trajectory (2028-2031)
+- Scale ASTEROI to $1-2M/year revenue with proprietary tooling.
+- At 3-5x revenue multiple, ASTEROI equity = $3-10M. Juan's 65% = $2-6.5M.
+- Combined with accumulated savings (~$2-2.5M), puts Juan in the $5-10M net worth range by age 35-36.
 
 ---
 
 ### Changelog
 - **2026-04-05:** Initial file created.
-- **2026-04-06:** Added frontmatter.
+- **2026-04-06:** Added frontmatter. Added ASTEROI agency, three active clients (GLAMRDiP, BAIA Food, UNIT 1). Added AURAL. Added strategic vision (build toward CTC model). Added full ASTEROI product suite (6 tools + 1 bootstrap).
+- **2026-04-06:** Added financial details (65% split, Juan's actual take). Added Tincho's 18PM situation and public-face blocker. Added client acquisition channels. Added AURAL investment/burn numbers. Added tool usage status (3 active, 3 not yet). Added two-phase strategic timeline with financial targets.
 
-**Related files:** [[professional]]
+**Related files:** [[professional]] | [[identity]] | [[learning]]
