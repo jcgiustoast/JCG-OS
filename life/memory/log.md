@@ -12,6 +12,13 @@ updated: 2026-04-06
 
 ---
 
+## [2026-04-06] update | Added client narrative, OPSEC rules, and stealth acquisition playbook
+- UNIT 1 CEO flagged optics issue: Juan's LinkedIn shows Mars Men, Tincho's shows 18PM. Neither looks committed to ASTEROI.
+- Created "Client Narrative & OPSEC" section in projects.md with: operator-led narrative (reframe structure as advantage, not weakness), Mars Men firewall rules (boundary script for clients, LinkedIn privacy settings, never name Mars Men), stealth client acquisition playbook (content inbound, referrals, platforms, Tincho post-18PM, DTC communities, conferences; avoid cold outbound and public agency positioning).
+- Key insight: content flywheel is the primary acquisition engine during stealth. Juan publishes as "Head of eComm at 9-figure brand." Prospects reach out. Juan routes to ASTEROI privately. Content never mentions the agency.
+- Updated strategy.md Phase 1 with acquisition channels and Mars Men risk mitigation.
+- Pages updated: life/wiki/projects.md, life/wiki/strategy.md
+
 ## [2026-04-06] update | Created life/wiki/strategy.md — 1-5 year strategy document
 - Comprehensive strategy document with 5 phases from April 2026 through 2031.
 - Covers: content positioning, Tincho resolution timeline, tool focus plan, financial projections, AURAL side bet parameters, key risks, and quarterly review checklist.

@@ -82,6 +82,61 @@ This file tracks side projects and agency work. **Mars Men is not aware of these
 
 ---
 
+## Client Narrative & OPSEC
+
+### The Optics Problem
+Juan's LinkedIn shows "Head of eCommerce @ Mars Men." Tincho's shows ownership of 18PM. When clients or prospects look them up, the subtext is: "Neither person is fully committed to my account." The UNIT 1 CEO already flagged this.
+
+### The Narrative: Operator-Led, Not Agency-First
+Don't apologize for the structure. Frame it as the advantage:
+
+> "ASTEROI isn't a traditional agency. We're operators who also serve clients. I run eCommerce at a 9-figure DTC brand every day -- the strategies I bring to your account are what's working right now, at scale, with real money behind them. Most agency founders haven't touched a P&L in years. I touch one every day. We're deliberate about how many clients we take -- we cap it so every account gets operator-level attention, not junior execution. You're one of four, not one of forty."
+
+Key points:
+- Never say "we're transitioning" or "it's temporary" -- that frames it as a problem.
+- Say "a 9-figure subscription brand" or "a $100M+ DTC brand" -- never name Mars Men in ASTEROI contexts.
+- Tincho's framing if asked about 18PM: "I built and ran an agency in Argentina. That experience is what I bring to ASTEROI's operations." Past tense, even if technically present.
+
+### Mars Men Firewall (CRITICAL)
+Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing $150K/year + credibility + learning environment.
+
+**Boundary script (deliver to every client during onboarding or now for existing clients):**
+
+> "Quick housekeeping -- my operator role is at a venture-backed brand under standard confidentiality and non-compete terms. I keep my consulting work completely separate to maintain clean professional boundaries. I'd ask that you don't reach out to anyone at that company or reference our engagement to them. If you need references, I'm happy to connect you with other clients."
+
+**Rules:**
+1. Never name Mars Men in any ASTEROI context -- calls, proposals, decks, Slack, email.
+2. Tincho must follow the same rule. Brief him explicitly.
+3. Set LinkedIn "Who can see your connections" to **"Only you"** -- prevents clients from browsing to Zach/Benjamin/Raheel.
+4. Remove Mars Men from any ASTEROI-facing materials (pitch decks, case studies, bios).
+5. When prospects ask for references, redirect to: GLAMRDiP, BAIA Food, UNIT 1, or past employers (Product Hackers, Sharma Brands).
+6. Deliver the boundary script proactively and early -- not when asked.
+
+### Client Acquisition While Stealth (Phase 1)
+
+**The challenge:** Juan can't do outbound as "ASTEROI founder" because his LinkedIn says Mars Men. Direct prospecting creates exposure risk.
+
+**Channels that work during stealth:**
+
+| Channel | How It Works | Risk Level |
+|---------|-------------|------------|
+| **Content inbound** | Publish CRO/experimentation/subscription content on Twitter/X and LinkedIn under Juan's personal brand. Prospects reach out. Juan routes qualified leads to ASTEROI. | Low -- content is about his expertise, not selling services. Mars Men sees a thought leader, not an agency owner. |
+| **The Starters / freelance platforms** | List CRO consulting services. Clients find Juan through the platform, not LinkedIn. | Low -- transactional, separate from Mars Men identity. |
+| **Referrals from existing clients** | Ask GLAMRDiP, BAIA, UNIT 1 for warm intros to other brands in their network. | Very low -- private, no public exposure. |
+| **Tincho's network (post-18PM)** | Once Tincho is free of 18PM, he can prospect openly as ASTEROI's face. | Zero risk to Juan. |
+| **DTC communities / Slack groups** | Engage in private communities (eCommerceFuel, Foxwell Founders, etc.) where Juan can share expertise and field inquiries privately. | Low -- closed communities, not indexed. |
+| **Conference networking** | Attend DTC events, meet prospects in person. Business cards / follow-ups go through ASTEROI, not Mars Men. | Low if handled carefully. |
+
+**Channels to avoid during stealth:**
+- Cold outbound from Juan's LinkedIn (directly ties Mars Men employee to agency pitch)
+- Paid ads for ASTEROI (could surface to Mars Men team)
+- Public case studies naming Mars Men
+- Any ASTEROI content published under Juan's name that positions him as agency founder
+
+**The content flywheel is the primary engine.** Juan publishes as "Head of eComm at a 9-figure brand" sharing expertise. Prospects reach out. Juan qualifies them. If it's CRO, Juan takes them directly or routes to Tincho. If it's performance marketing, Tincho services them. The content never mentions ASTEROI -- it builds Juan's personal brand, and the agency is the private conversion layer behind it.
+
+---
+
 ## Active Clients
 
 ### GLAMRDiP (direct client, not through ASTEROI)
@@ -229,5 +284,6 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 - **2026-04-05:** Initial file created.
 - **2026-04-06:** Added frontmatter. Added ASTEROI agency, three active clients (GLAMRDiP, BAIA Food, UNIT 1). Added AURAL. Added strategic vision (build toward CTC model). Added full ASTEROI product suite (6 tools + 1 bootstrap).
 - **2026-04-06:** Added financial details (65% split, Juan's actual take). Added Tincho's 18PM situation and public-face blocker. Added client acquisition channels. Added AURAL investment/burn numbers. Added tool usage status (3 active, 3 not yet). Added two-phase strategic timeline with financial targets.
+- **2026-04-06:** Added Client Narrative & OPSEC section: operator-led framing, Mars Men firewall rules (boundary script, LinkedIn privacy, naming rules), stealth client acquisition playbook (6 channels, avoid list, content flywheel strategy).
 
 **Related files:** [[professional]] | [[identity]] | [[learning]]

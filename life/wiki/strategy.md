@@ -65,6 +65,14 @@ Aggressive but achievable target: reach it by 2031 (age 36) if ASTEROI scales as
 
 **No selling.** No CTAs for ASTEROI services. The goal is building the association: Juan Cruz Giusto = subscription eComm expert. Clients come as a byproduct of distribution and trust.
 
+**Client acquisition during stealth (see projects.md for full playbook):**
+- Primary: content inbound (Twitter/X + LinkedIn thought leadership generates DMs/inquiries, Juan routes to ASTEROI privately)
+- Secondary: referrals from existing clients (GLAMRDiP, BAIA, UNIT 1 warm intros)
+- Secondary: The Starters / freelance platforms (transactional, separate from LinkedIn identity)
+- Future: Tincho prospects openly once free of 18PM
+- Supplementary: DTC communities (eCommerceFuel, Foxwell Founders), conference networking
+- Avoid: cold outbound from Juan's LinkedIn, paid ads for ASTEROI, any public positioning as agency founder
+
 ### Tincho Resolution
 
 This is the critical bottleneck. Without Tincho going full-time on ASTEROI, Juan can't scale beyond current capacity.
@@ -245,7 +253,7 @@ Runs in parallel, does not affect the main strategy.
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| Mars Men discovers side work | Lose $150K/year + credibility + learning environment | Keep ASTEROI stealth. Don't promote services publicly. Tincho is the face. |
+| Mars Men discovers side work | Lose $150K/year + credibility + learning environment | Keep ASTEROI stealth. Mars Men firewall rules (see projects.md). Never name Mars Men in ASTEROI contexts. LinkedIn connections set to private. Boundary script delivered to every client. |
 | Tincho doesn't leave 18PM | Can't scale ASTEROI. Juan stays bottlenecked. | Set hard deadline. If Tincho can't commit by Month 6, plan B (hire an operator instead). |
 | Content doesn't generate inbound | No pipeline for new clients | Diversify: The Starters, referrals, Tincho's network. Content is a long game -- 6-12 months to compound. |
 | Clients churn | Revenue drops below sustainability threshold | Build retention into service delivery. Outcome-based pricing aligns incentives. |
@@ -272,3 +280,4 @@ Use this every 3 months to assess progress:
 
 ### Changelog
 - **2026-04-06:** Initial strategy document created from strategic planning session.
+- **2026-04-06:** Added stealth client acquisition channels to Phase 1. Updated Mars Men risk mitigation with firewall rules reference.
