@@ -3,8 +3,7 @@
 Thumbs.db
 
 # Obsidian
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+.obsidian/
 
 # Sensitive files
 # secrets/
