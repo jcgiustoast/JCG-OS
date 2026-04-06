@@ -18,4 +18,4 @@ updated: 2026-04-06
 
 ---
 
-**Related files:** [[content/wiki/index]]
+**Related files:** [[content-index]]

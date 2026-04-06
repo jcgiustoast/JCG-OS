@@ -1,9 +1,9 @@
 ---
 title: Active Projects
-description: ASTEROI agency + product suite building toward a CTC-like SEAN. Three clients (~$13.3K/month gross, ~$10.2K Juan's take). Tincho blocked by 18PM ownership. AURAL venture ($2K/month burn). Six tools, three active. Two-phase strategic plan targeting Mars Men exit by Q1-Q2 2027.
+description: ASTEROI agency + product suite building toward a $10-15M/year SEAN with 30% FCF. Two-engine wealth model (SEAN cash flow + capital deployment) targeting $10M net after tax by 2036, $50M by 2046. Three clients (~$13.3K/month gross). Tincho blocked by 18PM. Six tools (3 active) stay internal as margin drivers. Volume-based scaling: more clients, not higher per-client pricing.
 type: project
 sources: []
-related: [professional.md, identity.md, learning.md]
+related: [professional, identity, learning]
 created: 2026-04-05
 updated: 2026-04-06
 confidence: high
@@ -20,17 +20,21 @@ This file tracks side projects and agency work. **Mars Men is not aware of these
 
 ## Strategic Vision: Build a SEAN — Better Than CTC
 
-**Financial objective:** ASTEROI is the vehicle to reach $5M-$10M net worth within 10 years (by 2036).
+**Financial objective:** $10M net after tax within 10 years (by 2036). $50M net after tax within 20 years (by 2046). ASTEROI is the primary vehicle.
 
 **Thesis:** Juan believes in **SEANs — Software-Enabled Agency Networks**. The term was popularized by Taylor Holiday (CTC founder), who argues SEANs are the next wave of 9-figure exits in eCommerce — outcompeting pure brands, pure SaaS, and traditional agencies.
 
 **What a SEAN is:**
 - A service company powered by proprietary software
-- Outcome-based pricing tied to results, not time/labor
 - Moat = proprietary platform + specialized talent (not just relationships)
 - Gross margins of 60-70% (better than traditional agency 40-50%, slightly below pure SaaS 90%)
 - Net revenue retention >100% (SaaS-like stickiness)
 - AI and automation reduce opex while improving outcomes
+- Scale through volume: tooling makes each operator 2-3x more productive, enabling more clients per head
+
+**Two-engine wealth model:**
+1. **Engine 1 — ASTEROI Services:** Scale to $10-15M/year revenue with 30% FCF. The AI-native tool suite keeps revenue per employee above $300K (vs. ~$150-200K at traditional agencies). This is the cash generation engine.
+2. **Engine 2 — Capital deployment:** Invest accumulated FCF into index funds, real estate, and asymmetric bets. Compounding does the heavy lifting for the $50M target. No SaaS spin-out needed — the tools stay inside the agency as the margin driver.
 
 **CTC's implementation (the model to beat):**
 - **Statlas** — proprietary analytics/BI platform. Consolidates Shopify, Meta, Google, etc. into unified database. Key features: Calendar Report (daily actuals vs. forecast across 15+ KPIs), Paid Media Report (all ad platforms with goal comparison), hourly BFCM tracking, cohort-specific LTV analysis, contribution margin forecasting, benchmarking against 250+ eComm brands. Available as Shopify app. Core philosophy: "data in context of expectation" — always shows actuals vs. forecast, never data in isolation.
@@ -38,7 +42,9 @@ This file tracks side projects and agency work. **Mars Men is not aware of these
 - **4x400** — brand holding company. CTC owns and operates DTC brands (Bambu Earth, Slick Products, etc.) alongside client work. Gives real-time operating credibility.
 - **Scale:** ~108 employees, Acacia Group strategic investment (July 2025), targets $10M-$100M DTC brands.
 
-**ASTEROI's approach:** Build the tech stack first, use it on clients, then scale the agency on top of proprietary tooling. The goal is to combine all tools into a platform that surpasses Statlas — because Juan is building each component as a standalone product, then integrating them.
+**ASTEROI's approach:** Build the tech stack first, use it on clients, then scale the agency on top of proprietary tooling. The tools are agency infrastructure — they stay internal as the margin driver, not a separate SaaS product. Each component is modular and AI-native. When integrated, the platform gives every ASTEROI operator capabilities no traditional agency can match.
+
+**Scaling model:** Volume-based. More clients at competitive retainers ($8-15K/month), not fewer clients at premium pricing. The AI tooling makes this possible — each operator handles 2-3x more clients than a traditional agency counterpart, which is what drives 30% FCF at scale.
 
 | CTC / Statlas Capability | ASTEROI Product | Status | In active use by clients? |
 |--------------------------|-----------------|--------|--------------------------|
@@ -270,13 +276,32 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 ### Phase 2: "The Transition" (Q2 2027 - Q4 2027, ~6-9 months)
 - **Objective:** Leave Mars Men, go public with ASTEROI, scale to 5-8 clients.
 - **Trigger:** ASTEROI at $25-30K/month, Tincho operational, personal brand generating inbound.
-- **What changes:** Juan goes public as ASTEROI founder. Content constraint disappears — can discuss full-stack growth including Meta Ads. Takes on 2-3 clients directly. Moves to outcome-based pricing.
+- **What changes:** Juan goes public as ASTEROI founder. Content constraint disappears — can discuss full-stack growth including Meta Ads. Takes on 2-3 clients directly. Starts hiring.
 - **Financial target:** ASTEROI at $50-60K/month gross. Juan's take: $32-39K/month (~$400-470K/year).
 
-### Long-term trajectory (2028-2031)
-- Scale ASTEROI to $1-2M/year revenue with proprietary tooling.
-- At 3-5x revenue multiple, ASTEROI equity = $3-10M. Juan's 65% = $2-6.5M.
-- Combined with accumulated savings (~$2-2.5M), puts Juan in the $5-10M net worth range by age 35-36.
+### Phase 3: "Scale the SEAN" (2028-2030)
+- **Objective:** Scale ASTEROI to $1.5-5M/year revenue. Hire operators and tooling engineers. Volume model: more clients at $10-15K/month.
+- **Team:** Juan + Tincho + 4-12 hires (growth operators, 1-2 engineers for internal tooling).
+- **Tooling:** Consolidate all tools into unified internal platform. Multi-tenant, reliable, operator-friendly. The tools are what keep revenue/employee above $300K.
+- **Financial target:** $5M/year revenue, 30% FCF. Juan begins deploying capital (Engine 2).
+
+### Phase 4: "Mature SEAN" (2030-2033)
+- **Objective:** ASTEROI at $5-11M/year. Juan steps back from delivery, focuses on strategy, hiring, and tool development.
+- **Team:** 15-30 people. Department leads run client delivery.
+- **Financial target:** $11M/year revenue, $3.3M FCF. Juan's 65% = $2.15M/year pre-tax.
+
+### Phase 5: "Compounding" (2033-2036) — $10M checkpoint
+- **Objective:** ASTEROI at $11-15M/year, 50-65 clients, 30-45 people.
+- **Engine 1:** Generating $3.3-4.5M/year FCF. Juan's after-tax take: $1.6-2.2M/year.
+- **Engine 2:** $3-5M deployed in index funds, real estate, asymmetric bets. Compounding at 8%+/year.
+- **Net worth target by 2036:** ~$10-13M net after tax (accumulated savings + investment returns). Equity value on top if ASTEROI ever sells.
+
+### The Second Decade (2036-2046) — $50M path
+- ASTEROI stable at $12-15M/year, 30% FCF. Juan's after-tax take: ~$1.7-2.2M/year ongoing.
+- Accumulated capital from 2036 ($10-13M) compounds at 8%/year for 10 years = $22-28M.
+- 10 more years of FCF savings = $17-22M additional.
+- **Total by 2046: $39-50M from cash flow alone, without selling the business.**
+- Equity value ($12-15M revenue x 4-5x SEAN multiple x 65% = $31-49M pre-tax) is bonus upside.
 
 ---
 
@@ -285,5 +310,6 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 - **2026-04-06:** Added frontmatter. Added ASTEROI agency, three active clients (GLAMRDiP, BAIA Food, UNIT 1). Added AURAL. Added strategic vision (build toward CTC model). Added full ASTEROI product suite (6 tools + 1 bootstrap).
 - **2026-04-06:** Added financial details (65% split, Juan's actual take). Added Tincho's 18PM situation and public-face blocker. Added client acquisition channels. Added AURAL investment/burn numbers. Added tool usage status (3 active, 3 not yet). Added two-phase strategic timeline with financial targets.
 - **2026-04-06:** Added Client Narrative & OPSEC section: operator-led framing, Mars Men firewall rules (boundary script, LinkedIn privacy, naming rules), stealth client acquisition playbook (6 channels, avoid list, content flywheel strategy).
+- **2026-04-06:** Updated financial targets to $10M net after tax by 2036, $50M by 2046. Added two-engine model (SEAN + capital deployment). Replaced SaaS spin-out with volume-based scaling. Tools stay internal as margin drivers. Added phases 3-5 and second-decade trajectory.
 
 **Related files:** [[professional]] | [[identity]] | [[learning]]

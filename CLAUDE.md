@@ -38,10 +38,11 @@ JCG-OS/
 ├── CLAUDE.md                # This file — root schema
 ├── life/                    # Space 1: Professional & Personal
 │   ├── wiki/
-│   │   ├── index.md         #   Master catalog for life/
+│   │   ├── life-index.md    #   Master catalog for life/
 │   │   ├── identity.md      #   Who Juan is
 │   │   ├── professional.md  #   Mars Men context, role, team
 │   │   ├── projects.md      #   Personal/side projects
+│   │   ├── strategy.md      #   1-5 year plan, financial targets
 │   │   └── learning.md      #   Active learning tracks
 │   ├── raw/                 #   Immutable sources
 │   │   ├── articles/
@@ -53,7 +54,8 @@ JCG-OS/
 │       └── wiki.md          #   Compiled knowledge topics
 ├── content/                 # Space 2: Content & Exploration
 │   ├── wiki/
-│   │   ├── index.md         #   Master catalog for content/
+│   │   ├── content-index.md  #   Master catalog for content/
+│   │   ├── content-strategy.md # Phased content plan (bridges both spaces)
 │   │   └── ...              #   Topic pages, content ideas
 │   ├── raw/
 │   │   ├── articles/        #   Reference material
@@ -76,7 +78,7 @@ JCG-OS/
 ## Navigation Rules
 1. **Always start here.** Read this CLAUDE.md first.
 2. **Determine which space.** Is the conversation about life/career/learning or about content/exploration? Route accordingly.
-3. **Check the index.** Read the relevant `wiki/index.md` to find pages — scan descriptions, only open what's needed.
+3. **Check the index.** Read the relevant index — `life/wiki/life-index.md` or `content/wiki/content-index.md` — to find pages. Scan descriptions, only open what's needed.
 4. **Read frontmatter first.** Every wiki page has YAML frontmatter with a description. Read ONLY the description to decide if you need the full file.
 5. **Cross-reference between spaces.** Content ideas often draw from professional knowledge. Use `[[life/wiki/page]]` or `[[content/wiki/page]]` to link across spaces.
 6. **Keep raw/ immutable.** Read from `raw/` but NEVER modify files there.

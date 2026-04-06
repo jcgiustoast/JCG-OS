@@ -3,7 +3,7 @@ title: Professional — Mars Men
 description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($150K/year, no equity), owns CRO + retention + LP/website dev, reports to Raheel. Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads.
 type: professional
 sources: []
-related: [identity.md, learning.md, projects.md]
+related: [identity, learning, projects]
 created: 2026-04-05
 updated: 2026-04-06
 confidence: high

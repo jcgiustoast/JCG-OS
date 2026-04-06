@@ -3,7 +3,7 @@ title: Learning & Growth
 description: Two active learning tracks — (1) AI & Automation (Claude Code + Obsidian + GitHub), (2) DTC/eCommerce Craft (CRO, retention, paid media via Mars Men hypergrowth).
 type: concept
 sources: []
-related: [professional.md, projects.md]
+related: [professional, projects]
 created: 2026-04-05
 updated: 2026-04-06
 confidence: medium

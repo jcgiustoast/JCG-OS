@@ -3,7 +3,7 @@ title: Subscription eCommerce Lab
 description: Juan's personal content hub (jcgiusto.com) — 11 articles on subscription eComm metrics, experimentation, and growth strategy.
 type: content-idea
 sources: []
-related: [asteroi-blog-en.md, asteroi-blog-es.md]
+related: [asteroi-blog-en, asteroi-blog-es]
 created: 2026-04-06
 updated: 2026-04-06
 confidence: high

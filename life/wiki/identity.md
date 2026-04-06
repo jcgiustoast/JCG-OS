@@ -3,7 +3,7 @@ title: Identity & Context
 description: Who Juan is — Argentine in Madrid, 31, Head of eComm at Mars Men ($150K/year) + ASTEROI co-founder (~$10.2K/month take). ~$22.7K/month total income, $7K burn, $15K savings. Targeting $5M-$10M NW by 2036. First-principles thinker, direct communicator.
 type: identity
 sources: []
-related: [professional.md, learning.md]
+related: [professional, learning]
 created: 2026-04-05
 updated: 2026-04-06
 confidence: high

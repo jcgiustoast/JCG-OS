@@ -3,7 +3,7 @@ title: ASTEROI Blog (English)
 description: Agency blog — 9 articles on profitability, metrics frameworks, LTV, ROAS critique, and growth principles for 7-8 figure eComm brands.
 type: content-idea
 sources: []
-related: [asteroi-blog-es.md, subscription-lab.md]
+related: [asteroi-blog-es, subscription-lab]
 created: 2026-04-06
 updated: 2026-04-06
 confidence: high
@@ -26,6 +26,10 @@ Agency content positioning ASTEROI as experts in profitable eComm growth. Target
 7. **11 Profitability Levers that 7-Figure eCommerce Businesses Ignore** — tactical profitability optimization
 8. **The Formula You Need to Unlock Your eCom Growth** — growth acceleration framework (also on jcgiusto.com)
 9. **A New Way of Thinking About LTV in Ecommerce** — customer lifetime value strategy (also on jcgiusto.com)
+
+## Status: PAUSED (Phase 1) — Resumes Phase 2
+
+**No new ASTEROI blog content during Phase 1** (stealth — see [[content-strategy]]). Existing articles can be repurposed as Twitter/LinkedIn content under Juan's personal brand. Blog restarts in Phase 2 when Juan goes public as ASTEROI co-founder.
 
 ## Themes
 - Profit-first thinking over revenue/ROAS vanity metrics

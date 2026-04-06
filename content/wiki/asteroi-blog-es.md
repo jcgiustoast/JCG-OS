@@ -3,7 +3,7 @@ title: ASTEROI Blog (Spanish)
 description: Spanish-language agency blog — 17 articles including Meta Ads strategy, Andromeda, forecasting, incrementality, AOV, and profitability.
 type: content-idea
 sources: []
-related: [asteroi-blog-en.md, subscription-lab.md]
+related: [asteroi-blog-en, subscription-lab]
 created: 2026-04-06
 updated: 2026-04-06
 confidence: high
@@ -24,6 +24,10 @@ Includes all English articles plus additional Spanish-only content on:
 - Incrementality testing
 - AOV strategy
 - Psychology-backed scaling strategies
+
+## Status: PAUSED
+
+**Paused until Phase 3+ (2028+).** English is the only content language during Phase 1-2. Spanish content resumes as a secondary channel targeting LATAM/Spanish brands entering the US market. When it resumes, best-performing English content is repurposed/translated — not original creation. See [[content-strategy]] for rationale.
 
 ## Themes
 - Everything in the English blog, plus deeper Meta Ads tactical content
