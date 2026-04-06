@@ -12,6 +12,12 @@ updated: 2026-04-06
 
 ---
 
+## [2026-04-06] update | Created life/wiki/strategy.md — 1-5 year strategy document
+- Comprehensive strategy document with 5 phases from April 2026 through 2031.
+- Covers: content positioning, Tincho resolution timeline, tool focus plan, financial projections, AURAL side bet parameters, key risks, and quarterly review checklist.
+- Pages created: life/wiki/strategy.md
+- Pages updated: life/wiki/index.md
+
 ## [2026-04-06] session | Strategic planning session — 1-5 year life strategy
 - Deep strategy conversation covering financial reality, Mars Men constraints, ASTEROI scaling path, and content positioning.
 - **Financial snapshot captured:** ~$100K savings (going to mortgage), $7K/month burn, ~$15K/month savings rate, ~$22.7K/month total personal income.

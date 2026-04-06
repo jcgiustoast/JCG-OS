@@ -15,6 +15,9 @@ updated: 2026-04-06
 ## Professional
 - [professional](professional.md) — Mars Men company context, Juan's role, team, scope, strategic context. (confidence: high)
 
+## Strategy
+- [strategy](strategy.md) — 1-5 year plan: Phase 1 stealth build (now-Q1 2027), Phase 2 transition (Q2-Q4 2027), Phase 3-5 scale SEAN to $2M+ revenue. Quarterly review checklist included. (confidence: medium)
+
 ## Projects
 - [projects](projects.md) — Strategic vision: build ASTEROI into a CTC-like agency. Three clients (GLAMRDiP, BAIA, UNIT 1), AURAL venture, and 6-tool product suite (Ad Creative System, Meta Ads Deployer, Robyn Wrapper, Sense/AsteroiAds, Triple Whale Clone, LP Generator). (confidence: high)
 
