@@ -3,7 +3,7 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-04-06
+updated: 2026-04-07
 ---
 
 # Content Memory Log
@@ -11,6 +11,16 @@ updated: 2026-04-06
 *Append-only. Most recent entries at the top. Never edit past entries.*
 
 ---
+
+## [2026-04-07] decision | Content engine built — ready to publish
+- Built `/content` skill (Claude Code command) for creating Twitter, LinkedIn, and blog content grounded in JCG-OS wiki pages. Enforces Phase 1 firewall, writes in Juan's voice, formats per platform.
+- Built `/content-research` skill for competitive intelligence via Apify scraping. Scrapes reference creators (Taylor Holiday, Nick Sharma, Cody Plofker, Barry Hott, Dara Denney) to analyze top-performing hooks, formats, and topics.
+- **Confirmed priority repurposing queue:**
+  1. "Your ROAS Doesn't Mean Shit" — Twitter thread + LinkedIn
+  2. "The Formula You Need to Unlock Your eCom Growth" — LinkedIn long post
+  3. "A New Way of Thinking About LTV" — all 3 platforms
+- **In-lane filter applied:** Of 37 articles, jcgiusto.com (11) and several ASTEROI EN articles are fully in-lane. Meta Ads articles (Andromeda, 10 ROI strategies, making Meta profitable) are off-limits for Phase 1.
+- **Next step:** Run `/content-research` to scan competitive landscape, then produce first batch of repurposed content.
 
 ## [2026-04-06] ingest | Full content ingestion — 37 articles from 3 sources
 - Ingested 11 articles from jcgiusto.com (Subscription eCommerce Lab)

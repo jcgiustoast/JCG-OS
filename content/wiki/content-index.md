@@ -3,7 +3,7 @@ title: Content Wiki Index
 description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context.
 type: index
 created: 2026-04-06
-updated: 2026-04-06
+updated: 2026-04-07
 confidence: high
 ---
 
@@ -26,8 +26,9 @@ Spanish-language blog with additional Meta Ads, forecasting, and incrementality 
 - **URL:** https://asteroi.co/ecom-growth-blog/
 - **Page:** [[asteroi-blog-es]]
 
-## Strategy
+## Strategy & Pipeline
 - [[content-strategy]] — Phased content strategy tied to ASTEROI business phases. English-only in Phase 1-2, Spanish expansion Phase 3+. Channels, topics, cadence, and constraints by phase. Bridges to [[strategy]] and [[projects]]. (confidence: high)
+- [[pipeline]] — Content pipeline tracker. Status board for all content from idea through draft to published. Weekly cadence targets. (confidence: high)
 
 ## Raw Articles (content/raw/articles/)
 
@@ -90,11 +91,45 @@ Synthesized from 37 articles. Each page extracts reusable frameworks, formulas, 
 - [[ecommerce-metrics-hierarchy]] — 4-level metrics pyramid (Financial > Business > Customer > Platform), MER/aMER/nCAC definitions, AOV critique, Control vs Precision paradoxes. (confidence: high)
 - [[meta-ads-optimization]] — Meta Andromeda strategies, 10 Meta ROI tactics, making Meta profitable. Phase 2+ content only per content-strategy. (confidence: high)
 
+## Tooling
+
+### /content — Content Creation Skill
+Claude Code skill that creates platform-ready content (Twitter, LinkedIn, blog) from JCG-OS wiki source material. Enforces Phase 1 firewall, writes in Juan's voice, formats per platform. Includes optional Apify research step.
+- **Location:** `~/.claude/commands/content.md`
+- **Usage:** `/content twitter LTV`, `/content linkedin profitability`, `/content blog powered ice`, `/content repurpose [article path]`
+
+### /content-research — Competitive Intelligence Skill
+Scrapes reference creators via Apify to analyze what hooks, formats, and topics drive engagement on Twitter/LinkedIn. Returns research brief with gaps Juan can own.
+- **Location:** `~/.claude/commands/content-research.md`
+- **Usage:** `/content-research twitter LTV`, `/content-research linkedin all`
+- **Reference creators:** Taylor Holiday, Nick Sharma, Cody Plofker, Barry Hott, Dara Denney
+
+### Apify Scrapers (confirmed working 2026-04-07)
+- **Twitter:** `apidojo/tweet-scraper` — input: `{"handles":["HANDLE"],"tweetsDesired":N}`
+- **LinkedIn:** `apimaestro/linkedin-profile-posts` — input: `{"username":"USERNAME","limit":N}`
+
 ## Content Ideas
-*No ideas filed yet. Use the ingest workflow to process inspiration, or just tell Claude about an idea to start a page.*
+
+### Priority Repurposing Queue (Phase 1 — in-lane articles)
+1. **"Your ROAS Doesn't Mean Shit"** — contrarian, built-in Economics Reveal. Best for: Twitter thread + LinkedIn post.
+2. **"The Formula You Need to Unlock Your eCom Growth"** — Growth Formula framework. Best for: LinkedIn long post.
+3. **"A New Way of Thinking About LTV"** — LTV framework, deep. Best for: all 3 platforms.
+4. **"11 Profitability Levers for 7-Figure eCommerce"** — listicle structure, easy thread. Best for: Twitter thread.
+5. **"7 Habits of Highly Profitable eCom Brands"** — listicle, strong LinkedIn format. Best for: LinkedIn.
+6. **"Powered ICE Prioritization Framework"** — proprietary framework. Best for: blog + thread.
+7. **"The Metric Tree of Subscription eCommerce"** — visual framework. Best for: blog + LinkedIn.
+
+### Off-Limits for Phase 1
+- Meta Andromeda strategies
+- 10 Strategies to Optimize Meta Ads ROI
+- Making Meta Your Profitability Machine
+- Any content positioning Juan as ASTEROI founder
+
+*Add new ideas by telling Claude about them. They'll be filed here.*
 
 ## Research
-*No research pages yet.*
+Research briefs from `/content-research` will be saved to `content/raw/research/`.
+*No research pages yet. Run `/content-research` to generate the first brief.*
 
 ## Memory
 - [[log]] — Content activity log. Most recent first.

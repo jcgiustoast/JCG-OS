@@ -3,7 +3,7 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-04-06
+updated: 2026-04-07
 ---
 
 # Life Memory Log
@@ -11,6 +11,25 @@ updated: 2026-04-06
 *Append-only. Most recent entries at the top. Never edit past entries.*
 
 ---
+
+## [2026-04-07] session | "What is my One Thing?" — strategic priority analysis
+- Reviewed entire JCG-OS system to identify highest-impact single activity for Phase 1.
+- **Conclusion: Publishing content is The One Thing.** The entire Phase 1 domino chain starts with content: content -> inbound leads -> more clients -> Tincho can leave 18PM -> capacity unblocked -> Phase 2.
+- The Mars Men credential is a depreciating asset (~12 months shelf life). Every week without publishing burns irreplaceable credential value.
+- 37 existing articles are ready to repurpose. The jcgiusto.com articles (11) are almost entirely in-lane (CRO, experimentation, subscription eComm, LTV, unit economics).
+- **Language decision confirmed:** English only for Phase 1. Mars Men credential only resonates with US DTC audience. Spanish deferred to Phase 3+ (2028+).
+- **Top 3 articles to repurpose first:** (1) "Your ROAS Doesn't Mean Shit" — contrarian, built-in Economics Reveal; (2) "The Formula You Need to Unlock Your eCom Growth" — Growth Formula framework; (3) "A New Way of Thinking About LTV" — LTV framework.
+- **System gaps identified:** No content pipeline tracker, no actuals-vs-targets scorecard, no content ideas filed, memory/wiki.md not compiled.
+
+## [2026-04-07] update | Built /content and /content-research skills in Claude Code
+- Created `~/.claude/commands/content.md` — content creation skill for Twitter/X, LinkedIn, and blog. Reads JCG-OS wiki for source material, enforces Phase 1 firewall automatically, writes in Juan's voice (data-driven mentor, Economics Reveal pattern, contrarian premises, specific numbers, no fluff).
+- Created `~/.claude/commands/content-research.md` — competitive intelligence skill. Scrapes reference creators via Apify to analyze what hooks, formats, and topics drive engagement.
+- **Apify integration tested and working:**
+  - Twitter: `apidojo/tweet-scraper` — confirmed working (690 tweets from Taylor Holiday test run)
+  - LinkedIn: `apimaestro/linkedin-profile-posts` — confirmed working (uses `username` param, not `profileUrls`)
+- **Voice profile extracted** from 11 raw articles: identified 5 rhetorical signature moves (Economics Reveal, contrarian premise, framework building, specific numbers, provocative headlines with rigorous bodies), sentence structure patterns, vocabulary rules, argument structure (problem -> financial reality check -> framework -> implementation).
+- **Reference creators loaded:** Taylor Holiday, Nick Sharma, Cody Plofker, Barry Hott, Dara Denney.
+- Skills available via `/content` and `/content-research` slash commands.
 
 ## [2026-04-06] update | Pushed 4 commits to remote
 - Pushed all session work to origin/master: strategic planning session, 1-5 year strategy doc, client narrative & OPSEC, boundary script refinement.
