@@ -10,12 +10,13 @@ Today is {{date}}. "Last 7 days" means entries dated within 7 calendar days of t
 
 1. **Reaffirm the schema.** Re-read `CLAUDE.md` at the vault root. It tells you how the two spaces (`life/`, `content/`) are organized and what conventions apply.
 
-2. **Scan both indexes — descriptions only.** Read `life/wiki/index.md` and `content/wiki/index.md`. Do NOT open every page they list. Just read each page's frontmatter `description:` line to get the shape of what exists. If an index is missing or sparse, note it as a gap.
+2. **Scan both indexes — descriptions only.** Read `life/wiki/life-index.md` and `content/wiki/content-index.md`. Do NOT open every page they list. Just read each page's frontmatter `description:` line to get the shape of what exists. If an index is missing or sparse, note it as a gap.
 
-3. **Open the four priority pages in `life/wiki/`** (full read):
+3. **Open the priority pages in `life/wiki/`** (full read):
    - `identity.md` — who Juan is
    - `professional.md` — Mars Men role, team, current work
    - `projects.md` — personal/side projects
+   - `strategy.md` — 1-5 year plan, financial targets
    - `learning.md` — active learning tracks
 
    If any of these don't exist or contain "to be filled" placeholders, note that as an open thread rather than failing.

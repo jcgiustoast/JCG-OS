@@ -10,7 +10,7 @@ Today is {{date}}.
 
 1. Read `life/wiki/professional.md` and `life/wiki/projects.md` for current commitments.
 2. Read `life/memory/log.md` and `content/memory/log.md` — focus on entries from the last 3 days. Look for unfinished items, carry-overs from `/closeday`, and anything Juan flagged as "next" or "tomorrow."
-3. Read `life/wiki/index.md` descriptions to spot pages marked urgent, stale, or "to be filled."
+3. Read `life/wiki/life-index.md` descriptions to spot pages marked urgent, stale, or "to be filled."
 4. JCG-OS has no calendar or task system. If Juan wants calendar/tasks reflected, he'll paste them inline — ask once at the end if nothing was provided.
 
 ## Output

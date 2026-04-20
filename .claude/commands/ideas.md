@@ -6,7 +6,7 @@ Scan JCG-OS for emerging patterns and turn them into concrete ideas. READ-ONLY.
 
 ## Steps
 
-1. Read `life/wiki/index.md` and `content/wiki/index.md` descriptions. Identify clusters: topics mentioned across many pages, recent concentrations of activity, pages marked `confidence: low` that deserve investigation.
+1. Read `life/wiki/life-index.md` and `content/wiki/content-index.md` descriptions. Identify clusters: topics mentioned across many pages, recent concentrations of activity, pages marked `confidence: low` that deserve investigation.
 2. Read the last 30 days of `life/memory/log.md` and `content/memory/log.md`. Extract: unanswered questions, things Juan flagged as "interesting," names dropped, tools mentioned, topics he keeps returning to.
 3. Cross-reference: what sits at the intersection of his professional context (Mars Men, growth, eCommerce) and his content exploration?
 

@@ -6,7 +6,7 @@ Find patterns that have crossed the threshold from "interesting" to "shippable."
 
 ## Steps
 
-1. Read both `wiki/index.md` files. Identify pages created or updated in the last 60 days.
+1. Read both index files — `life/wiki/life-index.md` and `content/wiki/content-index.md`. Identify pages created or updated in the last 60 days.
 2. Read `related:` frontmatter across those pages. Build a mental graph of clusters — pages linking to each other densely.
 3. Cross-check with log entries (last 60 days) to see which clusters Juan has been actively adding to.
 4. Rate each cluster against these filters:

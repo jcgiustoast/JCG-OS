@@ -12,7 +12,7 @@ If no question was provided, ask Juan what to answer and stop.
 ## Steps
 
 1. Identify the domain of the question (professional? content? learning? personal?). Route to the relevant space.
-2. Read the relevant `wiki/index.md` descriptions to find pages touching the question.
+2. Read the relevant index (`life/wiki/life-index.md` or `content/wiki/content-index.md`) descriptions to find pages touching the question.
 3. Read the 3-5 pages most relevant to the question in full.
 4. Scan recent log entries (last 30 days) in the matching space for Juan's phrasing, tone, and recent stances on the topic.
 5. Draft the response.
