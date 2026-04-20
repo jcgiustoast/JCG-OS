@@ -159,6 +159,27 @@ When Juan says "compile":
 - **Weekly lint:** Juan can ask Claude to review the whole system
 - **Compile cycle:** Claude reads logs and compiles patterns into knowledge pages
 
+## Slash Commands
+
+Custom commands live in `.claude/commands/`. Each is a markdown prompt invoked by filename. All are READ-ONLY unless noted.
+
+| Command | Purpose |
+|---------|---------|
+| `/context` | Load full state — active projects, priorities, last 7 days of logs |
+| `/today` | Prioritized plan for today from recent logs + stated priorities |
+| `/closeday` | End-of-day recap; writes to `memory/log.md` after approval |
+| `/trace <topic>` | Timeline of how an idea evolved across the vault |
+| `/connect <A> \| <B>` | Find connections between two topics via link graph |
+| `/ghost <question>` | Draft a response in Juan's voice from stated beliefs |
+| `/challenge <topic>` | Pressure-test positions — contradictions, weak assumptions |
+| `/ideas` | Generate tools/people/topics/writing ideas grounded in the vault |
+| `/graduate` | Promote log asides to standalone pages; writes after approval |
+| `/drift` | Surface recurring patterns Juan hasn't labeled yet |
+| `/emerge` | Clusters ready to become a project, essay, or product |
+| `/schedule` | Map stated priorities to a suggested weekly shape |
+
+Only `/closeday` and `/graduate` write files, and both require explicit approval before doing so.
+
 ## Log Format
 
 Entries in `memory/log.md` use parseable prefixes:
