@@ -26,6 +26,25 @@ git push -u origin main
 3. Enable "Graph view" to see how files link to each other
 4. Optional: install the "Dataview" community plugin for queries across frontmatter fields
 
+### Step 4b: Enable the Obsidian CLI (optional, recommended)
+
+Obsidian 1.12.4+ ships with an official CLI. Lets Claude (and you) query the vault from the terminal — list backlinks, append to notes, search aliases, etc.
+
+1. Open Obsidian -> **Settings** -> **General** -> scroll to **Command line interface** -> click **Register CLI** and toggle it on.
+2. Use a **non-admin** terminal on Windows (admin shells fail silently).
+3. On Windows, git-bash doesn't auto-run `.com` files. To make `obsidian` work as a plain command, drop this wrapper on your PATH (e.g. `~/bin/obsidian`):
+
+   ```bash
+   #!/usr/bin/env bash
+   exec "/c/Program Files/Obsidian/Obsidian.com" "$@"
+   ```
+
+   Then `chmod +x ~/bin/obsidian`.
+4. Verify: `obsidian version` and `obsidian vaults` (should list `JCG-OS`).
+5. Run `obsidian help` to see all commands (aliases, backlinks, append, search, etc.).
+
+Docs: https://help.obsidian.md/cli
+
 ## Step 5: Use Claude Code
 
 ```bash
