@@ -92,6 +92,7 @@ All wiki pages use this frontmatter:
 title: Page Title
 description: One-line summary for index scanning
 type: identity | professional | project | concept | source-summary | comparison | content-idea | topic
+author: juan | claude   # who owns the page
 sources: []          # raw/ files referenced, if any
 related: []          # other wiki pages this connects to
 created: YYYY-MM-DD
@@ -99,6 +100,17 @@ updated: YYYY-MM-DD
 confidence: high | medium | low
 ---
 ```
+
+## Authorship Rule (CRITICAL)
+
+Every wiki page declares an `author` in frontmatter:
+
+- **`author: juan`** — Juan's own notes, thinking, voice. Claude **must not create or edit** these pages. Claude may only propose changes in chat; Juan writes them himself. The only exceptions: (a) Juan explicitly says "write this to [page]" or "edit [page]", or (b) mechanical updates to the `updated:` date after Juan-approved edits.
+- **`author: claude`** — Summaries, source compilations, ingested material, comparison tables. Claude creates and maintains these freely (still with Juan's approval per the Update Protocol).
+
+Default for new pages: if Juan is the one thinking out loud, it's `author: juan`. If Claude is compiling from `raw/` or from logs, it's `author: claude`.
+
+`memory/` files (logs, compiled wiki) are always Claude-authored. `raw/` is immutable regardless of author.
 
 ## Session Protocols
 
