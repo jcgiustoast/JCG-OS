@@ -8,3 +8,7 @@ Thumbs.db
 # Sensitive files
 # secrets/
 # *.env
+
+# Notion sync — workspace-specific IDs and integration token, not for version control
+content/.notion-config.json
+content/memory/notion-sync-state.json
