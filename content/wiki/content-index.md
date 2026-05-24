@@ -1,9 +1,9 @@
 ---
 title: Content Wiki Index
-description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context.
+description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, research briefs) lives in Notion.
 type: index
 created: 2026-04-06
-updated: 2026-04-07
+updated: 2026-05-24
 confidence: high
 ---
 
@@ -28,7 +28,8 @@ Spanish-language blog with additional Meta Ads, forecasting, and incrementality 
 
 ## Strategy & Pipeline
 - [[content-strategy]] — Phased content strategy tied to ASTEROI business phases. English-only in Phase 1-2, Spanish expansion Phase 3+. Channels, topics, cadence, and constraints by phase. Bridges to [[strategy]] and [[projects]]. (confidence: high)
-- [[pipeline]] — Content pipeline tracker. Status board for all content from idea through draft to published. Weekly cadence targets. (confidence: high)
+- [[pipeline]] — Historical pipeline tracker (pre-2026-05-24). Active pipeline now lives in the Notion Content DB. (confidence: high)
+- **Notion Content DB** — Active operational layer. Ideas, drafts, scheduling, publishing, performance tracking. Open: Content OS -> Content in Notion.
 
 ## Raw Articles (content/raw/articles/)
 
@@ -94,42 +95,50 @@ Synthesized from 37 articles. Each page extracts reusable frameworks, formulas, 
 ## Tooling
 
 ### /content — Content Creation Skill
-Claude Code skill that creates platform-ready content (Twitter, LinkedIn, blog) from JCG-OS wiki source material. Enforces Phase 1 firewall, writes in Juan's voice, formats per platform. Includes optional Apify research step.
+Claude Code skill that creates platform-ready content (Twitter, LinkedIn, blog) from JCG-OS wiki source material. Enforces Phase 1 firewall, writes in Juan's voice, formats per platform. Includes optional Apify research step. **Approved drafts are filed to the Notion Content DB (Status=Drafting).** No-args mode promotes the oldest Idea from the backlog.
 - **Location:** `~/.claude/commands/content.md`
-- **Usage:** `/content twitter LTV`, `/content linkedin profitability`, `/content blog powered ice`, `/content repurpose [article path]`
+- **Helper:** `content/scripts/notion-content.ps1` (query-ideas / create-draft / promote-idea)
+- **Usage:** `/content` (promote oldest Idea), `/content twitter LTV`, `/content linkedin profitability`, `/content blog powered ice`, `/content repurpose [article path]`
 
 ### /content-research — Competitive Intelligence Skill
-Scrapes reference creators via Apify to analyze what hooks, formats, and topics drive engagement on Twitter/LinkedIn. Returns research brief with gaps Juan can own.
+Scrapes reference creators via Apify to analyze what hooks, formats, and topics drive engagement on Twitter/LinkedIn. Returns research brief with gaps Juan can own. **Briefs are filed to the Notion Research DB.**
 - **Location:** `~/.claude/commands/content-research.md`
+- **Helper:** `content/scripts/notion-research.ps1` (create-brief)
 - **Usage:** `/content-research twitter LTV`, `/content-research linkedin all`
 - **Reference creators:** Taylor Holiday, Nick Sharma, Cody Plofker, Barry Hott, Dara Denney
+
+### /content-sync — Push Local Knowledge to Notion Mirror
+Walks `content/wiki/` and `content/raw/articles/`, pushes each markdown file as a Notion page under the JCG-OS Knowledge parent. Idempotent. One-way (local -> Notion). Uses Notion's Markdown Content API directly.
+- **Location:** `~/.claude/commands/content-sync.md`
+- **Helper:** `content/scripts/notion-sync.ps1`
+- **Usage:** `/content-sync` (full), `/content-sync wiki`, `/content-sync articles`, `/content-sync --dry-run`
 
 ### Apify Scrapers (confirmed working 2026-04-07)
 - **Twitter:** `apidojo/tweet-scraper` — input: `{"handles":["HANDLE"],"tweetsDesired":N}`
 - **LinkedIn:** `apimaestro/linkedin-profile-posts` — input: `{"username":"USERNAME","limit":N}`
 
+### Notion Integration (configured 2026-05-24)
+- **Integration:** `JCG Content OS` (internal). Token in `content/.notion-config.json` (gitignored).
+- **API version:** `2026-03-11` (Markdown Content API + data sources).
+- **Sync state:** `content/memory/notion-sync-state.json` (gitignored) — maps local paths to Notion page IDs.
+
 ## Content Ideas
 
-### Priority Repurposing Queue (Phase 1 — in-lane articles)
-1. **"Your ROAS Doesn't Mean Shit"** — contrarian, built-in Economics Reveal. Best for: Twitter thread + LinkedIn post.
-2. **"The Formula You Need to Unlock Your eCom Growth"** — Growth Formula framework. Best for: LinkedIn long post.
-3. **"A New Way of Thinking About LTV"** — LTV framework, deep. Best for: all 3 platforms.
-4. **"11 Profitability Levers for 7-Figure eCommerce"** — listicle structure, easy thread. Best for: Twitter thread.
-5. **"7 Habits of Highly Profitable eCom Brands"** — listicle, strong LinkedIn format. Best for: LinkedIn.
-6. **"Powered ICE Prioritization Framework"** — proprietary framework. Best for: blog + thread.
-7. **"The Metric Tree of Subscription eCommerce"** — visual framework. Best for: blog + LinkedIn.
+Ideas now live in the Notion Content DB with Status=Idea. Open Content OS -> Content -> Ideas backlog view to see, add, or promote. Backfilled on 2026-05-24: 12 Idea rows from the priority repurposing queue (7 source items, split into per-platform rows).
 
-### Off-Limits for Phase 1
+The Phase 1 firewall (off-limits topics) is enforced inside the `/content` skill — see `~/.claude/commands/content.md` STEP 2 and `content-strategy.md`. Currently off-limits:
 - Meta Andromeda strategies
 - 10 Strategies to Optimize Meta Ads ROI
 - Making Meta Your Profitability Machine
 - Any content positioning Juan as ASTEROI founder
 
-*Add new ideas by telling Claude about them. They'll be filed here.*
+To add a new idea: capture it directly in Notion (mobile or web), or tell Claude to create an Idea row via `notion-content.ps1 create-draft -Status Idea ...`. Either way it shows up in the same backlog.
 
 ## Research
-Research briefs from `/content-research` will be saved to `content/raw/research/`.
-*No research pages yet. Run `/content-research` to generate the first brief.*
+
+Research briefs from `/content-research` are filed to the Notion Research DB. Open Content OS -> Research to browse.
+
+Historical briefs (pre-migration) in `content/raw/research/`, if any exist, are retained but not updated.
 
 ## Memory
 - [[log]] — Content activity log. Most recent first.
