@@ -1,12 +1,20 @@
 ---
-title: Content Pipeline
-description: Tracks content from idea through draft to published. Status board for all platforms. Updated by /content skill after each approved piece.
-type: project
+title: Content Pipeline (Historical)
+description: Historical pipeline tracker. Active tracking now lives in the Notion Content DB. This file is retained for reference only and not updated going forward.
+type: archive
+author: claude
 sources: []
 related: [content-strategy, content-index]
 created: 2026-04-07
-updated: 2026-04-07
+updated: 2026-05-24
 confidence: high
+status: historical
+---
+
+> **This file is no longer updated.** Active content pipeline tracking lives in the Notion Content DB (Content OS -> Content). Open Notion to view the current pipeline.
+>
+> The content below reflects the state of the pipeline as of 2026-05-24, before the migration to Notion. Schema (status names, source-article links, etc.) is preserved as documentation of the pre-migration model.
+
 ---
 
 # Content Pipeline
