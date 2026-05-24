@@ -3,7 +3,7 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-04-07
+updated: 2026-05-24
 ---
 
 # Content Memory Log
@@ -11,6 +11,29 @@ updated: 2026-04-07
 *Append-only. Most recent entries at the top. Never edit past entries.*
 
 ---
+
+## [2026-05-24] migration | Content operational layer moved to Notion
+
+- **Notion DBs created** (Content OS workspace):
+  - Content DB (lifecycle: Idea -> Researching -> Drafting -> Ready -> Scheduled -> Published) with 11 properties incl. Hook type, Source wiki, Source articles, Published URL.
+  - Research DB (competitive intel briefs) with Date, Platform, Topic, Creators scraped, Posts analyzed, Informed pieces relation.
+  - Two-way relation: Content.Source research <-> Research.Informed pieces.
+- **Knowledge Mirror created** under "JCG-OS Knowledge" sub-page. 50 pages pushed (13 wiki + 37 raw articles) via new `/content-sync` skill.
+- **Skills updated:**
+  - `/content` -> drafts now filed to Notion Content DB (Status=Drafting); no-args mode promotes oldest Idea from backlog.
+  - `/content-research` -> briefs filed to Notion Research DB.
+  - `/content-sync` (new) -> idempotent one-way sync of local markdown to Notion mirror.
+- **Helper scripts** (`content/scripts/`):
+  - `notion-sync.ps1` — knowledge mirror sync (create/update/archive, rate-limited).
+  - `notion-content.ps1` — Content DB query-ideas / create-draft / promote-idea.
+  - `notion-research.ps1` — Research DB create-brief.
+- **Local archived:** `pipeline.md` marked historical; `content/raw/drafts/` and `content/raw/research/` no longer written to.
+- **Backfilled:** 12 Idea rows from priority repurposing queue (7 items split per platform).
+- **Tech choice:** Notion HTTP API directly via PowerShell Invoke-RestMethod (the official `ntn` CLI doesn't support Windows yet). Markdown Content API + data sources, Notion-Version `2026-03-11`.
+- **Config:** `content/.notion-config.json` (gitignored) — integration token, DB IDs, data source IDs.
+- **State:** `content/memory/notion-sync-state.json` (gitignored) — local-path -> Notion-page-ID map (50 entries).
+- **Spec:** `docs/superpowers/specs/2026-05-24-notion-content-system-design.md`
+- **Plan:** `docs/superpowers/plans/2026-05-24-notion-content-system.md`
 
 ## [2026-04-07] decision | Content engine built — ready to publish
 - Built `/content` skill (Claude Code command) for creating Twitter, LinkedIn, and blog content grounded in JCG-OS wiki pages. Enforces Phase 1 firewall, writes in Juan's voice, formats per platform.
