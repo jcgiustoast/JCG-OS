@@ -177,8 +177,20 @@ Custom commands live in `.claude/commands/`. Each is a markdown prompt invoked b
 | `/drift` | Surface recurring patterns Juan hasn't labeled yet |
 | `/emerge` | Clusters ready to become a project, essay, or product |
 | `/schedule` | Map stated priorities to a suggested weekly shape |
+| `/process-inbox` | Triage captures in `life/raw/inbox/` and file them into the wiki |
+| `/content` | Create LinkedIn/X/blog posts — builds personal brand, inbound for ASTEROI |
+| `/content-research` | Scrape reference creators to find what's performing; feeds `/content` |
 
-Only `/closeday` and `/graduate` write files, and both require explicit approval before doing so.
+Only `/closeday`, `/graduate`, and `/process-inbox` write files, and all require explicit approval before doing so.
+
+## Mobile & Desktop Capture
+
+Ideas captured on phone (Telegram bot) or desktop (Obsidian, Telegram Desktop) land in `life/raw/inbox/`:
+- `YYYY-MM-DD.md` — Telegram bot appends text + Whisper-transcribed voice notes here
+- Any other `.md` file dropped into `inbox/` (e.g. from Obsidian) is also picked up
+- Voice `.ogg` and photo `.jpg` files are saved alongside and referenced inline
+
+Run `/process-inbox` to triage. Bot source: `.telegram-inbox/` (auto-starts on Windows login).
 
 ## Log Format
 

@@ -8,6 +8,12 @@ updated: 2026-04-07
 
 # Life Memory Log
 
+## [2026-05-19] session | Astra Ads architecture review + first cleanup shipped
+- Progress: Surveyed Astra Ads architecture via /improve-codebase-architecture and surfaced 7 deepening opportunities. Shipped opportunity #1 — slimmed `build_creative_prompt` from 22 kwargs (14 dead) to 10. Same cleanup propagated to `generate_creative` wrapper, 4 call sites in `core/slate_explorer.py`, and the `_generate_one_brief` helper in `web/routes/concepts.py`. Removed 2 dead tests + dead support variables (`existing_headlines` accumulator, `headlines_snapshot`, `research_insights` load, `hc`/`fc` lookups). Net diff: +5 / -125 lines. Full test suite still green (2271 passed, 74 skipped). PR #31 opened against main; merge pending user action (auto-mode classifier blocked `gh pr merge` from agent).
+- New ideas / threads: Documented 6 remaining deepening opportunities in `docs/architecture-deepening-opportunities.md` with friction-per-effort ranking. Recommended next: #2 SharpAngle / SharpAngleResult duplication (same concept, two near-identical Pydantic models, bridge conversion exists solely to copy fields across).
+- Unfinished — carry to tomorrow: (1) Merge PR #31 manually via GitHub UI or grant Bash permission for `gh pr merge`. (2) Start a fresh chat to grill opportunity #2 — handoff prompt ready in the doc.
+- Code touched: astra-ads/agents/creative_agent.py, astra-ads/core/slate_explorer.py, astra-ads/web/routes/concepts.py, astra-ads/tests/test_creative_agent.py, astra-ads/docs/architecture-deepening-opportunities.md
+
 *Append-only. Most recent entries at the top. Never edit past entries.*
 
 ---

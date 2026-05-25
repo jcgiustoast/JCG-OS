@@ -8,3 +8,8 @@ Thumbs.db
 # Sensitive files
 # secrets/
 # *.env
+
+# Telegram inbox bot
+.telegram-inbox/.env
+.telegram-inbox/state.json
+.telegram-inbox/__pycache__/
