@@ -1,0 +1,4187 @@
+[
+  {
+    "type": "post",
+    "id": "7424053869258760192",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_si-tu-agencia-de-marketing-te-cobra-un-activity-7424053869258760192-7tG2",
+    "content": "Si tu agencia de marketing te cobra un % del gasto publicitario…\n\nPiénsalo dos veces...\n\nSu incentivo principal es diametralmente opuesto a tu objetivo como eCommerce.\n\nDéjame explicarte…\n\nSi tenés o trabajás en un eCommerce, tu objetivo es escalar - muy probablemente aumentando el gasto publicitario - SÍ Y SOLO SI eres rentable.\n\nDe nada sirve duplicar lo que invertís en Meta si tu facturación no se ve impactada.\n\nLo único que causaría esto es una menor contribución marginal y rentabilidad.\n\nPero una agencia que tiene como incentivo aumentar el gasto publicitario le da un poco igual si eres más rentable a fin de mes.\n\nLo que quieren es convencerte de que gastar más es bueno para tu negocio, rentable o no.\n\nTotal, ellos ganan cuando gastan más, no cuando vos ganás.\n\nY esto también aplica a agencias que cobran una comisión por facturación o por ROAS en Plataforma:\n\n- Una mayor facturación no significa mayor beneficio\n- El ROAS en plataforma es fácilmente manipulable y mentiroso\n\nLa única forma de alinear tus objetivos con los incentivos de las agencias es que cobren una comisión por contribución marginal o, si no es posible, sobre gasto publicitario con un límite en eficiencia (MER o idealmente aMER).\n\nDe esta manera, te asegurás de que ellos ganan cuando vos y tu negocio ganan.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1770032374682,
+      "date": "2026-02-02T11:39:34.682Z",
+      "postedAgoShort": "2mo",
+      "postedAgoText": "2 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_si-tu-agencia-de-marketing-te-cobra-un-activity-7424053869258760192-7tG2?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7424053869258760192",
+    "shareUrn": "urn:li:share:7424053868650487808",
+    "engagement": {
+      "id": "7424053869258760192",
+      "likes": 38,
+      "comments": 12,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 34
+        },
+        {
+          "type": "PRAISE",
+          "count": 2
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7377579087453831168",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_confiar-ciegamente-en-los-roas-que-muestran-activity-7377579087453831168-RtCU",
+    "content": "Confiar ciegamente en los ROAS que muestran las plataformas de publicidad es fácil.\r\n\r\nROAS tan espectaculares que son difíciles de creer.\r\n\r\nPero cuando entras a los reportes de ventas, el gráfico sigue igual.\r\n\r\nY mientras tanto, la rentabilidad de tu eCommerce sufre.\r\n\r\nPor suerte, hay un mundo afuera de lo que nos cuentan las plataformas publicitarias.\r\n\r\nEn donde sí es posible saber el impacto real de nuestra inversión de marketing.\r\n\r\nEl de los tests de incrementalidad, MMM, y la inferencia causal.\r\n\r\nAquí están las herramientas que Meta, Google y TikTok no pueden inflar ni controlar.\r\n\r\nY una vez que las implementas, desbloquearás nuevos niveles de rentabilidad y crecimiento.\r\n\r\nLa pregunta es...  ¿estás listo para tomar la pastilla roja?  ¿O prefieres que Meta y Google te sigan tomando el pelo?",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1758951923240,
+      "date": "2025-09-27T05:45:23.240Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQF-0zXQeJ7L-A/feedshare-shrink_1280/B4DZmJtFojIcAs-/0/1758951922866?e=1778112000&v=beta&t=GmIhd7qpSvVdHaHdPjoJMdHGbb4rcpZFMp8JhWopm4U",
+        "width": 605,
+        "height": 308,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_confiar-ciegamente-en-los-roas-que-muestran-activity-7377579087453831168-RtCU?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7377579087453831168",
+    "shareUrn": "urn:li:share:7377579086228996096",
+    "engagement": {
+      "id": "7377579087453831168",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 3
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7375802043602665472",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_deja-de-separar-tus-campa%C3%B1as-de-meta-en-tofu-activity-7375802043602665472-pep1",
+    "content": "Deja de separar tus campañas de Meta en TOFU y BOFU",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1758528242970,
+      "date": "2025-09-22T08:04:02.970Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQFP6GYXYdD1FA/videocover-low/B4DZlwcz1yGQAM-/0/1758528230808?e=1777280400&v=beta&t=cVAW9gexjYaidki4cn9oFBs0-nSqQVRMtm3Jn38WTq8",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQFP6GYXYdD1FA/mp4-720p-30fp-crf28/B4DZlwcz1yGQAg-/0/1758528240296?e=1777280400&v=beta&t=koYhFAlR1HlC7caSquAc23nahiSN1_ROxFTmmI1xxpQ"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_deja-de-separar-tus-campa%C3%B1as-de-meta-en-tofu-activity-7375802043602665472-pep1?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7375802043602665472",
+    "shareUrn": "urn:li:ugcPost:7375801979698245632",
+    "engagement": {
+      "id": "7375801979698245632",
+      "likes": 7,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 7
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7397980416630095872",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_roas-por-los-suelos-en-tu-ecommerce-antes-activity-7397980416630095872-9Aos",
+    "content": "¿ROAS por los suelos en tu eCommerce antes de BFCM?\n\nLo último que debes hacer es recortar el gasto publicitario.\n\nTe explico...\n\nNoviembre es un animal completamente distinto al resto de los meses.\n\nLas personas, en vez de ver tu anuncio y comprar, se anotan los productos y esperan al gran descuento de Black Friday.\n\nY no importa si tú has decidido adelantar tus promociones para que duren todo el mes.\n\nLa gente no se lo cree, y la mayoría va a esperar.\n\nPor eso, si recortas gasto publicitario en Meta, Google, o YouTube - especialmente los canales Top of Funnel - por un mal rendimiento la primera mitad de Noviembre, estás cometiendo un error.\n\nTienes que tomar más perspectiva y confiar en que la facturación vendrá en los 4 días de BFCM.\n\n¿No me crees?\n\nVe a tu cuenta publicitaria y compara la evolución de la facturación atribuida en 1-Día Click / 7-Días Click / 28-Días Click.\n\nEn un cliente, el aumento en Agosto de 2024 entre un 1DC y 28DC fue del 45%.\n\nEn Noviembre, 97%...\n\nPor eso, cuando calcules el ROI de tu inversión publicitaria, no consideres días o semanas, considera Noviembre completo.\n\nDe no ser así, estarás tomando la decisión incorrecta y podrías estar dejando dinero sobre la mesa.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1763815979154,
+      "date": "2025-11-22T12:52:59.154Z",
+      "postedAgoShort": "4mo",
+      "postedAgoText": "4 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_roas-por-los-suelos-en-tu-ecommerce-antes-activity-7397980416630095872-9Aos?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7397980416630095872",
+    "shareUrn": "urn:li:share:7397980415862484992",
+    "engagement": {
+      "id": "7397980416630095872",
+      "likes": 6,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 6
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7389951456797360128",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_tu-ecommerce-es-como-un-%C3%A1rbol-activity-7389951456797360128-78db",
+    "content": "Tu eCommerce es como un árbol. 🌲 🧐 ⁣\n⁣\nY entender esta analogía te ayudará a escalar rentablemente. ⁣\n⁣\nVamos por las 3 partes que lo componen:⁣\n⁣\n🌴 𝗟𝗮 𝗿𝗮í𝘇: 𝗖𝗹𝗶𝗲𝗻𝘁𝗲𝘀 𝗿𝗲𝗰𝘂𝗿𝗿𝗲𝗻𝘁𝗲𝘀⁣\n⁣\nSon los más rentables de todos, ya que no tienes que adquirirlos nuevamente. ⁣\n⁣\nAdemás, son los más fáciles de pronosticar porque tienden a comportarse de manera similar.⁣\n⁣\n🌴 𝗘𝗹 𝘁𝗿𝗼𝗻𝗰𝗼: 𝗖𝗹𝗶𝗲𝗻𝘁𝗲𝘀 𝗻𝘂𝗲𝘃𝗼𝘀 𝗼𝗿𝗴𝗮́𝗻𝗶𝗰𝗼𝘀⁣\n⁣\nSon personas que ya conocen tu marca pero todavía no han comprado. ⁣\n⁣\nEsta es la gente que te sigue en redes, tienes su email/SMS, o ha interactuado con tus publicaciones. ⁣\n⁣\nEn otras palabras, es la gente que te va a comprar a pesar de no haber visto publicidad pagada.⁣\n⁣\n🌴 𝗟𝗮𝘀 𝗿𝗮𝗺𝗮𝘀: 𝗖𝗹𝗶𝗲𝗻𝘁𝗲𝘀 𝗻𝘂𝗲𝘃𝗼𝘀 𝗽𝗮𝗴𝗼𝘀⁣\n⁣\nEsta es la gente que no te conoce y tienes que salir a convencer. ⁣\n⁣\nSon los más caros de adquirir y más difíciles de pronosticar, ya que dependes de plataformas externas para llegar a ellos.⁣\n⁣\nSi apagas la publicidad, estas personas no te comprarían nunca.⁣\n⁣\n👉 ¿𝗣𝗼𝗿 𝗾𝘂𝗲́ 𝗶𝗺𝗽𝗼𝗿𝘁𝗮 𝗲𝘀𝘁𝗮 𝗮𝗻𝗮𝗹𝗼𝗴í𝗮?⁣\n⁣\nAdemás de ayudar a entender las partes que componen tu negocio, también nos sirve para comprender dinámicas más complejas.⁣\n⁣\nTal como un árbol sin raíces profundas y tronco fino se cae con el primer viento fuerte, un eCommerce que depende principalmente de publicidad paga para crecer pone en riesgo su negocio ante cualquier cambio:⁣\n⁣\n• Tarifas (como pasó en USA con Trump y China)⁣\n• Cambios de algoritmos y restricciones como GDPR e iOS⁣\n• Nueva competencia que vende a precios muy por debajo de los tuyos⁣\n⁣\nEs normal que al principio la gran mayoría de las ventas vengan de clientes adquiridos a través de publicidad.⁣\n⁣\n𝗣𝗲𝗿𝗼 𝗮 𝗺𝗲𝗱𝗶𝗱𝗮 𝗾𝘂𝗲 𝘁𝘂 𝗲𝗖𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗺𝗮𝗱𝘂𝗿𝗮, 𝗲𝘀 𝗰𝗿𝘂𝗰𝗶𝗮𝗹 𝗶𝗻𝗰𝗿𝗲𝗺𝗲𝗻𝘁𝗮𝗿 𝗲𝗹 𝗽𝗼𝗿𝗰𝗲𝗻𝘁𝗮𝗷𝗲 𝗱𝗲 𝗰𝗹𝗶𝗲𝗻𝘁𝗲𝘀 𝗿𝗲𝗰𝘂𝗿𝗿𝗲𝗻𝘁𝗲𝘀 y generar marca para poder atraer ventas sin depender únicamente de publicidad paga.⁣\n⁣\nSi querés leer mi post completo sobre el tema, te dejo el link en comentarios. 👇",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761901725959,
+      "date": "2025-10-31T09:08:45.959Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4E22AQEPGl_PqbmQlw/feedshare-shrink_1280/B4EZo5hsNQIoAs-/0/1761901725126?e=1778112000&v=beta&t=IFyFomSyk4uYPFjdGuCiiFh723IbQH62FTyqorG1iGM",
+        "width": 1022,
+        "height": 790,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_tu-ecommerce-es-como-un-%C3%A1rbol-activity-7389951456797360128-78db?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7389951456797360128",
+    "shareUrn": "urn:li:share:7389951455623020545",
+    "engagement": {
+      "id": "7389951456797360128",
+      "likes": 10,
+      "comments": 1,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 8
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7394680632259366913",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_10-estrategias-meta-ads-andromeda-activity-7394680632259366913-Fzof",
+    "content": "👇 10 Estrategias para Optimizar Meta Ads con la llegada de ANDROMEDA 👇",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1763029249253,
+      "date": "2025-11-13T10:20:49.253Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "10 Estrategias Meta Ads Andromeda",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4D1FAQHnrXXFkK0KQw/feedshare-document-sanitized-pdf/B4DZp8urDuH4A8-/0/1763029215009?e=1777280400&v=beta&t=Eb7Ykv_jok_V9R4kRgIO81oZ54UsEXBjV7fLKiM3az4",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D4D1FAQHnrXXFkK0KQw/feedshare-document-cover-images_1920/B4DZp8urDuH4Aw-/0/1763029218529?e=1777280400&v=beta&t=98seu5bNYmsnC-SeeUWNcSaUgtci-9H3yUs_PqUugSw",
+            "https://media.licdn.com/dms/image/v2/D4D1FAQHnrXXFkK0KQw/feedshare-document-cover-images_1920/B4DZp8urDuH4Aw-/1/1763029218529?e=1777280400&v=beta&t=CDd2ZVSf_uTOMaipqogvoXoIKxs73xxq_jYaswsvwAk",
+            "https://media.licdn.com/dms/image/v2/D4D1FAQHnrXXFkK0KQw/feedshare-document-cover-images_1920/B4DZp8urDuH4Aw-/2/1763029218529?e=1777280400&v=beta&t=47nlB0nmSQ81usY1W0oLT-Lboh_wv2MKeTA7XLq9vWY"
+          ],
+          "height": 1927
+        }
+      ],
+      "totalPageCount": 14
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_10-estrategias-meta-ads-andromeda-activity-7394680632259366913-Fzof?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7394680632259366913",
+    "shareUrn": "urn:li:ugcPost:7394680631378726913",
+    "engagement": {
+      "id": "7394680631378726913",
+      "likes": 17,
+      "comments": 0,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 16
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7407347554952114176",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_el-otro-d%C3%ADa-habl%C3%A9-con-un-founder-que-en-24-activity-7407347554952114176-PU4S",
+    "content": "El otro día hablé con un Founder que en 24 meses, llevó su eCommerce de 0 a $50M en facturación.\n\n¿Su consejo principal? Foco. \n\nY no hablaba de tener una rutina personal para ser lo más eficiente posible.\nEra un foco mucho más extremo:\n\n👉  1 solo producto\n👉  1 solo canal de venta > Shopify\n👉  1 solo canal publicitario > Meta\n👉  1 solo país > Estados Unidos\n\nNada de abrir en Amazon o vender en retail, publicitar en TikTok o Pinterest, o desarrollar nuevos productos.\n\nPara él, todo esto era una pérdida de tiempo que complejizaba demasiado la operativa y desperdigaba el esfuerzo de su equipo.\n\nY esta obsesión dio sus frutos:\n\n✅ Tienen una de las mejores tasas de retención que he visto\n✅ Lanzan 500 creativos diferentes en Meta por mes, de excelente calidad\n✅ Pueden tomar decisiones con solo mirar su dashboard de Shopify\n✅ Su equipo es eficiente y especializado\n\nEl aprendizaje: Si tu eCommerce está estancado, quizás la solución no es desarrollar más productos, abrir nuevos canales o países.\n\nLo que puede llevar tu facturación al siguiente nivel puede que sea redoblar los esfuerzos en lo que están haciendo ahora - más y mejor.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1766049278963,
+      "date": "2025-12-18T09:14:38.963Z",
+      "postedAgoShort": "4mo",
+      "postedAgoText": "4 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_el-otro-d%C3%ADa-habl%C3%A9-con-un-founder-que-en-24-activity-7407347554952114176-PU4S?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7407347554952114176",
+    "shareUrn": "urn:li:share:7407347554272694272",
+    "engagement": {
+      "id": "7407347554952114176",
+      "likes": 19,
+      "comments": 6,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 17
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7393969505892397056",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_en-ecommerce-el-marketing-sin-finanzas-va-activity-7393969505892397056-aoz_",
+    "content": "En eCommerce, el marketing sin finanzas va ciego.\n\nY las finanzas sin marketing no tienen piernas.\n\n¿Qué quiero decir?\n\nCuando hacemos marketing sin tener en cuenta lo financiero, corremos el riesgo de escalar algo que pierde dinero. Por ejemplo:\n\n💠 Cuando configuramos campañas en Meta o Google, tenemos que saber perfectamente cuáles son los costos variables de cada uno de los productos que vendemos.\n\n💠 Para saber cuál es el mínimo que hay que vender, tenemos que saber los costos fijos que hay que cubrir.\n\n💠 Para saber qué productos vender, es importante conocer las posiciones de inventario de cada uno para evitar tener dinero anclado en el depósito.\n\nPor otro lado, si el equipo de finanzas no habla con el de marketing, es posible que:\n\n💠 Se generen forecasts que están muy alejados de la realidad y son casi imposibles de conseguir con el presupuesto actual.\n\n💠 Vean a marketing como un centro de costos en vez de verlo como el motor de crecimiento del negocio.\n\n💠 Se pierdan de conceptos que los ayudarían a tomar mejores decisiones y forecasts como LTV, AOV, ARPU, incrementalidad, etc.\n\nLos eCommerce que hacen la diferencia tienen al equipo de marketing y finanzas trabajando juntos e intercambiando ideas.\n\nPorque uno necesita del otro para ser realmente efectivos.\n\nY esa es una de las cosas que más me apasiona - combinar estos dos mundos.\n\nMarketing-led finance.\nFinance-led marketing.\n\nPorque, a fin de cuentas, es la única forma de que las dos tengan impacto.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1762859703515,
+      "date": "2025-11-11T11:15:03.515Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_en-ecommerce-el-marketing-sin-finanzas-va-activity-7393969505892397056-aoz_?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7393969505892397056",
+    "shareUrn": "urn:li:share:7393942111009566720",
+    "engagement": {
+      "id": "7393969505892397056",
+      "likes": 10,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 9
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7376488582678745088",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_porqu%C3%A9-tus-anuncios-en-meta-y-tiktok-no-funcionan-activity-7376488582678745088-tyEE",
+    "content": "Porqué tus anuncios en Meta y TikTok no funcionan.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1758691926641,
+      "date": "2025-09-24T05:32:06.641Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4E05AQE5tqHflxb94w/videocover-low/B4EZl6NJagHIAM-/0/1758691916534?e=1777280400&v=beta&t=oFzcQMd1KqiyfAeSWrz6D3ESeVkqtHeKy9lOxBIm4qM",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4E05AQE5tqHflxb94w/mp4-720p-30fp-crf28/B4EZl6NJagHIAg-/0/1758691923565?e=1777280400&v=beta&t=DOrbA8a6yXbnLdO4RFlVdOwP_AWgQ_jJVCQYV9Tw1t8"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_porqu%C3%A9-tus-anuncios-en-meta-y-tiktok-no-funcionan-activity-7376488582678745088-tyEE?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7376488582678745088",
+    "shareUrn": "urn:li:ugcPost:7376488533622038528",
+    "engagement": {
+      "id": "7376488533622038528",
+      "likes": 10,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 9
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7400580261366792192",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_consejo-r%C3%A1pido-para-ecommerce-en-bfcm-configur%C3%A1-activity-7400580261366792192-ujn5",
+    "content": "Consejo rápido para eCommerce en BFCM:\n\nConfigurá tus campañas en Meta con atribución 1-Día Click\n\nTenés que forzar al algoritmo a generar la compra ahora, no en 7 días.\n\nAdemás, es la mejor manera de poder tomar decisiones en tiempo real y poder ser efectivo.\n\nY ni hablar de 1-Día Vista, es la configuración menos incremental de todas. Alejense lo más que puedan.\n\n¡Éxitos con estos 3 días que quedan!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1764435830442,
+      "date": "2025-11-29T17:03:50.442Z",
+      "postedAgoShort": "4mo",
+      "postedAgoText": "4 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_consejo-r%C3%A1pido-para-ecommerce-en-bfcm-configur%C3%A1-activity-7400580261366792192-ujn5?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7400580261366792192",
+    "shareUrn": "urn:li:share:7400580260729077760",
+    "engagement": {
+      "id": "7400580261366792192",
+      "likes": 7,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 7
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7422245120885874688",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_el-roas-en-plataforma-es-lo-%C3%BAltimo-que-deber%C3%ADas-activity-7422245120885874688-oEoI",
+    "content": "El ROAS en plataforma es lo último que deberías ver en tu día a día.\n\nHay muchisimas métricas más importantes en tu eCommerce:\n\n• Contribución Marginal\n• Facturación Neta\n• MER\n• aMER\n• CAC\n• Tasa de Retorno\n• LTV a 30-60-90 Días\n• Tasa de Devolución\n• ARPU\n• AOV\n• Tasa de Conversión\n\nY puedo seguir con, por lo menos, 10 más.\n\nLos ROAS que ves en plataformas como Meta y Google son estimaciones, en la mayoría de los casos, infladas, que no reflejan la realidad de tu eCommerce.\n\nY solo cobran sentido si se entienden en un contexto específico, sabiendo la estrategia y las finanzas detrás del negocio.\n\nSi no, suelen ser espejismos que no llevan a ningún lado.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1769601135465,
+      "date": "2026-01-28T11:52:15.465Z",
+      "postedAgoShort": "2mo",
+      "postedAgoText": "2 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_el-roas-en-plataforma-es-lo-%C3%BAltimo-que-deber%C3%ADas-activity-7422245120885874688-oEoI?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7422245120885874688",
+    "shareUrn": "urn:li:share:7422245120265269248",
+    "engagement": {
+      "id": "7422245120885874688",
+      "likes": 15,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 14
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7392169170009862144",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_47-suscriptores-y-casi-5k-visitas-en-youtube-activity-7392169170009862144-55ET",
+    "content": "47 suscriptores y casi 5K visitas en YouTube. 😟\n\nParece poco, pero TODOS los canales que hoy son gigantes empezaron así.\nDesde MrBeast, The Nude Project, Romuald Fons, etc.\n\nPor eso creo que es fundamental ajustar las expectativas de lo que hacemos.\n\nSi hubiera esperado miles de suscriptores en 3 meses de trabajo, el canal ya no existiría.\n\nSé que esto es un maratón, no un sprint. Y que los resultados tardan en llegar...\n\nEn YouTube, eCommerce y básicamente todo lo que vale la pena.\n\nPor eso, con la mirada en el largo plazo, disfrutar del proceso y mejorar cada semana. Así, los resultados llegan solos.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1762430469992,
+      "date": "2025-11-06T12:01:09.992Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQFjGKu4WQhugA/feedshare-shrink_2048_1536/B4DZpTSqWKIAAw-/0/1762333992912?e=1778112000&v=beta&t=yb1K33sbh0orp4fi6q_SPLGZ4t0th5ohfDIQbR9hLGU",
+        "width": 1468,
+        "height": 923,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_47-suscriptores-y-casi-5k-visitas-en-youtube-activity-7392169170009862144-55ET?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7392169170009862144",
+    "shareUrn": "urn:li:share:7392169168772415489",
+    "engagement": {
+      "id": "7392169170009862144",
+      "likes": 18,
+      "comments": 6,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 15
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7381603279270469632",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_ecommerce-ecom-ecomgrowth-activity-7381603279270469632-iqLD",
+    "content": "Los Límites de Puja son OBLIGATORIOS en eCommerce.\r\n\r\n#ecommerce #ecom #ecomgrowth #dtc",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759911365335,
+      "date": "2025-10-08T08:16:05.335Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4E05AQGRR428eOVY7g/videocover-high/B4EZnC4_8SGYAY-/0/1759911357945?e=1777280400&v=beta&t=9zpeV2_TYgB36tB5rwogwxRPGd9nYCkN2EaW3_989tE",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4E05AQGRR428eOVY7g/mp4-720p-30fp-crf28/B4EZnC4_8SGYAo-/0/1759911363695?e=1777280400&v=beta&t=5w1Wkp6hWpNUuf2TZvpEik7MqXE-hxXiZ7OQ0BhAuXI"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_ecommerce-ecom-ecomgrowth-activity-7381603279270469632-iqLD?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7381603279270469632",
+    "shareUrn": "urn:li:ugcPost:7381603242088013824",
+    "engagement": {
+      "id": "7381603242088013824",
+      "likes": 3,
+      "comments": 0,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "LIKE",
+          "count": 1
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7379758691899576320",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_quer%C3%A9s-escalar-tu-ecommerce-cre%C3%A1-m%C3%A1s-anuncios-activity-7379758691899576320-l4-U",
+    "content": "¿Querés escalar tu eCommerce? Creá más anuncios.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759471581435,
+      "date": "2025-10-03T06:06:21.435Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQE8Jb3XEzo50A/videocover-high/B4DZmorYwmJgAQ-/0/1759471574251?e=1777280400&v=beta&t=20nhWu-tgpVZvVMcoO0ArehIVo7UvL5Op-cFPXgz0Vc",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQE8Jb3XEzo50A/mp4-720p-30fp-crf28/B4DZmorYwmJgAg-/0/1759471576712?e=1777280400&v=beta&t=EHyOTdc7p-k8MroULI-OUHD192xYtrkxfF9jy6l059M"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_quer%C3%A9s-escalar-tu-ecommerce-cre%C3%A1-m%C3%A1s-anuncios-activity-7379758691899576320-l4-U?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7379758691899576320",
+    "shareUrn": "urn:li:ugcPost:7379758652393451520",
+    "engagement": {
+      "id": "7379758652393451520",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7387377352504393728",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_mucha-gente-emocionada-por-la-posibilidad-activity-7387377352504393728-Gx3L",
+    "content": "Mucha gente emocionada por la posibilidad de \"Maximizar ROAS\" en Meta.\n\nPero en mi opinión, utilizarlo en eCommerce es un error. ❌ \n\nLa palabra \"MAXIMIZAR\" suena bonito, especialmente en el Ads Manager.\n\n¿Quién no quiere generar la mayor cantidad de ventas posibles o generar el ROAS más alto?\n\nPero falta un componente crucial: ¿A qué ROAS?\n\nCon esta estrategia, Meta tratará de que el ROAS sea lo más alto  posible, pero muchas veces ese número es más alto de lo que tu negocio puede pagar.\n\nEl resultado: campañas que generan pérdidas.\n\nPermíteme cambiar la descripción de esta estrategia para hacerla más realista:\n\n\"Haremos lo mejor posible para conseguir clientes rentablemente, pero si no lo logramos, no importa, seguiremos gastando\"\n\nMás honesto, ¿verdad?\n\nPor suerte, existen los Cost Caps :)\n\nY si no sabes qué es, te lo explico en un post mío (link en comentarios).",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761288011671,
+      "date": "2025-10-24T06:40:11.671Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQEufpx3Jfbrmw/feedshare-shrink_2048_1536/B4DZoU8jqMH0Aw-/0/1761288010815?e=1778112000&v=beta&t=c6b-ZvCNVC7k53QzOCVTuwg4kbPhzZ4tmLcJh-CleLY",
+        "width": 1320,
+        "height": 816,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_mucha-gente-emocionada-por-la-posibilidad-activity-7387377352504393728-Gx3L?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7387377352504393728",
+    "shareUrn": "urn:li:share:7387377351267074048",
+    "engagement": {
+      "id": "7387377352504393728",
+      "likes": 12,
+      "comments": 1,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 11
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7379467467338727424",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_la-f%C3%B3rmula-exacta-para-escalar-tu-ecommerce-activity-7379467467338727424-rkK5",
+    "content": "📊 La Fórmula EXACTA Para Escalar Tu eCommerce en 2025 \n\n ¡Nuevo video en YouTube y Spotify, donde hablo de la formula que debes utilizr para escalar tu eCommerce de manera rentable.\n\nLinks:\n\n🔗 Spotify: https://lnkd.in/d4P7r7AQ\n🔗 YouTube: https://lnkd.in/dJsY_CMd\n\n¡Espero que lo disfruten!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759402148089,
+      "date": "2025-10-02T10:49:08.089Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "article": {
+      "title": "📊 La Fórmula EXACTA Para Escalar Tu eCommerce en 2025",
+      "subtitle": "open.spotify.com",
+      "link": "https://open.spotify.com/episode/49GewaHz6byiSd3Fajl3um",
+      "linkLabel": "Open video: 📊 La Fórmula EXACTA Para Escalar Tu eCommerce en 2025 on open.spotify.com",
+      "description": null,
+      "image": {
+        "url": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGd2rA4583OfQ/articleshare-shrink_1280_800/B4DZmkiidBH0AU-/0/1759402142201?e=1777280400&v=beta&t=8PfqNCQM3kt2wKa7DLm356rUoi8p7-H9QstEKUgzOCk",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777280400000
+      }
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_la-f%C3%B3rmula-exacta-para-escalar-tu-ecommerce-activity-7379467467338727424-rkK5?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7379467467338727424",
+    "shareUrn": "urn:li:share:7379467466487296000",
+    "engagement": {
+      "id": "7379467467338727424",
+      "likes": 5,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 4
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7389624293078482944",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_con-meta-andromeda-las-reglas-de-juego-en-activity-7389624293078482944-Z8Bc",
+    "content": "Con Meta Andromeda, las reglas de juego en eCommerce han cambiado.  \n\nY si sigues utilizando el playbook del 2024, te estás quedando atrás.\n\nAquí están las 8 tácticas que necesitas implementar YA para sacarle el máximo provecho a Andromeda:\n\n𝟭. 𝗜𝗻𝗰𝗿𝗲𝗺𝗲𝗻𝘁𝗮 𝗲𝗹 𝘃𝗼𝗹𝘂𝗺𝗲𝗻 𝗱𝗲 𝗰𝗿𝗲𝗮𝘁𝗶𝘃𝗼𝘀\n\nAntes, Meta no procesaba más de 5-10 creativos por grupo de anuncios. Ahora puede analizar hasta 50.\n\nSi antes creabas 5 a la semana, tienes que buscar la forma de crear 20 o 50.\n\nFíjate en el Ads Library de los ecommerce que realmente están haciendo la diferencia: algunas empresas tienen hasta 1,000 anuncios corriendo.\n\n𝟮. 𝗔𝘀𝗲𝗴𝘂𝗿𝗮𝘁𝗲 𝗱𝗲 𝗾𝘂𝗲 𝗲𝗹 𝘃𝗼𝗹𝘂𝗺𝗲𝗻 𝘀𝗲𝗮 𝗱𝗶𝘃𝗲𝗿𝘀𝗼\n\n\"Volumen\" no significa hacer 20 iteraciones de la misma imagen cambiando el color de fondo.\n\nMeta detecta perfectamente cuando un creativo es diferente o solo una iteración.\n\nNecesitas diversidad real en:\n\n • Ángulos de producto\n • Problemas que atacas\n • Formatos (UGC, Stop Motion, Fotos de Producto)\n • Duración de videos\n • Copys y ganchos\n\n𝟯. 𝗗𝗲𝗷𝗮 𝗱𝗲 𝗽𝗲𝗿𝗱𝗲𝗿 𝘁𝗶𝗲𝗺𝗽𝗼 𝗲𝗻 𝘀𝗲𝗴𝗺𝗲𝗻𝘁𝗮𝗰𝗶𝗼𝗻 𝗺𝗮𝗻𝘂𝗮𝗹\n\nSi sigues segmentando por intereses y lookalikes, lo único que estás haciendo es ponerle palos en la rueda al algoritmo.\n\nDeja la audiencia lo más amplia posible: solo sexo, edad y ubicación geográfica.\n\nEl creativo ES la segmentación, no tu configuración manual.\n\n𝟰. 𝗖𝗼𝗻𝘀𝗼𝗹𝗶𝗱𝗮 𝗰𝗮𝗺𝗽𝗮𝗻𝗮𝘀 𝘆 𝗴𝗿𝘂𝗽𝗼𝘀 𝗱𝗲 𝗮𝗻𝘂𝗻𝗰𝗶𝗼𝘀\n\nMeta recomienda crear por lo menos 20 creativos diferentes por grupo de anuncio y un máximo de hasta 50.\n\nSi tus anuncios hablan del mismo producto y se enfocan en la misma persona, tienen que ir en el mismo grupo de anuncios.\n\nEs la mejor forma de reducir el tiempo en fase de aprendizaje.\n\n𝟱. 𝗨𝘁𝗶𝗹𝗶𝘇𝗮 𝗹𝗮𝘀 𝗵𝗲𝗿𝗿𝗮𝗺𝗶𝗲𝗻𝘁𝗮𝘀 𝗱𝗲 𝗜𝗔 𝗱𝗲 𝗠𝗲𝘁𝗮\n\nSí, a veces pone música rara. Agrega elementos que el equipo creativo no diseñó. Cambia colores de fondos.\n\nPero Meta asegura que funciona mejor: 11% más de CTR y 7,6% más de tasa de conversión.\n\nY si lo pensamos lógicamente, no tienen ninguna razón para mentirnos.\n\n𝟲. 𝗠𝗲𝗷𝗼𝗿𝗮 𝘁𝘂 𝘄𝗲𝗯 𝘆 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗷𝗼𝘂𝗿𝗻𝗲𝘆\n\nCon Sequence Learning, Meta tiene en cuenta lo que pasa dentro de tu web para rankear tus anuncios.\n\nInvierte en:\n • Velocidad de carga\n • CRO\n • Experiencia de compra fluida\n • Servicio al cliente\n\nSin esto, tus anuncios, en algún momento, dejarán de funcionar.\n\n𝟳. 𝗗𝗲𝗷𝗮 𝗾𝘂𝗲 𝗲𝗹 𝗮𝗹𝗴𝗼𝗿𝗶𝘁𝗺𝗼 𝗵𝗮𝗴𝗮 𝘀𝘂 𝘁𝗿𝗮𝗯𝗮𝗷𝗼\n\nDime si te suena familiar: 𝘓𝘢𝘯𝘻𝘢𝘴 𝘶𝘯 𝘨𝘳𝘶𝘱𝘰 𝘥𝘦 𝘢𝘯𝘶𝘯𝘤𝘪𝘰𝘴 𝘤𝘰𝘯 𝘊𝘗𝘈 𝘰𝘣𝘫𝘦𝘵𝘪𝘷𝘰 𝘥𝘦 20€. 𝘈 𝘭𝘰𝘴 𝘥𝘰𝘴 𝘥𝘪𝘢𝘴 𝘷𝘦𝘴 𝘲𝘶𝘦 𝘦𝘴𝘵𝘢 𝘦𝘯 50€ 𝘺 𝘢𝘤𝘵𝘰 𝘴𝘦𝘨𝘶𝘪𝘥𝘰 𝘣𝘢𝘫𝘢𝘴 𝘦𝘭 𝘱𝘳𝘦𝘴𝘶𝘱𝘶𝘦𝘴𝘵𝘰.\n\nError.\n\nMeta tiene millones de datos. Tú no. No asumas que tu criterio supera al algoritmo.\n\nAprende a confiar, deja que se optimice y enfócate en estrategia.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761823724050,
+      "date": "2025-10-30T11:28:44.050Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_con-meta-andromeda-las-reglas-de-juego-en-activity-7389624293078482944-Z8Bc?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7389624293078482944",
+    "shareUrn": "urn:li:share:7389624292109545472",
+    "engagement": {
+      "id": "7389624293078482944",
+      "likes": 10,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 9
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7376125776401969152",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_puede-parecer-que-hacer-growth-y-experimentaci%C3%B3n-activity-7376125776401969152-GG9i",
+    "content": "Puede parecer que hacer Growth y Experimentación para eCommerce y SaaS es lo mismo.⁣⁣\r\n\r\nPero la realidad es completamente diferente.⁣⁣\r\n\r\n𝗖𝗮𝗱𝗮 𝘂𝗻𝗼 𝘁𝗶𝗲𝗻𝗲 𝘀𝘂𝘀 𝗽𝗿𝗼𝗽𝗶𝗮𝘀 𝗰𝗮𝗿𝗮𝗰𝘁𝗲𝗿í𝘀𝘁𝗶𝗰𝗮𝘀 𝘆 𝗽𝗮𝗿𝘁𝗶𝗰𝘂𝗹𝗮𝗿𝗶𝗱𝗮𝗱𝗲𝘀 que, aunque puedan parecer casi irrelevantes, son determinantes a la hora de crecer.⁣⁣\r\n\r\nY si no las entiendes a la perfección, tu estrategia se quedará coja.⁣⁣\r\n\r\nAquí tienes 3 que me parecen muy importantes:⁣⁣\r\n\r\n1️⃣ 𝗲𝗖𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝘁𝗶𝗲𝗻𝗲 𝗶𝗻𝘃𝗲𝗻𝘁𝗮𝗿𝗶𝗼⁣⁣\r\n\r\nCada vez que un negocio compra stock, está haciendo una apuesta a futuro de que va a poder venderlo por un margen mayor en un determinado periodo de tiempo.⁣⁣\r\n\r\nY esto es un riesgo.⁣⁣\r\n\r\nMuchas veces no llegamos a vender todo o no lo hacemos lo suficientemente rápido.⁣⁣\r\n\r\nY el dinero que está estancado allí es dinero que no se puede invertir en comprar productos que sí se vendan o en publicidad digital.⁣⁣\r\n\r\nUna estrategia de Growth que no contemple cómo vender esos productos está incompleta.⁣⁣\r\n\r\n2️⃣ 𝗲𝗖𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝘁𝗶𝗲𝗻𝗲 𝗰𝗼𝘀𝘁𝗼𝘀 𝘃𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀 𝗮𝗹𝘁𝗼𝘀⁣⁣\r\n\r\nVender productos físicos conlleva producirlos, comprarlos, enviarlos, que algunos se devuelvan, se rompan, etc.⁣⁣\r\n\r\nEn SaaS, en cambio, el costo variable suele ser muy pequeño. Vender una suscripción más no genera mucho más costo, lo que permite tener márgenes brutos mucho más amplios.⁣⁣\r\n\r\nSi haces Growth para eCommerce y no tienes claro los costos variables de cada producto y categoría, te aseguro que por algún lado estás perdiendo dinero.⁣⁣\r\n\r\n3️⃣ 𝗖𝗮𝗻𝗮𝗹𝗲𝘀 𝗱𝗲 𝘃𝗲𝗻𝘁𝗮⁣⁣\r\n\r\neCommerce no solo tiene ventas online.⁣⁣\r\n\r\nTambién puede vender a través de Amazon, en mayoristas como Walmart, El Corte Inglés, o en tiendas físicas propias.⁣⁣\r\n\r\nUna estrategia de Growth para eCommerce los debe tener en cuenta para evitar canibalizaciones, estudiar la relación entre ellos y, si existen sinergias, explotarlas.⁣⁣\r\n\r\n---⁣⁣\r\n\r\nComo ves, Growth para SaaS vs eCommerce son mundos completamente diferentes, a pesar de parecer muy similares en la superficie.⁣⁣\r\n\r\nY, en mi opinión, entender estas particularidades es lo que lleva una estrategia de Growth al siguiente nivel.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1758605426884,
+      "date": "2025-09-23T05:30:26.884Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_puede-parecer-que-hacer-growth-y-experimentaci%C3%B3n-activity-7376125776401969152-GG9i?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7376125776401969152",
+    "shareUrn": "urn:li:share:7376125775722364928",
+    "engagement": {
+      "id": "7376125776401969152",
+      "likes": 15,
+      "comments": 2,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 13
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7379035188439191552",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_ecommerce-ecom-ecomgrowth-activity-7379035188439191552-rq42",
+    "content": "Si te dicen que una app/canal/campaña tiene ROAS +10, corre.\r\n\r\n#ecommerce #ecom #ecomgrowth #dtc",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759299084768,
+      "date": "2025-10-01T06:11:24.768Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQEWSXAnwjQMAA/videocover-high/B4DZmeZXcqHwAQ-/0/1759299078183?e=1777280400&v=beta&t=X-tuwuvXEn6MejRotWzSYrZu4mOIfzQotTP1rpbZgUM",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQEWSXAnwjQMAA/mp4-720p-30fp-crf28/B4DZmeZXcqHwAg-/0/1759299081070?e=1777280400&v=beta&t=q47dqGe6GnOXBGDuNSxJDUPiwswei6S98ivxUUymQlk"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_ecommerce-ecom-ecomgrowth-activity-7379035188439191552-rq42?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7379035188439191552",
+    "shareUrn": "urn:li:ugcPost:7379035153026736129",
+    "engagement": {
+      "id": "7379035153026736129",
+      "likes": 9,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 9
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7377631845699555328",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_tu-ecommerce-no-escala-rentablemente-por-activity-7377631845699555328-_Mcr",
+    "content": "▶️ ¡Nuevo Episodio de Márketing a Márgenes!\n\n\"Tu eCommerce NO ESCALA Rentablemente Por ESTO\"\n\nMás de 20 minutos hablando de la jerarquía de métricas de eCommerce, la relación entre ellas y cómo puedes utilizarlas para escalar rentablemente.\n\nLinks abajo 👇 \n\n🔗 https://lnkd.in/deSqq-SV\n🔗 https://lnkd.in/dBV5U8Eu\n\n¡Espero que les sirva y buen sábado!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1758964501786,
+      "date": "2025-09-27T09:15:01.786Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "article": {
+      "title": "Tu eCommerce NO ESCALA Rentablemente Por ESTO",
+      "subtitle": "youtube.com",
+      "link": "https://youtu.be/M-y4kVQwhR0",
+      "linkLabel": "Open video: Tu eCommerce NO ESCALA Rentablemente Por ESTO on youtu.be",
+      "description": null,
+      "image": {
+        "url": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGgkRnr03akxg/articleshare-shrink_1280_800/B4DZmG6wiIIEAQ-/0/1758905175205?e=1777280400&v=beta&t=_pMAYghctvHIPrH52zXQcJbDeqYWN1MNrUMp-E843dg",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777280400000
+      }
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_tu-ecommerce-no-escala-rentablemente-por-activity-7377631845699555328-_Mcr?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7377631845699555328",
+    "shareUrn": "urn:li:share:7377384100418052096",
+    "engagement": {
+      "id": "7377631845699555328",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7384516537702871041",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_10-estrategias-de-meta-ads-para-escalar-tu-activity-7384516537702871041-vYfE",
+    "content": "🎥 NUEVO VIDEO: 10 Estrategias de Meta Ads para ESCALAR tu eCommerce \n\nLinks:\n\n🔗 Spotify: https://lnkd.in/dTJczqRc\n🔗 YouTube: https://lnkd.in/dYnVxiWd\n\n¡Espero que lo disfruten!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760605940271,
+      "date": "2025-10-16T09:12:20.271Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "article": {
+      "title": "10 Estrategias de Meta Ads para ESCALAR tu eCommerce",
+      "subtitle": "youtube.com",
+      "link": "https://youtu.be/M9RZSYx3kls",
+      "linkLabel": "Open video: 10 Estrategias de Meta Ads para ESCALAR tu eCommerce on youtu.be",
+      "description": null,
+      "image": {
+        "url": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGPX37FNty0sg/articleshare-shrink_1280_800/B4DZnsQ1rdHwAQ-/0/1760605461802?e=1777280400&v=beta&t=PUMWp6N70pIfGsWa72vjopTu07dhj_X_gsOCtbNos1s",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777280400000
+      }
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_10-estrategias-de-meta-ads-para-escalar-tu-activity-7384516537702871041-vYfE?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7384516537702871041",
+    "shareUrn": "urn:li:share:7384516536843280384",
+    "engagement": {
+      "id": "7384516537702871041",
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7377215536839073792",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_ecommerce-ecom-ecommarketing-activity-7377215536839073792-v_FU",
+    "content": "Las devoluciones están matando tu eCommerce\r\n\r\n#ecommerce #ecom #ecommarketing #ecomgrowth",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1758865246019,
+      "date": "2025-09-26T05:40:46.019Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQGahEuS0ENQdw/videocover-low/B4DZmEiaBdGgAM-/0/1758865239478?e=1777280400&v=beta&t=zxeOGhUVCAtH6-RA7PY9ZHuXwJm8eFaOlYCsFct2EO0",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQGahEuS0ENQdw/mp4-720p-30fp-crf28/B4DZmEiaBdGgAg-/0/1758865242806?e=1777280400&v=beta&t=6BP_rzoPWKmFEkIrDPfbwTuMgCRgoa3J1gkaTifdSnY"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_ecommerce-ecom-ecommarketing-activity-7377215536839073792-v_FU?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7377215536839073792",
+    "shareUrn": "urn:li:ugcPost:7377215503196418048",
+    "engagement": {
+      "id": "7377215503196418048",
+      "likes": 10,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 10
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7380903258657226760",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_shopify-y-chatgpt-se-han-integrado-activity-7380903258657226760-0I0v",
+    "content": "Shopify y ChatGPT se han integrado ⚠️\r\n\r\nY en mi opinión, es más HYPE que otra cosa...\r\n\r\nTe explico.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759744467415,
+      "date": "2025-10-06T09:54:27.415Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQHdzzZojEP3IA/videocover-low/B4DZm48VvmKQAM-/0/1759744455639?e=1777280400&v=beta&t=N6qEHZMBB-tRnMgVl4O-Ojon1GHXhcidxypAUMx0BYM",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQHdzzZojEP3IA/mp4-720p-30fp-crf28/B4DZm48VvmKQAg-/0/1759744460134?e=1777280400&v=beta&t=kkkrEtQ9eVVNJWQUHMJj2hhDxUU3rfXUwDL_wH7OAYg"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_shopify-y-chatgpt-se-han-integrado-activity-7380903258657226760-0I0v?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7380903258657226760",
+    "shareUrn": "urn:li:ugcPost:7380903196543582208",
+    "engagement": {
+      "id": "7380903196543582208",
+      "likes": 8,
+      "comments": 3,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 8
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7384938977583316992",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_si-no-est%C3%A1s-aplicando-el-factor-de-incrementalidad-activity-7384938977583316992-wBir",
+    "content": "Si no estás aplicando el Factor de Incrementalidad en tu eCommerce, estás dejando que las plataformas publicitarías te engañen.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760706657787,
+      "date": "2025-10-17T13:10:57.787Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQHnyTuntADHsA/videocover-low/B4DZnyS07mIEAM-/0/1760706647660?e=1777280400&v=beta&t=to5keoNKvUsE9kt3uiFHHvwq62iOX7tlEBUzpulR6Ls",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQHnyTuntADHsA/mp4-720p-30fp-crf28/B4DZnyS07mIEBI-/0/1760706654682?e=1777280400&v=beta&t=5yMg7To2qzKhkCVG9Qp-g2ptxvzHVdC43eDQYus47FI"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_si-no-est%C3%A1s-aplicando-el-factor-de-incrementalidad-activity-7384938977583316992-wBir?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7384938977583316992",
+    "shareUrn": "urn:li:ugcPost:7384938927742214144",
+    "engagement": {
+      "id": "7384938927742214144",
+      "likes": 5,
+      "comments": 0,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 5
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7380645361176010752",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_el-forecast-es-una-herramienta-esencial-en-activity-7380645361176010752-XFrr",
+    "content": "El forecast es una herramienta esencial en eCommerce.\n\nEl problema es que la mayoría lo hace sin fundamentos sólidos, tratándolo como un ejercicio de adivinación o reflejo de lo que les gustaría que pasara.\n\nY no en base al pasado y a la estrategia.\n\nEn esta edición escrita de Marketing a Márgenes, te cuento cómo puedes forecastear tu eCom basado en datos:\n\nhttps://lnkd.in/dPdjwh4v",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759682979864,
+      "date": "2025-10-05T16:49:39.864Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQFz0d_S07jVdQ/feedshare-shrink_2048_1536/B4DZm1R2A2JMA0-/0/1759682978710?e=1778112000&v=beta&t=tfuTWpeLaisbchXPUdeQieB3pxJLy53rqxgausH7EDM",
+        "width": 1391,
+        "height": 917,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_el-forecast-es-una-herramienta-esencial-en-activity-7380645361176010752-XFrr?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7380645361176010752",
+    "shareUrn": "urn:li:share:7380645359959736320",
+    "engagement": {
+      "id": "7380645361176010752",
+      "likes": 9,
+      "comments": 2,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 8
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7378385292224774144",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_en-ecommerce-finanzas-estrategia-ia-activity-7378385292224774144-ypnS",
+    "content": "En eCommerce: Finanzas + Estrategia >>> IA",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759144137436,
+      "date": "2025-09-29T11:08:57.436Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQHGZanVdazcog/videocover-low/B4DZmVKOVmGQAM-/0/1759144124412?e=1777280400&v=beta&t=cry73-oolQ6slXlyDayhG23e7ydd2r6m7zpPrNnOVDg",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQHGZanVdazcog/mp4-720p-30fp-crf28/B4DZmVKOVmGQAg-/0/1759144136169?e=1777280400&v=beta&t=Fabtx6-_mzA78R5kgvN-STyQEUHfZwyPVOy8toQD7hE"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_en-ecommerce-finanzas-estrategia-ia-activity-7378385292224774144-ypnS?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7378385292224774144",
+    "shareUrn": "urn:li:ugcPost:7378385227313930241",
+    "engagement": {
+      "id": "7378385227313930241",
+      "likes": 6,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 5
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7395054713089540096",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_lo-que-lleva-a-la-quiebra-de-muchos-ecommerce-activity-7395054713089540096-j-uD",
+    "content": "Lo que lleva a la quiebra de muchos eCommerce no está en el P&L...\n\nEstá en el Balance de Situación Patrimonial y en el Flujo de Fondos.\n\nDéjame explicarte.\n\nMuchos CMOS y CEOs se confían cuando ven un P&L sano con beneficios de +10/15%.\n\nPero en muchos casos, hay una realidad completamente diferente detrás.\n\nEjemplo 1)\n\nUn beneficio alto en el P&L no significa nada si todavía tienes el 60% del inventario por vender.\n\nY aunque parezca un activo, es dinero que está inmovilizado en el almacén (y a un margen menor del que esperas).\n\nEjemplo 2)\n\nSi tienes pensado crecer o vender mucho en BFCM, tienes que tener la caja suficiente para hacer la compra de inventario.\n\nUn mal manejo del flujo de fondos puede limitar tu potencial y, en el peor de los casos, llevarte a la bancarrota.\n\nEjemplo 3)\n\nSi tu inventario tarda 60 días en llegar después del pago (como pasa si fabricas desde China), y tardas otros 10 días en cobrar, necesitas caja para financiar ese desfase temporal entre lo que pagas y lo que cobras.\n\nY si tenemos en cuenta intereses, CAPEX, ventas al mayorista y deuda, aparecen decenas de ejemplos más.\n\nPor eso es importante que tú como CMO/CEO, trabajes íntimamente con tu CFO e, idealmente, con una agencia de marketing que sepa lo que hace. 😏 \n\nCaso contrario, el equipo de marketing estará festejando un P&L bonito mientras el CFO se tira de los pelos porque el Retorno de la Inversión está por el suelo debido al inventario muerto en el almacén.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1763118437073,
+      "date": "2025-11-14T11:07:17.073Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_lo-que-lleva-a-la-quiebra-de-muchos-ecommerce-activity-7395054713089540096-j-uD?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7395054713089540096",
+    "shareUrn": "urn:li:share:7395054712267403264",
+    "engagement": {
+      "id": "7395054713089540096",
+      "likes": 11,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 10
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7383061609625231360",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_porque-tu-ecommerce-ha-dejado-de-crecer-activity-7383061609625231360-wLjy",
+    "content": "📈 De Márketing a Márgenes #11 | La razón por la que tu eCommerce ha dejado de crecer (y probablemente no es lo que crees)\n\n👉🏽 Blog completo https://lnkd.in/dTFH5_ma\n\n¡Espero que les sea útil!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760259058386,
+      "date": "2025-10-12T08:50:58.386Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "article": {
+      "title": "Porque tu eCommerce Ha Dejado de Crecer",
+      "subtitle": "asteroi.co",
+      "link": "https://asteroi.co/porque-tu-ecommerce-ha-dejado-de-crecer/",
+      "linkLabel": "Open article: Porque tu eCommerce Ha Dejado de Crecer by asteroi.co",
+      "description": null,
+      "image": {
+        "url": "https://media.licdn.com/dms/image/sync/v2/D4D27AQEa8Aw729l9XQ/articleshare-shrink_1280_800/B4DZnSWpcBIEAQ-/0/1760170776724?e=1777280400&v=beta&t=S9YsXyTnE1xKNf3fS6P3uZomiR5pIdtVCXGPlpG_DuU",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777280400000
+      }
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_porque-tu-ecommerce-ha-dejado-de-crecer-activity-7383061609625231360-wLjy?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7383061609625231360",
+    "shareUrn": "urn:li:share:7383061609084157952",
+    "engagement": {
+      "id": "7383061609625231360",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7383444782578311169",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_el-roas-en-plataforma-es-lo-%C3%BAltimo-que-deber%C3%ADas-activity-7383444782578311169-Uubx",
+    "content": "El ROAS en plataforma es lo último que deberías ver en tu día a día.\n\nHay muchisimas métricas más importantes en tu eCommerce:\n\n• Contribución Marginal\n• Facturación Neta\n• MER\n• aMER\n• CAC\n• Tasa de Retorno\n• LTV a 30-60-90 Días\n• Tasa de Devolución\n• ARPU\n• AOV\n• Tasa de Conversión\n\nY puedo seguir con, por lo menos, 10 más.\n\nLos ROAS que ves en plataformas como Meta y Google son estimaciones, en la mayoría de los casos, infladas, que no reflejan la realidad de tu eCommerce.\n\nY solo cobran sentido si se entienden en un contexto específico, sabiendo la estrategia y las finanzas detrás del negocio.\n\nSi no, suelen ser espejismos que no llevan a ningún lado.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760350413937,
+      "date": "2025-10-13T10:13:33.937Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_el-roas-en-plataforma-es-lo-%C3%BAltimo-que-deber%C3%ADas-activity-7383444782578311169-Uubx?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7383444782578311169",
+    "shareUrn": "urn:li:share:7383444781906956288",
+    "engagement": {
+      "id": "7383444782578311169",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7386272795938238465",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_la-mayor%C3%ADa-de-ecommerce-hace-forecast-como-activity-7386272795938238465-tmYE",
+    "content": "La mayoría de eCommerce hace forecast como si fuera astrología.\n\nSe juntan marketing y finanzas, tiran números al aire basados en lo que les gustaría que pasara, y lo guardan en una carpeta de Drive que nadie vuelve a abrir.\n\nTres meses después, están un 20% por debajo de objetivo sin entender qué pasó.\n\nEl problema no es que el forecast esté mal. El problema es que lo están usando para lo que no es.\n\nUn forecast no es un ejercicio de adivinación. Es un ejercicio de estrategia y ejecución.\n\nY si esperas crecer un 30% haciendo exactamente lo mismo que el año pasado, no necesitas un forecast.\n\nNecesitas replantearte la herramienta.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761024664864,
+      "date": "2025-10-21T05:31:04.864Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_la-mayor%C3%ADa-de-ecommerce-hace-forecast-como-activity-7386272795938238465-tmYE?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7386272795938238465",
+    "shareUrn": "urn:li:share:7386272795267264512",
+    "engagement": {
+      "id": "7386272795938238465",
+      "likes": 8,
+      "comments": 0,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 7
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7386026117549404160",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_los-tests-de-incrementalidad-son-la-%C3%BAnica-activity-7386026117549404160-CPIM",
+    "content": "Los Tests de Incrementalidad son la única forma de saber el impacto real de tus campañas de marketing",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760965852153,
+      "date": "2025-10-20T13:10:52.153Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQFlSIaHoPgaMg/videocover-low/B4DZoBvlbsG8AM-/0/1760965844571?e=1777280400&v=beta&t=eoBbOxCAtRIiUNcbt70k5J63glHVv41Y-DVcAX65IRc",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQFlSIaHoPgaMg/mp4-720p-30fp-crf28/B4DZoBvlbsG8BI-/0/1760965849055?e=1777280400&v=beta&t=SNtXqQlrJvtLLDwRI1RNm1fdSwoYw-l7QCZ8gf4a_v8"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_los-tests-de-incrementalidad-son-la-%C3%BAnica-activity-7386026117549404160-CPIM?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7386026117549404160",
+    "shareUrn": "urn:li:ugcPost:7386026078714273792",
+    "engagement": {
+      "id": "7386026078714273792",
+      "likes": 19,
+      "comments": 2,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 18
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7386750934971772929",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_qu%C3%A9-es-la-incrementalidad-todo-ecommerce-activity-7386750934971772929-KEDY",
+    "content": "¿Qué es la Incrementalidad? Todo eCommerce lo debería entender.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761138662093,
+      "date": "2025-10-22T13:11:02.093Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQHAPXhFBQob-w/videocover-high/B4DZoMCvUTHsAQ-/0/1761138649852?e=1777280400&v=beta&t=eGV87hFgOYmYvig46P-BQtaZq_rsCyVNLfE5tXNdV_g",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQHAPXhFBQob-w/mp4-720p-30fp-crf28/B4DZoMCvUTHsAg-/0/1761138654089?e=1777280400&v=beta&t=3h-o6YMD1nu2Wfso2SGb4SqJWfgZp_6pNsF8b0d8sdk"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_qu%C3%A9-es-la-incrementalidad-todo-ecommerce-activity-7386750934971772929-KEDY?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7386750934971772929",
+    "shareUrn": "urn:li:ugcPost:7386750877161680898",
+    "engagement": {
+      "id": "7386750877161680898",
+      "likes": 8,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 7
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7382328011611619328",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_est%C3%A1s-pagando-por-el-mismo-cliente-dos-veces-activity-7382328011611619328-OzD1",
+    "content": "Estás pagando por el mismo cliente DOS VECES...\r\n\r\nSi no excluís compradores recientes en tus campañas.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760084154990,
+      "date": "2025-10-10T08:15:54.990Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQGKiPMBmwB5OA/videocover-low/B4DZnNMJGIKQAM-/0/1760084148700?e=1777280400&v=beta&t=k_vkf3PZavR6o6UnV_ay3Cw2zvokbeIIOtLv-kdZWWU",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQGKiPMBmwB5OA/mp4-720p-30fp-crf28/B4DZnNMJGIKQAg-/0/1760084151117?e=1777280400&v=beta&t=8apBRy8dFFHOrrmL7rQhJRinH8ELndi0tQKLnl5yvsM"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_est%C3%A1s-pagando-por-el-mismo-cliente-dos-veces-activity-7382328011611619328-OzD1?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7382328011611619328",
+    "shareUrn": "urn:li:ugcPost:7382327978262691840",
+    "engagement": {
+      "id": "7382327978262691840",
+      "likes": 11,
+      "comments": 2,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 10
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7378666197988507648",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_todos-sabemos-que-no-podemos-confiar-100-activity-7378666197988507648-wp26",
+    "content": "Todos sabemos que no podemos confiar 100% en los resultados de Meta, Google, y TikTok.\n\nEs como mandar a un niño a evaluar su propia tarea y esperar que diga la verdad. En la mayoría de los casos – como en campañas de marca – inflan sus resultados.\n\nPor suerte, hay una forma de saber el impacto real de tus campañas y tomar decisiones basadas en datos y experimentación.\n\nLos tests de incrementalidad.\n\nSi querés aprender que son y como implementarlos en tu eCommerce, te invito a leer mi post.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759211110589,
+      "date": "2025-09-30T05:45:10.589Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "article": {
+      "title": "Tests de Incrementalidad: Cómo Descubrir El Impacto Real de tus Campañas",
+      "subtitle": "Juan Cruz Giusto",
+      "link": "https://www.linkedin.com/pulse/tests-de-incrementalidad-c%25C3%25B3mo-descubrir-el-impacto-real-giusto-fu9yf?trackingId=VqQTikLqkCdlgYIebb%2Bq8A%3D%3D",
+      "linkLabel": "Open article: Tests de Incrementalidad: Cómo Descubrir El Impacto Real de tus Campañas by Juan Cruz Giusto • 7 min read",
+      "description": "Si eres un eCommerce invirtiendo más de $30K/mes en publicidad y no estás haciendo tests de incrementalidad, estás dejando entre un 15-30% de rentabil",
+      "image": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D12AQGAVSD-WmGxkA/article-cover_image-shrink_600_2000/B4DZmVMTmlHYAQ-/0/1759144656242?e=1778112000&v=beta&t=BGavCLghXjjRi9-ZCCwVK_rYVY82UCJOFEcq8lirnQw",
+        "width": 768,
+        "height": 432,
+        "expiresAt": 1778112000000
+      }
+    },
+    "newsletterUrl": "https://www.linkedin.com/newsletters/de-m%C3%A1rketing-a-m%C3%A1rgenes-7250451292957921280",
+    "newsletterTitle": "De Márketing a Márgenes",
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_todos-sabemos-que-no-podemos-confiar-100-activity-7378666197988507648-wp26?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7378666197988507648",
+    "shareUrn": "urn:li:ugcPost:7378388379954081792",
+    "engagement": {
+      "id": "7378388379954081792",
+      "likes": 8,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 7
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7397552147850104833",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_si-tu-ecommerce-no-crece-de-manera-rentable-activity-7397552147850104833-z-6y",
+    "content": "🎯 Si tu eCommerce no crece de manera rentable, 𝗲𝘀𝘁𝗮́𝘀 𝗼𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝗻𝗱𝗼 𝗽𝗮𝗿𝗮 𝗹𝗮 𝗺é𝘁𝗿𝗶𝗰𝗮 𝗶𝗻𝗰𝗼𝗿𝗿𝗲𝗰𝘁𝗮.⁣\n⁣\nDespués de analizar eCommerce de 7 y 8 cifras, encontré un patrón claro.⁣\n⁣\nLos que escalan sosteniblemente vs. los que se estancan tienen UNA diferencia clave:⁣\n⁣\n𝘊𝘰𝘮𝑝𝘳𝘦𝘯𝘥𝘦𝘯 𝘭𝘢 𝘫𝘦𝘳𝘢𝘳𝘲𝘶í𝘢 𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘢 𝘥𝘦 𝘮𝘦́𝘵𝘳𝘪𝘤𝘢𝘴⁣\n⁣\nEl Framework de 4 Niveles:⁣\n⁣\n🔺 𝗡𝗜𝗩𝗘𝗟 𝟭: 𝗠é𝘁𝗿𝗶𝗰𝗮𝘀 𝗙𝗶𝗻𝗮𝗻𝗰𝗶𝗲𝗿𝗮𝘀⁣\n⁣\n→ Contribución Marginal (tu North Star)⁣\n→ Beneficio Neto (Profit)⁣\n→ Las más cercanas a tu cuenta bancaria⁣\n⁣\n🔺 𝗡𝗜𝗩𝗘𝗟 𝟮: 𝗠é𝘁𝗿𝗶𝗰𝗮𝘀 𝗱𝗲 𝗡𝗲𝗴𝗼𝗰𝗶𝗼⁣\n⁣\n→ Facturación neta⁣\n→ MER (Marketing Efficiency Ratio)⁣\n→ Las que revelan la salud general⁣\n⁣\n🔺 𝗡𝗜𝗩𝗘𝗟 𝟯: 𝗠é𝘁𝗿𝗶𝗰𝗮𝘀 𝗱𝗲 𝗖𝗹𝗶𝗲𝗻𝘁𝗲⁣\n⁣\n→ Nuevos vs. Recurrentes⁣\n→ CAC y First Order Margin⁣\n→ Las que protegen el futuro⁣\n⁣\n🔺 𝗡𝗜𝗩𝗘𝗟 𝟰: 𝗠é𝘁𝗿𝗶𝗰𝗮𝘀 𝗱𝗲 𝗣𝗹𝗮𝘁𝗮𝗳𝗼𝗿𝗺𝗮⁣\n⁣\n→ ROAS Meta, Google, TikTok⁣\n→ CPA por plataforma⁣\n→ Las más alejadas de tu realidad financiera⁣\n⁣\nLa paradoja que debes entender:⁣\n⁣\nMás abajo = Mayor control, menor precisión⁣\nMás arriba = Menor control, mayor precisión financiera⁣\n⁣\nLa estrategia ganadora: Monitorear todos los niveles, pero decide desde arriba hacia abajo.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1763713871920,
+      "date": "2025-11-21T08:31:11.920Z",
+      "postedAgoShort": "4mo",
+      "postedAgoText": "4 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQFHNR8JlEDdaA/feedshare-shrink_2048_1536/B4DZqlienwIEAw-/0/1763713870787?e=1778112000&v=beta&t=7NhDC-b0Igwjv01Ab57ppnCtozaXSPXolgyO4cDD6fY",
+        "width": 922,
+        "height": 649,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_si-tu-ecommerce-no-crece-de-manera-rentable-activity-7397552147850104833-z-6y?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7397552147850104833",
+    "shareUrn": "urn:li:share:7397552146541592576",
+    "engagement": {
+      "id": "7397552147850104833",
+      "likes": 12,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 12
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7406663289864355843",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_un-buen-forecast-en-ecommerce-no-trata-de-activity-7406663289864355843-1wQB",
+    "content": "Un buen forecast en eCommerce no trata de predecir el futuro más probable.\n\nEs el que determina objetivos para todo el equipo que son ambiciosos pero realizables.\n\nEs el que nos hace pensar diferente, buscar soluciones innovadoras y nos fuerza a mejorar.\n\nEs una brújula que marca el camino, no una bola de cristal que juega a la adivinación.\n\nSi tu forecast para el 2026 se siente más como un tarot que como un plan estratégico, revísalo.\n\nYo te puedo dar una mano con ello.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1765886137453,
+      "date": "2025-12-16T11:55:37.453Z",
+      "postedAgoShort": "4mo",
+      "postedAgoText": "4 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_un-buen-forecast-en-ecommerce-no-trata-de-activity-7406663289864355843-1wQB?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7406663289864355843",
+    "shareUrn": "urn:li:share:7406663289327403008",
+    "engagement": {
+      "id": "7406663289864355843",
+      "likes": 13,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 11
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7396524013726019585",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_he-trabajado-con-ecommerce-de-5m-para-crear-activity-7396524013726019585-5ycY",
+    "content": "He trabajado con eCommerce de $5M+ para crear este MODELO DEFINITIVO de P&L 🎁\n\nY es la diferencia entre escalar quemando dinero  o hacerlo de manera rentable.\n\n¿Por qué funciona?\n\nPorque la mayoría los eCommerce toman decisiones mirando métricas que MIENTEN.\n\nROAS, Facturación, CPA, y ROI te dicen una historia... pero tu banco te cuenta otra.\n\nPor eso, hoy te regalo...\n\n✅ El P&L Modelo completo en Google Sheets (100% editable)\n✅ Video de 10 min explicando cada línea y por qué importa\n✅ Los 4 Bloques que componen el P&L de un eCommerce\n✅ La Regla del 20% para proteger tu rentabilidad\n✅ Tipos de P&L en base a tu modelo de negocio\n\n🎁 Si lo quieres...\n\n1️⃣ Comenta \"P&L\"\n2️⃣ Dale Like al post\n3️⃣ Conecta conmigo",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1763468745643,
+      "date": "2025-11-18T12:25:45.643Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQEib2MIPnRNAQ/videocover-high/B4DZqW7YbXKEBU-/0/1763468741905?e=1777280400&v=beta&t=eBJ_98_qNqLvBqPUqQT4dElqP_amvFOAkxY1Na5Nmrc",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQEib2MIPnRNAQ/mp4-720p-30fp-crf28/B4DZqW7YbXKECI-/0/1763468743179?e=1777280400&v=beta&t=w78LaZG9r5QsSahxnXt3VKE1fWbDHGqST3qtuJVv4WU"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_he-trabajado-con-ecommerce-de-5m-para-crear-activity-7396524013726019585-5ycY?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7396524013726019585",
+    "shareUrn": "urn:li:ugcPost:7396523983761764352",
+    "engagement": {
+      "id": "7396523983761764352",
+      "likes": 80,
+      "comments": 176,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 78
+        },
+        {
+          "type": "EMPATHY",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7379070042115588096",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_shopify-y-chatgpt-se-han-integrado-y-activity-7379070042115588096-K4m7",
+    "content": "Shopify y ChatGPT se han integrado ⚠️\n\nY en mi opinión, es más HYPE que otra cosa...\n\nTe explico.\n\nCon esta nueva funcionalidad, los usuarios van a poder comprar productos del ecosistema de Shopify dentro del chat de ChatGPT.\n\nParece muy revolucionario y que va a cambiar el mundo del eCommerce.\n\nPero la verdad es que ya se ha intentado antes:\n· Meta Shops \n· TikTok Shops \n· Google Shopping \n· Y no me quiero imaginar los que han quedado por el camino\n\nEn la mayoría de los casos, estas plataformas representan como mucho un 10% de las ventas totales.\n\nNinguno ha movido la aguja lo suficiente, ni ha cambiado demasiado el comportamiento de los usuarios.\n\n¿Por qué pensamos que lo de ChatGPT va a ser diferente?\n\nEsto me recuerda al pánico por el SEO.\n\nTodos decían que la IA lo iba a matar, pero la realidad dice lo contrario. \n\nCuando veo reportes de mis clientes y colegas, el tráfico que viene de la IA es minúsculo comparado con Google.\n\nY lo mismo probablemente pase con ChatGPT <> Shopify.\n\nAlgo se venderá pero no lo suficiente como para transformar el ecosistema.\n\nPor lo menos en el corto/mediano plazo.\n\nEl comportamiento de la gente tarda años en cambiar y desacostumbrarse a comprar en la web va a costar.\n\nA largo plazo, tengo mis dudas.\n\nConfiaremos cada vez más en los chats y dejaremos que ellos elijan por nosotros sin darles demasiadas vueltas.\n\nPero para esto falta mucho.\n\nMientras tanto, tenemos que aprender a enfocarnos en lo que realmente importa.\n\nDesarrollar productos que resuelvan necesidades, hacer marketing que impacte, y crear una marca que tenga un impacto en las personas.\n\nTodo lo demás es secundario.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759307394532,
+      "date": "2025-10-01T08:29:54.532Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQHnMAnDyfaByQ/videocover-low/B4DZme5EMuGQB4-/0/1759307388917?e=1777280400&v=beta&t=Q9r7sHQZFjcjuVxq4nO0wZi81A_dYTGGlZE3al0qgnM",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQHnMAnDyfaByQ/mp4-720p-30fp-crf28/B4DZme5EMuGQBk-/0/1759307390610?e=1777280400&v=beta&t=jvNYuRssQ9UI3QS4e0A4LwhOXkqvf1yk4AYI442QCp4"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_shopify-y-chatgpt-se-han-integrado-y-activity-7379070042115588096-K4m7?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7379070042115588096",
+    "shareUrn": "urn:li:ugcPost:7379069997819629568",
+    "engagement": {
+      "id": "7379069997819629568",
+      "likes": 26,
+      "comments": 15,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 23
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7389203486422237185",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_ceo-aumentemos-el-presupuesto-de-google-activity-7389203486422237185-u2MG",
+    "content": "CEO: Aumentemos el presupuesto de Google PMax de Marca, ¡tiene un ROAS increíble!\n\nCMO: Corrección, un ROAS reportado increíble, pero la realidad es completamente diferente.\n\nCEO: ¿Y cómo puede ser, si el dashboard de Google dice claramente que el ROAS es de 8?\n\nCMO: Ayer nos entregaron los resultados del test de incrementalidad sobre esta campaña, y lo que parecía un ROAS de 8 en realidad es de 2.\n\nCEO: Espera... Si solo somos rentables cuando el ROAS es mayor que 3. ¿Quieres decir que estamos perdiendo dinero por cada venta?\n\nCMO: Así es.\n\nCEO: ¿Pero cómo puede ser? Me estás diciendo que Google nos está mintiendo.\n\nCMO: Sí y no. Google se atribuye ventas en base a impresiones y clics. Si alguien ve su anuncio y ese mismo día compra, Google dice que esa venta la generó él.\n\nCEO: Y tiene razón, ¿no?\n\nCMO: Esa parte es verdad. Pero hay mucha gente que sin esa publicidad, habría comprado de igual manera. Google solo apareció cuando la persona estaba cerca de la compra y se atribuyó la venta como si la hubiera generado.\n\nCEO: Ahora entiendo. Que una persona haya visto una publicidad no significa que esa publicidad haya generado la compra.\n\nCMO: ¡Exacto! Quizás esa persona antes había visto un anuncio en Instagram, que fue el que realmente generó la venta.\n\nCEO: Ahhhh, y por eso Meta y Google se van a atribuir la misma venta, a pesar de que Meta fue el que la generó.\n\nCMO: Así es, por eso no podemos confiar en lo que nos cuentan las plataformas publicitarias. A ti que te gusta tanto el fútbol, piénsalo así:\n\nEvaluar a un canal o campaña de marketing por las conversiones reportadas es como evaluar a un jugador solo por los goles. En muchos partidos, Messi no metía goles pero era 90% responsable de todos.\n\nCEO: Y la manera de saber con certeza quién generó qué es con tests de incrementalidad.\n\nCMO: Lo entendiste perfectamente.\n\nCEO: Ahora quiero hacer tests de incrementalidad para todos los canales donde más gastamos. Y cuando reporten ROAS de plataforma, quiero un factor de incrementalidad incluido.\n\nCMO: ¡Estamos en ello!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761723395925,
+      "date": "2025-10-29T07:36:35.925Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_ceo-aumentemos-el-presupuesto-de-google-activity-7389203486422237185-u2MG?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7389203486422237185",
+    "shareUrn": "urn:li:share:7389203485789069312",
+    "engagement": {
+      "id": "7389203486422237185",
+      "likes": 14,
+      "comments": 8,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 11
+        },
+        {
+          "type": "EMPATHY",
+          "count": 3
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7382366149105303552",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_marketing-cartoon-marketoon-activity-7382366149105303552-3Ess",
+    "content": "La explicación perfecta de porque tenemos que dejar de tomar decisiones de Marketing en base a Modelos de Atribución. \n\nNo podemos simplificar la complejidad del User Journey en clicks (especialmente el último).\n\nSin tests de incrementalidad y MMM, tus decisiones están siendo tomadas ciegamente, y te están comiendo el margen.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760093247677,
+      "date": "2025-10-10T10:47:27.677Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "repostId": "7382052253861470208",
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_marketing-cartoon-marketoon-activity-7382366149105303552-3Ess?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7382366149105303552",
+    "shareUrn": "urn:li:share:7382366148517867520",
+    "repost": {
+      "id": "7382052253861470208",
+      "linkedinUrl": "https://www.linkedin.com/posts/marketoonist_marketing-cartoon-marketoon-activity-7382052253861470208-YRKw",
+      "content": "“Marketing Attribution” — throwback cartoon I drew in 2017, in the same vein as my latest post on “last click attribution”.\n\n>>>\n\nTo sign up for my weekly marketoon email newsletter, click here: https://lnkd.in/gyDZhaEN\n\nIf you missed my “last click attribution” cartoon: https://lnkd.in/g59MKPmp\n\nAnd you can see all of my cartoon from the last 23 years here: https://lnkd.in/e_uu_Yn\n\n#marketing #cartoon #marketoon #throwback",
+      "contentAttributes": [],
+      "author": {
+        "id": "7794967",
+        "universalName": "marketoonist",
+        "publicIdentifier": null,
+        "type": "company",
+        "name": "Marketoonist",
+        "linkedinUrl": "https://www.linkedin.com/company/marketoonist/posts",
+        "info": "56,322 followers",
+        "website": null,
+        "websiteLabel": null,
+        "avatar": {
+          "url": "https://media.licdn.com/dms/image/v2/D560BAQHY9COuad5UMg/company-logo_400_400/company-logo_400_400/0/1665612356243/marketoonist_logo?e=1778112000&v=beta&t=Spq4b5R20cM0RDo009_jO4dyn9Wzn8mTsPxFWuX6TQU",
+          "width": 400,
+          "height": 400,
+          "expiresAt": 1778112000000
+        },
+        "urn": "7794967"
+      },
+      "postedAt": {
+        "timestamp": 1760018409219,
+        "date": "2025-10-09T14:00:09.219Z",
+        "postedAgoShort": "6mo",
+        "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+      },
+      "postImages": [
+        {
+          "url": "https://media.licdn.com/dms/image/v2/D5622AQHeBJOPCECIDw/feedshare-shrink_2048_1536/B56ZnFefPJHAAw-/0/1759954728641?e=1778112000&v=beta&t=6Z3Tjnc1W1V2hbygYESyNu4D2lK8LkhMYof4-d-kiDQ",
+          "width": 1200,
+          "height": 873,
+          "expiresAt": 1778112000000
+        }
+      ],
+      "socialContent": {
+        "hideCommentsCount": false,
+        "hideReactionsCount": false,
+        "hideSocialActivityCounts": false,
+        "hideShareAction": false,
+        "hideSendAction": false,
+        "hideRepostsCount": false,
+        "hideViewsCount": false,
+        "trustInterventionBanner": null,
+        "hideReactAction": false,
+        "hideCommentAction": false,
+        "shareUrl": "https://www.linkedin.com/posts/marketoonist_marketing-cartoon-marketoon-activity-7382052253861470208-YRKw?",
+        "showContributionExperience": false,
+        "showSocialDetail": true
+      },
+      "comments": [],
+      "header": {
+        "text": null
+      },
+      "entityId": "7382052253861470208",
+      "shareUrn": "urn:li:share:7381785164122681344",
+      "engagement": null
+    },
+    "engagement": {
+      "id": "7382366149105303552",
+      "likes": 3,
+      "comments": 1,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 3
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7392897511302242304",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_usas-el-aov-o-ticket-medio-para-armar-tu-activity-7392897511302242304-tNsY",
+    "content": "¿Usas el AOV o Ticket Medio para armar tu estrategia en eCommerce?\n\nEs un error fatal, y te cuento 3 razones porqué 👇 \n\n1. Muy susceptibles a valores atípicos Si pocas ventas mayoristas con tickets elevados se cuelan en tu tienda, inflan artificialmente tu AOV.\n\nAgregar 10 ventas de €1,000 cada una eleva el promedio de €65 a €70, creando una ilusión peligrosa.\n\n\n2. Cero información sobre distribución real Dos eCommerce pueden tener AOV idéntico de €56:\n\neCommerce A: Solo vende un producto a €56\neCommerce B: 50% gasta €6, el otro 50% €106\n\nMismo AOV, panoramas completamente diferentes, estrategias completamente diferentes.\n\n\n3. Simplificación destructiva Tu negocio es complejo. Tienes segmentos que prefieren productos específicos, otros que buscan descuentos en bundles, y docenas de comportamientos más.\n\nReducir esta complejidad a un número es un error gigante.\n\n\nComo dice Todd Rose en «The End of Average»: «Todo sistema diseñado para el promedio está destinado al fracaso.»\n\nTraducido al eCommerce: toda estrategia diseñada solo para el AOV está destinada al fracaso.\n\n\n¿La solución? Te la cuento en el post que te dejo en comentarios :)",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1762604120088,
+      "date": "2025-11-08T12:15:20.088Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_usas-el-aov-o-ticket-medio-para-armar-tu-activity-7392897511302242304-tNsY?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7392897511302242304",
+    "shareUrn": "urn:li:share:7392897510421303296",
+    "engagement": {
+      "id": "7392897511302242304",
+      "likes": 11,
+      "comments": 3,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 8
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7382690434957094912",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_quieres-crecer-tu-ecommerce-con-meta-ads-activity-7382690434957094912-V95v",
+    "content": "¿Quieres crecer tu eCommerce con Meta Ads?\n\nNo solo necesitas volumen de creativos, sino también DIVERSIDAD.\n\nSi todos tus anuncios apuntan al mismo buyer persona, estás limitando tu potencial de crecimiento.\n\nSi vendes MATCHA, por ejemplo, y todos tus anuncios están enfocados en mujeres de entre 20 y 30 años con problemas de acidez, esa va a ser tu audiencia potencial, aunque haya más personas que podrían beneficiarse de tu solución.\n\nLo mismo ocurre si publicitas comenzando con el producto. La gente que sabe qué es la matcha y para qué sirve es mucho más pequeña que los que tienen problemas para dormir, o buscan alternativas sanas al café.\n\nPara desbloquear nuevos niveles de inversión y crecimiento en Meta, debes generar creativos diferentes en todos los niveles:\n\nPor nivel de awareness:\n\n• Desconocen el problema\n• Conocen el problema, no la solución\n• Conocen la solución, no tu producto\n• Conocen tu producto, no tu marca\n• Conocen tu marca pero no han comprado\n• Han comprado en tu marca\n\nPor formato y ubicación:\n\n• Reels, Feed, Stories, Threads\n• Múltiples aspectos y duraciones de video\n• Diferentes imágenes de fondo, colores, y hasta personas\n\nPor buyer persona:\n\n• Segmentación demográfica y psicográfica\n• Diferentes motivaciones de compra\n• Variación en sensibilidad al precio\n\nMientras más variedad tengas, más grande será tu mercado potencial y podrás escalar sin perder eficiencia.\n\nIdealmente, deberías crear un framework para poder testear sistemáticamente qué combinaciones funcionan y cuáles no (y sí, te podemos dar una mano con ello).",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760170563449,
+      "date": "2025-10-11T08:16:03.449Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_quieres-crecer-tu-ecommerce-con-meta-ads-activity-7382690434957094912-V95v?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7382690434957094912",
+    "shareUrn": "urn:li:share:7382690434143141888",
+    "engagement": {
+      "id": "7382690434957094912",
+      "likes": 4,
+      "comments": 3,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7391746018469466112",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_est%C3%A1s-metiendo-mano-de-m%C3%A1s-en-meta-y-google-activity-7391746018469466112-WZWw",
+    "content": "Estás metiendo mano DE MÁS en Meta y Google Ads.⁣\n⁣\nY en vez de ayudar, haces lo contrario. 📉⁣\n⁣\nDime si te suena familiar:⁣\n⁣\n𝘓𝘢𝘯𝘻𝘢𝘴 𝘶𝘯 𝘯𝘶𝘦𝘷𝘰 𝘨𝘳𝘶𝑝𝘰 𝘥𝘦 𝘢𝘯𝘶𝘯𝘤𝘪𝘰 𝘤𝘰𝘯 𝘶𝘯 𝘰𝘣𝘫𝘦𝘵𝘪𝘷𝘰 𝘥𝘦 𝘤𝘰𝘴𝘵𝘰 𝑝𝘰𝘳 𝘳𝘦𝘴𝘶𝘭𝘵𝘢𝘥𝘰 𝘥𝘦 20 𝘦𝘶𝘳𝘰𝘴 𝘺 𝘢𝘵𝘳𝘪𝘣𝘶𝘤𝘪𝘰́𝘯 𝘥𝘦 7 𝘥í𝘢𝘴 𝘤𝘭𝘪𝘤𝘬. 𝘊𝘶𝘢𝘯𝘥𝘰 𝘵𝘦 𝘧𝘪𝘫𝘢𝘴 𝘢 𝘭𝘰𝘴 𝘥𝘰𝘴 𝘥í𝘢𝘴, 𝘷𝘦𝘴 𝘲𝘶𝘦 𝘵𝘶 𝘊𝘗𝘈 𝘦𝘴 𝘥𝘦 50. 𝘈𝘤𝘵𝘰 𝘴𝘦𝘨𝘶𝘪𝘥𝘰, 𝘥𝘪𝘴𝘮𝘪𝘯𝘶𝘺𝘦𝘴 𝘦𝘭 𝑝𝘳𝘦𝘴𝘶𝑝𝘶𝘦𝘴𝘵𝘰 𝘥𝘦 𝘭𝘢 𝘤𝘢𝘮𝑝𝘢ñ𝘢 𝘺 𝘣𝘢𝘫𝘢𝘴 𝘭𝘰𝘴 𝘤𝘰𝘴𝘵𝘰𝘴 𝑝𝘰𝘳 𝘳𝘦𝘴𝘶𝘭𝘵𝘢𝘥𝘰 𝘰𝘣𝘫𝘦𝘵𝘪𝘷𝘰.⁣\n⁣\nO pongo otro ejemplo: Apagas un creativo que ha gastado mucho, pero con un ROAS muy bajo.⁣\n⁣\nNo lo parece, pero 𝗮𝗰𝘁𝘂𝗮𝗿 𝗮𝘀í 𝗲𝘀 𝘂𝗻 𝗲𝗿𝗿𝗼𝗿 𝗺𝘂𝘆 𝗰𝗼𝗺𝘂́𝗻 𝗲𝗻 𝗹𝗮 𝗺𝗮𝘆𝗼𝗿í𝗮 𝗱𝗲 𝗹𝗼𝘀 𝗠𝗲𝗱𝗶𝗮 𝗕𝘂𝘆𝗲𝗿𝘀 que va a en contra de lo que recomienda Meta y Google.⁣\n⁣\nTenemos que aprender a confiar en el algoritmo, dejar que se optimice y no actuar antes de tiempo.⁣\n⁣\nSi utilizas controles de puja o costos por resultado, Meta gasta dinero en un anuncio porque cree que puede llegar al objetivo de ROAS o CPA.⁣\n⁣\nRecuerda, 𝗠𝗲𝘁𝗮 𝘁𝗶𝗲𝗻𝗲 𝗺𝗶𝗹𝗹𝗼𝗻𝗲𝘀 𝗱𝗲 𝗱𝗮𝘁𝗼𝘀 𝗾𝘂𝗲 𝗹𝗲 𝗮𝘆𝘂𝗱𝗮𝗻 𝗮 𝗱𝗲𝘁𝗲𝗿𝗺𝗶𝗻𝗮𝗿 𝘀𝗶 𝘂𝗻 𝗰𝗿𝗲𝗮𝘁𝗶𝘃𝗼 𝘃𝗮 𝗮 𝗳𝘂𝗻𝗰𝗶𝗼𝗻𝗮𝗿 bien en el presente y en el futuro, tú no. ⁣\n⁣\nNo asumas que tu criterio supera al algoritmo a la hora de tomar decisiones.⁣\n⁣\nAdemás, un buen rendimiento pasado no asegura el mismo rendimiento en el futuro y con presupuestos elevados (lee The Breakdown Effect por Meta).⁣\n⁣\nY en la mayoría de las ocasiones, es mejor dejar que el algoritmo se optimice por su cuenta, y nosotros enfocarnos en estrategia.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1762329582803,
+      "date": "2025-11-05T07:59:42.803Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQFTFxS4qaFBOA/feedshare-shrink_1280/B4DZpTB1ZTGkAs-/0/1762329582108?e=1778112000&v=beta&t=uKXNhqjE2C9XfzOUGtYhU0XLaZ-Shhk-dmKUKvsWKgY",
+        "width": 1024,
+        "height": 1024,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_est%C3%A1s-metiendo-mano-de-m%C3%A1s-en-meta-y-google-activity-7391746018469466112-WZWw?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7391746018469466112",
+    "shareUrn": "urn:li:share:7391746017114796032",
+    "engagement": {
+      "id": "7391746018469466112",
+      "likes": 6,
+      "comments": 1,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 5
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7391448493447479297",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_mega-checklist-para-ecommerce-de-suscripci%C3%B3n-activity-7391448493447479297-LZT8",
+    "content": "¡MEGA-CHECKLIST para eCommerce de Suscripción 🎁 !\n\nMás de 50 tácticas e ideas de Growth, obtenidas de las marcas de suscripción más exitosas del mundo.\n\nAdentro, encontrarás ideas y estrategias que pueden ayudarte a escalar tu eCommerce de suscripción, desde adquisición, activación, retención y monetización..\n\nEsto es lo que incluye ⬇️\n\n✔️ 7 categorías estratégicas\n✔️ Más de 50 tácticas para implementar o probar\n✔️ Imágenes de ejemplo y URLs que sirven de inspiración\n\n¿Quieres acceso?\n\n👉  Dale like a esta publicación\n👉 Comenta \"SUBS\"\n👉 Conécta conmigo\n\n¡Asegúrate de estar conectado conmigo para que pueda enviártelo directamente por mensaje directo!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1762258647310,
+      "date": "2025-11-04T12:17:27.310Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQHiqo_HYaVIyg/videocover-low/B4DZpOzNdqJUBQ-/0/1762258640877?e=1777280400&v=beta&t=CqvM5tHi4I3bCtCVuvWqVk8ibgVDGK1qwyazNI9zWyo",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQHiqo_HYaVIyg/mp4-720p-30fp-crf28/B4DZpOzNdqJUCI-/0/1762258644240?e=1777280400&v=beta&t=U0FQcobujX_EdgbbME9ZCHx5s-T6I2tkEk65dObkHIQ"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_mega-checklist-para-ecommerce-de-suscripci%C3%B3n-activity-7391448493447479297-LZT8?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7391448493447479297",
+    "shareUrn": "urn:li:ugcPost:7391448442465681408",
+    "engagement": {
+      "id": "7391448442465681408",
+      "likes": 60,
+      "comments": 141,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 56
+        },
+        {
+          "type": "EMPATHY",
+          "count": 2
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7386721407403032576",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_he-gastado-cientos-de-miles-de-en-meta-activity-7386721407403032576-4Gsr",
+    "content": "He gastado cientos de miles de $$$ en Meta y estudiado por días para crear esta MEGA-GUÍA de Andromeda para eCommerce🎁\n\nCon Andromeda, el nuevo algoritmo de Meta, las reglas del juego para todos los eCommerce cambiaron.\n\nY si quieres escalar tu negocio rápido y de manera rentable, necesitas saber como sacarle el máximo provecho a este cambio.\n\nPor eso, hoy te regalo...\n\n✅ Un Notion explicándote todo lo que ha cambiado\n✅ 8 Estrategias que puedes aplicar ya en Meta\n✅ 4 Principios que siguen siendo fundamentales\n✅ Un Checklist con todos los cambios a aplicar\n✅ Un Roadmap por semana para llevar todo a la práctica\n\n🎁 Si lo quieres...\n\n1️⃣ Comenta \"Andromeda\"\n2️⃣ Dale Like al post\n3️⃣ Conecta conmigo",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761131622172,
+      "date": "2025-10-22T11:13:42.172Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D22AQEc_SHfhtPGrQ/feedshare-shrink_2048_1536/B4DZoLn.ZcGQAw-/0/1761131621123?e=1778112000&v=beta&t=VGzyQNH9O_p6YRyPHnc0mncVmWQSPT7A_NWE950iBn0",
+        "width": 1505,
+        "height": 1120,
+        "expiresAt": 1778112000000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_he-gastado-cientos-de-miles-de-en-meta-activity-7386721407403032576-4Gsr?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7386721407403032576",
+    "shareUrn": "urn:li:share:7386721406425763840",
+    "engagement": {
+      "id": "7386721407403032576",
+      "likes": 140,
+      "comments": 375,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 132
+        },
+        {
+          "type": "EMPATHY",
+          "count": 5
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7380164595753250816",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_en-ecommerce-no-puedes-acortar-tu-camino-activity-7380164595753250816-oJOr",
+    "content": "En eCommerce, no puedes acortar tu camino de crecimiento.\n\nNi con tácticas de CRO, ni con rediseños, ni con mejores creativos.\n\nTodo eso ayuda - y mucho - pero para optimizar, no para escalar.\n\nSi lo que quieres es doblar la facturación, año tras año, la solución es simple (aunque no fácil):\n\nTienes que gastar más en publicidad.\n\nPoner tu marca al frente de cada vez más y más gente.\n\nContar una historia que resuene en el mercado.\n\nCon productos que resuelvan una necesidad real.\n\nY estar en cada vez más sitios - países, marketplaces, mayoristas, tiendas físicas, etc.\n\nNo digo que deberías dejar de invertir en CRO, personalización, email marketing, SMS, crear una app, etc.\n\nSon de mucha ayuda en el camino de crecimiento.\n\nPero no puedes esperar que estas tácticas aumenten considerablemente tu facturación.\n\nSolo historias, productos, estrategia y inversión en publicidad pueden hacerlo.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1759568356455,
+      "date": "2025-10-04T08:59:16.455Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_en-ecommerce-no-puedes-acortar-tu-camino-activity-7380164595753250816-oJOr?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7380164595753250816",
+    "shareUrn": "urn:li:share:7380164595002359808",
+    "engagement": {
+      "id": "7380164595753250816",
+      "likes": 11,
+      "comments": 0,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 10
+        },
+        {
+          "type": "EMPATHY",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7387038329340313600",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_10-m%C3%A9tricas-en-ecommerce-que-debes-conocer-activity-7387038329340313600-8lLB",
+    "content": "📊 10 Métricas en eCommerce Que DEBES CONOCER\n\n ¡Nuevo video en YouTube y Spotify, donde hablo de 10 métricas que determinan el éxito y escalabilidad de tu eCommerce.\n\nLinks:\n\n🔗 Spotify: https://lnkd.in/dYPYxXQx\n🔗 YouTube: https://lnkd.in/d5ugnY6N\n\n¡Espero que lo disfruten!",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1761207182250,
+      "date": "2025-10-23T08:13:02.250Z",
+      "postedAgoShort": "5mo",
+      "postedAgoText": "5 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "article": {
+      "title": "10 Métricas en eCommerce Que DEBES CONOCER para Escalar Rentablemente",
+      "subtitle": "youtube.com",
+      "link": "https://youtu.be/arsv6sCOFqo",
+      "linkLabel": "Open video: 10 Métricas en eCommerce Que DEBES CONOCER para Escalar Rentablemente on youtu.be",
+      "description": null,
+      "image": {
+        "url": "https://media.licdn.com/dms/image/sync/v2/D4D27AQGxE9_TPso1fg/articleshare-shrink_1280_800/B4DZoQFyXaGwAQ-/0/1761206544170?e=1777280400&v=beta&t=JFGFk0hpBB37iyO2UkcqQ89dVi4-NTPh5bdQsH1RjUA",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777280400000
+      }
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_10-m%C3%A9tricas-en-ecommerce-que-debes-conocer-activity-7387038329340313600-8lLB?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7387038329340313600",
+    "shareUrn": "urn:li:share:7387038328522424320",
+    "engagement": {
+      "id": "7387038329340313600",
+      "likes": 12,
+      "comments": 0,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 12
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7407719306559500288",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_el-aov-miente-activity-7407719306559500288-EgWr",
+    "content": "El 87% de los eCommerce que conozco están optimizando su AOV para fantasmas. 👻 \n\nNo es broma.\n\nToman el AOV de su dashboard, diseñan toda su estrategia de ticket medio alrededor de ese número… y al final la métrica sigue igual.\n\nPorque ese «cliente promedio» que gasta €67 por orden no existe.\n\nSi facturas entre 1-30M€ y has basado decisiones en AOV, esto te va a doler.\n\nPero también te va a ayudar a crear estrategias que desbloqueen miles de euros.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1766137911453,
+      "date": "2025-12-19T09:51:51.453Z",
+      "postedAgoShort": "4mo",
+      "postedAgoText": "4 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "El AOV Miente",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D4E1FAQEBBSof7BJtug/feedshare-document-chunked-pdf/B4EZs2BWm7JgBk-/0/1766137888309?e=1777280400&v=beta&t=T0jrXA9osq-JBnXZuCjM19P6pKDEQMtBvh9d4eaE0OE",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D4E1FAQEBBSof7BJtug/feedshare-document-cover-images_1920/B4EZs2BWm7JgBQ-/0/1766137890132?e=1777280400&v=beta&t=gqFM71cqntIwf9_8b1FpC_LsoFBEd4Gknez7rr-R-5A",
+            "https://media.licdn.com/dms/image/v2/D4E1FAQEBBSof7BJtug/feedshare-document-cover-images_1920/B4EZs2BWm7JgBQ-/1/1766137890132?e=1777280400&v=beta&t=SPyO3Jsp-744mChDyAzKWRYt2kd20fh3yNgpCqmWTvs",
+            "https://media.licdn.com/dms/image/v2/D4E1FAQEBBSof7BJtug/feedshare-document-cover-images_1920/B4EZs2BWm7JgBQ-/2/1766137890132?e=1777280400&v=beta&t=Ak4IqEmHjjWXtEw8Bq0go77Nc9_QirAgEUJIAdV9MBg"
+          ],
+          "height": 1927
+        }
+      ],
+      "totalPageCount": 22
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_el-aov-miente-activity-7407719306559500288-EgWr?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7407719306559500288",
+    "shareUrn": "urn:li:ugcPost:7407719305603072000",
+    "engagement": {
+      "id": "7407719305603072000",
+      "likes": 28,
+      "comments": 17,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 24
+        },
+        {
+          "type": "PRAISE",
+          "count": 2
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7383775779727417344",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_hablemos-de-%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%80-%F0%9D%97%B5%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BC%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%BC%F0%9D%97%B9%F0%9D%98%83%F0%9D%97%B6-activity-7383775779727417344-lT-e",
+    "content": "Hablemos de 𝗹𝗼𝘀 𝗵𝗲́𝗿𝗼𝗲𝘀 𝗼𝗹𝘃𝗶𝗱𝗮𝗱𝗼𝘀 de eCommerce.⁣\n⁣\nY por qué necesitas trabajar con estos dos departamentos para crecer. 👇⁣\n⁣\nLos de Growth a veces nos pasamos un poco de listos.⁣\n⁣\nPor lo menos yo he pecado de esto.⁣\n⁣\nPensamos que si generamos más ventas, todos los otros departamentos nos acompañarán en el camino de los millones de 💸💸💸.⁣\n⁣\nPero tendemos a olvidarnos de que, para que esto ocurra, estos dos departamentos tienen que estar alineados y preparados para el crecimiento.⁣\n⁣\n¿Cuáles son? 𝗢𝗽𝗲𝗿𝗮𝗰𝗶𝗼𝗻𝗲𝘀 𝘆 𝗳𝗶𝗻𝗮𝗻𝘇𝗮𝘀.⁣\n⁣\n𝘋𝘦𝘭 𝘭𝘢𝘥𝘰 𝘥𝘦 𝘰𝑝𝘦𝘳𝘢𝘤𝘪𝘰𝘯𝘦𝘴, tienen que tener un pronóstico de cuánto se va a vender en qué fechas, para poder realizar las compras de inventario con antelación.⁣\n⁣\nMuchas veces los proveedores son de otros continentes y los productos tienen que ser enviados en barco, por lo que el proceso puede llegar a tardar meses.⁣\n⁣\n𝗖𝗹𝗮𝗿𝗼, 𝘀𝗶 𝗻𝗼 𝘁𝗶𝗲𝗻𝗲𝘀 𝘀𝘁𝗼𝗰𝗸, 𝘁𝘂𝘀 𝘃𝗲𝗻𝘁𝗮𝘀 𝘃𝗮𝗻 𝗮 𝟬. 📉⁣\n⁣\nPor otro lado, 𝘵𝘦𝘯𝘦𝘮𝘰𝘴 𝘧𝘪𝘯𝘢𝘯𝘻𝘢𝘴.⁣\n⁣\nSe necesita dinero para pagar las campañas de marketing, los productos y, a veces, la fábrica extra que necesitas para suplir el incremento de las ventas. 🏭⁣\n⁣\nSin un flujo de fondos detallado, finanzas no va a ser capaz de pagar los gastos necesarios para que el negocio crezca.⁣\n⁣\nComo Growth Managers, Strategists, y Heads of Growth, 𝘁𝗲𝗻𝗲𝗺𝗼𝘀 𝗾𝘂𝗲 𝗮𝗽𝗿𝗲𝗻𝗱𝗲𝗿 𝗮 𝘁𝗿𝗮𝗯𝗮𝗷𝗮𝗿 𝗲𝗻 𝗰𝗼𝗻𝗷𝘂𝗻𝘁𝗼 𝗰𝗼𝗻 𝗲𝘀𝘁𝗼𝘀 𝗱𝗼𝘀 𝗱𝗲𝗽𝗮𝗿𝘁𝗮𝗺𝗲𝗻𝘁𝗼𝘀.⁣\n⁣\nPorque son los que nos habilitan y nos permiten alcanzar los objetivos.⁣\n⁣\nHazte amigo de ellos, además suelen ser muy simpáticos. 🙂",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760429329807,
+      "date": "2025-10-14T08:08:49.807Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_hablemos-de-%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%80-%F0%9D%97%B5%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BC%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%BC%F0%9D%97%B9%F0%9D%98%83%F0%9D%97%B6-activity-7383775779727417344-lT-e?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7383775779727417344",
+    "shareUrn": "urn:li:share:7383775778855100416",
+    "engagement": {
+      "id": "7383775779727417344",
+      "likes": 4,
+      "comments": 0,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7384214232285757440",
+    "linkedinUrl": "https://www.linkedin.com/posts/jcgiusto_meta-y-google-no-pueden-medir-el-verdadero-activity-7384214232285757440-FEQS",
+    "content": "Meta y Google NO PUEDEN medir el verdadero impacto de tus campañas de Marketing",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "universalName": null,
+      "publicIdentifier": "jcgiusto",
+      "type": "profile",
+      "name": "Juan Cruz Giusto",
+      "linkedinUrl": "https://www.linkedin.com/in/jcgiusto?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABfOc3oBX-rBgFAaXMz497zV1WD4dC_3Ly4",
+      "info": "Head of eCom @ Mars Men | I scale eCom’s with experiments and a P&L, not vibes.",
+      "website": null,
+      "websiteLabel": null,
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQGD2QeBNHRftQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712002938546?e=1778112000&v=beta&t=M5NlTtZL8TJzbqejyqckcdPR0c-znJ7kXIt3KO5vOHY",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1778112000000
+      },
+      "urn": "399405946"
+    },
+    "postedAt": {
+      "timestamp": 1760533865043,
+      "date": "2025-10-15T13:11:05.043Z",
+      "postedAgoShort": "6mo",
+      "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D4D05AQECponbofAPtQ/videocover-high/B4DZnn_qhwHwAQ-/0/1760533855582?e=1777280400&v=beta&t=geZFJG0n_D3Yp0WcwrDyDuwmDg8Kh22g9Yim-GAVkmU",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D4D05AQECponbofAPtQ/mp4-720p-30fp-crf28/B4DZnn_qhwHwAg-/0/1760533861498?e=1777280400&v=beta&t=iKjGnxZpz_Ibpxfv_zizklggpKc1DCUJIqgQJ6LYG84"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": false,
+      "hideSendAction": false,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/jcgiusto_meta-y-google-no-pueden-medir-el-verdadero-activity-7384214232285757440-FEQS?",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7384214232285757440",
+    "shareUrn": "urn:li:ugcPost:7384214183405334528",
+    "engagement": {
+      "id": "7384214183405334528",
+      "likes": 7,
+      "comments": 1,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 7
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/jcgiusto/",
+      "sessionId": "6ab4a064-1115-46a3-a767-27ed2a8fc8f2"
+    }
+  }
+]

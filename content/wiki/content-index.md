@@ -31,9 +31,34 @@ Spanish-language blog with additional Meta Ads, forecasting, and incrementality 
 - [[pipeline]] — Historical pipeline tracker (pre-2026-05-24). Active pipeline now lives in the Notion Content DB. (confidence: high)
 - **Notion Content DB** — Active operational layer. Ideas, drafts, scheduling, publishing, performance tracking. Open: Content OS -> Content in Notion.
 
+## Engine (Skill-Graph Execution Layer)
+
+Extracted from `/content` command on 2026-04-20 so voice, platform rules, hooks, and chain logic can evolve independently of any command file. `/content` now reads these nodes instead of embedding them.
+
+### Voice
+- [[voice/brand-voice]] — Core voice DNA: Data-Driven Mentor with Systems Thinking, Provocative Honesty, Financial Rigor. Sentence structure, vocabulary, rhetorical signature moves, tone.
+- [[voice/platform-tone]] — How the core voice adapts Twitter vs LinkedIn vs Blog. Same DNA, different room.
+
+### Platforms
+- [[platforms/twitter]] — DNA, formats (single / 3-7 thread / 8-12 thread / long-form tweet), Phase 1 firewall, posting strategy.
+- [[platforms/linkedin]] — DNA, formats (short 500-800 / standard 1,000-1,800 / long 1,800-3,000), first-line rules, hashtag rules.
+- [[platforms/blog]] — DNA, 6-part article structure for jcgiusto.com, SEO rules, 1,500-3,000 words.
+
+### Engine
+- [[engine/hooks]] — Five hook formulas codified from Juan's signature moves. Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor (Phase 1 only). Platform fit matrix.
+- [[engine/repurpose]] — Two-path chain (Path A framework-heavy → seed blog/LinkedIn; Path B hot-take → seed Twitter). Reverses the generic "X-first" default because Juan's Economics Reveal needs math room.
+- [[engine/content-types]] — Format catalog (short take, thread, narrative post, long-form article, case study). Maps format to platform and hook type.
+
+### Audience
+- [[audience/operators]] — Primary audience. CMOs/Heads of eComm/VPs of Growth at 7-9 fig DTC brands. Finance-literate. Want math, frameworks, systems.
+- [[audience/founders]] — Secondary audience. 7-8 fig founders, budget holders, ASTEROI buyers in Phase 2+. Want rigor signals and delegatable systems.
+
 ## Raw Articles (content/raw/articles/)
 
 37 published articles ingested on 2026-04-06 from three sources. All saved as clean .md files with YAML frontmatter. Spanish articles translated to English.
+
+### LinkedIn Archive (50 posts, source: linkedin, ingested 2026-04-20)
+- [[linkedin-archive]] — Themed index of all 50 posts. Raw JSON at `linkedin-posts-2026-04-20.json`. Per-post markdown files at `linkedin-posts/<date>-<slug>.md` with engagement, URL, post_id frontmatter. All Spanish.
 
 ### jcgiusto.com (11 articles, source: jcgiusto)
 - `metric-tree-subscription-ecommerce.md` — The Metric Tree of Subscription eCommerce
