@@ -202,26 +202,43 @@ After presenting, ask:
 
 ---
 
-## STEP 6: FILE TO PIPELINE (IF APPROVED)
+## STEP 6: FILE TO NOTION CONTENT DB (IF APPROVED)
 
-If Juan approves the piece, offer to:
-1. Save the final version to `content/raw/drafts/[platform]-[slug].md` with frontmatter
-2. Update `content/wiki/pipeline.md` (create if it doesn't exist) with status tracking
-3. Log the activity in `content/memory/log.md`
+If Juan approves the piece, file it to the Notion Content DB via `content/scripts/notion-content.ps1`. The local `content/raw/drafts/` folder is no longer used; the Notion Content DB is the operational source of truth (since 2026-05-24).
 
-**Draft frontmatter format:**
-```yaml
----
-title: [title]
-platform: twitter | linkedin | blog
-status: draft | ready | published
-topic: [which approved topic]
-source_articles: [raw articles referenced]
-source_wiki: [wiki pages referenced]
-created: YYYY-MM-DD
-published: null
----
+**Two modes:**
+
+A. **Promote an existing Idea row** (preferred — Juan often runs `/content` no-args, which picks the oldest Idea):
+```powershell
+.\content\scripts\notion-content.ps1 promote-idea `
+  -PageId <pageId from query-ideas> `
+  -BodyFile C:\tmp\draft.md `
+  -HookType "Economics Reveal" `
+  -Status Drafting
 ```
+The script auto-inherits `Source articles` / `Source wiki` tags already on the Idea row, so you usually don't need to pass them on promote.
+
+B. **Create a fresh draft** (when no matching Idea exists):
+```powershell
+.\content\scripts\notion-content.ps1 create-draft `
+  -Title "Your 3.0 ROAS is a 1.33" `
+  -Platform LinkedIn `
+  -Topic Incrementality `
+  -HookType "Economics Reveal" `
+  -SourceArticles "asteroi-en-roas-doesnt-mean-shit" `
+  -SourceWiki "measurement-incrementality,ecommerce-metrics-hierarchy" `
+  -BodyFile C:\tmp\draft.md
+```
+
+**`-SourceArticles` / `-SourceWiki` behavior (important):**
+Pass filename **stems** (no `.md`, no directory) matching files in `content/raw/articles/` or `content/wiki/`. The script:
+1. Sets the `Source articles` / `Source wiki` multi-select tags.
+2. Resolves each stem to its Knowledge Mirror page via `content/memory/notion-sync-state.json` and sets the `Source links` rich_text property with native Notion page mentions.
+3. Prepends a `**Sources:** [stem](mirror-url)` header to the page body so the links render inline at the top of the draft.
+
+If a stem doesn't exist in the sync state (e.g. a brand-new wiki page not yet synced), the script still tags it and emits a warning; run `notion-sync.ps1 wiki` (or `articles`) afterwards to populate the mirror, then re-run with the same args to fill in the mentions.
+
+After filing, also append a short entry to `content/memory/log.md` with the Notion page URL. Local drafts and `content/wiki/pipeline.md` are historical only — do not touch them.
 
 ---
 
