@@ -1,9 +1,9 @@
 ---
 title: Content Wiki Index
-description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, research briefs) lives in Notion.
+description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, reference posts) lives in Notion.
 type: index
 created: 2026-04-06
-updated: 2026-05-24
+updated: 2026-05-25
 confidence: high
 ---
 
@@ -125,10 +125,10 @@ Claude Code skill that creates platform-ready content (Twitter, LinkedIn, blog) 
 - **Helper:** `content/scripts/notion-content.ps1` (query-ideas / create-draft / promote-idea)
 - **Usage:** `/content` (promote oldest Idea), `/content twitter LTV`, `/content linkedin profitability`, `/content blog powered ice`, `/content repurpose [article path]`
 
-### /content-research — Competitive Intelligence Skill
-Scrapes reference creators via Apify to analyze what hooks, formats, and topics drive engagement on Twitter/LinkedIn. Returns research brief with gaps Juan can own. **Briefs are filed to the Notion Research DB.**
+### /content-research — Reference Post Library Skill
+Scrapes reference creators via Apify, picks the top 5 by engagement, Claude-tags each by Topic, and saves each as a row in the Notion Research DB (one post = one row). No more aggregated briefs — strategic analysis ("what gaps exist for X?") happens in chat by querying the DB on demand.
 - **Location:** `~/.claude/commands/content-research.md`
-- **Helper:** `content/scripts/notion-research.ps1` (create-brief)
+- **Helper:** `content/scripts/notion-research.ps1` (create-post)
 - **Usage:** `/content-research twitter LTV`, `/content-research linkedin all`
 - **Reference creators:** Taylor Holiday, Nick Sharma, Cody Plofker, Barry Hott, Dara Denney
 
@@ -161,9 +161,11 @@ To add a new idea: capture it directly in Notion (mobile or web), or tell Claude
 
 ## Research
 
-Research briefs from `/content-research` are filed to the Notion Research DB. Open Content OS -> Research to browse.
+Reference posts saved by `/content-research` live in the Notion Research DB (one row per noteworthy competitor post: Title / Platform / Post URL / Topic / Creator). Open Content OS -> Research to browse.
 
-Historical briefs (pre-migration) in `content/raw/research/`, if any exist, are retained but not updated.
+The DB feeds `/content`: when writing for a topic, Claude can query the Research DB for recent high-performers to see what's working in the niche.
+
+Historical briefs (pre-2026-05-25 aggregated format) in `content/raw/research/`, if any exist, are retained but not updated.
 
 ## Memory
 - [[log]] — Content activity log. Most recent first.

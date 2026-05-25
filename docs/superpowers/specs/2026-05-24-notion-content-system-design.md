@@ -4,9 +4,12 @@ description: Move the operational layer of Juan's content system (ideas, pipelin
 type: design-spec
 author: claude
 created: 2026-05-24
-updated: 2026-05-24
-status: pending-review
+updated: 2026-05-25
+status: implemented
 ---
+
+> **Implementation note (2026-05-25):** The original schemas below were simplified during a walkthrough with Juan. The Content DB shrank from 14 → 9 properties, and the Research DB was repositioned from "aggregated brief" to "per-post reference library." See the **Final Schema (Post-Simplification)** section at the bottom for what was actually built.
+
 
 # Notion Content System Design
 
@@ -251,6 +254,50 @@ These are intentionally deferred from v1:
 - **Scheduled publishing.** No auto-publish in v1 — Juan posts manually and updates Notion after. A future Worker could publish to platforms directly.
 - **Repurposing relationships.** When a Twitter thread comes from a LinkedIn post (or vice versa), capture the relationship via a self-relation field in Content DB ("Repurposed from"). Skipped in v1 for simplicity.
 - **GitHub-triggered sync.** Optional later: a post-commit hook on JCG-OS that runs `/content-sync` automatically after wiki edits.
+
+## Final Schema (Post-Simplification, 2026-05-25)
+
+After a walkthrough with Juan, the schemas were simplified based on what actually gets used vs. what's noise. Key insight: **Type** (the artifact's shape) was missing and **Platform** needed to be multi-select (one piece, many distribution surfaces). Several "nice to track" fields (Topic, Hook type, manual Engagement) were cut because they were never queried or never filled in.
+
+### Content DB — 7 properties + auto Created (was 14)
+
+| Property | Type | Notes |
+|---|---|---|
+| Title | Title | Headline |
+| Status | Select | Idea / Researching / Drafting / Ready / Scheduled / Published |
+| Platform | **Multi-select** | Blog / LinkedIn / Twitter / Instagram / Threads / TikTok / YouTube / Spotify |
+| Type | **Select (NEW)** | Thread / YouTube Video / Short / Carousel / Resource / Podcast / Authority / Infographic / Personal Post |
+| Date | Date | Scheduled OR published (one field — Status disambiguates) |
+| Published URL | URL | |
+| Source research | Relation → Research DB | |
+| Body | Page content | Sources to Knowledge Mirror live here as @page-mentions, not as DB properties |
+
+**Cut:** Topic (overlapped with sources), Hook type (never queried for analytics), Source wiki / Source articles / Source links (replaced by inline @mentions in body), Engagement (manual entry never happened), Scheduled date + Published date (collapsed to single Date).
+
+### Research DB — 5 properties + auto Created (was 7 + 4 body sections)
+
+Repositioned from "aggregated brief" to "per-post reference library." One row = one noteworthy competitor post.
+
+| Property | Type | Notes |
+|---|---|---|
+| Title | Title | First ~80 chars of post text |
+| Platform | Select (single) | Same 8 options as Content DB. Single because one post lives on one platform. |
+| Post URL | URL (NEW) | Link to the original post |
+| Topic | Select | Claude-tagged at row creation from the taxonomy |
+| Creator | Select (NEW) | Seeded from reference creators list |
+| Informed pieces | Relation → Content DB | Auto-populated reverse of Content DB's Source research |
+
+**Cut:** Date (Created handles it), Posts analyzed (vanity), Creators scraped (replaced by per-row Creator). **Body section templates removed** (Top posts, Hook patterns, Gaps, Recommended angles) — those were brief-format artifacts.
+
+### `/content-research` workflow change
+
+Old: scrape → analyze → produce one aggregated brief → save brief as one DB row.
+
+New: scrape → rank by engagement → take **top 5** → for each: Claude tags Topic + builds Title → save each as a separate Research DB row.
+
+Strategic analysis ("what gaps exist for LTV?") moves from a baked-in skill output to ad-hoc chat queries against the populated DB.
+
+---
 
 ## References
 

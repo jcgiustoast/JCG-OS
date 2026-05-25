@@ -1,19 +1,26 @@
 # notion-content.ps1
-# Helper for the /content skill: query the Ideas backlog, create new drafts in
-# the Notion Content DB, or promote an existing Idea row to Drafting with a
-# body. Uses the Notion HTTP API (Markdown Content API).
+# Helper for the /content skill. Talks to the Notion Content DB.
+#
+# Schema (post-2026-05-25 simplification):
+#   Title (title), Status (select), Platform (multi_select, 8 options),
+#   Type (select, 9 options), Date (date), Published URL (url),
+#   Source research (relation), Created (auto). Body holds the draft
+#   with inline @page-mentions to the Knowledge Mirror as the only
+#   source-attribution mechanism.
+#
+# Actions:
+#   query-ideas    Return the oldest Status=Idea row as JSON
+#   create-draft   Create a new row, write body, set properties
+#   promote-idea   Update an existing Idea row's status + properties + body
 #
 # Usage examples:
 #   .\notion-content.ps1 query-ideas
-#   .\notion-content.ps1 create-draft -Title "X" -Platform Twitter -Topic LTV `
-#       -HookType "Economics Reveal" -SourceWiki "ltv-frameworks" `
+#   .\notion-content.ps1 create-draft -Title "X" -Platform Twitter,LinkedIn `
+#       -Type Thread -SourceWiki "ltv-frameworks" `
 #       -SourceArticles "asteroi-en-roas-doesnt-mean-shit" `
 #       -BodyFile C:\tmp\draft.md
-#   .\notion-content.ps1 promote-idea -PageId <id> -BodyFile C:\tmp\draft.md
-#
-# Output (create-draft, promote-idea): one line per stdout `OK <pageId> <url>`
-# Output (query-ideas): JSON to stdout
-#   { "pageId": "...", "title": "...", "platform": "...", "topic": "...", "found": true }
+#   .\notion-content.ps1 promote-idea -PageId <id> -BodyFile C:\tmp\draft.md `
+#       -Type Thread -SourceWiki "ltv-frameworks"
 
 [CmdletBinding()]
 param(
@@ -28,10 +35,21 @@ param(
 
   # Properties
   [string]$Title,
-  [ValidateSet('Twitter','LinkedIn','Blog')][string]$Platform,
-  [ValidateSet('LTV','CRO','Profitability','Subscription','Metrics','Forecasting','Incrementality')][string]$Topic,
-  [ValidateSet('Economics Reveal','Contrarian Premise','Framework-First','Specificity','Credential Anchor')][string]$HookType,
-  [ValidateSet('Idea','Researching','Drafting','Ready','Scheduled','Published')][string]$Status = 'Drafting',
+
+  [ValidateSet('Blog','LinkedIn','Twitter','Instagram','Threads','TikTok','YouTube','Spotify')]
+  [string[]]$Platform,
+
+  [ValidateSet('Thread','YouTube Video','Short','Carousel','Resource','Podcast','Authority','Infographic','Personal Post')]
+  [string]$Type,
+
+  [ValidateSet('Idea','Researching','Drafting','Ready','Scheduled','Published')]
+  [string]$Status = 'Drafting',
+
+  [string]$Date,           # YYYY-MM-DD (scheduled or published)
+  [string]$PublishedUrl,
+
+  # Source attribution: not stored as DB properties anymore. Used only to
+  # build the inline mention header that gets prepended to the page body.
   [string]$SourceWiki,
   [string]$SourceArticles
 )
@@ -78,21 +96,18 @@ function Get-BodyText {
   }
 }
 
-function To-MultiSelectArray {
-  param([string]$Csv)
-  if ([string]::IsNullOrWhiteSpace($Csv)) { return ,@() }
-  $items = @($Csv.Split(',') | ForEach-Object { @{ name = $_.Trim() } } | Where-Object { $_.name })
-  # Leading comma forces caller to receive an array even when there's a single
-  # element; PowerShell otherwise unwraps single-element arrays.
+function To-MultiSelectFromArray {
+  param([string[]]$Names)
+  if (-not $Names -or $Names.Count -eq 0) { return ,@() }
+  $items = @($Names | Where-Object { $_ } | ForEach-Object { @{ name = $_.Trim() } })
   return ,$items
 }
 
 # --- Source-mention helpers ------------------------------------------------
 # Resolve filename stems (e.g. "metric-tree-subscription-ecommerce") to the
-# Notion page IDs of the Knowledge Mirror via notion-sync-state.json. Builds
-# (a) a rich_text array of mention objects for the "Source links" property and
-# (b) a markdown header to prepend to the page body so the source links are
-# also visible when reading the draft.
+# Notion page IDs of the Knowledge Mirror via notion-sync-state.json, then
+# build a markdown header prepended to the page body. Notion renders the
+# markdown links as mention chips back to the mirror page.
 
 $script:syncStateCache = $null
 function Get-SyncState {
@@ -127,46 +142,16 @@ function Resolve-SourceStems {
     $stem = $raw.Trim()
     if (-not $stem) { continue }
     if ($state.ContainsKey($stem)) {
-      $resolved += [pscustomobject]@{ stem = $stem; id = $state[$stem].id; path = $state[$stem].path; resolved = $true }
+      $resolved += [pscustomobject]@{ stem = $stem; id = $state[$stem].id; resolved = $true }
     } else {
-      Write-Warning "Source not in Knowledge Mirror: $stem (skipping mention; will still be set as multi_select tag)"
-      $resolved += [pscustomobject]@{ stem = $stem; id = $null; path = $null; resolved = $false }
+      Write-Warning "Source not in Knowledge Mirror: $stem (skipping mention)"
+      $resolved += [pscustomobject]@{ stem = $stem; id = $null; resolved = $false }
     }
   }
   return $resolved
 }
 
-function Build-MentionRichText {
-  # Combine article + wiki resolved sources into a single rich_text array
-  # suitable for the "Source links" property. Format:
-  #   [mention(art1)][text(", ")][mention(art2)][text("  |  wiki: ")][mention(w1)]
-  param($Articles, $Wiki)
-  $rt = @()
-  $first = $true
-  foreach ($a in $Articles) {
-    if (-not $a.resolved) { continue }
-    if (-not $first) { $rt += @{ type = 'text'; text = @{ content = ', ' } } }
-    $rt += @{ type = 'mention'; mention = @{ type = 'page'; page = @{ id = $a.id } } }
-    $first = $false
-  }
-  $hasWiki = @($Wiki | Where-Object { $_.resolved }).Count -gt 0
-  if ($hasWiki) {
-    if (-not $first) { $rt += @{ type = 'text'; text = @{ content = '  |  wiki: ' } } }
-    $wfirst = $true
-    foreach ($w in $Wiki) {
-      if (-not $w.resolved) { continue }
-      if (-not $wfirst) { $rt += @{ type = 'text'; text = @{ content = ', ' } } }
-      $rt += @{ type = 'mention'; mention = @{ type = 'page'; page = @{ id = $w.id } } }
-      $wfirst = $false
-    }
-  }
-  return ,$rt
-}
-
 function Build-SourcesMarkdownHeader {
-  # Prepend a Sources line at the top of the body with plain markdown links
-  # back to the Notion mirror pages, so readers see linkable sources without
-  # needing the property panel open. Notion auto-renders these as mentions.
   param($Articles, $Wiki)
   $parts = @()
   $articleLinks = @()
@@ -195,8 +180,6 @@ function Build-SourcesMarkdownHeader {
 switch ($Action) {
 
   'query-ideas' {
-    # Notion data-source query no longer honors the {timestamp: created_time}
-    # sort syntax. Sort client-side on the row's built-in created_time field.
     $payload = @{
       filter    = @{ property = 'Status'; select = @{ equals = 'Idea' } }
       page_size = 100
@@ -214,14 +197,18 @@ switch ($Action) {
     }
     $row = $r.results | Sort-Object created_time | Select-Object -First 1
     $titleText = ($row.properties.Title.title | ForEach-Object { $_.plain_text }) -join ''
-    $platformName = $null; if ($row.properties.Platform.select) { $platformName = $row.properties.Platform.select.name }
-    $topicName    = $null; if ($row.properties.Topic.select)    { $topicName    = $row.properties.Topic.select.name }
+    $platformNames = @()
+    if ($row.properties.Platform.multi_select) {
+      $platformNames = @($row.properties.Platform.multi_select | ForEach-Object { $_.name })
+    }
+    $typeName = $null
+    if ($row.properties.Type.select) { $typeName = $row.properties.Type.select.name }
     @{
       found    = $true
       pageId   = $row.id
       title    = $titleText
-      platform = $platformName
-      topic    = $topicName
+      platform = ($platformNames -join ',')
+      type     = $typeName
       url      = $row.url
     } | ConvertTo-Json -Compress | Write-Output
     return
@@ -229,32 +216,26 @@ switch ($Action) {
 
   'create-draft' {
     if (-not $Title)    { throw "create-draft requires -Title" }
-    if (-not $Platform) { throw "create-draft requires -Platform" }
-    if (-not $Topic)    { throw "create-draft requires -Topic" }
-    $body = Get-BodyText
+    if (-not $Platform -or $Platform.Count -eq 0) { throw "create-draft requires -Platform (one or more values)" }
+    $bodyText = Get-BodyText
 
     $resolvedArticles = Resolve-SourceStems $SourceArticles
     $resolvedWiki     = Resolve-SourceStems $SourceWiki
-    $body = (Build-SourcesMarkdownHeader -Articles $resolvedArticles -Wiki $resolvedWiki) + $body
+    $bodyText = (Build-SourcesMarkdownHeader -Articles $resolvedArticles -Wiki $resolvedWiki) + $bodyText
 
     $props = [ordered]@{
       Title    = @{ title = @(@{ type = 'text'; text = @{ content = $Title } }) }
       Status   = @{ select = @{ name = $Status } }
-      Platform = @{ select = @{ name = $Platform } }
-      Topic    = @{ select = @{ name = $Topic } }
+      Platform = @{ multi_select = (To-MultiSelectFromArray $Platform) }
     }
-    if ($HookType)        { $props['Hook type']        = @{ select = @{ name = $HookType } } }
-    if ($SourceWiki)      { $props['Source wiki']      = @{ multi_select = (To-MultiSelectArray $SourceWiki) } }
-    if ($SourceArticles)  { $props['Source articles']  = @{ multi_select = (To-MultiSelectArray $SourceArticles) } }
-    $mentionRt = Build-MentionRichText -Articles $resolvedArticles -Wiki $resolvedWiki
-    if ($mentionRt.Count -gt 0) {
-      $props['Source links'] = @{ rich_text = $mentionRt }
-    }
+    if ($Type)         { $props['Type']          = @{ select = @{ name = $Type } } }
+    if ($Date)         { $props['Date']          = @{ date = @{ start = $Date } } }
+    if ($PublishedUrl) { $props['Published URL'] = @{ url = $PublishedUrl } }
 
     $payload = @{
       parent     = @{ type = 'data_source_id'; data_source_id = $config.contentDataSourceId }
       properties = $props
-      markdown   = $body
+      markdown   = $bodyText
     } | ConvertTo-Json -Depth 10 -Compress
     try {
       $r = Invoke-Notion -Method POST -Uri 'https://api.notion.com/v1/pages' -JsonBody $payload
@@ -269,42 +250,19 @@ switch ($Action) {
 
   'promote-idea' {
     if (-not $PageId) { throw "promote-idea requires -PageId" }
-    $body = Get-BodyText
-
-    # If caller did not pass -SourceArticles / -SourceWiki, inherit them from
-    # the existing row's multi-select tags so the Sources header still gets
-    # built (the 12 backfilled Idea rows already have these populated).
-    if (-not $SourceArticles -or -not $SourceWiki) {
-      try {
-        $existing = Invoke-Notion -Method GET -Uri "https://api.notion.com/v1/pages/$PageId"
-        if (-not $SourceArticles -and $existing.properties.'Source articles'.multi_select) {
-          $SourceArticles = ($existing.properties.'Source articles'.multi_select | ForEach-Object { $_.name }) -join ','
-        }
-        if (-not $SourceWiki -and $existing.properties.'Source wiki'.multi_select) {
-          $SourceWiki = ($existing.properties.'Source wiki'.multi_select | ForEach-Object { $_.name }) -join ','
-        }
-      } catch {
-        # Soft-fail: continue without inheritance
-      }
-    }
+    $bodyText = Get-BodyText
 
     $resolvedArticles = Resolve-SourceStems $SourceArticles
     $resolvedWiki     = Resolve-SourceStems $SourceWiki
-    $body = (Build-SourcesMarkdownHeader -Articles $resolvedArticles -Wiki $resolvedWiki) + $body
+    $bodyText = (Build-SourcesMarkdownHeader -Articles $resolvedArticles -Wiki $resolvedWiki) + $bodyText
 
-    # Step A: update status (+optional properties) on the existing row
     $props = [ordered]@{
       Status = @{ select = @{ name = $Status } }
     }
-    if ($Platform)        { $props['Platform']         = @{ select = @{ name = $Platform } } }
-    if ($Topic)           { $props['Topic']            = @{ select = @{ name = $Topic } } }
-    if ($HookType)        { $props['Hook type']        = @{ select = @{ name = $HookType } } }
-    if ($SourceWiki)      { $props['Source wiki']      = @{ multi_select = (To-MultiSelectArray $SourceWiki) } }
-    if ($SourceArticles)  { $props['Source articles']  = @{ multi_select = (To-MultiSelectArray $SourceArticles) } }
-    $mentionRt = Build-MentionRichText -Articles $resolvedArticles -Wiki $resolvedWiki
-    if ($mentionRt.Count -gt 0) {
-      $props['Source links'] = @{ rich_text = $mentionRt }
-    }
+    if ($Platform -and $Platform.Count -gt 0) { $props['Platform'] = @{ multi_select = (To-MultiSelectFromArray $Platform) } }
+    if ($Type)         { $props['Type']          = @{ select = @{ name = $Type } } }
+    if ($Date)         { $props['Date']          = @{ date = @{ start = $Date } } }
+    if ($PublishedUrl) { $props['Published URL'] = @{ url = $PublishedUrl } }
 
     $propPayload = @{ properties = $props } | ConvertTo-Json -Depth 10 -Compress
     try {
@@ -315,10 +273,9 @@ switch ($Action) {
       throw "Promote (properties) failed: $msg"
     }
 
-    # Step B: replace page body content
     $bodyPayload = @{
       type            = 'replace_content'
-      replace_content = @{ new_str = $body }
+      replace_content = @{ new_str = $bodyText }
     } | ConvertTo-Json -Depth 6 -Compress
     try {
       $null = Invoke-Notion -Method PATCH -Uri "https://api.notion.com/v1/pages/$PageId/markdown" -JsonBody $bodyPayload

@@ -3,12 +3,34 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-05-24
+updated: 2026-05-25
 ---
 
 # Content Memory Log
 
 *Append-only. Most recent entries at the top. Never edit past entries.*
+
+---
+
+## [2026-05-25] schema | Content + Research DB simplification
+
+Walked Juan through every Content DB property to decide keep/cut. Outcome: Content DB 14 → 9 properties. Research DB repositioned from "aggregated brief" to "per-post reference library."
+
+- **Content DB changes (in Notion):**
+  - Added: Type (single-select, 9 options: Thread / YouTube Video / Short / Carousel / Resource / Podcast / Authority / Infographic / Personal Post).
+  - Platform: single-select → multi-select. Expanded options to 8 (added Instagram, Threads, TikTok, YouTube, Spotify). Existing 12 Idea rows re-tagged.
+  - Scheduled date + Published date → collapsed to single Date (Status disambiguates).
+  - Removed: Topic, Hook type, Source wiki, Source articles, Source links, Engagement.
+- **Research DB changes (in Notion):**
+  - Added: Post URL, Creator (single-select, seeded from reference creators).
+  - Platform: single-select with expanded 8 options (was Twitter/LinkedIn/Both).
+  - Removed: Date (Created handles it), Posts analyzed, Creators scraped.
+  - No row data to preserve (DB was empty).
+- **`/content-research` rewrite:** scrape → rank by engagement → top 5 → Claude-tag Topic per post → save each as Research DB row. No more aggregated briefs.
+- **Helper scripts rewritten:** `notion-content.ps1` (Type added, Platform multi, source-multi-selects gone, source-mention header retained), `notion-research.ps1` (`create-brief` → `create-post`).
+- **Deleted:** `notion-backfill-sources.ps1` (obsolete — its target properties no longer exist).
+- **Source attribution:** Knowledge Mirror references now live ONLY as inline @page-mentions in the body (via the markdown header `Build-SourcesMarkdownHeader` prepends). The dual property+mention approach was cut for simplicity.
+- **Spec updated:** `docs/superpowers/specs/2026-05-24-notion-content-system-design.md` marked `implemented`; added "Final Schema (Post-Simplification)" section.
 
 ---
 
