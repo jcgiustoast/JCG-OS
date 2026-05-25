@@ -144,8 +144,8 @@ If the user says "repurpose [article]", read the raw article from `content/raw/a
 
 Read the voice nodes to ground the piece in Juan's DNA:
 
-1. `C:\Users\jcgiu\JCG-OS\content\wiki\voice\brand-voice.md` — Core personality, sentence structure, vocabulary, rhetorical signature moves, tone
-2. `C:\Users\jcgiu\JCG-OS\content\wiki\voice\platform-tone.md` — How the core voice adapts per platform (Twitter vs LinkedIn vs Blog)
+1. `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\voice\brand-voice.md` — Core personality, sentence structure, vocabulary, rhetorical signature moves, tone
+2. `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\voice\platform-tone.md` — How the core voice adapts per platform (Twitter vs LinkedIn vs Blog)
 
 The voice stays constant across platforms; only tone and delivery change. If the draft violates any rule in `brand-voice.md` (hedging, guru tone, banned vocabulary, missing signature moves), rewrite before presenting.
 
@@ -155,9 +155,9 @@ The voice stays constant across platforms; only tone and delivery change. If the
 
 Read the platform node matching the target:
 
-- Twitter → `C:\Users\jcgiu\JCG-OS\content\wiki\platforms\twitter.md`
-- LinkedIn → `C:\Users\jcgiu\JCG-OS\content\wiki\platforms\linkedin.md`
-- Blog → `C:\Users\jcgiu\JCG-OS\content\wiki\platforms\blog.md`
+- Twitter → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\twitter.md`
+- LinkedIn → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\linkedin.md`
+- Blog → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\blog.md`
 
 Each platform node defines DNA, Phase 1 firewall, content rules, formats, posting strategy, and repurposing notes. Also read `content/wiki/engine/content-types.md` if unsure which format fits the topic.
 
@@ -165,13 +165,13 @@ Each platform node defines DNA, Phase 1 firewall, content rules, formats, postin
 
 ## STEP 4.5: PICK A HOOK
 
-Read `C:\Users\jcgiu\JCG-OS\content\wiki\engine\hooks.md`. Draft 2-3 candidate hooks for the piece using the formulas (Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor). Select the one that best matches platform fit (see matrix at bottom of hooks.md) and topic. Commit one hook before writing the body.
+Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\hooks.md`. Draft 2-3 candidate hooks for the piece using the formulas (Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor). Select the one that best matches platform fit (see matrix at bottom of hooks.md) and topic. Commit one hook before writing the body.
 
 ---
 
 ## STEP 4.6: IF PRODUCING FOR MULTIPLE PLATFORMS
 
-Read `C:\Users\jcgiu\JCG-OS\content\wiki\engine\repurpose.md`. Determine whether the topic fits Path A (framework-heavy, seed from blog or LinkedIn) or Path B (hot-take, seed from Twitter). Follow the chain order. Apply the litmus test before publishing: if a three-platform follower would find the content redundant, rethink rather than reformat.
+Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determine whether the topic fits Path A (framework-heavy, seed from blog or LinkedIn) or Path B (hot-take, seed from Twitter). Follow the chain order. Apply the litmus test before publishing: if a three-platform follower would find the content redundant, rethink rather than reformat.
 
 ---
 
