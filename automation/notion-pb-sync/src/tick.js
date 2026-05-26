@@ -15,6 +15,8 @@ export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
         await handleReady(row, { notion, pb, accountMap, fetchImpl })
       } else if (status === STATUS.SCHEDULING) {
         await handleScheduling(row, { notion, pb, accountMap, fetchImpl })
+      } else if (status === STATUS.SCHEDULED) {
+        await handleScheduled(row, { notion, pb })
       }
     } catch (err) {
       await markFailed(row.id, notion, err.message)
@@ -145,6 +147,47 @@ function extractTitle(row) {
 function extractPlatforms(row) {
   const arr = row.properties.Platform?.multi_select
   return Array.isArray(arr) ? arr.map(o => o.name) : []
+}
+
+async function handleScheduled(row, { notion, pb }) {
+  const postBridgeId = (row.properties['Post Bridge ID']?.rich_text || [])
+    .map(t => t.plain_text).join('')
+  if (!postBridgeId) {
+    // Defensive: Scheduled state without an ID is corrupt. Surface it.
+    await markFailed(row.id, notion, 'Scheduled state with no Post Bridge ID — manual review needed')
+    return
+  }
+
+  const pbPost = await pb.getPost(postBridgeId)
+  const status = pbPost.status
+
+  if (status === 'posted') {
+    const results = await pb.getPostResults(postBridgeId)
+    const urlText = formatPublishedUrls(results.data || [])
+    await notion.updateRow(row.id, {
+      Status: { select: { name: STATUS.PUBLISHED } },
+      'Published URLs': { rich_text: [{ text: { content: urlText } }] },
+      'Last Sync At': { date: { start: new Date().toISOString() } }
+    })
+    return
+  }
+
+  if (status === 'failed') {
+    await markFailed(row.id, notion, `post-bridge failed: ${pbPost.error || 'unknown reason'}`)
+    return
+  }
+  // Otherwise still pending — no-op this tick.
+}
+
+function formatPublishedUrls(results) {
+  const PLATFORM_LABEL = {
+    linkedin: 'LinkedIn', twitter: 'Twitter', threads: 'Threads',
+    tiktok: 'TikTok', youtube: 'YouTube', instagram: 'Instagram'
+  }
+  const lines = results
+    .filter(r => r.share_url)
+    .map(r => `${PLATFORM_LABEL[r.platform] || r.platform}: ${r.share_url}`)
+  return lines.join('\n')
 }
 
 async function markFailed(pageId, notion, reason) {

@@ -157,3 +157,51 @@ describe('tick — Scheduling recovery', () => {
     }))
   })
 })
+
+describe('tick — Scheduled polling', () => {
+  it('writes back Published + per-platform URLs when post-bridge reports posted', async () => {
+    const row = makeRow({ id: 'page_4', status: 'Scheduled', postBridgeId: 'pb_done' })
+    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_done', status: 'posted' }))
+    pb.getPostResults = vi.fn(async () => ({
+      data: [
+        { platform: 'linkedin', success: true, share_url: 'https://linkedin.com/posts/x' },
+        { platform: 'twitter', success: true, share_url: 'https://x.com/y' }
+      ]
+    }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(notion.updateRow).toHaveBeenCalledWith('page_4', expect.objectContaining({
+      Status: { select: { name: 'Published' } },
+      'Published URLs': { rich_text: [{ text: { content: expect.stringContaining('LinkedIn: https://linkedin.com/posts/x') } }] }
+    }))
+  })
+
+  it('marks Failed when post-bridge reports failed', async () => {
+    const row = makeRow({ id: 'page_5', status: 'Scheduled', postBridgeId: 'pb_bad' })
+    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_bad', status: 'failed', error: 'auth expired' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(notion.updateRow).toHaveBeenCalledWith('page_5', expect.objectContaining({
+      Status: { select: { name: 'Failed' } }
+    }))
+  })
+
+  it('leaves Scheduled row alone when still scheduled', async () => {
+    const row = makeRow({ id: 'page_6', status: 'Scheduled', postBridgeId: 'pb_wait' })
+    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_wait', status: 'scheduled' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    // No Status change call
+    const statusUpdates = notion.updateRow.mock.calls.filter(([, props]) => props.Status)
+    expect(statusUpdates).toHaveLength(0)
+  })
+})
