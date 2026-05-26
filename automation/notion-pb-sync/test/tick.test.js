@@ -156,6 +156,39 @@ describe('tick — Scheduling recovery', () => {
       'Post Bridge ID': { rich_text: [{ text: { content: 'pb_retry' } }] }
     }))
   })
+
+  it('claims existing post when Notion Date is unset and post-bridge scheduled_at is null', async () => {
+    // Ready row with no Date crashes after createPost; recovery must match the orphan post
+    // (post-bridge returns scheduled_at: null, Notion returns date: null → undefined).
+    const row = {
+      id: 'page_null_date',
+      last_edited_time: '2026-05-26T10:00:00.000Z',
+      properties: {
+        Title: { title: [{ plain_text: 'Undated post' }] },
+        Status: { select: { name: 'Scheduling' } },
+        Platform: { multi_select: [{ name: 'LinkedIn' }] },
+        Date: { date: null },
+        'Post Bridge ID': { rich_text: [] },
+        Media: { type: 'files', files: [] }
+      }
+    }
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Hello world' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.listRecentPosts = vi.fn(async () => ({
+      data: [
+        { id: 'pb_undated', scheduled_at: null, caption: 'Hello world' }
+      ]
+    }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_null_date', expect.objectContaining({
+      Status: { select: { name: 'Scheduled' } },
+      'Post Bridge ID': { rich_text: [{ text: { content: 'pb_undated' } }] }
+    }))
+  })
 })
 
 describe('tick — Scheduled polling', () => {

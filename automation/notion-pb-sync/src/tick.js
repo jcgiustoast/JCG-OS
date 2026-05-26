@@ -109,7 +109,7 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
 
   const recent = await pb.listRecentPosts({ status: 'scheduled', limit: 50 })
   const match = (recent.data || []).find(p => {
-    return p.scheduled_at === scheduledAt && captionHash(p.caption || '') === targetHash
+    return (p.scheduled_at ?? null) === (scheduledAt ?? null) && captionHash(p.caption || '') === targetHash
   })
 
   if (match) {
