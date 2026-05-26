@@ -284,10 +284,11 @@ describe('tick — Scheduled polling', () => {
   })
 })
 
-// Token shape: sha256(caption || scheduledAt || sortedAccountIds.join(','))[:16]
-function computeEditToken(caption, scheduledAt, accountIds) {
-  const sorted = [...accountIds].sort((a, b) => a - b).join(',')
-  const input = `${caption}||${scheduledAt ?? ''}||${sorted}`
+// Token shape: sha256(caption || scheduledAt || sortedAccountIds || sortedMediaNames)[:16]
+function computeEditToken(caption, scheduledAt, accountIds, mediaNames = []) {
+  const sortedAccounts = [...accountIds].sort((a, b) => a - b).join(',')
+  const sortedMedia = [...mediaNames].sort().join(',')
+  const input = `${caption}||${scheduledAt ?? ''}||${sortedAccounts}||${sortedMedia}`
   return crypto.createHash('sha256').update(input).digest('hex').slice(0, 16)
 }
 
@@ -323,6 +324,47 @@ describe('tick — edit propagation (Synced Edit Token)', () => {
     const newToken = computeEditToken('Edited caption', '2026-06-01T12:00:00.000Z', [25903])
     expect(notion.updateRow).toHaveBeenCalledWith('page_edit', expect.objectContaining({
       'Synced Edit Token': { rich_text: [{ text: { content: newToken } }] }
+    }))
+  })
+
+  it('PATCHes when Notion Media is swapped (token includes media names)', async () => {
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Stable caption' }] } }]
+    const oldToken = computeEditToken('Stable caption', '2026-06-01T12:00:00.000Z', [25903], ['old.jpg'])
+    const row = makeRow({
+      id: 'page_media',
+      status: 'Scheduled',
+      postBridgeId: 'pb_media',
+      media: [{ type: 'file', name: 'new.jpg', file: { url: 'https://notion.so/new.jpg' } }]
+    })
+    row.properties['Synced Edit Token'] = { rich_text: [{ plain_text: oldToken }] }
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_media', status: 'scheduled' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.updatePost).toHaveBeenCalled()
+    const newToken = computeEditToken('Stable caption', '2026-06-01T12:00:00.000Z', [25903], ['new.jpg'])
+    expect(notion.updateRow).toHaveBeenCalledWith('page_media', expect.objectContaining({
+      'Synced Edit Token': { rich_text: [{ text: { content: newToken } }] }
+    }))
+  })
+
+  it('writes token without PATCH when storedToken is null (first tick after schema apply)', async () => {
+    // Existing Scheduled rows have no Synced Edit Token yet — backfill silently.
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Legacy row' }] } }]
+    const row = makeRow({ id: 'page_legacy', status: 'Scheduled', postBridgeId: 'pb_legacy' })
+    // No Synced Edit Token set
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_legacy', status: 'scheduled' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.updatePost).not.toHaveBeenCalled()
+    const expectedToken = computeEditToken('Legacy row', '2026-06-01T12:00:00.000Z', [25903], [])
+    expect(notion.updateRow).toHaveBeenCalledWith('page_legacy', expect.objectContaining({
+      'Synced Edit Token': { rich_text: [{ text: { content: expectedToken } }] }
     }))
   })
 

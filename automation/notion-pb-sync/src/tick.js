@@ -101,7 +101,7 @@ async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {
   const created = await pb.createPost(createPayload)
 
   // Phase 3: writeback (with sync token so the next tick doesn't re-PATCH)
-  const token = computeEditToken(caption, scheduledAt, mappedAccounts)
+  const token = computeEditToken(caption, scheduledAt, mappedAccounts, files.map(f => f.name))
   await notion.updateRow(row.id, {
     Status: { select: { name: STATUS.SCHEDULED } },
     'Post Bridge ID': { rich_text: [{ text: { content: created.id } }] },
@@ -123,7 +123,7 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
   const match = await findScheduledMatch(pb, predicate)
 
   if (match) {
-    const token = computeEditToken(caption, scheduledAt, mappedAccounts)
+    const token = computeEditToken(caption, scheduledAt, mappedAccounts, mediaNamesFromRow(row))
     await notion.updateRow(row.id, {
       Status: { select: { name: STATUS.SCHEDULED } },
       'Post Bridge ID': { rich_text: [{ text: { content: match.id } }] },
@@ -152,13 +152,19 @@ async function findScheduledMatch(pb, predicate, { pageSize = 50, maxPages = 10 
     if (match) return match
     if (items.length < pageSize) return null
   }
+  console.warn(`findScheduledMatch hit maxPages=${maxPages} (${maxPages * pageSize} posts) without match — may duplicate on retry. Raise maxPages if scheduled backlog has grown.`)
   return null
 }
 
-function computeEditToken(caption, scheduledAt, accountIds) {
-  const sorted = [...accountIds].sort((a, b) => a - b).join(',')
-  const input = `${caption}||${scheduledAt ?? ''}||${sorted}`
+function computeEditToken(caption, scheduledAt, accountIds, mediaNames = []) {
+  const sortedAccounts = [...accountIds].sort((a, b) => a - b).join(',')
+  const sortedMedia = [...mediaNames].sort().join(',')
+  const input = `${caption}||${scheduledAt ?? ''}||${sortedAccounts}||${sortedMedia}`
   return crypto.createHash('sha256').update(input).digest('hex').slice(0, 16)
+}
+
+function mediaNamesFromRow(row) {
+  return extractFiles(row.properties.Media).map(f => f.name)
 }
 
 function extractEditToken(row) {
@@ -186,7 +192,7 @@ async function retryCreate(row, caption, { notion, pb, accountMap, fetchImpl }) 
   if (mediaIds.length) payload.media = mediaIds
 
   const created = await pb.createPost(payload)
-  const token = computeEditToken(caption, scheduledAt, mappedAccounts)
+  const token = computeEditToken(caption, scheduledAt, mappedAccounts, files.map(f => f.name))
   await notion.updateRow(row.id, {
     Status: { select: { name: STATUS.SCHEDULED } },
     'Post Bridge ID': { rich_text: [{ text: { content: created.id } }] },
@@ -243,9 +249,18 @@ async function maybePropagateEdit(row, postBridgeId, { notion, pb, accountMap })
   const scheduledAt = row.properties.Date?.date?.start
   const mappedAccounts = platforms.map(p => accountMap[p]).filter(Boolean)
 
-  const currentToken = computeEditToken(caption, scheduledAt, mappedAccounts)
+  const currentToken = computeEditToken(caption, scheduledAt, mappedAccounts, mediaNamesFromRow(row))
   const storedToken = extractEditToken(row)
   if (currentToken === storedToken) return
+
+  // Backfill case: row was scheduled before this property existed. Trust current state
+  // and write the token without PATCHing — the post-bridge post is presumed correct.
+  if (storedToken === null) {
+    await notion.updateRow(row.id, {
+      'Synced Edit Token': { rich_text: [{ text: { content: currentToken } }] }
+    })
+    return
+  }
 
   const patch = { caption, social_accounts: mappedAccounts }
   if (scheduledAt) patch.scheduled_at = scheduledAt
