@@ -100,11 +100,13 @@ async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {
 
   const created = await pb.createPost(createPayload)
 
-  // Phase 3: writeback
+  // Phase 3: writeback (with sync token so the next tick doesn't re-PATCH)
+  const token = computeEditToken(caption, scheduledAt, mappedAccounts)
   await notion.updateRow(row.id, {
     Status: { select: { name: STATUS.SCHEDULED } },
     'Post Bridge ID': { rich_text: [{ text: { content: created.id } }] },
-    'Last Sync At': { date: { start: new Date().toISOString() } }
+    'Last Sync At': { date: { start: new Date().toISOString() } },
+    'Synced Edit Token': { rich_text: [{ text: { content: token } }] }
   })
 }
 
@@ -112,6 +114,8 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
   const blocks = await notion.fetchPageBlocks(row.id)
   const caption = stripSourcesHeader(blocksToCaption(blocks))
   const scheduledAt = row.properties.Date?.date?.start
+  const platforms = extractPlatforms(row)
+  const mappedAccounts = platforms.map(p => accountMap[p]).filter(Boolean)
   const targetHash = captionHash(caption)
 
   const recent = await pb.listRecentPosts({ status: 'scheduled', limit: 50 })
@@ -120,10 +124,12 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
   })
 
   if (match) {
+    const token = computeEditToken(caption, scheduledAt, mappedAccounts)
     await notion.updateRow(row.id, {
       Status: { select: { name: STATUS.SCHEDULED } },
       'Post Bridge ID': { rich_text: [{ text: { content: match.id } }] },
-      'Last Sync At': { date: { start: new Date().toISOString() } }
+      'Last Sync At': { date: { start: new Date().toISOString() } },
+      'Synced Edit Token': { rich_text: [{ text: { content: token } }] }
     })
     return
   }
@@ -135,6 +141,17 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
 
 function captionHash(s) {
   return crypto.createHash('sha256').update(s).digest('hex').slice(0, 12)
+}
+
+function computeEditToken(caption, scheduledAt, accountIds) {
+  const sorted = [...accountIds].sort((a, b) => a - b).join(',')
+  const input = `${caption}||${scheduledAt ?? ''}||${sorted}`
+  return crypto.createHash('sha256').update(input).digest('hex').slice(0, 16)
+}
+
+function extractEditToken(row) {
+  const arr = row.properties['Synced Edit Token']?.rich_text || []
+  return arr.map(t => t.plain_text).join('') || null
 }
 
 async function retryCreate(row, caption, { notion, pb, accountMap, fetchImpl }) {
@@ -157,10 +174,12 @@ async function retryCreate(row, caption, { notion, pb, accountMap, fetchImpl }) 
   if (mediaIds.length) payload.media = mediaIds
 
   const created = await pb.createPost(payload)
+  const token = computeEditToken(caption, scheduledAt, mappedAccounts)
   await notion.updateRow(row.id, {
     Status: { select: { name: STATUS.SCHEDULED } },
     'Post Bridge ID': { rich_text: [{ text: { content: created.id } }] },
-    'Last Sync At': { date: { start: new Date().toISOString() } }
+    'Last Sync At': { date: { start: new Date().toISOString() } },
+    'Synced Edit Token': { rich_text: [{ text: { content: token } }] }
   })
 }
 
@@ -206,22 +225,23 @@ async function handleScheduled(row, { notion, pb, accountMap }) {
 }
 
 async function maybePropagateEdit(row, postBridgeId, { notion, pb, accountMap }) {
-  const lastEdited = row.last_edited_time
-  const lastSyncAt = row.properties['Last Sync At']?.date?.start
-  if (!lastEdited || (lastSyncAt && new Date(lastEdited) <= new Date(lastSyncAt))) return
-
   const blocks = await notion.fetchPageBlocks(row.id)
   const caption = stripSourcesHeader(blocksToCaption(blocks))
   const platforms = extractPlatforms(row)
   const scheduledAt = row.properties.Date?.date?.start
   const mappedAccounts = platforms.map(p => accountMap[p]).filter(Boolean)
 
+  const currentToken = computeEditToken(caption, scheduledAt, mappedAccounts)
+  const storedToken = extractEditToken(row)
+  if (currentToken === storedToken) return
+
   const patch = { caption, social_accounts: mappedAccounts }
   if (scheduledAt) patch.scheduled_at = scheduledAt
 
   await pb.updatePost(postBridgeId, patch)
   await notion.updateRow(row.id, {
-    'Last Sync At': { date: { start: new Date().toISOString() } }
+    'Last Sync At': { date: { start: new Date().toISOString() } },
+    'Synced Edit Token': { rich_text: [{ text: { content: currentToken } }] }
   })
 }
 

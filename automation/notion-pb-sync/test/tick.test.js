@@ -239,12 +239,33 @@ describe('tick — Scheduled polling', () => {
   })
 })
 
-describe('tick — edit propagation', () => {
-  it('PATCHes post-bridge when Notion was edited after last sync', async () => {
-    const row = makeRow({ id: 'page_7', status: 'Scheduled', postBridgeId: 'pb_edit' })
-    row.last_edited_time = '2026-05-26T11:00:00.000Z'
-    row.properties['Last Sync At'] = { date: { start: '2026-05-26T10:00:00.000Z' } }
-    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Updated caption' }] } }]
+// Token shape: sha256(caption || scheduledAt || sortedAccountIds.join(','))[:16]
+function computeEditToken(caption, scheduledAt, accountIds) {
+  const sorted = [...accountIds].sort((a, b) => a - b).join(',')
+  const input = `${caption}||${scheduledAt ?? ''}||${sorted}`
+  return crypto.createHash('sha256').update(input).digest('hex').slice(0, 16)
+}
+
+describe('tick — edit propagation (Synced Edit Token)', () => {
+  it('skips PATCH when stored token matches current caption + scheduled_at + accounts', async () => {
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Stable caption' }] } }]
+    const matchingToken = computeEditToken('Stable caption', '2026-06-01T12:00:00.000Z', [25903])
+    const row = makeRow({ id: 'page_clean', status: 'Scheduled', postBridgeId: 'pb_clean' })
+    row.properties['Synced Edit Token'] = { rich_text: [{ plain_text: matchingToken }] }
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_clean', status: 'scheduled' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.updatePost).not.toHaveBeenCalled()
+  })
+
+  it('PATCHes and updates stored token when caption changed', async () => {
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Edited caption' }] } }]
+    const staleToken = computeEditToken('Old caption', '2026-06-01T12:00:00.000Z', [25903])
+    const row = makeRow({ id: 'page_edit', status: 'Scheduled', postBridgeId: 'pb_edit' })
+    row.properties['Synced Edit Token'] = { rich_text: [{ plain_text: staleToken }] }
     const notion = fakeNotion({ activeRows: [row], blocks })
     const pb = fakePb()
     pb.getPost = vi.fn(async () => ({ id: 'pb_edit', status: 'scheduled' }))
@@ -252,25 +273,63 @@ describe('tick — edit propagation', () => {
     await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
 
     expect(pb.updatePost).toHaveBeenCalledWith('pb_edit', expect.objectContaining({
-      caption: 'Updated caption'
+      caption: 'Edited caption'
     }))
-    // Last Sync At gets updated
-    expect(notion.updateRow).toHaveBeenCalledWith('page_7', expect.objectContaining({
-      'Last Sync At': { date: { start: expect.any(String) } }
+    const newToken = computeEditToken('Edited caption', '2026-06-01T12:00:00.000Z', [25903])
+    expect(notion.updateRow).toHaveBeenCalledWith('page_edit', expect.objectContaining({
+      'Synced Edit Token': { rich_text: [{ text: { content: newToken } }] }
     }))
   })
 
-  it('does NOT PATCH when no edit since last sync', async () => {
-    const row = makeRow({ id: 'page_8', status: 'Scheduled', postBridgeId: 'pb_clean' })
-    row.last_edited_time = '2026-05-26T09:00:00.000Z'
+  it('does NOT PATCH on every tick after initial scheduling (sync writeback would inflate last_edited_time)', async () => {
+    // Initial scheduling stamped Last Sync At slightly before Notion's last_edited_time
+    // (Notion stamps server-side AFTER our PATCH). Token approach must not confuse this for an edit.
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Just scheduled' }] } }]
+    const token = computeEditToken('Just scheduled', '2026-06-01T12:00:00.000Z', [25903])
+    const row = makeRow({ id: 'page_fresh', status: 'Scheduled', postBridgeId: 'pb_fresh' })
+    row.last_edited_time = '2026-05-26T10:00:01.000Z'
     row.properties['Last Sync At'] = { date: { start: '2026-05-26T10:00:00.000Z' } }
-    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    row.properties['Synced Edit Token'] = { rich_text: [{ plain_text: token }] }
+    const notion = fakeNotion({ activeRows: [row], blocks })
     const pb = fakePb()
-    pb.getPost = vi.fn(async () => ({ id: 'pb_clean', status: 'scheduled' }))
+    pb.getPost = vi.fn(async () => ({ id: 'pb_fresh', status: 'scheduled' }))
 
     await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
 
     expect(pb.updatePost).not.toHaveBeenCalled()
+  })
+})
+
+describe('tick — initial scheduling writes Synced Edit Token', () => {
+  it('writes token on Ready → Scheduled transition', async () => {
+    const row = makeRow({ id: 'page_seed', status: 'Ready', platforms: ['LinkedIn'] })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Seed caption' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb({ createReturn: { id: 'pb_seed' } })
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    const expectedToken = computeEditToken('Seed caption', '2026-06-01T12:00:00.000Z', [25903])
+    expect(notion.updateRow).toHaveBeenNthCalledWith(2, 'page_seed', expect.objectContaining({
+      'Synced Edit Token': { rich_text: [{ text: { content: expectedToken } }] }
+    }))
+  })
+
+  it('writes token on Scheduling recovery claim', async () => {
+    const row = makeRow({ id: 'page_claim', status: 'Scheduling' })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Claimed caption' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.listRecentPosts = vi.fn(async () => ({
+      data: [{ id: 'pb_existing', scheduled_at: '2026-06-01T12:00:00.000Z', caption: 'Claimed caption' }]
+    }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    const expectedToken = computeEditToken('Claimed caption', '2026-06-01T12:00:00.000Z', [25903])
+    expect(notion.updateRow).toHaveBeenCalledWith('page_claim', expect.objectContaining({
+      'Synced Edit Token': { rich_text: [{ text: { content: expectedToken } }] }
+    }))
   })
 })
 

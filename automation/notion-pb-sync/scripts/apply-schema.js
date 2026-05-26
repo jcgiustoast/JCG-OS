@@ -9,6 +9,7 @@
 //   - Published URLs (rich_text) — replaces existing 'Published URL' (url)
 //   - Notes (rich_text)
 //   - Last Sync At (date)
+//   - Synced Edit Token (rich_text)
 
 import { loadConfig } from '../src/config.js'
 
@@ -84,6 +85,11 @@ async function main() {
   // 6. Last Sync At
   if (!props['Last Sync At']) {
     patch['Last Sync At'] = { date: {} }
+  }
+
+  // 7. Synced Edit Token
+  if (!props['Synced Edit Token']) {
+    patch['Synced Edit Token'] = { rich_text: {} }
   }
 
   if (Object.keys(patch).length === 0) {
