@@ -90,3 +90,48 @@ describe('post-bridge client', () => {
     await expect(client.getPost('p_1')).rejects.toThrow(/401|unauthorized/)
   })
 })
+
+describe('post-bridge client — transient retries', () => {
+  it('retries on 429 and succeeds on third attempt', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { body: { id: 'p_ok', status: 'scheduled' } }
+    ])
+    const client = createPostBridgeClient({ ...cfg, fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    const result = await client.getPost('p_ok')
+    expect(result.id).toBe('p_ok')
+    expect(fetchMock.calls).toHaveLength(3)
+  })
+
+  it('retries on 502/5xx and succeeds', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 502, body: { message: 'bad gateway' } },
+      { body: { id: 'p_ok' } }
+    ])
+    const client = createPostBridgeClient({ ...cfg, fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await client.getPost('p_ok')
+    expect(fetchMock.calls).toHaveLength(2)
+  })
+
+  it('does NOT retry on 4xx (non-429) client errors', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 400, body: { message: 'bad request' } }
+    ])
+    const client = createPostBridgeClient({ ...cfg, fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await expect(client.createPost({})).rejects.toThrow(/400/)
+    expect(fetchMock.calls).toHaveLength(1)
+  })
+
+  it('throws after exhausting retries on persistent 429', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { ok: false, status: 429, body: { message: 'rate limited' } }
+    ])
+    const client = createPostBridgeClient({ ...cfg, fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await expect(client.getPost('p_x')).rejects.toThrow(/429/)
+    expect(fetchMock.calls).toHaveLength(4)
+  })
+})

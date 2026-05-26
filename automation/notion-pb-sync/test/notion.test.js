@@ -77,3 +77,35 @@ describe('createNotionClient', () => {
     await expect(client.updateRow('page_x', {})).rejects.toThrow(/Bad property|400/)
   })
 })
+
+describe('createNotionClient — transient retries', () => {
+  it('retries on 429 and succeeds', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { ok: false, status: 429, body: { message: 'rate limited' } },
+      { body: { results: [] } }
+    ])
+    const client = createNotionClient({ token: TOKEN, dataSourceId: DS, version: '2025-09-03', fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await client.queryByStatus(['Ready'])
+    expect(fetchMock.calls).toHaveLength(3)
+  })
+
+  it('retries on 503 and succeeds', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 503, body: { message: 'unavailable' } },
+      { body: { id: 'page_x' } }
+    ])
+    const client = createNotionClient({ token: TOKEN, dataSourceId: DS, version: '2025-09-03', fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await client.updateRow('page_x', {})
+    expect(fetchMock.calls).toHaveLength(2)
+  })
+
+  it('does NOT retry on 400', async () => {
+    const fetchMock = makeFetch([
+      { ok: false, status: 400, body: { message: 'bad' } }
+    ])
+    const client = createNotionClient({ token: TOKEN, dataSourceId: DS, version: '2025-09-03', fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await expect(client.updateRow('page_x', {})).rejects.toThrow(/400/)
+    expect(fetchMock.calls).toHaveLength(1)
+  })
+})

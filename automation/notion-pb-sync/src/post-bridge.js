@@ -1,18 +1,32 @@
-export function createPostBridgeClient({ apiKey, baseUrl = 'https://api.post-bridge.com', fetchImpl = fetch }) {
+export function createPostBridgeClient({ apiKey, baseUrl = 'https://api.post-bridge.com', fetchImpl = fetch, retryDelays = [200, 1000, 5000] }) {
   const headers = {
     'Authorization': `Bearer ${apiKey}`,
     'Content-Type': 'application/json'
   }
 
-  async function call(method, path, body) {
+  async function rawCall(method, path, body) {
     const opts = { method, headers }
     if (body !== undefined) opts.body = JSON.stringify(body)
     const res = await fetchImpl(`${baseUrl}${path}`, opts)
     if (!res.ok) {
       const text = await res.text()
-      throw new Error(`post-bridge ${method} ${path} -> ${res.status}: ${text}`)
+      const err = new Error(`post-bridge ${method} ${path} -> ${res.status}: ${text}`)
+      err.status = res.status
+      throw err
     }
     return res.json()
+  }
+
+  async function call(method, path, body) {
+    for (let i = 0; i <= retryDelays.length; i++) {
+      try {
+        return await rawCall(method, path, body)
+      } catch (err) {
+        const retryable = err.status === 429 || (err.status >= 500 && err.status < 600)
+        if (!retryable || i === retryDelays.length) throw err
+        await new Promise(r => setTimeout(r, retryDelays[i]))
+      }
+    }
   }
 
   async function createPost(payload) {
