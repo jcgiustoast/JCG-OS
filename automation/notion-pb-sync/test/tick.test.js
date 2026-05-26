@@ -1,0 +1,114 @@
+import { describe, it, expect, vi } from 'vitest'
+import { tick } from '../src/tick.js'
+
+function makeRow({ id = 'page_1', status = 'Ready', title = 'A post', platforms = ['LinkedIn'], date = '2026-06-01T12:00:00.000Z', postBridgeId = '', media = [] } = {}) {
+  return {
+    id,
+    last_edited_time: '2026-05-26T10:00:00.000Z',
+    properties: {
+      Title: { title: [{ plain_text: title }] },
+      Status: { select: { name: status } },
+      Platform: { multi_select: platforms.map(name => ({ name })) },
+      Date: { date: { start: date } },
+      'Post Bridge ID': { rich_text: postBridgeId ? [{ plain_text: postBridgeId }] : [] },
+      Media: { type: 'files', files: media }
+    }
+  }
+}
+
+function fakeNotion({ activeRows = [], blocks = [] } = {}) {
+  return {
+    queryByStatus: vi.fn(async () => activeRows),
+    queryRowsWithPostBridgeIdInUserState: vi.fn(async () => []),
+    fetchPageBlocks: vi.fn(async () => blocks),
+    updateRow: vi.fn(async () => ({}))
+  }
+}
+
+function fakePb({ createReturn = { id: 'pb_new' } } = {}) {
+  return {
+    createPost: vi.fn(async () => createReturn),
+    getPost: vi.fn(),
+    updatePost: vi.fn(),
+    deletePost: vi.fn(),
+    getPostResults: vi.fn(),
+    listRecentPosts: vi.fn(async () => ({ data: [] })),
+    createUploadUrl: vi.fn(),
+    uploadMedia: vi.fn()
+  }
+}
+
+const ACCOUNT_MAP = {
+  LinkedIn: 25903, Threads: 25902, TikTok: 25901, YouTube: 25900, Twitter: 25899, Instagram: 25898
+}
+
+describe('tick — Ready → Scheduled happy path', () => {
+  it('flips Ready to Scheduling, creates post-bridge post, writes back ID + Scheduled', async () => {
+    const row = makeRow({ id: 'page_1', status: 'Ready', platforms: ['LinkedIn'] })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Hello world' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb({ createReturn: { id: 'pb_xyz', status: 'scheduled' } })
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(notion.updateRow).toHaveBeenNthCalledWith(1, 'page_1', expect.objectContaining({
+      Status: { select: { name: 'Scheduling' } }
+    }))
+    expect(pb.createPost).toHaveBeenCalledWith(expect.objectContaining({
+      caption: 'Hello world',
+      social_accounts: [25903],
+      scheduled_at: '2026-06-01T12:00:00.000Z'
+    }))
+    expect(notion.updateRow).toHaveBeenNthCalledWith(2, 'page_1', expect.objectContaining({
+      Status: { select: { name: 'Scheduled' } },
+      'Post Bridge ID': { rich_text: [{ text: { content: 'pb_xyz' } }] }
+    }))
+  })
+
+  it('marks row Failed when firewall matches', async () => {
+    const row = makeRow({ title: 'Mars Men is great' })
+    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_1', expect.objectContaining({
+      Status: { select: { name: 'Failed' } }
+    }))
+  })
+
+  it('marks row Failed when Twitter exceeds 280 chars', async () => {
+    const long = 'x'.repeat(281)
+    const row = makeRow({ platforms: ['Twitter'] })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: long }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_1', expect.objectContaining({
+      Status: { select: { name: 'Failed' } }
+    }))
+  })
+
+  it('skips Blog and Spotify platforms (no account mapping)', async () => {
+    const row = makeRow({ platforms: ['Blog', 'LinkedIn', 'Spotify'] })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Hi' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb({ createReturn: { id: 'pb_z' } })
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost).toHaveBeenCalledWith(expect.objectContaining({
+      social_accounts: [25903]
+    }))
+  })
+
+  it('marks row Failed when no mappable platforms', async () => {
+    const row = makeRow({ platforms: ['Blog', 'Spotify'] })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Hi' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_1', expect.objectContaining({
+      Status: { select: { name: 'Failed' } }
+    }))
+  })
+})
