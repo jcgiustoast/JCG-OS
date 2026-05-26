@@ -22,6 +22,24 @@ export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
       await markFailed(row.id, notion, err.message)
     }
   }
+
+  const reverted = await notion.queryRowsWithPostBridgeIdInUserState()
+  for (const row of reverted) {
+    const postBridgeId = (row.properties['Post Bridge ID']?.rich_text || [])
+      .map(t => t.plain_text).join('')
+    if (!postBridgeId) continue
+    try {
+      await pb.deletePost(postBridgeId)
+    } catch (err) {
+      // 404 is fine — already gone. Log and continue.
+      if (!String(err.message).match(/404/)) {
+        console.error(`Revert delete failed for ${row.id}: ${err.message}`)
+      }
+    }
+    await notion.updateRow(row.id, {
+      'Post Bridge ID': { rich_text: [] }
+    })
+  }
 }
 
 async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {

@@ -240,3 +240,43 @@ describe('tick — edit propagation', () => {
     expect(pb.updatePost).not.toHaveBeenCalled()
   })
 })
+
+describe('tick — revert / cancel', () => {
+  it('deletes post-bridge post when row reverts from Scheduled to Drafting', async () => {
+    const revertedRow = makeRow({ id: 'page_9', status: 'Drafting', postBridgeId: 'pb_to_kill' })
+    const notion = {
+      queryByStatus: vi.fn(async () => []),
+      queryRowsWithPostBridgeIdInUserState: vi.fn(async () => [revertedRow]),
+      fetchPageBlocks: vi.fn(async () => []),
+      updateRow: vi.fn(async () => ({}))
+    }
+    const pb = fakePb()
+    pb.deletePost = vi.fn(async () => ({}))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.deletePost).toHaveBeenCalledWith('pb_to_kill')
+    expect(notion.updateRow).toHaveBeenCalledWith('page_9', expect.objectContaining({
+      'Post Bridge ID': { rich_text: [] }
+    }))
+  })
+
+  it('continues if post-bridge delete returns 404 (already gone)', async () => {
+    const revertedRow = makeRow({ id: 'page_10', status: 'Idea', postBridgeId: 'pb_gone' })
+    const notion = {
+      queryByStatus: vi.fn(async () => []),
+      queryRowsWithPostBridgeIdInUserState: vi.fn(async () => [revertedRow]),
+      fetchPageBlocks: vi.fn(async () => []),
+      updateRow: vi.fn(async () => ({}))
+    }
+    const pb = fakePb()
+    pb.deletePost = vi.fn(async () => { throw new Error('post-bridge DELETE -> 404: not found') })
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    // Should still clear the Notion field
+    expect(notion.updateRow).toHaveBeenCalledWith('page_10', expect.objectContaining({
+      'Post Bridge ID': { rich_text: [] }
+    }))
+  })
+})
