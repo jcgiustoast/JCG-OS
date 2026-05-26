@@ -205,3 +205,38 @@ describe('tick — Scheduled polling', () => {
     expect(statusUpdates).toHaveLength(0)
   })
 })
+
+describe('tick — edit propagation', () => {
+  it('PATCHes post-bridge when Notion was edited after last sync', async () => {
+    const row = makeRow({ id: 'page_7', status: 'Scheduled', postBridgeId: 'pb_edit' })
+    row.last_edited_time = '2026-05-26T11:00:00.000Z'
+    row.properties['Last Sync At'] = { date: { start: '2026-05-26T10:00:00.000Z' } }
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Updated caption' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_edit', status: 'scheduled' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.updatePost).toHaveBeenCalledWith('pb_edit', expect.objectContaining({
+      caption: 'Updated caption'
+    }))
+    // Last Sync At gets updated
+    expect(notion.updateRow).toHaveBeenCalledWith('page_7', expect.objectContaining({
+      'Last Sync At': { date: { start: expect.any(String) } }
+    }))
+  })
+
+  it('does NOT PATCH when no edit since last sync', async () => {
+    const row = makeRow({ id: 'page_8', status: 'Scheduled', postBridgeId: 'pb_clean' })
+    row.last_edited_time = '2026-05-26T09:00:00.000Z'
+    row.properties['Last Sync At'] = { date: { start: '2026-05-26T10:00:00.000Z' } }
+    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_clean', status: 'scheduled' }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.updatePost).not.toHaveBeenCalled()
+  })
+})

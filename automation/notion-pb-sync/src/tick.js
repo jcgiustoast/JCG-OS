@@ -16,7 +16,7 @@ export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
       } else if (status === STATUS.SCHEDULING) {
         await handleScheduling(row, { notion, pb, accountMap, fetchImpl })
       } else if (status === STATUS.SCHEDULED) {
-        await handleScheduled(row, { notion, pb })
+        await handleScheduled(row, { notion, pb, accountMap })
       }
     } catch (err) {
       await markFailed(row.id, notion, err.message)
@@ -149,11 +149,10 @@ function extractPlatforms(row) {
   return Array.isArray(arr) ? arr.map(o => o.name) : []
 }
 
-async function handleScheduled(row, { notion, pb }) {
+async function handleScheduled(row, { notion, pb, accountMap }) {
   const postBridgeId = (row.properties['Post Bridge ID']?.rich_text || [])
     .map(t => t.plain_text).join('')
   if (!postBridgeId) {
-    // Defensive: Scheduled state without an ID is corrupt. Surface it.
     await markFailed(row.id, notion, 'Scheduled state with no Post Bridge ID — manual review needed')
     return
   }
@@ -176,7 +175,29 @@ async function handleScheduled(row, { notion, pb }) {
     await markFailed(row.id, notion, `post-bridge failed: ${pbPost.error || 'unknown reason'}`)
     return
   }
-  // Otherwise still pending — no-op this tick.
+
+  // Status is 'scheduled' — check for edits
+  await maybePropagateEdit(row, postBridgeId, { notion, pb, accountMap })
+}
+
+async function maybePropagateEdit(row, postBridgeId, { notion, pb, accountMap }) {
+  const lastEdited = row.last_edited_time
+  const lastSyncAt = row.properties['Last Sync At']?.date?.start
+  if (!lastEdited || (lastSyncAt && new Date(lastEdited) <= new Date(lastSyncAt))) return
+
+  const blocks = await notion.fetchPageBlocks(row.id)
+  const caption = stripSourcesHeader(blocksToCaption(blocks))
+  const platforms = extractPlatforms(row)
+  const scheduledAt = row.properties.Date?.date?.start
+  const mappedAccounts = platforms.map(p => accountMap[p]).filter(Boolean)
+
+  const patch = { caption, social_accounts: mappedAccounts }
+  if (scheduledAt) patch.scheduled_at = scheduledAt
+
+  await pb.updatePost(postBridgeId, patch)
+  await notion.updateRow(row.id, {
+    'Last Sync At': { date: { start: new Date().toISOString() } }
+  })
 }
 
 function formatPublishedUrls(results) {
