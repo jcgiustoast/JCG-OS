@@ -118,10 +118,9 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
   const mappedAccounts = platforms.map(p => accountMap[p]).filter(Boolean)
   const targetHash = captionHash(caption)
 
-  const recent = await pb.listRecentPosts({ status: 'scheduled', limit: 50 })
-  const match = (recent.data || []).find(p => {
-    return (p.scheduled_at ?? null) === (scheduledAt ?? null) && captionHash(p.caption || '') === targetHash
-  })
+  const predicate = (p) =>
+    (p.scheduled_at ?? null) === (scheduledAt ?? null) && captionHash(p.caption || '') === targetHash
+  const match = await findScheduledMatch(pb, predicate)
 
   if (match) {
     const token = computeEditToken(caption, scheduledAt, mappedAccounts)
@@ -141,6 +140,19 @@ async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
 
 function captionHash(s) {
   return crypto.createHash('sha256').update(s).digest('hex').slice(0, 12)
+}
+
+// Page through scheduled posts. Bounded by maxPages so a corrupted/empty match condition
+// can't loop indefinitely; post-bridge offers no created_at or since-time filter.
+async function findScheduledMatch(pb, predicate, { pageSize = 50, maxPages = 10 } = {}) {
+  for (let page = 0; page < maxPages; page++) {
+    const result = await pb.listRecentPosts({ status: 'scheduled', limit: pageSize, offset: page * pageSize })
+    const items = result.data || []
+    const match = items.find(predicate)
+    if (match) return match
+    if (items.length < pageSize) return null
+  }
+  return null
 }
 
 function computeEditToken(caption, scheduledAt, accountIds) {

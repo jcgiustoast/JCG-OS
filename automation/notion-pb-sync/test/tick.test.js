@@ -157,6 +157,51 @@ describe('tick — Scheduling recovery', () => {
     }))
   })
 
+  it('paginates past the first 50 results when match is on a later page', async () => {
+    // Simulate >50 scheduled posts — orphan is on page 2
+    const row = makeRow({ id: 'page_pagi', status: 'Scheduling' })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Late page match' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    const fillerPage = Array.from({ length: 50 }, (_, i) => ({
+      id: `pb_filler_${i}`,
+      scheduled_at: `2026-07-${String(i + 1).padStart(2, '0')}T12:00:00.000Z`,
+      caption: `Filler ${i}`
+    }))
+    pb.listRecentPosts = vi.fn(async ({ offset = 0 } = {}) => {
+      if (offset === 0) return { data: fillerPage }
+      if (offset === 50) {
+        return {
+          data: [{ id: 'pb_orphan', scheduled_at: '2026-06-01T12:00:00.000Z', caption: 'Late page match' }]
+        }
+      }
+      return { data: [] }
+    })
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(pb.listRecentPosts).toHaveBeenCalledTimes(2)
+    expect(pb.listRecentPosts).toHaveBeenNthCalledWith(2, expect.objectContaining({ offset: 50 }))
+    expect(notion.updateRow).toHaveBeenCalledWith('page_pagi', expect.objectContaining({
+      'Post Bridge ID': { rich_text: [{ text: { content: 'pb_orphan' } }] }
+    }))
+  })
+
+  it('stops paginating when a page returns fewer than limit items', async () => {
+    const row = makeRow({ id: 'page_short', status: 'Scheduling' })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Nope' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb({ createReturn: { id: 'pb_new' } })
+    pb.listRecentPosts = vi.fn(async () => ({ data: [{ id: 'pb_x', scheduled_at: '2026-07-01T12:00:00.000Z', caption: 'Other' }] }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    // Only one call because first page already returned < limit
+    expect(pb.listRecentPosts).toHaveBeenCalledTimes(1)
+    expect(pb.createPost).toHaveBeenCalled()
+  })
+
   it('claims existing post when Notion Date is unset and post-bridge scheduled_at is null', async () => {
     // Ready row with no Date crashes after createPost; recovery must match the orphan post
     // (post-bridge returns scheduled_at: null, Notion returns date: null → undefined).

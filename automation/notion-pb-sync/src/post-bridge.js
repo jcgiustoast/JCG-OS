@@ -50,8 +50,8 @@ export function createPostBridgeClient({ apiKey, baseUrl = 'https://api.post-bri
     return call('GET', `/v1/post-results?${qs}`)
   }
 
-  async function listRecentPosts({ status, limit = 50 } = {}) {
-    const params = { limit: String(limit) }
+  async function listRecentPosts({ status, limit = 50, offset = 0 } = {}) {
+    const params = { limit: String(limit), offset: String(offset) }
     if (status) params.status = status
     const qs = new URLSearchParams(params).toString()
     return call('GET', `/v1/posts?${qs}`)
