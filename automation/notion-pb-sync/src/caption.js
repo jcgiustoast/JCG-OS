@@ -8,12 +8,8 @@ function extractPlainText(richText) {
 }
 
 export function blocksToCaption(blocks) {
-  const lines = []
-  for (const block of blocks) {
-    const text = renderBlock(block)
-    if (text !== null) lines.push(text)
-  }
-  return joinBlocks(lines)
+  const items = blocks.map(b => ({ type: b.type, text: renderBlock(b) }))
+  return joinBlocks(items)
 }
 
 function renderBlock(block) {
@@ -35,20 +31,31 @@ function renderBlock(block) {
   }
 }
 
-function joinBlocks(lines) {
+function joinBlocks(items) {
   const out = []
-  for (let i = 0; i < lines.length; i++) {
-    const prev = lines[i - 1]
-    const curr = lines[i]
-    const bothLists = prev?.startsWith('- ') && curr.startsWith('- ')
-    out.push((bothLists ? '\n' : (i === 0 ? '' : '\n\n')) + curr)
+  let prevType = null
+  let prevText = null
+  for (const item of items) {
+    if (item.text === null) {
+      // Unknown block — emits no text, but breaks list adjacency
+      prevType = null
+      continue
+    }
+    const listMerge =
+      prevText !== null &&
+      prevType === item.type &&
+      (item.type === 'bulleted_list_item' || item.type === 'numbered_list_item')
+    const sep = prevText === null ? '' : (listMerge ? '\n' : '\n\n')
+    out.push(sep + item.text)
+    prevType = item.type
+    prevText = item.text
   }
   return out.join('').trim()
 }
 
 export function stripSourcesHeader(text) {
-  // Header pattern: starts with **Sources:** or **Wiki:**, followed by a --- separator
-  const headerRe = /^(\*\*Sources:\*\*[^\n]*\n)?(\*\*Wiki:\*\*[^\n]*\n)?(\n---\n\n)/
+  // Header pattern: at least one of **Sources:** or **Wiki:** lines, then \n---\n\n separator
+  const headerRe = /^(?:\*\*Sources:\*\*[^\n]*\n(?:\*\*Wiki:\*\*[^\n]*\n)?|\*\*Wiki:\*\*[^\n]*\n)\n---\n\n/
   if (!headerRe.test(text)) return text
   return text.replace(headerRe, '').trimStart()
 }

@@ -37,6 +37,15 @@ describe('blocksToCaption', () => {
     ]
     expect(blocksToCaption(blocks)).toBe('Keep this.\n\nAnd this.')
   })
+
+  it('does not merge two lists separated by an unknown block', () => {
+    const blocks = [
+      { type: 'bulleted_list_item', bulleted_list_item: { rich_text: [{ plain_text: 'a' }] } },
+      { type: 'image', image: {} },
+      { type: 'bulleted_list_item', bulleted_list_item: { rich_text: [{ plain_text: 'b' }] } }
+    ]
+    expect(blocksToCaption(blocks)).toBe('- a\n\n- b')
+  })
 })
 
 describe('stripSourcesHeader', () => {
@@ -52,6 +61,16 @@ describe('stripSourcesHeader', () => {
 
   it('leaves input untouched when no header', () => {
     expect(stripSourcesHeader('Just content.')).toBe('Just content.')
+  })
+
+  it('does not strip a leading --- with no header', () => {
+    const input = '\n---\n\nLegit content with a divider at top.'
+    expect(stripSourcesHeader(input)).toBe('\n---\n\nLegit content with a divider at top.')
+  })
+
+  it('strips Wiki-only header (no Sources)', () => {
+    const input = '**Wiki:** [b](url)\n\n---\n\nContent.'
+    expect(stripSourcesHeader(input)).toBe('Content.')
   })
 })
 
