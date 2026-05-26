@@ -28,17 +28,24 @@ export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
     const postBridgeId = (row.properties['Post Bridge ID']?.rich_text || [])
       .map(t => t.plain_text).join('')
     if (!postBridgeId) continue
+    let confirmedGone = false
     try {
       await pb.deletePost(postBridgeId)
+      confirmedGone = true
     } catch (err) {
-      // 404 is fine — already gone. Log and continue.
-      if (!String(err.message).match(/404/)) {
+      // 404 = already deleted — also confirmed gone.
+      if (err.status === 404 || String(err.message).match(/404/)) {
+        confirmedGone = true
+      } else {
+        // Any other error: do NOT clear the link. Next tick will retry.
         console.error(`Revert delete failed for ${row.id}: ${err.message}`)
       }
     }
-    await notion.updateRow(row.id, {
-      'Post Bridge ID': { rich_text: [] }
-    })
+    if (confirmedGone) {
+      await notion.updateRow(row.id, {
+        'Post Bridge ID': { rich_text: [] }
+      })
+    }
   }
 }
 

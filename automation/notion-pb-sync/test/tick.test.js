@@ -303,7 +303,9 @@ describe('tick — revert / cancel', () => {
       updateRow: vi.fn(async () => ({}))
     }
     const pb = fakePb()
-    pb.deletePost = vi.fn(async () => { throw new Error('post-bridge DELETE -> 404: not found') })
+    const err404 = new Error('post-bridge DELETE -> 404: not found')
+    err404.status = 404
+    pb.deletePost = vi.fn(async () => { throw err404 })
 
     await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
 
@@ -311,5 +313,25 @@ describe('tick — revert / cancel', () => {
     expect(notion.updateRow).toHaveBeenCalledWith('page_10', expect.objectContaining({
       'Post Bridge ID': { rich_text: [] }
     }))
+  })
+
+  it('does NOT clear Post Bridge ID on 500 delete error (next tick retries)', async () => {
+    const revertedRow = makeRow({ id: 'page_11', status: 'Drafting', postBridgeId: 'pb_500' })
+    const notion = {
+      queryByStatus: vi.fn(async () => []),
+      queryRowsWithPostBridgeIdInUserState: vi.fn(async () => [revertedRow]),
+      fetchPageBlocks: vi.fn(async () => []),
+      updateRow: vi.fn(async () => ({}))
+    }
+    const pb = fakePb()
+    const err500 = new Error('post-bridge DELETE -> 500: internal')
+    err500.status = 500
+    pb.deletePost = vi.fn(async () => { throw err500 })
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.deletePost).toHaveBeenCalledWith('pb_500')
+    // Critical: do NOT clear the ID — the row must stay linked so next tick retries
+    expect(notion.updateRow).not.toHaveBeenCalled()
   })
 })
