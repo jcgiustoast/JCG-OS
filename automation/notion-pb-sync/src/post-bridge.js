@@ -17,7 +17,8 @@ export function createPostBridgeClient({ apiKey, baseUrl = 'https://api.post-bri
     return res.json()
   }
 
-  async function call(method, path, body) {
+  async function call(method, path, body, { retry = true } = {}) {
+    if (!retry) return rawCall(method, path, body)
     for (let i = 0; i <= retryDelays.length; i++) {
       try {
         return await rawCall(method, path, body)
@@ -30,7 +31,10 @@ export function createPostBridgeClient({ apiKey, baseUrl = 'https://api.post-bri
   }
 
   async function createPost(payload) {
-    return call('POST', '/v1/posts', payload)
+    // POST /v1/posts is NOT idempotent — a 5xx after server-side commit would
+    // silently double-create. Skip retry; recovery handles transient failure
+    // by claiming the orphan via caption-hash lookup on the next tick.
+    return call('POST', '/v1/posts', payload, { retry: false })
   }
 
   async function getPost(id) {

@@ -134,4 +134,14 @@ describe('post-bridge client — transient retries', () => {
     await expect(client.getPost('p_x')).rejects.toThrow(/429/)
     expect(fetchMock.calls).toHaveLength(4)
   })
+
+  it('does NOT retry createPost on 5xx (POST /v1/posts is not idempotent)', async () => {
+    // A 5xx after server-side commit would silently double-create; better to surface the error.
+    const fetchMock = makeFetch([
+      { ok: false, status: 502, body: { message: 'bad gateway' } }
+    ])
+    const client = createPostBridgeClient({ ...cfg, fetchImpl: fetchMock, retryDelays: [1, 1, 1] })
+    await expect(client.createPost({ caption: 'x', social_accounts: [25903] })).rejects.toThrow(/502/)
+    expect(fetchMock.calls).toHaveLength(1)
+  })
 })
