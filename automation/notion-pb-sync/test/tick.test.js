@@ -1,4 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
+import crypto from 'node:crypto'
 import { tick } from '../src/tick.js'
 
 function makeRow({ id = 'page_1', status = 'Ready', title = 'A post', platforms = ['LinkedIn'], date = '2026-06-01T12:00:00.000Z', postBridgeId = '', media = [] } = {}) {
@@ -109,6 +110,50 @@ describe('tick — Ready → Scheduled happy path', () => {
     expect(pb.createPost).not.toHaveBeenCalled()
     expect(notion.updateRow).toHaveBeenCalledWith('page_1', expect.objectContaining({
       Status: { select: { name: 'Failed' } }
+    }))
+  })
+})
+
+function captionHash(s) {
+  return crypto.createHash('sha256').update(s).digest('hex').slice(0, 12)
+}
+
+describe('tick — Scheduling recovery', () => {
+  it('claims an existing post-bridge post when caption hash + scheduled_at match', async () => {
+    const row = makeRow({ id: 'page_2', status: 'Scheduling' })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'Hello world' }] } }]
+    const expectedHash = captionHash('Hello world')
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb()
+    pb.listRecentPosts = vi.fn(async () => ({
+      data: [
+        { id: 'pb_claimed', scheduled_at: '2026-06-01T12:00:00.000Z', caption: 'Hello world' },
+        { id: 'pb_other', scheduled_at: '2026-06-02T12:00:00.000Z', caption: 'Other post' }
+      ]
+    }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_2', expect.objectContaining({
+      Status: { select: { name: 'Scheduled' } },
+      'Post Bridge ID': { rich_text: [{ text: { content: 'pb_claimed' } }] }
+    }))
+  })
+
+  it('retries the create when no match found', async () => {
+    const row = makeRow({ id: 'page_3', status: 'Scheduling' })
+    const blocks = [{ type: 'paragraph', paragraph: { rich_text: [{ plain_text: 'No match content' }] } }]
+    const notion = fakeNotion({ activeRows: [row], blocks })
+    const pb = fakePb({ createReturn: { id: 'pb_retry' } })
+    pb.listRecentPosts = vi.fn(async () => ({ data: [] }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    expect(pb.createPost).toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_3', expect.objectContaining({
+      Status: { select: { name: 'Scheduled' } },
+      'Post Bridge ID': { rich_text: [{ text: { content: 'pb_retry' } }] }
     }))
   })
 })

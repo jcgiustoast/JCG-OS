@@ -1,3 +1,4 @@
+import crypto from 'node:crypto'
 import { STATUS } from './state.js'
 import { blocksToCaption, stripSourcesHeader, validateForPlatforms } from './caption.js'
 import { checkPhase1Firewall } from './firewall.js'
@@ -12,8 +13,9 @@ export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
     try {
       if (status === STATUS.READY) {
         await handleReady(row, { notion, pb, accountMap, fetchImpl })
+      } else if (status === STATUS.SCHEDULING) {
+        await handleScheduling(row, { notion, pb, accountMap, fetchImpl })
       }
-      // Scheduling / Scheduled handlers added in later tasks
     } catch (err) {
       await markFailed(row.id, notion, err.message)
     }
@@ -72,6 +74,62 @@ async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {
   const created = await pb.createPost(createPayload)
 
   // Phase 3: writeback
+  await notion.updateRow(row.id, {
+    Status: { select: { name: STATUS.SCHEDULED } },
+    'Post Bridge ID': { rich_text: [{ text: { content: created.id } }] },
+    'Last Sync At': { date: { start: new Date().toISOString() } }
+  })
+}
+
+async function handleScheduling(row, { notion, pb, accountMap, fetchImpl }) {
+  const blocks = await notion.fetchPageBlocks(row.id)
+  const caption = stripSourcesHeader(blocksToCaption(blocks))
+  const scheduledAt = row.properties.Date?.date?.start
+  const targetHash = captionHash(caption)
+
+  const recent = await pb.listRecentPosts({ status: 'scheduled', limit: 50 })
+  const match = (recent.data || []).find(p => {
+    return p.scheduled_at === scheduledAt && captionHash(p.caption || '') === targetHash
+  })
+
+  if (match) {
+    await notion.updateRow(row.id, {
+      Status: { select: { name: STATUS.SCHEDULED } },
+      'Post Bridge ID': { rich_text: [{ text: { content: match.id } }] },
+      'Last Sync At': { date: { start: new Date().toISOString() } }
+    })
+    return
+  }
+
+  // No match — retry as if Ready (re-creates the post). Re-uses handleReady's logic
+  // by directly invoking, but skip the "flip to Scheduling" step since we're already there.
+  await retryCreate(row, caption, { notion, pb, accountMap, fetchImpl })
+}
+
+function captionHash(s) {
+  return crypto.createHash('sha256').update(s).digest('hex').slice(0, 12)
+}
+
+async function retryCreate(row, caption, { notion, pb, accountMap, fetchImpl }) {
+  const platforms = extractPlatforms(row)
+  const scheduledAt = row.properties.Date?.date?.start
+  const mappedAccounts = platforms.map(p => accountMap[p]).filter(Boolean)
+
+  if (mappedAccounts.length === 0) {
+    await markFailed(row.id, notion, 'Recovery: no mappable platforms')
+    return
+  }
+
+  const files = extractFiles(row.properties.Media)
+  const mediaIds = files.length
+    ? await uploadNotionFilesToPostBridge(files, { pb, fetchImpl })
+    : []
+
+  const payload = { caption, social_accounts: mappedAccounts }
+  if (scheduledAt) payload.scheduled_at = scheduledAt
+  if (mediaIds.length) payload.media = mediaIds
+
+  const created = await pb.createPost(payload)
   await notion.updateRow(row.id, {
     Status: { select: { name: STATUS.SCHEDULED } },
     'Post Bridge ID': { rich_text: [{ text: { content: created.id } }] },
