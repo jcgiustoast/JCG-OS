@@ -1,6 +1,6 @@
 ---
 title: Professional — Mars Men
-description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($175K base + $1.5K/month objectives bonus, no equity), owns CRO + retention + LP/website dev, reports to Raheel. Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads.
+description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($175K base + $1.5K/month objectives bonus, no equity), owns CRO + retention + LP/website dev. Raheel (former manager) departed May 2026 to a pet brand; reporting line currently unclear. Mars Men preparing phantom shares retention offer (size TBD). Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads. See [[pet-brand-offer]] for active decision.
 type: professional
 sources: []
 related: [identity, learning, projects]
@@ -22,7 +22,7 @@ confidence: high
 ## Key People
 - **Zach Stuck** — Co-founder. DTC growth operator. Background: Founder of Easy Street Brands, Homestead Studio (eComm growth agency). Expert in scaling 6-figure stores to 7-8 figures.
 - **Benjamin Smith** — Co-founder. The brand face and origin story. Personal testosterone transformation is the core marketing narrative.
-- **Raheel** — Head of Growth. Juan's manager. Responsible for creatives and ad spend.
+- **Raheel** — Former Head of Growth. **Left Mars Men May 2026** over equity (wasn't offered as much as he wanted; got better package at a pet brand). Was Juan's manager. Now recruiting Juan to his new role. See [[pet-brand-offer]].
 - **Juan Cruz (you)** — Head of eCommerce. Reports to Raheel. Owns experimentation across website, retention, and subscription. Leads design, development, and copy for landing pages and website. Supports acquisition strategy but does not own creatives or ad spend. **Compensation:** $175K/year base + $1,500/month objectives bonus (up to $18K/year, $193K total target).
 
 ## Juan's Scope
@@ -33,9 +33,16 @@ confidence: high
 
 ## Current Strategic Context
 - Post-raise moment: L Catterton expects aggressive scaling
-- Juan's core levers are CRO and retention; he supports acquisition but Raheel leads growth/paid
+- Juan's core levers are CRO and retention; previously supported Raheel on acquisition
 - Brand has scaled to $100M run rate in under 18 months — hypergrowth phase
 - Active work projects are managed within Mars Men's own systems, not in JC OS
+
+## Org Disruption — May 2026
+- **Raheel (Juan's manager) left** for a pet brand role with better cash + equity.
+- **Reporting line broken** — unclear who Juan reports to now. Awaiting Zach/Benjamin clarification.
+- **Phantom shares promised** — Mars Men told Juan retention phantom shares are coming "this week." Size unknown. Reactive offer (Raheel is recruiting Juan to follow him).
+- **Decision pending:** see [[pet-brand-offer]] for full analysis of competing offer and Claude's recommendation.
+- **Mars Men retention bar (per Claude's analysis):** must hit all 4 of (a) phantom ≥0.5% with hurdle ≤$25M, (b) cash within $20K of pet brand, (c) clean reporting line within 7 days, (d) credible exit timeline ≤24mo. Realistic expectation: 1 of 4.
 
 ## Contract & Constraints
 - **Non-compete:** Applies to direct competitors — subscription brands selling in the US. Current ASTEROI clients (Australian DTC, Spanish supplements, German helmets) do not conflict.
@@ -63,5 +70,6 @@ confidence: high
 - **2026-04-06:** Added frontmatter, aligned with LLM Wiki conventions.
 - **2026-04-06:** Added contract constraints (non-compete scope, no equity, content constraint on Meta Ads topics). Added exit timeline (~12 months). Added transition plan to career goals.
 - **2026-05-27:** Updated compensation — base raised from $150K to $175K, added $1,500/month objectives bonus ($18K/year max, $193K total target).
+- **2026-05-27:** Logged Raheel's departure (May 2026) to pet brand; Juan's reporting line broken; Mars Men preparing reactive phantom shares offer. Cross-linked to [[pet-brand-offer]] for active decision context.
 
 **Related files:** [[identity]] | [[learning]] | [[projects]]

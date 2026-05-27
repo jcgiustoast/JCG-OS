@@ -8,6 +8,22 @@ updated: 2026-04-07
 
 # Life Memory Log
 
+## [2026-05-27] decision | Pet brand offer received — decision-in-progress
+- **External offer from new pet brand** (founder wrote message directly to Juan; Raheel is the bridge after leaving Mars Men in May 2026).
+- **Terms:** $230K base + $50K bonus target (20% of base) + 0.75% phantom equity. $15M hurdle, 4-year vest, 12-month cliff, performance unlocks (split TBD). Title: Head of CRO and E-commerce. Reports to Raheel. Start mid-to-late June 2026.
+- **Pet brand state:** $12M ARR ($1M/month), established product-market fit, single brand with multi-product roadmap. No non-compete conflict (pets ≠ men's supplements).
+- **Mars Men context:** Raheel left over equity dispute; Juan's reporting line at Mars Men is broken; Mars Men promised retention phantom shares "this week" (size TBD; reactive offer).
+- **Cash delta vs Mars Men:** +$87K/year target ($280K vs $193K, +45%).
+- **Realistic equity range (Claude analysis):** $260K-$1.4M payable over 4 years; founder's $1.7M case requires top-tier execution; $500M+ is tail outcome. Most likely band is "strong cash supplement, not transformative wealth."
+- **Target trajectory for founder's $300M scenario:** double ARR annually for 3 years ($12M → $24M → $48M → $120M).
+- **Kill criteria defined** for month-11 evaluation (7 criteria; any of 3 existential fails = walk on cliff). See [[pet-brand-offer]] for full decision rule.
+- **Contract questions sent to founder:** (1) performance unlocks auto-vs-gated split, (2) single-trigger acceleration on change of control, (3) termination without cause treatment, (4) bonus structure specifics.
+- **Claude's recommendation:** Take the pet brand offer unless Mars Men comes back with all 4 retention criteria (phantom ≥0.5% with ≤$25M hurdle, cash parity within $20K, clean reporting line in 7 days, credible exit timeline ≤24mo). Realistic Mars Men response: 1 of 4.
+- **ASTEROI opportunity cost:** Path B-cliff (pet brand 12mo + leave on cliff) delays ASTEROI by only ~1 quarter vs staying at Mars Men. Real delay only triggers if year-1 evaluation says stay.
+- **Status:** Principle-yes pending Mars Men number + contract clarifications.
+- Pages created: life/wiki/pet-brand-offer.md
+- Pages updated: life/wiki/professional.md, life/wiki/life-index.md
+
 ## [2026-05-19] session | Astra Ads architecture review + first cleanup shipped
 - Progress: Surveyed Astra Ads architecture via /improve-codebase-architecture and surfaced 7 deepening opportunities. Shipped opportunity #1 — slimmed `build_creative_prompt` from 22 kwargs (14 dead) to 10. Same cleanup propagated to `generate_creative` wrapper, 4 call sites in `core/slate_explorer.py`, and the `_generate_one_brief` helper in `web/routes/concepts.py`. Removed 2 dead tests + dead support variables (`existing_headlines` accumulator, `headlines_snapshot`, `research_insights` load, `hc`/`fc` lookups). Net diff: +5 / -125 lines. Full test suite still green (2271 passed, 74 skipped). PR #31 opened against main; merge pending user action (auto-mode classifier blocked `gh pr merge` from agent).
 - New ideas / threads: Documented 6 remaining deepening opportunities in `docs/architecture-deepening-opportunities.md` with friction-per-effort ranking. Recommended next: #2 SharpAngle / SharpAngleResult duplication (same concept, two near-identical Pydantic models, bridge conversion exists solely to copy fields across).
