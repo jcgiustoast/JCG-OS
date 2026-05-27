@@ -1,6 +1,8 @@
-# /engage — Daily Engagement Briefing
+# /engage — Daily Engagement Briefing (Twitter)
 
-Pull last-24h posts from curated DTC targets on Twitter and LinkedIn, score each for reply opportunity, and output a single briefing of 40-50 candidates so Juan can pick 20-40 worth replying to.
+Pull last-24h tweets from curated DTC targets, score each for reply opportunity, and output a single briefing of 30-40 candidates so Juan can pick 20-30 worth replying to.
+
+**Scope:** Twitter / X only. LinkedIn engagement is handled manually by Juan via LinkedIn lists / notifications — not automated through this command. The LinkedIn sections in `engagement-targets.md` exist as reference for Juan's manual list maintenance.
 
 **Voice:** Juan writes all replies himself. This command is discovery + curation only — it does NOT post anything.
 
@@ -9,14 +11,10 @@ Pull last-24h posts from curated DTC targets on Twitter and LinkedIn, score each
 ## ARGUMENTS
 
 ```
-/engage              # full run, both platforms
-/engage twitter      # Twitter only
-/engage linkedin     # LinkedIn only
+/engage              # full run
 /engage quick        # ICPs only, skip Peers (smaller briefing)
 /engage --dry-run    # parse targets + show counts, no Apify calls
 ```
-
-If no platform specified, run both.
 
 ---
 
@@ -26,12 +24,11 @@ Reads `life/wiki/engagement-targets.md`. Parses markdown tables in:
 - Twitter → ASTEROI ICPs → US
 - Twitter → ASTEROI ICPs → Spanish market
 - Twitter → Peers
-- LinkedIn → ASTEROI ICPs → US
-- LinkedIn → ASTEROI ICPs → Spanish market
-- LinkedIn → Peers
+
+**Ignore the LinkedIn sections entirely** — those are manually maintained by Juan, not automated.
 
 **Skip rows where:**
-- Handle/username column is `_verify_`, `_add_`, or empty
+- Handle column is `_verify_`, `_add_`, or empty
 - Row is in the "Brands to investigate" research list (not a real handle)
 
 Also reads from the same file:
@@ -47,9 +44,10 @@ See `~/.claude-personal/projects/C--Users-jcgiu-Documents-JCG-OS/memory/apify-sc
 
 **Quick reference:**
 - Twitter: `apidojo/tweet-scraper` — batch all handles in ONE run, `tweetsDesired: 5` per handle
-- LinkedIn: `apimaestro/linkedin-profile-posts` — single username per run, `limit: 5` each. Parallelize across usernames but cap at 10 concurrent runs.
 
-Both async: POST → poll `runId` until `SUCCEEDED` → GET `/dataset/items`.
+Async: POST → poll `runId` until `SUCCEEDED` → GET `/dataset/items`.
+
+**Cost:** ~$0.10 per daily run (one batched request, ~250 tweets). Trivial.
 
 ---
 
@@ -57,27 +55,27 @@ Both async: POST → poll `runId` until `SUCCEEDED` → GET `/dataset/items`.
 
 ### 1. Parse targets
 
-Extract handle/slug lists from the engagement-targets.md tables. Skip placeholders. Tag each entry with its tier (`icp_us`, `icp_es`, `peer`).
+Extract handle lists from the Twitter tables in engagement-targets.md. Skip placeholders (`_verify_`, `_add_`, empty). Tag each entry with its tier (`icp_us`, `icp_es`, `peer`).
 
 If `--dry-run`, output the parsed counts and stop:
 ```
-Twitter: 18 ICPs (12 US + 6 ES) + 14 Peers = 32 handles
-LinkedIn: 17 ICPs (11 US + 6 ES) + 15 Peers = 32 usernames
-Estimated Apify cost: ~$2-4
+Twitter ICPs (US):       N handles
+Twitter ICPs (Spanish):  N handles
+Twitter Peers:           N handles
+Total:                   N handles
+Estimated Apify cost:   ~$0.10
 ```
 
-### 2. Fetch last-24h posts
+### 2. Fetch last-24h tweets
 
-**Twitter** — one batched Apify run:
+One batched Apify run:
 ```json
 {"handles": ["handle1", "handle2", ...], "tweetsDesired": 5, "addUserInfo": true}
 ```
 
-**LinkedIn** — parallel runs, one per username. Cap concurrency at 10. If a run fails or returns 0 results, log to "Errors" section but continue. No retries beyond 1.
-
 ### 3. Filter to last 24h
 
-Drop posts where `createdAt` (Twitter) or `posted_at.date` (LinkedIn) is more than 24h ago. Targets with no fresh posts go to "Stale targets" section.
+Drop tweets where `createdAt` is more than 24h ago. Handles with no fresh tweets go to "Stale targets" section.
 
 ### 4. Score each post
 
@@ -116,11 +114,7 @@ Score = **Relevance × Opportunity × Visibility** − **Anti-signals**
 
 ### 5. Rank + group
 
-Take top 40-50 across both platforms. Group output by:
-1. Platform (Twitter → LinkedIn)
-2. Tier (ICPs US → ICPs ES → Peers)
-
-Sort within each group by score descending.
+Take top 30-40 tweets. Group output by tier (ICPs US → ICPs ES → Peers). Sort within each group by score descending.
 
 ### 6. Output briefing
 
@@ -129,13 +123,13 @@ Save to `content/raw/engagement/YYYY-MM-DD.md`:
 ```markdown
 # Engagement Briefing — YYYY-MM-DD
 
-**Posts surfaced:** N | **ICP:** N | **Peer:** N
+**Tweets surfaced:** N | **ICP:** N | **Peer:** N
 **Top scoring:** [author] (score X)
 **Estimated time:** ~N min
 
 ---
 
-## Twitter — ICPs (US)
+## ICPs (US)
 
 ### 1. @SeanEcom — Sean Frank — score 87
 "Just hit $2M MRR and our CAC is up 40% YoY. Performance creative
@@ -148,29 +142,20 @@ when MER dropped (specific channel + delta). Don't pitch ASTEROI.
 
 ### 2. ...
 
-## Twitter — ICPs (Spanish)
+## ICPs (Spanish)
 ...
 
-## Twitter — Peers
-...
-
-## LinkedIn — ICPs (US)
-...
-
-## LinkedIn — ICPs (Spanish)
-...
-
-## LinkedIn — Peers
+## Peers
 ...
 
 ---
 
 ## Stale targets (no posts in 24h)
-- @handle1 (Twitter) — last post 3 days ago
-- username2 (LinkedIn) — last post 5 days ago
+- @handle1 — last post 3 days ago
+- @handle2 — last post 5 days ago
 
-## Errors (couldn't fetch)
-- username3 (LinkedIn) — actor returned 0 results, slug likely wrong → flag for verification
+## Errors (handle returned 0 results)
+- @handle3 — flag for handle verification
 ```
 
 ### 7. Log
@@ -179,10 +164,10 @@ Append to `content/memory/log.md`:
 
 ```markdown
 ## [YYYY-MM-DD] engagement | Daily briefing
-- Surfaced N posts (Twitter: X, LinkedIn: Y)
+- Surfaced N tweets
 - Top scoring: [author] (score N)
 - Stale targets: N
-- Slug errors (need verification): N
+- Handle errors: N
 - Briefing: content/raw/engagement/[file].md
 ```
 
@@ -191,10 +176,9 @@ Append to `content/memory/log.md`:
 ## CONSTRAINTS
 
 - **DO NOT post replies.** Discovery + curation only. Juan writes all replies himself.
-- **DO NOT fabricate post content.** If a scraper returns 0 results for a target, log it under "Stale targets" or "Errors" — never invent posts.
-- **DO NOT include posts older than 24h** in the main briefing.
-- **Cost guardrails:** Twitter batched run is cheap (~$0.10). LinkedIn parallel is ~$0.05-0.10 per username × ~30 usernames = ~$2-3 per day. If daily LinkedIn cost > $5, suggest running LinkedIn every-other-day or trimming the target list.
-- **Slug error escalation:** If >5 LinkedIn usernames return 0 results, recommend Juan run a one-shot verification pass before next briefing.
+- **DO NOT fabricate tweet content.** If the scraper returns 0 results for a handle, log it under "Stale targets" or "Errors" — never invent tweets.
+- **DO NOT include tweets older than 24h** in the main briefing.
+- **LinkedIn out of scope.** Skip those sections entirely.
 - **Empty briefing:** If <10 candidates after filtering, surface this to Juan — either the target list is too small, or signal filters are too strict.
 
 ---

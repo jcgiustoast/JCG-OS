@@ -12,9 +12,11 @@ confidence: medium
 
 # Engagement Targets
 
-Curated accounts to monitor for daily engagement (replies on Twitter, comments on LinkedIn). Goal: ASTEROI inbound + personal brand visibility among DTC operators.
+Curated accounts to monitor for daily engagement. Goal: ASTEROI inbound + personal brand visibility among DTC operators.
 
-The `/engage` command reads this file, pulls last-24h posts from these accounts via Apify, scores them for reply opportunity, and outputs a daily briefing of 5-8 posts worth your time.
+**Twitter** — automated via `/engage` (pulls last-24h tweets via Apify, scores reply opportunity, outputs daily briefing).
+
+**LinkedIn** — manual. Juan maintains this list as reference for his own LinkedIn list/notifications setup, but `/engage` does NOT scrape LinkedIn (cost-to-value ratio didn't justify it; LinkedIn anti-bot infra dominates cost).
 
 **Voice:** Juan writes all replies himself. This system is discovery + curation only.
 
@@ -135,11 +137,16 @@ Well-known agency operators, performance/creative consultants, and DTC commentat
 
 ---
 
-## LinkedIn
+## LinkedIn (MANUAL — not automated)
 
-LinkedIn is where ASTEROI decision-makers actually live. Higher comment ROI per reply (longer dwell, higher dwell from your target audience), but each comment takes 2-3x the time of a tweet.
+LinkedIn is where ASTEROI decision-makers actually live, but `/engage` does NOT scrape it. The cost of running an anti-bot-resistant LinkedIn scraper daily (~$100-200/mo) didn't justify the value vs. Juan maintaining a manual list inside LinkedIn (Sales Nav saved searches, custom feeds, notifications on key accounts).
 
-**Note on usernames:** LinkedIn URL slugs (the bit after `linkedin.com/in/`) are not always `firstname-lastname`. Many below are educated guesses — the `/engage` first run will fail-fast on wrong slugs and we fix in-flight.
+**Use this list as the source-of-truth for Juan's manual LinkedIn setup:**
+- Copy these names into a Sales Navigator list, OR
+- Follow + enable notifications for these accounts, OR
+- Use LinkedIn's native "Lists" feature
+
+Slugs below are best-guesses — verify when adding to your manual list.
 
 ### ASTEROI ICPs
 
@@ -274,12 +281,19 @@ Topics Juan has real ground to stand on:
 
 ## Daily Quota
 
-Juan's stated volume: **20-40 replies/day total across both platforms**.
+Juan's stated volume: **20-40 replies/day**, split across both platforms manually.
 
-- **Briefing size:** surface ~40-50 candidates so Juan picks 20-40 worth replying to (some posts won't survive review)
-- **Cadence:** Once per morning, covers last 24h
-- **Quota split:** ~25 Twitter + ~10-15 LinkedIn — Twitter has higher reply velocity, LinkedIn each comment carries more weight per ICP
-- **Time budget:** at 1-2 min per Twitter reply + 3-5 min per LinkedIn comment, this is 60-90 min/day. Plan for it.
+**Twitter (automated via `/engage`)**
+- Surface ~30-40 candidates daily so Juan picks 15-25 worth replying to
+- Cadence: once per morning, covers last 24h
+- Time budget: ~30-45 min/day at 1-2 min per reply
+
+**LinkedIn (manual)**
+- Juan checks own LinkedIn list/notifications when he has time
+- Target: 5-15 comments/day on ICP-tier posts
+- Time budget: ~25-50 min/day at 3-5 min per comment
+
+**Combined time budget: 55-95 min/day.** Plan for it.
 
 ---
 
@@ -296,3 +310,4 @@ _to be filled if needed_
 - **2026-05-27** — Claude populated ICPs (US DTC founders/operators $5M+) + Spanish-market sub-tier + Peers (agency operators). LinkedIn slugs are best-guess and flagged `_verify_`. Daily quota raised to 20-40/day per Juan's stated volume.
 - **2026-05-27** — Expanded both tiers: added 7 US ICPs (Justin Mares, Mike Beckham, Jesse Pujji, Andrew Wilkinson, Sieva Kozinsky, Ari Murray, Logan Chierotti), 5 Peers (Greg Isenberg, Rabah Rahil, Ben Cogan, Mehtab Bhogal, Cody Schneider), 4 LinkedIn-native Peers (Jay Schwedelson, Heather Holst-Knudsen, Lauren Petrullo, Lloyd Y Asiedu), more Spanish brands (Mr Wonderful, Hoff, Scalpers, Tienda Nube). All filtered for stated activity. Brands-to-investigate list added.
 - **2026-05-27** — Pushed harder: +8 US ICPs (John Roman, Web Smith, Bobby Hundreds, Sahil Lavingia, Phillip Jackson, Brian Lange, Adam Robinson, Sam Parr), +6 Peers (Reza Khadjavi, Eric Siu, Rishi Rawat, Daniel Murray, Molly Pittman, Charley Tichenor), +6 LinkedIn Peers including Adam Robinson (LI powerhouse), Daniel Murray (LI-native), Joan Boluda (Spanish-language differentiator). Spanish tier got Glovo, Frizata, Boluda.
+- **2026-05-27** — Scope decision: dropped LinkedIn from `/engage` automation. Cost ($100-200/mo) didn't justify ROI vs. manual list maintenance. LinkedIn sections remain in this file as reference for Juan's manual LinkedIn list/notifications setup. `/engage` is now Twitter-only (~$3/mo).
