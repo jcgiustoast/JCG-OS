@@ -6,7 +6,7 @@ author: claude
 sources: []
 related: [professional, strategy, projects]
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-27 (message sent to founder)
 confidence: high
 ---
 
@@ -19,6 +19,7 @@ confidence: high
 - Founder of pet brand wrote the offer message directly to Juan (not via Raheel).
 - Raheel is the bridge — left Mars Men in May 2026 over equity dispute (wasn't offered as much as he wanted, paid better at pet brand), joined pet brand in senior role.
 - Founder personally invested in landing Juan (founder-written comp pitch = signal of priority).
+- **Raheel coaching Juan from inside** — sent suggested questions to ask the founder (focused on equity: performance unlocks, time-based vest portion, 100% acceleration at exit). Signal: Raheel really wants Juan to land this offer. Positive read on him as future colleague (collaborative, not adversarial).
 
 ## The Offer
 
@@ -126,13 +127,15 @@ Stated plan: ASTEROI to $25-30K MRR by Q1-Q2 2027, then full-time.
 
 **Path B-cliff is almost free in ASTEROI terms** (1 quarter, +$87K cash). Real delay only triggers if year-1 evaluation says stay.
 
-## Open Contract Questions Sent to Founder
-1. Performance unlocks — auto vs gated split on the 0.75%?
-2. Single-trigger acceleration on change of control?
+## Contract Questions Sent to Founder (2026-05-27)
+1. What are the performance unlocks for equity? What portion is time-based vest vs performance-gated?
+2. Is it 100% acceleration on the unvested portion at exit / change of control?
 3. Termination without cause — what happens to unvested phantom?
-4. Bonus structure — specific metrics for $50K? Target or cap?
+4. Bonus structure — "$50K target on CRO velocity and revenue impact" — what are the specific metrics, and is $50K the target or the cap?
 
-Timing line included: Mars Men putting phantom shares offer in front this week, will decide within 7 days of having both numbers.
+Timing: asked for ~1 week to think it through, will come back with a clean decision.
+
+**Deliberately omitted:** Mars Men counter-offer mention. Naming Mars Men signals leverage-play, looks transactional, and sets wrong tone before day one. Same leverage retained internally, no broadcast. Questions 1 + 2 use Raheel's exact framing (he coached the script).
 
 ## Claude's Recommendation
 **Take the pet brand offer** unless Mars Men comes back with an exceptional package.
@@ -162,9 +165,10 @@ Timing line included: Mars Men putting phantom shares offer in front this week, 
 Juan's gut on the founder. Chemistry. Whether Raheel is the kind of operator Juan wants 3 more years next to. **Those weigh as much as the math.** Gut yes + math go = go. Gut no = don't sign into 3 years of friction for $1M.
 
 ## Next Actions
-- [ ] Send contract questions to founder (message drafted)
+- [x] Send contract questions to founder (sent 2026-05-27)
+- [ ] Wait for founder's answers on the 4 contract questions
 - [ ] Wait for Mars Men phantom shares number (expected this week)
-- [ ] Re-evaluate when both data points in hand
+- [ ] Re-evaluate when all data points in hand
 - [ ] If accepting: negotiate data access as part of contract
 - [ ] If accepting: re-read this page at month 10 before deciding stay-or-cliff
 
@@ -172,3 +176,4 @@ Juan's gut on the founder. Chemistry. Whether Raheel is the kind of operator Jua
 
 ### Changelog
 - **2026-05-27:** Initial file created from decision-in-progress conversation with Claude.
+- **2026-05-27:** Contract questions sent to founder (4 questions, Raheel-coached framing on equity). Mars Men leverage deliberately omitted from message. Raheel-coaching detail added to Origin.

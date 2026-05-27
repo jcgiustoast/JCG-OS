@@ -8,6 +8,13 @@ updated: 2026-04-07
 
 # Life Memory Log
 
+## [2026-05-27] update | Sent contract questions to pet brand founder
+- Sent 4-question message to founder asking about: (1) performance unlocks split + time-based vest portion, (2) 100% acceleration at exit/change of control, (3) termination-without-cause treatment of unvested phantom, (4) bonus structure specifics ($50K target vs cap, metrics).
+- **Raheel coached from inside** — sent Juan suggested questions on equity. Signal: he wants Juan to land this. Q1 + Q2 use Raheel's exact framing.
+- **Strategically omitted:** Mars Men counter-offer mention. Naming it signals leverage-play, looks transactional, wrong tone before day one. Same leverage retained internally without broadcast.
+- Asked for ~1 week to decide.
+- Pages updated: life/wiki/pet-brand-offer.md
+
 ## [2026-05-27] decision | Pet brand offer received — decision-in-progress
 - **External offer from new pet brand** (founder wrote message directly to Juan; Raheel is the bridge after leaving Mars Men in May 2026).
 - **Terms:** $230K base + $50K bonus target (20% of base) + 0.75% phantom equity. $15M hurdle, 4-year vest, 12-month cliff, performance unlocks (split TBD). Title: Head of CRO and E-commerce. Reports to Raheel. Start mid-to-late June 2026.
