@@ -180,6 +180,7 @@ Custom commands live in `.claude/commands/`. Each is a markdown prompt invoked b
 | `/process-inbox` | Triage captures in `life/raw/inbox/` and file them into the wiki |
 | `/content` | Create LinkedIn/X/blog posts — builds personal brand, inbound for ASTEROI |
 | `/content-research` | Scrape reference creators to find what's performing; feeds `/content` |
+| `/engage` | Daily engagement briefing — pulls 24h posts from curated DTC targets (Twitter + LinkedIn), scores reply opportunities |
 
 Only `/closeday`, `/graduate`, and `/process-inbox` write files, and all require explicit approval before doing so.
 
