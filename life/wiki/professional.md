@@ -1,11 +1,11 @@
 ---
 title: Professional — Mars Men
-description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($150K/year, no equity), owns CRO + retention + LP/website dev, reports to Raheel. Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads.
+description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($175K base + $1.5K/month objectives bonus, no equity), owns CRO + retention + LP/website dev, reports to Raheel. Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads.
 type: professional
 sources: []
 related: [identity, learning, projects]
 created: 2026-04-05
-updated: 2026-04-06
+updated: 2026-05-27
 confidence: high
 ---
 
@@ -23,7 +23,7 @@ confidence: high
 - **Zach Stuck** — Co-founder. DTC growth operator. Background: Founder of Easy Street Brands, Homestead Studio (eComm growth agency). Expert in scaling 6-figure stores to 7-8 figures.
 - **Benjamin Smith** — Co-founder. The brand face and origin story. Personal testosterone transformation is the core marketing narrative.
 - **Raheel** — Head of Growth. Juan's manager. Responsible for creatives and ad spend.
-- **Juan Cruz (you)** — Head of eCommerce. Reports to Raheel. Owns experimentation across website, retention, and subscription. Leads design, development, and copy for landing pages and website. Supports acquisition strategy but does not own creatives or ad spend. **Compensation:** $12,500/month ($150K/year).
+- **Juan Cruz (you)** — Head of eCommerce. Reports to Raheel. Owns experimentation across website, retention, and subscription. Leads design, development, and copy for landing pages and website. Supports acquisition strategy but does not own creatives or ad spend. **Compensation:** $175K/year base + $1,500/month objectives bonus (up to $18K/year, $193K total target).
 
 ## Juan's Scope
 - **CRO / Experimentation:** Running tests on site, optimizing conversion rates, landing page performance
@@ -39,7 +39,7 @@ confidence: high
 
 ## Contract & Constraints
 - **Non-compete:** Applies to direct competitors — subscription brands selling in the US. Current ASTEROI clients (Australian DTC, Spanish supplements, German helmets) do not conflict.
-- **Equity:** No equity path in the short term. Juan is salaried at $150K/year with no current stock/option plan.
+- **Equity:** No equity path in the short term. Juan is salaried at $175K/year base with a $1,500/month bonus tied to hitting objectives (up to $18K/year, $193K total target). No current stock/option plan.
 - **Exit timeline:** Planning to leave in ~12 months (~Q1-Q2 2027), once ASTEROI reaches $25-30K/month gross and Tincho can service clients independently.
 - **Content constraint:** Juan can freely publish about CRO, experimentation, subscription economics, retention/LTV, and eComm finance — these are his actual domain at Mars Men. He CANNOT publicly discuss Meta Ads strategy or performance marketing tactics — that's Raheel's domain, and it would look strange to Zach/Benjamin since Juan doesn't touch paid acquisition at Mars Men.
 - **Side work awareness:** Mars Men is not aware of ASTEROI, the agency clients, or AURAL.
@@ -62,5 +62,6 @@ confidence: high
 - **2026-04-05:** Initial file created with company overview, key people, and Juan's scope.
 - **2026-04-06:** Added frontmatter, aligned with LLM Wiki conventions.
 - **2026-04-06:** Added contract constraints (non-compete scope, no equity, content constraint on Meta Ads topics). Added exit timeline (~12 months). Added transition plan to career goals.
+- **2026-05-27:** Updated compensation — base raised from $150K to $175K, added $1,500/month objectives bonus ($18K/year max, $193K total target).
 
 **Related files:** [[identity]] | [[learning]] | [[projects]]
