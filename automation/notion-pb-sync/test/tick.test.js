@@ -242,19 +242,49 @@ describe('tick — Scheduled polling', () => {
     const notion = fakeNotion({ activeRows: [row], blocks: [] })
     const pb = fakePb()
     pb.getPost = vi.fn(async () => ({ id: 'pb_done', status: 'posted' }))
+    // Real post-bridge /v1/post-results shape: url lives in platform_data.url,
+    // platform identity lives in social_account_id (no top-level share_url/platform).
     pb.getPostResults = vi.fn(async () => ({
       data: [
-        { platform: 'linkedin', success: true, share_url: 'https://linkedin.com/posts/x' },
-        { platform: 'twitter', success: true, share_url: 'https://x.com/y' }
+        {
+          id: 'res_1', post_id: 'pb_done', success: true, error: null,
+          social_account_id: 25903,
+          platform_data: { id: '7777', url: 'https://linkedin.com/posts/x', username: null }
+        },
+        {
+          id: 'res_2', post_id: 'pb_done', success: true, error: null,
+          social_account_id: 25899,
+          platform_data: { id: '2059525', url: 'https://twitter.com/user/status/2059525', username: null }
+        }
       ]
     }))
 
     await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
 
-    expect(notion.updateRow).toHaveBeenCalledWith('page_4', expect.objectContaining({
-      Status: { select: { name: 'Published' } },
-      'Published URLs': { rich_text: [{ text: { content: expect.stringContaining('LinkedIn: https://linkedin.com/posts/x') } }] }
+    const publishedCall = notion.updateRow.mock.calls.find(c => c[0] === 'page_4' && c[1].Status?.select?.name === 'Published')
+    expect(publishedCall).toBeTruthy()
+    const urlText = publishedCall[1]['Published URLs'].rich_text[0].text.content
+    expect(urlText).toContain('LinkedIn: https://linkedin.com/posts/x')
+    expect(urlText).toContain('Twitter: https://twitter.com/user/status/2059525')
+  })
+
+  it('skips post-results rows with no platform_data.url', async () => {
+    const row = makeRow({ id: 'page_4b', status: 'Scheduled', postBridgeId: 'pb_partial' })
+    const notion = fakeNotion({ activeRows: [row], blocks: [] })
+    const pb = fakePb()
+    pb.getPost = vi.fn(async () => ({ id: 'pb_partial', status: 'posted' }))
+    pb.getPostResults = vi.fn(async () => ({
+      data: [
+        { id: 'r1', success: true, social_account_id: 25903, platform_data: { url: 'https://linkedin.com/posts/x' } },
+        { id: 'r2', success: false, social_account_id: 25899, error: 'rate limited', platform_data: null }
+      ]
     }))
+
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+
+    const publishedCall = notion.updateRow.mock.calls.find(c => c[0] === 'page_4b' && c[1].Status?.select?.name === 'Published')
+    const urlText = publishedCall[1]['Published URLs'].rich_text[0].text.content
+    expect(urlText).toBe('LinkedIn: https://linkedin.com/posts/x')
   })
 
   it('marks Failed when post-bridge reports failed', async () => {
