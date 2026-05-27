@@ -224,7 +224,7 @@ async function handleScheduled(row, { notion, pb, accountMap }) {
 
   if (status === 'posted') {
     const results = await pb.getPostResults(postBridgeId)
-    const urlText = formatPublishedUrls(results.data || [])
+    const urlText = formatPublishedUrls(results.data || [], accountMap)
     await notion.updateRow(row.id, {
       Status: { select: { name: STATUS.PUBLISHED } },
       'Published URLs': { rich_text: [{ text: { content: urlText } }] },
@@ -272,14 +272,13 @@ async function maybePropagateEdit(row, postBridgeId, { notion, pb, accountMap })
   })
 }
 
-function formatPublishedUrls(results) {
-  const PLATFORM_LABEL = {
-    linkedin: 'LinkedIn', twitter: 'Twitter', threads: 'Threads',
-    tiktok: 'TikTok', youtube: 'YouTube', instagram: 'Instagram'
-  }
+function formatPublishedUrls(results, accountMap = {}) {
+  const idToPlatform = Object.fromEntries(
+    Object.entries(accountMap).map(([name, id]) => [id, name])
+  )
   const lines = results
-    .filter(r => r.share_url)
-    .map(r => `${PLATFORM_LABEL[r.platform] || r.platform}: ${r.share_url}`)
+    .filter(r => r.platform_data?.url)
+    .map(r => `${idToPlatform[r.social_account_id] || r.social_account_id}: ${r.platform_data.url}`)
   return lines.join('\n')
 }
 
