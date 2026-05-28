@@ -17,3 +17,8 @@ content/memory/notion-sync-state.json
 .telegram-inbox/.env
 .telegram-inbox/state.json
 .telegram-inbox/__pycache__/
+
+# Claude Code — runtime artifacts not for version control
+.env
+.claude/scheduled_tasks.lock
+.claude/worktrees/

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide Library Mockups — JC OS Visual Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Big+Shoulders+Text:wght@500;700;800;900&family=Oxanium:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #000000;
+    --blanco: #ffffff;
+    --verde: #D3FF4E;
+    --lila:  #B084D3;
+    --gris:  #E7E5E6;
+    --gris-dark: #C8C5C7;
+    --display: 'Oxanium', ui-monospace, monospace;  /* Archimoto v00 fallback */
+    --heading: 'Big Shoulders Text', 'Oswald', system-ui, sans-serif;
+    --body:    'Archivo', ui-sans-serif, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 24px 80px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    font-family: var(--body);
+    line-height: 1.5;
+  }
+  h1 { font-family: var(--heading); font-weight: 900; font-size: 32px; margin: 0 0 8px; letter-spacing: 0.5px; }
+  .subtitle { color: #888; font-size: 14px; margin-bottom: 32px; max-width: 800px; line-height: 1.6; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    gap: 32px 24px;
+    justify-content: start;
+    margin-bottom: 40px;
+  }
+  .slide-wrap {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .slide-label {
+    color: #888;
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .slide-label b { color: var(--verde); font-weight: 700; }
+
+  /* base slide: 4:5 — 320 x 400 */
+  .slide {
+    width: 320px; height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    font-family: var(--body);
+  }
+
+  /* ============ FOOTER (shared) ============ */
+  .footer {
+    position: absolute;
+    left: 16px; right: 16px; bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 10px;
+  }
+  .footer .avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--lila);
+    background-image: radial-gradient(circle at 50% 38%, #f0d8e8 0%, var(--lila) 60%);
+    border: 1.5px solid rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  .footer .id { display: flex; flex-direction: column; line-height: 1.1; }
+  .footer .id .wm {
+    font-family: var(--display);
+    font-weight: 800; color: var(--lila);
+    font-size: 12px; letter-spacing: 1px;
+  }
+  .footer .id .url { font-family: var(--body); font-size: 9px; font-weight: 600; }
+  .footer .arrow {
+    margin-left: auto;
+    font-size: 18px; font-weight: 800; line-height: 1;
+  }
+  /* footer color variants */
+  .ft-light .id .url { color: var(--negro); }
+  .ft-light .footer .arrow { color: var(--negro); }
+  .ft-dark .id .url { color: var(--blanco); }
+  .ft-dark .footer .arrow { color: var(--blanco); }
+
+  /* ============ 1. COVER ============ */
+  .s-cover {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(40,40,60,0.4), transparent 70%),
+      url('./assets/space-1.jpg') center/cover;
+    filter: grayscale(1) contrast(1.05) brightness(0.7);
+    /* note: filter applies to children too — handled via inner wrapper */
+  }
+  .s-cover-inner {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.35);
+  }
+  .s-cover .ast-tl {
+    position: absolute; top: -16px; left: -16px;
+    width: 80px; height: 80px;
+    background: url('./assets/asteroid-1.png') center/contain no-repeat;
+    opacity: 0.85;
+  }
+  .s-cover .ast-br {
+    position: absolute; bottom: 60px; right: -10px;
+    width: 70px; height: 70px;
+    background: url('./assets/asteroid-2.png') center/contain no-repeat;
+    opacity: 0.85;
+  }
+  .s-cover .headline {
+    position: absolute; top: 40px; left: 20px; right: 20px;
+    font-family: var(--heading); font-weight: 900;
+    color: var(--lila); text-transform: uppercase;
+    font-size: 44px; line-height: 0.92; letter-spacing: 0.5px;
+  }
+  .s-cover .sub {
+    position: absolute; top: 170px; left: 20px; right: 20px;
+    font-family: var(--heading); font-weight: 700;
+    color: var(--blanco); font-size: 26px; line-height: 1;
+  }
+  .s-cover .sub b { color: var(--blanco); }
+  .s-cover .mockup-card {
+    position: absolute; left: 30px; right: 30px; top: 220px;
+    background: var(--blanco); border-radius: 6px; padding: 8px 10px;
+    color: var(--negro);
+  }
+  .s-cover .mockup-card .mc-title { font-size: 8px; font-weight: 600; }
+  .s-cover .mockup-card .mc-val { font-size: 18px; font-weight: 800; }
+  .s-cover .mockup-card .mc-delta { font-size: 8px; color: #2a9d4f; font-weight: 700; }
+  .s-cover .mockup-card svg { display: block; margin-top: 4px; }
+
+  /* ============ 2. HOOK-STAT ============ */
+  .s-hook {
+    background: var(--gris);
+  }
+  .s-hook .q-open, .s-hook .q-close {
+    position: absolute; color: var(--lila);
+    font-family: var(--heading); font-weight: 900;
+    font-size: 90px; line-height: 0.7;
+  }
+  .s-hook .q-open { top: 24px; left: 22px; }
+  .s-hook .q-close { bottom: 100px; right: 22px; transform: rotate(180deg); }
+  .s-hook .body {
+    position: absolute; left: 30px; right: 30px;
+    top: 50%; transform: translateY(-50%);
+    text-align: center;
+    font-family: var(--body); font-weight: 500;
+    color: var(--negro); font-size: 18px; line-height: 1.35;
+  }
+  .s-hook .body b { font-weight: 800; }
+  .s-hook .ghost {
+    position: absolute; bottom: 60px; right: 30px;
+    width: 80px; height: 80px;
+    background: url('./assets/asteroid-3.png') center/contain no-repeat;
+    opacity: 0.25; filter: grayscale(1);
+  }
+
+  /* ============ 3. ANNOTATED MOCKUP ============ */
+  .s-annot { background: var(--gris); }
+  .s-annot .chart-card {
+    position: absolute; left: 22px; right: 22px; top: 50px;
+    background: var(--blanco); border-radius: 8px; padding: 14px 16px;
+    color: var(--negro);
+  }
+  .s-annot .chart-card .t { font-size: 11px; font-weight: 600; margin-bottom: 4px; }
+  .s-annot .chart-card .v { font-size: 26px; font-weight: 800; display: inline; }
+  .s-annot .chart-card .d { font-size: 10px; color: #2a9d4f; margin-left: 6px; font-weight: 700; }
+  .s-annot .callout {
+    position: absolute; top: 100px; right: 26px;
+    background: var(--lila); color: var(--negro);
+    padding: 8px 12px; border-radius: 8px;
+    font-family: var(--body); font-weight: 700;
+    font-size: 11px; line-height: 1.2;
+    max-width: 140px;
+  }
+  .s-annot .ghost {
+    position: absolute; bottom: 60px; right: 30px;
+    width: 110px; height: 110px;
+    background: url('./assets/asteroid-3.png') center/contain no-repeat;
+    opacity: 0.2; filter: grayscale(1);
+  }
+
+  /* ============ 4. CONCEPT EXPLAINER ============ */
+  .s-concept { background: var(--gris); padding: 28px 24px 60px; }
+  .s-concept h2 {
+    font-family: var(--heading); font-weight: 800;
+    color: var(--negro); margin: 0 0 10px;
+    font-size: 24px; line-height: 1;
+  }
+  .s-concept .underline {
+    width: 70px; height: 6px; background: var(--verde);
+    margin-bottom: 18px;
+  }
+  .s-concept .pill {
+    display: inline-block;
+    background: var(--lila); color: var(--negro);
+    padding: 8px 14px; border-radius: 22px;
+    font-family: var(--body); font-weight: 700;
+    font-size: 12px; margin-bottom: 14px;
+  }
+  .s-concept .body {
+    font-family: var(--body); font-size: 13px;
+    color: var(--negro); line-height: 1.4;
+  }
+  .s-concept .body b { font-weight: 800; }
+
+  /* ============ 5. SECTION BREAK ============ */
+  .s-break {
+    background: var(--verde);
+  }
+  .s-break .ast-tr {
+    position: absolute; top: -10px; right: -10px;
+    width: 90px; height: 90px;
+    background: url('./assets/asteroid-1.png') center/contain no-repeat;
+    filter: grayscale(1);
+  }
+  .s-break .ast-bl {
+    position: absolute; bottom: 60px; left: -14px;
+    width: 70px; height: 70px;
+    background: url('./assets/asteroid-2.png') center/contain no-repeat;
+    filter: grayscale(1);
+  }
+  .s-break .headline {
+    position: absolute; left: 24px; right: 30px;
+    top: 50%; transform: translateY(-55%);
+    font-family: var(--heading); font-weight: 900;
+    color: var(--negro); font-size: 38px; line-height: 0.95;
+  }
+
+  /* ============ 6. NARRATIVE ============ */
+  .s-narr { background: var(--gris); padding: 60px 26px; }
+  .s-narr .body {
+    font-family: var(--body); font-size: 15px;
+    color: var(--negro); line-height: 1.45;
+    text-align: center;
+  }
+  .s-narr .body b { font-weight: 800; }
+
+  /* ============ 7. PULL-QUOTE ============ */
+  .s-quote { background: var(--gris); }
+  .s-quote .q-mark {
+    position: absolute; top: 30px; left: 26px;
+    color: var(--lila); font-family: var(--heading);
+    font-weight: 900; font-size: 110px; line-height: 0.6;
+  }
+  .s-quote .body {
+    position: absolute; left: 30px; right: 30px;
+    top: 50%; transform: translateY(-55%);
+    text-align: center;
+    font-family: var(--body); font-style: italic;
+    font-weight: 500;
+    color: var(--negro); font-size: 16px; line-height: 1.35;
+  }
+  .s-quote .attr {
+    position: absolute; left: 0; right: 0;
+    bottom: 70px; text-align: center;
+    font-family: var(--display); font-weight: 700;
+    color: var(--lila); font-size: 13px; letter-spacing: 1px;
+  }
+
+  /* ============ 8. NUMBERED-PART ============ */
+  .s-numpart { background: var(--gris); padding: 30px 24px 60px; }
+  .s-numpart .number {
+    font-family: var(--display); font-weight: 800;
+    color: var(--lila); font-size: 110px; line-height: 0.85;
+  }
+  .s-numpart h2 {
+    font-family: var(--heading); font-weight: 800;
+    color: var(--negro); font-size: 22px; margin: 4px 0 10px;
+    line-height: 1;
+  }
+  .s-numpart .body {
+    font-family: var(--body); font-size: 13px;
+    color: var(--negro); line-height: 1.45;
+  }
+  .s-numpart .body b { font-weight: 800; }
+
+  /* ============ 9. INFOGRAPHIC FRAMEWORK ============ */
+  .s-igfw {
+    background: var(--negro);
+    background-image: linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0)), url('./assets/noise.jpg');
+    background-size: 200px, 100px;
+    background-blend-mode: overlay;
+  }
+  .s-igfw .title {
+    position: absolute; top: 22px; left: 22px; right: 22px;
+    font-family: var(--heading); font-weight: 900;
+    color: var(--verde); font-size: 28px; line-height: 0.95;
+    text-transform: uppercase;
+  }
+  .s-igfw .cards {
+    position: absolute; top: 85px; left: 22px; right: 22px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .s-igfw .card {
+    background: rgba(231, 229, 230, 0.08);
+    border-left: 3px solid var(--lila);
+    padding: 8px 12px;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+  .s-igfw .card .n {
+    font-family: var(--display); font-weight: 800;
+    color: var(--lila); font-size: 22px; line-height: 1;
+    flex-shrink: 0; width: 36px;
+  }
+  .s-igfw .card .text { color: var(--blanco); }
+  .s-igfw .card .text .nm {
+    font-family: var(--heading); font-weight: 800;
+    font-size: 14px; line-height: 1.1; margin-bottom: 2px;
+  }
+  .s-igfw .card .text .d {
+    font-family: var(--body); font-size: 10px; line-height: 1.35;
+    color: rgba(255,255,255,0.75);
+  }
+  .s-igfw .ast {
+    position: absolute; bottom: 70px; right: -10px;
+    width: 70px; height: 70px;
+    background: url('./assets/asteroid-2.png') center/contain no-repeat;
+    opacity: 0.6; filter: grayscale(1) brightness(1.3);
+  }
+
+  /* ============ 10. INFOGRAPHIC CHECKLIST ============ */
+  .s-igcl { background: var(--gris); padding: 22px 22px 60px; }
+  .s-igcl h2 {
+    font-family: var(--heading); font-weight: 800;
+    color: var(--negro); font-size: 24px; margin: 0 0 4px;
+    line-height: 1;
+  }
+  .s-igcl .underline { width: 60px; height: 5px; background: var(--verde); margin-bottom: 14px; }
+  .s-igcl .section { margin-bottom: 10px; }
+  .s-igcl .section .h {
+    font-family: var(--heading); font-weight: 800;
+    color: var(--lila); font-size: 13px; text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 4px;
+  }
+  .s-igcl .section .items {
+    font-family: var(--body); font-size: 11px;
+    color: var(--negro); line-height: 1.45;
+  }
+  .s-igcl .section .items div::before {
+    content: "✓ "; color: var(--negro); font-weight: 800;
+    background: var(--verde);
+    padding: 0 4px; border-radius: 3px; margin-right: 6px;
+    font-size: 9px;
+  }
+  .s-igcl .ast {
+    position: absolute; bottom: 70px; right: -8px;
+    width: 60px; height: 60px;
+    background: url('./assets/asteroid-1.png') center/contain no-repeat;
+    opacity: 0.5;
+  }
+
+  /* ============ 11. CLOSING CTA ============ */
+  .s-cta {
+    background: var(--verde);
+  }
+  .s-cta .ast {
+    position: absolute; top: -10px; right: -10px;
+    width: 90px; height: 90px;
+    background: url('./assets/asteroid-2.png') center/contain no-repeat;
+    filter: grayscale(1);
+  }
+  .s-cta .headline {
+    position: absolute; left: 24px; right: 30px;
+    top: 38%; transform: translateY(-50%);
+    font-family: var(--heading); font-weight: 900;
+    color: var(--negro); font-size: 30px; line-height: 1;
+  }
+  .s-cta .inst {
+    position: absolute; left: 24px; right: 24px;
+    top: 60%;
+    font-family: var(--body); font-weight: 600;
+    color: var(--negro); font-size: 14px; line-height: 1.3;
+  }
+  .s-cta .inst b { font-weight: 800; background: var(--negro); color: var(--verde); padding: 2px 6px; border-radius: 3px; }
+
+  /* ============ NOTES + LEGEND ============ */
+  .legend {
+    background: #222; border: 1px solid #333;
+    border-radius: 6px; padding: 18px 22px;
+    margin: 40px 0;
+    color: #ccc; font-size: 13px; line-height: 1.6; max-width: 1000px;
+  }
+  .legend h3 { font-family: var(--heading); margin: 0 0 8px; color: #fff; font-weight: 800; }
+  .legend code { background: #333; padding: 1px 6px; border-radius: 3px; color: var(--verde); font-size: 12px; }
+  .legend ul { margin: 6px 0 0 18px; padding: 0; }
+  .legend li { margin: 4px 0; }
+  .swatches { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .sw { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+  .sw .chip { width: 22px; height: 22px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); }
+
+  .note {
+    color: #999; font-size: 11px; font-style: italic; margin-top: 6px;
+  }
+
+  .section-head {
+    font-family: var(--heading); font-weight: 800;
+    color: #fff; font-size: 20px; margin: 36px 0 16px;
+    border-bottom: 2px solid #444; padding-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+
+<h1>JC OS — Visual Engine: Slide-Type Library</h1>
+<p class="subtitle">
+  All 11 slide types rendered at scaled 4:5 (320 × 400). Real brand: <code style="color:#D3FF4E;background:#222;padding:1px 6px;border-radius:3px;font-family:monospace">Negro · Blanco · Verde · Lila · Gris</code>.
+  Fonts: Big Shoulders Text + Archivo via Google Fonts; <strong>Oxanium</strong> is standing in for Archimoto v00 (Juan's commercial font) — final renders will use Archimoto.
+  Avatar is a Lila placeholder — final uses Juan's circular photo.
+</p>
+
+<div class="legend">
+  <h3>Brand tokens in use</h3>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#000"></div> Negro #000000</div>
+    <div class="sw"><div class="chip" style="background:#fff"></div> Blanco #FFFFFF</div>
+    <div class="sw"><div class="chip" style="background:#D3FF4E"></div> Verde #D3FF4E</div>
+    <div class="sw"><div class="chip" style="background:#B084D3"></div> Lila #B084D3</div>
+    <div class="sw"><div class="chip" style="background:#E7E5E6"></div> Gris #E7E5E6</div>
+  </div>
+</div>
+
+<div class="section-head">Carousel slide types (8)</div>
+
+<div class="grid">
+
+  <!-- 1. COVER -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>01</b> · cover</div>
+    <div class="slide">
+      <div class="s-cover" style="position:absolute;inset:0;"></div>
+      <div class="s-cover-inner"></div>
+      <div class="ast-tl s-cover"></div>
+      <div class="ast-br s-cover"></div>
+      <div class="s-cover headline">El Secreto<br>del AOV</div>
+      <div class="s-cover sub">Que <b style="color:var(--blanco)">no</b> conocías</div>
+      <div class="s-cover mockup-card">
+        <div class="mc-title">Average order value over time</div>
+        <span class="mc-val">€60</span><span class="mc-delta">↗ 10%</span>
+        <svg width="240" height="44" viewBox="0 0 240 44">
+          <path d="M0 28 Q 30 24 60 26 T 120 18 T 180 10 T 240 22" stroke="#1f7ad6" stroke-width="2" fill="none"/>
+          <path d="M0 32 Q 30 30 60 28 T 120 26 T 180 30 T 240 28" stroke="#5a8bb8" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+        </svg>
+      </div>
+      <div class="footer ft-dark">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+      </div>
+    </div>
+    <div class="note">Dark space bg desaturated · Lila headline · optional embedded mockup card · no arrow on cover</div>
+  </div>
+
+  <!-- 2. HOOK-STAT -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>02</b> · hook-stat</div>
+    <div class="slide s-hook">
+      <div class="q-open">“</div>
+      <div class="q-close">“</div>
+      <div class="ghost"></div>
+      <div class="body">El <b>87% de los eCommerce</b> que conozco están optimizando su AOV para fantasmas.</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">Pull-out claim, often %-based · Lila quote marks · faded decor element</div>
+  </div>
+
+  <!-- 3. ANNOTATED MOCKUP -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>03</b> · annotated-mockup</div>
+    <div class="slide s-annot">
+      <div class="chart-card">
+        <div class="t">Average order value over time</div>
+        <span class="v">€60</span><span class="d">↗ 10%</span>
+        <svg width="100%" height="60" viewBox="0 0 270 60">
+          <path d="M0 40 Q 30 36 60 38 T 120 24 T 180 12 T 270 32" stroke="#1f7ad6" stroke-width="2.5" fill="none"/>
+          <path d="M0 46 Q 40 42 80 40 T 160 36 T 240 42 T 270 40" stroke="#7a99b8" stroke-width="2" stroke-dasharray="4,3" fill="none"/>
+        </svg>
+      </div>
+      <div class="callout">Este cliente NO EXISTE</div>
+      <div class="ghost"></div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">Embedded chart/UI + Lila callout pill · faded decor</div>
+  </div>
+
+  <!-- 4. CONCEPT EXPLAINER -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>04</b> · concept-explainer</div>
+    <div class="slide s-concept">
+      <h2>El Problema<br>Oculto con el AOV</h2>
+      <div class="underline"></div>
+      <div class="pill">AOV = Facturación / Núm. Órdenes</div>
+      <div class="body">La fórmula parece básica, ¿verdad? <b>Ahí está el problema.</b> El promedio dice mucho… pero no te dice nada útil para tomar decisiones.</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">Title + Verde underline + Lila pill formula + body w/ bold</div>
+  </div>
+
+  <!-- 5. SECTION BREAK -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>05</b> · section-break</div>
+    <div class="slide s-break">
+      <div class="ast-tr"></div>
+      <div class="ast-bl"></div>
+      <div class="headline">Un Caso Real Que Te Va a Impactar</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">Loud divider · Verde full-bleed · asteroids in corners · huge black headline</div>
+  </div>
+
+  <!-- 6. NARRATIVE -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>06</b> · narrative-paragraph</div>
+    <div class="slide s-narr">
+      <div class="body">Mientras tanto, regalaste envío gratis a <b>350 personas</b> que iban a comprar el producto de €65 de todas maneras.</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">One idea per slide, advances the narrative · ≤60 words</div>
+  </div>
+
+  <!-- 7. PULL-QUOTE -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>07</b> · pull-quote</div>
+    <div class="slide s-quote">
+      <div class="q-mark">“</div>
+      <div class="body">Todo sistema diseñado para el promedio está destinado al fracaso.</div>
+      <div class="attr">— TODD ROSE</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">External quote + Lila attribution · italic body</div>
+  </div>
+
+  <!-- 8. NUMBERED-PART -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>08</b> · numbered-part</div>
+    <div class="slide s-numpart">
+      <div class="number">01.</div>
+      <h2>Media, Moda y Mediana</h2>
+      <div class="body"><b>Media:</b> el promedio que conoces.<br><b>Moda:</b> el valor que más se repite.<br><b>Mediana:</b> el valor que divide el conjunto.</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="note">Huge Archimoto number · used in framework series (01, 02, 03…)</div>
+  </div>
+
+</div>
+
+<div class="section-head">Infographic-specific slide types (2)</div>
+
+<div class="grid">
+
+  <!-- 9. INFOGRAPHIC FRAMEWORK -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>09</b> · infographic-framework</div>
+    <div class="slide s-igfw">
+      <div class="title">Las 3 Herramientas del CMO Inteligente</div>
+      <div class="cards">
+        <div class="card">
+          <div class="n">01</div>
+          <div class="text">
+            <div class="nm">Media, Moda y Mediana</div>
+            <div class="d">Tres lentes para entender qué te dice tu AOV en realidad.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="n">02</div>
+          <div class="text">
+            <div class="nm">Histogramas</div>
+            <div class="d">Agrupa pedidos por intervalo y revela dónde se concentran.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="n">03</div>
+          <div class="text">
+            <div class="nm">Segmentos</div>
+            <div class="d">Demográficos, comportamiento, valor financiero — ataca por capa.</div>
+          </div>
+        </div>
+      </div>
+      <div class="ast"></div>
+      <div class="footer ft-dark">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+      </div>
+    </div>
+    <div class="note">All 3 components in ONE image · standalone-shareable · no arrow</div>
+  </div>
+
+  <!-- 10. INFOGRAPHIC CHECKLIST -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>10</b> · infographic-checklist</div>
+    <div class="slide s-igcl">
+      <h2>Checklist Suscripción</h2>
+      <div class="underline"></div>
+      <div class="section">
+        <div class="h">Adquisición</div>
+        <div class="items">
+          <div>Quiz de onboarding con 3 preguntas</div>
+          <div>Discount-stack en checkout</div>
+          <div>Upsell post-purchase</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="h">Retención</div>
+        <div class="items">
+          <div>Skip-month en vez de cancelar</div>
+          <div>Pause con incentivo</div>
+          <div>Bundle de 3 meses</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="h">Monetización</div>
+        <div class="items">
+          <div>Add-on de €5–10 al mes</div>
+          <div>Anual con descuento</div>
+        </div>
+      </div>
+      <div class="ast"></div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+      </div>
+    </div>
+    <div class="note">Categorized list · Verde checkmark chips · lead-magnet shape · no arrow</div>
+  </div>
+
+</div>
+
+<div class="section-head">Utility (used in any mode)</div>
+
+<div class="grid">
+
+  <!-- 11. CLOSING CTA -->
+  <div class="slide-wrap">
+    <div class="slide-label"><b>11</b> · closing-cta</div>
+    <div class="slide s-cta">
+      <div class="ast"></div>
+      <div class="headline">¿Quieres el GPT que hace esto por ti?</div>
+      <div class="inst">Comenta <b>"AOV"</b> y te lo mando por DM.</div>
+      <div class="footer ft-light">
+        <div class="avatar"></div>
+        <div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div>
+      </div>
+    </div>
+    <div class="note">Final slide · Verde full-bleed · clear CTA · no arrow (chain ends)</div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <h3>What I want feedback on</h3>
+  <ul>
+    <li><strong>Typography</strong>: Big Shoulders for headlines + Archivo for body — does the contrast feel right? (Archimoto v00 will replace Oxanium in final.)</li>
+    <li><strong>Cover layout</strong>: the way the headline / subtitle / mockup-card stack — too crowded?</li>
+    <li><strong>Section break (slide 5)</strong>: the Verde + asteroid impact — strong enough? Too loud?</li>
+    <li><strong>Pull-quote (slide 7)</strong>: italic vs regular body, attribution color (Lila) — your call.</li>
+    <li><strong>Numbered-part (slide 8)</strong>: how prominent the "01." should be — current is ~110px. Bigger? Smaller?</li>
+    <li><strong>Infographic-framework (slide 9)</strong>: cards-on-dark — is that the right composition, or do you prefer Gris-on-Negro inverse?</li>
+    <li><strong>Infographic-checklist (slide 10)</strong>: Verde checkmark chips — too sweet? Should it be plain ✓?</li>
+    <li><strong>Footer signature</strong>: the JCGIUSTO + jcgiusto.com lockup — proportions OK?</li>
+    <li><strong>Any slide type missing</strong> for your real content shapes? Anything in the library you'd never use?</li>
+  </ul>
+</div>
+
+</body>
+</html>
