@@ -3,7 +3,7 @@ title: Life Wiki Index
 description: Master catalog of all life/professional/personal wiki pages.
 type: index
 created: 2026-04-06
-updated: 2026-05-27
+updated: 2026-05-28
 ---
 
 # Life Wiki Index

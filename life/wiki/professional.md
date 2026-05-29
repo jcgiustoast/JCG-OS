@@ -5,7 +5,7 @@ type: professional
 sources: []
 related: [identity, learning, projects]
 created: 2026-04-05
-updated: 2026-05-27
+updated: 2026-05-28
 confidence: high
 ---
 
@@ -69,7 +69,7 @@ confidence: high
 - **2026-04-05:** Initial file created with company overview, key people, and Juan's scope.
 - **2026-04-06:** Added frontmatter, aligned with LLM Wiki conventions.
 - **2026-04-06:** Added contract constraints (non-compete scope, no equity, content constraint on Meta Ads topics). Added exit timeline (~12 months). Added transition plan to career goals.
-- **2026-05-27:** Updated compensation — base raised from $150K to $175K, added $1,500/month objectives bonus ($18K/year max, $193K total target).
-- **2026-05-27:** Logged Raheel's departure (May 2026) to pet brand; Juan's reporting line broken; Mars Men preparing reactive phantom shares offer. Cross-linked to [[pet-brand-offer]] for active decision context.
+- **2026-05-28:** Updated compensation — base raised from $150K to $175K, added $1,500/month objectives bonus ($18K/year max, $193K total target).
+- **2026-05-28:** Logged Raheel's departure (May 2026) to pet brand; Juan's reporting line broken; Mars Men preparing reactive phantom shares offer. Cross-linked to [[pet-brand-offer]] for active decision context.
 
 **Related files:** [[identity]] | [[learning]] | [[projects]]

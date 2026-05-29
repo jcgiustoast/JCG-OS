@@ -5,8 +5,8 @@ type: decision
 author: claude
 sources: []
 related: [professional, strategy, projects]
-created: 2026-05-27
-updated: 2026-05-27 (message sent to founder)
+created: 2026-05-28
+updated: 2026-05-28 (message sent to founder)
 confidence: high
 ---
 
@@ -16,7 +16,7 @@ confidence: high
 **Principle-yes pending:** (a) Mars Men phantom shares counteroffer (expected this week), (b) contract clarifications from founder.
 
 ## Origin
-- Founder of pet brand wrote the offer message directly to Juan (not via Raheel).
+- Founder of pet brand ("Jason") wrote the offer message directly to Juan (not via Raheel).
 - Raheel is the bridge — left Mars Men in May 2026 over equity dispute (wasn't offered as much as he wanted, paid better at pet brand), joined pet brand in senior role.
 - Founder personally invested in landing Juan (founder-written comp pitch = signal of priority).
 - **Raheel coaching Juan from inside** — sent suggested questions to ask the founder (focused on equity: performance unlocks, time-based vest portion, 100% acceleration at exit). Signal: Raheel really wants Juan to land this offer. Positive read on him as future colleague (collaborative, not adversarial).
@@ -127,7 +127,7 @@ Stated plan: ASTEROI to $25-30K MRR by Q1-Q2 2027, then full-time.
 
 **Path B-cliff is almost free in ASTEROI terms** (1 quarter, +$87K cash). Real delay only triggers if year-1 evaluation says stay.
 
-## Contract Questions Sent to Founder (2026-05-27)
+## Contract Questions Sent to Founder (2026-05-28)
 1. What are the performance unlocks for equity? What portion is time-based vest vs performance-gated?
 2. Is it 100% acceleration on the unvested portion at exit / change of control?
 3. Termination without cause — what happens to unvested phantom?
@@ -136,6 +136,53 @@ Stated plan: ASTEROI to $25-30K MRR by Q1-Q2 2027, then full-time.
 Timing: asked for ~1 week to think it through, will come back with a clean decision.
 
 **Deliberately omitted:** Mars Men counter-offer mention. Naming Mars Men signals leverage-play, looks transactional, and sets wrong tone before day one. Same leverage retained internally, no broadcast. Questions 1 + 2 use Raheel's exact framing (he coached the script).
+
+## Founder's Answers — Equity Decoded (received 2026-05-28)
+
+### Only 1/3 of the equity is guaranteed
+The 0.75% is **three separate 0.25% slugs**, each with its own trigger:
+
+| Slug | Trigger | Realistically pays at |
+|---|---|---|
+| 0.25% **time** | 4-yr vest (100% accel on exit) | Always — the only floor |
+| 0.25% **rev/EBITDA** | $14M/month ($168M ARR) + 5% EBITDA | $500M+ exit scale |
+| 0.25% **exit** | $250M+ exit | A $250M+ exit |
+
+**66% is gated** — past the "if >30% gated, the bet weakens" threshold. "Similar performance unlocks as others on the team."
+
+### Gates unlock at different scales
+Revenue gate needs $14M/month = $168M ARR ≈ ~$500M exit at 3x. So:
+- **$250M exit** (~$83M ARR) → rev gate NOT hit → **0.5%** (time + exit)
+- **$500M+ exit** (~$168M ARR) → all three → **0.75%**
+
+### Recomputed payout ladder (realistic, vs founder's pitch)
+| Exit | Slugs vesting | Equity | Juan net | Founder pitch |
+|---|---|---|---|---|
+| $100M | time | 0.25% | ~$212K | — |
+| $150M | time | 0.25% | ~$337K | — |
+| $250M | time + exit | 0.5% | ~$1.18M | $1.7M ❌ overstated |
+| $500M | all three | 0.75% | ~$3.64M | $3.7M ✓ |
+| $1B | all three | 0.75% | ~$7.39M | $7.4M ✓ |
+
+**Founder's $250M → $1.7M is overstated by ~$525K** — his table assumed full 0.75% at every level, but the rev gate won't be met at a $250M exit. High-end numbers hold.
+
+### Other terms (all confirmed)
+- **100% acceleration on exit / change of control** ✓ (applies to time slug; exit gate self-triggers at $250M+)
+- **Termination without cause:** vested keeps, unvested gone. **No protection — the one real gap** given org instability (Raheel could leave again).
+- **Bonus 20% target, NOT cap** ✓ — 70% annual on company rev/EBITDA (~$35K, same as leadership), 30% quarterly on values/priorities/responsibilities (~$15K, more controllable).
+
+### How the bet changed
+1. **Floor roughly halved.** Modest outcome pays time slug only (~$87-337K), not the earlier $260-640K estimate.
+2. **Bet is now explicitly binary on $250M+.** Below that, equity is thin. Aligns Juan with big outcomes — fair, but raises the stakes on kill-criteria discipline.
+3. **Termination-without-cause has zero protection** — real risk worth one counter.
+
+### The one counter to raise (attached to the yes, next week)
+Termination-without-cause protection: accelerate ~12 months of the time slug, or accelerated vesting if terminated without cause within the first 24 months. It's downside protection, not more upside, so it doesn't break the "same as the team" precedent. **Everything else: accept** ("similar to others on the team" signals the gate structure won't move).
+
+### Status (2026-05-28)
+- Founder (Jason) answered all 4 contract questions.
+- Juan sent a warm acknowledgment, buying ~1 week to decide.
+- Still pending: Mars Men phantom shares number.
 
 ## Claude's Recommendation
 **Take the pet brand offer** unless Mars Men comes back with an exceptional package.
@@ -165,15 +212,17 @@ Timing: asked for ~1 week to think it through, will come back with a clean decis
 Juan's gut on the founder. Chemistry. Whether Raheel is the kind of operator Juan wants 3 more years next to. **Those weigh as much as the math.** Gut yes + math go = go. Gut no = don't sign into 3 years of friction for $1M.
 
 ## Next Actions
-- [x] Send contract questions to founder (sent 2026-05-27)
-- [ ] Wait for founder's answers on the 4 contract questions
+- [x] Send contract questions to founder (sent 2026-05-28)
+- [x] Founder answered all 4 questions (2026-05-28) — see "Founder's Answers" section
+- [x] Sent warm acknowledgment, bought ~1 week to decide
 - [ ] Wait for Mars Men phantom shares number (expected this week)
-- [ ] Re-evaluate when all data points in hand
+- [ ] Next week: give decision + raise termination-without-cause counter (only)
 - [ ] If accepting: negotiate data access as part of contract
 - [ ] If accepting: re-read this page at month 10 before deciding stay-or-cliff
 
 ---
 
 ### Changelog
-- **2026-05-27:** Initial file created from decision-in-progress conversation with Claude.
-- **2026-05-27:** Contract questions sent to founder (4 questions, Raheel-coached framing on equity). Mars Men leverage deliberately omitted from message. Raheel-coaching detail added to Origin.
+- **2026-05-28:** Initial file created from decision-in-progress conversation with Claude.
+- **2026-05-28:** Contract questions sent to founder (4 questions, Raheel-coached framing on equity). Mars Men leverage deliberately omitted from message. Raheel-coaching detail added to Origin.
+- **2026-05-28:** Founder (Jason) answered all 4. Decoded equity: 0.75% = three 0.25% slugs (only time-based guaranteed; rev/EBITDA + $250M-exit gated). Recomputed realistic payout ladder — founder's $250M→$1.7M overstated by ~$525K. Floor halved vs prior estimate. One counter to raise: termination-without-cause protection. Bonus is target-not-cap. Sent acknowledgment, decision due next week.

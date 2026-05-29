@@ -8,14 +8,24 @@ updated: 2026-04-07
 
 # Life Memory Log
 
-## [2026-05-27] update | Sent contract questions to pet brand founder
+## [2026-05-28] update | Founder answered contract questions — equity decoded
+- Founder (Jason) answered all 4. **Equity decoded:** 0.75% = three separate 0.25% slugs — (1) time-based 4yr vest, (2) gated on $14M/month + 5% EBITDA, (3) gated on $250M+ exit. **Only 0.25% (one third) is guaranteed; 66% gated.**
+- **Gates unlock at different scales:** rev gate needs $168M ARR (~$500M exit). So $250M exit → 0.5% only; $500M+ → full 0.75%.
+- **Recomputed payout ladder:** $100M→$212K, $250M→$1.18M, $500M→$3.64M, $1B→$7.39M. Founder's $250M→$1.7M pitch overstated by ~$525K (assumed full participation; rev gate not met at that exit). High-end numbers hold.
+- **Other terms:** 100% acceleration on exit/CoC ✓. Termination without cause = vested keeps, unvested gone (no protection — the one real gap given org instability). Bonus 20% target NOT cap (70% annual company rev/EBITDA, 30% quarterly on values).
+- **Bet changed:** floor roughly halved (modest outcome pays ~$87-337K, not prior $260-640K estimate). Now explicitly binary on $250M+.
+- **Plan:** sent warm acknowledgment, bought ~1 week. Next week give decision + raise ONE counter (termination-without-cause protection). Everything else accept.
+- Still pending: Mars Men phantom shares number.
+- Pages updated: life/wiki/pet-brand-offer.md
+
+## [2026-05-28] update | Sent contract questions to pet brand founder
 - Sent 4-question message to founder asking about: (1) performance unlocks split + time-based vest portion, (2) 100% acceleration at exit/change of control, (3) termination-without-cause treatment of unvested phantom, (4) bonus structure specifics ($50K target vs cap, metrics).
 - **Raheel coached from inside** — sent Juan suggested questions on equity. Signal: he wants Juan to land this. Q1 + Q2 use Raheel's exact framing.
 - **Strategically omitted:** Mars Men counter-offer mention. Naming it signals leverage-play, looks transactional, wrong tone before day one. Same leverage retained internally without broadcast.
 - Asked for ~1 week to decide.
 - Pages updated: life/wiki/pet-brand-offer.md
 
-## [2026-05-27] decision | Pet brand offer received — decision-in-progress
+## [2026-05-28] decision | Pet brand offer received — decision-in-progress
 - **External offer from new pet brand** (founder wrote message directly to Juan; Raheel is the bridge after leaving Mars Men in May 2026).
 - **Terms:** $230K base + $50K bonus target (20% of base) + 0.75% phantom equity. $15M hurdle, 4-year vest, 12-month cliff, performance unlocks (split TBD). Title: Head of CRO and E-commerce. Reports to Raheel. Start mid-to-late June 2026.
 - **Pet brand state:** $12M ARR ($1M/month), established product-market fit, single brand with multi-product roadmap. No non-compete conflict (pets ≠ men's supplements).
