@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slide Library v2 — Real Archimoto</title>
+<style>
+  /* ===== Real brand fonts (local) ===== */
+  @font-face { font-family:'Archimoto'; src:url('./assets/fonts/archimoto-heavy.otf') format('opentype'); font-weight:900; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Archimoto'; src:url('./assets/fonts/archimoto-black.otf') format('opentype'); font-weight:800; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Archimoto'; src:url('./assets/fonts/archimoto-bold.otf') format('opentype'); font-weight:700; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Archivo'; src:url('./assets/fonts/archivo-regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face { font-family:'Archivo'; src:url('./assets/fonts/archivo-medium.ttf') format('truetype'); font-weight:500; font-display:swap; }
+  @font-face { font-family:'Archivo'; src:url('./assets/fonts/archivo-bold.ttf') format('truetype'); font-weight:700; font-display:swap; }
+  @font-face { font-family:'Archivo'; src:url('./assets/fonts/archivo-extrabold.ttf') format('truetype'); font-weight:800; font-display:swap; }
+  @font-face { font-family:'Archivo'; src:url('./assets/fonts/archivo-black.ttf') format('truetype'); font-weight:900; font-display:swap; }
+
+  :root {
+    --negro:#000; --blanco:#fff; --verde:#D3FF4E; --lila:#B084D3; --gris:#E7E5E6;
+    --archimoto:'Archimoto', system-ui, sans-serif;
+    --archivo:'Archivo', system-ui, sans-serif;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:36px 28px 90px; background:#141414; color:#ddd; font-family:var(--archivo); }
+  h1 { font-family:var(--archimoto); font-weight:900; font-size:30px; margin:0 0 6px; color:#fff; letter-spacing:0.5px; }
+  .sub { color:#8a8a8a; font-size:13px; max-width:860px; line-height:1.6; margin-bottom:28px; }
+  .sub code { background:#2a2a2a; color:var(--verde); padding:1px 6px; border-radius:3px; font-size:12px; }
+  .section-head { font-family:var(--archivo); font-weight:900; color:#fff; font-size:17px; margin:34px 0 16px; border-bottom:2px solid #3a3a3a; padding-bottom:6px; letter-spacing:0.3px; }
+  .grid { display:grid; grid-template-columns:repeat(3, 300px); gap:30px 24px; justify-content:start; }
+  .wrap { display:flex; flex-direction:column; gap:8px; }
+  .lbl { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:#7d7d7d; }
+  .lbl b { color:var(--verde); }
+  .note { color:#7a7a7a; font-size:10px; line-height:1.4; font-style:italic; }
+
+  /* ===== Base slide 4:5 (300×375) ===== */
+  .slide { width:300px; height:375px; position:relative; overflow:hidden; border-radius:3px;
+           box-shadow:0 4px 24px rgba(0,0,0,0.55); font-family:var(--archivo); }
+
+  /* ===== Footer ===== */
+  .ft { position:absolute; left:22px; right:22px; bottom:18px; display:flex; align-items:center; gap:9px; }
+  .ft .av { width:30px; height:30px; border-radius:50%; flex-shrink:0;
+            background:radial-gradient(circle at 50% 35%, #efdcee 0%, #c7a3e0 45%, var(--lila) 100%);
+            box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.12); }
+  .ft .id { display:flex; flex-direction:column; line-height:1.05; }
+  .ft .wm { font-family:var(--archimoto); font-weight:900; font-size:13px; letter-spacing:.5px; color:var(--lila); }
+  .ft .url { font-family:var(--archivo); font-weight:600; font-size:9px; opacity:.9; }
+  .ft .ar { margin-left:auto; font-size:19px; font-weight:900; line-height:1; }
+  .light .url, .light .ar { color:var(--negro); }
+  .dark  .url, .dark  .ar { color:var(--blanco); }
+
+  /* ===== 1 COVER ===== */
+  .cover { background:#0a0a0c; }
+  .cover .bg { position:absolute; inset:0; background:url('./assets/space-1.jpg') center/cover;
+               filter:grayscale(1) contrast(1.1) brightness(.5); }
+  .cover .vig { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(0,0,0,.55) 100%); }
+  .cover .a1 { position:absolute; top:-14px; left:-18px; width:78px; height:78px;
+               background:url('./assets/asteroid-1.png') center/contain no-repeat; opacity:.9; }
+  .cover .a2 { position:absolute; bottom:78px; right:-16px; width:64px; height:64px;
+               background:url('./assets/asteroid-2.png') center/contain no-repeat; opacity:.85; }
+  .cover .h { position:absolute; top:42px; left:26px; right:26px; font-family:var(--archimoto);
+              font-weight:900; color:var(--lila); text-transform:uppercase; font-size:46px;
+              line-height:.9; letter-spacing:.5px; }
+  .cover .s { position:absolute; top:172px; left:26px; right:26px; font-family:var(--archivo);
+              font-weight:800; color:var(--blanco); font-size:26px; line-height:1.02; }
+  .cover .card { position:absolute; left:30px; right:30px; bottom:74px; background:#fff; color:#111;
+                 border-radius:8px; padding:11px 13px; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+  .cover .card .t { font-size:9px; font-weight:600; color:#555; }
+  .cover .card .v { font-size:22px; font-weight:800; }
+  .cover .card .d { font-size:9px; color:#1f9d4d; font-weight:700; margin-left:5px; }
+
+  /* ===== 2 HOOK-STAT ===== */
+  .hook { background:var(--gris); }
+  .hook .qo, .hook .qc { position:absolute; font-family:var(--archimoto); font-weight:900;
+                          color:var(--lila); font-size:96px; line-height:.55; }
+  .hook .qo { top:34px; left:24px; }
+  .hook .qc { bottom:108px; right:24px; transform:rotate(180deg); }
+  .hook .b { position:absolute; left:34px; right:34px; top:50%; transform:translateY(-54%); text-align:center;
+             font-family:var(--archivo); font-weight:500; color:#111; font-size:19px; line-height:1.32; }
+  .hook .b b { font-weight:900; }
+  .hook .gh { position:absolute; bottom:66px; right:34px; width:78px; height:78px;
+              background:url('./assets/asteroid-3.png') center/contain no-repeat; opacity:.22; filter:grayscale(1); }
+
+  /* ===== 3 ANNOTATED ===== */
+  .ann { background:var(--gris); }
+  .ann .card { position:absolute; left:24px; right:24px; top:54px; background:#fff; color:#111;
+               border-radius:10px; padding:15px 17px; box-shadow:0 10px 28px rgba(0,0,0,.12); }
+  .ann .card .t { font-size:11px; font-weight:600; color:#555; margin-bottom:3px; }
+  .ann .card .v { font-size:27px; font-weight:800; }
+  .ann .card .d { font-size:10px; color:#1f9d4d; font-weight:700; margin-left:6px; }
+  .ann .co { position:absolute; top:98px; right:30px; background:var(--lila); color:#111;
+             padding:9px 13px; border-radius:9px; font-weight:800; font-size:11px; line-height:1.2;
+             max-width:135px; box-shadow:0 6px 18px rgba(0,0,0,.2); }
+  .ann .gh { position:absolute; bottom:64px; right:30px; width:110px; height:110px;
+             background:url('./assets/asteroid-3.png') center/contain no-repeat; opacity:.18; filter:grayscale(1); }
+
+  /* ===== 4 CONCEPT ===== */
+  .con { background:var(--gris); padding:34px 28px 64px; }
+  .con h2 { font-family:var(--archivo); font-weight:900; color:#111; margin:0 0 12px; font-size:27px; line-height:1.0; }
+  .con .ul { width:64px; height:6px; background:var(--verde); margin-bottom:20px; }
+  .con .pill { display:inline-block; background:var(--lila); color:#111; padding:9px 15px;
+               border-radius:24px; font-weight:700; font-size:12px; margin-bottom:18px; }
+  .con .b { font-family:var(--archivo); font-size:14px; color:#111; line-height:1.45; }
+  .con .b b { font-weight:900; }
+
+  /* ===== 5 SECTION BREAK ===== */
+  .brk { background:var(--verde); }
+  .brk .a1 { position:absolute; top:-12px; right:-14px; width:92px; height:92px;
+             background:url('./assets/asteroid-1.png') center/contain no-repeat; filter:grayscale(1) contrast(1.2); }
+  .brk .a2 { position:absolute; bottom:74px; left:-16px; width:66px; height:66px;
+             background:url('./assets/asteroid-2.png') center/contain no-repeat; filter:grayscale(1) contrast(1.2); }
+  .brk .h { position:absolute; left:28px; right:34px; top:50%; transform:translateY(-58%);
+            font-family:var(--archivo); font-weight:900; color:#111; font-size:38px; line-height:.98; letter-spacing:-.5px; }
+
+  /* ===== 6 NARRATIVE ===== */
+  .nar { background:var(--gris); padding:64px 30px; }
+  .nar .b { font-family:var(--archivo); font-weight:500; color:#111; font-size:17px; line-height:1.42; text-align:center;
+            position:absolute; left:30px; right:30px; top:50%; transform:translateY(-58%); }
+  .nar .b b { font-weight:900; }
+
+  /* ===== 7 PULL-QUOTE ===== */
+  .quo { background:var(--gris); }
+  .quo .qm { position:absolute; top:36px; left:28px; font-family:var(--archimoto); font-weight:900;
+             color:var(--lila); font-size:120px; line-height:.5; }
+  .quo .b { position:absolute; left:32px; right:32px; top:51%; transform:translateY(-56%); text-align:center;
+            font-family:var(--archivo); font-style:italic; font-weight:500; color:#111; font-size:17px; line-height:1.34; }
+  .quo .at { position:absolute; left:0; right:0; bottom:74px; text-align:center; font-family:var(--archimoto);
+             font-weight:900; color:var(--lila); font-size:13px; letter-spacing:1px; }
+
+  /* ===== 8 NUMBERED ===== */
+  .num { background:var(--gris); padding:30px 28px 64px; }
+  .num .n { font-family:var(--archimoto); font-weight:900; color:var(--lila); font-size:104px; line-height:.82; }
+  .num h2 { font-family:var(--archivo); font-weight:900; color:#111; font-size:25px; margin:6px 0 12px; line-height:1.0; }
+  .num .b { font-family:var(--archivo); font-size:13.5px; color:#111; line-height:1.5; }
+  .num .b b { font-weight:900; }
+
+  /* ===== 9 INFOGRAPHIC FRAMEWORK ===== */
+  .igf { background:#0a0a0c; }
+  .igf .tex { position:absolute; inset:0; background:url('./assets/noise.jpg') center/300px; opacity:.07; }
+  .igf .h { position:absolute; top:26px; left:24px; right:24px; font-family:var(--archivo); font-weight:900;
+            color:var(--verde); font-size:25px; line-height:.98; }
+  .igf .cards { position:absolute; top:96px; left:24px; right:24px; display:flex; flex-direction:column; gap:9px; }
+  .igf .c { background:rgba(255,255,255,.05); border-left:3px solid var(--lila); padding:10px 13px;
+            display:flex; align-items:flex-start; gap:11px; }
+  .igf .c .n { font-family:var(--archimoto); font-weight:900; color:var(--lila); font-size:24px; line-height:.9; width:34px; flex-shrink:0; }
+  .igf .c .nm { font-family:var(--archivo); font-weight:800; color:#fff; font-size:14px; line-height:1.05; margin-bottom:3px; }
+  .igf .c .d { font-family:var(--archivo); font-size:10px; color:rgba(255,255,255,.7); line-height:1.35; }
+  .igf .a { position:absolute; bottom:74px; right:-12px; width:64px; height:64px;
+            background:url('./assets/asteroid-2.png') center/contain no-repeat; opacity:.55; filter:grayscale(1) brightness(1.4); }
+
+  /* ===== 10 INFOGRAPHIC CHECKLIST ===== */
+  .igc { background:var(--gris); padding:24px 24px 64px; }
+  .igc h2 { font-family:var(--archivo); font-weight:900; color:#111; font-size:25px; margin:0 0 6px; line-height:1.0; }
+  .igc .ul { width:58px; height:5px; background:var(--verde); margin-bottom:16px; }
+  .igc .s { margin-bottom:12px; }
+  .igc .s .h { font-family:var(--archivo); font-weight:900; color:var(--lila); font-size:13px;
+               text-transform:uppercase; letter-spacing:.4px; margin-bottom:5px; }
+  .igc .s .it { font-family:var(--archivo); font-size:11px; color:#111; line-height:1.5; }
+  .igc .s .it div { margin:2px 0; }
+  .igc .s .it .ck { background:var(--verde); color:#111; font-weight:900; padding:0 4px;
+                    border-radius:3px; margin-right:7px; font-size:9px; }
+  .igc .a { position:absolute; bottom:72px; right:-8px; width:56px; height:56px;
+            background:url('./assets/asteroid-1.png') center/contain no-repeat; opacity:.45; }
+
+  /* ===== 11 CLOSING CTA ===== */
+  .cta { background:var(--verde); }
+  .cta .a { position:absolute; top:-12px; right:-14px; width:92px; height:92px;
+            background:url('./assets/asteroid-2.png') center/contain no-repeat; filter:grayscale(1) contrast(1.2); }
+  .cta .h { position:absolute; left:28px; right:34px; top:36%; transform:translateY(-50%);
+            font-family:var(--archivo); font-weight:900; color:#111; font-size:30px; line-height:1.0; letter-spacing:-.5px; }
+  .cta .i { position:absolute; left:28px; right:28px; top:60%; font-family:var(--archivo); font-weight:600;
+            color:#111; font-size:14px; line-height:1.35; }
+  .cta .i b { background:#111; color:var(--verde); font-weight:800; padding:2px 7px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+<h1>Slide Library v2 — real Archimoto, corrected type system</h1>
+<p class="sub">
+  Now using the <strong>actual Archimoto V00 Heavy</strong> font for cover hero + wordmark + numbers, <strong>Archivo Black</strong> for headlines (matching your real carousels — not condensed Big Shoulders), and <strong>Archivo</strong> for body. All loaded locally from <code>Asteroi Branding/Tipografías/</code>. Real palette, real asteroid PNGs, real desaturated space bg. Avatar is still a Lila placeholder (final = your photo).
+</p>
+
+<div class="section-head">CAROUSEL SLIDE TYPES (8)</div>
+<div class="grid">
+
+  <div class="wrap"><div class="lbl"><b>01</b> · cover</div>
+    <div class="slide cover">
+      <div class="bg"></div><div class="vig"></div>
+      <div class="a1"></div><div class="a2"></div>
+      <div class="h">El Secreto<br>del AOV</div>
+      <div class="s">Que no conocías</div>
+      <div class="card"><div class="t">Average order value over time</div>
+        <span class="v">€60</span><span class="d">↗ 10%</span>
+        <svg width="100%" height="40" viewBox="0 0 240 40"><path d="M0 26 Q30 22 60 24 T120 14 T180 8 T240 20" stroke="#1f7ad6" stroke-width="2.5" fill="none"/><path d="M0 30 Q40 28 80 27 T160 30 T240 27" stroke="#7a99b8" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/></svg>
+      </div>
+      <div class="ft dark"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div></div>
+    </div>
+    <div class="note">Dark desaturated space · Archimoto Lila hero · embedded mockup card · no arrow</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>02</b> · hook-stat</div>
+    <div class="slide hook">
+      <div class="qo">“</div><div class="qc">“</div><div class="gh"></div>
+      <div class="b">El <b>87% de los eCommerce</b> que conozco optimizan su AOV para fantasmas.</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">Pull-out claim · Lila quote marks · faded decor</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>03</b> · annotated-mockup</div>
+    <div class="slide ann">
+      <div class="card"><div class="t">Average order value over time</div>
+        <span class="v">€60</span><span class="d">↗ 10%</span>
+        <svg width="100%" height="58" viewBox="0 0 252 58"><path d="M0 38 Q30 34 60 36 T120 22 T180 10 T252 30" stroke="#1f7ad6" stroke-width="2.5" fill="none"/><path d="M0 44 Q40 40 80 38 T160 34 T252 40" stroke="#7a99b8" stroke-width="2" stroke-dasharray="4,3" fill="none"/></svg>
+      </div>
+      <div class="co">Este cliente NO EXISTE</div><div class="gh"></div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">Embedded chart + Lila callout pill</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>04</b> · concept-explainer</div>
+    <div class="slide con">
+      <h2>El Problema<br>Oculto del AOV</h2>
+      <div class="ul"></div>
+      <div class="pill">AOV = Facturación / Núm. Órdenes</div>
+      <div class="b">La fórmula parece básica, ¿verdad? <b>Ahí está el problema.</b> El promedio dice mucho… pero no te dice nada útil para decidir.</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">Archivo Black title + Verde underline + Lila pill + body</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>05</b> · section-break</div>
+    <div class="slide brk">
+      <div class="a1"></div><div class="a2"></div>
+      <div class="h">Un Caso Real Que Te Va a Impactar</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">Verde full-bleed · grayscale asteroids · Archivo Black headline</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>06</b> · narrative-paragraph</div>
+    <div class="slide nar">
+      <div class="b">Mientras tanto, regalaste envío gratis a <b>350 personas</b> que iban a comprar el producto de €65 igualmente.</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">One idea per slide · ≤60 words</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>07</b> · pull-quote</div>
+    <div class="slide quo">
+      <div class="qm">“</div>
+      <div class="b">Todo sistema diseñado para el promedio está destinado al fracaso.</div>
+      <div class="at">— TODD ROSE</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">External quote + Archimoto Lila attribution</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>08</b> · numbered-part</div>
+    <div class="slide num">
+      <div class="n">01.</div>
+      <h2>Media, Moda y Mediana</h2>
+      <div class="b"><b>Media:</b> el promedio que conoces.<br><b>Moda:</b> el valor que más se repite.<br><b>Mediana:</b> el valor que divide el conjunto.</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div><div class="ar">→</div></div>
+    </div>
+    <div class="note">Big Archimoto number · framework series (01,02,03…)</div>
+  </div>
+
+</div>
+
+<div class="section-head">INFOGRAPHIC SLIDE TYPES (2)</div>
+<div class="grid">
+
+  <div class="wrap"><div class="lbl"><b>09</b> · infographic-framework</div>
+    <div class="slide igf">
+      <div class="tex"></div>
+      <div class="h">Las 3 Herramientas del CMO Inteligente</div>
+      <div class="cards">
+        <div class="c"><div class="n">01</div><div><div class="nm">Media, Moda y Mediana</div><div class="d">Tres lentes para leer qué dice tu AOV en realidad.</div></div></div>
+        <div class="c"><div class="n">02</div><div><div class="nm">Histogramas</div><div class="d">Agrupa pedidos por intervalo y revela dónde se concentran.</div></div></div>
+        <div class="c"><div class="n">03</div><div><div class="nm">Segmentos</div><div class="d">Demográficos, comportamiento y valor financiero por capa.</div></div></div>
+      </div>
+      <div class="a"></div>
+      <div class="ft dark"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div></div>
+    </div>
+    <div class="note">All components in ONE image · standalone · no arrow</div>
+  </div>
+
+  <div class="wrap"><div class="lbl"><b>10</b> · infographic-checklist</div>
+    <div class="slide igc">
+      <h2>Checklist Suscripción</h2><div class="ul"></div>
+      <div class="s"><div class="h">Adquisición</div><div class="it"><div><span class="ck">✓</span>Quiz de onboarding con 3 preguntas</div><div><span class="ck">✓</span>Discount-stack en checkout</div><div><span class="ck">✓</span>Upsell post-purchase</div></div></div>
+      <div class="s"><div class="h">Retención</div><div class="it"><div><span class="ck">✓</span>Skip-month en vez de cancelar</div><div><span class="ck">✓</span>Pause con incentivo</div></div></div>
+      <div class="s"><div class="h">Monetización</div><div class="it"><div><span class="ck">✓</span>Add-on de €5–10 al mes</div><div><span class="ck">✓</span>Plan anual con descuento</div></div></div>
+      <div class="a"></div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div></div>
+    </div>
+    <div class="note">Categorized list · Verde check chips · no arrow</div>
+  </div>
+
+</div>
+
+<div class="section-head">UTILITY</div>
+<div class="grid">
+  <div class="wrap"><div class="lbl"><b>11</b> · closing-cta</div>
+    <div class="slide cta">
+      <div class="a"></div>
+      <div class="h">¿Quieres el GPT que hace esto por ti?</div>
+      <div class="i">Comenta <b>"AOV"</b> y te lo mando por DM.</div>
+      <div class="ft light"><div class="av"></div><div class="id"><div class="wm">JCGIUSTO</div><div class="url">jcgiusto.com</div></div></div>
+    </div>
+    <div class="note">Verde full-bleed · clear CTA · no arrow (chain ends)</div>
+  </div>
+</div>
+
+</body>
+</html>

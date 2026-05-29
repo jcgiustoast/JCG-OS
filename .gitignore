@@ -22,3 +22,6 @@ content/memory/notion-sync-state.json
 .env
 .claude/scheduled_tasks.lock
 .claude/worktrees/
+
+# Superpowers brainstorm scratch (ephemeral preview-server sessions, large duplicated assets)
+.superpowers/
