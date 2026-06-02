@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<style>{{ theme_css | safe }}</style>
+<style>
+  body{margin:0;background:#fff;}
+  .stage{display:flex;flex-direction:column;gap:0;}
+</style>
+</head><body>
+<div class="stage">
+{% for slide in slides %}
+{% include "slides/" ~ slide.type ~ ".html.j2" %}
+{% endfor %}
+</div>
+</body></html>

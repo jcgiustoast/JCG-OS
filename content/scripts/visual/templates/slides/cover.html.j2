@@ -1,0 +1,13 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide cover">
+  <div class="bg"></div><div class="vig"></div><div class="a1"></div><div class="a2"></div>
+  <div class="h">{{ slide.fields.headline | nl2br }}</div>
+  {% if slide.fields.subtitle %}<div class="s">{{ slide.fields.subtitle }}</div>{% endif %}
+  {% if slide.fields.card_value %}
+  <div class="card"><div class="chrome"><i></i><i></i><i></i></div>
+    <div class="bd"><div class="t">{{ slide.fields.card_label }}</div>
+      <span class="v">{{ slide.fields.card_value }}</span>
+      {% if slide.fields.card_delta %}<span class="d">{{ slide.fields.card_delta }}</span>{% endif %}</div></div>
+  {% endif %}
+  {{ footer("dark center", arrow=false) }}
+</div>

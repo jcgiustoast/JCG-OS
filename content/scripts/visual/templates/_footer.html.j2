@@ -1,0 +1,7 @@
+{% macro footer(variant="light", arrow=true) %}
+<div class="ft {{ variant }}">
+  <div class="av"></div>
+  <div class="id"><div class="wm"><span class="jc">JC</span>GIUSTO</div><div class="url">jcgiusto.com</div></div>
+  {% if arrow and "center" not in variant %}<div class="ar">→</div>{% endif %}
+</div>
+{% endmacro %}
