@@ -3,7 +3,7 @@ title: Visual Carousel & Infographic Engine — Design
 description: Code-first engine that turns Juan's content into on-brand LinkedIn/Instagram carousels, infographics, and single images. HTML/CSS templates rendered to PNG/PDF via Playwright. Brand = ASTEROI (jcgiusto.com footer). Track B adds an optional KIE-generated illustration layer for visuals no template fits.
 type: spec
 author: claude
-status: draft — visual direction validated, ready to lock + write implementation plan
+status: locked — visual direction + brand corrections validated in browser; ready for implementation plan
 created: 2026-05-29
 updated: 2026-06-02
 confidence: high
@@ -138,15 +138,22 @@ This is the canonical brand layer. Sourced from the `asteroi-brand` skill + Juan
 ### Typography (THE critical correction — confirmed by side-by-side render)
 | Font | Role |
 |---|---|
-| **Archimoto V00 — Medium (500)** | Cover hero headline, big numbers (`01.`), the JCGIUSTO wordmark, quote attribution. The stencil "spice". **Medium weight — NOT Heavy** (Heavy is too thick; Juan's is airy/open-cut). |
-| **Big Shoulders Text — Black (900)** | **ALL headlines** — section breaks, concept titles, infographic titles, numbered-part titles. Condensed-tall. (Earlier mistake: Archivo Black was wrongly used here — too wide/round, looked "robotic".) |
-| **Archivo** | Body copy, labels, captions, bullets, cover subtitle. |
+| **Archimoto V00 — Medium (500)** | Cover hero headline, big numbers (`01.`), quote attribution. The stencil "spice". **Medium weight — NOT Heavy** (Heavy is too thick; Juan's is airy/open-cut). The **JCGIUSTO wordmark** is also Archimoto but heavier + tighter — see Wordmark rule. |
+| **Big Shoulders Text — Black (900)** | **ALL titles/headlines** — section breaks, concept titles, infographic titles, numbered-part titles. Condensed-tall. (Earlier mistake: Archivo Black was wrongly used here — too wide/round, looked "robotic".) |
+| **Archivo** | Body copy, labels, captions, bullets. **Body text only.** |
+
+**Type rule (per Juan, 2026-06-02) — split by ROLE/SIZE, not element name:**
+- **Archivo** = running / long text: sentences, paragraphs, captions, bullets, small labels, the footer URL.
+- **Big Shoulders Text** = short display text set large: all titles/headlines, **large subtitles**, big callouts — anything large that isn't a paragraph.
+- **Archimoto** = cover hero headline, big numbers (`01.`), the wordmark.
+- Rule of thumb: **long → Archivo; big & short → Big Shoulders. Never Archivo for large display text.** (Exact px threshold is Juan's call.)
+- Applied: cover subtitle ("Que no conocías") → Big Shoulders (short + large); the hook-stat sentence + narrative paragraphs stay Archivo (running text).
 
 ### Visual rules
-- **Wordmark is two-tone:** `JC` = Verde-on-dark / Lila-on-light; `GIUSTO` = Blanco-on-dark / Negro-on-light. Avatar sits on a Lila circle.
+- **Wordmark `JCGIUSTO` — two-tone, tight, bold:** `JC` = Verde-on-dark / Lila-on-light; `GIUSTO` = Blanco-on-dark / Negro-on-light. Set in Archimoto **Bold / ExtraBold** with **negative letter- & word-spacing so `JC` and `GIUSTO` sit close together** — heavier and tighter than the rest of the type, matching Juan's reference mark (2026-06-02). Avatar = **Juan's headshot** (provided) on a Lila circle.
 - **Footer variants:** **centered, no arrow** on cover & quote slides; **left-aligned + bold arrow →** on content slides.
 - **Dark slides use a desaturated space photo background** (`grayscale(1) brightness(~.45)`) + dark overlay — **never flat black**. Applies to cover, pull-quote, dark infographics.
-- **Asteroids** = grayscale cut-out PNGs, **corner-anchored, bleeding off-canvas, in asymmetric pairs** (e.g. top-left + bottom-right). Never centered.
+- **Asteroids** = grayscale cut-out PNGs, **pinned to the edges/corners, bleeding off-canvas, in asymmetric pairs** (e.g. top-left + bottom-right). They frame the composition from the sides — **never in the central area, never floating in the middle** (reinforced 2026-06-02).
 - **Grain texture** overlay (~10%, `mix-blend-mode: overlay`) on every slide for the tactile/analog quality.
 - **Color discipline:** one Verde moment per slide max; Verde & Lila never at equal weight in the same block.
 - **Pull-quote ("Insight Clave") composition:** space-photo bg + big WHITE centered Big-Shoulders title + a **translucent Lila rounded panel** holding the quote + large bracketing Lila quote marks + centered footer.
@@ -218,6 +225,8 @@ Credits per image · non-deterministic across runs (mitigated by seed + caching)
 - **Brand assets:** `C:\Users\jcgiu\Documents\Asteroi Branding\` — logos (SVG/PNG/JPG, all color variants), fonts (`Tipografías/Archimoto V00`, `Big Shoulders Text`, `Archivo`), `Recursos/Elementos` (asteroid cut-outs), `Recursos/Imagenes` (space photos), `Recursos/Texturas y Fondos` (noise), `Manual de Marca.pdf`.
 - **Brand skill (canonical brand rules + tokens.css):** `C:\Users\jcgiu\Documents\solari\.claude\skills\asteroi-brand\` (SKILL.md, assets/tokens.css, noise-texture.css, references/aesthetic-guide.md, logo-usage.md, color-print.md).
 - A working font + image subset is copied into this spec's `2026-05-29-visual-carousel-engine/assets/`.
+- **Avatar (NEW — required, not yet on disk):** Juan's headshot must be added as `2026-05-29-visual-carousel-engine/assets/avatar.png` — **transparent-background cutout preferred** so CSS controls the Lila circle (a face-on-Lila version also works but is less flexible). Chat-attached images can't be written to disk automatically; Juan drops the file in.
+- **Space backgrounds (corrections #4):** source from `Asteroi Branding\Identidad\Recursos\Imagenes\Asteroi_Imagenes (1–15).jpg`, desaturated per the dark-slide rule. `space-1.jpg` already copied into `assets/`; copy the chosen additional photos in during the build.
 
 ## Out of scope (Phase 2)
 

@@ -3,11 +3,12 @@
 Runs on the host (via Bash) so no base64 enters the model context."""
 import base64, re, sys, io, subprocess
 
-SESSION = r"C:\Users\jcgiu\Documents\JCG-OS\.superpowers\brainstorm\483-1780045608"
-CONTENT = SESSION + r"\content"
-SRC_HTML = CONTENT + r"\slide-library-v4-src.html"
-OUT_HTML = CONTENT + r"\slide-library-v4.html"
-ASSETS = CONTENT + r"\assets"
+import os
+# CONTENT = the engine folder (this script lives in <engine>/tooling/), resolved relative to __file__
+CONTENT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC_HTML = os.path.join(CONTENT, "slide-library-v4-src.html")
+OUT_HTML = os.path.join(CONTENT, "slide-library-v4.html")
+ASSETS = os.path.join(CONTENT, "assets")
 
 try:
     from PIL import Image
@@ -48,7 +49,7 @@ fonts = {
     "archivo-regular.ttf", "archivo-medium.ttf", "archivo-bold.ttf", "archivo-extrabold.ttf", "archivo-black.ttf",
     "bigshoulders-black.ttf", "bigshoulders-extrabold.ttf",
 }
-img_maxw = {"space-1.jpg": 760, "asteroid-1.png": 320, "asteroid-2.png": 320, "asteroid-3.png": 320, "noise.jpg": 240}
+img_maxw = {"space-1.jpg": 760, "asteroid-1.png": 320, "asteroid-2.png": 320, "asteroid-3.png": 320, "noise.jpg": 240, "avatar.png": 240}
 
 count = {"font": 0, "img": 0, "miss": 0}
 
