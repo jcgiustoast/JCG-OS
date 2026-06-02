@@ -78,5 +78,9 @@ def parse_bars(value):
             continue
         label, _, h = chunk.rpartition(":")
         hi = h.endswith("*")
-        out.append({"label": label.strip(), "height": int(h.rstrip("*")), "hi": hi})
+        try:
+            height = int(h.rstrip("*"))
+        except ValueError:
+            raise ValueError(f"parse_bars: height must be an integer in chunk {chunk!r}")
+        out.append({"label": label.strip(), "height": height, "hi": hi})
     return out

@@ -38,7 +38,7 @@ def test_bundle_pdf_combines_pngs(tmp_path):
 
 
 def test_e2e_aov_renders_all_types(tmp_path):
-    text = Path("tests/visual/fixtures/aov.md").read_text(encoding="utf-8")
+    text = (Path(__file__).parent / "fixtures" / "aov.md").read_text(encoding="utf-8")
     piece = parse_piece(text)
     assert len(piece.slides) == 12
     pngs = render_piece(piece, tmp_path)
@@ -47,3 +47,17 @@ def test_e2e_aov_renders_all_types(tmp_path):
         assert Image.open(p).size == (1080, 1350)
     pdf = bundle_pdf(pngs, tmp_path)
     assert pdf.exists()
+
+
+def test_render_rejects_unknown_slide_type():
+    import pytest
+    piece = parse_piece("---\nmode: single\n---\n# slide:covert\nheadline: X\n")
+    with pytest.raises(ValueError):
+        render_html(piece)
+
+
+def test_render_rejects_missing_required_field():
+    import pytest
+    piece = parse_piece("---\nmode: single\n---\n# slide:data-chart\ntitle: T\n")  # no bars
+    with pytest.raises(ValueError):
+        render_html(piece)

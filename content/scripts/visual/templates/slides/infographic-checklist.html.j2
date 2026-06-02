@@ -5,7 +5,7 @@
   {% for s in slide.fields.section | aslist %}
     {% set p = s | pipes %}
     <div class="s"><div class="h">{{ p[0] }}</div><div class="it">
-      {% for it in p[1].split(';') %}<div><span class="ck">✓</span>{{ it.strip() }}</div>{% endfor %}
+      {% if p | length > 1 %}{% for it in p[1].split(';') %}<div><span class="ck">✓</span>{{ it.strip() }}</div>{% endfor %}{% endif %}
     </div></div>
   {% endfor %}
   <div class="a"></div>

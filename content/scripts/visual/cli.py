@@ -4,7 +4,9 @@ from pathlib import Path
 from content.scripts.visual.piece import parse_piece
 from content.scripts.visual.render import render_piece, bundle_pdf
 
-ROOT = Path("content/raw/visuals")
+# anchor to the repo's content/ dir (cli.py lives in content/scripts/visual/) so the
+# command works regardless of the caller's current working directory
+ROOT = Path(__file__).resolve().parents[2] / "raw" / "visuals"
 
 _SCAFFOLD = """---
 title: {slug}

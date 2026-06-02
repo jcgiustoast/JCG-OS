@@ -37,8 +37,35 @@ def _aslist(value):
     return value if isinstance(value, list) else [value]
 
 
+_REQUIRED = {
+    "cover": ["headline"],
+    "hook-stat": ["text"],
+    "data-chart": ["title", "bars"],
+    "concept-explainer": ["title", "body"],
+    "section-break": ["headline"],
+    "narrative": ["body"],
+    "pull-quote": ["title", "quote"],
+    "numbered-part": ["number", "title", "body"],
+    "screenshot": ["title"],
+    "infographic-framework": ["title", "card"],
+    "infographic-checklist": ["title", "section"],
+    "closing-cta": ["headline"],
+}
+
+
+def validate(piece):
+    """Raise ValueError with a clear message for unknown slide types or missing required fields."""
+    for i, s in enumerate(piece.slides, 1):
+        if s.type not in _REQUIRED:
+            raise ValueError(f"slide {i}: unknown type {s.type!r} (known: {', '.join(sorted(_REQUIRED))})")
+        for fld in _REQUIRED[s.type]:
+            if not s.fields.get(fld):
+                raise ValueError(f"slide {i} ({s.type}): missing required field {fld!r}")
+
+
 def render_html(piece):
     """Render a Piece into a single self-contained HTML string (CSS inlined)."""
+    validate(piece)
     theme_css = (_TPL_DIR / "theme.css").read_text(encoding="utf-8")
     return _env().get_template("base.html.j2").render(slides=piece.slides, theme_css=theme_css)
 
@@ -71,6 +98,8 @@ def render_piece(piece, out_dir):
 
 def bundle_pdf(png_paths, out_dir):
     """Combine PNGs (in order) into out_dir/bundle.pdf. Returns the Path."""
+    if not png_paths:
+        raise ValueError("bundle_pdf: no images to bundle")
     out_dir = Path(out_dir)
     imgs = [Image.open(p).convert("RGB") for p in png_paths]
     pdf = out_dir / "bundle.pdf"
