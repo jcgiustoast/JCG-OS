@@ -1,0 +1,8 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide con">
+  <h2>{{ slide.fields.title | nl2br }}</h2>
+  <div class="ul"></div>
+  {% if slide.fields.pill %}<div class="pill">{{ slide.fields.pill }}</div>{% endif %}
+  <div class="b">{{ slide.fields.body | safe }}</div>
+  {{ footer("light") }}
+</div>

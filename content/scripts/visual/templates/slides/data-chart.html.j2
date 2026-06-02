@@ -1,0 +1,12 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide chart">
+  <h2>{{ slide.fields.title | nl2br }}</h2>
+  {% if slide.fields.caption %}<div class="cap">{{ slide.fields.caption }}</div>{% endif %}
+  <div class="bars">
+  {% for b in slide.fields.bars | bars %}
+    <div class="bar{{ ' hi' if b.hi else '' }}" style="height:{{ b.height }}%"{% if b.hi %} data-val="{{ b.label }}"{% endif %}><span>{{ b.label }}</span></div>
+  {% endfor %}
+  </div>
+  {% if slide.fields.tag %}<div class="tag">{{ slide.fields.tag }}</div>{% endif %}
+  {{ footer("light") }}
+</div>

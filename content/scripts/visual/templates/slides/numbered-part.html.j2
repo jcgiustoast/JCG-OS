@@ -1,0 +1,7 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide num">
+  <div class="n">{{ slide.fields.number }}</div>
+  <h2>{{ slide.fields.title | nl2br }}</h2>
+  <div class="b">{{ slide.fields.body | safe }}</div>
+  {{ footer("light") }}
+</div>

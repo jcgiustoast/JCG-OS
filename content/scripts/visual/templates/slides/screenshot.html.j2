@@ -1,0 +1,19 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide shot">
+  <h2>{{ slide.fields.title | nl2br }}</h2>
+  <div class="frame">
+  {% if slide.fields.image %}
+    <img src="assets/{{ slide.fields.image }}" style="width:100%;display:block">
+  {% else %}
+    <div class="chrome"><i></i><i></i><i></i><div class="bar"></div></div>
+    <div class="body">
+      <div class="row m"></div>
+      <div class="kpi"><div class="k"><b>€42</b><span>AOV</span></div><div class="k"><b>+18%</b><span>Add-on rate</span></div></div>
+      <div class="mini"><svg width="100%" height="46" viewBox="0 0 240 46"><path d="M0 36 Q40 30 80 32 T160 18 T240 10" stroke="#1f7ad6" stroke-width="2.5" fill="none"/></svg></div>
+      <div class="row s"></div>
+    </div>
+  {% endif %}
+  </div>
+  {% if slide.fields.callout %}<div class="co">{{ slide.fields.callout }}</div>{% endif %}
+  {{ footer("light") }}
+</div>

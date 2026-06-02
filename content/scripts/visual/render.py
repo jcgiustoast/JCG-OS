@@ -21,12 +21,20 @@ def _env():
     env.filters["pipes"] = parse_pipes
     env.filters["bars"] = parse_bars
     env.filters["nl2br"] = _nl2br
+    env.filters["aslist"] = _aslist
     return env
 
 
 def _nl2br(value):
     r"""Escape text and convert an author's literal '\n' into <br>."""
     return Markup("<br>".join(escape(part) for part in str(value).split("\\n")))
+
+
+def _aslist(value):
+    """Normalize a field that may be a single string or a list (repeated key) into a list."""
+    if not value:
+        return []
+    return value if isinstance(value, list) else [value]
 
 
 def render_html(piece):

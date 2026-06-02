@@ -1,0 +1,8 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide quo">
+  <div class="bg"></div><div class="vig"></div><div class="a1"></div><div class="a2"></div>
+  <div class="title">{{ slide.fields.title | nl2br }}</div>
+  <div class="qo">“</div><div class="qc">“</div>
+  <div class="panel"><div class="b">{{ slide.fields.quote | safe }}</div></div>
+  {{ footer("dark center", arrow=false) }}
+</div>

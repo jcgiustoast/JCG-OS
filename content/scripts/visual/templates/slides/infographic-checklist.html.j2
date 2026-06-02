@@ -1,0 +1,13 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide igc">
+  <h2>{{ slide.fields.title | nl2br }}</h2>
+  <div class="ul"></div>
+  {% for s in slide.fields.section | aslist %}
+    {% set p = s | pipes %}
+    <div class="s"><div class="h">{{ p[0] }}</div><div class="it">
+      {% for it in p[1].split(';') %}<div><span class="ck">✓</span>{{ it.strip() }}</div>{% endfor %}
+    </div></div>
+  {% endfor %}
+  <div class="a"></div>
+  {{ footer("light", arrow=false) }}
+</div>

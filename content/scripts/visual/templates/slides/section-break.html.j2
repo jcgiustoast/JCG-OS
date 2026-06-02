@@ -1,0 +1,7 @@
+{% from "_footer.html.j2" import footer %}
+<div class="slide brk">
+  <div class="a1"></div><div class="a2"></div>
+  {% if slide.fields.eyebrow %}<div class="ey">{{ slide.fields.eyebrow }}</div>{% endif %}
+  <div class="h">{{ slide.fields.headline | nl2br }}</div>
+  {{ footer("light") }}
+</div>
