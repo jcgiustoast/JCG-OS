@@ -1,11 +1,11 @@
 ---
 title: Professional — Mars Men
-description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($175K base + $1.5K/month objectives bonus, no equity), owns CRO + retention + LP/website dev. Raheel (former manager) departed May 2026 to a pet brand; reporting line currently unclear. Mars Men preparing phantom shares retention offer (size TBD). Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads. See [[pet-brand-offer]] for active decision.
+description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($175K base + $1.5K/month objectives bonus, no equity), owns CRO + retention + LP/website dev. Raheel (former manager) departed May 2026 to a pet brand; reporting line currently unclear. Mars Men countered with cash match + 0.1% equity (2026-06-01); current lean is to stay as a 2-year 'ASTEROI bridge.' Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads. See [[pet-brand-offer]] for active decision.
 type: professional
 sources: []
 related: [identity, learning, projects]
 created: 2026-04-05
-updated: 2026-05-28
+updated: 2026-06-01
 confidence: high
 ---
 
@@ -40,9 +40,9 @@ confidence: high
 ## Org Disruption — May 2026
 - **Raheel (Juan's manager) left** for a pet brand role with better cash + equity.
 - **Reporting line broken** — unclear who Juan reports to now. Awaiting Zach/Benjamin clarification.
-- **Phantom shares promised** — Mars Men told Juan retention phantom shares are coming "this week." Size unknown. Reactive offer (Raheel is recruiting Juan to follow him).
-- **Decision pending:** see [[pet-brand-offer]] for full analysis of competing offer and Claude's recommendation.
-- **Mars Men retention bar (per Claude's analysis):** must hit all 4 of (a) phantom ≥0.5% with hurdle ≤$25M, (b) cash within $20K of pet brand, (c) clean reporting line within 7 days, (d) credible exit timeline ≤24mo. Realistic expectation: 1 of 4.
+- **Phantom shares — countered 2026-06-01:** Mars Men matched cash ($230K base + $50K bonus) but offered only **0.1% equity** (lowball vs the ~0.3–0.5% implied fair for the seat). Reactive retention play after Raheel began recruiting Juan to PAK.
+- **Decision pending:** see [[pet-brand-offer]] for full analysis. Current lean: **stay at Mars Men as a 2-year "ASTEROI bridge"** (nearer/surer exit, low disruption to the stealth build), conditional on a credible 2027 exit + a Raheel gut-check. Equity reframed as upside on the bridge, not the deciding factor.
+- **[Superseded 2026-06-01]** The earlier "retention bar: must hit all 4 / realistic 1 of 4" framing is replaced by the ASTEROI-bridge analysis in [[pet-brand-offer]]. Cash got matched; once PAK's $250M exit is discounted, equity is ~a wash — so the decision turned on disruption/certainty, not comp.
 
 ## Contract & Constraints
 - **Non-compete:** Applies to direct competitors — subscription brands selling in the US. Current ASTEROI clients (Australian DTC, Spanish supplements, German helmets) do not conflict.
@@ -71,5 +71,6 @@ confidence: high
 - **2026-04-06:** Added contract constraints (non-compete scope, no equity, content constraint on Meta Ads topics). Added exit timeline (~12 months). Added transition plan to career goals.
 - **2026-05-28:** Updated compensation — base raised from $150K to $175K, added $1,500/month objectives bonus ($18K/year max, $193K total target).
 - **2026-05-28:** Logged Raheel's departure (May 2026) to pet brand; Juan's reporting line broken; Mars Men preparing reactive phantom shares offer. Cross-linked to [[pet-brand-offer]] for active decision context.
+- **2026-06-01:** Mars Men countered (cash matched, 0.1% equity). Superseded the "retention bar: 1 of 4" framing — decision reframed as the ASTEROI-bridge analysis in [[pet-brand-offer]]; current lean is to stay. Updated description + Org Disruption section.
 
 **Related files:** [[identity]] | [[learning]] | [[projects]]
