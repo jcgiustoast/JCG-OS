@@ -3,7 +3,7 @@ title: Life Wiki Index
 description: Master catalog of all life/professional/personal wiki pages.
 type: index
 created: 2026-04-06
-updated: 2026-05-28
+updated: 2026-06-03
 ---
 
 # Life Wiki Index
@@ -22,6 +22,7 @@ updated: 2026-05-28
 ## Projects
 - [[projects]] — Strategic vision: build ASTEROI into a CTC-like agency. Three clients (GLAMRDiP, BAIA, UNIT 1), AURAL venture, and 6-tool product suite (Ad Creative System, Meta Ads Deployer, Robyn Wrapper, Sense/AsteroiAds, Triple Whale Clone, LP Generator). (confidence: high)
 - [[engagement-targets]] — Curated Twitter/LinkedIn accounts to monitor daily for ASTEROI inbound + personal brand. Powers /engage. Inspiration tier seeded; ICPs and Peers to be filled. (confidence: medium)
+- [[hone-deal]] — Active ASTEROI side deal: Facebath DTC skincare (CEO Saad). Proposal sent 2026-06-03. Launch ~$25K + retainer $10–14K/mo, design/dev excluded. Awaiting response. (confidence: high)
 
 ## Memory
 - [[log]] — Chronological activity log. Most recent first.

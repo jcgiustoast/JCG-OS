@@ -8,6 +8,17 @@ updated: 2026-04-07
 
 # Life Memory Log
 
+## [2026-06-03] decision | Hone/Facebath proposal sent to Saad
+- Sent final proposal to **Saad (CEO, Hone)** for **Facebath** DTC skincare launch + growth retainer. Side ASTEROI job (Juan + Martin), positioned as "Juan + Martin on the side."
+- **Launch ~$25K** (our layer; **design + dev NOT included** — Hone sources or we quote). Store strategy + build direction, subscription MVP (portal/cancel flow/dunning/compliance), conversion copy (homepage + 4 PDPs + supporting), 3 launch LPs, analytics + margin dashboard, brief + QA. Built bottom-up: Juan ~65h @ $200, Martin ~87h @ $67, 3 engine LPs @ $1K, +15% buffer.
+- **Retainer:** CRO 3–5 experiments/mo + roadmap + biweekly = $6K/mo; LPs $1K each; ~4/mo $10K, 8/mo $14K; 12-mo lock = discount. Design/dev not included.
+- **Terms:** launch 50/50 (start / go-live); retainer net 30. **Need from Hone:** voice guide + approved claims. Optional add-on: email foundation.
+- **Internal rates locked:** Juan $200/hr (~1.7× his $120 floor from $250K salary), Martin $67/hr (1/3 Juan), LP ~85% margin, CRO from Juan's $5K-for-4-experiments anchor. Martin ~7h over his 2h/day cap → contractor absorbs.
+- **Context:** launch target late July / early Aug 2026; logo done, packaging final, voice ~locked; Hone hiring FT media buyer; Saad said "propose both," gave no budget ceiling.
+- **Status:** awaiting Saad reply / 30-min scope call. Open: designer/dev sourcing, retainer volume + term, email add-on.
+- Pages created: life/wiki/hone-deal.md
+- Pages updated: life/wiki/life-index.md
+
 ## [2026-05-28] update | Founder answered contract questions — equity decoded
 - Founder (Jason) answered all 4. **Equity decoded:** 0.75% = three separate 0.25% slugs — (1) time-based 4yr vest, (2) gated on $14M/month + 5% EBITDA, (3) gated on $250M+ exit. **Only 0.25% (one third) is guaranteed; 66% gated.**
 - **Gates unlock at different scales:** rev gate needs $168M ARR (~$500M exit). So $250M exit → 0.5% only; $500M+ → full 0.75%.
