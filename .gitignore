@@ -25,3 +25,4 @@ content/memory/notion-sync-state.json
 
 # Superpowers brainstorm scratch (ephemeral preview-server sessions, large duplicated assets)
 .superpowers/
+.claude/settings.local.json
