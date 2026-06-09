@@ -6,14 +6,14 @@ author: claude
 sources: []
 related: [professional, strategy, projects]
 created: 2026-05-28
-updated: 2026-05-28 (message sent to founder)
+updated: 2026-06-09 (Mars Men counter delivered — $230K + $50K + 0.1% phantom)
 confidence: high
 ---
 
 # Pet Brand Offer — Decision-in-Progress
 
 ## Status
-**Principle-yes pending:** (a) Mars Men phantom shares counteroffer (expected this week), (b) contract clarifications from founder.
+**Mars Men counter DELIVERED (2026-06-09):** raise to $230K base + $50K bonus + 0.1% phantom shares (single-trigger payout if Mars Men is sold, no gates). **Cash matches the pet brand exactly ($280K = $280K), and the reporting line is resolved (new Head of Growth hired).** With both open questions now answered, the decision has tilted: **staying at Mars Men is the stronger default** for Juan's actual plan (see "2026-06-09 Re-evaluation"). Pet brand only wins if he abandons the ASTEROI timeline to chase the high-variance equity ceiling.
 
 ## Origin
 - Founder of pet brand ("Jason") wrote the offer message directly to Juan (not via Raheel).
@@ -184,7 +184,43 @@ Termination-without-cause protection: accelerate ~12 months of the time slug, or
 - Juan sent a warm acknowledgment, buying ~1 week to decide.
 - Still pending: Mars Men phantom shares number.
 
-## Claude's Recommendation
+## 2026-06-09 Re-evaluation — Mars Men Counter Changes the Math
+
+The two things that made the pet brand win by default were (1) a +$87K cash gap and (2) Mars Men offering $0 equity vs the pet brand's phantom. **Both just collapsed:**
+
+- **Cash gap → zero.** Mars Men matched the pet brand's $280K target exactly ($230K base + $50K bonus).
+- **Equity gap → much smaller than the headline.** Mars Men's 0.1% looks 5x below the old 0.5% bar, but that bar ignored company size. Mars Men is a ~$100M run-rate, L-Catterton-backed, profitable, hypergrowth brand; the pet brand is $12M ARR and must ~20-40x to reach a $250M+ exit.
+
+**Revenue-adjusted, 0.1% of Mars Men ≈ 0.8% of the pet brand** — above the pet brand's 0.75% headline and well above its realistic ~0.25-0.5% after gates.
+
+Rough exit ladders (both hurdle/term-dependent — many unknowns):
+
+| Exit | Mars Men 0.1% | Pet brand (decoded) |
+|---|---|---|
+| $100M | ~$100K | 0.25% → ~$212K |
+| $250M | ~$250K | 0.5% → ~$1.18M |
+| $500M | ~$500K | 0.75% → ~$3.64M |
+| $1B | ~$1M | 0.75% → ~$7.39M |
+
+Per dollar of exit the pet brand pays more — BUT Mars Men is far more likely to actually reach a large exit, and sooner (L Catterton drives toward liquidity). It is 0.1% of a *probable* big outcome vs 0.5% of an *improbable* one.
+
+**Net (updated with 2026-06-09 clarifications):** both open questions are now answered — (1) the phantom is a clean **single-trigger payout if Mars Men is sold** (no gates, simpler than the pet brand's 66%-gated structure), and (2) the **reporting line is resolved** (new Head of Growth hired; Juan not concerned). Both point the same way: **staying at Mars Men is now the stronger default.**
+
+**The decisive lens is Juan's own ASTEROI timeline.** Both equity grants only pay if Juan is still in-seat at the company's exit:
+- Mars Men is held 3-5 yrs by L Catterton; Juan plans to leave in ~12 months for ASTEROI → **a sale almost certainly lands after he's gone → the 0.1% likely pays $0 to him.** Retention handcuff, not real comp — unless he'd stay 3-5 yrs to ride it.
+- The pet brand equity has the same problem, worse: 12-mo cliff + 4-yr vest + termination-without-cause forfeiture. Leaving on the cliff forfeits everything but cash + credential.
+
+**So if Juan sticks to the ASTEROI plan, neither equity grant matters much** — the decision collapses to four things, all favoring Mars Men:
+- **Cash:** even ($280K = $280K).
+- **Credential:** Mars Men's $100M L-Catterton brand >> the pet brand's $12M for personal-brand building (the engine of Phase 1).
+- **Disruption:** staying = zero; jumping = restart, re-prove, drive a 2x-growth mandate.
+- **ASTEROI capacity:** staying = coast + build; jumping = full attention to a new job.
+
+**Recommendation: STAY at Mars Men.** The raise just made the stealth-build seat better funded for the same coast. **Decline the pet brand gracefully — a "not now," not a "never"** (keep Raheel + the founder warm; they're future ASTEROI network). The *only* scenario where jumping wins: Juan consciously decides to abandon/delay the ASTEROI plan to chase the pet brand's higher-variance equity ceiling (0.75% of a company he could personally move the needle on, with Raheel's backing and a bigger title). That's a different bet than the one he's been building toward.
+
+---
+
+## Claude's Recommendation (pre-counter — superseded by 2026-06-09 re-evaluation above)
 **Take the pet brand offer** unless Mars Men comes back with an exceptional package.
 
 ### Why pet brand wins by default
@@ -194,13 +230,13 @@ Termination-without-cause protection: accelerate ~12 months of the time slug, or
 4. Cliff option is clean: 12mo evaluation, leave with $280K if not on track
 5. Raheel pulling Juan personally is a strong professional signal (saw him operate up close 12-18mo, betting career capital)
 
-### What would flip recommendation to Mars Men (must hit all 4)
-1. Phantom shares ≥0.5% with hurdle ≤$25M
-2. Cash matching pet brand within $20K ($200K+ base, $30K+ bonus)
-3. Named manager + clear scope post-Raheel (within 7 days)
-4. Credible exit timeline ≤24 months with specifics (banker engaged, strategic conversations)
+### What would flip recommendation to Mars Men (must hit all 4) — SCORED 2026-06-09
+1. Phantom shares ≥0.5% with hurdle ≤$25M → **0.1% delivered.** Fails the % threshold, BUT (a) the threshold was denominator-blind — Mars Men is ~8x the pet brand's size; (b) the structure is *cleaner* — a single-trigger payout if Mars Men is sold, no revenue/EBITDA gates. ⚠️ See 2026-06-09 re-evaluation.
+2. Cash matching pet brand within $20K → **HIT exactly. $230K base + $50K bonus = $280K = pet brand.** ✓
+3. Named manager + clear scope post-Raheel → **HIT — Mars Men hired a new Head of Growth; Juan reports into that line and is not concerned.** ✓
+4. Credible exit timeline ≤24 months → **Unlikely.** L Catterton invested March 2026; typical hold 3-5 years.
 
-**Realistic Mars Men response: 1 of 4.** Unlikely to retain Juan structurally.
+**Score: ~2.5 of 4** (cash hit, reporting line hit, equity clean-but-small, exit timeline long). The "must hit all 4" rule is now obsolete — criterion 1 is denominator-blind and the equity structure is clean. See re-evaluation.
 
 ### What would worry Claude about pet brand (would change recommendation)
 - Performance unlocks gate >30% of 0.75% → real equity closer to 0.5%, bet weakens
@@ -215,10 +251,10 @@ Juan's gut on the founder. Chemistry. Whether Raheel is the kind of operator Jua
 - [x] Send contract questions to founder (sent 2026-05-28)
 - [x] Founder answered all 4 questions (2026-05-28) — see "Founder's Answers" section
 - [x] Sent warm acknowledgment, bought ~1 week to decide
-- [ ] Wait for Mars Men phantom shares number (expected this week)
-- [ ] Next week: give decision + raise termination-without-cause counter (only)
-- [ ] If accepting: negotiate data access as part of contract
-- [ ] If accepting: re-read this page at month 10 before deciding stay-or-cliff
+- [x] Mars Men counter arrived (2026-06-09): 0.1% phantom (sale payout, no gates) + cash match to $280K; reporting line resolved (new Head of Growth)
+- [ ] **Decide & decline pet brand gracefully** — recommendation is now STAY (see 2026-06-09 re-evaluation). "Not now," not "never" — keep Raheel + founder warm (future ASTEROI network).
+- [ ] (Low priority) Confirm Mars Men phantom fine print — any tenure-at-sale / leaver provisions. Mostly moot if Juan exits for ASTEROI before any sale.
+- [ ] Re-confirm ASTEROI Phase 1 is still the spine — the raise makes the Mars Men stealth-build seat better funded.
 
 ---
 
@@ -226,3 +262,5 @@ Juan's gut on the founder. Chemistry. Whether Raheel is the kind of operator Jua
 - **2026-05-28:** Initial file created from decision-in-progress conversation with Claude.
 - **2026-05-28:** Contract questions sent to founder (4 questions, Raheel-coached framing on equity). Mars Men leverage deliberately omitted from message. Raheel-coaching detail added to Origin.
 - **2026-05-28:** Founder (Jason) answered all 4. Decoded equity: 0.75% = three 0.25% slugs (only time-based guaranteed; rev/EBITDA + $250M-exit gated). Recomputed realistic payout ladder — founder's $250M→$1.7M overstated by ~$525K. Floor halved vs prior estimate. One counter to raise: termination-without-cause protection. Bonus is target-not-cap. Sent acknowledgment, decision due next week.
+- **2026-06-09:** Mars Men counter delivered — $230K base + $50K bonus + 0.1% phantom shares. Cash now matches pet brand exactly ($280K). Scored against 4-criteria flip bar; flagged the 0.5% phantom bar as denominator-blind (Mars Men ~8x bigger). Added 2026-06-09 re-evaluation.
+- **2026-06-09 (update):** Clarified — phantom is a single-trigger payout if Mars Men is sold (no gates); reporting line resolved (new Head of Growth hired). Bar now ~2.5 of 4. **Recommendation flips to STAY at Mars Men:** both equity grants only pay at exit, and Juan's ~12-mo ASTEROI timeline means the 0.1% likely pays $0 anyway — so the decision collapses to cash (even) + credential (Mars Men stronger) + capacity (staying favors ASTEROI). Pet brand only wins if Juan abandons the ASTEROI plan for the equity lottery. Action: decline pet brand gracefully.

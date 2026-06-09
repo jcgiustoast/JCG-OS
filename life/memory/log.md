@@ -8,6 +8,15 @@ updated: 2026-04-07
 
 # Life Memory Log
 
+## [2026-06-09] decision | Mars Men retention raise delivered — recommendation flips to STAY
+- **Raise:** base $175K→$230K, bonus →$50K, plus first-ever equity at Mars Men: **0.1% phantom shares — single-trigger payout if the company is sold, no gates.** New cash target $280K.
+- **Matches the pet brand offer's cash EXACTLY** ($280K = $280K). The +$87K gap that made pet brand win by default is gone. **Reporting line also resolved** — Mars Men hired a new Head of Growth; Juan not concerned.
+- **Scored vs Claude's 4-criteria retention bar:** cash → HIT; reporting line → HIT; phantom ≥0.5% → 0.1% (fails % but cleaner structure than pet brand's gated equity); exit timeline ≤24mo → unlikely (L Catterton 3-5yr hold). ~2.5 of 4 — the "all 4" rule is now obsolete.
+- **Denominator reframe:** Mars Men is ~8x the pet brand's revenue, so 0.1% of Mars Men ≈ 0.8% of the pet brand revenue-adjusted — and a likelier/sooner exit. It's 0.1% of a probable outcome vs 0.5% of an improbable one.
+- **Decisive lens — ASTEROI timeline:** both equity grants only pay if Juan is in-seat at exit. He plans to leave in ~12mo for ASTEROI; Mars Men holds 3-5yrs → the 0.1% likely pays $0 to him anyway. So the decision collapses to cash (even) + credential (Mars Men $100M >> pet $12M) + capacity (staying = coast + build ASTEROI; jumping = full attention). All favor staying.
+- **Recommendation: STAY at Mars Men.** The raise makes the stealth-build seat better funded. Pet brand only wins if Juan abandons the ASTEROI plan to chase its higher-variance equity ceiling. Decline pet brand gracefully (not-now, not never; keep Raheel + founder warm).
+- Pages updated: life/wiki/professional.md, life/wiki/pet-brand-offer.md
+
 ## [2026-05-28] update | Founder answered contract questions — equity decoded
 - Founder (Jason) answered all 4. **Equity decoded:** 0.75% = three separate 0.25% slugs — (1) time-based 4yr vest, (2) gated on $14M/month + 5% EBITDA, (3) gated on $250M+ exit. **Only 0.25% (one third) is guaranteed; 66% gated.**
 - **Gates unlock at different scales:** rev gate needs $168M ARR (~$500M exit). So $250M exit → 0.5% only; $500M+ → full 0.75%.

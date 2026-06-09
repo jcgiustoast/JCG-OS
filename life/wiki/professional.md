@@ -1,6 +1,6 @@
 ---
 title: Professional — Mars Men
-description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm ($175K base + $1.5K/month objectives bonus, no equity), owns CRO + retention + LP/website dev. Raheel (former manager) departed May 2026 to a pet brand; reporting line currently unclear. Mars Men preparing phantom shares retention offer (size TBD). Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads. See [[pet-brand-offer]] for active decision.
+description: Mars Men — $100M run rate DTC testosterone brand, $27.5M Series A from L Catterton (March 2026). Juan is Head of eComm, owns CRO + retention + LP/website dev. June 2026 retention raise delivered: $230K base + $50K bonus + 0.1% phantom shares (up from $175K + $1.5K/mo, no equity) — matches pet brand cash exactly. Raheel (former manager) departed May 2026 to a pet brand; reporting line still unclear. Non-compete covers US subscription brands only. ~12 month exit timeline. Cannot publicly discuss Meta Ads. See [[pet-brand-offer]] for active decision (this raise is the awaited Mars Men counter).
 type: professional
 sources: []
 related: [identity, learning, projects]
@@ -23,7 +23,7 @@ confidence: high
 - **Zach Stuck** — Co-founder. DTC growth operator. Background: Founder of Easy Street Brands, Homestead Studio (eComm growth agency). Expert in scaling 6-figure stores to 7-8 figures.
 - **Benjamin Smith** — Co-founder. The brand face and origin story. Personal testosterone transformation is the core marketing narrative.
 - **Raheel** — Former Head of Growth. **Left Mars Men May 2026** over equity (wasn't offered as much as he wanted; got better package at a pet brand). Was Juan's manager. Now recruiting Juan to his new role. See [[pet-brand-offer]].
-- **Juan Cruz (you)** — Head of eCommerce. Reports to Raheel. Owns experimentation across website, retention, and subscription. Leads design, development, and copy for landing pages and website. Supports acquisition strategy but does not own creatives or ad spend. **Compensation:** $175K/year base + $1,500/month objectives bonus (up to $18K/year, $193K total target).
+- **Juan Cruz (you)** — Head of eCommerce. Reports to Raheel. Owns experimentation across website, retention, and subscription. Leads design, development, and copy for landing pages and website. Supports acquisition strategy but does not own creatives or ad spend. **Compensation (as of June 2026 retention raise):** $230K/year base + $50K bonus + 0.1% phantom shares ($280K cash target). Up from $175K base + $1,500/month objectives bonus, no equity ($193K target). Phantom hurdle / vesting / acceleration terms not yet known.
 
 ## Juan's Scope
 - **CRO / Experimentation:** Running tests on site, optimizing conversion rates, landing page performance
@@ -39,14 +39,15 @@ confidence: high
 
 ## Org Disruption — May 2026
 - **Raheel (Juan's manager) left** for a pet brand role with better cash + equity.
-- **Reporting line broken** — unclear who Juan reports to now. Awaiting Zach/Benjamin clarification.
-- **Phantom shares promised** — Mars Men told Juan retention phantom shares are coming "this week." Size unknown. Reactive offer (Raheel is recruiting Juan to follow him).
-- **Decision pending:** see [[pet-brand-offer]] for full analysis of competing offer and Claude's recommendation.
-- **Mars Men retention bar (per Claude's analysis):** must hit all 4 of (a) phantom ≥0.5% with hurdle ≤$25M, (b) cash within $20K of pet brand, (c) clean reporting line within 7 days, (d) credible exit timeline ≤24mo. Realistic expectation: 1 of 4.
+- **Reporting line RESOLVED (June 2026)** — Mars Men hired a new Head of Growth (Raheel's replacement). Juan reports into that line and is not concerned about it.
+- **Retention offer DELIVERED (June 2026)** — Mars Men countered with a raise to $230K base + $50K bonus + 0.1% phantom shares (up from $175K + $1.5K/mo, no equity). Reactive to Raheel recruiting Juan.
+- **Scored against Claude's 4-criteria retention bar:** (a) phantom ≥0.5% w/ hurdle ≤$25M → **0.1%, fails the % threshold** — but structure is clean (single-trigger sale payout, no gates), see denominator caveat below; (b) cash within $20K of pet brand → **MATCHES exactly** ($280K = $280K); (c) clean reporting line → **HIT — new Head of Growth hired; Juan not concerned**; (d) credible exit timeline ≤24mo → **unlikely (L Catterton invested March 2026, holds 3-5 yrs)**. Mechanically: ~2.5 of 4.
+- **Denominator caveat (Claude, 2026-06-09):** the "≥0.5%" bar was set blind to company size. Mars Men is ~8x the pet brand's revenue ($100M run rate vs $12M ARR), so 0.1% of Mars Men is revenue-comparable to ~0.8% of the pet brand — and far more likely to reach a large exit. The bar needs re-evaluation, not mechanical application. Decision is now genuinely close.
+- **Decision pending:** see [[pet-brand-offer]] — this raise is the awaited Mars Men counter; recommendation needs a fresh look.
 
 ## Contract & Constraints
 - **Non-compete:** Applies to direct competitors — subscription brands selling in the US. Current ASTEROI clients (Australian DTC, Spanish supplements, German helmets) do not conflict.
-- **Equity:** No equity path in the short term. Juan is salaried at $175K/year base with a $1,500/month bonus tied to hitting objectives (up to $18K/year, $193K total target). No current stock/option plan.
+- **Equity:** As of June 2026 retention raise, Juan holds **0.1% phantom shares** — his first equity-like instrument at Mars Men. **Structure: a single-trigger payout if Mars Men is sold** (change-of-control only, no revenue/EBITDA gates — cleaner than the pet brand's). Cash comp is $230K base + $50K bonus ($280K target). Previously $175K base + $1,500/month bonus, no equity ($193K target). **Caveat vs ASTEROI plan:** L Catterton typically holds 3-5 yrs, so a sale inside Juan's ~12-month exit window is unlikely — the 0.1% likely pays $0 if he leaves on schedule. It is a retention handcuff, only valuable if he'd stay through an exit.
 - **Exit timeline:** Planning to leave in ~12 months (~Q1-Q2 2027), once ASTEROI reaches $25-30K/month gross and Tincho can service clients independently.
 - **Content constraint:** Juan can freely publish about CRO, experimentation, subscription economics, retention/LTV, and eComm finance — these are his actual domain at Mars Men. He CANNOT publicly discuss Meta Ads strategy or performance marketing tactics — that's Raheel's domain, and it would look strange to Zach/Benjamin since Juan doesn't touch paid acquisition at Mars Men.
 - **Side work awareness:** Mars Men is not aware of ASTEROI, the agency clients, or AURAL.
@@ -71,5 +72,6 @@ confidence: high
 - **2026-04-06:** Added contract constraints (non-compete scope, no equity, content constraint on Meta Ads topics). Added exit timeline (~12 months). Added transition plan to career goals.
 - **2026-05-28:** Updated compensation — base raised from $150K to $175K, added $1,500/month objectives bonus ($18K/year max, $193K total target).
 - **2026-05-28:** Logged Raheel's departure (May 2026) to pet brand; Juan's reporting line broken; Mars Men preparing reactive phantom shares offer. Cross-linked to [[pet-brand-offer]] for active decision context.
+- **2026-06-09:** Mars Men retention raise delivered — base $175K→$230K, bonus →$50K, plus first-ever equity (0.1% phantom shares). Cash now matches pet brand offer exactly ($280K). Scored against retention bar (~1.5 of 4; flagged that the 0.5% phantom bar was denominator-blind). Updated comp, equity, and org-disruption sections.
 
 **Related files:** [[identity]] | [[learning]] | [[projects]]
