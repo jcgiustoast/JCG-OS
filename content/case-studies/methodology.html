@@ -322,5 +322,16 @@ a{color:inherit;}
   els.forEach(function(e){io.observe(e);});
 })();
 </script>
+<script>
+/* When embedded in an iframe (e.g. an Oxygen Code Block), report height to the
+   parent so it can auto-size the frame. No-op when viewed standalone. */
+(function(){
+  if(window.parent===window)return;
+  function postH(){try{parent.postMessage({asteroiEmbed:'methodology',height:document.documentElement.scrollHeight},'*');}catch(e){}}
+  window.addEventListener('load',postH);window.addEventListener('resize',postH);
+  setTimeout(postH,400);setTimeout(postH,1300);
+  if('ResizeObserver' in window){try{new ResizeObserver(postH).observe(document.body);}catch(e){}}
+})();
+</script>
 </body>
 </html>
