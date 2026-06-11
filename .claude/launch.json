@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "case-studies",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "7359"],
+      "port": 7359
+    }
+  ]
+}
