@@ -8,6 +8,13 @@ updated: 2026-06-15
 
 # Life Memory Log
 
+## [2026-06-15] update | Manly + VAHDAM proposals sent
+- Both client proposals went out via Notion: **Manly** (LP + CRO + Advisory + Bundle) and **VAHDAM** (Advisory + Paid Media + LP).
+- Both rewritten in Juan's voice (em-dashes stripped from prose + headings, typos fixed), OPSEC-scanned (no Mars Men or cross-client names), pricing verified.
+- VAHDAM Paid Media fee kept soft for the proposal ("$5K base + a performance fee tied to contribution margin"). Exact % set after seeing their ROAS/COGS.
+- Follow-ups owed: VAHDAM ROAS/COGS before locking the CM split; Tincho capacity for VAHDAM's $100K/mo media (he's not fully off 18PM until ~Sept 2026). Both now in pipeline.
+- Pages updated: life/wiki/projects.md (pipeline section)
+
 ## [2026-06-15] decision | Declined PAK — stayed at Mars Men
 - **Resolved the pet-brand decision:** Juan **declined PAK (Pets are Kids)** — the ~$12M-ARR pet brand Raheel left Mars Men for and recruited Juan into — and **stayed at Mars Men.**
 - **Equity:** Mars Men held at **0.1% phantom** (never improved it); Juan stayed anyway. Deciding frame = ASTEROI as the wealth engine + MM as the lower-disruption, nearer-exit 2-year "ASTEROI bridge," not the equity number.

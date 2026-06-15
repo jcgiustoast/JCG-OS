@@ -143,6 +143,13 @@ Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing 
 
 ---
 
+## Pipeline (Outstanding Proposals)
+
+Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
+
+- **Manly** (men's grooming for teens; parent + teen personas). LP + CRO audit, then proposal: Advisory $2K/mo, LP $4-4.5K/mo, CRO $4.5-6.5K/mo, Growth Program bundle $10K/mo. Status: sent, awaiting reply.
+- **VAHDAM** (tea / ashwagandha-coffee; ~$100K/mo ad spend). Pivoted off CRO to **Paid Media (Tincho-operated)**: $5K base + performance fee on contribution margin, plus Advisory $2K/mo and the LP tiers. Status: sent. Owed before contract: their ROAS/COGS (to set the CM %), and a Tincho capacity check for a $100K/mo account.
+
 ## Active Clients
 
 ### GLAMRDiP (direct client, not through ASTEROI)
