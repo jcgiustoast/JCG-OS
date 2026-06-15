@@ -3,10 +3,37 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-04-07
+updated: 2026-06-15
 ---
 
 # Life Memory Log
+
+## [2026-06-15] decision | Declined PAK — stayed at Mars Men
+- **Resolved the pet-brand decision:** Juan **declined PAK (Pets are Kids)** — the ~$12M-ARR pet brand Raheel left Mars Men for and recruited Juan into — and **stayed at Mars Men.**
+- **Equity:** Mars Men held at **0.1% phantom** (never improved it); Juan stayed anyway. Deciding frame = ASTEROI as the wealth engine + MM as the lower-disruption, nearer-exit 2-year "ASTEROI bridge," not the equity number.
+- **Reporting line resolved:** Juan now **reports to Zach Stuck** (co-founder) post-Raheel.
+- **Raheel:** confirmed as **Head of Growth at PAK**; relationship kept intact (ally, not burned).
+- **Open:** confirm whether MM's retention cash match ($230K base + $50K bonus) stood, or comp reverted to $175K + $1.5K/mo. Verify the 2027 L Catterton exit is real (load-bearing for the bridge).
+- Pages updated: life/wiki/pet-brand-offer.md (→ RESOLVED), life/wiki/professional.md, life/wiki/life-index.md
+
+## [2026-06-15] decision | VAHDAM priced — Paid Media + Advisory (not CRO)
+- Second client (~$100K/mo ad spend — Juan's "less spend" was relative to Manly; still a premium account). **Pivoted off CRO** to **Paid Media (Tincho-operated)** as the primary offer — that's where the $100K lives and it's Tincho's lane.
+- **Pricing:** Paid Media = **$5K/mo base + 10% of paid-channel contribution margin** (rev - COGS - variable - ad spend). Advisory-only = **$2K/mo** (weekly 1-hr call with Juan + dedicated Slack channel). LP tiers kept (angle-matched coherence fix). All 3-month minimum.
+- **CM model is ROAS-sensitive:** take swings $6.6K (2x) → $15.3K (3.5x) at $100K spend / 30% COGS. Self-calibrating; base protects the floor. Get VAHDAM's real ROAS/COGS before locking the 10%.
+- **Flags:** Tincho capacity for a $100K account pre-Sept-2026; displacing an incumbent media buyer; you now own the CPA; define CM + secure P&L access in the contract.
+- **Audit insight:** ad-LP coherence break (cortisol/sleep/gut ads → generic BOFU PDP that matches none). Single persona (40-60 women); room for men + younger.
+- Applied to the VAHDAM Notion proposal (Advisory + Paid Media + LP; CRO removed; title + typos fixed).
+- Pages updated: life/wiki/asteroi-rate-card.md (Paid Media service line + Slack-channel wording)
+
+## [2026-06-15] decision | ASTEROI rate card established + Manly audit priced
+- Productized ASTEROI pricing into a tiered ladder: **Advisory $2K/mo** (weekly 1-hr call, capped slots, advisory only), **LP** brief $1K×4=$4K / D&D $1.5K×3=$4.5K, **CRO** consultant $4.5K / D&D $6.5K (up to 4 exp/mo, complex=2), **Bundle (Growth Program) $10K/mo**. All on a **3-month minimum**.
+- **Logic:** price on value + positioning not hours; consult tier ≈ ⅔ of full build (the thinking is the moat); advisory capped because it sells Juan's scarce, non-scalable calendar; the ladder must ascend without cannibalizing (Advisory < CRO Consultant; scope walls keep deliverables in the paid tracks).
+- **Delivery model:** Advisory + LP = Juan; **CRO D&D = Juan strategy + Tincho operates** (the scalable engine, the only line Tincho can front while Juan stays stealth). Dependency: Tincho not fully off 18PM until ~Sept 2026 — don't sell a Tincho-run program before he can run it.
+- **On-ramp:** free audit → retainer; the sized backlog is a month-1 deliverable, not given away in the sale. A $2K paid "Metric Tree teardown" step was considered and dropped (deliverable-invoice feel) — if a prospect balks at 3 months, reintroduce as a 2-week paid sprint or trial-rate month 1.
+- **Prospect-audit shape:** diagnosis themes + 1–2 teaser experiments (sized), full backlog behind the paywall. Show 2 ideas, say you have 10. Added **Trust & Safety** as the key missing CRO theme for Manly (parent-buys-for-teen → the PDP must answer the safety fear the ads create).
+- Applied live to the **Manly Landing Page & CRO Audit** (Notion): added pricing section, Trust & Safety theme, and the Advisory tier.
+- Pages created: life/wiki/asteroi-rate-card.md
+- Pages updated: life/wiki/life-index.md
 
 ## [2026-05-28] update | Founder answered contract questions — equity decoded
 - Founder (Jason) answered all 4. **Equity decoded:** 0.75% = three separate 0.25% slugs — (1) time-based 4yr vest, (2) gated on $14M/month + 5% EBITDA, (3) gated on $250M+ exit. **Only 0.25% (one third) is guaranteed; 66% gated.**

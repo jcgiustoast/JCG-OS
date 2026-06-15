@@ -1,19 +1,21 @@
 ---
-title: Pet Brand Offer — Decision-in-Progress
-description: External offer from new pet brand (founder-direct, Raheel as bridge after leaving Mars Men). $230K base + $50K bonus target + 0.75% phantom equity on $12M ARR brand. Decision pending Mars Men phantom shares counter and contract clarifications. Kill criteria defined for month-11 evaluation if accepted.
+title: PAK (Pets are Kids) Offer — RESOLVED: Declined, Stayed at Mars Men
+description: RESOLVED 2026-06-15 — Juan declined PAK (Pets are Kids), the ~$12M-ARR pet brand Raheel moved to, and stayed at Mars Men. MM held at 0.1% phantom equity (never improved it); Juan stayed anyway on the ASTEROI-bridge logic (nearer/surer exit, low disruption), not the comp. Now reports to Zach Stuck. Original offer was $230K base + $50K bonus + 0.75% phantom on a $12M ARR brand. Page retained as a decision record.
 type: decision
 author: claude
 sources: []
 related: [professional, strategy, projects]
 created: 2026-05-28
-updated: 2026-06-01 (Raheel intel + pre-committed decision rule)
+updated: 2026-06-15
 confidence: high
 ---
 
-# Pet Brand Offer — Decision-in-Progress
+# PAK (Pets are Kids) Offer — RESOLVED: Declined, Stayed at Mars Men
 
 ## Status
-**Active negotiation (2026-06-01).** Mars Men countered: **cash matched, 0.1% equity** (lowball). With PAK's $250M exit correctly discounted, realistic equity is ~a wash and cash is tied — so comp no longer decides. Reframed around ASTEROI as the wealth engine: the job is a 2-year cash + credential *bridge*, and Mars Men is the lower-disruption, nearer-exit bridge. **Current lean: STAY at Mars Men**, conditional on a credible 2027 exit and a Raheel gut-check. See "Decision Frame — ASTEROI Bridge" below.
+**RESOLVED (2026-06-15) — Juan DECLINED PAK and STAYED at Mars Men.** Mars Men never moved off **0.1% equity** (the counter held), but Juan stayed anyway: the deciding frame was ASTEROI as the wealth engine and the job as a low-disruption, nearer-exit 2-year *bridge* — not the equity number. Juan now **reports to Zach Stuck** (co-founder) post-Raheel. Raheel is at PAK as Head of Growth; the relationship was kept intact (ally, not burned). The negotiation history below is retained as a decision record.
+
+> **[Historical — superseded by the 2026-06-15 resolution above]** Active negotiation (2026-06-01): Mars Men countered cash-matched, 0.1% equity (lowball). With PAK's $250M exit correctly discounted, realistic equity is ~a wash and cash is tied — so comp no longer decides. Reframed around ASTEROI as the wealth engine: the job is a 2-year cash + credential *bridge*, and Mars Men is the lower-disruption, nearer-exit bridge. Lean: STAY at Mars Men, conditional on a credible 2027 exit and a Raheel gut-check. See "Decision Frame — ASTEROI Bridge" below.
 
 ## Origin
 - Brand: **Pets are Kids (PAK)**. Founder ("Jason") wrote the offer message directly to Juan (not via Raheel).
@@ -286,16 +288,18 @@ Cash tied, equity roughly tied → **comp no longer decides.**
 - [x] Founder answered all 4 questions (2026-05-28)
 - [x] Sent warm acknowledgment, bought ~1 week to decide
 - [x] Mars Men countered: cash matched, 0.1% equity (2026-06-01)
-- [ ] Counter MM on equity — anchor ~0.5% on internal fairness, low hurdle + acceleration; clean ask, don't torch the relationship
-- [ ] **Verify the 2027 exit is real** (L Catterton-aligned) — load-bearing for the whole stay case
-- [ ] Gut-check Raheel (career-multiplier?) + run the zero-disruption motive test
-- [ ] Get any MM grant **in writing** before declining PAK
-- [ ] Give Jason a decision by ~Thu Jun 4 — warm either way, keep Raheel as an ally regardless
-- [ ] If staying: treat MM as a deadline-driven ASTEROI bridge, not a hammock — push Phase 1 hard
+- [x] **Decision made — declined PAK, stayed at Mars Men (2026-06-15).** MM held at 0.1%; Juan stayed on the bridge logic, not the number.
+- [x] Gave Jason a decision — kept Raheel as an ally
+- [x] Reporting line resolved — Juan now reports to Zach Stuck
+- [~] Counter MM on equity — MM held firm at 0.1%; Juan accepted and stayed (relationship kept intact, not torched)
+- [ ] **Verify the 2027 exit is real** (L Catterton-aligned) — still load-bearing now that the stay is committed
+- [ ] **Live commitment:** treat MM as a deadline-driven ASTEROI bridge, not a hammock — push Phase 1 hard
+- [ ] Confirm MM's current cash: did the retention match ($230K base + $50K bonus) stand, or revert to $175K + $1.5K/mo?
 
 ---
 
 ### Changelog
+- **2026-06-15:** **RESOLVED — Juan declined PAK and stayed at Mars Men.** MM never improved the 0.1% equity; Juan stayed anyway on the ASTEROI-bridge logic (nearer/surer exit, low disruption), not the comp. Reporting line resolved → now reports to **Zach Stuck**. Raheel confirmed at PAK as Head of Growth; relationship kept intact. Flipped title/status/description from "Decision-in-Progress" to resolved; closed out next-actions. Open: confirm whether MM's retention cash match stood.
 - **2026-05-28:** Initial file created from decision-in-progress conversation with Claude.
 - **2026-05-28:** Contract questions sent to founder (4 questions, Raheel-coached framing on equity). Mars Men leverage deliberately omitted from message. Raheel-coaching detail added to Origin.
 - **2026-05-28:** Founder (Jason) answered all 4. Decoded equity: 0.75% = three 0.25% slugs (only time-based guaranteed; rev/EBITDA + $250M-exit gated). Recomputed realistic payout ladder — founder's $250M→$1.7M overstated by ~$525K. Floor halved vs prior estimate. One counter to raise: termination-without-cause protection. Bonus is target-not-cap. Sent acknowledgment, decision due next week.
