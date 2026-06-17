@@ -5,7 +5,7 @@ type: project
 sources: []
 related: [professional, identity, learning]
 created: 2026-04-05
-updated: 2026-04-06
+updated: 2026-06-16
 confidence: high
 ---
 
@@ -147,7 +147,7 @@ Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing 
 
 Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
 
-- **Manly** (men's grooming for teens; parent + teen personas). LP + CRO audit, then proposal: Advisory $2K/mo, LP $4-4.5K/mo, CRO $4.5-6.5K/mo, Growth Program bundle $10K/mo. Status: sent, awaiting reply.
+- **Manly** (men's grooming for teens; parent + teen personas). **Negotiated to close (2026-06-16): full plan at $9K/mo base + performance fee, 6-month commitment.** Path: $10K bundle proposed → their $7K-for-full lowball → countered $7K for reduced scope (2 LP + CRO capped 3 exp/mo) → they pushed up to **$9K for the full plan** + a performance fee. Performance fee follows the **Paid Media contribution-margin model** (perf fees attach to paid media, not CRO — see [[asteroi-rate-card]] principle 8). Open before contract: perf-fee % + CM definition + P&L/data access; Tincho capacity for full CRO (not off 18PM until ~Sept 2026) → write the LP-led ramp into the engagement.
 - **VAHDAM** (tea / ashwagandha-coffee; ~$100K/mo ad spend). Pivoted off CRO to **Paid Media (Tincho-operated)**: $5K base + performance fee on contribution margin, plus Advisory $2K/mo and the LP tiers. Status: sent. Owed before contract: their ROAS/COGS (to set the CM %), and a Tincho capacity check for a $100K/mo account.
 
 ## Active Clients

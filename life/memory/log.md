@@ -3,10 +3,17 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-06-15
+updated: 2026-06-16
 ---
 
 # Life Memory Log
+
+## [2026-06-16] decision | Manly closing — $9K full plan + performance fee
+- Manly negotiated **up** from a $7K-for-full lowball to **$9K/mo for the full plan + a performance fee**, 6-month commitment. ~10% under the $10K bundle list, but base + uncapped upside beats a flat $10K and aligns better.
+- Path: $10K bundle proposed → their $7K full → countered $7K for *reduced* scope (2 LP + CRO capped 3/mo, framed as right-size not discount) → they pushed to **$9K full** → performance fee added.
+- **Correction (Juan):** performance fees attach to **Paid Media services, not CRO.** The base + % of contribution-margin model belongs where ASTEROI owns the spend lever; CRO/LP stay flat retainers. Manly's perf fee therefore follows the paid-media CM logic, **not** a bespoke CRO attribution scheme (that was considered and dropped — too noisy, invoice-time fight). Captured as rate-card **principle 8.**
+- Open before contract: perf-fee % + CM definition (rev − COGS − variable) + P&L/data access; Tincho capacity for full CRO D&D (not fully off 18PM until ~Sept 2026) → write the **LP-led ramp** into the engagement. Capacity flag: Manly + VAHDAM both lean on Tincho before he's free.
+- Pages updated: life/wiki/asteroi-rate-card.md (principle 8 + changelog), life/wiki/projects.md (Manly pipeline)
 
 ## [2026-06-15] update | Manly + VAHDAM proposals sent
 - Both client proposals went out via Notion: **Manly** (LP + CRO + Advisory + Bundle) and **VAHDAM** (Advisory + Paid Media + LP).

@@ -6,7 +6,7 @@ author: claude
 sources: []
 related: [strategy, projects, professional]
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-16
 confidence: high
 ---
 
@@ -108,6 +108,7 @@ CRO is the only line Tincho can *front* — which is what lets ASTEROI scale on 
 5. **The ladder must ascend and not cannibalize.** Advisory < CRO Consultant on price; scope walls keep deliverables in the paid tracks; every tier is designed to climb to the next.
 6. **Sell outcomes, not units.** Pair LP/CRO output with CVR / new-spend-unlocked / validated-revenue reporting. Justifies price, makes the work un-fireable, creates the expansion path.
 7. **Right-size by tier and volume, not by discounting the rate.** One price list for everyone — a small client buys *less* (Advisory / fewer LPs), a big client buys *more* (Bundle / Paid Media). Cut the per-unit rate and the day a big client learns the small one's price, your anchor is gone.
+8. **Performance fees attach to Paid Media, not CRO/LP.** The upside model (base + % of contribution margin) belongs to services where ASTEROI *owns the spend lever* and can be cleanly credited for the margin. CRO and LP stay **flat retainers**. When a CRO/LP client wants performance upside (e.g. Manly), structure it on the Paid Media logic — % of contribution margin, CM defined in-contract (rev − COGS − variable), P&L/data access required — not a bespoke CRO attribution scheme. A CRO-specific performance model was considered and dropped: too noisy to attribute, a monthly fight at invoice time.
 
 ## Prospect-audit template (the shape that sells)
 - **Diagnosis, not prescription.** Free audit shows *where* the money leaks + rough sizing. The *how* (ranked, designed backlog) lives behind the retainer paywall.
@@ -120,3 +121,4 @@ CRO is the only line Tincho can *front* — which is what lets ASTEROI scale on 
 ### Changelog
 - **2026-06-15:** Created from the pricing session. Established tiers (Advisory $2K, LP $4–4.5K, CRO $4.5–6.5K, Bundle $10K), 3-month minimum, delivery model (Juan strategist / Tincho operator on CRO), free-audit on-ramp (paid teardown considered and dropped), and the reusable prospect-audit shape. First applied to the Manly audit (Notion).
 - **2026-06-15 (later):** Added **Paid Media** service line (high-spend clients) — $5K base + 10% of paid-channel contribution margin, Tincho-operated, with design rules + take model. Specified Advisory async as a **dedicated Slack channel**. Added principle: right-size by tier/volume, never by discounting the rate. First applied: VAHDAM (~$100K/mo).
+- **2026-06-16:** **Manly negotiated to close** — full plan at **$9K/mo base + performance fee**, 6-month commitment. Path: $10K bundle proposed → their $7K-for-full lowball → countered $7K for *reduced* scope (2 LP + CRO capped 3 exp/mo) → they pushed up to **$9K for the full plan** + a performance fee. Net: ~10% under list, but base + uncapped upside beats a flat $10K and aligns better. Added **principle 8** (performance fees attach to Paid Media, not CRO/LP) — Manly's upside follows the paid-media contribution-margin logic, not a bespoke CRO model.
