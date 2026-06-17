@@ -3,10 +3,20 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-06-16
+updated: 2026-06-17
 ---
 
 # Life Memory Log
+
+## [2026-06-17] decision | Manly performance fee designed — 1%/60-day LP-launch fee + term to 3-month
+- **Final fee structure:** $9K/mo base + **1% of ad spend routed to each ASTEROI-built LP for its first 60 days live** (clock starts on the page's first spend), then it rolls off. Monthly settlement; measured on spend-by-URL from Manly's existing dashboard (no P&L, no COGS, no holdout, no per-test attribution); no ROAS floor in v1; **self-capping** (60-day window per page); CRO stays a flat retainer. **Tail clause:** any LP live during the term keeps its full 60-day window even past term end / non-renewal.
+- **Term changed 6-month → 3-month** (Juan's call; = rate-card standard minimum, so back in line with the card).
+- **How the design landed:** rejected (a) frozen-baseline / aggregate-program CM as *observational, not causal*; (b) % of total or incremental DTC CM (attribution fight, needs P&L); (c) winning-tests and % of reported-revenue (Juan ruled out). Chose spend-to-LP because it is unarguable to measure and the client votes with its budget (revealed preference). A true randomized concurrent holdout would be causal but is impractical at Manly's scale.
+- **Manly economics (from their LP dashboard):** ~A$670K/mo total spend across LPs, best page ~A$200K/mo, ROAS 1.16–1.74 (CM breakeven ≈1.43 at 30% COGS → roughly half their spend is underwater). Per winning page the fee is ~A$2–4K one-time (~$1.3–2.6K USD); ~$1.3–2.6K USD/mo averaged across the program. A modest, clean launch bonus — not the uncapped upside originally floated. (Confirms Manly > VAHDAM on spend.)
+- **Principle 8 generalized:** from "perf fees = Paid Media only" to two spend-keyed patterns — Paid Media → % of CM (VAHDAM); LP-launch → % of new-page spend, 60-day window (Manly). CRO experimentation stays flat (no clean spend lever).
+- **Tincho:** fully owns/operates the Manly account (Juan strategist-only, firewall-clean). The whole 3-month term sits in his 18PM wind-down (~Sept 2026) → committed term is the LP-led ramp; full Tincho-operated CRO scales at renewal. Set Manly's expectations so renewal isn't a "you promised full CRO" fight.
+- **Deliverable:** client-facing line drafted in Juan's voice (skin-in-the-game, small + time-boxed, no em-dashes).
+- Pages updated: life/wiki/asteroi-rate-card.md (principle 8 generalized + changelog), life/wiki/projects.md (Manly pipeline → locked terms)
 
 ## [2026-06-16] decision | Manly closing — $9K full plan + performance fee
 - Manly negotiated **up** from a $7K-for-full lowball to **$9K/mo for the full plan + a performance fee**, 6-month commitment. ~10% under the $10K bundle list, but base + uncapped upside beats a flat $10K and aligns better.
