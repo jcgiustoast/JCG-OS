@@ -5,7 +5,7 @@ type: project
 sources: []
 related: [professional, identity, learning]
 created: 2026-04-05
-updated: 2026-06-17
+updated: 2026-06-18
 confidence: high
 ---
 
@@ -147,7 +147,7 @@ Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing 
 
 Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
 
-- **Manly** (men's grooming for teens; parent + teen personas). **Closing — terms locked (2026-06-17), contract drafting.** Full plan at **$9K/mo base, 3-month commitment** (= LP D&D + full CRO program). **Performance fee: 1% of ad spend routed to each ASTEROI-built LP for its first 60 days live** (clock starts on the page's first spend), then rolls off. Monthly settlement; measured on spend-by-URL from Manly's existing dashboard (no P&L, no holdout); no ROAS floor v1; self-capping; CRO stays a flat retainer. **Tail clause:** any LP live during the term keeps its full 60-day window past term end. Follows rate-card **principle 8** (LP-launch pattern). Manly is a big spender (~A$670K/mo across LPs, best page ~A$200K/mo) at low ROAS (1.16–1.74). **Tincho** fully owns/operates the account (Juan strategist-only, firewall-clean); the whole 3-month term sits in his 18PM wind-down (~Sept 2026), so it's the LP-led ramp and full Tincho-operated CRO scales at renewal — set Manly's expectations accordingly.
+- **Manly** (men's grooming for teens; parent + teen personas). **Closing — terms locked (2026-06-18), contract drafting.** Full plan at **$9K/mo base, 3-month commitment** (= LP D&D + full CRO program). **Performance fee: 1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (clock starts on the page's first spend), then rolls off. Monthly settlement; measured on spend-by-URL from Manly's existing dashboard (no P&L, no holdout); no ROAS floor v1; self-capping; CRO stays a flat retainer. **Tail clause:** any LP live during the term keeps its full 30-day window past term end. Follows rate-card **principle 8** (LP-launch pattern). Manly is a big spender (~A$670K/mo across LPs, best page ~A$200K/mo) at low ROAS (1.16–1.74). **Tincho** fully owns/operates the account (Juan strategist-only, firewall-clean); the whole 3-month term sits in his 18PM wind-down (~Sept 2026), so it's the LP-led ramp and full Tincho-operated CRO scales at renewal — set Manly's expectations accordingly.
 - **VAHDAM** (tea / ashwagandha-coffee; ~$100K/mo ad spend). Pivoted off CRO to **Paid Media (Tincho-operated)**: $5K base + performance fee on contribution margin, plus Advisory $2K/mo and the LP tiers. Status: sent. Owed before contract: their ROAS/COGS (to set the CM %), and a Tincho capacity check for a $100K/mo account.
 
 ## Active Clients
