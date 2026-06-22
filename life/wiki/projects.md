@@ -5,7 +5,7 @@ type: project
 sources: []
 related: [professional, identity, learning]
 created: 2026-04-05
-updated: 2026-06-18
+updated: 2026-06-22
 confidence: high
 ---
 
@@ -66,7 +66,7 @@ This file tracks side projects and agency work. **Mars Men is not aware of these
 
 **What:** eCommerce growth agency. Optimizes for P&L and marginal contribution, not vanity metrics. Services: financial growth strategy, performance marketing (Google/Facebook Ads), creative strategy, CRO, marketing automation.
 
-**Ownership:** Juan Cruz (65%) + Martin Olmedo aka "Tincho" (35%)
+**Ownership:** ASTEROI LLC (Wyoming) is legally **100% Juan Cruz Giusto**. The **60/40** (Juan 60% / Martín "Tincho" Olmedo 40%) is a **profit-share arrangement, not equity** — Tincho holds no legal stake and cannot bind the LLC. Only Juan can sign for ASTEROI. (See [[asteroi-ownership]].)
 
 **Positioning:** Targets eComm brands doing 1M-10M EUR/year. Commission-based pricing tied to measurable financial results. Caps intake at 6 new clients per quarter.
 
@@ -104,7 +104,7 @@ Key points:
 - Tincho's framing if asked about 18PM: "I built and ran an agency in Argentina. That experience is what I bring to ASTEROI's operations." Past tense, even if technically present.
 
 ### Mars Men Firewall (CRITICAL)
-Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing $150K/year + credibility + learning environment.
+Mars Men knows **ASTEROI LLC** as Juan's billing entity (he created it before it became an agency and invoices Mars Men through it). Mars Men does **not** know ASTEROI now operates as an **agency with outside clients** (Manly, BAIA, UNIT 1) or about AURAL. The firewall protects the **agency activity and client roster**, not the LLC's existence. Discovery = losing $150K/year + credibility + learning environment.
 
 **Boundary script (deliver to every client during onboarding or now for existing clients):**
 
@@ -147,10 +147,18 @@ Mars Men does not know about ASTEROI, the clients, or AURAL. Discovery = losing 
 
 Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
 
-- **Manly** (men's grooming for teens; parent + teen personas). **Closing — terms locked (2026-06-18), contract drafting.** Full plan at **$9K/mo base, 3-month commitment** (= LP D&D + full CRO program). **Performance fee: 1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (clock starts on the page's first spend), then rolls off. Monthly settlement; measured on spend-by-URL from Manly's existing dashboard (no P&L, no holdout); no ROAS floor v1; self-capping; CRO stays a flat retainer. **Tail clause:** any LP live during the term keeps its full 30-day window past term end. Follows rate-card **principle 8** (LP-launch pattern). Manly is a big spender (~A$670K/mo across LPs, best page ~A$200K/mo) at low ROAS (1.16–1.74). **Tincho** fully owns/operates the account (Juan strategist-only, firewall-clean); the whole 3-month term sits in his 18PM wind-down (~Sept 2026), so it's the LP-led ramp and full Tincho-operated CRO scales at renewal — set Manly's expectations accordingly.
+- **Manly** — **closed and signed 2026-06-22.** Moved to **Active Clients** below. (Full plan $9K/mo base + 1% LP-launch fee, 3-mo term 6 Jul → 5 Oct 2026.)
 - **VAHDAM** (tea / ashwagandha-coffee; ~$100K/mo ad spend). Pivoted off CRO to **Paid Media (Tincho-operated)**: $5K base + performance fee on contribution margin, plus Advisory $2K/mo and the LP tiers. Status: sent. Owed before contract: their ROAS/COGS (to set the CM %), and a Tincho capacity check for a $100K/mo account.
 
 ## Active Clients
+
+### Manly (through ASTEROI) — SIGNED 2026-06-22
+- **What:** Men's grooming for teens (parent + teen personas). Australian DTC — Termi Brands Pty Ltd (ABN 82 681 786 514). Big spender (~A$670K/mo across LPs, best page ~A$200K/mo) at low ROAS (1.16–1.74).
+- **Service:** Full plan — LP Design+Dev (3/mo, 1 revision each) + full CRO program (up to 4 experiments/mo, complex = 2). Paid media out of scope (Manly's team runs it).
+- **Revenue:** **$9,000/mo base** + **1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (rolls off after 30 days; tail clause survives the term). Billed monthly **in arrears**, one invoice, **NET-15**, all USD; AUD spend converted at the RBA month-end rate.
+- **Term:** 3-month initial, **6 Jul → 5 Oct 2026**, then month-to-month. Perf-fee revisited at renewal (the deliberate "widen it later" lever).
+- **Contract:** Executed **2026-06-22**. Signatories: Raphael Mgbadiefe (Cofounder, Termi Brands Pty Ltd) + **Juan Cruz Giusto (Founder, ASTEROI LLC)**. Governing law Victoria, AU; mutual NDA; work-product transfers on payment, ASTEROI retains its tooling. Doc: `Manly_x_ASTEROI_Services_Agreement.docx` (Downloads + C:\tmp).
+- **Delivery:** Tincho operates the account; Juan strategist-only. The whole 3-mo term sits in Tincho's 18PM wind-down (~Sept 2026), so it is the LP-led ramp; full Tincho-operated CRO scales at renewal.
 
 ### GLAMRDiP (direct client, not through ASTEROI)
 - **What:** At-home dip powder nail system. Australian-based DTC brand on Shopify. 650K+ customers, 10K+ reviews. Operates in 7+ markets (AU, US, NZ, UK, Nordics). Estimated $5M-$20M+ annual revenue.
@@ -174,12 +182,15 @@ Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
 ---
 
 ## Monthly Side Revenue Summary
-| Client | Service | Gross/month | Juan's take (65% if ASTEROI) | Channel |
+| Client | Service | Gross/month | Juan's take (60% if ASTEROI) | Channel |
 |--------|---------|-------------|------------------------------|---------|
 | GLAMRDiP | CRO | $4,500 | $4,500 (100% — direct) | Direct |
-| BAIA Food | CRO | ~$3,800 (3,500 EUR) | ~$2,470 | ASTEROI |
-| UNIT 1 | Performance marketing | $5,000 | $3,250 | ASTEROI |
-| **Total** | | **~$13,300** | **~$10,220** | |
+| BAIA Food | CRO | ~$3,800 (3,500 EUR) | ~$2,280 | ASTEROI |
+| UNIT 1 | Performance marketing | $5,000 | $3,000 | ASTEROI |
+| Manly | LP + full CRO | $9,000 base (+1% LP-launch fee, variable) | $5,400 (base) | ASTEROI |
+| **Total** | | **~$22,300** base | **~$15,180** base | |
+
+*Manly's 1% LP-launch performance fee is variable (per-page, 30-day window) and additive on top of the base — not included in the totals above. Takes apply the Juan/Tincho 60/40 profit-share to gross for a rough figure.*
 
 ---
 
@@ -318,5 +329,6 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 - **2026-04-06:** Added financial details (65% split, Juan's actual take). Added Tincho's 18PM situation and public-face blocker. Added client acquisition channels. Added AURAL investment/burn numbers. Added tool usage status (3 active, 3 not yet). Added two-phase strategic timeline with financial targets.
 - **2026-04-06:** Added Client Narrative & OPSEC section: operator-led framing, Mars Men firewall rules (boundary script, LinkedIn privacy, naming rules), stealth client acquisition playbook (6 channels, avoid list, content flywheel strategy).
 - **2026-04-06:** Updated financial targets to $10M net after tax by 2036, $50M by 2046. Added two-engine model (SEAN + capital deployment). Replaced SaaS spin-out with volume-based scaling. Tools stay internal as margin drivers. Added phases 3-5 and second-decade trajectory.
+- **2026-06-22:** **Manly signed.** Moved Manly from Pipeline to Active Clients (contract executed 2026-06-22). Corrected the ASTEROI ownership line (65/35 → **60/40 profit-share**; ASTEROI LLC is legally 100% Juan, Tincho holds no equity and cannot sign) and the Mars Men firewall premise (Mars Men knows the LLC as Juan's billing entity; the firewall protects the **client roster**, not the LLC's existence). Updated the revenue table to the **60%** split and added Manly ($9K base; gross ~$22.3K, Juan ~$15.2K). June pricing/pipeline steps (06-15 → 06-18) are logged in life/memory/log.md.
 
 **Related files:** [[professional]] | [[identity]] | [[learning]]
