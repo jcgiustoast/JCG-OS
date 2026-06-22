@@ -3,10 +3,17 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-06-18
+updated: 2026-06-22
 ---
 
 # Life Memory Log
+
+## [2026-06-22] decision | Manly signed — ASTEROI service agreement executed
+- **Manly (Termi Brands Pty Ltd) signed the full-plan service agreement.** $9K/mo base billed **in arrears** (one invoice/month, NET-15) + **1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (Go-Live = page's first day of recorded spend), then rolls off. 3-month initial term **6 Jul → 5 Oct 2026**, then month-to-month; perf-fee revisited at renewal. Tail clause survives. **All-USD settlement** (AUD spend converted at the RBA month-end rate). No cap (generous $9K/mo cap held in reserve if asked). Governing law: Victoria, AU.
+- **Signatory for ASTEROI = Juan Cruz Giusto (Founder).** Tincho operates the account but has **no legal standing in ASTEROI LLC** (it is 100% Juan; the **60/40** Juan/Tincho is profit-share, not equity), so he cannot sign — reversed the earlier "Tincho signs" plan mid-draft.
+- **Firewall clarification (Juan):** Mars Men already knows ASTEROI LLC is his — he created it before it became an agency and **invoices Mars Men through it**. The firewall protects the **agency activity + client roster**, not the LLC's existence. So Juan signing a confidential client contract carries no new exposure.
+- **Deliverable:** `Manly_x_ASTEROI_Services_Agreement.docx` (built with the docx skill, validated; in Downloads + C:\tmp). Open admin before signing closes out: notice emails (clause 12.1); accountant nod on GST reverse-charge + W-8BEN-E.
+- Pages updated: life/wiki/projects.md (Manly → Active Clients; ownership 65/35 → 60/40 profit-share; firewall premise; revenue table to 60%), life/wiki/asteroi-rate-card.md (changelog).
 
 ## [2026-06-18] decision | Manly performance fee designed — 1%/30-day LP-launch fee + term to 3-month
 - **Final fee structure:** $9K/mo base + **1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (clock starts on the page's first spend), then it rolls off. Monthly settlement; measured on spend-by-URL from Manly's existing dashboard (no P&L, no COGS, no holdout, no per-test attribution); no ROAS floor in v1; **self-capping** (30-day window per page); CRO stays a flat retainer. **Tail clause:** any LP live during the term keeps its full 30-day window even past term end / non-renewal.
