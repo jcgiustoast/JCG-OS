@@ -1,6 +1,6 @@
 ---
 title: Active Projects
-description: ASTEROI agency + product suite building toward a $10-15M/year SEAN with 30% FCF. Two-engine wealth model (SEAN cash flow + capital deployment) targeting $10M net after tax by 2036, $50M by 2046. Three clients (~$13.3K/month gross). Tincho blocked by 18PM. Six tools (3 active) stay internal as margin drivers. Volume-based scaling: more clients, not higher per-client pricing.
+description: ASTEROI agency + product suite building toward a $10-15M/year SEAN with 30% FCF. Two-engine wealth model (SEAN cash flow + capital deployment) targeting $10M net after tax by 2036, $50M by 2046. Four clients (~$22.3K/month gross base). Tincho fully operational from early Aug 2026 (bottleneck cleared, ahead of schedule); binding constraint now = demand/pipeline. Six tools (3 active) stay internal as margin drivers. Volume-based scaling: more clients, not higher per-client pricing.
 type: project
 sources: []
 related: [professional, identity, learning]
@@ -70,7 +70,9 @@ This file tracks side projects and agency work. **Mars Men is not aware of these
 
 **Positioning:** Targets eComm brands doing 1M-10M EUR/year. Commission-based pricing tied to measurable financial results. Caps intake at 6 new clients per quarter.
 
-**Tincho's situation (as of April 2026):**
+**Tincho's situation — UPDATE 2026-07-20 (CONFIRMED):** **Tincho goes fully operational ~early August 2026 (~10 days out)** — off 18PM, full-time on ASTEROI, free to be the public face, operate accounts, and sell. This clears ASTEROI's single biggest bottleneck **~1 month ahead of the Sept-2026 hard deadline**. Milestone **A1 complete.** The binding constraint now shifts from *capacity* to *demand* — the empty pipeline (VAHDAM dead, no inbound engine yet) becomes the thing to fix. April-2026 baseline retained below for history.
+
+**Baseline (as of April 2026):**
 - Tincho is also owner of **18PM**, another Argentinian agency. He wants to leave 18PM but needs ASTEROI to sustain him full-time first.
 - He **cannot publicly represent ASTEROI** while he's still associated with 18PM — conflict of interest.
 - Currently: helps build tools + services UNIT 1. Not selling or doing outbound.
@@ -163,6 +165,7 @@ Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
 - **Contract:** Executed **2026-06-22**. Signatories: Raphael Mgbadiefe (Cofounder, Termi Brands Pty Ltd) + **Juan Cruz Giusto (Founder, ASTEROI LLC)**. Governing law Victoria, AU; mutual NDA; work-product transfers on payment, ASTEROI retains its tooling. Doc: `Manly_x_ASTEROI_Services_Agreement.docx` (Downloads + C:\tmp).
 - **Delivery:** Tincho operates the account; Juan strategist-only. The whole 3-mo term sits in Tincho's 18PM wind-down (~Sept 2026), so it is the LP-led ramp; full Tincho-operated CRO scales at renewal.
 - **Status (2026-07-20):** engagement **started / delivering** (term began 6 Jul). Watch: LPs shipped in month 1 and whether the 1% LP-launch fee is accruing yet.
+- **Delivery upgrade (2026-07-20):** with Tincho fully operational from early Aug, **full Tincho-operated CRO can now ramp *during* the initial term (Aug–Oct), not just at renewal** — the earlier "LP-led ramp only" constraint is lifted. Option to accelerate CRO within the current term if Manly wants it.
 
 ### GLAMRDiP (direct client, not through ASTEROI)
 - **What:** At-home dip powder nail system. Australian-based DTC brand on Shopify. 650K+ customers, 10K+ reviews. Operates in 7+ markets (AU, US, NZ, UK, Nordics). Estimated $5M-$20M+ annual revenue.
@@ -334,6 +337,7 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 - **2026-04-06:** Added Client Narrative & OPSEC section: operator-led framing, Mars Men firewall rules (boundary script, LinkedIn privacy, naming rules), stealth client acquisition playbook (6 channels, avoid list, content flywheel strategy).
 - **2026-04-06:** Updated financial targets to $10M net after tax by 2036, $50M by 2046. Added two-engine model (SEAN + capital deployment). Replaced SaaS spin-out with volume-based scaling. Tools stay internal as margin drivers. Added phases 3-5 and second-decade trajectory.
 - **2026-06-22:** **Manly signed.** Moved Manly from Pipeline to Active Clients (contract executed 2026-06-22). Corrected the ASTEROI ownership line (65/35 → **60/40 profit-share**; ASTEROI LLC is legally 100% Juan, Tincho holds no equity and cannot sign) and the Mars Men firewall premise (Mars Men knows the LLC as Juan's billing entity; the firewall protects the **client roster**, not the LLC's existence). Updated the revenue table to the **60%** split and added Manly ($9K base; gross ~$22.3K, Juan ~$15.2K). June pricing/pipeline steps (06-15 → 06-18) are logged in life/memory/log.md.
+- **2026-07-20 (later):** **Tincho fully operational confirmed for ~early Aug 2026** (~1 month ahead of the Sept deadline) — Milestone A1 done, biggest bottleneck cleared. Updated Tincho situation section, description frontmatter, and Manly delivery (full CRO can now ramp within the initial term, not just at renewal). Constraint reframed: capacity → demand/pipeline.
 - **2026-07-20:** **Manly marked live** (term started 6 Jul, now delivering). **Added Jello to a new "Declined / blocked" pipeline subsection** — German cortisol brand, same male hormone-wellness demographic as Mars Men; declined on contract grounds (MM §5.2 worldwide during-term bar + §5.6 geography-blind confidentiality), do-not-reopen while at MM. Correction to the non-compete understanding lives in [[professional]].
 
 **Related files:** [[professional]] | [[identity]] | [[learning]]
