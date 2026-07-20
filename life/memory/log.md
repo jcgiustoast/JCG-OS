@@ -14,6 +14,7 @@ updated: 2026-07-20
 - **Contract facts:** Mars Health Inc **Contract Services Agreement**, effective **2025-10-20**, Juan engaged as an **independent contractor (not W2)**, signed by **Zach Stuck (CEO)**; comp lives in an SOW. §7.2 bars subcontracting Juan's MM services without consent. Source doc: `C:\Users\jcgiu\Downloads\Giusto,Juan_Contract Services Agreement.docx.pdf`.
 - **Comp confirmed (closes the open 2026-06-15 question):** **$230K base + $50K year-end bonus** (the $50K **replaced** the former $1,500/mo objectives bonus, now gone; ~$280K cash target) + **0.1% phantom payable only on a company sale** (change-of-control payout, not a standing stake).
 - **Manly live:** engagement started **6 Jul 2026**, now delivering. Watch month-1 LPs + whether the 1% LP-launch fee is accruing.
+- **VAHDAM likely dead:** no response since the 2026-06-15 proposal; marked cold, not chasing.
 - Pages updated: life/wiki/professional.md (comp, contractor status, Non-compete section rewritten, changelog), life/wiki/projects.md (Manly → live; new Jello "Declined/blocked" entry), life/wiki/strategy.md (non-compete risk row + starting-position comp), life/wiki/life-index.md (professional description).
 
 ## [2026-06-22] decision | Manly signed — ASTEROI service agreement executed
