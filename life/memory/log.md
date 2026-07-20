@@ -3,10 +3,18 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-06-22
+updated: 2026-07-20
 ---
 
 # Life Memory Log
+
+## [2026-07-20] decision | Jello declined on contract grounds + MM non-compete corrected + comp confirmed
+- **Jello DECLINED (do not re-open while at Mars Men).** Prospect: German-only DTC selling a "Cortisol Cocktail" to essentially the **same male hormone-wellness demographic as Mars Men**. A MM colleague (Head of Retention) consults for them and argued "different market, not a direct competitor." **Read Juan's actual MM contract and that reasoning fails:** **§5.2 (During the Term) bars any activity "competitive with or adverse to" MM WORLDWIDE — no geographic limit**, so Germany is irrelevant while Juan is engaged; **§5.6 confidentiality is geography-blind for Term + 2 yrs**, blocking the MM playbook (the one asset Juan would bring). "Mars Men's Business" is defined broadly; MM (L Catterton-backed, scaling) could enter Germany; governing law **Wisconsin, loser-pays**. Jello = the single prospect that's both a product-twin and a live legal breach. Gate to ever revisit: **only after Juan exits MM AND a WI-licensed lawyer clears §5.3–5.8 vs Jello's US plans.**
+- **Non-compete understanding materially corrected.** Vault previously said "US subscription brands only" — true only for the **post-term** covenants (§5.3/5.4/5.8: Restricted Territory = US counties, 24-mo Restricted Period). It missed the **during-term §5.2 worldwide bar** and **§5.6 geography-blind confidentiality**. Real risk axis = **product/demographic overlap, not US-vs-international.** Current ASTEROI clients (nail dip, helmets, non-hormone supplements, teen grooming) stay clean under any reasonable read.
+- **Contract facts:** Mars Health Inc **Contract Services Agreement**, effective **2025-10-20**, Juan engaged as an **independent contractor (not W2)**, signed by **Zach Stuck (CEO)**; comp lives in an SOW. §7.2 bars subcontracting Juan's MM services without consent. Source doc: `C:\Users\jcgiu\Downloads\Giusto,Juan_Contract Services Agreement.docx.pdf`.
+- **Comp confirmed (closes the open 2026-06-15 question):** **$230K base + $50K year-end bonus** (the $50K **replaced** the former $1,500/mo objectives bonus, now gone; ~$280K cash target) + **0.1% phantom payable only on a company sale** (change-of-control payout, not a standing stake).
+- **Manly live:** engagement started **6 Jul 2026**, now delivering. Watch month-1 LPs + whether the 1% LP-launch fee is accruing.
+- Pages updated: life/wiki/professional.md (comp, contractor status, Non-compete section rewritten, changelog), life/wiki/projects.md (Manly → live; new Jello "Declined/blocked" entry), life/wiki/strategy.md (non-compete risk row + starting-position comp), life/wiki/life-index.md (professional description).
 
 ## [2026-06-22] decision | Manly signed — ASTEROI service agreement executed
 - **Manly (Termi Brands Pty Ltd) signed the full-plan service agreement.** $9K/mo base billed **in arrears** (one invoice/month, NET-15) + **1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (Go-Live = page's first day of recorded spend), then rolls off. 3-month initial term **6 Jul → 5 Oct 2026**, then month-to-month; perf-fee revisited at renewal. Tail clause survives. **All-USD settlement** (AUD spend converted at the RBA month-end rate). No cap (generous $9K/mo cap held in reserve if asked). Governing law: Victoria, AU.

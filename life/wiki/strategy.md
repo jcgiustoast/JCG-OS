@@ -5,7 +5,7 @@ type: concept
 sources: []
 related: [identity, professional, projects, learning]
 created: 2026-04-06
-updated: 2026-04-06
+updated: 2026-07-20
 confidence: medium
 ---
 
@@ -20,7 +20,7 @@ confidence: medium
 | Monthly income (personal) | ~$22,700 |
 | Monthly burn | ~$7,000 |
 | Monthly savings | ~$13,000-$15,000 |
-| Mars Men salary | $150K/year, no equity |
+| Mars Men salary | (April 2026 figure — outdated) $150K/year, no equity. **Confirmed 2026-07-20: $230K base + $50K year-end bonus (~$280K) + 0.1% phantom payable only on a sale.** Contractor, not W2. |
 | ASTEROI gross | ~$13,300/month (3 clients) |
 | ASTEROI Juan's take | ~$10,220/month |
 | Personal brand | Dormant. 37 articles published, no active distribution. |
@@ -322,7 +322,7 @@ Runs in parallel, does not affect the main strategy.
 | Tincho doesn't leave 18PM | Can't scale ASTEROI. Juan stays bottlenecked. | Set hard deadline: fully operational by September 2026. If Tincho can't commit, hire an operator instead. |
 | Content doesn't generate inbound | No pipeline for new clients | Diversify: The Starters, referrals, Tincho's network. Content is a long game -- 6-12 months to compound. |
 | Clients churn | Revenue drops below sustainability threshold | Build retention into service delivery. Platform stickiness (clients depend on ASTEROI tooling). Keep client concentration below 15% of revenue. |
-| Mars Men non-compete enforced broadly | Limits ASTEROI's client base post-departure | Current reading: only US subscription brands. Document the narrow scope. Consult a lawyer before leaving. |
+| Mars Men non-compete / confidentiality (contract read 2026-07-20) | **DURING the term, §5.2 bars any competitive/adverse activity WORLDWIDE**, and §5.6 confidentiality is geography-blind for Term+2yrs — so competing-product work is blocked *now* regardless of country. Post-term covenants are US-only (Restricted Territory, 24-mo Restricted Period). Governing law Wisconsin, loser-pays. | Real risk axis = **product/demographic overlap, not geography.** Don't take same-demographic competitors while at MM (see **Jello**, declined 2026-07-20, in [[professional]]/[[projects]]). Post-departure, non-US / non-competing clients are fine — verify with a WI-licensed lawyer before leaving. |
 | Burnout | Juan is running Mars Men + 3 clients + AURAL + tools + content | The entire Phase 1 strategy is about creating leverage (Tincho, SOPs, tools) so Juan does less, not more. |
 | Revenue per employee drops below $300K | Margins compress, 30% FCF becomes impossible | Monitor this metric quarterly. If dropping, either raise prices or reduce headcount. The tooling must keep operators productive. |
 | Hiring operators who aren't Juan | Quality drops, clients churn | SOPs + tooling + structured onboarding. The platform does the heavy lifting -- operators execute within the system. |
@@ -355,3 +355,4 @@ Use this every 3 months to assess progress:
 - **2026-04-06:** Added stealth client acquisition channels to Phase 1. Updated Mars Men risk mitigation with firewall rules reference.
 - **2026-04-06:** Updated targets to $10M net after tax by 2036, $50M by 2046. Replaced SaaS spin-out with two-engine model (SEAN + capital deployment). Volume-based pricing (more clients, not higher per-client). Added phases 3-5, second decade trajectory, full financial projections table. Added scaling risks (rev/employee, hiring, tax optimization). Updated quarterly checklist.
 - **2026-04-06:** Content strategy: English-only for Phase 1-2, Spanish deferred to Phase 3+. Mars Men credential framed as depreciating asset. Detailed content plan moved to [[content-strategy]] to bridge both spaces.
+- **2026-07-20:** Updated the non-compete risk row from the actual MM contract (worldwide during-term §5.2 + geography-blind §5.6; post-term US-only; WI governing law, loser-pays) — real risk axis is product/demographic overlap, not geography. Corrected the outdated MM salary in the starting-position table to the confirmed $230K + $50K + 0.1%-on-sale. Full detail in [[professional]]; triggering decision (Jello declined) in [[projects]].

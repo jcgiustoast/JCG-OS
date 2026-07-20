@@ -5,7 +5,7 @@ type: project
 sources: []
 related: [professional, identity, learning]
 created: 2026-04-05
-updated: 2026-06-22
+updated: 2026-07-20
 confidence: high
 ---
 
@@ -147,18 +147,22 @@ Mars Men knows **ASTEROI LLC** as Juan's billing entity (he created it before it
 
 Sent 2026-06-15 via Notion. Pricing from [[asteroi-rate-card]].
 
-- **Manly** — **closed and signed 2026-06-22.** Moved to **Active Clients** below. (Full plan $9K/mo base + 1% LP-launch fee, 3-mo term 6 Jul → 5 Oct 2026.)
+- **Manly** — **closed, signed 2026-06-22, and LIVE (term started 6 Jul 2026).** Now a delivering Active Client below. (Full plan $9K/mo base + 1% LP-launch fee, 3-mo term 6 Jul → 5 Oct 2026.)
 - **VAHDAM** (tea / ashwagandha-coffee; ~$100K/mo ad spend). Pivoted off CRO to **Paid Media (Tincho-operated)**: $5K base + performance fee on contribution margin, plus Advisory $2K/mo and the LP tiers. Status: sent. Owed before contract: their ROAS/COGS (to set the CM %), and a Tincho capacity check for a $100K/mo account.
+
+### Declined / blocked
+- **Jello** (German-only DTC; sells a "Cortisol Cocktail" targeting essentially the **same male hormone-wellness demographic as Mars Men**). **DECLINED 2026-07-20 on contract grounds — do NOT re-open while Juan is at Mars Men.** A Mars Men colleague (Head of Retention) consults for Jello and argued "different market, not a direct competitor." That reasoning is wrong under Juan's actual MM contract: **§5.2 bars any competitive/adverse activity WORLDWIDE during the term** (Germany is irrelevant), and **§5.6 confidentiality (geography-blind, Term+2yrs)** blocks the one thing Juan would bring — the MM playbook. Governing law Wisconsin, loser-pays; MM's business is defined broadly; MM (L Catterton–backed, scaling) could enter Germany. Jello is the single prospect category that is both a product-twin and a live legal breach. **Gate to ever revisit:** only after Juan exits MM **and** a Wisconsin-licensed lawyer clears §5.3–5.8 against Jello's US plans. See [[professional]] Non-compete section.
 
 ## Active Clients
 
-### Manly (through ASTEROI) — SIGNED 2026-06-22
+### Manly (through ASTEROI) — SIGNED 2026-06-22, LIVE since 6 Jul 2026
 - **What:** Men's grooming for teens (parent + teen personas). Australian DTC — Termi Brands Pty Ltd (ABN 82 681 786 514). Big spender (~A$670K/mo across LPs, best page ~A$200K/mo) at low ROAS (1.16–1.74).
 - **Service:** Full plan — LP Design+Dev (3/mo, 1 revision each) + full CRO program (up to 4 experiments/mo, complex = 2). Paid media out of scope (Manly's team runs it).
 - **Revenue:** **$9,000/mo base** + **1% of ad spend routed to each ASTEROI-built LP for its first 30 days live** (rolls off after 30 days; tail clause survives the term). Billed monthly **in arrears**, one invoice, **NET-15**, all USD; AUD spend converted at the RBA month-end rate.
 - **Term:** 3-month initial, **6 Jul → 5 Oct 2026**, then month-to-month. Perf-fee revisited at renewal (the deliberate "widen it later" lever).
 - **Contract:** Executed **2026-06-22**. Signatories: Raphael Mgbadiefe (Cofounder, Termi Brands Pty Ltd) + **Juan Cruz Giusto (Founder, ASTEROI LLC)**. Governing law Victoria, AU; mutual NDA; work-product transfers on payment, ASTEROI retains its tooling. Doc: `Manly_x_ASTEROI_Services_Agreement.docx` (Downloads + C:\tmp).
 - **Delivery:** Tincho operates the account; Juan strategist-only. The whole 3-mo term sits in Tincho's 18PM wind-down (~Sept 2026), so it is the LP-led ramp; full Tincho-operated CRO scales at renewal.
+- **Status (2026-07-20):** engagement **started / delivering** (term began 6 Jul). Watch: LPs shipped in month 1 and whether the 1% LP-launch fee is accruing yet.
 
 ### GLAMRDiP (direct client, not through ASTEROI)
 - **What:** At-home dip powder nail system. Australian-based DTC brand on Shopify. 650K+ customers, 10K+ reviews. Operates in 7+ markets (AU, US, NZ, UK, Nordics). Estimated $5M-$20M+ annual revenue.
@@ -330,5 +334,6 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 - **2026-04-06:** Added Client Narrative & OPSEC section: operator-led framing, Mars Men firewall rules (boundary script, LinkedIn privacy, naming rules), stealth client acquisition playbook (6 channels, avoid list, content flywheel strategy).
 - **2026-04-06:** Updated financial targets to $10M net after tax by 2036, $50M by 2046. Added two-engine model (SEAN + capital deployment). Replaced SaaS spin-out with volume-based scaling. Tools stay internal as margin drivers. Added phases 3-5 and second-decade trajectory.
 - **2026-06-22:** **Manly signed.** Moved Manly from Pipeline to Active Clients (contract executed 2026-06-22). Corrected the ASTEROI ownership line (65/35 → **60/40 profit-share**; ASTEROI LLC is legally 100% Juan, Tincho holds no equity and cannot sign) and the Mars Men firewall premise (Mars Men knows the LLC as Juan's billing entity; the firewall protects the **client roster**, not the LLC's existence). Updated the revenue table to the **60%** split and added Manly ($9K base; gross ~$22.3K, Juan ~$15.2K). June pricing/pipeline steps (06-15 → 06-18) are logged in life/memory/log.md.
+- **2026-07-20:** **Manly marked live** (term started 6 Jul, now delivering). **Added Jello to a new "Declined / blocked" pipeline subsection** — German cortisol brand, same male hormone-wellness demographic as Mars Men; declined on contract grounds (MM §5.2 worldwide during-term bar + §5.6 geography-blind confidentiality), do-not-reopen while at MM. Correction to the non-compete understanding lives in [[professional]].
 
 **Related files:** [[professional]] | [[identity]] | [[learning]]
