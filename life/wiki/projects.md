@@ -3,9 +3,9 @@ title: Active Projects
 description: ASTEROI agency + product suite building toward a $10-15M/year SEAN with 30% FCF. Two-engine wealth model (SEAN cash flow + capital deployment) targeting $10M net after tax by 2036, $50M by 2046. Four clients (~$22.3K/month gross base). Tincho fully operational from early Aug 2026 (bottleneck cleared, ahead of schedule); binding constraint now = demand/pipeline. Six tools (3 active) stay internal as margin drivers. Volume-based scaling: more clients, not higher per-client pricing.
 type: project
 sources: []
-related: [professional, identity, learning]
+related: [professional, identity, learning, mentorpass]
 created: 2026-04-05
-updated: 2026-07-20
+updated: 2026-07-30
 confidence: high
 ---
 
@@ -130,6 +130,7 @@ Mars Men knows **ASTEROI LLC** as Juan's billing entity (he created it before it
 |---------|-------------|------------|
 | **Content inbound** | Publish CRO/experimentation/subscription content on Twitter/X and LinkedIn under Juan's personal brand. Prospects reach out. Juan routes qualified leads to ASTEROI. | Low -- content is about his expertise, not selling services. Mars Men sees a thought leader, not an agency owner. |
 | **The Starters / freelance platforms** | List CRO consulting services. Clients find Juan through the platform, not LinkedIn. | Low -- transactional, separate from Mars Men identity. |
+| **MentorPass (mentor side)** — live 2026-07-30 | Paid 1:1 mentorship marketplace for eComm/DTC operators. Members book and pay for calls; prospects find Juan through the platform, not LinkedIn. **Capacity-safe** (calls, no delivery) and third-party validation of the "9-figure brand operator" credential. Converted leads route to Tincho. See [[mentorpass]]. | Low on OPSEC -- same shape as The Starters. **But:** mentor calls are a live **§5.6 confidentiality** surface (teach method, never the MM playbook), and Juan can't pre-vet who books -- decline any **men's hormone / male-wellness** brand (the Jello line). |
 | **Referrals from existing clients** | Ask GLAMRDiP, BAIA, UNIT 1 for warm intros to other brands in their network. | Very low -- private, no public exposure. |
 | **Tincho's network (post-18PM)** | Once Tincho is free of 18PM, he can prospect openly as ASTEROI's face. | Zero risk to Juan. |
 | **DTC communities / Slack groups** | Engage in private communities (eCommerceFuel, Foxwell Founders, etc.) where Juan can share expertise and field inquiries privately. | Low -- closed communities, not indexed. |
@@ -340,4 +341,6 @@ These are the internal tools Juan is building to power ASTEROI's service deliver
 - **2026-07-20 (later):** **Tincho fully operational confirmed for ~early Aug 2026** (~1 month ahead of the Sept deadline) — Milestone A1 done, biggest bottleneck cleared. Updated Tincho situation section, description frontmatter, and Manly delivery (full CRO can now ramp within the initial term, not just at renewal). Constraint reframed: capacity → demand/pipeline.
 - **2026-07-20:** **Manly marked live** (term started 6 Jul, now delivering). **Added Jello to a new "Declined / blocked" pipeline subsection** — German cortisol brand, same male hormone-wellness demographic as Mars Men; declined on contract grounds (MM §5.2 worldwide during-term bar + §5.6 geography-blind confidentiality), do-not-reopen while at MM. Correction to the non-compete understanding lives in [[professional]].
 
-**Related files:** [[professional]] | [[identity]] | [[learning]]
+- **2026-07-30:** **Juan listed as a mentor on MentorPass.** Added as a new row to the stealth client-acquisition channel table (low OPSEC risk, capacity-safe, same shape as The Starters — but carries a live §5.6 confidentiality surface and a §5.2 decline rule for men's hormone brands). Full page: [[mentorpass]]. First concrete Track B (demand engine) asset since the constraint reframed capacity → demand.
+
+**Related files:** [[professional]] | [[identity]] | [[learning]] | [[mentorpass]]

@@ -3,10 +3,21 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-07-20
+updated: 2026-07-30
 ---
 
 # Life Memory Log
+
+## [2026-07-30] update | Juan accepted as a MentorPass mentor — first Track B asset
+- **Juan is live as a listed mentor on MentorPass** (paid 1:1 mentorship marketplace, eComm/DTC-weighted). Mentor side, not member side.
+- **Strategic fit:** lands on the current binding constraint. Since 2026-07-20 the constraint is **demand, not capacity** (Tincho operational early, VAHDAM cold, Jello declined, no acquisition engine). This is the **first concrete Track B asset**. It is also the one channel that's **capacity-safe** — calls, no delivery, no retainer — which matters because Juan is at max personal capacity. Same channel shape as **The Starters** (which produced GLAMRDiP at $4.5K/mo direct): prospects arrive via the platform, not via a LinkedIn that says Mars Men. OPSEC risk: **low**.
+- **Sharpest risk is §5.6, not §5.2.** A mentor call is synchronous, unscripted, and the mentee is paying to extract specifics — a much leakier surface than an editable LinkedIn post. The **MM playbook is Confidential Information, geography-blind, Term + 2 yrs**. Working rule: **teach the method, never the MM specifics** (test results, funnel math, LP performance, retention numbers, roadmap).
+- **§5.2 decline rule:** on a marketplace Juan doesn't choose who books, which inverts normal vetting. Any **men's hormone / testosterone / male-wellness-supplement** brand = decline (the **Jello** line — overlap is product/demographic, not geographic). Open: confirm MentorPass allows declining a booking without penalty.
+- **Firewall runs the reverse direction here.** MentorPass is a personal-brand surface, so leading with the MM credential is fine (consistent with his LinkedIn). The risk is the profile positioning him as an **agency founder** — public, indexed, findable by a MM colleague, and the one place "MM Head of eComm" + "agency owner" would sit in one frame. Mentor = thought leader (safe); mentor + agency = breach.
+- **Content constraint carries over:** no Meta Ads / performance marketing. Sellable topics = CRO, experimentation, subscription economics, retention/LTV, eComm finance, LP.
+- **Open (blocks the value assessment):** whether MentorPass bars off-platform conversion. If it does, this is a **credibility channel that happens to pay**, not a client-acquisition funnel — a materially different investment case. Also to fill: rate + platform take, profile URL/bio, applied-vs-invited, listed topics, volume cap.
+- Pages created: life/wiki/mentorpass.md
+- Pages updated: life/wiki/life-index.md (new Projects entry), life/wiki/projects.md (stealth-acquisition channel table row, related, changelog)
 
 ## [2026-07-20] update | Tincho fully operational confirmed for early Aug — Milestone A1 done
 - **Juan confirmed: Tincho goes fully operational ~early August 2026 (~10 days out)** — off 18PM, full-time on ASTEROI, free to be the public face + operate accounts + sell. **~1 month ahead of the Sept-2026 hard deadline.**
