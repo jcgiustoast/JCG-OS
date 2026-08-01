@@ -1,19 +1,19 @@
 ---
 title: MentorPass — Juan listed as mentor
-description: Juan was accepted as a listed mentor on MentorPass (2026-07-30) — a paid 1:1 mentorship marketplace for eComm/DTC operators. Strategically this is a low-OPSEC inbound channel arriving exactly as ASTEROI's binding constraint moved capacity → demand, and it is capacity-safe (calls, no delivery). Two live risks: §5.6 MM confidentiality (a mentor call is a synchronous disclosure surface — the sharpest exposure) and §5.2 if a men's hormone/supplement brand books him. Rate, profile copy, and platform terms still to be filled.
+description: Juan is a listed mentor on MentorPass (live by 2026-07-30; logged 2026-08-01) — a paid 1:1 mentorship marketplace for eComm/DTC operators. Strategically this is a low-OPSEC inbound channel arriving exactly as ASTEROI's binding constraint moved capacity → demand, and it is capacity-safe (calls, no delivery). Two live risks: §5.6 MM confidentiality (a mentor call is a synchronous disclosure surface — the sharpest exposure) and §5.2 if a men's hormone/supplement brand books him. Rate, profile copy, and platform terms still to be filled.
 type: project
 author: claude
 sources: []
 related: [professional, projects, strategy, asteroi-rate-card, content-strategy]
-created: 2026-07-30
-updated: 2026-07-30
+created: 2026-08-01
+updated: 2026-08-01
 confidence: medium
 ---
 
 # MentorPass — Juan listed as mentor
 
 ## Status
-- **Accepted / live as a listed mentor: 2026-07-30.**
+- **Live as a listed mentor by 2026-07-30** (he ran a paid session that day). Exact acceptance date not confirmed — see [Open fields](#open-fields).
 - Juan is on the **mentor side** (people book and pay for time with him), not the member side.
 - MentorPass is a marketplace for **paid 1:1 video mentorship**, weighted toward eCommerce / DTC / growth operators. Members buy credits and book sessions with vetted mentors.
 - Details still to confirm — see [Open fields](#open-fields).
@@ -76,6 +76,6 @@ To be filled by Juan:
 ---
 
 ### Changelog
-- **2026-07-30:** Page created. Juan accepted as a listed MentorPass mentor. Logged strategic fit (demand constraint, capacity-safe, The Starters-shaped channel), the §5.6 confidentiality risk as the sharpest exposure, the §5.2 decline rule for hormone/male-wellness brands, the reversed firewall direction, and open fields.
+- **2026-08-01:** Page created. Juan listed as a MentorPass mentor (live by 2026-07-30). Logged strategic fit (demand constraint, capacity-safe, The Starters-shaped channel), the §5.6 confidentiality risk as the sharpest exposure, the §5.2 decline rule for hormone/male-wellness brands, the reversed firewall direction, and open fields.
 
 **Related files:** [[professional]] | [[projects]] | [[strategy]] | [[asteroi-rate-card]] | [[content-strategy]]

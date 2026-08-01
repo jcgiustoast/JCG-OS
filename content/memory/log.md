@@ -3,7 +3,7 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-07-30
+updated: 2026-08-01
 ---
 
 # Content Memory Log
@@ -12,7 +12,7 @@ updated: 2026-07-30
 
 ---
 
-## [2026-07-30] ingest | MentorPass session → subscription CRO framework
+## [2026-08-01] ingest | MentorPass session → subscription CRO framework
 
 - Source: 64-minute paid MentorPass mentorship call Juan ran on 2026-07-30 (subscription CRO / experimentation). Raw ASR transcript archived to `life/raw/notes/2026-07-30-mentorpass-session-transcript.md` — NOT in `content/`, so `/content-sync` never pushes it to Notion. It contains employer-confidential test results and a third party's internal brand figures.
 - Extracted the reusable framework into a new topic page, fully scrubbed: no employer named, no real test results reproduced as events, no mentee or mentee-brand data in any form.
