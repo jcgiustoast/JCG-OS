@@ -14,7 +14,7 @@ updated: 2026-08-01
 - **Net:** phantom locked as analyzed — thin, conditional, subordinated, dilutable, forfeitable; a free-but-unlikely lottery ticket. Decision unchanged: MM = 2-year salary + credential bridge; ASTEROI is the wealth engine; stay/leave decides on the [[strategy]] gates, not this.
 - Pages updated: life/wiki/mars-men-phantom-equity.md (status → SIGNED), life/wiki/life-index.md.
 
-## [2026-07-30] update | Juan accepted as a MentorPass mentor — first Track B asset
+## [2026-08-01] update | Juan listed as a MentorPass mentor — first Track B asset
 - **Juan is live as a listed mentor on MentorPass** (paid 1:1 mentorship marketplace, eComm/DTC-weighted). Mentor side, not member side.
 - **Strategic fit:** lands on the current binding constraint. Since 2026-07-20 the constraint is **demand, not capacity** (Tincho operational early, VAHDAM cold, Jello declined, no acquisition engine). This is the **first concrete Track B asset**. It is also the one channel that's **capacity-safe** — calls, no delivery, no retainer — which matters because Juan is at max personal capacity. Same channel shape as **The Starters** (which produced GLAMRDiP at $4.5K/mo direct): prospects arrive via the platform, not via a LinkedIn that says Mars Men. OPSEC risk: **low**.
 - **Sharpest risk is §5.6, not §5.2.** A mentor call is synchronous, unscripted, and the mentee is paying to extract specifics — a much leakier surface than an editable LinkedIn post. The **MM playbook is Confidential Information, geography-blind, Term + 2 yrs**. Working rule: **teach the method, never the MM specifics** (test results, funnel math, LP performance, retention numbers, roadmap).

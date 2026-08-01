@@ -5,8 +5,8 @@ type: topic
 author: claude
 sources: [life/raw/notes/2026-07-30-mentorpass-session-transcript.md]
 related: [experimentation-frameworks, subscription-metrics, ltv-frameworks, measurement-incrementality, ecommerce-forecasting]
-created: 2026-07-30
-updated: 2026-07-30
+created: 2026-08-01
+updated: 2026-08-01
 confidence: high
 ---
 
@@ -243,4 +243,4 @@ Strong Phase 1 material — this is CRO and experimentation methodology, squarel
 ---
 
 ### Changelog
-- **2026-07-30:** Page created. Framework extracted and scrubbed from a paid mentorship session on subscription CRO. All employer-specific results, third-party brand data, and session participant details removed at extraction.
+- **2026-08-01:** Page created. Framework extracted and scrubbed from the 2026-07-30 paid mentorship session on subscription CRO. All employer-specific results, third-party brand data, and session participant details removed at extraction.
