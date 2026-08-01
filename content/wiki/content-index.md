@@ -3,7 +3,7 @@ title: Content Wiki Index
 description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, reference posts) lives in Notion.
 type: index
 created: 2026-04-06
-updated: 2026-05-25
+updated: 2026-07-30
 confidence: high
 ---
 
@@ -109,6 +109,7 @@ Synthesized from 37 articles. Each page extracts reusable frameworks, formulas, 
 
 - [[subscription-metrics]] — The Metric Tree framework (5 branches), subscription-specific KPIs, churn taxonomy, activation metrics, expansion metrics. (confidence: high)
 - [[experimentation-frameworks]] — Powered ICE prioritization, subscription experimentation methodology, 10 program elements, 5 critical areas, P&L-driven experimentation. (confidence: high)
+- [[subscription-cro-experimentation]] — The decision layer of subscription CRO: contribution margin per visitor, pre-declared hypotheses, non-inferiority testing, statistical discipline, the RCT-to-production break, modeling instead of waiting, cohort segmentation, cross-sell education cost. Contains one firewall-flagged section (platform repricing / CAC) requiring Juan's judgment before publishing. (confidence: high)
 - [[profitability-levers]] — 11 profitability levers, 7 habits of profitable brands, Marginal Contribution as North Star, Awake Customers framework. (confidence: high)
 - [[ltv-frameworks]] — Time-bounded LTV (60/120/360-day), Value vs Revenue distinction, 60-Day LTV Multiplier, 7 improvement strategies. (confidence: high)
 - [[ecommerce-growth-formula]] — Core growth formula (Traffic x CR x AOV x LTV Multiplier - Costs), Growth Code 5 principles, diagnostic tool. (confidence: high)
