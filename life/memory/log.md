@@ -3,10 +3,16 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-07-30
+updated: 2026-08-01
 ---
 
 # Life Memory Log
+
+## [2026-08-01] decision | Signed the Mars Men phantom equity award as-is
+- **Juan SIGNED the phantom equity Award Agreement (2026-08-01), no modifications.** Before signing he asked MM for three changes: (1) acceleration if sold before full vest, (2) a without-cause carve-out on the 6-month post-close tail, (3) anti-dilution / fixed shares. **MM declined all three** to "keep the program consistent across recipients," offering only non-binding "may consider case-by-case waivers" on (1) and (2), and confirming the dilution on (3) (share count fixed, percentage dilutes). Signing extinguishes the contractual **0.1%-on-sale** via the Award's supersession clause.
+- **Emotional check logged + reframed.** Juan felt let-down ("this isn't what I left the other proposal for") — he'd walked from PAK's better equity terms (real acceleration, higher headline %). Reframe (per his own [[pet-brand-offer]] record): he did NOT leave PAK for MM's equity — MM never improved the 0.1% and he knew it; he stayed on the **ASTEROI-bridge** logic (nearer/surer exit, low disruption, credential, protected ASTEROI bandwidth). Those reasons are all intact; the equity was never the deal. Watch: if the sting is really "I don't feel valued / souring on staying," that's a separate bridge-quality question.
+- **Net:** phantom locked as analyzed — thin, conditional, subordinated, dilutable, forfeitable; a free-but-unlikely lottery ticket. Decision unchanged: MM = 2-year salary + credential bridge; ASTEROI is the wealth engine; stay/leave decides on the [[strategy]] gates, not this.
+- Pages updated: life/wiki/mars-men-phantom-equity.md (status → SIGNED), life/wiki/life-index.md.
 
 ## [2026-07-30] update | Juan accepted as a MentorPass mentor — first Track B asset
 - **Juan is live as a listed mentor on MentorPass** (paid 1:1 mentorship marketplace, eComm/DTC-weighted). Mentor side, not member side.
@@ -18,6 +24,16 @@ updated: 2026-07-30
 - **Open (blocks the value assessment):** whether MentorPass bars off-platform conversion. If it does, this is a **credibility channel that happens to pay**, not a client-acquisition funnel — a materially different investment case. Also to fill: rate + platform take, profile URL/bio, applied-vs-invited, listed topics, volume cap.
 - Pages created: life/wiki/mentorpass.md
 - Pages updated: life/wiki/life-index.md (new Projects entry), life/wiki/projects.md (stealth-acquisition channel table row, related, changelog)
+
+## [2026-07-27] decision | Mars Men phantom equity reviewed — replaces the 0.1%, Gruns comp debunked
+- **Reviewed MM's 2026 Phantom Equity Plan award to ASTEROI LLC** (11,175 phantom shares, $0 strike, grant 2026-07-20, VCD backdated 2025-10-20, pool 558,773, Delaware law, signed for MM by Benjamin Smith). Juan confirmed it **REPLACES** the contractual 0.1%-on-sale.
+- **Key finding — it's a more-conditional repackaging, not free upside.** The Award Agreement's "Entire Agreement/supersedes" clause means **signing likely extinguishes the contractual 0.1%.** New terms are worse on every certain axis: 1-yr cliff (nothing before Oct 2026), a **6-month post-close service tail that forfeits everything — vested included — for ANY reason** (incl. acquirer non-renewal without cause), subordination to the full preferred stack + 5% top-up, Board sole discretion, broad release within 60 days, ordinary-income tax. Pays only on an **acquisition (not IPO)**; only the **first** qualifying event counts.
+- **Leverage reframe:** they can pull the phantom offer freely but **cannot unilaterally erase a signed contractual 0.1%** — only Juan's signature does. Doing nothing may keep the better right. Verify: is the 0.1% a signed/standing term, and is signing tied to continued engagement?
+- **The one ask (if any):** a **double-trigger carve-out** — "if the acquirer terminates/doesn't renew ASTEROI without cause before the 6-mo anniversary, shares vest in full and remain payable." Fairness framing; protects the zero scenario; folds in acceleration. NOT a single-trigger "full ramp" (useless in the cut scenarios).
+- **Value model:** at a $1B exit, fully vested ≈ **$800–900K gross (~$450–500K after tax)**, scaling with vesting (~33% at Oct 2026 → 100% at Oct 2028). Subordination barely matters at $1B; it guts small exits. Scales linearly with the true fraction (~0.1% — **confirm cap table**).
+- **Gruns exit-odds fact-check (web-verified):** Gruns' fast $1.2B sale to **Unilever** (closed 2026-06-01, ~30 months) is REAL — **but Gruns was NOT an L Catterton company** (Headline-led Series B; Sugar Capital, Selva, Able Partners, Unilever-strategic). Juan's "same investor as us → we exit fast too" premise is **false.** Right comp axis is **growth trajectory, not shared investor**; MM's 0→$100M/<18mo genuinely rhymes with Gruns, but a fast exit now rests on MM sustaining growth + a strategic buyer, not the sponsor.
+- **Decision synthesis:** the phantom is a **free lottery ticket, not a reason to stay.** Given Juan's ≤2-yr horizon, his only realistic payday is an early sale while still engaged → partial vest. **Stay/leave decides on the [[strategy]] gates** ($25K/mo recurring, live inbound, 3mo runway), not exit odds. Don't leave early off-plan — MM salary funds the runway, the credential powers inbound. Don't let the downgrade sour the stay call emotionally.
+- Pages created: life/wiki/mars-men-phantom-equity.md. Pages updated: life/wiki/life-index.md.
 
 ## [2026-07-20] update | Tincho fully operational confirmed for early Aug — Milestone A1 done
 - **Juan confirmed: Tincho goes fully operational ~early August 2026 (~10 days out)** — off 18PM, full-time on ASTEROI, free to be the public face + operate accounts + sell. **~1 month ahead of the Sept-2026 hard deadline.**
