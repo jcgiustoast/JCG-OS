@@ -3,7 +3,7 @@ title: Life Wiki Index
 description: Master catalog of all life/professional/personal wiki pages.
 type: index
 created: 2026-04-06
-updated: 2026-07-20
+updated: 2026-08-01
 ---
 
 # Life Wiki Index
@@ -24,6 +24,7 @@ updated: 2026-07-20
 - [[projects]] — Strategic vision: build ASTEROI into a CTC-like agency. Three clients (GLAMRDiP, BAIA, UNIT 1), AURAL venture, and 6-tool product suite (Ad Creative System, Meta Ads Deployer, Robyn Wrapper, Sense/AsteroiAds, Triple Whale Clone, LP Generator). (confidence: high)
 - [[asteroi-rate-card]] — Canonical ASTEROI pricing: Advisory $2K, LP $4-4.5K, CRO $4.5-6.5K, Bundle $10K, all 3-month minimum. Ascending ladder (Advisory → LP → CRO → Bundle) + reusable prospect-audit template. First applied to Manly audit. (confidence: high)
 - [[engagement-targets]] — Curated Twitter/LinkedIn accounts to monitor daily for ASTEROI inbound + personal brand. Powers /engage. Inspiration tier seeded; ICPs and Peers to be filled. (confidence: medium)
+- [[mentorpass]] — Juan listed as a paid mentor on MentorPass (2026-07-30). Low-OPSEC inbound + credibility channel, capacity-safe (calls, no delivery), landing exactly as the constraint moved capacity → demand. Live risks: §5.6 MM confidentiality (mentor calls are a synchronous disclosure surface) and §5.2 if a men's hormone brand books. Rate/profile/platform terms to be filled. (confidence: medium)
 
 ## Memory
 - [[log]] — Chronological activity log. Most recent first.
