@@ -5,7 +5,7 @@ type: concept
 author: juan
 related: [brand-voice, platform-tone, hooks, repurpose, content-strategy, subscription-lab]
 created: 2026-04-20
-updated: 2026-04-20
+updated: 2026-08-27
 confidence: high
 ---
 
@@ -21,8 +21,8 @@ confidence: high
 
 ## Phase 1 Firewall (see [[content-strategy]])
 
-- No Mars Men by name; credential usage allowed as "Head of eCommerce at a 9-figure subscription brand"
-- No Meta Ads tactics, creative strategy, ad spend
+- Mars Men OK by name (2026-08-27) — beliefs/methodology only; no internal numbers, test results, or implementation specifics. Credential also usable as "Head of eCommerce at a 9-figure subscription brand"
+- No Meta Ads tactics, creative strategy, ad spend advice (CRO-experiment impact on paid, framed as measurement, is OK — 2026-08-27)
 - No ASTEROI service CTAs
 - Published as Juan's personal brand, not agency content
 

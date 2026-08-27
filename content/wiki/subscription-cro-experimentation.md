@@ -6,7 +6,7 @@ author: claude
 sources: [life/raw/notes/2026-07-30-mentorpass-session-transcript.md]
 related: [experimentation-frameworks, subscription-metrics, ltv-frameworks, measurement-incrementality, ecommerce-forecasting]
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-08-27
 confidence: high
 ---
 
@@ -140,7 +140,7 @@ This is not an argument against shipping. It is an argument for knowing what you
 
 ### Experiment results do not translate linearly to CAC
 
-> ⚠️ **Firewall — needs Juan's judgment before publishing.** This section is measurement, not media buying, but it reads as an opinion about a paid platform's behavior. Per [[content-strategy]] Phase 1, Juan cannot publish on Meta Ads strategy or performance-marketing tactics. Capture it here; decide separately whether any version of it is publishable. It is deliberately excluded from the content ideas below.
+> ✅ **Firewall resolved (2026-08-27).** Juan's call: publishable when framed as experiment measurement — "what your A/B test can't see" — never as Meta media-buying advice. Filed as idea #6 of the "CRO things we got right at Mars Men" series. The framing line to hold: the post is about the experiment's blind spot, not about how to run paid.
 
 The intuition everyone carries: lift site conversion rate 10%, and paid CPA falls 10%. The world is linear, the ad account just passes the improvement through.
 
@@ -236,7 +236,7 @@ Strong Phase 1 material — this is CRO and experimentation methodology, squarel
 - Peeking / the coin-flip analogy / one metric not five — evergreen, high shareability
 - The RCT-to-production break — conceptual, differentiating
 - Cross-sell education cost — concrete, tactical, no math required
-- **Off-limits in Phase 1:** the platform-repricing / CAC section. Measurement in substance, paid-media opinion in appearance. Needs Juan's explicit call before any version of it is drafted.
+- The platform-repricing / CAC section — **cleared by Juan 2026-08-27** for measurement-framed publishing (see the resolved firewall note above). Filed as series idea #6.
 
 **Scrubbing rule for anything drawn from this page:** every example here is a generic illustration. No employer, client, or mentee results, numbers, or attributions may be reintroduced when drafting.
 
@@ -244,3 +244,4 @@ Strong Phase 1 material — this is CRO and experimentation methodology, squarel
 
 ### Changelog
 - **2026-08-01:** Page created. Framework extracted and scrubbed from the 2026-07-30 paid mentorship session on subscription CRO. All employer-specific results, third-party brand data, and session participant details removed at extraction.
+- **2026-08-27:** Platform-repricing / CAC firewall flag resolved — Juan cleared it for publishing under measurement framing. Section feeds idea #6 of the Mars Men CRO series. Scrubbing rule unchanged.

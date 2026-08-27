@@ -3,12 +3,23 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-08-01
+updated: 2026-08-27
 ---
 
 # Content Memory Log
 
 *Append-only. Most recent entries at the top. Never edit past entries.*
+
+---
+
+## [2026-08-27] decision | Phase 1 firewall revised + Mars Men CRO series filed
+
+- Juan revised the Phase 1 firewall: **Mars Men may now be named** in content — beliefs/frameworks/methodology only; never internal numbers, test results, or specific implementations. Raheel/Zach/Benjamin stay unnamed. Editorial rule: *name the brand, share the belief, never the number or the implementation.*
+- Meta constraint narrowed to "as advice," with a carve-out: CRO-experiment impact on paid media (auction repricing, post-ship CAC watch) is publishable when framed as experiment measurement. This resolves the 2026-08-01 firewall flag on the platform-repricing section of [[subscription-cro-experimentation]].
+- Filed 7 Idea rows to the Notion Content DB (Platform=Twitter, Type=Thread): "CRO things we got right at Mars Men" #1 Deep Research, #2 Understanding Unit Economics, #3 Not Obsessing with CVR, #4 Pre-testing, #5 Learnings Distribution, #6 Paid-Media Impact Check, #7 The AI Harness. Format modeled on the ex-Gruns data thread (fight → verdict → prescription); #7 is the capstone (AI harness parallel).
+- Sync note: `subscription-cro-experimentation` is not yet in the Knowledge Mirror, so its source mention was skipped on all 7 rows — run `/content-sync wiki` after these edits merge to backfill.
+- Pages updated: `content/wiki/content-strategy.md`, `content/wiki/subscription-cro-experimentation.md`, `content/wiki/platforms/twitter.md`, `content/wiki/platforms/linkedin.md`, `content/wiki/platforms/blog.md` (firewall bullets + dates only, Juan-approved), `~/.claude/commands/content.md` (STEP 2 + credential rules)
+- Not yet done (pending Juan): repo/AI-harness project entry in `life/wiki/projects.md`
 
 ---
 

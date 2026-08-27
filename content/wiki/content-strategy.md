@@ -5,7 +5,7 @@ type: concept
 sources: []
 related: [subscription-lab, asteroi-blog-en, asteroi-blog-es]
 created: 2026-04-06
-updated: 2026-04-06
+updated: 2026-08-27
 confidence: high
 ---
 
@@ -61,8 +61,8 @@ This is a 12-month asset (Phase 1 only). After leaving Mars Men, it becomes "for
 ## Phase 1: "The Stealth Build" (April 2026 - Q1 2027)
 
 ### Constraints
-- Cannot mention Mars Men by name (firewall — see [[projects]])
-- Cannot discuss Meta Ads, creative strategy, ad spend management (Raheel's domain)
+- CAN mention Mars Men by name (revised 2026-08-27) — beliefs, frameworks, and methodology only. Never internal numbers, test results, or specific implementations ("what we did"). Editorial rule: *name the brand, share the belief, never the number or the implementation.*
+- Cannot discuss Meta Ads, creative strategy, or ad spend management **as advice** (Raheel's domain). Carve-out (2026-08-27): how CRO experiments impact paid media — auction repricing, post-ship CAC watch — is publishable when framed as experiment measurement, not media buying.
 - Cannot position as ASTEROI founder publicly
 - Must look like "thought leader sharing expertise," not "agency owner selling services"
 
@@ -92,7 +92,7 @@ From [[strategy]]:
 ### What NOT to Post
 - "Day in the life at a $100M brand" vanity content
 - Meta Ads tactics, creative breakdowns, ad spend strategy
-- Anything mentioning Mars Men, Raheel, Zach, Benjamin by name
+- Mars Men internal numbers, test results, or implementation specifics (the brand name itself is OK as of 2026-08-27; Raheel, Zach, Benjamin stay unnamed)
 - ASTEROI service promotions or CTAs
 - Content in Spanish (not this phase)
 
@@ -164,3 +164,4 @@ Juan has 37+ published articles across three properties. These are a foundation,
 
 ### Changelog
 - **2026-04-06:** Initial content strategy created. English-only for Phase 1-2, Spanish expansion Phase 3+. Phased topic constraints, channel cadence, and Mars Men credential usage guidelines.
+- **2026-08-27:** Firewall revised per Juan's decision. Mars Men may now be named (methodology/beliefs framing only; no internal numbers, test results, or implementation specifics; team members stay unnamed). Meta constraint narrowed to "as advice" with a measurement carve-out for CRO-experiment impact on paid media. Prompted by the "CRO things we got right at Mars Men" series (7 ideas filed to Notion).
