@@ -3,12 +3,37 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-08-01
+updated: 2026-09-03
 ---
 
 # Content Memory Log
 
 *Append-only. Most recent entries at the top. Never edit past entries.*
+
+---
+
+## [2026-09-03] ingest | MentorPass session → landing page testing framework
+
+- Source: ~34-minute paid MentorPass session Juan ran on 2026-08-26 for a UK skincare/collagen brand launching in the US (founder, head of growth, creative, ops). Cleaned transcript archived to `life/raw/notes/2026-08-26-mentorpass-session-transcript.md` — NOT in `content/`, so `/content-sync` never pushes it. Contains Mars Men internal figures and the mentee brand's internal figures.
+- Extracted the reusable model into a new topic page, scrubbed per the 2026-08-27 firewall (*name the brand, share the belief, never the number or the implementation*).
+- Genuinely new to the vault: **the template and the awareness stage are separate choices** — a listicle is a page format, not a funnel position, and the same template works cold or warm depending on framing; the headline plus the first two or three items decide the awareness stage because most visitors never scroll past them; **you are testing the ad and the page together**, so a creative that flopped on a product page is not a dead creative; ad-to-page coherence and its failure mode (warm ad → cold page); **for cold traffic the ad should sell the quiz, not the product**, or the warming job falls on the ad; the two routes to incremental spend (angle already winning → build the angle-specific page and duplicate the ads in; new angle → build pages and creative together); telling incrementality from cannibalization and the deliberately low honest bar (*can we spend more at the efficiency goal?*); the CAC/volume trade split by consumable vs one-purchase; format ranking (quizzes > listicles > advertorials by lift-to-impact).
+- Two open questions carried into the page rather than resolved: why quizzes convert warm traffic (works, mechanism unestablished), and whether ad platforms classify page awareness at all (unverified — the claims in the page are customer psychology only).
+- **Firewall split flagged in the page for `/content`:** the page-side material (templates, awareness staging, headline mechanics, coherence, format ranking, CAC trade) is publishable CRO. The ad-account structure (budget pools, where a duplicated ad goes, allocation across ad sets) is media buying and stays private — use the conclusion, not the mechanics.
+- Withheld entirely: Mars Men's ad spend trajectory, a specific MM landing-page test result, MM testing cadence per concept, and all mentee-brand figures.
+- 6 content ideas proposed on the page, NOT filed to Notion — awaiting Juan's review. Strongest two: "a listicle is not a funnel stage, it's a template" and "your cold ad should sell the quiz, not the product."
+- Pages created: `content/wiki/landing-page-testing.md`, `life/raw/notes/2026-08-26-mentorpass-session-transcript.md`
+- Pages updated: `content/wiki/content-index.md`
+
+---
+
+## [2026-08-27] decision | Phase 1 firewall revised + Mars Men CRO series filed
+
+- Juan revised the Phase 1 firewall: **Mars Men may now be named** in content — beliefs/frameworks/methodology only; never internal numbers, test results, or specific implementations. Raheel/Zach/Benjamin stay unnamed. Editorial rule: *name the brand, share the belief, never the number or the implementation.*
+- Meta constraint narrowed to "as advice," with a carve-out: CRO-experiment impact on paid media (auction repricing, post-ship CAC watch) is publishable when framed as experiment measurement. This resolves the 2026-08-01 firewall flag on the platform-repricing section of [[subscription-cro-experimentation]].
+- Filed 7 Idea rows to the Notion Content DB (Platform=Twitter, Type=Thread): "CRO things we got right at Mars Men" #1 Deep Research, #2 Understanding Unit Economics, #3 Not Obsessing with CVR, #4 Pre-testing, #5 Learnings Distribution, #6 Paid-Media Impact Check, #7 The AI Harness. Format modeled on the ex-Gruns data thread (fight → verdict → prescription); #7 is the capstone (AI harness parallel).
+- Sync note: `subscription-cro-experimentation` is not yet in the Knowledge Mirror, so its source mention was skipped on all 7 rows — run `/content-sync wiki` after these edits merge to backfill.
+- Pages updated: `content/wiki/content-strategy.md`, `content/wiki/subscription-cro-experimentation.md`, `content/wiki/platforms/twitter.md`, `content/wiki/platforms/linkedin.md`, `content/wiki/platforms/blog.md` (firewall bullets + dates only, Juan-approved), `~/.claude/commands/content.md` (STEP 2 + credential rules)
+- Not yet done (pending Juan): repo/AI-harness project entry in `life/wiki/projects.md`
 
 ---
 

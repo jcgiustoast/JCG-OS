@@ -3,10 +3,25 @@ title: Life Memory Log
 description: Append-only chronological log of life/professional activity. Most recent first.
 type: log
 created: 2026-04-05
-updated: 2026-08-01
+updated: 2026-09-03
 ---
 
 # Life Memory Log
+
+## [2026-09-03] ingest | Second MentorPass session — first §5.6 breach, and the Track B verdict tilts
+
+- Reviewed the 2026-08-26 MentorPass session (UK skincare/collagen brand, launching US; founder + head of growth + creative + ops on a 34-minute call). Transcript archived to `life/raw/notes/2026-08-26-mentorpass-session-transcript.md`.
+- **First §5.6 breach recorded.** Three Mars Men specifics disclosed: the ad spend trajectory, the result of a specific landing-page test, and the number of landing pages run per new high-confidence concept. The first was prefaced with "I can't give you specifics" and then given anyway. These map exactly onto the three categories the Phase 1 firewall prohibits — the rule Juan codified the very next day, 2026-08-27. So the call predates the written rule by one day and was not a breach of anything written at the time. It is, however, the first live test of the rule, and it shows the gap the rule does not cover: a post can be edited before it ships, a call cannot.
+- **Named the mechanic:** the specific is what makes the answer good, so every generous answer pulls toward the breach. Filed prepared substitutes in [[mentorpass]] — say the shape, withhold the magnitude ("the existing campaigns held their spend and efficiency" teaches everything the percentage does).
+- **Adjacency risk, not abstract:** Brad (podcast co-host of Zach's) had been on a call with these same people days earlier telling them Mars Men does exactly this. Live circuit back toward MM.
+- **Track B verdict tilts to "credibility that pays."** Two sessions, zero ASTEROI-shaped leads, failing in different directions — Kyle wanted a job, this team wanted knowledge for an in-house build. Matches the structural read: people who buy an hour of advice intend to do the work themselves. Recommendation logged: cap the time, take the calls, don't build a funnel behind it. Off-platform conversion terms now matter less — nothing to convert.
+- **Both bookings were skincare** (women's beauty/supplements, not men's wellness). Weak but favorable signal for the §5.2 decline rule — the risky brands aren't the ones finding him.
+- **Content constraint updated** to match the 2026-08-27 narrowing ("as advice" + measurement carve-out). Roughly half the call was budget structure and ad-set placement, handled fluently — the constraint is political, not about competence. Defensible public version identified: the landing-page half of paid acquisition (coherence, funnel testing, awareness matching) is CRO in substance and is his.
+- **Unexpected return:** both sessions produced a topic page the vault lacked, and this one produced a spec change for a live tool — the **Mars Men LP Generator** builds general "10 Reasons" listicles, while Juan's own answer on the call was that *angle-specific* pages create the incremental spend and that the H1 plus first three reasons set the awareness stage. Proposed: take an angle as an input, treat the H1 and first three reasons as the awareness control. Not yet written to [[projects]] — pending Juan.
+- Pages created: `life/raw/notes/2026-08-26-mentorpass-session-transcript.md`
+- Pages updated: `life/wiki/mentorpass.md`
+
+---
 
 ## [2026-08-01] decision | Signed the Mars Men phantom equity award as-is
 - **Juan SIGNED the phantom equity Award Agreement (2026-08-01), no modifications.** Before signing he asked MM for three changes: (1) acceleration if sold before full vest, (2) a without-cause carve-out on the 6-month post-close tail, (3) anti-dilution / fixed shares. **MM declined all three** to "keep the program consistent across recipients," offering only non-binding "may consider case-by-case waivers" on (1) and (2), and confirming the dilution on (3) (share count fixed, percentage dilutes). Signing extinguishes the contractual **0.1%-on-sale** via the Award's supersession clause.

@@ -5,7 +5,7 @@ type: concept
 author: juan
 related: [brand-voice, platform-tone, hooks, repurpose, content-strategy]
 created: 2026-04-20
-updated: 2026-04-20
+updated: 2026-08-27
 confidence: high
 ---
 
@@ -20,8 +20,8 @@ confidence: high
 
 ## Phase 1 Firewall (see [[content-strategy]])
 
-- No Mars Men / Raheel / Zach / Benjamin by name
-- No Meta Ads tactics, creative strategy, ad spend
+- Mars Men OK by name (2026-08-27) — beliefs/methodology only; no internal numbers, test results, or implementation specifics. Raheel / Zach / Benjamin stay unnamed
+- No Meta Ads tactics, creative strategy, ad spend advice (CRO-experiment impact on paid, framed as measurement, is OK — 2026-08-27)
 - Credential OK as: "Head of eCommerce at a 9-figure subscription brand" or "a $100M+ DTC brand backed by L Catterton"
 - No ASTEROI founder positioning until Phase 2
 - Every piece must teach a reusable framework or insight
