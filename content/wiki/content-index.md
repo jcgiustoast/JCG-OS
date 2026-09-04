@@ -3,7 +3,7 @@ title: Content Wiki Index
 description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, reference posts) lives in Notion.
 type: index
 created: 2026-04-06
-updated: 2026-08-01
+updated: 2026-09-03
 confidence: high
 ---
 
@@ -117,6 +117,8 @@ Synthesized from 37 articles. Each page extracts reusable frameworks, formulas, 
 - [[ecommerce-forecasting]] — Tree Model (roots/trunk/branches), cohort-based recurring customer forecasting, incrementality-adjusted new customer forecasting. (confidence: high)
 - [[ecommerce-metrics-hierarchy]] — 4-level metrics pyramid (Financial > Business > Customer > Platform), MER/aMER/nCAC definitions, AOV critique, Control vs Precision paradoxes. (confidence: high)
 - [[meta-ads-optimization]] — Meta Andromeda strategies, 10 Meta ROI tactics, making Meta profitable. Phase 2+ content only per content-strategy. (confidence: high)
+- [[landing-page-testing]] — The landing page as a variable in the ad test: template vs awareness stage (a listicle is a template, not a funnel stage), what sets a page's awareness level, ad-to-page coherence, two routes to incremental spend, telling incrementality from cannibalization, the CAC/volume trade. Contains a firewall split — page-side material is publishable CRO, ad-account structure is not. (confidence: medium)
+- [[landing-page-strategy]] — **Shareable.** The handout Juan sends mentees after a landing page call: where page ideas come from, template vs awareness stage, ad-to-page pairing, selling the page not the product on cold traffic, what sets page weight, the acute-symptom move, testing the ad-and-page pair, and the diagnostic when it isn't working. Written in Juan's voice and pre-scrubbed for external sharing. (confidence: high)
 
 ## Tooling
 
