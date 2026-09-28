@@ -3,7 +3,7 @@ title: Life Wiki Index
 description: Master catalog of all life/professional/personal wiki pages.
 type: index
 created: 2026-04-06
-updated: 2026-08-01
+updated: 2026-09-28
 ---
 
 # Life Wiki Index
@@ -15,7 +15,7 @@ updated: 2026-08-01
 ## Professional
 - [[professional]] — Mars Men company context, Juan's role, team, scope, strategic context. Reports to Zach Stuck. Comp confirmed 2026-07-20: $230K + $50K year-end + 0.1% on-sale (contractor, not W2). **Non-compete: during-term §5.2 bars competitive work WORLDWIDE + §5.6 confidentiality geography-blind; only post-term covenants are US-only (WI law).** (confidence: high)
 - [[pet-brand-offer]] — RESOLVED (2026-06-15): Juan declined PAK (Pets are Kids) and stayed at Mars Men despite 0.1% equity — ASTEROI-bridge logic. Retained as decision record. (confidence: high)
-- [[mars-men-phantom-equity]] — **SIGNED as-is 2026-08-01** (MM declined all three change requests — acceleration, without-cause carve-out, anti-dilution). MM's 2026 Phantom Equity Plan award to ASTEROI (11,175 shares, $0 strike) that REPLACES the contractual 0.1%-on-sale; signing extinguished the old right. More-conditional repackaging: subordinated, forfeitable via a 6-month post-close tail, dilutable, pays only on an acquisition (not IPO). ~$800–900K gross at a $1B exit. Gruns comp fact-checked (NOT L Catterton — premise false). A free-but-unlikely lottery ticket; stay/leave decides on the strategy gates, not this. (confidence: high)
+- [[mars-men-phantom-equity]] — MM's 2026 Phantom Equity Plan award (11,175 shares, $0 strike, vesting from Oct 20 2025) that REPLACED the contractual 0.1%-on-sale. Signed as-is 2026-08-01; **RESTATED 2026-09-24 on friendlier terms (signature pending)**: 6-month post-sale service rule removed, vested shares now survive leaving and pay on any later sale. New cost: Cause-firing or non-compete/confidentiality breach (even post-exit, until a sale) forfeits vested shares. Still subordinated, dilutable, acquisition-only (not IPO). ~$800–900K gross fully vested at $1B; ~$425K if Juan leaves ~Apr 2027. Gruns comp fact-checked (NOT L Catterton). Stay/leave still decides on the strategy gates. (confidence: high)
 
 ## Strategy
 - [[strategy]] — 1-5 year plan: Phase 1 stealth build (now-Q1 2027), Phase 2 transition (Q2-Q4 2027), Phase 3-5 scale SEAN to $2M+ revenue. Quarterly review checklist included. (confidence: medium)
