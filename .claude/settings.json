@@ -2,7 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "enabledPlugins": {
     "post-bridge@post-bridge": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "jcg@claude-toolkit": true
   },
   "permissions": {
     "allow": [
@@ -26,5 +27,13 @@
       "WebFetch(domain:raw.githubusercontent.com)"
     ]
   },
-  "enableAllProjectMcpServers": true
+  "enableAllProjectMcpServers": true,
+  "extraKnownMarketplaces": {
+    "claude-toolkit": {
+      "source": {
+        "source": "github",
+        "repo": "jcgiustoast/claude-toolkit"
+      }
+    }
+  }
 }
