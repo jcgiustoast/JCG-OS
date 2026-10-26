@@ -46,9 +46,9 @@ const place = async (blockId, parent, x, y) => {
 const setText = (inst, layer, text) => { const t = inst.findOne(n => n.type === 'TEXT' && n.name === layer); t.characters = text; return t; };
 // "**bold**" markers → plain text + bold ranges.
 const parseBold = (src) => { let text = ''; const ranges = []; src.split('**').forEach((p, k) => { if (k % 2) ranges.push([text.length, text.length + p.length]); text += p; }); return { text, ranges }; };
-// New wrapping text. Defaults = 4x5 body (Archivo 35, 133.5%, black). "**…**" → Bold of the same family.
+// New wrapping text. Defaults = 4x5/story slide body (Archivo 40, 133.5%, paragraph gap 40, black; X: size 50, paraGap 50). "**…**" → Bold of the same family.
 const addText = async (parent, o) => {
-  const { family = 'Archivo', size = 35, lh = 133.5, color = S.negro, align = 'LEFT', paraGap = 28, name } = o;
+  const { family = 'Archivo', size = 40, lh = 133.5, color = S.negro, align = 'LEFT', paraGap = 40, name } = o;
   const { text, ranges } = parseBold(o.text);
   const t = figma.createText();
   parent.appendChild(t);
@@ -121,10 +121,11 @@ return { pageId: page.id, name };
 
 ## 3. Rows and empty frames (one section per size)
 
-Rows stack top to bottom: LinkedIn, then X, then story. Frames are named `<n>-<kind>` (kinds in `layouts.md`), sit 100 apart inside the section, clip their content, and get their background. Stars slides also get the star-field block here.
+Rows stack top to bottom: LinkedIn, then X, then story. **Build the LinkedIn row first** (`SIZES = ['4x5']`), show Juan its screenshot, and only after his OK run this again with `SIZES = ['x', 'story']`: new rows go under the ones already on the page. Frames are named `<n>-<kind>` (kinds in `layouts.md`), sit 100 apart inside the section, clip their content, and get their background. Stars slides also get the star-field block here.
 
 ```js
 const PAGE_ID = 'PAGE_ID';
+const SIZES = ['4x5'];              // first pass; after Juan's OK: ['x', 'story']
 const SLIDES = [ // bg: 'stars' | 'gris' | 'lila'
   { n: 1, kind: 'portada', bg: 'stars' },
   { n: 2, kind: 'punto',   bg: 'gris' },
@@ -140,8 +141,8 @@ const ROWS = [
 const PAD = 100, GAP = 100, ROW_GAP = 300;
 const page = await figma.getNodeByIdAsync(PAGE_ID);
 await figma.setCurrentPageAsync(page);
-let y = 0; const out = {};
-for (const row of ROWS) {
+let y = Math.max(0, ...page.children.map(n => n.y + n.height + ROW_GAP)); const out = {}; // under any row already there
+for (const row of ROWS.filter(r => SIZES.includes(r.size))) {
   const sec = figma.createSection();
   sec.name = row.label;
   sec.x = 0; sec.y = y;
@@ -172,20 +173,22 @@ Single image: one slide `{ n: 1, kind: 'placa', bg: 'gris' }`. Infographic: `{ n
 
 ## 4. Fill slides — worked example (tested)
 
-Header + body with bold phrases + image card + footer + arrow (4x5 numbered slide), and a dark cover. Positions from `layouts.md`.
+Header + body with bold phrases + image card + footer + arrow (4x5 numbered slide), and a dark cover. Positions and gaps from `layouts.md` (body y 230, body → visual 70, content ends ≤ 1032 on 4x5).
 
 ```js
 // [shared header here]
 const page = await figma.getNodeByIdAsync('PAGE_ID');
 await figma.setCurrentPageAsync(page);
-// numbered slide
+// numbered slide: ≤ 25 words, ≤ 2 short paragraphs, Archivo 40 (the addText default)
 const pt = await figma.getNodeByIdAsync('FRAME_ID_2_PUNTO');
 const header = await place(B['4x5'].header, pt, 55, 33);
 setText(header, 'Title', 'Audiencias Amplias');
 await swapNumeral(`SVG_FOR_"2."`, header, pt);
-const body = await addText(pt, { x: 60, y: 200, w: 885,
-  text: 'Segmentar audiencias **por intereses** específicos y lookalikes es una estrategia del 2020 que **está comiendo tu margen** y elevando tus CPAs.\nDeja la audiencia **lo más amplia posible**, solo configurando sexo, edad y ubicación geográfica.' });
-const card = await place(B.any.card, pt, 59, Math.round(body.y + body.height + 40)); card.resize(886, 420);
+const body = await addText(pt, { x: 60, y: 230, w: 885,
+  text: 'Segmentar **por intereses** está **comiendo tu margen**.\nDeja la audiencia **lo más amplia posible**: solo sexo, edad y país.' });
+// picture card: 70 under the body, at most 460 tall, centred in the room down to 1032 (X: gap 60, end 1020 · story: 70, 1362)
+const top = Math.round(body.y + body.height + 70), room = 1032 - top, h = Math.min(460, room);
+const card = await place(B.any.card, pt, 59, top + Math.round((room - h) / 2)); card.resize(886, h);
 await place(B['4x5'].footContent, pt, 30, 1112);
 await place(B.any.arrowNegro, pt, 849, 1121);
 // dark cover (stars already placed by recipe 3)
@@ -199,7 +202,7 @@ await place(B['4x5'].footCover, cover, 400, 996);
 return { created, bodyBottom: Math.round(body.y + body.height) };
 ```
 
-- `\n` in the text = new paragraph (gap 28 on 4x5). Headlines use `lh: null` (auto) and `paraGap: 0`; give Big Shoulders lines `lh: 101`–`107` when you want his tighter covers.
+- `\n` in the text = new paragraph (gap 40 on 4x5/story; on X pass `size: 50, paraGap: 50`). Headlines use `lh: null` (auto) and `paraGap: 0`; give Big Shoulders lines `lh: 101`–`107` when you want his tighter covers.
 - Mixed Regular/Bold headline ("Que **no conocías**"): `family: 'Big Shoulders Text'` plus `**…**`.
 - Any text override in an instance: `setText(inst, '<layer>', '…')`. Layer names per block are in `blocks.md`. Font sizes can be overridden too (`setText(...).fontSize = 40`). `setText` does not read `**…**` — strip the markers (header titles and quotes are already bold).
 - Hide what you don't use: `inst.findOne(n => n.name === 'Subtitle').visible = false;`.
@@ -214,20 +217,20 @@ await fc.findOne(n => n.name === 'URL').setFillStyleIdAsync(S.blanco);
 
 `Footer/Cover/*` is already Verde + white on dark and purple slides; keep it that way.
 
-### Highlight box on a text-only point (tested 2026-10-26, fix wave)
+### Highlight box on a text-only point (tested 2026-10-26, airy revision)
 
-For a short text-only `punto` (see `layouts.md` → text-only point). The rectangle goes first so the text sits on top; layer opacity 0.46 keeps both colours linked to JCG/Lila.
+The one visual of a text-only `punto` (see `layouts.md` → text-only point), centred in the room under the body so the space above and below it is equal. The rectangle goes first so the text sits on top; layer opacity 0.46 keeps both colours linked to JCG/Lila.
 
 ```js
-const highlightBox = async (slide, { x, w, text, size, top, bottom }) => { // top = body bottom, bottom = content limit
+const highlightBox = async (slide, { x, w, text, size, top, bottom }) => { // top = body bottom, bottom = content end (4x5 1032)
   const r = figma.createRectangle(); slide.appendChild(r); r.name = 'Highlight box'; r.cornerRadius = 20;
   await r.setFillStyleIdAsync(S.lila); await r.setStrokeStyleIdAsync(S.lila); r.strokeWeight = 1; r.strokeAlign = 'INSIDE'; r.opacity = 0.46;
   const t = await addText(slide, { x: x + 30, y: 0, w: w - 60, text, family: 'Big Shoulders Display', style: 'Bold', size, lh: null, align: 'CENTER', paraGap: 0, name: 'Highlight text' });
   const h = Math.round(t.height + 70); r.resize(w, h); r.x = x;
   r.y = Math.round(top + (bottom - top - h) / 2); t.y = r.y + 35; created.push(r.id); return r;
 };
-await highlightBox(pt, { x: 60, w: 885, text: 'Si los fijos crecen, es operativo', size: 60, top: body.y + body.height, bottom: 1080 });
-// X: { x: 67, w: 1173, size: 70, bottom: 1020 } · story: { x: 112, w: 885, size: 60, bottom: 1420 }
+await highlightBox(pt, { x: 60, w: 885, text: 'Es operativo, no marketing', size: 60, top: body.y + body.height, bottom: 1032 });
+// X: { x: 67, w: 1173, size: 70, bottom: 1020 } · story: { x: 112, w: 885, size: 60, bottom: 1362 }
 ```
 
 ## 5. Archimoto outlines (numerals, cover key phrases)
@@ -281,14 +284,15 @@ const setBars = async (chart, { v1, v2, text1, text2, textGain, label1, label2 }
 const chart = (await place(B.any.chart, slide, 138, CHART_Y)).detachInstance();
 chart.name = 'Chart/Bar';
 await setBars(chart, { v1: 60000, v2: 100000, text1: '€60.000', text2: '€60.000', textGain: '+€40.000', label1: 'SIN META', label2: 'CON META' });
-// X only: make it bigger so labels reach 40px, then centre it
-// chart.rescale(1.25); chart.x = Math.round((1300 - chart.width) / 2);
+// X only: make it bigger (labels 38px), then centre it; ×1.2 keeps 60 under a one-line body and ends ≤ 1020
+// chart.rescale(1.2); chart.x = Math.round((1300 - chart.width) / 2);
+// then centre it in the room under the body: chart.y = top + Math.round((END - top - chart.height) / 2), top = body bottom + gap
 ```
 
 - Values are numbers for the heights; `text…` are what's printed. Format them yourself in **the currency of Juan's source** (never convert $ to €), Spanish digits: `€60.000`, `$60.000`, `1,5x`. Labels uppercase, ≤ 12 characters.
-- `rescale(1.25)` leaves the chart 903.75 wide; that's fine. Round only the position (`Math.round` as above).
-- Tested: drop (100.000 → 60.000) and rise (60.000 → 100.000, rescaled ×1.25 on X to 904×650, labels 40px).
-- Two values only. More than two bars → not this block; say so in the outline and pick a different visual.
+- `rescale(1.2)` leaves the chart 867.6 wide; that's fine. Round only the position (`Math.round` as above).
+- Tested: drop (100.000 → 60.000) and rise (60.000 → 100.000, rescaled ×1.25 on X to 904×650, labels 40px — before the airy revision; ×1.2 gives 868×624, labels 38px).
+- Two values only. More than two bars → not this block; say so in the brief and pick a different visual.
 
 ## 7. Images
 
@@ -323,7 +327,7 @@ re.fills = [{ type: 'IMAGE', imageHash: REACTIONS_HASH, scaleMode: 'FILL' }];
    card.findOne(n => n.name === 'Placeholder label').visible = false;
    const img = card.findOne(n => n.name === 'Image');
    const { width, height } = await figma.getImageByHash(img.fills[0].imageHash).getSizeAsync();
-   const MAX_H = CONTENT_BOTTOM - card.y; // 1080 on 4x5, 1020 on X, 1420 on story
+   const MAX_H = CONTENT_BOTTOM - card.y; // 1032 on 4x5, 1020 on X, 1362 on story (80 / 60 / 80 above the footer)
    let w = card.width, h = Math.round(w * height / width);
    if (h > MAX_H) { h = MAX_H; w = Math.round(h * width / height); card.x = Math.round((FRAME_W - w) / 2); }
    card.resize(w, h);
@@ -345,26 +349,21 @@ title.x = Math.round((inf.width - title.width) / 2);
 const g1 = await place(B.any.groupLila, inf, CARD_X, CARD_Y);   // final x,y (from layouts.md) before the numeral swap
 g1.resize(CARD_W, g1.height);                                    // width is free; height hugs the lines
 setText(g1, 'Heading', 'Buscadores').fontSize = HEAD_SIZE;
-for (const [i, line] of ['• Google y Bing', '• ChatGPT', '• Respuestas IA'].entries()) setText(g1, `Line ${i + 1}`, line).fontSize = LINE_SIZE;
+for (const [i, line] of ['• Google y Bing', '• ChatGPT'].entries()) setText(g1, `Line ${i + 1}`, line).fontSize = LINE_SIZE;
 await swapNumeral(`SVG_FOR_"1."_SIZE_74`, g1, inf, { center: true });
-// fewer than three lines: hide the unused ones last, e.g. g1.findOne(n => n.name === 'Line 3').visible = false;
-// a single line has no bullet: setText(root, 'Line 1', 'en paid media'), not '• en paid media'
+g1.findOne(n => n.name === 'Line 3').visible = false;            // two lines at most: always hide Line 3, last
+// a single line has no bullet: setText(root, 'Line 1', 'en paid media'), not '• en paid media'; then hide Line 2 as well
 await place(B.any.yes, inf, PILL_X, PILL_Y);                     // B.any.no for "NO"
 await place(B[SIZE].band, inf, 0, BAND_Y);
 ```
 
-- Sizes: heading 46 / lines 32 on 4x5, 50 / 40 on X, 46 / 35 on story (the block's 32 is under the floor on story and X). Tested: the overrides stick on the instance, and these sizes give the card heights in `layouts.md` (4x5 207/262/317, X 217/282/347, story 211/270/329 for 1/2/3 lines).
-- Tested 2026-10-26 (fix round): the hub built this way in all three sizes with 3-line groups, the one-line X title (hide `Line 1`, `Line 2` at 90) and the story band at y 1440 — audit clean.
+- Sizes: heading 46 / lines 32 on 4x5, 50 / 40 on X, 46 / 35 on story (the block's 32 is under the floor on story and X). Tested: the overrides stick on the instance, and these sizes give the card heights in `layouts.md` (4x5 207/262, X 217/282, story 211/270 for 1/2 lines; a third line, over budget, adds ≈ 55–65).
+- Tested 2026-10-26 (fix round, before the 2-line budget): the hub built this way in all three sizes with 3-line groups, the one-line X title (hide `Line 1`, `Line 2` at 90) and the story band at y 1440 — audit clean.
 - Decide one-line or two-line before setting text: once `Line 1` is hidden, scripts can't see it (see §0 on hidden instance layers).
 - Card width: the heading sits beside a 72px badge, so the heading box is the card width minus 146. **A word longer than that box breaks mid-word** ("Buscado-res" at width 340). Use the widths in `layouts.md` and keep headings ≤ 11 characters.
 - Position from the measured heights in `layouts.md` before placing anything: the numeral is a separate outline in the slide and stays behind if a card moves after `swapNumeral`. Hide unused lines last.
-- **Bullets only for 2–3 lines.** A group (or the decision-tree root) with one line writes it plain, without "• ". The audit flags a lone bullet.
-- **A fourth line: only if Juan insists** (the budget is three lines everywhere). Then detach that card and clone `Line 3` (tested; the card grows ≈ 55–65 px). Every position under that card in `layouts.md` shifts: move the cards, connectors and pills below it by the growth, then re-run the audit (the band check catches overruns).
-  ```js
-  const det = card.detachInstance();
-  const l3 = det.findOne(n => n.name === 'Line 3'); l3.visible = true; l3.characters = '• Apps';
-  const l4 = l3.clone(); l3.parent.appendChild(l4); l4.name = 'Line 4'; l4.characters = '• Marketplaces';
-  ```
+- **Bullets only for 2 lines.** A group (or the decision-tree root) with one line writes it plain, without "• ". The audit flags a lone bullet.
+- **A third line: only if Juan insists** (the budget is two lines). Leave `Line 3` visible (the card grows ≈ 55–65 px), move everything under that card down by the growth, and re-run the audit: it will still report the group as over budget — that one stays, with Juan's say-so.
 
 **Connectors** — black 3px polyline, arrowhead on the last point (tested):
 
@@ -388,7 +387,7 @@ Points are frame coordinates. Use right-angle elbows (horizontal/vertical segmen
 **Hub centre and spokes** (tested):
 
 ```js
-const D = 200, CX = 500, CY = 700, CTR = 40;           // 4x5 hub, 4 groups; other sizes + text size in layouts.md
+const D = 160, CX = 500, CY = 663, CTR = 36;           // 4x5 hub, 3 groups; other sizes + text size in layouts.md
 const c = figma.createEllipse(); inf.appendChild(c); c.name = 'Hub';
 c.resize(D, D); c.x = CX - D / 2; c.y = CY - D / 2; await c.setFillStyleIdAsync(S.lila); created.push(c.id);
 const ct = await addText(inf, { x: CX - (D - 30) / 2, y: 0, w: D - 30, text: 'Visibilidad de marca', family: 'Big Shoulders Text', style: 'Bold', size: CTR, lh: null, color: S.blanco, align: 'CENTER', paraGap: 0 });
@@ -402,30 +401,36 @@ for (const card of cards) {                             // inner corner of each 
 }
 ```
 
-These spokes are the one place a diagonal is fine (vector network, not a rotated shape). Tested in the fix wave: 3-group hubs in all three sizes, every card 27–35 px from the circle.
+These spokes are the one place a diagonal is fine (vector network, not a rotated shape). Tested in the fix wave: 3-group hubs in all three sizes. Tested again in the airy revision (4x5, 3 groups, the constants above, 2-line cards at 40,334 · 600,334 · 300,783): every card 40 px from the circle, spokes ≈ 40 px, title → cards 64, cards → band 65, audit clean.
 
 ## 9. QA audit (leaves the page unchanged, tested)
 
 Run after every build or fix. It checks every slide on the page:
-- **Position:** text and top-level shapes (cards, charts, outlines) inside the frame and above the content limit — an infographic footer band sets the limit to 10 above the band; a content footer lowers the default to 10 above it; a cover footer (`Footer/Cover`) sets it to the cover rule in `style.md` → grid (4x5 cover 960, story cover 1240, i.e. 36 / 28 above the footer).
+- **Position and air above the footer:** text and top-level shapes (cards, charts, outlines) inside the frame and above the content end — 80 above a content footer on 4x5/story and 60 on X (default ends 1032 / 1020 / 1362), 60 above an infographic band, and the measured cover rule above a `Footer/Cover` (4x5 cover 960, story cover 1240, i.e. 36 / 28 above the footer).
+- **Density (Juan, 2026-10-26: tidy, not cramped):** words per slide over budget (`punto` 25, `grafico` 20, `insight` body 20, single image 25; X `grafico` one line ≤ 45 characters), too many paragraphs, a slide body under 40 px (X 50), a paragraph gap under 40 (X 50), title → body under 60, body → visual under 70 (X 60). Infographics: more than 4 groups (5 cards for a decision tree), more than 2 lines in a group, a line over 16 characters, a heading over 11 (a question over 22), a title over 5 words, cards closer than 60, a card closer than 40 to the hub circle, a pill closer than 12 to a card, the first card closer than 60 to the title.
 - **Type:** sizes at or above the floor (the "Pega aquí la imagen" label inside `Card/Image` is exempt), the four fonts, the word "asteroi", leftover placeholder text, text-on-text overlaps.
 - **Colour:** every fill and stroke is one of the 7 JCG colours, no gradients, and every solid paint outside a block instance is linked to its JCG paint style (outlines, boxes, circles, connectors, text).
 - **Big text (60 px and up):** the last word must not sit alone on its last line. It measures a temporary copy of the text with and without its last word, then deletes the copy.
-- **Empty room:** an infographic ends within 120 px of its footer band; a `punto` or `grafico` slide leaves at most 35% of its content area empty (from where the body starts to the content limit).
 - **Bullets:** a group card with a single line must not start it with "• ".
-- **Page:** clipping on, frame names, overlapping rows, all three sizes and the same slide count per row.
+- **Page:** clipping on, frame names, overlapping rows, all expected sizes (`SIZES_EXPECTED`: 1 while only the LinkedIn row exists, then 3) and the same slide count per row.
 
-Tested 2026-10-26 (fix wave): on Juan's three test pages it flagged the empty text-only point in all sizes (56 / 36 / 57%), the decision tree's 169 px gap above the band and the lone-bullet root line ×3; on a scratch build it flagged a lonely "creces" (X cover), a lonely "compártelo!" (X closing) and an unlinked Archimoto outline, then passed with 0 issues after the fixes.
+It no longer checks for empty room: whitespace is intended (the old "max 35% empty" and "within 120 px of the band" checks pushed the first designs toward density and are gone).
+
+Tested 2026-10-26 (fix wave): on Juan's three test pages it flagged the lone-bullet root line ×3; on a scratch build it flagged a lonely "creces" (X cover), a lonely "compártelo!" (X closing) and an unlinked Archimoto outline, then passed with 0 issues after the fixes. Tested again 2026-10-26 (airy revision, LinkedIn row with `SIZES_EXPECTED = 1`): the airy text-only point and 3-group hub passed with 0 issues. A deliberately dense copy (43 words in 3 paragraphs at 35 px with gap 28 starting at y 200; cards with a third, 22-character line) was flagged on all of it: words, paragraphs, paragraph gap, body size, title → body 34 px, 3 lines per group, line length, the hub circle 21 px from a card and the cards ending past the band limit.
 
 ```js
 const PAGE_ID = 'PAGE_ID';
 const page = await figma.getNodeByIdAsync(PAGE_ID);
 await figma.setCurrentPageAsync(page);
+const SIZES_EXPECTED = 3;                              // 1 while only the LinkedIn row is built (first pass)
 const SIZE = (f) => f.width === 1300 ? 'x' : f.width === 1080 ? 'story' : '4x5';
-const BODY_MIN = { '4x5': 32, story: 35, x: 40 };      // Archivo body floor
-const BOTTOM = { '4x5': 1090, x: 1030, story: 1430 };  // default content limit (y)
-const BODY_TOP = { '4x5': 200, x: 242, story: 518 };   // where a content slide's body starts
+const BODY_MIN = { '4x5': 32, story: 35, x: 40 };      // Archivo floor, every text
+const BODY = { '4x5': 40, x: 50, story: 40 };          // slide body size (punto, grafico, insight)
+const BOTTOM = { '4x5': 1032, x: 1020, story: 1362 };  // default content end (y)
+const FOOT_GAP = { '4x5': 80, x: 60, story: 80 };      // last element → Footer/Content
 const COVER_GAP = { '4x5': 36, x: 36, story: 28 };     // content ends this far above a Footer/Cover: 996 → 960 (4x5), 1268 → 1240 (story), as in style.md's grid
+const GAP = { title: 60, para: { '4x5': 40, x: 50, story: 40 }, visual: { '4x5': 70, x: 60, story: 70 }, band: 60, card: 60, circle: 40, pill: 12 };
+const WORDS = { punto: 25, grafico: 20, insight: 20, placa: 25 }, PARAS = { punto: 2, grafico: 1, insight: 1 };
 const FONTS = ['Big Shoulders Text', 'Big Shoulders Display', 'Archivo', 'Inter'];
 const HEX = ['b084d3', 'e7e5e6', '000000', 'ffffff', 'd3ff4e', 'd8c1ea', '7e4fa6']; // the 7 JCG colours
 const STYLES = ['S:819d30b962bfe9df3a178084c6ff2e31b82920b4,', 'S:7af192d81f99624f5b0dc2db1b92629f1356d840,', 'S:9e304f2dac7b9d01a42e5c3f66d5c3103b3beff9,', 'S:379b5e45ffc6721f773972ff9bbce8b361de128b,', 'S:b261762cdf1ca5185557dd3c210fdc9c00c5996e,', 'S:939f59d31d7447612c4e9e2989e6523183068a77,', 'S:e50e9637035a77a26f4095c0e7eacba7a23c4e95,'];
@@ -435,6 +440,9 @@ const inFooter = (n, frame) => { for (let p = n.parent; p && p !== frame; p = p.
 const visible = (n, frame) => { for (let p = n; p && p !== frame; p = p.parent) if (!p.visible) return false; return true; };
 const inInstance = (n, frame) => { for (let p = n; p && p !== frame; p = p.parent) if (p.type === 'INSTANCE') return true; return false; };
 const hexOf = (c) => [c.r, c.g, c.b].map(v => Math.round(v * 255).toString(16).padStart(2, '0')).join('');
+const words = (s) => s.replace(/•/g, ' ').split(/\s+/).filter(Boolean).length;
+const box = (n) => ({ x: n.x, y: n.y, r: n.x + n.width, b: n.y + n.height });
+const gapOf = (a, c) => { const dx = Math.max(c.x - a.r, a.x - c.r), dy = Math.max(c.y - a.b, a.y - c.b); return dx > 0 && dy > 0 ? Math.hypot(dx, dy) : Math.max(dx, dy); };
 const issues = new Set(); const rows = {}; const big = [];
 const paints = (list, styleId, where, own) => {           // own = not inside a block instance
   if (!Array.isArray(list)) return;
@@ -451,21 +459,69 @@ for (const sec of page.children) {
     const size = SIZE(f); (rows[size] = rows[size] || []).push(f.name);
     if (!/^\d+-[a-záéíóúñ]+/.test(f.name)) issues.add(`${size} ${f.name}: frame name is not <n>-<kind>`);
     if (!f.clipsContent) issues.add(`${size} ${f.name}: clipsContent is off`);
-    // content limit: an infographic footer band sets it; other footers can only lower the default
+    // content end: 60 above an infographic band; 80 (X 60) above a content footer; the cover rule above a Footer/Cover
     const band = f.children.find(c => c.visible && /^Info\/FooterBand/.test(c.name));
     const footers = f.children.filter(c => c.visible && /^Footer/.test(c.name));
-    const limit = band ? band.y - 10 : Math.min(f.height === 1500 ? 1340 : BOTTOM[size], ...footers.map(c => c.y - (/^Footer\/Cover/.test(c.name) ? COVER_GAP[size] : 10)));
+    const limit = band ? band.y - GAP.band : Math.min(BOTTOM[size], ...footers.map(c => c.y - (/^Footer\/Cover/.test(c.name) ? COVER_GAP[size] : FOOT_GAP[size])));
     const content = f.children.filter(c => c.visible && !FURNITURE.test(c.name));
     for (const c of content) {
       if (c.x < -1 || c.x + c.width > f.width + 1 || c.y < -1) issues.add(`${size} ${f.name} [${c.name}]: sticks out of the frame`);
-      if (c.y + c.height > limit + 1) issues.add(`${size} ${f.name} [${c.name}]: ends at y ${Math.round(c.y + c.height)}, limit ${limit}`);
+      if (c.y + c.height > limit + 1) issues.add(`${size} ${f.name} [${c.name}]: ends at y ${Math.round(c.y + c.height)}, past the content end ${limit} (not enough air above the footer)`);
     }
-    // empty room: infographics end ≤ 120 above the band; points and chart slides leave ≤ 35% of the content area empty
-    const bottom = Math.max(...content.map(c => c.y + c.height));
-    if (band && band.y - bottom > 120) issues.add(`${size} ${f.name}: ${Math.round(band.y - bottom)} px empty above the footer band (max 120)`);
-    if (/-(punto|grafico)$/.test(f.name)) {
-      const share = (limit - 10 - bottom) / (limit - 10 - BODY_TOP[size]);
-      if (share > 0.35) issues.add(`${size} ${f.name}: ${Math.round(share * 100)}% of the content area is empty (max 35%)`);
+    // density — tidy, not cramped (Juan 2026-10-26): words, paragraphs, body size, gaps
+    const kind = (f.name.match(/^\d+-([a-záéíóúñ]+)/) || [])[1];
+    const fam = (t) => t.getRangeFontName(0, 1).family;
+    const own = f.children.filter(c => c.visible && c.type === 'TEXT');                 // free-standing text, not inside blocks
+    const bodies = own.filter(t => fam(t) === 'Archivo').sort((a, c) => a.y - c.y);
+    if (WORDS[kind]) {
+      const n = (kind === 'placa' ? own : bodies).reduce((a, t) => a + words(t.characters), 0);
+      if (n > WORDS[kind]) issues.add(`${size} ${f.name}: ${n} words, budget ${WORDS[kind]} — cut words or split the slide`);
+    }
+    if (PARAS[kind]) for (const t of bodies) {
+      const tag = `${size} ${f.name} "${t.characters.slice(0, 24)}"`, paras = t.characters.split('\n').filter(s => s.trim()).length;
+      if (paras > PARAS[kind]) issues.add(`${tag}: ${paras} paragraphs, max ${PARAS[kind]}`);
+      if (paras > 1 && t.paragraphSpacing < GAP.para[size]) issues.add(`${tag}: paragraph gap ${t.paragraphSpacing}, min ${GAP.para[size]}`);
+      const fs = Math.min(...t.getStyledTextSegments(['fontSize']).map(s => s.fontSize));
+      if (fs < BODY[size]) issues.add(`${tag}: body ${fs}px — slide bodies use ${BODY[size]}`);
+      if (size === 'x' && kind === 'grafico' && t.characters.length > 45) issues.add(`${tag}: X chart body is one line, ≤ 45 characters`);
+    }
+    if (kind === 'punto' || kind === 'grafico') {
+      const head = f.children.find(c => c.visible && /^Header\/Numbered/.test(c.name)), body = bodies[0];
+      if (head && body) {
+        const tb = head.findOne(n => n.name === 'Title').absoluteBoundingBox, titleBottom = tb.y + tb.height - f.absoluteBoundingBox.y;
+        if (body.y - titleBottom < GAP.title - 1) issues.add(`${size} ${f.name}: title → body ${Math.round(body.y - titleBottom)} px, min ${GAP.title}`);
+        const below = content.filter(c => c !== body && c.y > body.y), next = below.sort((a, c) => a.y - c.y)[0];
+        if (next && next.y - (body.y + body.height) < GAP.visual[size] - 1) issues.add(`${size} ${f.name}: body → [${next.name}] ${Math.round(next.y - body.y - body.height)} px, min ${GAP.visual[size]}`);
+      }
+    }
+    if (kind === 'infografia') {
+      const cards = content.filter(c => /^Info\/GroupCard/.test(c.name)), pills = content.filter(c => /^Pill/.test(c.name));
+      const hub = content.find(c => c.type === 'ELLIPSE' && c.name === 'Hub');
+      if (cards.length > (pills.length ? 5 : 4)) issues.add(`${size} ${f.name}: ${cards.length} groups, max ${pills.length ? '5 cards in a tree' : 4} (3 preferred)`);
+      for (const c of cards) {
+        const head = c.findOne(n => n.type === 'TEXT' && n.name === 'Heading'), tag = `${size} ${f.name} "${head.characters}"`;
+        const lines = c.findAll(n => n.type === 'TEXT' && /^Line \d/.test(n.name) && visible(n, f));
+        if (lines.length > 2) issues.add(`${tag}: ${lines.length} lines, max 2`);
+        for (const l of lines) if (l.characters.length > 16) issues.add(`${tag} "${l.characters}": ${l.characters.length} characters, max 16`);
+        if (head.characters.length > (/[¿?]/.test(head.characters) ? 22 : 11)) issues.add(`${tag}: heading too long (max 11, a question 22)`);
+      }
+      // title: the Info/TitleHighlight instance, or on a mind map the 'Title block' rectangle with its text named 'Title'
+      const title = content.find(c => /^Info\/TitleHighlight/.test(c.name)) || content.find(c => c.name === 'Title block');
+      const tTexts = !title ? [] : 'findAll' in title ? title.findAll(n => n.type === 'TEXT' && visible(n, f) && n.name !== 'Subtitle') : own.filter(t => t.name === 'Title');
+      const titleWords = tTexts.reduce((a, t) => a + words(t.characters), 0);
+      if (titleWords > 5) issues.add(`${size} ${f.name}: title has ${titleWords} words, max 5`);
+      const first = Math.min(...cards.map(c => c.y), hub ? hub.y : Infinity);
+      if (title && first - (title.y + title.height) < GAP.title - 1) issues.add(`${size} ${f.name}: title → first card ${Math.round(first - title.y - title.height)} px, min ${GAP.title}`);
+      for (let i = 0; i < cards.length; i++) for (let j = i + 1; j < cards.length; j++) {
+        const g = gapOf(box(cards[i]), box(cards[j]));
+        if (g < GAP.card - 1) issues.add(`${size} ${f.name}: two cards ${Math.round(g)} px apart, min ${GAP.card}`);
+      }
+      if (hub) for (const c of cards) {
+        const cx = hub.x + hub.width / 2, cy = hub.y + hub.height / 2, b = box(c);
+        const g = Math.hypot(cx - Math.min(Math.max(cx, b.x), b.r), cy - Math.min(Math.max(cy, b.y), b.b)) - hub.width / 2;
+        if (g < GAP.circle - 1) issues.add(`${size} ${f.name}: hub circle ${Math.round(g)} px from a card, min ${GAP.circle}`);
+      }
+      for (const p of pills) for (const c of cards) if (gapOf(box(p), box(c)) < GAP.pill) issues.add(`${size} ${f.name}: [${p.name}] ${Math.round(gapOf(box(p), box(c)))} px from a card, min ${GAP.pill}`);
     }
     // colours: only the 7, no gradients, own solid paints linked to a JCG style
     for (const n of [f, ...f.findAll(n => visible(n, f))]) {
@@ -528,7 +584,7 @@ for (let i = 0; i < tops.length; i++) for (let j = i + 1; j < tops.length; j++) 
   if (a.x < b.x + b.width && b.x < a.x + a.width && a.y < b.y + b.height && b.y < a.y + a.height) issues.add(`top-level overlap: ${page.children[i].name} / ${page.children[j].name}`);
 }
 const sizes = Object.keys(rows);
-if (sizes.length < 3) issues.add(`only ${sizes.join(', ')} present`);
+if (sizes.length < SIZES_EXPECTED) issues.add(`only ${sizes.join(', ')} present`);
 const counts = sizes.map(s => rows[s].length);
 if (new Set(counts).size > 1) issues.add(`rows have different slide counts: ${JSON.stringify(rows)}`);
 const all = [...issues];
@@ -537,8 +593,9 @@ return { frames: counts.reduce((a, b) => a + b, 0), rows, issues: all.slice(0, 6
 
 How to fix what it reports:
 - **Last word alone:** move the hand break (`\n`) or widen the box to the size's full centred width (`layouts.md` → "Big text"). Never shrink below the sizes in the tables.
-- **Content area empty:** step the body up or add the highlight box (`layouts.md` → text-only point).
-- **Empty above the band:** spread the rows or grow the gaps (`layouts.md` → "Fill the infographic").
+- **Over a word, paragraph or line budget:** cut words, or split the point into two slides (an infographic group: shorten the lines; too many groups → propose a carousel). Never shrink the type to make it fit; tell Juan what you cut.
+- **Body under 40 (X 50), paragraph gap under the minimum:** set the size and `paragraphSpacing` from `layouts.md` (a longer body then breaks the word budget: cut).
+- **A gap under the minimum** (title → body, body → visual, cards, circle, pills, or "past the content end"): move the piece to the positions in `layouts.md`; if it still does not fit, the slide has too much on it — cut, don't squeeze.
 - **Not linked to its JCG paint style:** `await node.setFillStyleIdAsync(S.<colour>)` (or `setStrokeStyleIdAsync`); outlines made with the helpers above are linked already.
 
 It does not see a shape covering text (a card over a paragraph), words hidden behind an asteroid, or a break that splits a phrase badly (a line ending "…= subir un" with "2% tu ARPU" below it) — that's what the screenshots are for. "Pega aquí la imagen" is the only placeholder allowed to stay, and only for a picture Juan will paste.

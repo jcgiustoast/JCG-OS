@@ -35,6 +35,7 @@ Related but separate: the code-first `/visual` engine (`.claude/commands/visual.
 - Green-heavy or flat-black backgrounds (dark = starry image, never flat black).
 - Footer saying asteroi.co. **Always jcgiusto.com.**
 - Text too small to read on a phone (body never below 32px on a 1000px-wide frame).
+- Cramped slides: more than one idea per slide, paragraphs of small text, every gap filled (decision 9).
 
 ## Decisions Juan made
 
@@ -45,6 +46,8 @@ Related but separate: the code-first `/visual` engine (`.claude/commands/visual.
 5. Infographic colours: purple and grey, his style. Groups are told apart by lighter/darker purple, not by new colours.
 6. **Every type comes in all three sizes**: 1000×1250 (LinkedIn), 1300×1080 (X), 1080×1920 (story).
 7. The building blocks page is approved.
+8. **2026-10-26 — "Remember to be aligned in terms of design and content before you create the image."** Before any Figma work Claude shows a design + content brief in chat: per slide (or infographic group) one line for the look — slide kind, background (dark / grey / purple), the visual (chart, screenshot placeholder, quote box, big number, none) — and the exact text. Nothing is built until Juan says yes; any change he asks for is shown again before building. Then the LinkedIn 4:5 size is built first and its screenshot shown to him; X and story are built only after his OK, so a design miss is caught once, not three times.
+9. **2026-10-26 — "Make sure it's tidy and not all cramped. The ones you created in the past were overly dense."** The first test run put 2–3 paragraphs of 35px text on each point slide and four 3-line cards on the infographic. New rules: one idea per slide; a point slide body ≤ 25 words in ≤ 2 short paragraphs, set at 40px on 4:5 and story (50 on X) — fewer words, bigger type; minimum gaps (title → body 64, paragraphs 40, body → visual 70, 80 clear above the footer on 4:5); a single image is one headline, one visual and at most one short line; infographics prefer 3 groups (max 4), ≤ 2 lines per group, a title of ≤ 5 words, decision trees at most two levels below the question. Whitespace is fine and intended: never pad space with extra words or elements; centre the block instead. The earlier "no more than 35% empty" and "end within 120px of the footer band" rules are withdrawn. Exact numbers live in the skill's `references/style.md` → Density.
 
 ## The style (measured from his slides, 1000×1250 frames)
 
@@ -52,7 +55,7 @@ Related but separate: the code-first `/visual` engine (`.claude/commands/visual.
 - **Fonts:**
   - Big Shoulders Text Regular/Bold — headlines (cover 130px, slide titles 60px, line height ~101–107%).
   - Archimoto V00 Regular — big numerals (150–250px). Archimoto V00 Bold — uppercase key phrase on covers (120px), in Verde or Lila.
-  - Archivo Regular/Bold 35px, line height 133.5% — body, with bold key phrases.
+  - Archivo Regular/Bold 35px, line height 133.5% — body, with bold key phrases (his slides; new slides use 40px with fewer words — decision 9).
   - URL line: Inter Regular 30px.
 - **Content slide grid:** numeral "1." at (55,33) in Lila; title Big Shoulders Bold 60 Lila at (201,94); body from x=55, width 885, starting y≈190. Images sit in white cards, radius 20, soft drop shadow.
 - **Footer, content slides:** avatar 114px bottom-left (30,1112) · JCGIUSTO wordmark (vector, 163×26) at (164,1137), Lila on grey / Verde on dark or purple · jcgiusto.com under it · black arrow (96×96) bottom-right on every slide except the last.
@@ -82,9 +85,9 @@ Other sizes: measure the landscape and story grids from his existing twins befor
 - Footer band: full-width Lila bar ~140px tall with avatar, JCGIUSTO in Verde, jcgiusto.com in white.
 - Icons: simple shapes drawn in Lila, or his 3D-emoji images already in the file. No new icon library.
 
-### When text doesn't fit *(my call)*
+### When text doesn't fit *(my call, tightened by decision 9)*
 
-Fitting happens in step 3, not silently in Figma: Claude shortens the wording in the outline Juan approves. If it still won't fit at the readability floor, the infographic may grow to 1000×1500; beyond that Claude proposes a carousel instead.
+Fitting happens in step 3, not silently in Figma: Claude cuts the wording in the design + content brief Juan approves, or splits a point into two slides. Type is never shrunk to make words fit, and empty space is never filled. If an infographic still won't fit its budget, a decision tree may grow to 1000×1500; beyond that Claude proposes a carousel instead.
 
 ### Images *(my call)*
 
@@ -94,9 +97,9 @@ Images already in Contenido are reused. Anything new (a screenshot, a product ph
 
 1. Read the input. If it's a topic, ask for the 3–7 key points or offer to draft them.
 2. Suggest the type (and infographic layout), one line why. Juan confirms.
-3. Write the on-image text as a short outline in chat (slide by slide, or group by group). Juan OKs or edits. *(My call: a cheap checkpoint before any Figma work.)*
-4. Build in Contenido on a **new page** named `YYYY-MM-DD · <title>`, one row per size, frames named `<n>-<kind>` so order is obvious.
-5. Screenshot each frame; fix overflow, overlaps, clipped text. Respect the readability floor.
+3. Show the design + content brief in chat (decision 8): per slide or group, the look in one line and the exact text, within the density budgets (decision 9). Nothing is built until Juan says yes; changes are shown again first.
+4. Build in Contenido on a **new page** named `YYYY-MM-DD · <title>`, frames named `<n>-<kind>` so order is obvious — **the LinkedIn row first**. Check it, show Juan its screenshot, and build the X and story rows only after his OK.
+5. Screenshot each frame; fix overflow, overlaps, clipped text and anything cramped. Respect the readability floor and the density rules (the QA audit checks both).
 6. Give Juan the Figma link and a screenshot of the set.
 
 ## Building blocks page *(approved)*

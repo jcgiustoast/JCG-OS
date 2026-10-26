@@ -22,11 +22,12 @@ Not this skill: exporting PNG/PDF or posting; writing the caption (`/content`); 
 1. **Purple + grey only.** Verde is a small accent (list in `references/style.md`). No other colours, gradients, glassy cards, icon libraries or centred-everything sameness.
 2. **Dark means the star-field image**, never flat black. No green-heavy backgrounds.
 3. **The footer says jcgiusto.com.** Never asteroi.co.
-4. **Readable on a phone:** body at least 32px on 4x5, 35 on story, 40 on X; no text under 32 except the footer URL. Shorten the words; never shrink below the floor.
+4. **Readable on a phone:** slide bodies are Archivo 40 on 4x5 and story, 50 on X. Nothing under the floor (32 on 4x5, 35 on story, 40 on X) except the footer URL. Cut words; never shrink type to fit.
 5. **All three sizes, every time:** 1000×1250 (LinkedIn), 1300×1080 (X), 1080×1920 (story).
-6. **Two checkpoints with Juan:** the type before anything, the outline before any Figma work. Never skip them.
-7. **Never touch his originals.** Pages "JCG" and "Carousel" and the components on "🧩 Bloques JCG" are read-only. Build only on a new page.
-8. This skill writes to Figma only (plus screenshots in the session scratchpad). No repo files, no commits.
+6. **Agree before building** (Juan, 2026-10-26): the type before anything; the design + content brief before any Figma work; then the LinkedIn size alone, and X and story only after he OKs its screenshot. Never skip a checkpoint.
+7. **Tidy, not cramped** (Juan, 2026-10-26: "the ones you created in the past were overly dense"): one idea per slide, within the word budgets and minimum gaps in `references/style.md` → Density. Whitespace is fine: never fill it with more words or elements; centre what is there.
+8. **Never touch his originals.** Pages "JCG" and "Carousel" and the components on "🧩 Bloques JCG" are read-only. Build only on a new page.
+9. This skill writes to Figma only (plus screenshots in the session scratchpad). No repo files, no commits.
 
 ## Before the first Figma call
 
@@ -49,36 +50,37 @@ A post or draft: use it. A topic only: ask once, e.g. **"Do you want me to draft
 Ask, e.g.: **"Do you want this as a carousel?"** I'd go carousel: the post has five separate tips, one per slide.
 For an infographic, name the layout in the question ("an infographic laid out as a decision tree"). Wait for his answer.
 
-### 3. Outline the on-image text — checkpoint
-Write every word that will be on the image, slide by slide (or group by group), in one chat block:
+### 3. Design + content brief — checkpoint
+Agree the look and the words before anything is built. One chat block; per slide (or infographic group) one line for the look — slide kind, background (dark / grey / purple), the visual (chart, screenshot to paste, quote box, highlight box, big number, none) — then the exact text:
 
-**Carrusel · 5 diapositivas · LinkedIn, X y story**
-- Portada (oscura): «el secreto del aov»
-  Que **no conocías** — foto: pega aquí tu captura
-- Punto 1 · Audiencias Amplias: Segmentar por intereses **está comiendo tu margen**. …
-- Gráfico · Antes y después: €60.000 → €100.000 …
-- Insight: «El creativo es tu verdadero targeting» …
-- Cierre: Si te ha gustado este post,
+**Carrusel · 5 diapositivas · primero LinkedIn, luego X y story**
+- **Portada** · oscura (estrellas) · sin imagen
+  «el secreto del aov»
+  que **no conocías**
+- **Punto 1** · gris · captura que pegas tú
+  Audiencias Amplias
+  Segmentar por intereses **está comiendo tu margen**.
+- **Gráfico** · gris · barras €60.000 → €100.000 …
+- **Insight** · oscura · caja de cita: «El creativo es tu verdadero targeting»
+- **Cierre** · morada · reacciones
+  Si te ha gustado este post,
   **¡dale a me gusta y compártelo!**
 
-- Cover: dark (stars) by default; purple when the headline leads with a number or a list ("10 estrategias…").
-- Fit happens here, not in Figma: keep to the word budgets in `references/layouts.md`, mark bold with `**…**`, and say what the X version drops.
-- Show the line break of every big line (cover headline, quote, closing line, box) as a real line break in the outline, so no word ends up alone on a last line (layouts → Big text). `\n` appears only inside the Figma code.
-- A text-only point gets its body size from its word count, plus a highlight box under 45 words (layouts → text-only point).
-- Infographics hold at most four groups (a decision tree: one question, two branches, two outcomes), each with at most three lines of 16 characters; a group with one line has no bullet. If the points don't fit that, propose a carousel.
+- Plain words; no layer names or IDs. Cover: dark by default; purple when the headline leads with a number or a list ("10 estrategias…").
+- Fit happens here, never in Figma (budgets in `references/style.md` → Density): a point ≤ 25 words in ≤ 2 short paragraphs (a chart point ≤ 20); a single image = one headline, one visual, at most one short line; an infographic = 3 groups (4 at most), ≤ 2 lines of 16 characters each, title ≤ 5 words, a decision tree at most one level under the answers. More than that → split into another slide, cut, or propose a carousel. Prefer cutting words.
+- Mark bold with `**…**` (one phrase per paragraph). Show every big line's break (cover, quote, closing, box) as a real line break (layouts → Big text); `\n` appears only in the Figma code. Say what the X version drops.
 
-Then ask **"Shall I build it like this?"** with one recommendation sentence. Build only after a clear yes. If he edits, update the outline; ask again only if the change is big.
+Then ask **"Shall I build it like this?"** with one recommendation sentence. Nothing is built until he says yes. Any change he asks for: show the updated brief and wait for a yes again.
 
-### 4. Build in Figma
+### 4. Build in Figma — LinkedIn first
 1. New page `YYYY-MM-DD · <short title>` (recipe 2). One page per piece.
-2. Rows and empty frames for all three sizes, named `<n>-<kind>` (recipe 3).
-3. Archimoto outlines for every numeral and cover phrase (recipe 5 and below).
-4. Fill one size row per call: paste the shared header, then place blocks and text at the positions in `references/layouts.md` (recipes 4–8). Return the IDs.
-5. Pictures: a file from Juan → upload it into the card (recipe 7). No file → leave "Pega aquí la imagen".
+2. The LinkedIn row only (recipe 3, `SIZES = ['4x5']`), frames named `<n>-<kind>`; Archimoto outlines (recipe 5); blocks and text at the positions and gaps in `references/layouts.md` (recipes 4–8). Pictures: a file from Juan → upload it (recipe 7); none → leave "Pega aquí la imagen".
+3. Check it (step 5, `SIZES_EXPECTED = 1`), screenshot the row (step 6) and show it to Juan: **"Does the LinkedIn version look right?"** plus one recommendation sentence. Fix what he asks and show it again.
+4. Only after his OK: the X and story rows (recipe 3, `SIZES = ['x', 'story']`), same words, positions per size; then check everything again (`SIZES_EXPECTED = 3`).
 
 ### 5. Check it
-1. Run the QA audit (recipe 9). It also checks colours, a word alone on the last line of big text, empty room on points and above infographic bands, and lone bullets. Fix every issue (fixes listed under the recipe), except picture placeholders left on purpose.
-2. Screenshot every frame inline (recipe 10) and look. Fix overlaps, badly split phrases, text crowding the footer, wrong footer colour, numerals off their title line.
+1. Run the QA audit (recipe 9). It checks density (words, paragraphs, body size, gaps), position, colours, a word alone on the last line of big text, and lone bullets. Fix every issue by cutting or moving, never by shrinking type (fixes under the recipe); only a picture placeholder left on purpose may stay.
+2. Screenshot every frame inline (recipe 10) and look. Fix overlaps, badly split phrases, cramped spots, wrong footer colour, numerals off their title line.
 3. After fixes: one more audit and one more screenshot pass. Stop when both are clean.
 
 ### 6. Hand off
@@ -99,8 +101,8 @@ prints one SVG; insert it with the async helpers `placeSvg` / `swapNumeral` in t
 
 ## References
 
-- `references/style.md` — colours, fonts, type sizes, readability floor, grid per size, footer, how to write the words.
-- `references/layouts.md` — every slide kind, single-image pattern and infographic layout, with positions per size and word budgets.
+- `references/style.md` — colours, fonts, type sizes, readability floor, density (word budgets, minimum gaps), grid per size, footer, how to write the words.
+- `references/layouts.md` — every slide kind, single-image pattern and infographic layout, with positions, gaps and word budgets per size.
 - `references/figma-recipes.md` — tested `use_figma` code: page, rows, blocks, bold text, Archimoto, chart, pictures, connectors, QA, screenshots, fixes.
 - `references/blocks.md` — the building-blocks page: component IDs, sizes, layer names, fonts to load, measured grids.
 - `references/img/` — Juan's three infographic references (structure only, never their colours).

@@ -158,12 +158,12 @@ Assembled from block instances to check the match against his slides. Keep them 
 
 ## Measured grids
 
-Measured from his slides on page "Carousel" on 2026-10-26. Coordinates are x,y inside the slide frame.
+Measured from his slides on page "Carousel" on 2026-10-26. Coordinates are x,y inside the slide frame. These describe his originals; new slides use the airier body sizes, word budgets and gaps in `style.md` → Density (Juan, 2026-10-26), e.g. body Archivo 40 from y 230 and content ending by y 1032 on 4x5.
 
 ### 4x5 · 1000×1250 (twins: `1:14330`, `1:14295`, `1:14563`, `1:14471`, `1:14448`, `1:14130`, `1:14714`)
 
 - **Margins:** text from x=55–60, width 885 (right edge ≈ 945). Footer sits 30 from the left, 24 from the bottom.
-- **Numbered content slide (grey):** numeral "1." Archimoto Regular 150 Lila at 55,33 · title Big Shoulders Text Bold 60 Lila at 201,94 (line height auto, 72 tall) · body Archivo Regular/Bold 35, line height 133.5%, first paragraph at y≈188–200, ~25–30 between paragraphs · image card from y≈467–523, up to 886 wide, radius 20, shadow · keep content above y≈1080.
+- **Numbered content slide (grey):** numeral "1." Archimoto Regular 150 Lila at 55,33 · title Big Shoulders Text Bold 60 Lila at 201,94 (line height auto, 72 tall) · body Archivo Regular/Bold 35, line height 133.5%, first paragraph at y≈188–200, ~25–30 between paragraphs · image card from y≈467–523, up to 886 wide, radius 20, shadow · his content stays above y≈1080 (his picture ends ≈ 844).
 - **Content footer:** avatar 114 at 30,1112 · wordmark 163×26 at 164,1137 · URL Inter Regular 30 at 164,1169 · arrow 96 at 849,1121.
 - **Cover footer:** avatar 129 at 435,996 (dark slides 429,996) · wordmark 418,1145 · URL 430,1177, white. Purple CTA slide sits 20 lower (avatar 435,1016).
 - **Covers:** headline Big Shoulders Text Regular/Bold 130, line height 107% (purple) or Bold 130 / 101% (dark, e.g. "Insight Clave" at 29,102, w 929, centred). Big Archimoto numeral 250; Archimoto Bold 120 key phrase (Verde on purple, Lila on dark), centred across x 30–948. Verde arrow top-right at 862,61. Dark cover with chart: Archimoto 120 Lila at 71,124 (w 845, centred), Big Shoulders 100 white at y 388, chart card 628×389 at 186,536.
