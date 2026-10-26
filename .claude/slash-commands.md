@@ -19,6 +19,7 @@ Custom commands live in `.claude/commands/`. Each is a markdown prompt invoked b
 | `/process-inbox` | Triage captures in `life/raw/inbox/` and file them into the wiki |
 | `/content` | Create LinkedIn/X/blog posts — builds personal brand, inbound for ASTEROI |
 | `/content-research` | Scrape reference creators to find what's performing; feeds `/content` |
+| `/figma-post` | Design a LinkedIn/X carousel, infographic or single image in Juan's look in the Contenido Figma file, all three sizes (skill in `.claude/skills/figma-post/`). Writes to Figma only — a new page, after Juan approves the type and the outline; no repo files |
 | `/engage` | Daily Twitter engagement briefing — pulls 24h tweets from curated DTC targets, scores reply opportunities. LinkedIn is manual (not automated) — see engagement-targets.md |
 
 Only `/closeday`, `/graduate`, and `/process-inbox` write files, and all require explicit approval before doing so.
