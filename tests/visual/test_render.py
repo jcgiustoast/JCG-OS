@@ -49,6 +49,12 @@ def test_e2e_aov_renders_all_types(tmp_path):
     assert pdf.exists()
 
 
+def test_swipe_arrow_only_on_carousels():
+    body = "---\nmode: {}\n---\n# slide:hook-stat\ntext: X\n"
+    assert 'class="ar"' not in render_html(parse_piece(body.format("single")))
+    assert 'class="ar"' in render_html(parse_piece(body.format("carousel")))
+
+
 def test_render_rejects_unknown_slide_type():
     import pytest
     piece = parse_piece("---\nmode: single\n---\n# slide:covert\nheadline: X\n")

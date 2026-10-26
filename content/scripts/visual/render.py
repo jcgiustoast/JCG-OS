@@ -67,7 +67,10 @@ def render_html(piece):
     """Render a Piece into a single self-contained HTML string (CSS inlined)."""
     validate(piece)
     theme_css = (_TPL_DIR / "theme.css").read_text(encoding="utf-8")
-    return _env().get_template("base.html.j2").render(slides=piece.slides, theme_css=theme_css)
+    env = _env()
+    # a global, not render context: the footer macro is imported without context
+    env.globals["single"] = piece.meta.get("mode") == "single"
+    return env.get_template("base.html.j2").render(slides=piece.slides, theme_css=theme_css)
 
 
 def render_piece(piece, out_dir):
