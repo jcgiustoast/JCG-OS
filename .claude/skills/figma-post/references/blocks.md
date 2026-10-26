@@ -5,7 +5,7 @@ updated: 2026-10-26
 - **Figma file:** Contenido, fileKey `U2HIUwTWDYWL7EwSKCDpLd`
 - **Page:** `🧩 Bloques JCG`, page ID **`31:21`**
 - **Source of the pieces:** cloned from his slides on page "Carousel" (`1:13975`). Never edit those originals.
-- **Count:** 31 blocks = 34 component nodes (Arrow has 2 variants, Info/GroupCard has 3).
+- **Count:** 34 blocks = 37 component nodes (Arrow has 2 variants, Info/GroupCard has 3). The 3 newest (2026-10-26, Juan's picked infographic look) sit in their own section. The purple-strip group card (3 tones) and the three infographic footer bands are marked **old look, don't use for new pieces** below; the Lila-highlight title is old look on infographics only.
 
 ## Fonts to load
 
@@ -28,7 +28,7 @@ Archimoto V00 is not on the page as text (it can't be loaded by scripts); numera
 
 - Switch to the target page, then `const c = await figma.getNodeByIdAsync('<id>'); const i = c.createInstance(); frame.appendChild(i); i.x = …; i.y = …;`. For a variant, instance the variant's own ID (e.g. `Arrow` → `Color=Negro` `32:46`).
 - Slide frames must keep `clipsContent = true`: asteroids and backgrounds are whole pictures that bleed past the edge, and the frame does the cropping.
-- Text overrides: find the child by layer name inside the instance, load its font, set `characters`. Layer names: `Title`, `URL`, `Quote`, `Label`, `Heading`, `Line 1…3`, `Line 1`/`Line 2`/`Subtitle`, `Value 1`, `Value 2 base`, `Value 2 top`, `Label 1`, `Label 2`, `Placeholder label`.
+- Text overrides: find the child by layer name inside the instance, load its font, set `characters`. Layer names: `Title`, `URL`, `Quote`, `Label`, `Heading`, `Line 1…3`, `Line 1`/`Line 2`/`Subtitle`, `Hub text`, `Value 1`, `Value 2 base`, `Value 2 top`, `Label 1`, `Label 2`, `Placeholder label`.
 - Numerals: layers named `Numeral (placeholder)` are outlined copies of his Archimoto "1." (the font can't be loaded by scripts). Swap them for the right number with the Archimoto outline script; keep the position and the Lila fill.
 - Images: in `Card/Image`, put the picture as an image fill on the `Image` layer and hide `Placeholder label`. Resize the instance to the picture's size; the card keeps radius 20 and the shadow.
 - Every URL on the page reads `jcgiusto.com` (Inter Regular 30). Zero text nodes on the page contain "asteroi".
@@ -85,19 +85,33 @@ Height rule (positions can't be overridden inside an instance, so **detach the i
 4. `Guide top.y` = top of the tallest column; `Guide middle.y` = `Bar 1.y`.
 5. Centre each value text in its segment: `text.y = seg.y + (seg.height − text.height) / 2` (text height 48). If a segment is under ~70 px tall, move its value just above the segment and make it black.
 
-## Components — infographic (section "Infografía")
+## Components — infographic, new look (section "Infografía · nuevo look (2026-10-26)", `111:53`)
+
+Juan's pick on 2026-10-26 (variant B, `taste.md`). Built 2026-10-26 and used in "Infografía B (arreglada)" on the variants page (audit clean). Use these for every new infographic.
 
 | Name | Node ID | Size | What it's for |
 |---|---|---|---|
-| Info/GroupCard (set) | `34:55` | — | Numbered group box. Property `Tone`. |
-| Info/GroupCard · Tone=Lila | `34:22` | 440×317 (hugs height) | White card radius 20, Lila header strip with number badge + `Heading` (Big Shoulders Text Bold 46, white), `Line 1…3` Archivo 32. |
-| Info/GroupCard · Tone=Light | `34:33` | 440×317 | Same, light-Lila strip, black heading. |
-| Info/GroupCard · Tone=Deep | `34:44` | 440×317 | Same, deep-Lila strip, white heading. |
-| Info/TitleHighlight | `34:56` | 951×288 (hugs) | Big title: `Line 1` Big Shoulders Text Bold 110 black; `Line 2` on a Lila highlighter block; optional `Subtitle` Archivo 36 (hide if unused). Centre at the top. |
+| Info/GroupCard/White | `111:55` | 360 wide, height hugs (2 lines at 36: 238) | Numbered group card: white (JCG/Blanco), radius 20, the image card's shadow, clips its content. `Top edge (Lila)` 8 px rectangle across the top (absolute, stretches with the width). Vertical auto-layout, padding 32 top / 30 sides / 28 bottom, gap 20: `Head` row (gap 18, centred) = `Number slot` (53×56, holds `Numeral (placeholder)`, a Lila outline of "1." at Archimoto Regular 80, ink-tight) + `Heading` (Big Shoulders Text Bold 50, black, fills the row) · `Lines` (gap 2) = `Line 1…3`, Archivo Regular 34, lh 133.5, black. Resize the width freely; set sizes per size (`layouts.md`); swap the numeral with `swapNumeral(svg, card, slide, { center: true })`; hide `Line 3` (and `Line 2` for one line) last. The slot keeps the heading in place after the placeholder is hidden. |
+| Info/TitleHighlight/Verde | `111:67` | 951×277 (hugs) | Infographic title: vertical auto-layout, centred, gap 8 · `Line 1` Big Shoulders Text Bold 110, lh 101, black · `Highlight` frame (JCG/Verde, padding 0/20) holding `Line 2` (same text style) · optional `Subtitle` Archivo 36 (hide if unused). Two lines = 230 tall. X: hide `Line 1` and put the whole title in `Line 2` at 90. |
+| Info/HubCircle | `111:72` | 160×160 | Hub centre: `Hub` ellipse (JCG/Blanco fill, 4 px JCG/Lila stroke inside) + `Hub text` (Big Shoulders Text Bold 38, black, centred both ways in a fixed 130×130 box). Both scale with the instance: resize it to the size's diameter (4x5 160, X 220, story 200) and set `Hub text` size 38 / 40 / 40. |
+
+The section also holds a note for Juan explaining the new look (text `Nota nuevo look`).
+
+## Components — infographic (section "Infografía")
+
+**Old look, don't use for new pieces:** the purple-strip `Info/GroupCard` (set and its three tones) and `Info/TitleHighlight` on infographics (Juan, 2026-10-26: "too purple"). Kept because his file has them and `Info/TitleHighlight` is still the single image's title. The QA audit flags the old cards anywhere and the old title on an infographic.
+
+| Name | Node ID | Size | What it's for |
+|---|---|---|---|
+| Info/GroupCard (set) | `34:55` | — | **Old look, don't use for new pieces.** Numbered group box. Property `Tone`. |
+| Info/GroupCard · Tone=Lila | `34:22` | 440×317 (hugs height) | **Old look.** White card radius 20, Lila header strip with number badge + `Heading` (Big Shoulders Text Bold 46, white), `Line 1…3` Archivo 32. |
+| Info/GroupCard · Tone=Light | `34:33` | 440×317 | **Old look.** Same, light-Lila strip, black heading. |
+| Info/GroupCard · Tone=Deep | `34:44` | 440×317 | **Old look.** Same, deep-Lila strip, white heading. |
+| Info/TitleHighlight | `34:56` | 951×288 (hugs) | Single-image title: `Line 1` Big Shoulders Text Bold 110 black; `Line 2` on a Lila highlighter block; optional `Subtitle` Archivo 36 (hide if unused). Centre at the top. **On infographics it is the old look** — use `Info/TitleHighlight/Verde`. |
 | Pill/Yes | `34:61` | 100×68 (hugs) | Decision-tree "SÍ" pill, Verde, Big Shoulders Text Bold 40 black. |
 | Pill/No | `34:63` | 114×68 (hugs) | Decision-tree "NO" pill, Lila, Big Shoulders Text Bold 40 white. |
 
-Footer bands for infographics are sized; see each size below.
+The `Info/FooterBand/*` blocks in the sized sections below are the **old look, don't use for new pieces**: infographics now use `Footer/Content/*` like his grey slides.
 
 ## Components — 4x5 · 1000×1250 (LinkedIn) (section `35:21`)
 
@@ -109,7 +123,7 @@ Footer bands for infographics are sized; see each size below.
 | Footer/Content/4x5 | `35:28` | 314×114 | 30,1112 | Grey content slides: avatar 114, JCGIUSTO in Lila, `URL` jcgiusto.com black. On a dark or purple slide, switch the wordmark to Verde and the URL to white (see "Footer colour on dark or purple slides" below). |
 | Footer/Cover/4x5 | `35:33` | 200×217 | 400,996 (CTA slide: 400,1016) | Covers, purple and dark slides: avatar 129 centred, JCGIUSTO Verde, `URL` white. Use it as it comes; keep the wordmark Verde (see "Footer colour on dark or purple slides" below). |
 | Header/Numbered/4x5 | `35:37` | 890×165 | 55,33 | Numeral placeholder (Archimoto Regular 150, Lila) + `Title` Big Shoulders Text Bold 60 Lila at +146,+61. |
-| Info/FooterBand/4x5 | `35:42` | 1000×140 | 0,1110 | Infographic footer: Lila bar, avatar + JCGIUSTO Verde + jcgiusto.com white, centred. |
+| Info/FooterBand/4x5 | `35:42` | 1000×140 | 0,1110 | **Old look, don't use for new pieces.** Former infographic footer: Lila bar, avatar + JCGIUSTO Verde + jcgiusto.com white, centred. Infographics use `Footer/Content/4x5` at 30,1112. |
 
 ### Footer colour on dark or purple slides
 
@@ -128,10 +142,10 @@ Applies to every `Footer/Content/*` and `Footer/Cover/*` instance. His rule: wor
 | Background/Stars/x | `35:48` | 1300×1080 | 0,0 | His wide star image + dashed Lila orbit line from his X covers (hide `Orbit (dashed Lila, optional)` if unwanted). |
 | Asteroid/TopLeft/x | `35:51` | 290×248 | top-left −103,−79 · dark covers bottom-left −72,858 | Whole asteroid. |
 | Asteroid/BottomRight/x | `35:53` | 412×392 | 1048,800 | Whole asteroid, rotated as in his X slides. |
-| Footer/Content/x | `35:55` | 314×114 | 30,942 (proposed) | **Not in his X originals** (none of his 44 X slides shows a footer). Use only when a branded single image or infographic needs it and there is room. Grey look by default; on dark or purple switch `JCGIUSTO` to Verde and `URL` to white (see "Footer colour on dark or purple slides"). |
+| Footer/Content/x | `35:55` | 314×114 | 30,942 | **Not in his X originals** (none of his 44 X slides shows a footer). The footer of X single images and infographics (content ends ≤ 882). Grey look by default; on dark or purple switch `JCGIUSTO` to Verde and `URL` to white (see "Footer colour on dark or purple slides"). |
 | Footer/Cover/x | `35:60` | 200×217 | 550,826 (proposed) | **Not in his X originals**; his X covers are title + chart + sunburst only. Optional. |
 | Header/Numbered/x | `35:64` | 1173×165 | 67,48 | Numeral placeholder (Archimoto Bold 150, Lila) + `Title` Big Shoulders Text Bold 90 **black** at +147,+28. |
-| Info/FooterBand/x | `35:69` | 1300×140 | 0,940 | Infographic footer band, landscape width. |
+| Info/FooterBand/x | `35:69` | 1300×140 | 0,940 | **Old look, don't use for new pieces.** Former infographic footer band, landscape width. |
 
 ## Components — story · 1080×1920 (section `35:74`)
 
@@ -143,7 +157,7 @@ Applies to every `Footer/Content/*` and `Footer/Cover/*` instance. His rule: wor
 | Footer/Content/story | `35:81` | 314×114 | 82,1442 | Grey content stories; add Arrow Negro at 901,1451. On dark or purple switch `JCGIUSTO` to Verde and `URL` to white (see "Footer colour on dark or purple slides"). |
 | Footer/Cover/story | `35:86` | 200×217 | 440,1268 (closing slides 415,1383) | Story covers. |
 | Header/Numbered/story | `35:90` | 890×165 | 107,363 | Same as 4x5 header (Regular numeral, Lila title 60). |
-| Info/FooterBand/story | `35:95` | 1080×140 | 0,1440 (ends 1580, inside the story safe zone; see `layouts.md`) | Infographic footer band, story width. |
+| Info/FooterBand/story | `35:95` | 1080×140 | 0,1440 | **Old look, don't use for new pieces.** Former infographic footer band, story width. Infographics use `Footer/Content/story` at 82,1442. |
 
 ## Previews on the page (not components)
 
