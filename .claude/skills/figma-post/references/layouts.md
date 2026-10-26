@@ -12,22 +12,22 @@ Frames are named `<n>-<kind>`. Kinds: `portada`, `punto`, `grafico`, `imagen`, `
 
 - Always: `portada` first, `cierre` last. `cta` before `cierre` only when the post has an offer or a "write me" ask.
 - Cover look: **dark (stars) by default.** Purple when the headline leads with a number or a list ("10 estrategias…", "5 errores…").
-- Middle: one slide per point. `punto` by default; `grafico` when the point is a before/after number; `imagen` when the point is a screenshot or picture; one `insight` around the middle for the key idea (a quote from the post).
+- Middle: one slide per point. `punto` by default — **text on top, a visual filling the lower half** (Juan's pick 2026-10-26: a chart, a picture card or a big number); `grafico` when the whole point is one before/after number; `imagen` when the point is a screenshot with a statement; one `insight` around the middle for the key idea (a quote from the post). A text-only point is the exception (only when Juan asks).
 - Numerals count the points in order (`punto` and `grafico` slides): 1., 2., 3. … `imagen`, `insight`, `cta` and `cierre` have none.
 - Background per kind (the `bg` in recipe 3): `portada` → `stars` (dark) or `lila` (purple) · `punto`, `grafico`, `imagen` → `gris` · `insight` → `stars` · `cta`, `cierre` → `lila`.
 - Arrows, as in his file: black arrow bottom-right on the grey slides (`punto`, `grafico`, `imagen`) of 4x5 and story; Verde arrow top-right on a purple cover. None on dark slides, `cta` or `cierre`, and none anywhere on X.
-- Picture cards with no picture yet: full content width (4x5 886, X 1000 centred, story 842 centred), height = the room left under the body (after the body → visual gap), at most 460; when the room is taller, centre the card in it. A real picture keeps its proportions and is centred the same way.
+- Picture cards with no picture yet: full content width (4x5 886, X 1000 centred, story 842 centred), height = the whole room under the body: from body bottom + 70 (X 60) down to the content end. A real picture keeps its proportions, grows until it fills the room's width or height, sits centred across and ends at the content end (any leftover room goes above it, not below).
 - 5 slides: `1-portada` · `2-punto` · `3-grafico` · `4-insight` · `5-cierre`. 6–10 slides: add points. One idea per slide: a point that needs more words becomes two slides.
 
 ### Word budgets (fit the text in the brief, not in Figma)
 
-Tidy, not cramped (Juan, 2026-10-26; `style.md` → Density). Cut words before anything else; whitespace left over is fine — never fill it.
+Neither dense nor empty (Juan, 2026-10-26; `style.md` → Density). Cut words before anything else; room left over goes to the visual, never to more words.
 
 | Kind | 4x5 / story | X |
 |---|---|---|
 | Slide title | ≤ 28 characters (one line) | ≤ 24 characters |
-| `punto` body (with a picture or text only) | ≤ 25 words, at most 2 short paragraphs | same words |
-| Highlight box (the visual of a text-only point) | one line, ≤ 6 words / 32 characters | same |
+| `punto` body (with its visual, or text only) | ≤ 25 words, at most 2 short paragraphs | same words |
+| Highlight box (the visual of a text-only point, the exception) | one line, ≤ 6 words / 30 characters (70 px) | same (80 px in the 1173 box) |
 | `grafico` body | ≤ 20 words, one paragraph (3 lines at most) | one line, ≤ 45 characters (≈ 7 words; Archivo 50 in the 1173 box) |
 | `imagen` statement box | two lines, ≤ 12 words | same |
 | Insight title | a short label ≤ 16 characters ("Insight Clave", "La clave", "Ojo con esto"; Big Shoulders Bold 130 is ≈ 51 px a character, so 18 would fill the 929 box) | same |
@@ -37,7 +37,7 @@ Tidy, not cramped (Juan, 2026-10-26; `style.md` → Density). Cut words before a
 
 The same words go on all three sizes, except X drops the insight body and keeps the `grafico` body to one line (say so in the brief).
 
-### Minimum gaps (content slides)
+### Gaps (content slides)
 
 | Gap | 4x5 | X | Story |
 |---|---|---|---|
@@ -45,8 +45,9 @@ The same words go on all three sizes, except X drops the insight body and keeps 
 | Paragraph → paragraph (`paraGap`) | 40 | 50 | 40 |
 | Body → visual (picture, chart, highlight box) | 70 | 60 | 70 |
 | Last element → footer | 80: ends ≤ 1032 | 60 to the frame bottom: ends ≤ 1020 | 80: ends ≤ 1362 |
+| …but no empty strip: last element → footer at most | 130: ends ≥ 982 | 120 to the frame bottom: ends ≥ 960 | 130: ends ≥ 1312 |
 
-These are minimums. When there is more room, centre the visual in it (equal space above and below) instead of growing anything.
+The visual takes the room: it starts at body bottom + the body → visual gap and ends at the content end (1032 / 1020 / 1362). Leftover room never sits under the visual (Juan: "too many open spaces"); the audit flags a strip above the footer wider than 130 (X 120).
 
 ### Big text: never one word alone on the last line
 
@@ -104,34 +105,43 @@ Line order on every size: (1) the number (Archimoto Regular, white) beside the f
 | Verde phrase | Archimoto Bold 120 | Archimoto Bold 120 | Archimoto Bold 120 |
 | Line pitch | ≈ 150 | ≈ 140 (4 lines fill y 150–860) | ≈ 150 |
 
-### `punto` — numbered point (grey) · measured
+### `punto` — point: text on top, a visual filling the lower half (grey) · Juan's pick 2026-10-26
+
+Variant A on the variants page ("Diapositiva A · Texto + gráfico", measured): header, ≤ 2 short paragraphs at Archivo 40, then one visual that fills the room down to the content end.
 
 | Element | 4x5 | X | Story |
 |---|---|---|---|
 | Header | `Header/Numbered` 55,33 · `Title` Lila 60 · numeral Regular 150 | `Header/Numbered` 67,48 · `Title` black 90 · numeral **Bold** 150 | `Header/Numbered` 107,363 |
 | Body (`addText`, ≤ 25 words, ≤ 2 paragraphs) | x 60, w 885, y 230, Archivo 40, lh 133.5, `paraGap` 40 | x 67, w 1173, y 250, Archivo 50, lh 133.5, `paraGap` 50 | x 112, w 885, y 560, Archivo 40, lh 133.5, `paraGap` 40 |
-| Picture (`Card/Image`) | x 59, w 886, ≥ body bottom + 70, centred in the room down to 1032 | centred, w ≤ 1194, ≥ body bottom + 60, centred in the room down to 1020 | centred, w 842, ≥ body bottom + 70, centred in the room down to 1362 |
+| Room for the visual | body bottom + 70 → 1032 | body bottom + 60 → 1020 | body bottom + 70 → 1362 |
 | Footer | `Footer/Content` 30,1112 | none | `Footer/Content` 82,1442 |
 | Arrow | `Arrow` Negro 849,1121 | none | Negro 901,1451 |
 
-A two-line title (over the budget) pushes the body down 70. A 25-word body at 40 runs 4–5 lines (≈ 250–310 tall, 4x5 ends ≈ 480–540), which leaves a 460-tall picture with air around it.
+Measured on variant A (4x5): title ends 166 · body 230–482 (25 words, two paragraphs of two lines) · chart 885×480 at 60,552 → ends 1032, 80 above the footer · audit clean, purple 14%.
 
-### Text-only point (no picture) · derived, tested 2026-10-26 (airy revision)
+**The visual — pick one in the brief:**
+- **Chart, two columns:** `Chart/Bar` detached (recipe 6), rescaled to fill the room: `k = min(room height / 520, max width / 723)` with max width 885 (4x5, story) or 1173 (X); centred across, bottom at the content end.
+- **Chart, three columns** (variant A, built from shapes, measured; frame `Chart/Bar · 3 columnas`, 885 × room at x 60): legend at the frame's top-left — 30×30 squares, radius 6, Lila "HOY" at 0,6 and Lila Light "AL CRECER" at 128,6, labels Big Shoulders Text Bold 34 black 12 to the right of each square; bars 200 wide at x 48, 343 and 638 inside the frame, standing on black label pills 240×58 (radius 6, at x 28, 323, 618, bottom of the frame) with Big Shoulders Text Bold 32 white labels centred; today in Lila, the growth stacked on top in Lila Light (top corners 16); Verde 3 px guides across the full width at the tops being compared; the tallest column reaches 90 under the frame top.
+- **Picture card:** `Card/Image` filling the room (see "Shape of a carousel" → picture cards).
+- **Big number** (derived, not yet built): Archimoto Regular Lila outline centred, plus one Big Shoulders Text Bold 60 black line under it (≤ 12 words, 30 below, X 70); size the number so the stack fills the room (start at 300 on 4x5/story, 280 on X; up to 400) and put the stack's bottom at the content end.
 
-Same body as above: Archivo 40 on 4x5/story, 50 on X, ≤ 25 words, at most 2 short paragraphs. **No filling:** the body does not grow to cover the slide.
+A two-line title (over the budget) pushes the body down 70.
 
-- **Highlight box** (style.md → highlight box) is the slide's one visual: the key line or number of the point, one line ≤ 6 words, Big Shoulders Display Bold black, centred — 60 on 4x5/story, 70 on X. Box = body width (4x5 x 60 w 885 · X x 67 w 1173 · story x 112 w 885), height = text + 70, **centred in the room between the body's bottom and the content end** (4x5 1032 · X 1020 · story 1362; recipe `highlightBox`, figma-recipes §4). The space above and below it comes out equal and is always more than the 70 minimum with a 25-word body.
-- If the point has no line worth boxing, leave the box out: the empty room under the body is fine.
-- Tested 2026-10-26 on 4x5: 25 words in two paragraphs (two lines each) + a 4-word box → title ends 166, body 230–482, box 686–828, 204 px above and below the box (284 to the footer), audit clean.
+### Text-only point (no visual) · the exception · derived
 
-### `grafico` — point with a bar chart · derived from his chart slide
+Only when Juan asks for no visual. It must still fill (Juan: a box mid-slide with empty space below had "too many open spaces"):
+- Body one step bigger: Archivo 48 on 4x5/story, 60 on X (still ≤ 25 words, ≤ 2 paragraphs, `paraGap` = the size).
+- **Highlight box** (style.md → highlight box) closes the slide at the bottom: the key line, one line ≤ 6 words, Big Shoulders Display Bold black centred, 70 on 4x5/story, 80 on X. Box = body width (4x5 x 60 w 885 · X x 67 w 1173 · story x 112 w 885), height = text + 70, **ending at the content end** (4x5 1032 · X 1020 · story 1362; recipe `highlightBox` with `anchor: 'bottom'`, figma-recipes §4).
+- If the room between body and box comes out over ≈ 250, the point is too thin for text only: give it a visual instead. No box line worth showing → also a visual.
 
-Same header, footer and arrow as `punto`. Body first, then `Chart/Bar` (detach + `setBars`, recipe 6). The chart is centred in the room between body bottom + gap and the content end:
+### `grafico` — the whole point is one before/after number · derived from his chart slide
+
+Same header, footer and arrow as `punto`, a shorter body, and `Chart/Bar` (detach + `setBars`, recipe 6) filling the room, as in `punto`:
 
 | | 4x5 | X | Story |
 |---|---|---|---|
 | Body | x 60, w 885, y 230, Archivo 40 (≤ 20 words, one paragraph) | x 67, w 1173, y 250, Archivo 50, one line ≤ 45 characters | x 112, w 885, y 560, Archivo 40 |
-| Chart | 723×520, x 138, ≥ body bottom + 70, ends ≤ 1032 (3-line body: room 460 → 1032, chart at y 486) | ×1.2 → 868×624, x 216, ≥ body bottom + 60, ends ≤ 1020 (chart at y 387) | 723×520, x 178, ≥ body bottom + 70, ends ≤ 1362 |
+| Chart | `k = min((1032 − top) / 520, 885 / 723)`, centred across, ends at 1032 (3-line body: top 460, k 1.1 → 795×572 at x 102) | `k = min((1020 − top) / 520, 1173 / 723)`, ends at 1020 (one-line body: top 377, k ≈ 1.24 → 894×643) | as 4x5, ends at 1362 |
 
 ### `imagen` — picture slide with a statement box (grey) · derived
 
@@ -141,7 +151,7 @@ Positions copied from his "Las plataformas no pueden distinguir correlación de 
 |---|---|---|---|
 | Statement box (rectangle, JCG/Lila, opacity 0.34, radius 24, no stroke) | 30,129, 929 × (text + 60) | 61,72, 1178 × (text + 110) | 70,322, 929 × (text + 60) |
 | Text in the box, BS Text Bold 60 black, lh 101, centred | x 60, w 869, vertically centred in the box | BS Text Bold 80, x 104, w 1092 | x 100, w 869 |
-| Picture (`Card/Image`, radius stays 20) | 929 wide at 30, ≥ box bottom + 60, ends ≤ 1032 | 969 wide at 165, ≥ box bottom + 50, ends ≤ 1020 | 929 wide at 70, ≥ box bottom + 60, ends ≤ 1362 |
+| Picture (`Card/Image`, radius stays 20) — fills the room | 929 wide at 30, from box bottom + 60 down to 1032 | 969 wide at 165, from box bottom + 50 down to 1020 | 929 wide at 70, from box bottom + 60 down to 1362 |
 | Footer / arrow | as `punto` | none | as `punto` |
 
 Box: `const r = figma.createRectangle(); slide.appendChild(r); r.resize(929, h); r.x = 30; r.y = 129; r.cornerRadius = 24; await r.setFillStyleIdAsync(S.lila); r.opacity = 0.34;` — create it **before** the text so the text sits on top; set `h` from the text height (`addText` first off-slide, or estimate 2 lines = 121 at 60px).
@@ -191,11 +201,11 @@ One composed slide per size, grey, no arrow, with footer (`Footer/Content`: 4x5 
 | Title (`Info/TitleHighlight`, centred; hide `Subtitle` unless needed — on X set it to `fontSize` 40 or hide it, 36 is under the X floor) | y 50 | y 40 | y 300 |
 | Visual zone | y 330 → 1032 | y 290 → 882 | y 580 → 1362 |
 
-**One headline, one visual, at most one short supporting line** (≤ 12 words). Nothing else: no body paragraph, no second visual. The zone ends 80 above the footer (X: 60); centre the visual in it.
+**One headline, one visual, at most one short supporting line** (≤ 12 words). Nothing else: no body paragraph, no second visual. The zone ends 80 above the footer (X: 60). **Fill the zone** (Juan, 2026-10-26: "too many open spaces"): grow the visual within the sizes below and put its bottom at the zone end; any leftover room goes between the title and the visual, never under it (audit: empty strip ≤ 130, X 120). The single image's title keeps his Lila highlighter (`Info/TitleHighlight`); the Verde one is for infographics.
 
 Patterns for the visual zone:
 
-- **Chart:** `Chart/Bar` detached and rescaled to the zone (4x5 ×1.2 → 868×624; X ×1.1 → 795×572; story ×1.3 → 940×676), centred. Its labels carry the words; a supporting line, if any, is the stat line below it (60 under the chart, chart scaled down to leave room).
+- **Chart:** `Chart/Bar` detached and rescaled to the zone (4x5 ×1.2 → 868×624; X ×1.1 → 795×572; story ×1.3 → 940×676), centred across, bottom at the zone end. Its labels carry the words; a supporting line, if any, is the stat line below it (60 under the chart, chart scaled down to leave room).
 - **Comparison** (his "Lo que te cuentan / La realidad"; built in all three sizes in the first test run and it looked right):
 
 | | 4x5 | X | Story |
@@ -206,11 +216,11 @@ Patterns for the visual zone:
 | Amount | Archimoto Regular 180 Lila outline, centred in the column, y = heading bottom + 30 ("€100" is 416 wide; wider than the column → 150) | same | same |
 | Column text (optional) | Archivo 40, centred, **one line ≤ 20 characters**, y = amount bottom − 15 | Archivo 50 | Archivo 40 |
 | Conclusion (the one supporting line) | BS Text Bold 50 black, one line ≤ 26 characters, centred on a Verde rectangle (text + 40 wide, text + 12 tall) at column text (or amount) bottom + 60 — the only Verde on the slide | same | same |
-| Whole block | centred vertically in the visual zone (first test, before the airy revision: headings y 462 → conclusion ends 949) | same | same |
+| Whole block | conclusion ending at the zone end (4x5 1032, X 882, story 1362); spread leftover room evenly between title → headings and amount → conclusion (first test: headings y 462 → conclusion ends 949, a 163 px strip — too much under the new rule) | same | same |
 
   A column can hold a picture card (column width, ≤ 300 tall) instead of the amount. Title budget for every `placa`: ≤ 28 characters, two lines on 4x5/story (`Line 1` / `Line 2`), one line at 90 on X.
-- **Quote card:** Lila rectangle radius 20, Archimoto Bold 120 black label inside ("#1"), Archivo 50 black text with bold phrases (≤ 20 words), 70 in from the card's left edge.
-- **Stat:** Archimoto Regular 250 Lila number centred, one BS Text Bold 60 black line under it (the supporting line). No body under it.
+- **Quote card:** Lila rectangle radius 20, named `Quote card` (his measured look; the one shape exempt from the purple-share check), Archimoto Bold 120 black label inside ("#1"), Archivo 50 black text with bold phrases (≤ 20 words), 70 in from the card's left edge.
+- **Stat:** Archimoto Regular Lila number centred (250, grown up to 400 to fill the zone), one BS Text Bold 60 black line under it (the supporting line). No body under it.
 
 Quote card and stat positions — X and story are **derived, not yet built** (check them on the screenshot); 4x5 card size is from his single images:
 
@@ -220,121 +230,118 @@ Quote card and stat positions — X and story are **derived, not yet built** (ch
 | Inside the card | label at card x + 70, card y + 50 · text x = card x + 70, w = card w − 140, y = label bottom + 30 · card height = text bottom + 60 − card y | same, text Archivo 50 | same, text Archivo 50 |
 | Stat number | Archimoto Regular 250 Lila, centred | Archimoto Regular **220** (the zone is 592 tall) | Archimoto Regular 250 |
 | Stat line, one line ≤ 12 words | BS Text Bold 60, x 40, w 920, centred, y = number bottom + 40 | BS Text Bold 70, x 54, w 1192 | BS Text Bold 60, x 80, w 920 |
-| Vertical position | card or stack centred in the visual zone (y 330 → 1032) | centred in y 290 → 882 | centred in y 580 → 1362 |
+| Vertical position | card or stack ending at the zone end, 1032 (zone y 330 → 1032) | ending at 882 (zone 290 → 882) | ending at 1362 (zone 580 → 1362) |
 
-## Infographic (`1-infografia`) · derived
+## Infographic (`1-infografia`) · Juan's pick 2026-10-26: variant B, with the bottom gap fixed
 
-Use the three reference pictures in `img/` for structure only; colours stay purple + grey. Background Gris. Groups are `Info/GroupCard` (Tone Lila → Light → Deep, then repeat), each with its numeral swapped in (recipe 5, `center: true`) — 1., 2., 3. in reading order; a decision tree numbers by level instead (see there). Connectors: recipe 8, black 3px. **Icons: none by default** — the numbered badges carry the groups. Only if Juan asks, reuse his 3D-emoji images already in the file (by image hash, recipe 7); never an icon library or drawn icons.
+Use the three reference pictures in `img/` for structure only. **The look** (variant B on the variants page; the 4x5 hub was rebuilt with the fix as "Infografía B (arreglada)" and audited clean): Gris background · white group cards `Info/GroupCard/White` with a thin Lila top edge and a black Big Shoulders heading · Lila Archimoto numerals (Regular 80, recipe 5 with `center: true`) — 1., 2., 3. in reading order; a decision tree numbers by level · the title `Info/TitleHighlight/Verde`, black, its second line on a Verde block · a white hub `Info/HubCircle` with a Lila outline and black text · black 3 px connectors (recipe 8) · his normal avatar footer bottom-left (`Footer/Content`), **no purple band**. Purple stays an accent (`style.md` → Purple is an accent): no purple card headers, no purple hub, no purple band. The old purple-strip cards, Lila title highlight and footer band are the old look (`blocks.md`). **Icons: none by default** — the numerals carry the groups. Only if Juan asks, reuse his 3D-emoji images already in the file (by image hash, recipe 7); never an icon library or drawn icons.
 
-**Budgets — tidy, not cramped (Juan, 2026-10-26; measured Archivo Regular: ≈ 14.6 px per character at 32 on average, up to 15.7; 17.2 at 35; 19.6 at 40):**
+**Budgets** (measured Archivo Regular ≈ 16.4 px per character at 36, 17.3 at 38, 19.6 at 40 on average):
 
 - **Groups:** **3 preferred, 4 at most** (hub, mind map). Decision tree: one question + two answers (3 cards) by default; at most one more level below the answers (two outcomes, 5 cards), never deeper. More points → propose a carousel.
-- **Lines:** at most **2 lines per group**, each at most **16 characters** including "• " (2–3 words: "• Revisa el CPM" ✓, "• Revisa el CPM cada semana" ✗ = 424 px). **Bullets only for 2 lines:** a group with a single line (often the decision-tree root's context line) writes it plain — "en paid media", not "• en paid media".
-- **Group heading:** at most **11 characters**, one line (the heading box is the card width minus 146; at width 360 on 4x5 that's 214 px ≈ 11 characters of Big Shoulders Bold 46). Decision-tree root question: at most 22 characters; on X it wraps onto two heading lines of about 11 characters each, so put the natural break near the middle and keep symbols glued to their number ("¿Más de $10K/mes?" ✓; "¿Inviertes +$10K/mes?" broke after the "+").
-- **Title:** **at most 5 words.** Hub and mind map — also at most 28 characters: two lines on 4x5/story, one highlighted line on X (28 characters at 90 ≈ 1000 px; measured 31 characters = 1349 px at 110, ≈ 43.5 px each). Decision tree — one highlighted line everywhere, so at most **21 characters** (fits 1000 wide at 110).
-- **Subtitle:** only if essential. Then it goes on the 4x5 version only (hub → 1000×1500 frame; decision tree → shift everything down 63). Hide it on X (Archivo 36 is under the X floor) and story.
+- **Lines:** at most **2 lines per group**, each at most **16 characters** including "• " ("• Revisa el CPM" ✓, "• Revisa el CPM cada semana" ✗). **Bullets only for 2 lines:** a group with a single line (often the decision-tree root's context line) writes it plain — "en paid media", not "• en paid media".
+- **Group heading:** at most **11 characters**, one line. The heading box is the card width minus 131 (padding, numeral and gap): 229 px on a 360 card, ≈ 11 characters of Big Shoulders Bold 50 ("Devoluciones", 12, wrapped in the test). Decision-tree root question: at most 22 characters; on X it wraps onto two heading lines, so put the natural break near the middle and keep symbols glued to their number ("¿Más de $10K/mes?" ✓; "¿Inviertes +$10K/mes?" broke after the "+").
+- **Title:** **at most 5 words and 28 characters**: two lines on 4x5 and story, one highlighted line on X. A 5-card decision tree: at most 21 characters (one line on story, see there).
+- **Subtitle:** only if essential, 4x5 only (use the 1000×1500 frame). Hide it on X (Archivo 36 is under the X floor) and story.
 
-**Text sizes and measured card heights** (one-line heading; height for 1 / 2 lines). Set them with `.fontSize` overrides (recipe 8):
+**Text sizes and measured card heights** (2026-10-26, one-line heading; set with `.fontSize` overrides, recipe 8):
 
 | | 4x5 | X | Story |
 |---|---|---|---|
-| Heading / lines | BS Bold 46 / Archivo 32 | BS Bold **50** / Archivo **40** | BS Bold 46 / Archivo 35 |
-| Card height, 1 / 2 lines | 207 / 262 | 217 / 282 (X root with a two-line question: 245) | 211 / 270 |
-| Minimum card width (16 characters fit) | 310 | 370 | 335 |
+| Heading / lines | BS Bold 50 / Archivo 36 | BS Bold 50 / Archivo 40 | BS Bold 50 / Archivo 38 |
+| Card height, 1 / 2 lines | 188 / 238 | 193 / 248 (a two-line question + one line: 253) | 191 / 244 |
+| Minimum card width (16 characters fit) | 330 | 380 | 345 |
 
-Positions below assume 2-line cards (1-line roots on the trees); a 1-line card keeps the same top-left position.
-
-**Title, band and content zone:**
+**Title, footer and the zone to fill:**
 
 | | 4x5 · 1000×1250 | 4x5 · 1000×1500 | X · 1300×1080 | Story · 1080×1920 |
 |---|---|---|---|---|
-| Title (`Info/TitleHighlight`, centred) | y 40, two lines (230 tall, ends 270); one line at 110: 110 tall, ends 150 | y 40 | y 30, one line: hide `Line 1`, whole title in `Line 2` at `fontSize` 90 (90 tall, ends 120) | y 250, two lines (ends 480); one line ends 360 |
-| Footer band (`Info/FooterBand`, 140 tall) | 0,1110 | 0,1360 | 0,940 | 0,1440 (ends 1580, inside the story safe zone) |
-| Content ends (QA limit = band top − 60) | ≤ 1050 | ≤ 1300 | ≤ 880 | ≤ 1380 |
+| Title (`Info/TitleHighlight/Verde`, centred, `Subtitle` hidden) | y 40, two lines (230 tall, ends 270) | y 40, ends 270 (with a subtitle: 317) | y 30, one line: hide `Line 1`, whole title in `Line 2` at `fontSize` 90 (ends 121) | y 250, two lines (ends 480; one line ends 361) |
+| Footer (`Footer/Content`, no arrow) | 30,1112 | 30,1362 | 30,942 | 82,1442 |
+| Zone: first row → last card's bottom | 340 → 1032 | 340 → 1282 (with a subtitle: 387 → 1282) | 190 → 882 | 550 → 1362 |
 
-**Gaps and balance:** title → first card ≥ 60 · card ↔ card ≥ 60 (side by side the layouts use 60–80) · card ↔ hub circle ≥ 40 · pill ↔ card ≥ 12 · last card → band ≥ 60. **Centre the whole block vertically between the title's bottom and the band** (equal space above and below); the positions below already do that. Whitespace left over is intended — never grow cards or add lines to fill it.
+**Fill the zone** (Juan, 2026-10-26: variant B left an empty strip above the footer). The first row starts 70 under the title (X 69; at least 60). The last card ends at the content end, 80 above the footer (X 60). The rows in between spread evenly, and the hub, pills and connectors sit in the gaps. The audit allows at most 130 (X 120) between the last card and the footer. Positions below assume 2-line cards (1-line roots on the trees). With 1-line cards, keep the first row and move the last row down so it still ends at the content end. Never fill with extra lines or groups.
 
-### Hub — centre idea + groups around it (`img/infographic-ref-hub.webp`) · derived, tested 2026-10-26
+### Hub — centre idea + groups around it (`img/infographic-ref-hub.webp`)
 
-Centre: Lila circle with the idea in Big Shoulders Text Bold white, centred, text box = circle Ø − 30, max 2 lines. Groups clockwise from top-left; a spoke from each card to the circle edge, arrowhead at the circle (recipe 8).
-
-Airy revision 2026-10-26: 2-line cards, every card ≥ 40 from the circle, the block centred between title and band. The 4x5 3-group layout was built and audited (clean); the other columns are derived with the same arithmetic (checked: every gap ≥ its minimum).
+Centre: `Info/HubCircle`, resized to the diameter below, text in `Hub text` (max 2 lines). Groups clockwise from top-left; a spoke from each card to the circle edge, arrowhead at the circle (recipe 8).
 
 | | 4x5 · 1000×1250 | X | Story |
 |---|---|---|---|
 | Card width | 360 (3 groups: bottom card 400) | 460 | 360 (3 groups: bottom card 400) |
-| 4 groups (x,y) | 40,361 · 600,361 · 600,757 · 40,757 | 40,198 · 800,198 · 800,580 · 40,580 | 80,592 · 640,592 · 640,1059 · 80,1059 |
-| 4 groups: circle | Ø 160, centre 500,690 | Ø 220, centre 650,530 | Ø 200, centre 540,960 |
-| 3 groups (x,y) | 40,334 · 600,334 · 300,783 | left column 40,198 · 40,580 · right card 800,389 | 80,571 · 640,571 · 340,1079 |
-| 3 groups: circle | Ø 160, centre 500,663 | Ø 220, centre 650,530 | Ø 200, centre 540,939 |
-| Title → cards / cards → band | 4 groups 91 / 91 · 3 groups 64 / 65 | 78 / 78 | 4 groups 112 / 111 · 3 groups 91 / 91 |
+| 3 groups (x,y) | 40,340 · 600,340 · 300,794 | left column 40,190 · 40,634 · right card 800,412 | 80,550 · 640,550 · 340,1118 |
+| 3 groups: hub | Ø 160 (text 38), centre 500,660 | Ø 220 (text 40), centre 650,536 | Ø 200 (text 40), centre 540,956 |
+| 4 groups (x,y) | 40,340 · 600,340 · 600,794 · 40,794 | 40,190 · 800,190 · 800,634 · 40,634 | 80,550 · 640,550 · 640,1118 · 80,1118 |
+| 4 groups: hub | Ø 160, centre 500,686 | Ø 220, centre 650,536 | Ø 200, centre 540,956 |
+| Title → cards / last card → footer | 70 / 80 | 69 / 60 | 70 / 80 |
+| Hub ↔ cards (min 40) | 3 groups: 49 to the top cards, 54 to the bottom one · 4 groups: 67 | 69 to the corners, 40 to the right card | 90 · bottom card 62 |
+| Status | 3 groups **built and audited** 2026-10-26 ("Infografía B (arreglada)": strip above the footer 80, purple 1.2%) | derived | derived |
 
-- **Where the circle goes.** On 4x5 and story the gap between the two top cards (200) is too narrow for the circle, so it sits just under them: its centre is far enough below their inner corners to leave 40 px (`√(100² + lift²) ≥ Ø/2 + 40`), and the bottom card starts 40 under the circle. On X the gutter between the columns is 300 wide and the circle sits in it, 40 from the cards on each side.
-- **Spokes** (recipe 8): a card that the circle's centre line crosses gets a straight spoke from the middle of its facing edge (the bottom card on 4x5/story, the right card on X); the others go from their inner corner. Every spoke comes out 40–50 px long.
-- **With a subtitle** (4x5 only): use the 1000×1500 frame (band at 1360); every 4x5 position above moves down 154, which re-centres the block between the taller title and the band.
+- **Where the circle goes.** On 4x5 and story the gap between the two top cards (200) is too narrow for the circle, so it sits under them: its centre is far enough below their inner corners to leave 40 px (`√(100² + lift²) ≥ Ø/2 + 40`), and the bottom card starts at least 40 under the circle. On X the gutter between the columns is 300 wide and the circle sits in it, 40 from the cards on each side.
+- **Spokes** (recipe 8): a card that the circle's centre line crosses gets a straight spoke from the middle of its facing edge (the bottom card on 4x5/story, the right card on X); the others go from their inner corner.
+- **With a subtitle** (4x5 only): the 1000×1500 frame; first row at 387, last row ending at 1282, the hub in the middle of the gap.
 
-Centre-idea budget (Big Shoulders Bold is ≈ 16.5 px per character at 40 for long words like "Conversión"): 1–3 words; the longest word must fit the smallest circle you use.
+Centre-idea budget (Big Shoulders Bold ≈ 16.5 px per character at 40): 1–3 words; the longest word must fit the smallest circle you use.
 
 | Circle | Text size | Longest word |
 |---|---|---|
-| Ø 160 | 36 | 8 characters |
+| Ø 160 | 38 | 8 characters |
 | Ø 200 | 40 | 10 characters ("Rentabilidad", 12, breaks mid-word) |
 | Ø 220 | 40 | 11 characters |
 
 So with the same words in every size (4x5 uses Ø 160): **no word over 8 characters** in the centre.
 
-### Decision tree — question → yes/no answers (`img/infographic-ref-decision-tree.webp`) · derived, airy revision 2026-10-26
+### Decision tree — question → yes/no answers (`img/infographic-ref-decision-tree.webp`) · derived in the new look
 
-Root = `Info/GroupCard` Lila (heading = the question, one plain context line with no bullet). Answers = Light cards (≤ 2 lines). Outcomes = Deep cards ("qué hacer", ≤ 2 lines) — **only when the answers need a next step; never a third level.** `Pill/Yes` on the left/top answer, `Pill/No` on the right/bottom one. **Numerals by level**, since a tree has no reading order: root "1.", both answers "2.", both outcomes "3." (reads as steps; tested).
+Root = `Info/GroupCard/White` (heading = the question, one plain context line with no bullet). Answers = cards with ≤ 2 lines. Outcomes ("qué hacer", ≤ 2 lines) — **only when the answers need a next step; never a third level.** Every card is white; the level shows in the numeral: root "1.", both answers "2.", both outcomes "3.". `Pill/Yes` (Verde) on the left/top answer, `Pill/No` (Lila) on the right/bottom one.
 
-LinkedIn frame: **1000×1250 for the 3-card tree** (question + two answers), **1000×1500 for the 5-card tree**. The block is centred between the one-line title and the band (positions below; every gap checked against the minimums — not yet built in this revision).
+LinkedIn frame: **1000×1250 for 3 cards**, **1000×1500 for 5 cards**.
 
 **4x5 and story, top → down:**
 
-| | 4x5 · 3 cards (band 1110) | 4x5 · 5 cards, 1500 (band 1360) | Story · 3 cards | Story · 5 cards |
+| | 4x5 · 3 cards | 4x5 · 5 cards (1500) | Story · 3 cards | Story · 5 cards (one-line title, ends 361) |
 |---|---|---|---|---|
 | Card widths | root 600 · answers and outcomes 410 | same | root 600 · others 460 | same |
-| Root (1 line: 207 / 211 tall) | 200,326 | 200,270 | 240,600 | 240,424 |
-| Answers (4x5 x 50 and 540 · story x 40 and 580) | y 673 | y 617 | y 931 | y 755 |
-| Outcomes, under each answer | — | y 979 | — | y 1105 |
-| Gap root → answers / answers → outcomes | 140 | 140 / 100 | 120 | 120 / 80 |
-| Split line (root bottom + half the gap) | y 603 | y 547 | y 871 | y 695 |
-| Pills on the split line (y = split − 34) | Yes x 328 · No x 566 | same x | Yes x 355 · No x 618 | same x |
-| Title → root / last card → band | 176 / 175 | 120 / 119 | 240 / 239 | 64 / 65 |
+| Root (1 line: 188 / 191 tall) | 200,340 | 200,340 | 240,550 | 240,431 |
+| Answers (4x5 x 50 and 540 · story x 40 and 580) | y 794 | y 667 | y 1118 | y 748 |
+| Outcomes, under each answer | — | y 1044 | — | y 1118 |
+| Gap root → answers / answers → outcomes | 266 | 139 / 139 | 377 | 126 / 126 |
+| Split line (root bottom + half the first gap) | y 661 | y 598 | y 930 | y 685 |
+| Pills (y = split − 34) | Yes x 328 · No x 566, y 627 | same x, y 564 | Yes x 355 · No x 618, y 896 | same x, y 651 |
+| Title → root / last card → footer | 70 / 80 | 70 / 80 | 70 / 80 | 70 / 80 |
 
-Split connector (arrowhead at the end): root bottom-centre (4x5 500 · story 540) → down to the split line → across → down into each answer's top-centre (4x5 255 / 745 · story 270 / 810). Answer → outcome: straight down from the answer's bottom-centre. Pills sit 36 px (4x5) / 26 px (story) clear of the cards.
+Split connector (arrowhead at the end): root bottom-centre (4x5 500 · story 540) → down to the split line → across → down into each answer's top-centre (4x5 255 / 745 · story 270 / 810). Answer → outcome: straight down from the answer's bottom-centre. Every pill sits at least 29 px clear of the cards.
 
-**X, left → right** (all cards 370, the X minimum; root = two-line question + one line, 245 tall):
+**X, left → right** (all cards 380; root = two-line question + one line, 253 tall):
 
 | | X · 3 cards | X · 5 cards |
 |---|---|---|
-| Columns (x) | root 248 · answers 683 | root 30 · answers 465 · outcomes 900 (gaps 65) |
-| Root | y 408 (centred on 530) | same |
-| Answers (and outcomes, same y as their answer) | upper y 198, lower y 580 | same |
-| Root → answers | from the root's top-centre up to the upper answer's mid-height (y 339), then right into its left edge; from the bottom-centre down to y 721, then right | same (root centre x 215) |
-| Pills, on those horizontal legs | Yes 508,305 · No 501,687 | Yes 290,305 · No 283,687 |
-| Answer → outcome | — | straight right, 65 long, at each answer's mid-height (835 → 900) |
+| Columns (x) | root 238 · answers 683 | root 25 · answers 460 · outcomes 895 |
+| Root | y 410 (centred on 536) | same |
+| Answers (and outcomes, same y as their answer) | upper y 190, lower y 634 | same |
+| Root → answers | from the root's top-centre up to the upper answer's mid-height (y 314), then right into its left edge; from the bottom-centre down to y 758, then right | same (root centre x 215) |
+| Pills, on those horizontal legs | Yes 506,280 · No 499,724 | Yes 288,280 · No 281,724 |
+| Answer → outcome | — | straight right, 55 long, at each answer's mid-height (840 → 895) |
+| Title → cards / last card → footer | 69 / 60 | 69 / 60 |
 
-The X pills moved off the gap between root and answers (the old 120-wide gap only left them 3 px from the root and squeezed answer → outcome to 30 px): they now ride on the legs above and below the root, 34 px clear of it.
+The pills ride on the legs above and below the root, 61–62 px clear of it.
 
-### Mind map — title block + branches (`img/infographic-ref-mindmap.webp`) · derived, tested 2026-10-26 (3 and 4 groups)
+### Mind map — title + branches (`img/infographic-ref-mindmap.webp`) · derived in the new look
 
-No `Info/TitleHighlight`: the title lives in a Lila block (rectangle radius 20, JCG/Lila, named `Title block`) with Big Shoulders Text Bold 70 white (text named `Title`), centred, vertically centred in the block (≤ 5 words: one line ≤ 28 characters, or two lines with a hand break on 4x5/story). The audit finds the title by those two names.
+The title is `Info/TitleHighlight/Verde`, as on the hub (the old Lila `Title block` is the old look: a near-full-width purple band). The spine starts 15 under the title's bottom-centre.
 
-**4 groups** (tested 2026-10-26 in all three sizes, audit clean): four GroupCards in a 2×2 grid, numbered 1–2 on the first row and 3–4 on the second. One spine runs down the middle gutter from the block's bottom-centre to the second row's mid-height, with no arrowhead. Four short stubs with arrowheads go from the spine into each card's inner edge, at that card's mid-height (`Math.round(card y + card height / 2)`).
+**4 groups:** four cards in a 2×2 grid, numbered 1–2 on the first row and 3–4 on the second. One spine runs down the middle gutter to the second row's mid-height, with no arrowhead. Four short stubs with arrowheads go from the spine into each card's inner edge, at that card's mid-height (`Math.round(card y + card height / 2)`).
 
-**3 groups** (tested 2026-10-26 in all three sizes, audit clean): two cards on the first row as in the 2×2 grid, the third centred under them. The spine runs from the block's bottom-centre straight into the third card's top-centre (arrowhead there); two stubs go from the spine into the first-row cards at their mid-height.
-
-Airy revision 2026-10-26 (derived, gaps checked, not yet rebuilt): 2-line cards, an 80-wide gutter between the columns, a 100 gap between the rows, the block centred between the title block and the band.
+**3 groups:** two cards on the first row as in the 2×2 grid, the third centred under them. The spine runs straight into the third card's top-centre (arrowhead there); two stubs go from the spine into the first-row cards at their mid-height.
 
 | | 4x5 · 1000×1250 | X | Story |
 |---|---|---|---|
-| Title block | 30,40 · 940×220 | 30,40 · 1240×110 (one line) | 40,250 · 1000×220 |
 | Cards (w) | 430 at x 30 and 540 | 580 at x 30 and 690 | 460 at x 40 and 580 |
-| Rows (y) | 373 and 735 | 213 and 595 | 635 and 1005 |
-| 3 groups: third card | 430 at x 285, y 735 | 580 at x 360, y 595 | 460 at x 310, y 1005 |
-| Spine, 3 groups (arrowhead into the third card's top) | x 500, block bottom 260 → 735 | x 650, 150 → 595 | x 540, 470 → 1005 |
-| Spine, 4 groups (no arrowhead) | x 500, 260 → 866 (row 2 mid-height) | x 650, 150 → 736 | x 540, 470 → 1140 |
-| Stubs into row 1 (3 and 4 groups; mid-height of 2-line cards) | y 504: 500 → 460 and 500 → 540 | y 354: 650 → 610 and 650 → 690 | y 770: 540 → 500 and 540 → 580 |
-| Stubs into row 2 (4 groups) | y 866: 500 → 460 and 500 → 540 | y 736: 650 → 610 and 650 → 690 | y 1140: 540 → 500 and 540 → 580 |
-| Title block → row 1 / last row → band | 113 / 113 | 63 / 63 | 165 / 165 |
+| Rows (y) | 340 and 794 | 190 and 634 | 550 and 1118 |
+| 3 groups: third card | 430 at x 285, y 794 | 580 at x 360, y 634 | 460 at x 310, y 1118 |
+| Spine, 3 groups (arrowhead into the third card's top) | x 500, 285 → 794 | x 650, 136 → 634 | x 540, 495 → 1118 |
+| Spine, 4 groups (no arrowhead) | x 500, 285 → 913 (row 2 mid-height) | x 650, 136 → 758 | x 540, 495 → 1240 |
+| Stubs into row 1 (mid-height of 2-line cards) | y 459: 500 → 460 and 500 → 540 | y 314: 650 → 610 and 650 → 690 | y 672: 540 → 500 and 540 → 580 |
+| Stubs into row 2 (4 groups) | y 913, same x | y 758, same x | y 1240, same x |
+| Title → row 1 / last row → footer | 70 / 80 | 69 / 60 | 70 / 80 |
+

@@ -19,15 +19,15 @@ Not this skill: exporting PNG/PDF or posting; writing the caption (`/content`); 
 
 ## Hard rules (fail even if it "works")
 
-1. **Purple + grey only.** Verde is a small accent (list in `references/style.md`). No other colours, gradients, glassy cards, icon libraries or centred-everything sameness.
+1. **Purple + grey only, and purple is an accent** (Juan, 2026-10-26: "too purple"). Grey, white and black carry most of every grey slide: no full-width purple bands, no purple-filled card headers on infographics. Verde is a small accent. No other colours, gradients, glassy cards, icon libraries or centred-everything sameness (`references/style.md` → Colours).
 2. **Dark means the star-field image**, never flat black. No green-heavy backgrounds.
 3. **The footer says jcgiusto.com.** Never asteroi.co.
 4. **Readable on a phone:** slide bodies are Archivo 40 on 4x5 and story, 50 on X. Nothing under the floor (32 on 4x5, 35 on story, 40 on X) except the footer URL. Cut words; never shrink type to fit.
 5. **All three sizes, every time:** 1000×1250 (LinkedIn), 1300×1080 (X), 1080×1920 (story).
-6. **Agree before building** (Juan, 2026-10-26): the type before anything; the design + content brief before any Figma work; then the LinkedIn size alone, and X and story only after he OKs its screenshot. Never skip a checkpoint.
-7. **Tidy, not cramped** (Juan, 2026-10-26: "the ones you created in the past were overly dense"): one idea per slide, within the word budgets and minimum gaps in `references/style.md` → Density. Whitespace is fine: never fill it with more words or elements; centre what is there.
+6. **Agree before building** (Juan, 2026-10-26): the type first; then the design + content brief; then 2–3 variants of one slide for him to pick; then the LinkedIn size alone; X and story only after he OKs its screenshot. Never skip a checkpoint.
+7. **Neither dense nor empty** (Juan, 2026-10-26). Packed slides were "overly dense"; a text-only slide with a box mid-slide and empty space below had "too many open spaces". One idea per slide within the word budgets (`references/style.md` → Density), and the slide fills down to its footer: a point slide is text on top plus a visual filling the lower part; infographic cards spread between title and footer. Fill with a bigger visual or wider spacing, never with extra words.
 8. **Never touch his originals.** Pages "JCG" and "Carousel" and the components on "🧩 Bloques JCG" are read-only. Build only on a new page.
-9. This skill writes to Figma only (plus screenshots in the session scratchpad). No repo files, no commits.
+9. This skill writes to Figma, screenshots in the session scratchpad, and Juan's picks appended to `references/taste.md`. No other repo files, no commits.
 
 ## Before the first Figma call
 
@@ -51,47 +51,54 @@ Ask, e.g.: **"Do you want this as a carousel?"** I'd go carousel: the post has f
 For an infographic, name the layout in the question ("an infographic laid out as a decision tree"). Wait for his answer.
 
 ### 3. Design + content brief — checkpoint
-Agree the look and the words before anything is built. One chat block; per slide (or infographic group) one line for the look — slide kind, background (dark / grey / purple), the visual (chart, screenshot to paste, quote box, highlight box, big number, none) — then the exact text:
+Agree the look and the words before anything is built. One chat block; per slide (or infographic group) one line for the look — slide kind, background (dark / grey / purple), the visual (chart, screenshot to paste, big number, quote box, none) — then the exact text:
 
 **Carrusel · 5 diapositivas · primero LinkedIn, luego X y story**
 - **Portada** · oscura (estrellas) · sin imagen
   «el secreto del aov»
   que **no conocías**
-- **Punto 1** · gris · captura que pegas tú
+- **Punto 1** · gris · captura que pegas tú, abajo
   Audiencias Amplias
   Segmentar por intereses **está comiendo tu margen**.
-- **Gráfico** · gris · barras €60.000 → €100.000 …
+- **Punto 2** · gris · gráfico de barras abajo: €60.000 → €100.000 …
 - **Insight** · oscura · caja de cita: «El creativo es tu verdadero targeting»
 - **Cierre** · morada · reacciones
   Si te ha gustado este post,
   **¡dale a me gusta y compártelo!**
 
-- Plain words; no layer names or IDs. Cover: dark by default; purple when the headline leads with a number or a list ("10 estrategias…").
-- Fit happens here, never in Figma (budgets in `references/style.md` → Density): a point ≤ 25 words in ≤ 2 short paragraphs (a chart point ≤ 20); a single image = one headline, one visual, at most one short line; an infographic = 3 groups (4 at most), ≤ 2 lines of 16 characters each, title ≤ 5 words, a decision tree at most one level under the answers. More than that → split into another slide, cut, or propose a carousel. Prefer cutting words.
+- Plain words; no layer names or IDs. Cover: dark by default; purple when the headline leads with a number or a list ("10 estrategias…"). Every point gets a visual (chart, picture or big number); text only when Juan asks for it.
+- Fit happens here, never in Figma (budgets in `references/style.md` → Density): a point ≤ 25 words in ≤ 2 short paragraphs; a single image = one headline, one visual, at most one short line; an infographic = 3 groups (4 at most), ≤ 2 lines of 16 characters each, title ≤ 5 words, a decision tree at most one level under the answers. More than that → split into another slide, cut, or propose a carousel. Prefer cutting words.
 - Mark bold with `**…**` (one phrase per paragraph). Show every big line's break (cover, quote, closing, box) as a real line break (layouts → Big text); `\n` appears only in the Figma code. Say what the X version drops.
 
 Then ask **"Shall I build it like this?"** with one recommendation sentence. Nothing is built until he says yes. Any change he asks for: show the updated brief and wait for a yes again.
 
-### 4. Build in Figma — LinkedIn first
-1. New page `YYYY-MM-DD · <short title>` (recipe 2). One page per piece.
-2. The LinkedIn row only (recipe 3, `SIZES = ['4x5']`), frames named `<n>-<kind>`; Archimoto outlines (recipe 5); blocks and text at the positions and gaps in `references/layouts.md` (recipes 4–8). Pictures: a file from Juan → upload it (recipe 7); none → leave "Pega aquí la imagen".
-3. Check it (step 5, `SIZES_EXPECTED = 1`), screenshot the row (step 6) and show it to Juan: **"Does the LinkedIn version look right?"** plus one recommendation sentence. Fix what he asks and show it again.
-4. Only after his OK: the X and story rows (recipe 3, `SIZES = ['x', 'story']`), same words, positions per size; then check everything again (`SIZES_EXPECTED = 3`).
+### 4. Variants to pick from — checkpoint
+Juan, 2026-10-26: "Keep doing this, I feel it's very useful so you understand my taste."
+1. Read `references/taste.md`. Bias the variants toward what he picked before; don't offer again what he rejected.
+2. New page for the piece (recipe 2). Build 2–3 **visibly different** versions of ONE representative slide at LinkedIn size, labelled A, B, C (recipe 12): for a carousel a point slide; for an infographic or single image the whole thing. Same words in each; vary the look (visual, layout, accent).
+3. Audit them (recipe 9 with `ONLY`), screenshot them side by side (recipe 12) and show Juan: **"Which one should I build the rest like?"** plus one recommendation sentence. Each option is one short sentence ("A: text on top, chart filling the bottom.").
+4. Append his pick and his rejections, with his reasons in his words, to `references/taste.md`. Then build the full piece in that direction.
 
-### 5. Check it
-1. Run the QA audit (recipe 9). It checks density (words, paragraphs, body size, gaps), position, colours, a word alone on the last line of big text, and lone bullets. Fix every issue by cutting or moving, never by shrinking type (fixes under the recipe); only a picture placeholder left on purpose may stay.
-2. Screenshot every frame inline (recipe 10) and look. Fix overlaps, badly split phrases, cramped spots, wrong footer colour, numerals off their title line.
+Skip the variants only when `taste.md` already covers this exact kind of slide and Juan says to go straight to building.
+
+### 5. Build in Figma — LinkedIn first
+1. On the piece's page (recipe 2 if you skipped the variants), the LinkedIn row only (recipe 3, `SIZES = ['4x5']`, under the variants), frames named `<n>-<kind>`; Archimoto outlines (recipe 5); blocks and text at the positions and gaps in `references/layouts.md` (recipes 4–8). Pictures: a file from Juan → upload it (recipe 7); none → leave "Pega aquí la imagen".
+2. Check it (step 6, `SIZES_EXPECTED = 1`), screenshot the row (step 7) and show it to Juan: **"Does the LinkedIn version look right?"** plus one recommendation sentence. Fix what he asks and show it again.
+3. Only after his OK: the X and story rows (recipe 3, `SIZES = ['x', 'story']`), same words, positions per size; then check everything again (`SIZES_EXPECTED = 3`).
+
+### 6. Check it
+1. Run the QA audit (recipe 9). It checks density (words, paragraphs, body size, gaps), the empty strip above the footer, how much purple, the old look, position, colours, a word alone on the last line of big text, and lone bullets. Fix every issue by cutting, moving or growing the visual, never by shrinking type (fixes under the recipe); only a picture placeholder left on purpose may stay.
+2. Screenshot every frame inline (recipe 10) and look. Fix overlaps, badly split phrases, cramped spots, empty bands, wrong footer colour, numerals off their title line.
 3. After fixes: one more audit and one more screenshot pass. Stop when both are clean.
 
-### 6. Hand off
+### 7. Hand off
 Screenshot each row with `get_screenshot` (the row's section, maxDimension 2400) and download it into the session scratchpad. Then tell Juan, in a few plain lines: the Figma link to the page, the screenshot file paths, which slides still need a picture, and anything you cut for X. Ask nothing unless something needs his decision.
 
 ## Archimoto (numerals and cover phrases)
 
 Figma scripts can't load the Archimoto font, so its words become vector shapes. The script needs `fonttools` (`pip install fonttools`). From the repo root:
 `python .claude/skills/figma-post/scripts/archimoto_svg.py --weight bold --size 120 --color "#B084D3" -- "el secreto del aov"`
-prints one SVG; insert it with the async helpers `placeSvg` / `swapNumeral` in the recipes (they also link its colour to the JCG paint style). Options go first and `--` goes last, right before the text. The letters are shapes, not text: Juan can retype them in Figma desktop if needed. No kerning is applied: if a letter pair looks loose on the screenshot, re-run with tracking and compare:
-`python .claude/skills/figma-post/scripts/archimoto_svg.py --weight bold --size 120 --color "#B084D3" --tracking -2 -- "el secreto del aov"`
+prints one SVG; insert it with the async helpers `placeSvg` / `swapNumeral` in the recipes (they also link its colour to the JCG paint style). Options go first and `--` goes last, right before the text. The letters are shapes, not text: Juan can retype them in Figma desktop if needed. No kerning is applied: if a letter pair looks loose on the screenshot, re-run with `--tracking -2` (before `--`) and compare.
 
 ## When things go wrong
 
@@ -101,9 +108,10 @@ prints one SVG; insert it with the async helpers `placeSvg` / `swapNumeral` in t
 
 ## References
 
-- `references/style.md` — colours, fonts, type sizes, readability floor, density (word budgets, minimum gaps), grid per size, footer, how to write the words.
+- `references/taste.md` — Juan's picks and rejections, dated, with his reasons. Read before proposing variants; append after each pick.
+- `references/style.md` — colours (purple as an accent), fonts, type sizes, readability floor, density (budgets, gaps, no empty strip), grid per size, footer, the words.
 - `references/layouts.md` — every slide kind, single-image pattern and infographic layout, with positions, gaps and word budgets per size.
-- `references/figma-recipes.md` — tested `use_figma` code: page, rows, blocks, bold text, Archimoto, chart, pictures, connectors, QA, screenshots, fixes.
-- `references/blocks.md` — the building-blocks page: component IDs, sizes, layer names, fonts to load, measured grids.
+- `references/figma-recipes.md` — tested `use_figma` code: page, rows, blocks, bold text, Archimoto, chart, pictures, infographic parts, QA, screenshots, fixes, variants.
+- `references/blocks.md` — the building-blocks page: component IDs (new infographic look and the old one not to use), layer names, fonts, measured grids.
 - `references/img/` — Juan's three infographic references (structure only, never their colours).
 - Design spec: `docs/superpowers/specs/2026-10-26-figma-post-design-skill-design.md`.
