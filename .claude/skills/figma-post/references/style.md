@@ -1,6 +1,6 @@
 # Style — Juan's look, measured
 
-updated: 2026-10-26
+updated: 2026-10-28
 
 Measured from his slides on page "Carousel" in Contenido (`U2HIUwTWDYWL7EwSKCDpLd`) and single images on page "JCG". Per-block positions and the raw measurements live in `blocks.md` ("Measured grids"); slide-by-slide positions in `layouts.md`. This file is the rulebook.
 
@@ -49,7 +49,7 @@ No other fonts. Letter spacing 0. Text case as typed (CTA labels and chart label
 | Slide title (numbered) | BS Text Bold 60, Lila | BS Text Bold 90, **black** | BS Text Bold 60, Lila |
 | Header numeral | Archimoto Regular 150, Lila | Archimoto **Bold** 150, Lila | Archimoto Regular 150, Lila |
 | Insight title / quote | BS Bold 130 / BS Bold 60 white | BS Bold 130 / BS Bold **70** white | BS Bold 130 / BS Bold 60 white |
-| CTA / closing text | BS Text 80 white | BS Text 100–120 white | BS Text 80 white |
+| CTA / closing text | CTA BS Text 80 white · closing **100** (Juan's pick 2026-10-27) | BS Text 100–120 white | CTA 80 · closing 100 |
 | Body (`punto`, `grafico`, `insight`; with or without a picture) | **Archivo 40**, 133.5%, paragraph gap 40 | **Archivo 50**, 133.5%, paragraph gap 50 | **Archivo 40**, 133.5%, paragraph gap 40 |
 | Highlight box text | BS Display Bold 60 black | BS Display Bold 70 black | BS Display Bold 60 black |
 | Infographic title (`Info/TitleHighlight/Verde`, black, second line on Verde) | BS Bold 110, lh 101, two lines | BS Bold 90, one highlighted line | BS Bold 110, two lines |
@@ -116,7 +116,7 @@ Story rule of thumb: the story is the 4x5 slide dropped into the middle — left
 
 - Image card: white, radius 20, shadow 4,4 blur 16 at 25% black (the `Card/Image` block).
 - Quote box: Lila at 34%, radius 24, Lila quote marks top-left and bottom-right (`QuoteBox` block).
-- Statement box (a sentence above a picture, e.g. his "Las plataformas no pueden distinguir…" slide in all three sizes): Lila at 34%, radius 24, **no stroke** — same look as the quote box without marks. Used by the `imagen` kind.
+- Statement box (a sentence above a picture, e.g. his "Las plataformas no pueden distinguir…" slide in all three sizes): Lila at 34%, radius 24, **no stroke** — same look as the quote box without marks. Used by the `imagen` kind, and (Juan's pick 2026-10-26) as the box that holds a big number or two columns on a point slide, with black text inside.
 - Highlight box (one key line or number, see `blocks.md` → Measured grids): Lila at 46% + 1px Lila stroke, radius 20, text **Big Shoulders Display Bold black, centred** (70 on X as measured; 60 on 4x5 and story). Measured on three of his X slides. It is the visual of a text-only `punto` (the exception; `layouts.md` → text-only point), sitting at the bottom of the room so the slide fills (recipe `highlightBox`). Build it as one rectangle with fill and stroke linked to JCG/Lila and layer opacity 0.46.
 - Infographic card (`Info/GroupCard/White`, Juan's pick 2026-10-26): white, radius 20, the image card's shadow, an 8 px Lila top edge, Lila Archimoto numeral, black Big Shoulders Bold heading, Archivo lines. Hub (`Info/HubCircle`): white circle, 4 px Lila outline, black Big Shoulders Bold text. Title (`Info/TitleHighlight/Verde`): black, the second line on a Verde block.
 - CTA button: Verde pill (`Button/CTA`).

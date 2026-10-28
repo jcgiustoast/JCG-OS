@@ -1,6 +1,6 @@
 # Layouts — what goes where, per slide kind and size
 
-updated: 2026-10-26
+updated: 2026-10-28
 
 Coordinates are x,y inside the frame. Block names → IDs in `blocks.md` (and the `B` table in `figma-recipes.md`). "Measured" = copied from his slides; "derived" = my layout in his grid, not in his file — check it on the screenshot.
 
@@ -123,9 +123,13 @@ Measured on variant A (4x5): title ends 166 · body 230–482 (25 words, two par
 - **Chart, two columns:** `Chart/Bar` detached (recipe 6), rescaled to fill the room: `k = min(room height / 520, max width / 723)` with max width 885 (4x5, story) or 1173 (X); centred across, bottom at the content end.
 - **Chart, three columns** (variant A, built from shapes, measured; frame `Chart/Bar · 3 columnas`, 885 × room at x 60): legend at the frame's top-left — 30×30 squares, radius 6, Lila "HOY" at 0,6 and Lila Light "AL CRECER" at 128,6, labels Big Shoulders Text Bold 34 black 12 to the right of each square; bars 200 wide at x 48, 343 and 638 inside the frame, standing on black label pills 240×58 (radius 6, at x 28, 323, 618, bottom of the frame) with Big Shoulders Text Bold 32 white labels centred; today in Lila, the growth stacked on top in Lila Light (top corners 16); Verde 3 px guides across the full width at the tops being compared; the tallest column reaches 90 under the frame top.
 - **Picture card:** `Card/Image` filling the room (see "Shape of a carousel" → picture cards).
-- **Big number** (derived, not yet built): Archimoto Regular Lila outline centred, plus one Big Shoulders Text Bold 60 black line under it (≤ 12 words, 30 below, X 70); size the number so the stack fills the room (start at 300 on 4x5/story, 280 on X; up to 400) and put the stack's bottom at the content end.
+- **Big number in the Lila box** (Juan's pick 2026-10-26, `taste.md`; built on the ROAS carousel "It's Inflated"): the room filled by the statement-box look — JCG/Lila rectangle, opacity 0.34, radius 24, no stroke, x 60, w 885 (X ≤ 1166: at 1173 the audit reads it as a full-width band), from body bottom + 70 (X 60) to the content end. Inside, centred, ≥ 60 padding: the number in **black** Archimoto Regular as large as fits the box width minus padding (`150–300%`, 8 glyphs: 169 on 4x5, 233 on X), and one Big Shoulders Text Bold 60 black line under it (X 70), hand-broken to fit (≤ 12 words). Purple ≈ 16%. Not picked: the number in Lila free on the grey (to fill, it had to split over two lines at 330, purple 19.8%) and in a white card.
+- **Two columns in the Lila box** (built on "It Ignores Your Margin", derived from the comparison): the same box; two black columns, each an Archimoto number (220) over a short Big Shoulders word (110), one or two Archivo 40 lines (join two lines with a soft break, or the audit reads them as paragraphs), and a Big Shoulders Bold 50 result; results level across the columns.
+- **Math row by row** (Juan's pick 2026-10-27 for a sum, built on "The Math Nobody Runs"): a horizontal waterfall filling the room (frame `Chart · waterfall`, 885 × room at x 60): one row per line of the sum, rows 50 tall spread evenly; label in Big Shoulders Text Bold 38 black in a fixed left column (≈ 239, set by the longest label); the total a full Lila bar, each cost a black bar starting where the previous one ended (stepping left), the result a small Verde bar; the amount (Big Shoulders Text Bold 38, real minus "−") just right of each bar's end. Purple ≈ 3%. Use it when the point is "this adds up to that"; ≤ 8 rows.
 
 A two-line title (over the budget) pushes the body down 70.
+
+**On X, keep the stack** (Juan's pick 2026-10-28 over a side-by-side version): body on top, the visual filling the room below, both as wide as the slide allows. Splitting the X slide into text left and visual right left empty grey around a four-line body and forced the number onto two lines.
 
 ### Text-only point (no visual) · the exception · derived
 
@@ -167,6 +171,10 @@ Box: `const r = figma.createRectangle(); slide.appendChild(r); r.resize(929, h);
 | Body (optional, ≤ 20 words), Archivo 40 white, centred | x 57, w 885, y = box bottom + 60, ends ≤ 960 | none | x 97, w 885, y = box bottom + 60, ends ≤ 1240 |
 | Footer | `Footer/Cover` 400,996 | none | `Footer/Cover` 440,1268 |
 
+**When the key idea is a formula — the terms as white blocks** (Juan's pick 2026-10-27 over the quote box, built on the ROAS carousel, 4x5): same stars, asteroids, title and footer, no quote box. Under the title, the left side of the formula with its "=" on one line ("Marginal contribution =", Big Shoulders Bold 80 white, centred); then one white card per term (JCG/Blanco, 600 wide, centred, radius 20, the image card's shadow, 102 tall, 20 apart) holding the term in Big Shoulders Bold 50 black ("Revenue", "− Variable costs", "− Ad spend"); then the body in Archivo 40 white. Gaps measured: title → formula 75, formula → cards 45, cards → body 45, body → avatar 65. At most 4 terms.
+
+Dark slides have no strip check in the audit (it runs only on `punto`, `grafico`, `imagen`, `placa`, `infografia`): look for a dark band on the screenshot yourself. His measured insight left ≈ 270 px of sky under the body on 4x5; centre the stack between y 60 and the footer's top − 60.
+
 On X set the size after the text: `setText(qb, 'Quote', '…').fontSize = 70` (a 60 quote sat small in the 1064 box; tested at 70: two lines, box 320). A three-line quote: grow the box (`qb.resize(qb.width, Math.max(292, Math.round(quote.height + 170)))`, tested; X `Math.max(320, …)`); the marks follow the corners. No arrow (none on his dark slides). Footer: `Footer/Cover` as it comes — Verde wordmark, white URL, the dark-slide look; don't switch it. On X, hide the orbit line of the star background.
 
 ### `cta` — purple call to action · measured
@@ -186,8 +194,9 @@ Story top-left asteroid: **−100,304 on `cta` and `cierre`** (his story closing
 | Element | 4x5 | X | Story |
 |---|---|---|---|
 | Background / asteroids | as `cta` | as `cta` | as `cta` |
-| Text, BS Text 80 white, centred: "Si te ha gustado este post,\n**¡dale a me gusta y compártelo!**" | x 42, w 915, y 381 | size 100, **x 40, w 1220**, y 330 (two lines, 240 tall; the old 1104 box left "compártelo!" alone) | x 82, w 915, y 748 |
-| Reactions strip (rectangle 644×129, radius 40, `REACTIONS_HASH`) | 178,625 | 328, y = text bottom + 50 | 218,992 |
+| Text, BS Text white, centred: "Si te ha gustado este post,\n**¡dale a me gusta y compártelo!**" | **size 100** (Juan's pick 2026-10-27; his measured 80 at x 42, w 915 was not picked), x 40, w 920 | size 100, **x 40, w 1220**, y 330 (two lines, 240 tall; the old 1104 box left "compártelo!" alone) | size 100, x 80, w 920 (derived) |
+| Reactions strip (rectangle, radius 40, `REACTIONS_HASH`, proportions 644:129) | **scaled to the text's widest line** (769×154 for the English line), 70 under the text | 328, y = text bottom + 50 | as 4x5 (derived) |
+| Stack | text + strip centred between y 60 and the footer's top − 60 (4x5 built: 289–727) | — | same rule (derived) |
 | Footer | `Footer/Cover` 400,1016 | none | `Footer/Cover` 415,1383 |
 
 No arrow. If the post is in English, translate the line.
@@ -217,6 +226,7 @@ Patterns for the visual zone:
 | Column text (optional) | Archivo 40, centred, **one line ≤ 20 characters**, y = amount bottom − 15 | Archivo 50 | Archivo 40 |
 | Conclusion (the one supporting line) | BS Text Bold 50 black, one line ≤ 26 characters, centred on a Verde rectangle (text + 40 wide, text + 12 tall) at column text (or amount) bottom + 60 — the only Verde on the slide | same | same |
 | Whole block | conclusion ending at the zone end (4x5 1032, X 882, story 1362); spread leftover room evenly between title → headings and amount → conclusion (first test: headings y 462 → conclusion ends 949, a 163 px strip — too much under the new rule) | same | same |
+| **Column cards** (Juan's pick 2026-10-28) | Two amounts side by side top out at ≈ 240 on 4x5 (they touch beyond that), which still left ≈ 199 px of grey above and below. So each column sits in a white card (JCG/Blanco, radius 20, the image card's shadow, no Lila edge) from ≈ 40 above its heading to ≈ 40 below its amount; grey above the cards and between cards and conclusion ≤ ≈ 90 | same rule | same rule |
 
   A column can hold a picture card (column width, ≤ 300 tall) instead of the amount. Title budget for every `placa`: ≤ 28 characters, two lines on 4x5/story (`Line 1` / `Line 2`), one line at 90 on X.
 - **Quote card:** Lila rectangle radius 20, named `Quote card` (his measured look; the one shape exempt from the purple-share check), Archimoto Bold 120 black label inside ("#1"), Archivo 50 black text with bold phrases (≤ 20 words), 70 in from the card's left edge.
@@ -310,6 +320,8 @@ LinkedIn frame: **1000×1250 for 3 cards**, **1000×1500 for 5 cards**.
 | Pills (y = split − 34) | Yes x 328 · No x 566, y 627 | same x, y 564 | Yes x 355 · No x 618, y 896 | same x, y 651 |
 | Title → root / last card → footer | 70 / 80 | 70 / 80 | 70 / 80 | 70 / 80 |
 
+**Status:** 4x5 · 5 cards built and audited 2026-10-27 (ROAS-run "Ad or Page Problem?", Juan's pick over a mind map and a 3-card tree): positions as in the table, pills relabelled "YES" / "NO" for English, purple 2.4%, strip 80. 4x5 · 3 cards built as a variant, also clean.
+
 Split connector (arrowhead at the end): root bottom-centre (4x5 500 · story 540) → down to the split line → across → down into each answer's top-centre (4x5 255 / 745 · story 270 / 810). Answer → outcome: straight down from the answer's bottom-centre. Every pill sits at least 29 px clear of the cards.
 
 **X, left → right** (all cards 380; root = two-line question + one line, 253 tall):
@@ -324,13 +336,17 @@ Split connector (arrowhead at the end): root bottom-centre (4x5 500 · story 540
 | Answer → outcome | — | straight right, 55 long, at each answer's mid-height (840 → 895) |
 | Title → cards / last card → footer | 69 / 60 | 69 / 60 |
 
+**X · 5 cards as built (2026-10-28, audited clean) — use this, not the column above:** the derived 380-wide cards broke two rules (a 16-character line like "• Check heatmaps" wraps at Archivo 40 inside 380, and the 55 px gap fails the 60 px card-gap check). Built instead: root x 20, w 360 (its question wraps to two heading lines) · answers x 440, w 390 · outcomes x 890, w 390, so 60 between columns; rows, pills and connectors as above, re-centred on the new columns.
+
 The pills ride on the legs above and below the root, 61–62 px clear of it.
 
 ### Mind map — title + branches (`img/infographic-ref-mindmap.webp`) · derived in the new look
 
 The title is `Info/TitleHighlight/Verde`, as on the hub (the old Lila `Title block` is the old look: a near-full-width purple band). The spine starts 15 under the title's bottom-centre.
 
-**4 groups:** four cards in a 2×2 grid, numbered 1–2 on the first row and 3–4 on the second. One spine runs down the middle gutter to the second row's mid-height, with no arrowhead. Four short stubs with arrowheads go from the spine into each card's inner edge, at that card's mid-height (`Math.round(card y + card height / 2)`).
+**4 groups:** four cards in a 2×2 grid, numbered 1–2 on the first row and 3–4 on the second. One spine runs down the middle gutter to the second row's mid-height, with no arrowhead. Four short stubs go from the spine into each card's inner edge, at that card's mid-height (`Math.round(card y + card height / 2)`).
+
+Built once as a variant (2026-10-27, not picked) and two things looked wrong: the paired 40 px stubs with arrowheads read as "↔" — draw them as plain lines; and two rows of two-line cards in the 700 px zone left ≈ 216 px of empty grey between the rows — move row 2 up or grow the cards so the gap is ≤ ≈ 120.
 
 **3 groups:** two cards on the first row as in the 2×2 grid, the third centred under them. The spine runs straight into the third card's top-centre (arrowhead there); two stubs go from the spine into the first-row cards at their mid-height.
 

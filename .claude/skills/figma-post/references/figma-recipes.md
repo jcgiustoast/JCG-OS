@@ -1,8 +1,8 @@
 # Figma recipes — tested `use_figma` code
 
-updated: 2026-10-26
+updated: 2026-10-28
 
-Every snippet below ran once in Contenido on 2026-10-26, on a scratch page that was then deleted — or, for Juan's picked look, on the variants page (§8, §9) — except recipe 12, marked as not yet run. Copy them as they are and change only the `CAPITALS` constants and the content. Positions come from `layouts.md`; block IDs from `blocks.md`.
+Every snippet below ran once in Contenido on 2026-10-26, on a scratch page that was then deleted — or, for Juan's picked look, on the variants page (§8, §9) — recipe 12 ran on 2026-10-26/27 (the taste run). Copy them as they are and change only the `CAPITALS` constants and the content. Positions come from `layouts.md`; block IDs from `blocks.md`.
 
 ## 0. Rules for every call
 
@@ -279,6 +279,8 @@ const setBars = async (chart, { v1, v2, text1, text2, textGain, label1, label2 }
     else { t.y = Math.round(seg.y - t.height - 8); await t.setFillStyleIdAsync(S.negro); }
   };
   await value('Value 1', text1, bar1);
+  // Falling chart: the middle guide runs through bar 1 at bar 2's height and struck through Value 1 (found 2026-10-26, fixed by hand on the ROAS cover; this line is that fix as code, not yet re-run). Centre Value 1 in bar 1's part above the guide.
+  if (!rise) { const v1t = L('Value 1'), upper = L('Guide middle').y - bar1.y; if (upper >= MIN_INSIDE) v1t.y = Math.round(bar1.y + (upper - v1t.height) / 2); }
   if (rise && base.height < MIN_INSIDE) L('Value 2 base').visible = false; else await value('Value 2 base', text2, base);
   if (rise) await value('Value 2 top', textGain, top);
   L('Label 1').characters = label1; L('Label 2').characters = label2;
@@ -676,7 +678,7 @@ Look for: text cut off or crowding the footer, an empty band (above the footer o
 
 ## 12. Variants to pick from (SKILL.md step 4)
 
-2–3 LinkedIn-size versions of one representative slide, side by side in a section `Variantes · <kind>` at the top of the piece's page, each with a big letter above it — the way Juan's variants page ("2026-10-26 · Variantes para elegir") was laid out. Not yet run as written; the layout matches that page.
+2–3 LinkedIn-size versions of one representative slide, side by side in a section `Variantes · <kind>` at the top of the piece's page, each with a big letter above it — the way Juan's variants page ("2026-10-26 · Variantes para elegir") was laid out. Ran 2026-10-26/27 for every carousel kind (cover, point, chart, insight, CTA, closing), a single image, a 5-card infographic and an X pair; it worked as written. Only change: give each frame its own background (stars, Lila, Gris) and a short description after the letter in its name ("B · portada (purple, number-led)").
 
 ```js
 const PAGE_ID = 'PAGE_ID', KIND = 'punto', LETTERS = ['A', 'B', 'C'], TALL = false; // KIND: punto | infografia | placa … · TALL: a 5-card tree
