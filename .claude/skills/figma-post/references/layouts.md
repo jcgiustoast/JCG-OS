@@ -1,6 +1,6 @@
 # Layouts — what goes where, per slide kind and size
 
-updated: 2026-10-28
+updated: 2026-11-10
 
 Coordinates are x,y inside the frame. Block names → IDs in `blocks.md` (and the `B` table in `figma-recipes.md`). "Measured" = copied from his slides; "derived" = my layout in his grid, not in his file — check it on the screenshot.
 
@@ -242,11 +242,13 @@ Quote card and stat positions — X and story are **derived, not yet built** (ch
 | Stat line, one line ≤ 12 words | BS Text Bold 60, x 40, w 920, centred, y = number bottom + 40 | BS Text Bold 70, x 54, w 1192 | BS Text Bold 60, x 80, w 920 |
 | Vertical position | card or stack ending at the zone end, 1032 (zone y 330 → 1032) | ending at 882 (zone 290 → 882) | ending at 1362 (zone 580 → 1362) |
 
-## Infographic (`1-infografia`) · Juan's pick 2026-10-26: variant B, with the bottom gap fixed
+## Infographic (`1-infografia`) · look: Juan's pick 2026-10-26 · content and size: his picks 2026-10-28 → 11-10
 
-Use the three reference pictures in `img/` for structure only. **The look** (variant B on the variants page; the 4x5 hub was rebuilt with the fix as "Infografía B (arreglada)" and audited clean): Gris background · white group cards `Info/GroupCard/White` with a thin Lila top edge and a black Big Shoulders heading · Lila Archimoto numerals (Regular 80, recipe 5 with `center: true`) — 1., 2., 3. in reading order; a decision tree numbers by level · the title `Info/TitleHighlight/Verde`, black, its second line on a Verde block · a white hub `Info/HubCircle` with a Lila outline and black text · black 3 px connectors (recipe 8) · his normal avatar footer bottom-left (`Footer/Content`), **no purple band**. Purple stays an accent (`style.md` → Purple is an accent): no purple card headers, no purple hub, no purple band. The old purple-strip cards, Lila title highlight and footer band are the old look (`blocks.md`). **Icons: none by default** — the numerals carry the groups. Only if Juan asks, reuse his 3D-emoji images already in the file (by image hash, recipe 7); never an icon library or drawn icons.
+Use the three reference pictures in `img/` for structure only. **The look** (variant B on the variants page; the 4x5 hub was rebuilt with the fix as "Infografía B (arreglada)" and audited clean): Gris background · white group cards `Info/GroupCard/White` with a thin Lila top edge and a black Big Shoulders heading · Lila Archimoto numerals (Regular 80, recipe 5 with `center: true`) — 1., 2., 3. in reading order; a decision tree numbers by level · the title `Info/TitleHighlight/Verde`, black, its second line on a Verde block · a white hub `Info/HubCircle` with a Lila outline and black text · black 3 px connectors (recipe 8) · his normal avatar footer bottom-left (`Footer/Content`), **no purple band**. Purple stays an accent (`style.md` → Purple is an accent): no purple card headers, no purple hub, no purple band. The old purple-strip cards, Lila title highlight and footer band are the old look (`blocks.md`). **Icons: none by default** — the numerals carry the groups. Offer his 3D images only if they can be big (at 52 px he picked the version without them; inventory in `style.md` → Shapes); never an icon library or drawn icons.
 
-**Budgets** (measured Archivo Regular ≈ 16.4 px per character at 36, 17.3 at 38, 19.6 at 40 on average):
+**Default: the dense decision tree below** — reference-level information on a 1000×1500 frame (never taller), text down to 18. The budgets, sizes and tables right below are the **thin layouts** (hub, mind map, the old five-card tree): kept for a hub or mind map until one is rebuilt dense; superseded for decision trees.
+
+**Thin-layout budgets** (superseded for decision trees; measured Archivo Regular ≈ 16.4 px per character at 36, 17.3 at 38, 19.6 at 40 on average):
 
 - **Groups:** **3 preferred, 4 at most** (hub, mind map). Decision tree: one question + two answers (3 cards) by default; at most one more level below the answers (two outcomes, 5 cards), never deeper. More points → propose a carousel.
 - **Lines:** at most **2 lines per group**, each at most **16 characters** including "• " ("• Revisa el CPM" ✓, "• Revisa el CPM cada semana" ✗). **Bullets only for 2 lines:** a group with a single line (often the decision-tree root's context line) writes it plain — "en paid media", not "• en paid media".
@@ -301,7 +303,35 @@ Centre-idea budget (Big Shoulders Bold ≈ 16.5 px per character at 40): 1–3 w
 
 So with the same words in every size (4x5 uses Ø 160): **no word over 8 characters** in the centre.
 
+### Dense decision tree (as built 2026-11-10) · the default
+
+Juan's landing-page tree, page "2026-10-29 · Landing page infographic v2" (`166:53`): LinkedIn `170:51`, X `203:74`, story `203:75`, all OK'd. Same words on all three, boxes re-laid out per shape. ≈ 50 lines: title + subtitle · "1. Is it working?" (explanation + YES pointer) · "2. Ad numbers OK?" · two "3." issue cards, each with an explanation, "Possible causes" and "What you can do" · "4. Relaunch and measure" (explanation + closing question) · "Kill it" (NO) / "Keep scaling" (YES), unnumbered.
+
+**Sizes** (`style.md` → Type sizes): Archivo 19 (lh 128%) explanations and list items, Archivo Bold 19 list sub-headings, BS Bold 30 card headings, BS Bold 27 closing question, title 72, subtitle 24, Archimoto 44 numerals, pills `Pill/Yes` / `Pill/No` rescaled 0.45 (label 18). Archivo 19 ≈ 10 px a character, so a 26-character list item needs ≈ 270 px.
+
+**Cards:** plain auto-layout frames `Card · <heading>` (`style.md` → Shapes; recipe 8 → dense cards). The YES of the root is not a branch: a pill and "→ Keep scaling (step 4)" as the root card's last row. Lists are one text node each: the bold sub-heading, then "• " items as paragraphs (gap 2).
+
+**Gaps:** cards ≥ 30 apart; a split zone (pills on the horizontal leg) is 56 — leg 28 under the upper card, pill 31 tall, 12 clear on both sides; a join (no pills) is 30; title → first row ≥ 18. Leftover room is shared evenly between the vertical gaps so the last card ends 60–130 above the footer.
+
+| | LinkedIn 1000×1500 (`170:51`) | X 1300×1080 (`203:74`) | Story 1080×1920 (`203:75`) |
+|---|---|---|---|
+| Title (`Info/TitleHighlight/Verde`) | 203,34 · two lines, subtitle shown (594×188) | 353,30 · one line on Verde: `Line 1` hidden, whole title in `Line 2` (594×107) | 243,250 · one line, as X |
+| Row 1: root ─NO→ "Ad numbers OK?" | root 25,254 420×159 · card 2 545,273 430×121 (centred on the root's height) · NO pill 469,319 on the horizontal arrow | root 35,164 480×159 · card 2 605,195 660×97 (explanation on one line) · NO pill 534,229 | root 40,375 470×155 · card 2 610,394 430×117 · NO pill 534,438 |
+| Split card 2 → issues | from card 2's bottom at x 610 (off-centre, so both pills fit) · NO 382,430 · YES 625,430 | from x 760 · NO 522,337 · YES 835,337 | from x 680 · NO 430,543 · YES 686,543 |
+| Row 2: Ad issue · Page issue | 25,477 360×391 · 415,477 560×391 — Page wider so its longer explanation also takes 2 lines and both cards match | 35,381 600×258 · 665,381 600×282 — each issue's two lists **side by side** (row `Lists`, gap 24) | 40,586 385×387 · 455,586 585×387 |
+| Join → card 4 | both bottoms down 15, across to x 500, into card 4 | across to card 4's centre x 615 | across to x 540 |
+| Card 4 "Relaunch and measure" | 25,906 950×136 | 400,695 430×175, middle of the bottom row, content centred | 40,1003 1000×132 |
+| Outcomes | split at x 500 · NO 337,1059 · YES 580,1059 · "Kill it" 25,1106 400×175 (content centred) · "Keep scaling" 455,1106 520×175 | same row as card 4: "Kill it" 35,695 270×175 ←NO (pill 327,768) · "Keep scaling" 925,695 340×175 YES→ (pill 850,768); arrows at the row's mid-height | split at x 540 · NO 369,1148 · YES 625,1148 · "Kill it" 40,1191 420×171 (centred) · "Keep scaling" 490,1191 550×171 |
+| Footer / last card → footer | `Footer/Content/4x5` 30,1362 · 81 | `Footer/Content/x` 30,942 · 72 | `Footer/Content/story` 82,1442 · 80 (at the limit: card padding trimmed to 14/18/12) |
+
+- Reading order: top-left to bottom-right; NO goes left, YES right, on every size.
+- A lone last word in a card (e.g. "together.", "persona.") is fixed with a soft line break (U+2028) in the same words, not by rewording or shrinking.
+- Build X and story by **copying the approved LinkedIn cards** and changing their widths (recipe 8 → dense cards): the words stay identical.
+- Purple share 1.5–2%. Audit (recipe 9) clean on all three.
+
 ### Decision tree — question → yes/no answers (`img/infographic-ref-decision-tree.webp`) · derived in the new look
+
+**Superseded 2026-11-10 by the dense decision tree above** (Juan: the thin tree was "not a huge fan"). Kept as history and for a 3-card tree he explicitly asks for.
 
 Root = `Info/GroupCard/White` (heading = the question, one plain context line with no bullet). Answers = cards with ≤ 2 lines. Outcomes ("qué hacer", ≤ 2 lines) — **only when the answers need a next step; never a third level.** Every card is white; the level shows in the numeral: root "1.", both answers "2.", both outcomes "3.". `Pill/Yes` (Verde) on the left/top answer, `Pill/No` (Lila) on the right/bottom one.
 

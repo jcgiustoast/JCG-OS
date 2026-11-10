@@ -1,6 +1,6 @@
 # Building blocks — `🧩 Bloques JCG`
 
-updated: 2026-10-26
+updated: 2026-11-10
 
 - **Figma file:** Contenido, fileKey `U2HIUwTWDYWL7EwSKCDpLd`
 - **Page:** `🧩 Bloques JCG`, page ID **`31:21`**
@@ -96,6 +96,8 @@ Juan's pick on 2026-10-26 (variant B, `taste.md`). Built 2026-10-26 and used in 
 | Info/HubCircle | `111:72` | 160×160 | Hub centre: `Hub` ellipse (JCG/Blanco fill, 4 px JCG/Lila stroke inside) + `Hub text` (Big Shoulders Text Bold 38, black, centred both ways in a fixed 130×130 box). Both scale with the instance: resize it to the size's diameter (4x5 160, X 220, story 200) and set `Hub text` size 38 / 40 / 40. |
 
 The section also holds a note for Juan explaining the new look (text `Nota nuevo look`).
+
+**Dense infographics (default since 2026-11-10) don't use `Info/GroupCard/White`:** its three line slots can't hold a list. Their cards are plain auto-layout frames on the piece's page, named `Card · <heading>` (the audit finds them by that prefix; recipe 8 → Dense cards). The title, pills and footers are still these blocks; the pills are rescaled to 0.45.
 
 ## Components — infographic (section "Infografía")
 

@@ -1,6 +1,6 @@
 # Style — Juan's look, measured
 
-updated: 2026-10-28
+updated: 2026-11-10
 
 Measured from his slides on page "Carousel" in Contenido (`U2HIUwTWDYWL7EwSKCDpLd`) and single images on page "JCG". Per-block positions and the raw measurements live in `blocks.md` ("Measured grids"); slide-by-slide positions in `layouts.md`. This file is the rulebook.
 
@@ -52,17 +52,21 @@ No other fonts. Letter spacing 0. Text case as typed (CTA labels and chart label
 | CTA / closing text | CTA BS Text 80 white · closing **100** (Juan's pick 2026-10-27) | BS Text 100–120 white | CTA 80 · closing 100 |
 | Body (`punto`, `grafico`, `insight`; with or without a picture) | **Archivo 40**, 133.5%, paragraph gap 40 | **Archivo 50**, 133.5%, paragraph gap 50 | **Archivo 40**, 133.5%, paragraph gap 40 |
 | Highlight box text | BS Display Bold 60 black | BS Display Bold 70 black | BS Display Bold 60 black |
-| Infographic title (`Info/TitleHighlight/Verde`, black, second line on Verde) | BS Bold 110, lh 101, two lines | BS Bold 90, one highlighted line | BS Bold 110, two lines |
-| Infographic subtitle (only if essential, 4x5 only) | Archivo 36 (block) | hidden | hidden |
-| Infographic heading / line (`Info/GroupCard/White`) | BS Bold 50 black / Archivo 36 | BS Bold 50 / Archivo 40 | BS Bold 50 / Archivo 38 |
-| Infographic numeral (in the card) | Archimoto Regular 80, Lila | same | same |
-| Hub text (`Info/HubCircle`) | BS Bold 38 black (Ø 160) | BS Bold 40 (Ø 220) | BS Bold 40 (Ø 200) |
+| Infographic title (`Info/TitleHighlight/Verde`, black, on Verde) | BS Bold 72, two lines (second on Verde) | BS Bold 72, one line on Verde | BS Bold 72, one line on Verde |
+| Infographic subtitle (always) | Archivo 24 | Archivo 24 | Archivo 24 |
+| Infographic card heading / explanation and list items | BS Bold 30 black / Archivo 19, lh 128% (list sub-headings Archivo Bold 19) | same | same |
+| Infographic closing question (inside the relaunch card) | BS Bold 27 | same | same |
+| Infographic numeral (in the card's head row) | Archimoto Regular 44, Lila | same | same |
+| YES / NO pills (`Pill/Yes`, `Pill/No` scaled 0.45) | BS Bold 18 | same | same |
+| Hub text (`Info/HubCircle`, thin hub only — not rebuilt dense yet) | BS Bold 38 black (Ø 160) | BS Bold 40 (Ø 220) | BS Bold 40 (Ø 200) |
 | Footer URL | Inter 30 (in block) | Inter 30 (in block) | Inter 30 (in block) |
+
+Infographic sizes are Juan's dense decision tree as built (2026-10-29 → 11-10, `layouts.md` → Dense decision tree): as big as the words allow inside the fixed frame, one set of sizes per piece, the same on all three sizes when it fits. The old thin-card sizes (title 110, heading 50, lines 36/40/38, numeral 80) are superseded.
 
 ## Readability floor (hard rule)
 
-- **Body (Archivo): at least 32 on 4x5, 35 on story, 40 on X.** 4x5 is the spec's 32px on a 1000-wide frame; story scales it to 1080; X uses 40 because that is what his X slides use (controller ruling 2026-10-26).
-- **Nothing below 32px anywhere,** except the Inter 30 URL inside his footer blocks.
+- **Body (Archivo): at least 32 on 4x5, 35 on story, 40 on X.** **Infographic exception (Juan, 2026-10-29): 18 on every size.** He chose reference-level information over the 32 px floor for infographics; the frame stays ≤ 1000×1500 and the text shrinks to fit (built at Archivo 19, pills 18). Carousels and single images keep 32 / 35 / 40. 4x5 is the spec's 32px on a 1000-wide frame; story scales it to 1080; X uses 40 because that is what his X slides use (controller ruling 2026-10-26).
+- **Nothing below 32px anywhere** (infographics: 18), except the Inter 30 URL inside his footer blocks.
 - Slide bodies sit well above the floor (40 / 50 / 40, table above). Text that doesn't fit is cut in the brief or moved to another slide, never shrunk (see "Density" below).
 
 ## Density — neither dense nor empty (Juan, 2026-10-26)
@@ -71,7 +75,7 @@ Juan, first: *"make sure it's tidy and not all cramped. The ones you created in 
 
 - **One idea per slide.** A second idea is a second slide, or it is cut.
 - **Fewer words, bigger type.** Cut words before anything else; never shrink type to make words fit.
-- **Fill the slide with the visual, not with words.** The lower part of a grey slide carries a visual (chart, picture, big number) that reaches down to the content end. Infographic cards spread so the block runs from 60–80 under the title to the content end. Never add words or extra elements to fill room; grow the visual or spread the rows.
+- **Fill the slide with the visual, not with words.** The lower part of a grey slide carries a visual (chart, picture, big number) that reaches down to the content end. Infographic rows run from just under the title (≥ 18) to the content end; leftover room is shared evenly between the row gaps. Never add words or extra elements to fill room; grow the visual or spread the rows.
 - **No empty strip above the footer:** between the last content and the footer's top there are at least 80 and at most **130 px** on 4x5 and story; on X at least 60 and at most **120 px** (to the footer on a single image or infographic, to the frame bottom on carousel slides). Variant A measured 80; the fixed infographic 80; variant B, the one Juan flagged, 147. The audit checks it on `punto`, `grafico`, `imagen`, `placa` and `infografia`.
 
 **Word budgets** (the same words go on all three sizes; `layouts.md` has the per-kind table):
@@ -83,7 +87,7 @@ Juan, first: *"make sure it's tidy and not all cramped. The ones you created in 
 | `insight` body (optional) | ≤ 20 words, one paragraph; X drops it |
 | Highlight box / statement box | one line ≤ 6 words / two lines ≤ 12 words |
 | Single image (`placa`) | one headline (≤ 28 characters) + one visual + at most one short supporting line (≤ 12 words) |
-| Infographic | 3 groups preferred, 4 at most · ≤ 2 lines per group (≤ 16 characters each) · heading ≤ 11 characters · title ≤ 5 words · subtitle only if essential · decision tree: a question + two answers, at most one more level (two outcomes) |
+| Infographic (decision tree, Juan 2026-10-28 → 11-10) | Reference-level information, not thin cards: title ≤ 5 words + a subtitle (one line at 24) · every question card a heading (≤ 22 characters) + a one-line explanation · per branch a "Possible causes" and a "What you can do" list, 3–5 items each, ≤ ~26 characters per item · a closing check (relaunch card with its question → NO / YES outcomes) · ≈ 50 lines in all on 1000×1500. The old "≤ 2 lines of 16 characters, 3–5 cards" budget is superseded for infographics. |
 
 **Minimum gaps** (measured from the text box or card edge; chosen against his slides, where the body sits ~30 px under the title and the picture ends ~270 px above the footer):
 
@@ -93,8 +97,8 @@ Juan, first: *"make sure it's tidy and not all cramped. The ones you created in 
 | Paragraph → paragraph | 40 | 50 | 40 |
 | Body → visual (picture, chart, box) | 70 | 60 | 70 |
 | Last element → footer (min – max) | 80–130 (content ends 982–1032) | 60–120 to the frame bottom (960–1020; single image and infographic: to their footer, 822–882) | 80–130 (1312–1362) |
-| Infographic: title → first card | ≥ 60 (aim 70) | ≥ 60 | ≥ 60 (aim 70) |
-| Infographic: card ↔ card · card ↔ hub circle · pill ↔ card | 60 · 40 · 12 | same | same |
+| Infographic: title → first card | ≥ 18 (built 32) | ≥ 18 (built 27) | ≥ 18 (built 18) |
+| Infographic: card ↔ card · card ↔ hub circle · pill ↔ card | 30 · 40 · 12 (dense, Juan's OK 2026-10-29; the thin layouts used 60) | same | same |
 
 The QA audit (`figma-recipes.md` §9) checks the budgets, the gaps, the body sizes, the empty strip and the purple share.
 
@@ -118,12 +122,12 @@ Story rule of thumb: the story is the 4x5 slide dropped into the middle — left
 - Quote box: Lila at 34%, radius 24, Lila quote marks top-left and bottom-right (`QuoteBox` block).
 - Statement box (a sentence above a picture, e.g. his "Las plataformas no pueden distinguir…" slide in all three sizes): Lila at 34%, radius 24, **no stroke** — same look as the quote box without marks. Used by the `imagen` kind, and (Juan's pick 2026-10-26) as the box that holds a big number or two columns on a point slide, with black text inside.
 - Highlight box (one key line or number, see `blocks.md` → Measured grids): Lila at 46% + 1px Lila stroke, radius 20, text **Big Shoulders Display Bold black, centred** (70 on X as measured; 60 on 4x5 and story). Measured on three of his X slides. It is the visual of a text-only `punto` (the exception; `layouts.md` → text-only point), sitting at the bottom of the room so the slide fills (recipe `highlightBox`). Build it as one rectangle with fill and stroke linked to JCG/Lila and layer opacity 0.46.
-- Infographic card (`Info/GroupCard/White`, Juan's pick 2026-10-26): white, radius 20, the image card's shadow, an 8 px Lila top edge, Lila Archimoto numeral, black Big Shoulders Bold heading, Archivo lines. Hub (`Info/HubCircle`): white circle, 4 px Lila outline, black Big Shoulders Bold text. Title (`Info/TitleHighlight/Verde`): black, the second line on a Verde block.
+- Infographic card, dense (as built 2026-10-29): a plain auto-layout frame named `Card · <heading>` — white, radius 16, the image card's shadow, a 6 px Lila top edge, padding 16 top / 18 sides / 14 bottom, gap 7; a head row (Lila Archimoto numeral 44 + BS Bold 30 heading); then explanation and lists. When two cards share a row and one is shorter, both take the row's height and the shorter one's content is centred vertically (top-aligned left a hollow white band; Juan OK'd the centred "Kill it", 2026-10-29). The `Info/GroupCard/White` block (radius 20, 8 px edge, three line slots) is the thin look; it can't hold a list. Hub (`Info/HubCircle`): white circle, 4 px Lila outline, black Big Shoulders Bold text. Title (`Info/TitleHighlight/Verde`): black, the second line on a Verde block.
 - CTA button: Verde pill (`Button/CTA`).
 - Reactions strip on closing slides: his image, radius 40.
 - Asteroids: whole pictures bleeding off opposite corners; the slide frame crops them (`clipsContent` on).
 - Infographic connectors: black 3px, right angles (hub spokes are short straight diagonals), arrowhead where the direction matters.
-- Icons: none by default — the numbered badges carry the groups. Only if Juan asks, reuse his 3D-emoji images already in the file (by image hash); no icon library, no drawn icons.
+- Icons: none by default — the numerals carry the groups. Offer his 3D images only when they can be big: at 52 px beside a 30 px heading they read as stamps and he picked the version without them (2026-10-29). Only four 3D images exist, all on page "Carousel": cart (`5556fc59…`, node `1:13980`; its 1024² picture has "LTV" lettering on top — crop with `imageTransform [[0.72,0,0.24],[0,0.5719,0.4281]]`, aspect ≈ 1.26), piggy bank (`41081043…`, `1:14044`), ghost (`2b1f9b28…`, `1:14603`, portrait, use FIT), "AD BREAK" bubble letters (`4b68f2e2…`, `1:14262`). Full hashes in `figma-recipes.md` §7. No icon library, no drawn icons.
 
 ## Footer
 

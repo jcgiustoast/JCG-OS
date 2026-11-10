@@ -1,6 +1,6 @@
 # Figma recipes — tested `use_figma` code
 
-updated: 2026-10-28
+updated: 2026-11-10
 
 Every snippet below ran once in Contenido on 2026-10-26, on a scratch page that was then deleted — or, for Juan's picked look, on the variants page (§8, §9) — recipe 12 ran on 2026-10-26/27 (the taste run). Copy them as they are and change only the `CAPITALS` constants and the content. Positions come from `layouts.md`; block IDs from `blocks.md`.
 
@@ -15,6 +15,8 @@ Every snippet below ran once in Contenido on 2026-10-26, on a scratch page that 
 - One call per size row is a good unit (all slides of that size). If Archimoto SVGs push the code past ~45,000 characters, split by slide.
 - **Hidden layers inside an instance disappear from searches.** `figma.skipInvisibleInstanceChildren` is on in this runtime, so after `x.visible = false` on an instance child, `findOne`/`findAll` no longer see it (and an old reference throws "node … does not exist"). Hide things last. To find or re-show a hidden one, first set `figma.skipInvisibleInstanceChildren = false;` in that call (tested).
 - In testing, **a thrown error rolled back the whole call** (twice: nothing it created stayed). Still obey `safeToRetryWithoutCanvasRead`; when in doubt, read the frame before re-running.
+- **A freshly built auto-layout card can report a stale height in the same call** (a card with a rescaled pill inside read 203 instead of 169, 2026-10-29). Build cards in one call; read heights and position them, draw connectors and pills in the next.
+- **Never return text containing U+2028** (the soft line break): the response fails to parse ("Failed to parse SSE message"). In code write it as `String.fromCharCode(0x2028)`; a `\u2028` escape inside a regex literal threw "unexpected line terminator".
 - Removing a page that is the current page throws "Removing this node is not allowed": switch to another page first (only for your own scratch pages, or when Juan asks).
 
 ## 1. Shared header — paste at the top of every build call
@@ -171,7 +173,7 @@ for (const row of ROWS.filter(r => SIZES.includes(r.size))) {
 return out;
 ```
 
-Single image: one slide `{ n: 1, kind: 'placa', bg: 'gris' }`. Infographic: `{ n: 1, kind: 'infografia', bg: 'gris' }`; for a 1000×1500 infographic change the 4x5 row to `h: 1500` (the label too).
+Single image: one slide `{ n: 1, kind: 'placa', bg: 'gris' }`. Infographic: `{ n: 1, kind: 'infografia', bg: 'gris' }`; a dense infographic (the default) changes the 4x5 row to `h: 1500` (the label too) — never taller.
 
 ## 4. Fill slides — worked example (tested)
 
@@ -313,6 +315,8 @@ re.name = 'Reacciones'; re.resize(644, 129); re.x = 178; re.y = 625; re.cornerRa
 re.fills = [{ type: 'IMAGE', imageHash: REACTIONS_HASH, scaleMode: 'FILL' }];
 ```
 
+**His 3D images** (the only four in the file, all on page "Carousel"; offer them only if they can be big — `style.md` → Shapes): cart `5556fc5944d05846f29e6fa57d9bfd379545c7f0` (crop the "LTV" lettering: `scaleMode: 'CROP', imageTransform: [[0.72, 0, 0.24], [0, 0.5719, 0.4281]]` on a box ≈ 1.26 : 1) · piggy bank `4108104342da05d61c2421ef09dcd202ae242172` · ghost `2b1f9b28ee9f5a55b38aaddcbb88ba691d966196` (portrait, `FIT`) · "AD BREAK" `4b68f2e28889a8a6f334ebdd7471627f650eb51a`. Square ones: `scaleMode: 'FIT'`.
+
 **Put Juan's picture (a file on disk) in an image card** — three steps, tested:
 
 1. `use_figma`: detach the card so its picture layer has a plain ID:
@@ -409,14 +413,69 @@ for (const card of cards) {                             // inner corner of each 
 
 These spokes are the one place a diagonal is fine (vector network, not a rotated shape). Tested 2026-10-26 on "Infografía B (arreglada)" (4x5, 3 groups, the constants above, 2-line cards at 40,340 · 600,340 · 300,794): spokes 49 and 54 px, title → cards 70, last card → footer 80, audit clean. The audit finds the hub by its block name (`Info/HubCircle`) or, on older pages, an ellipse named `Hub`.
 
+### Dense cards (the default decision tree, tested 2026-10-29 → 11-10)
+
+Layout and sizes: `layouts.md` → Dense decision tree. The `Info/GroupCard/White` block has three line slots and can't hold a list, so dense cards are plain auto-layout frames named `Card · <heading>` (the audit finds them by that prefix). Built on page `166:53`; audit clean on all three sizes.
+
+```js
+const P = { BODY: 19, LH: 128, HEAD: 30, Q: 27, NUM: 44, PILL: 0.45, PT: 16, PB: 14, PX: 18, GAP: 7 };
+const SHADOW = [{ type: 'DROP_SHADOW', visible: true, radius: 16, color: { r: 0, g: 0, b: 0, a: 0.25 }, offset: { x: 4, y: 4 }, spread: 0, blendMode: 'NORMAL', showShadowBehindNode: true }];
+// Archimoto numeral (recipe 5: regular 72, Lila) trimmed to its ink, then scaled to P.NUM
+const numeral = async (svgText) => {
+  const svg = figma.createNodeFromSvg(svgText); const ch = svg.children;
+  const L = Math.min(...ch.map(c => c.x)), T = Math.min(...ch.map(c => c.y)), R = Math.max(...ch.map(c => c.x + c.width)), Bt = Math.max(...ch.map(c => c.y + c.height));
+  for (const c of ch) { c.x -= L; c.y -= T; }
+  svg.resizeWithoutConstraints(R - L, Bt - T); svg.fills = []; svg.name = 'Numeral (Archimoto outline)';
+  await linkStyles(svg); svg.rescale(P.NUM / 72); return svg;
+};
+const mkText = async (s, { size = P.BODY, family = 'Archivo', style = 'Regular', lh = P.LH, bold = [], paraGap = 0, name = 'Text' } = {}) => {
+  const t = figma.createText(); t.fontName = { family, style }; t.characters = s; t.fontSize = size;
+  t.lineHeight = lh ? { unit: 'PERCENT', value: lh } : { unit: 'AUTO' }; t.paragraphSpacing = paraGap;
+  for (const [a, b] of bold) t.setRangeFontName(a, b, { family, style: 'Bold' });
+  await t.setFillStyleIdAsync(S.negro); t.name = name; return t;
+};
+// parts: { t: 'p', s } explanation · { t: 'q', s } closing question · { t: 'list', title, items } · { t: 'items', items } · { t: 'pointer' } (YES pill + "→ Keep scaling (step 4)")
+const card = async (inf, { x, w, numSvg, heading, parts, name }) => {
+  const c = figma.createAutoLayout('VERTICAL'); inf.appendChild(c);
+  c.name = name; c.resize(w, 100); c.counterAxisSizingMode = 'FIXED'; c.primaryAxisSizingMode = 'AUTO';
+  c.paddingTop = P.PT; c.paddingBottom = P.PB; c.paddingLeft = P.PX; c.paddingRight = P.PX; c.itemSpacing = P.GAP;
+  await c.setFillStyleIdAsync(S.blanco); c.cornerRadius = 16; c.effects = SHADOW; c.clipsContent = true; c.x = x; c.y = 0;
+  const e = figma.createRectangle(); c.appendChild(e); e.layoutPositioning = 'ABSOLUTE'; e.resize(w, 6); e.x = 0; e.y = 0;
+  e.constraints = { horizontal: 'STRETCH', vertical: 'MIN' }; await e.setFillStyleIdAsync(S.lila); e.name = 'Top edge (Lila)';
+  const row = figma.createAutoLayout('HORIZONTAL'); c.appendChild(row); row.fills = []; row.name = 'Head';   // createAutoLayout adds a white fill: clear it
+  row.itemSpacing = 12; row.counterAxisAlignItems = 'CENTER'; row.layoutSizingHorizontal = 'FILL';
+  if (numSvg) row.appendChild(await numeral(numSvg));
+  const hd = await mkText(heading, { family: 'Big Shoulders Text', style: 'Bold', size: P.HEAD, lh: null, name: 'Heading' });
+  row.appendChild(hd); hd.textAutoResize = 'HEIGHT'; hd.layoutGrow = 1;
+  for (const p of parts) {
+    if (p.t === 'pointer') {
+      const r = figma.createAutoLayout('HORIZONTAL'); c.appendChild(r); r.fills = []; r.name = 'Pointer'; r.itemSpacing = 10; r.counterAxisAlignItems = 'CENTER';
+      const pl = (await figma.getNodeByIdAsync(B.any.yes)).createInstance(); setText(pl, 'Label', 'YES'); r.appendChild(pl); pl.rescale(P.PILL);
+      r.appendChild(await mkText('→ Keep scaling (step 4)', { bold: [[2, 14]], name: 'Pointer · Keep scaling' })); continue;
+    }
+    const t = p.t === 'p' ? await mkText(p.s, { name: 'Explanation' })
+      : p.t === 'q' ? await mkText(p.s, { family: 'Big Shoulders Text', style: 'Bold', size: P.Q, lh: null, name: 'Question' })
+      : p.t === 'list' ? await mkText([p.title, ...p.items.map(i => '• ' + i)].join('\n'), { paraGap: 2, bold: [[0, p.title.length]], name: `List · ${p.title}` })
+      : await mkText(p.items.map(i => '• ' + i).join('\n'), { paraGap: 2, name: 'List' });
+    c.appendChild(t); t.textAutoResize = 'HEIGHT'; t.layoutSizingHorizontal = 'FILL';
+  }
+  return c;
+};
+```
+
+- **Two calls:** build every card (y 0) in one call; in the next, read the heights, compute the stack (`layouts.md` gaps), share leftover room evenly between the vertical gaps, then place cards, connectors (§8 helper, but `inf.insertChild(0, v)` so they sit under the pills) and pills (`Pill/Yes` / `Pill/No` instances: label set, then `rescale(0.45)`, centred on the leg).
+- **Shorter card in a shared row:** `c.primaryAxisSizingMode = 'FIXED'; c.resize(c.width, rowH); c.primaryAxisAlignItems = 'CENTER'`.
+- **X and story from the approved LinkedIn frame:** `clone()` each `Card · …` and the title into the new frame (your own frames, never Juan's originals), then `c.resize(newWidth, c.height)` with `primaryAxisSizingMode = 'AUTO'`: the text reflows and the words stay identical. One-line title: set `Line 2` to `Line 1 + ' ' + Line 2`, then hide `Line 1` (last). X's side-by-side lists: wrap the two `List ·` texts in a horizontal auto-layout `Lists` (gap 24, `FILL`, each list `FILL`) at their index.
+- **Lone last word:** insert a soft break where the line should turn, same words: `t.characters = t.characters.replace('template, angle', 'template,' + String.fromCharCode(0x2028) + 'angle')`.
+
 ## 9. QA audit (leaves the page unchanged, tested)
 
 Run after every build or fix. It checks every slide on the page (the `Variantes` section is skipped; audit variants with `ONLY = { '<frame id>': '<kind>', … }`, which also skips the page checks — use it for any frame not named `<n>-<kind>`):
 - **Position and air above the footer:** text and top-level shapes (cards, charts, outlines) inside the frame and above the content end — 80 above a content footer on 4x5/story (single images and infographics too) and 60 on X (default ends 1032 / 1020 / 1362; a 1000×1500 infographic 1282), and the measured cover rule above a `Footer/Cover` (4x5 cover 960, story cover 1240, i.e. 36 / 28 above the footer).
 - **No empty strip (Juan, 2026-10-26: "too many open spaces"):** on `punto`, `grafico`, `imagen`, `placa` and `infografia`, the space between the lowest content and the top of `Footer/Content` (X carousel slides: the frame bottom) is at most **130 px on 4x5 and story, 120 on X** (`STRIP_MAX`). His variant A measured 80, the fixed infographic 80; variant B, the one he flagged, 147.
 - **Purple as an accent (Juan, 2026-10-26: "too purple"):** on grey frames, purple-filled area (Lila, Lila Light, Lila Deep; box area × opacity; text, footer and arrow excluded; his single-image `Quote card` exempt) at most **20%** of the frame (`PURPLE_MAX`; variant A 13.9%, the fixed infographic 1.2%, the old infographic 25–34%); no purple shape ≥ 90% of the frame width and ≥ 40 tall (a band); no purple-filled shape taller than 12 px inside an infographic card (a header strip). **Old look:** any instance of the purple-strip `Info/GroupCard` tones or an `Info/FooterBand`, and the Lila `Info/TitleHighlight` on an infographic.
-- **Density (Juan, 2026-10-26: tidy, not cramped):** words per slide over budget (`punto` 25, `grafico` 20, `insight` body 20, single image 25; X `grafico` one line ≤ 45 characters), too many paragraphs, a slide body under 40 px (X 50), a paragraph gap under 40 (X 50), title → body under 60, body → visual under 70 (X 60). Infographics: more than 4 groups (5 cards for a decision tree), more than 2 lines in a group, a line over 16 characters, a heading over 11 (a question over 22), a title over 5 words, cards closer than 60, a card closer than 40 to the hub circle, a pill closer than 12 to a card, the first card closer than 60 to the title.
-- **Type:** sizes at or above the floor (the "Pega aquí la imagen" label inside `Card/Image` is exempt), the four fonts, the word "asteroi", leftover placeholder text, text-on-text overlaps.
+- **Density (Juan, 2026-10-26: tidy, not cramped):** words per slide over budget (`punto` 25, `grafico` 20, `insight` body 20, single image 25; X `grafico` one line ≤ 45 characters), too many paragraphs, a slide body under 40 px (X 50), a paragraph gap under 40 (X 50), title → body under 60, body → visual under 70 (X 60). Infographics — dense cards (`Card · …`, the default): a list over 5 items, an item over 26 characters, a heading over 22, a title over 5 words, cards closer than 30, the first row closer than 18 to the title, a pill closer than 12 to a card. Thin `Info/GroupCard` layouts (hub, mind map, old tree) keep their old checks: more than 4 groups (5 in a tree), more than 2 lines, a line over 16 characters, a heading over 11 (a question 22), cards closer than 60, a card closer than 40 to the hub circle, the first card closer than 60 to the title.
+- **Type:** sizes at or above the floor — 32, or **18 on an infographic** (Juan, 2026-10-29) — (the "Pega aquí la imagen" label inside `Card/Image` is exempt), the four fonts, the word "asteroi", leftover placeholder text, text-on-text overlaps.
 - **Colour:** every fill and stroke is one of the 7 JCG colours, no gradients, and every solid paint outside a block instance is linked to its JCG paint style (outlines, boxes, circles, connectors, text).
 - **Big text (60 px and up):** the last word must not sit alone on its last line. It measures a temporary copy of the text with and without its last word, then deletes the copy.
 - **Bullets:** a group card with a single line must not start it with "• ".
@@ -538,15 +597,26 @@ for (const [f, kindGiven] of targets) {
       }
     }
     if (kind === 'infografia') {
-      const cards = content.filter(c => /^Info\/GroupCard/.test(c.name)), pills = content.filter(c => /^Pill/.test(c.name));
+      // dense cards (plain frames "Card · <heading>", 2026-10-29) or the thin Info/GroupCard block (hub, mind map, old tree)
+      const cards = content.filter(c => /^(Info\/GroupCard|Card ·)/.test(c.name)), pills = content.filter(c => /^Pill/.test(c.name));
+      const thin = cards.some(c => /^Info\/GroupCard/.test(c.name));
       const hub = content.find(c => (c.type === 'ELLIPSE' && c.name === 'Hub') || /^Info\/HubCircle/.test(c.name));
-      if (cards.length > (pills.length ? 5 : 4)) issues.add(`${size} ${f.name}: ${cards.length} groups, max ${pills.length ? '5 cards in a tree' : 4} (3 preferred)`);
+      if (thin && cards.length > (pills.length ? 5 : 4)) issues.add(`${size} ${f.name}: ${cards.length} groups, max ${pills.length ? '5 cards in a tree' : 4} (3 preferred)`);
       for (const c of cards) {
         const head = c.findOne(n => n.type === 'TEXT' && n.name === 'Heading'), tag = `${size} ${f.name} "${head.characters}"`;
-        const lines = c.findAll(n => n.type === 'TEXT' && /^Line \d/.test(n.name) && visible(n, f));
-        if (lines.length > 2) issues.add(`${tag}: ${lines.length} lines, max 2`);
-        for (const l of lines) if (l.characters.length > 16) issues.add(`${tag} "${l.characters}": ${l.characters.length} characters, max 16`);
-        if (head.characters.length > (/[¿?]/.test(head.characters) ? 22 : 11)) issues.add(`${tag}: heading too long (max 11, a question 22)`);
+        if (thin) {
+          const lines = c.findAll(n => n.type === 'TEXT' && /^Line \d/.test(n.name) && visible(n, f));
+          if (lines.length > 2) issues.add(`${tag}: ${lines.length} lines, max 2`);
+          for (const l of lines) if (l.characters.length > 16) issues.add(`${tag} "${l.characters}": ${l.characters.length} characters, max 16`);
+          if (head.characters.length > (/[¿?]/.test(head.characters) ? 22 : 11)) issues.add(`${tag}: heading too long (max 11, a question 22)`);
+        } else {                                                     // dense: lists of 3–5 items, ≤ ~26 characters each
+          for (const l of c.findAll(n => n.type === 'TEXT' && /^List/.test(n.name) && visible(n, f))) {
+            const items = l.characters.split('\n').filter(s => /^•/.test(s));
+            if (items.length > 5) issues.add(`${tag} [${l.name}]: ${items.length} items, max 5`);
+            for (const it of items) if (it.replace(/^•\s*/, '').length > 26) issues.add(`${tag} "${it}": over 26 characters`);
+          }
+          if (head.characters.length > 22) issues.add(`${tag}: heading over 22 characters`);
+        }
         for (const n of c.findAll(n => n.type !== 'TEXT' && n.type !== 'VECTOR' && visible(n, f) && purpleFill(n) && n.height > 12)) issues.add(`${tag}: purple-filled card header [${n.name}] — cards are white with a thin Lila top edge`);
       }
       // title: the Info/TitleHighlight/Verde instance (old: Info/TitleHighlight, or a 'Title block' rectangle with its text named 'Title')
@@ -555,10 +625,11 @@ for (const [f, kindGiven] of targets) {
       const titleWords = tTexts.reduce((a, t) => a + words(t.characters), 0);
       if (titleWords > 5) issues.add(`${size} ${f.name}: title has ${titleWords} words, max 5`);
       const first = Math.min(...cards.map(c => c.y), hub ? hub.y : Infinity);
-      if (title && first - (title.y + title.height) < GAP.title - 1) issues.add(`${size} ${f.name}: title → first card ${Math.round(first - title.y - title.height)} px, min ${GAP.title}`);
+      const tGap = thin ? GAP.title : 18, cGap = thin ? GAP.card : 30; // dense tree (Juan's OK 2026-10-29): title → row ≥ 18, cards ≥ 30
+      if (title && first - (title.y + title.height) < tGap - 1) issues.add(`${size} ${f.name}: title → first card ${Math.round(first - title.y - title.height)} px, min ${tGap}`);
       for (let i = 0; i < cards.length; i++) for (let j = i + 1; j < cards.length; j++) {
         const g = gapOf(box(cards[i]), box(cards[j]));
-        if (g < GAP.card - 1) issues.add(`${size} ${f.name}: two cards ${Math.round(g)} px apart, min ${GAP.card}`);
+        if (g < cGap - 1) issues.add(`${size} ${f.name}: two cards ${Math.round(g)} px apart, min ${cGap}`);
       }
       if (hub) for (const c of cards) {
         const cx = hub.x + hub.width / 2, cy = hub.y + hub.height / 2, b = box(c);
@@ -586,8 +657,9 @@ for (const [f, kindGiven] of targets) {
       for (const s of segs) {
         if (!FONTS.includes(s.fontName.family)) issues.add(`${tag}: font ${s.fontName.family}`);
         if (exempt) continue;
-        if (s.fontSize < 32 && !(t.name === 'URL' && s.fontSize === 30)) issues.add(`${tag}: ${s.fontSize}px is under 32`);
-        if (s.fontName.family === 'Archivo' && s.fontSize < BODY_MIN[size]) issues.add(`${tag}: body ${s.fontSize}px under ${BODY_MIN[size]}`);
+        const floor = kind === 'infografia' ? 18 : 32;            // infographic exception (Juan 2026-10-29): 18 on every size
+        if (s.fontSize < floor && !(t.name === 'URL' && s.fontSize === 30)) issues.add(`${tag}: ${s.fontSize}px is under ${floor}`);
+        if (kind !== 'infografia' && s.fontName.family === 'Archivo' && s.fontSize < BODY_MIN[size]) issues.add(`${tag}: body ${s.fontSize}px under ${BODY_MIN[size]}`);
       }
       if (/asteroi/i.test(t.characters)) issues.add(`${tag}: says asteroi`);
       if (PLACEHOLDER.test(t.characters)) issues.add(`${tag}: placeholder text left`);
@@ -681,12 +753,12 @@ Look for: text cut off or crowding the footer, an empty band (above the footer o
 2–3 LinkedIn-size versions of one representative slide, side by side in a section `Variantes · <kind>` at the top of the piece's page, each with a big letter above it — the way Juan's variants page ("2026-10-26 · Variantes para elegir") was laid out. Ran 2026-10-26/27 for every carousel kind (cover, point, chart, insight, CTA, closing), a single image, a 5-card infographic and an X pair; it worked as written. Only change: give each frame its own background (stars, Lila, Gris) and a short description after the letter in its name ("B · portada (purple, number-led)").
 
 ```js
-const PAGE_ID = 'PAGE_ID', KIND = 'punto', LETTERS = ['A', 'B', 'C'], TALL = false; // KIND: punto | infografia | placa … · TALL: a 5-card tree
+const PAGE_ID = 'PAGE_ID', KIND = 'punto', LETTERS = ['A', 'B', 'C'], SHORT = false; // KIND: punto | infografia | placa … · SHORT: a thin 3-card infographic (1250)
 const S = { gris: 'S:9e304f2dac7b9d01a42e5c3f66d5c3103b3beff9,', negro: 'S:379b5e45ffc6721f773972ff9bbce8b361de128b,' };
 const page = await figma.getNodeByIdAsync(PAGE_ID);
 await figma.setCurrentPageAsync(page);
 await figma.loadFontAsync({ family: 'Big Shoulders Text', style: 'Bold' });
-const W = 1000, H = KIND === 'infografia' && TALL ? 1500 : 1250, STEP = W + 160;
+const W = 1000, H = KIND === 'infografia' && !SHORT ? 1500 : 1250, STEP = W + 160; // an infographic is never taller than 1500 (Juan, 2026-10-29)
 const sec = figma.createSection(); sec.name = `Variantes · ${KIND}`; sec.x = 0; sec.y = 0;
 const frames = {};
 for (const [i, L] of LETTERS.entries()) {
