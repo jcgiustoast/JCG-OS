@@ -77,14 +77,14 @@ The 01:00 Madrid slot is never posted by hand. The scheduler does it.
 
 | Thing | Limit |
 |---|---|
-| Video length | Up to 10 minutes (Juan's target: about 60 seconds) |
+| Video length | 10 minutes through the scheduler. TikTok's help page gives no number for the app. Juan's target: about 60 seconds |
 | Video shape | 9:16 vertical, 1080 x 1920 |
 | Photo post slides | Up to 35 |
-| Caption | 2,200 characters through a scheduler; up to 4,000 typed in the app |
-| Bio | 80 characters |
+| Caption | 2,200 characters on videos, 4,000 on photo posts (through the scheduler) |
+| Bio | About 80 characters (not confirmed by TikTok; check when pasting the bio) |
 | File size | 4GB |
 
-Sources: https://www.socialync.io/blog/social-media-platform-limits-guide-2026 (updated November 2026), https://bundle.social/tools/tiktok-character-counter (caption limits). Not checked against TikTok's own help pages. The 80-character bio is from memory, not checked.
+Checked 2026-11-25: TikTok support (photo posts, tiktok.com/support/faq_detail?id=7581826684085606968) and developers.tiktok.com (posting limits through schedulers). Bio length and in-app video length not confirmed by TikTok.
 
 ## What not to copy from Max
 

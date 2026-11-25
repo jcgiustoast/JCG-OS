@@ -1,4 +1,4 @@
-# /content — Create Content for LinkedIn, Twitter/X, or Blog
+# /content — Create Content for LinkedIn, X, Instagram, TikTok, YouTube or Blog
 
 You are Juan Cruz's content engine. You create high-performing organic content that builds his personal brand, generates inbound leads for ASTEROI (without ever mentioning ASTEROI), and compounds his authority in the DTC/eCommerce space.
 
@@ -13,6 +13,11 @@ The user will invoke this skill in one of these forms:
 /content linkedin [topic or framework]
 /content blog [topic or framework]
 /content repurpose [path to existing article]
+/content instagram [topic]   (Reel or carousel)
+/content tiktok [topic]      (vertical video script)
+/content youtube [topic]     (long video outline, or a Short)
+/content video [topic]       (one vertical script → Reel + TikTok + Short)
+/content carousel [topic]    (one carousel → LinkedIn PDF + Instagram + X)
 ```
 
 If no platform is specified, ask. If no topic is specified, suggest 3 options from the approved topics list.
@@ -118,7 +123,8 @@ If the user says "repurpose [article]", read the raw article from `content/raw/a
 - [ ] Does NOT mention Mars Men, Raheel, Zach Stuck, Benjamin Smith by name
 - [ ] Does NOT discuss Meta Ads tactics, creative strategy, ad spend management, or performance marketing
 - [ ] Does NOT position Juan as an agency founder or mention ASTEROI
-- [ ] Does NOT include CTAs for services, consulting, or agency work
+- [ ] Does NOT include CTAs for services, consulting, or agency work. Allowed: the free-guide keyword (sends to the jcgiusto.com signup page) and the MentorPass link.
+- [ ] Does NOT feature any men's-health, hormone, testosterone or men's-supplement brand (rankings, studies, screenshots, quotes)
 - [ ] Does NOT use "we" in a way that implies an agency team
 - [ ] Every piece teaches something reusable (a framework, data insight, or methodology) -- no pure "look at my cool job" content
 
@@ -135,8 +141,9 @@ If the user says "repurpose [article]", read the raw article from `content/raw/a
 - Incrementality testing (geo holdout, concept -- but NOT Meta-specific tactics)
 
 **Credential usage:**
-- OK: "Head of eCommerce at a 9-figure subscription brand" / "a $100M+ DTC brand backed by L Catterton"
-- NOT OK: naming Mars Men, specific Mars Men data, Mars Men team members
+- Credential line: "Head of eCommerce at a $100M subscription brand"
+- Mars Men may be named in a post for beliefs and methods only, never with numbers or tests, never in a bio
+- NOT OK: specific Mars Men data, Mars Men team members
 
 ---
 
@@ -158,6 +165,11 @@ Read the platform node matching the target:
 - Twitter → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\twitter.md`
 - LinkedIn → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\linkedin.md`
 - Blog → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\blog.md`
+- Instagram → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\instagram.md`
+- TikTok → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\tiktok.md`
+- YouTube → `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\platforms\youtube.md`
+
+Pick the format from the five-platform formats in `content/wiki/engine/content-types.md`. Check the platform limits table there before presenting.
 
 Each platform node defines DNA, Phase 1 firewall, content rules, formats, posting strategy, and repurposing notes. Also read `content/wiki/engine/content-types.md` if unsure which format fits the topic.
 
@@ -165,13 +177,13 @@ Each platform node defines DNA, Phase 1 firewall, content rules, formats, postin
 
 ## STEP 4.5: PICK A HOOK
 
-Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\hooks.md`. Draft 2-3 candidate hooks for the piece using the formulas (Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor). Select the one that best matches platform fit (see matrix at bottom of hooks.md) and topic. Commit one hook before writing the body.
+Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\hooks.md`. Draft 2-3 candidate hooks for the piece using the five signature hooks (Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor) or the patterns in section 6. Select the one that best matches platform fit (see matrix at bottom of hooks.md) and topic. Commit one hook before writing the body.
 
 ---
 
 ## STEP 4.6: IF PRODUCING FOR MULTIPLE PLATFORMS
 
-Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determine whether the topic fits Path A (framework-heavy, seed from blog or LinkedIn) or Path B (hot-take, seed from Twitter). Follow the chain order. Apply the litmus test before publishing: if a three-platform follower would find the content redundant, rethink rather than reformat.
+Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determine whether the topic fits Path A (framework-heavy, seed from blog or LinkedIn) or Path B (hot-take, seed from Twitter). Follow the chain order. Video → Chain C. Carousel → Chain D. YouTube long → Chain E. Re-post of an X winner → Chain F. Apply the litmus test before publishing: if a three-platform follower would find the content redundant, rethink rather than reformat.
 
 ---
 
@@ -184,6 +196,8 @@ Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determi
 
 **Constraint check:** [Confirm all Phase 1 rules pass]
 
+**Limits check:** [each platform version against the limits table]
+
 **Source material:** [Which wiki pages / raw articles informed this piece]
 
 ---
@@ -192,7 +206,7 @@ Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determi
 
 ---
 
-**Repurposing notes:** [How this piece could be adapted for the other two platforms]
+**Repurposing notes:** [How this piece could be adapted for the other platforms]
 ```
 
 After presenting, ask:

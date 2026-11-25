@@ -6,7 +6,7 @@
 
 **Architecture:** Reuse what exists. Notion Content DB stays the single place a piece lives (idea → draft → ready → scheduled → published → results). The existing Notion → post-bridge sync (`automation/notion-pb-sync/`) is the scheduler path, extended to the three new platforms if needed. Wiki pages in `content/wiki/engine/` and `content/wiki/platforms/` are the reference the `/content` command reads. Visual templates come from `/figma-post`.
 
-**Tech Stack:** Markdown wiki pages, Notion API via `content/scripts/notion-content.ps1`, Node.js sync service on Railway (vitest), Figma (via `/figma-post`), post-bridge, ManyChat (Instagram), an email tool for jcgiusto.com.
+**Tech Stack:** Markdown wiki pages, Notion via the Notion connector (MCP tools — Juan chose this over renewing the local key, 2026-11-25), Node.js sync service on Railway (vitest), Figma (via `/figma-post`), post-bridge, ManyChat (Instagram), an email tool for jcgiusto.com.
 
 **Spec:** `content/wiki/content-system-decisions.md` (Juan's answers) + `content/raw/research/max-wellcopy-2026-11/playbook.md` sections 4, 5, 9, 10.
 
@@ -68,20 +68,20 @@
 
 **Files:** Modify `content/wiki/engine/content-types.md`, `content/wiki/engine/repurpose.md`, `content/wiki/engine/hooks.md`.
 
-- [ ] Add one entry per format from playbook section 9: ranking ladder, 10/10 to steal, non-negotiables list, brand study, yearly how-to, mega-class, life-lesson list, learning diary, keyword lead magnet, contrarian, quote reaction, live brand fix. Each entry: structure (beat by beat), draft hook pattern, platforms, hard-limit check line, time cost.
-- [ ] Add a platform limits table (characters, slides, video length, aspect ratio) used before any piece is marked Ready.
-- [ ] Rewrite `repurpose.md` chains: vertical video → Reel + TikTok + Short; carousel → LinkedIn PDF + IG carousel + X images; YouTube long → cut-downs + LinkedIn lead magnet; X winners recycled after ~6 months. Keep Juan's existing long-form-first chain.
-- [ ] Add Max-derived hook patterns to `hooks.md`, rewritten as patterns, no copied lines.
-- [ ] Update `/content` (`.claude/commands/content.md`) platform list to five and point it at the new pages.
-- [ ] Juan approves before write.
+- [x] Add one entry per format from playbook section 9: ranking ladder, 10/10 to steal, non-negotiables list, brand study, yearly how-to, mega-class, life-lesson list, learning diary, keyword lead magnet, contrarian, quote reaction, live brand fix. Each entry: structure (beat by beat), draft hook pattern, platforms, hard-limit check line, time cost.
+- [x] Add a platform limits table (characters, slides, video length, aspect ratio) used before any piece is marked Ready.
+- [x] Rewrite `repurpose.md` chains: vertical video → Reel + TikTok + Short; carousel → LinkedIn PDF + IG carousel + X images; YouTube long → cut-downs + LinkedIn lead magnet; X winners recycled after ~6 months. Keep Juan's existing long-form-first chain.
+- [x] Add Max-derived hook patterns to `hooks.md`, rewritten as patterns, no copied lines.
+- [x] Update `/content` (`.claude/commands/content.md`) platform list to five and point it at the new pages.
+- [x] Juan approves before write.
 
 ### Task 5: Notion Content DB for five platforms
 
-**Files:** Modify `content/scripts/notion-content.ps1`; Notion schema.
+**Files:** Notion schema (via the Notion connector); modify `.claude/commands/content.md` STEP 6 to file drafts through the connector instead of `content/scripts/notion-content.ps1`.
 
 - [ ] Propose schema changes to Juan: Platform options + Instagram, YouTube, TikTok (remove stale ones if unused); new `Format` select (Task 4 names); `Source piece` relation to the same DB (links the five versions to their source); `Slot` date-time; result numbers `Views`, `Comments`, `Saves`, `Follows`, `Signups`; `Swipes` database (screenshot, brand, what's good, format it could feed, Used? checkbox).
-- [ ] Apply after Juan's yes (via `automation/notion-pb-sync/scripts/apply-schema.js` pattern or Notion tools).
-- [ ] Extend `notion-content.ps1 create-draft` with `-Format`, `-SourcePiece`, `-Slot`; run it once against a test row and delete the test row.
+- [ ] Apply after Juan's yes, with the Notion connector.
+- [ ] Switch `/content` filing to the connector, with Format, Source piece and Slot set; file one test row, then move it to trash.
 - [ ] Add a "This week" view grouped by day and a "Swipes unused" view.
 
 ### Task 6: Swipe intake

@@ -88,14 +88,14 @@ A second long video waits until hours allow or an editor is hired, which is not 
 | Thing | Limit |
 |---|---|
 | Long video length | 15 minutes until the account is verified by phone; then up to 12 hours |
-| Short length | Up to 3 minutes (since October 2024); vertical or square |
+| Short length | Up to 3 minutes, vertical or square |
 | Short shape | 9:16 vertical, 1080 x 1920 |
 | Long video shape | 16:9 |
 | Title | 100 characters (about 40 show on Shorts tiles) |
 | Description | 5,000 characters |
-| Thumbnail | 1280 x 720, under 2MB |
+| Thumbnail | 16:9, at least 640 wide (YouTube recommends 3840 x 2160; 1280 x 720 also works), up to 50MB |
 
-Sources: https://www.socialync.io/blog/social-media-platform-limits-guide-2026 (updated November 2026), https://influencermarketinghub.com/youtube-character-limits/, https://www.descript.com/blog/article/how-long-can-youtube-shorts-be. Not checked against YouTube's own help pages. Verify the channel by phone before the first long video.
+Checked 2026-11-25 on YouTube's own help pages: support.google.com/youtube answers 15424877 (Shorts), 71673 (length), 57404 (title, description), 72431 (thumbnails). Verify the channel by phone before the first long video.
 
 ## What not to copy from Max
 

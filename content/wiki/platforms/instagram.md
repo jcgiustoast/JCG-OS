@@ -84,16 +84,16 @@ Starts in week 2: two videos a week, carousels reused, first guide and automatic
 
 | Thing | Limit |
 |---|---|
-| Reel length | Up to 20 minutes (Juan's target: under 75 seconds) |
+| Reel length | Up to 20 minutes in the app, 15 through the scheduler. Over 3 minutes isn't shown to new people. Juan's target: under 75 seconds |
 | Reel shape | 9:16 vertical, 1080 x 1920 |
-| Carousel slides | Up to 20 |
-| Carousel shape | 4:5 portrait (1080 x 1350) or 1:1 square |
-| Caption | 2,200 characters, hashtags included |
-| Hashtags | 5 per post (cut from 30 in December 2025) |
+| Carousel slides | Up to 20 (one shape for every slide) |
+| Carousel shape | 4:5 portrait (1080 x 1350) or 1:1. The app also takes 3:4, but the scheduler doesn't |
+| Caption | 2,200 characters |
+| Hashtags | 5 per post |
 | Bio | 150 characters |
-| Story | Up to 60 seconds per frame |
+| Story | Up to 60 seconds per video |
 
-Sources: https://metricool.com/instagram-limits/ (January 2026), https://lettercounter.org/blog/instagram-reels-caption-length/ (hashtag cut), https://buffer.com/resources/instagram-reels-length (Reel length). Aspect ratios are standard practice. They were not checked against Instagram's own help pages.
+Checked 2026-11-25 on Instagram's own pages: help.instagram.com/2720958398006062 (Reels), /269314186824048 (carousel), /1631821640426723 (shapes), /351460621611097 (5 hashtags), /728994388226960 (bio). Caption, story and scheduler limits from Meta's developer docs (developers.facebook.com, Instagram Graph API media reference).
 
 ## What not to copy from Max
 

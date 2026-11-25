@@ -48,9 +48,9 @@ Extracted from `/content` command on 2026-04-20 so voice, platform rules, hooks,
 - [[platforms/blog]] — DNA, 6-part article structure for jcgiusto.com, SEO rules, 1,500-3,000 words.
 
 ### Engine
-- [[engine/hooks]] — Five hook formulas codified from Juan's signature moves. Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor (Phase 1 only). Platform fit matrix.
-- [[engine/repurpose]] — Two-path chain (Path A framework-heavy → seed blog/LinkedIn; Path B hot-take → seed Twitter). Reverses the generic "X-first" default because Juan's Economics Reveal needs math room.
-- [[engine/content-types]] — Format catalog (short take, thread, narrative post, long-form article, case study). Maps format to platform and hook type.
+- [[engine/hooks]] — Five hook formulas codified from Juan's signature moves. Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor (Phase 1 only). Plus ten patterns from Max Wellcopy (rankings, worth stealing, so-you-don't-have-to, comment keyword…). Fit matrix across six platforms.
+- [[engine/repurpose]] — Two-path chain (Path A framework-heavy → seed blog/LinkedIn; Path B hot-take → seed Twitter). Reverses the generic "X-first" default because Juan's Economics Reveal needs math room. Plus five-platform chains: one video → Reel + TikTok + Short; one carousel → LinkedIn + Instagram + X; YouTube long → cut-downs; X winners re-posted.
+- [[engine/content-types]] — Format catalog (short take, thread, narrative post, long-form article, case study) plus twelve five-platform formats (ranking, checklist, brand study, tutorial, free-guide post…). Platform limits table, checked on the platforms' own help pages 2026-11-25.
 
 ### Audience
 - [[audience/operators]] — Primary audience. CMOs/Heads of eComm/VPs of Growth at 7-9 fig DTC brands. Finance-literate. Want math, frameworks, systems.

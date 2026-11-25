@@ -3,9 +3,9 @@ title: Hook Formulas
 description: Juan's hook taxonomy — the five signature moves codified as reusable formulas with examples. Pick 2-3 per piece before writing.
 type: concept
 author: juan
-related: [brand-voice, repurpose, twitter, linkedin, blog]
+related: [brand-voice, repurpose, content-types, twitter, linkedin, blog, instagram, tiktok, youtube, max-wellcopy-playbook]
 created: 2026-04-20
-updated: 2026-04-20
+updated: 2026-11-25
 confidence: high
 ---
 
@@ -76,6 +76,60 @@ Uses Mars Men credential as attention signal. Must also teach something reusable
 
 **Deprecation:** This hook loses power Phase 2+. Replace with "Founder of ASTEROI / we generated X concepts for a $4M brand" by Q2 2027.
 
+## 6. Patterns from Max Wellcopy (added 2026-11-25)
+
+Patterns that worked for him across five platforms ([[max-wellcopy-playbook]]). Rewritten as patterns. None of his lines are used. Each example is a first draft and still needs Juan's voice.
+
+### Verdict first
+**Pattern:** "This is a [score]/10 [thing every brand has]."
+Score in the first 3 seconds of a video. Works because everyone has the thing and wants to know where theirs lands.
+**Example:** "This is a 2/10 subscribe-and-save offer."
+
+### Ranking with a debate ask
+**Pattern:** "Ranking [one type of thing] from worst to best." End with "Agree?"
+Comments come from people who'd rank it differently.
+**Example:** "Ranking cart drawers from 0/10 to 10/10."
+
+### Worth stealing
+**Pattern:** "[N] [things] worth stealing" or "Steal this [thing]."
+The word "steal" signals it can be copied today. Drives saves.
+**Example:** "4 product pages worth stealing this week."
+
+### Non-negotiables
+**Pattern:** "[Area] non-negotiables:"
+A checklist promise in two words. Works as a recurring series.
+**Example:** "Product page non-negotiables:"
+
+### So you don't have to
+**Pattern:** "I studied [every / N] [famous kind of brand]'s [thing] so you don't have to."
+Promises hours of research saved. The dollar size of the brands does the selling.
+**Example:** "I studied every $100M DTC brand's checkout so you don't have to."
+
+### Built-in tension
+**Pattern:** "[N] [big brands] do [thing] in opposite ways. Here's who's right."
+**Example:** "3 $100M brands price subscriptions in opposite ways."
+
+### Yearly full setup
+**Pattern:** "[Tool] [task] Tutorial [next year] (Full Setup)."
+The year keeps it fresh in search; "full setup" promises nothing is skipped.
+**Example:** "GA4 for Shopify Tutorial 2027 (Full Setup)."
+
+### Beat the crowd
+**Pattern:** "You can beat 90% of DTC brands at [thing] by:"
+**Example:** "You can beat 90% of DTC brands at retention by:"
+
+### Admission
+**Pattern:** "What I got wrong about [topic] this year:"
+Honesty earns trust faster than a win. Lessons only, no work numbers.
+**Example:** "What I got wrong about A/B testing this year:"
+
+### Comment keyword
+**Pattern:** "[What the guide does]. Comment [KEYWORD] and I'll send it."
+Put the keyword in the first lines and again at the end.
+**Example:** "I audit every product page with the same 40 checks. Comment AUDIT and I'll send them."
+
+**Not copied from Max:** fake exclusivity ("was keeping this for clients only"), internal-memo openers that imply a team ("sent this to my team"), swearing, Gen-Z slang.
+
 ## Rules
 
 - **Test 2-3 hooks per topic** before committing. Draft them side by side.
@@ -86,10 +140,24 @@ Uses Mars Men credential as attention signal. Must also teach something reusable
 
 ## Hook → Platform Fit Matrix
 
-| Hook Type | Twitter | LinkedIn | Blog |
-|-----------|---------|----------|------|
-| Economics Reveal | ✅ Strong | ✅ Strong | ✅ Opening |
-| Contrarian Premise | ✅ Strong | ✅ Strong | ✅ Title |
-| Framework-First | ⚠ Thread only | ✅ Strong | ✅ Title |
-| Specificity/Proof | ✅ Strong | ✅ Strong | ⚠ Support |
-| Credential Anchor | ⚠ Use rarely | ✅ Strong (P1) | ⚠ Opening only |
+The Instagram, TikTok and YouTube columns are first guesses from Max's results. Correct them at the week-4 review.
+
+| Hook Type | X | LinkedIn | Blog | Instagram | TikTok | YouTube |
+|---|---|---|---|---|---|---|
+| Economics Reveal | ✅ Strong | ✅ Strong | ✅ Opening | ⚠ Carousel cover | ⚠ Needs on-screen math | ✅ Title/thumbnail |
+| Contrarian Premise | ✅ Strong | ✅ Strong | ✅ Title | ✅ Reel opener | ✅ Opener | ⚠ Title only |
+| Framework-First | ⚠ Thread only | ✅ Strong | ✅ Title | ✅ Carousel | ⚠ Weak | ✅ Tutorial title |
+| Specificity/Proof | ✅ Strong | ✅ Strong | ⚠ Support | ✅ Strong | ✅ Strong | ✅ Thumbnail number |
+| Credential Anchor | ⚠ Use rarely | ✅ Strong (P1) | ⚠ Opening only | ⚠ Rarely | ⚠ Rarely | ⚠ Intro only |
+| Verdict first / Ranking | ⚠ Tier-list text | ✅ Carousel | – | ✅ Strongest | ✅ Strongest | ✅ Shorts |
+| Worth stealing | ✅ Images | ✅ Carousel | – | ✅ Strong | ✅ Strong | ⚠ Shorts |
+| Non-negotiables | ✅ Strong | ✅ Strong | ⚠ Section | ✅ Carousel | ⚠ Weak | – |
+| So you don't have to / Tension | ⚠ List of findings | ✅ Strong | ✅ Title | ⚠ Cut-down | ⚠ Cut-down | ✅ Strongest |
+| Yearly full setup | – | – | ✅ Title | – | – | ✅ Strongest |
+| Beat the crowd / Admission | ✅ Strong (Sun) | ✅ Strong | – | ⚠ Image | – | – |
+| Comment keyword | ✅ Strong | ✅ Strongest | – | ✅ Auto-DM | ⚠ Weak | ⚠ Pinned comment |
+
+---
+
+### Changelog
+- **2026-11-25:** Added section 6 (ten patterns from Max Wellcopy, rewritten, none of his lines) and Instagram, TikTok, YouTube columns plus new rows in the fit matrix. Juan approved the text.
