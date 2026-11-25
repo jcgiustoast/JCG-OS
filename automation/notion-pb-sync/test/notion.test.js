@@ -109,3 +109,18 @@ describe('createNotionClient — transient retries', () => {
     expect(fetchMock.calls).toHaveLength(1)
   })
 })
+
+describe('queryUnscheduledSoon', () => {
+  it('asks for not-yet-scheduled rows whose Date falls in the window', async () => {
+    const fetchMock = makeFetch([{ body: { results: [] } }])
+    const client = createNotionClient({ token: TOKEN, dataSourceId: DS, version: '2025-09-03', fetchImpl: fetchMock })
+    await client.queryUnscheduledSoon({ from: '2026-11-25T10:00:00.000Z', to: '2026-11-25T12:00:00.000Z' })
+    const sent = JSON.parse(fetchMock.calls[0].opts.body)
+    expect(sent.filter.and).toEqual(expect.arrayContaining([
+      { property: 'Date', date: { on_or_after: '2026-11-25T10:00:00.000Z' } },
+      { property: 'Date', date: { on_or_before: '2026-11-25T12:00:00.000Z' } }
+    ]))
+    const statuses = sent.filter.and.find(f => f.or).or.map(f => f.select.equals)
+    expect(statuses.sort()).toEqual(['Drafting', 'Idea', 'Ready', 'Researching'])
+  })
+})

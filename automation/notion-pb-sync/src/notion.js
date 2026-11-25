@@ -57,6 +57,21 @@ export function createNotionClient({ token, dataSourceId, version, fetchImpl = f
     return result.results
   }
 
+  async function queryUnscheduledSoon({ from, to }) {
+    // Rows with a posting time inside [from, to] that are not yet handed to post-bridge.
+    const filter = {
+      and: [
+        { property: 'Date', date: { on_or_after: from } },
+        { property: 'Date', date: { on_or_before: to } },
+        {
+          or: ['Idea', 'Researching', 'Drafting', 'Ready'].map(name => ({ property: 'Status', select: { equals: name } }))
+        }
+      ]
+    }
+    const result = await call('POST', `/data_sources/${dataSourceId}/query`, { filter, page_size: 100 })
+    return result.results
+  }
+
   async function fetchPageBlocks(pageId) {
     const out = []
     let cursor = null
@@ -74,5 +89,5 @@ export function createNotionClient({ token, dataSourceId, version, fetchImpl = f
     return call('PATCH', `/pages/${pageId}`, { properties })
   }
 
-  return { queryByStatus, queryRowsWithPostBridgeIdInUserState, fetchPageBlocks, updateRow }
+  return { queryByStatus, queryRowsWithPostBridgeIdInUserState, queryUnscheduledSoon, fetchPageBlocks, updateRow }
 }
