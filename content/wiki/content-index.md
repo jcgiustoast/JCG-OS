@@ -172,6 +172,7 @@ Historical briefs (pre-2026-05-25 aggregated format) in `content/raw/research/`,
 
 ### Creator teardowns
 - **Max Wellcopy (Max Sturtevant) playbook** — `wiki/max-wellcopy-playbook.html` (web page, open in a browser). How he runs LinkedIn, X, Instagram, YouTube and TikTok: daily schedule, formats, hooks, funnel, real hours, plus Juan's version and weekly calendar. Every example post linked, screenshots embedded. Researched 2026-11-25. Raw scrape, per-platform findings, decisions and the markdown source: `content/raw/research/max-wellcopy-2026-11/`.
+- [[content-system-decisions]] — Juan's answers (2026-11-25) for running the five-platform system: what it sells (the email list, plus MentorPass), who it's for, hours, accounts, tools budget, limits. The build of the content system reads from this page.
 
 ## Memory
 - [[log]] — Content activity log. Most recent first.

@@ -3,9 +3,9 @@ title: Content Strategy
 description: Phased content strategy tied to ASTEROI business phases. English-only in Phase 1 (Mars Men credential), English primary in Phase 2+, Spanish expansion in Phase 3+. Channels, topics, cadence, and constraints by phase.
 type: concept
 sources: []
-related: [subscription-lab, asteroi-blog-en, asteroi-blog-es]
+related: [subscription-lab, asteroi-blog-en, asteroi-blog-es, content-system-decisions, max-wellcopy-playbook]
 created: 2026-04-06
-updated: 2026-08-27
+updated: 2026-11-25
 confidence: high
 ---
 
@@ -74,14 +74,45 @@ From [[strategy]]:
 - Retention and growth strategy
 - Frameworks: Powered ICE, Marginal Contribution, Metric Tree, Growth Formula
 
-### Channels & Cadence
+### Channels & Cadence (revised 2026-11-25, replaces the old X 3–5 / LinkedIn 1–2 table)
 
-| Channel | Frequency | Language | Purpose |
-|---------|-----------|----------|---------|
-| Twitter/X | 3-5 tweets/week | English | Short, opinionated takes. Build US DTC audience. High volume, low effort per piece. |
-| LinkedIn | 1-2 posts/week | English | Longer-form. Repurpose existing 37 articles. Professional credibility. |
-| jcgiusto.com | 1 deep piece/month | English | SEO, credibility, linkable asset. Evergreen frameworks. |
-| ASTEROI blog | **PAUSED** | -- | Don't promote agency while stealth. Resume in Phase 2. |
+Personal brand in English on five platforms, following the method from [[max-wellcopy-playbook]] (his method, not his style; Juan's voice and topics). All answers: [[content-system-decisions]].
+
+| Channel | Per week at full speed | What it's for |
+|---|---|---|
+| LinkedIn | 4–5 posts: 2 long posts, 2 carousels, a free-guide post every other week | Credibility with DTC founders; main source of email signups |
+| X (copied to Threads) | ~12 posts + 15 minutes a day of replies to other DTC accounts | Short opinionated takes; replies are how the account grows |
+| Instagram | 3 Reels, 2 carousels (reused from LinkedIn), 1 story a day | Reach through rankings; "AUDIT" comment gets an automatic DM with the guide |
+| TikTok | 3 videos (same files as the Reels) | Extra reach for almost no extra time |
+| YouTube | 1 long video from week 4 + 3 Shorts (same files as the Reels) | Brand studies and how-tos; feeds the free guides |
+| jcgiusto.com | 1 deep piece a month + the email signup page | Home of the email list |
+| ASTEROI blog | **PAUSED** | Until spring 2027 |
+
+**Where it leads.** Every piece points to the email list: a free guide behind a comment keyword, delivered through a signup page on jcgiusto.com. First guide: a 40-point product page audit checklist. MentorPass calls are the only paid link. Mars Men may be named in posts (beliefs and methods only), never in bios — bios say "Head of eCommerce at a $100M subscription brand".
+
+**Weekly calendar** (ET / Madrid; every evening slot is scheduled in advance, never posted by hand)
+
+| Day | LinkedIn | X (+ Threads) | Instagram | YouTube | TikTok |
+|---|---|---|---|---|---|
+| Mon | 13:55/19:55 carousel: checklist | 8:00/14:00 contrarian take · 13:55 screenshot of a page worth stealing · 19:00/01:00 list post | 7:00/13:00 Reel: ranking | 11:00/17:00 Short (same video) | 19:00/01:00 same video |
+| Tue | 13:55 long personal post | 13:55 quote reaction · 19:00 quick fix | 8:00/14:00 Monday's carousel | 11:00/17:00 long video (from week 4) | – |
+| Wed | 13:55 carousel: pages worth stealing | 13:55 screenshot · 19:00 list post | 7:00 Reel: best pages this week | 11:00 Short (same video) | 19:00 same video |
+| Thu | 13:55 long framework post | 13:55 quote reaction · 19:00 contrarian take | 8:00 Wednesday's carousel | – | – |
+| Fri | 13:55 free-guide post, every other week | 13:55 screenshot · 19:00 lesson I learned | 7:00 Reel: ranking + guide keyword | 11:00 Short (same video) | 19:00 same video |
+| Sat | – | – | – | – | – |
+| Sun | – | 19:00/01:00 life-lesson list | Story: one page worth stealing | – | – |
+| Daily | – | 15 minutes of replies, 17:00–20:00 Madrid | 1 story; automatic keyword DMs | – | – |
+
+**First four weeks**
+
+| Week | What gets added | Hours |
+|---|---|---|
+| 1 | Scheduler, carousel template, screenshot folder. LinkedIn 3 posts, X 1–2 a day | 8–10 |
+| 2 | 2 videos (each file → Instagram, TikTok, YouTube Shorts), Instagram carousels, first free guide + automatic DM | 13–16 |
+| 3 | LinkedIn at 5, X at ~12, 3 videos, script and film the first brand study | 20–25 |
+| 4 | First YouTube long video, first LinkedIn free-guide post, first results review, cut the weakest format | 27–37 |
+
+Saturday's automatic re-post from the playbook comes back only once it's confirmed the scheduler can re-post old posts.
 
 ### Content That Converts (What Actually Drives ASTEROI Revenue)
 1. **Specificity posts:** "We tested 47 subscription offers..." — shows depth no generalist has
@@ -95,6 +126,10 @@ From [[strategy]]:
 - Mars Men internal numbers, test results, or implementation specifics (the brand name itself is OK as of 2026-08-27; Raheel, Zach, Benjamin stay unnamed)
 - ASTEROI service promotions or CTAs
 - Content in Spanish (not this phase)
+- Paid tool sponsorships while at Mars Men (a sponsored post can reveal which tools Mars Men uses)
+- Men's-health, hormone, testosterone or men's-supplement brands in rankings or brand studies
+- Mars Men's name in any bio
+- Hot takes outside the topics (they get comments, not buyers)
 
 ---
 
@@ -165,3 +200,4 @@ Juan has 37+ published articles across three properties. These are a foundation,
 ### Changelog
 - **2026-04-06:** Initial content strategy created. English-only for Phase 1-2, Spanish expansion Phase 3+. Phased topic constraints, channel cadence, and Mars Men credential usage guidelines.
 - **2026-08-27:** Firewall revised per Juan's decision. Mars Men may now be named (methodology/beliefs framing only; no internal numbers, test results, or implementation specifics; team members stay unnamed). Meta constraint narrowed to "as advice" with a measurement carve-out for CRO-experiment impact on paid media. Prompted by the "CRO things we got right at Mars Men" series (7 ideas filed to Notion).
+- **2026-11-25:** Phase 1 channels and cadence replaced with the five-platform plan (LinkedIn, X + Threads, Instagram, TikTok, YouTube) from the Max Wellcopy playbook: weekly calendar, four-week ramp to 27–37 h/week, funnel to the email list via jcgiusto.com (MentorPass the only paid link), bio rule. Four lines added to "What NOT to Post". Approved by Juan. Answers in [[content-system-decisions]].

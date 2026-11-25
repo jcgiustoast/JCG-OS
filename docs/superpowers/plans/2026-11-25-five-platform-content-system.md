@@ -1,0 +1,150 @@
+# Five-Platform Content System — Build Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Make Juan's five-platform weekly calendar (LinkedIn, X, Instagram, YouTube, TikTok) runnable: strategy written down, every format templated, ideas and drafts flowing through Notion, posts scheduled automatically, one free guide collecting emails, and a weekly loop that reviews results.
+
+**Architecture:** Reuse what exists. Notion Content DB stays the single place a piece lives (idea → draft → ready → scheduled → published → results). The existing Notion → post-bridge sync (`automation/notion-pb-sync/`) is the scheduler path, extended to the three new platforms if needed. Wiki pages in `content/wiki/engine/` and `content/wiki/platforms/` are the reference the `/content` command reads. Visual templates come from `/figma-post`.
+
+**Tech Stack:** Markdown wiki pages, Notion API via `content/scripts/notion-content.ps1`, Node.js sync service on Railway (vitest), Figma (via `/figma-post`), post-bridge, ManyChat (Instagram), an email tool for jcgiusto.com.
+
+**Spec:** `content/wiki/content-system-decisions.md` (Juan's answers) + `content/raw/research/max-wellcopy-2026-11/playbook.md` sections 4, 5, 9, 10.
+
+## Global Constraints
+
+- Every user-facing text (posts, bios, guide, emails, signup page, strategy page wording) is drafted by Claude and approved by Juan before it is written, published or pasted. Notion schema changes and any paid tool are shown to Juan before they happen.
+- Hard limits on every piece: no Mars Men numbers, tests or implementations; no ASTEROI client names or numbers; no men's-health, hormone, testosterone or men's-supplement brands in rankings or studies; no Meta ads, creative or ad-spend advice.
+- ASTEROI is not named publicly until spring 2027.
+- Bio line: "Head of eCommerce at a $100M subscription brand" — Mars Men is not named in bios.
+- Audience: DTC founders, $2–50M a year. Topics: CRO, subscriptions, unit economics, measurement, landing pages, Claude for CRO.
+- Goal of every funnel: the email list (signup page on jcgiusto.com). MentorPass is the one paid link.
+- Tools total under $60/month. No paid tool sponsorships. No editor until after month one.
+- Weekends: one Sunday post on X only. Daily: 15 min of X replies (via `/engage`).
+- Filming: Juan on camera at his desk, no green screen.
+- Handles: jcgiusto on TikTok, X, YouTube, LinkedIn; jc.giusto on Instagram.
+- Vault rules: `raw/` immutable; `updated:` set on every write; never edit `author: juan` pages without his say-so; ask before every commit.
+- Drafts sound like Juan (memory `writing-voice.md`, `/humanize`).
+
+## Review Focus
+
+- A piece cross-posted from one source breaks another platform's limits (X 280 chars, LinkedIn PDF carousel, TikTok/Shorts length, Instagram 10-slide max) → each platform version is checked against its limit before it is marked Ready (Task 4 limits table, Task 7 sync validation).
+- A ranking or brand study slips in a men's-health or supplement brand → every brand list is screened against the hard limits before drafting (Task 4 checklist line, Task 11 review step).
+- The 01:00 Madrid slots (7pm ET) are missed when posting by hand → every evening slot is scheduled, never "live" (Task 2 calendar, Task 7).
+- Someone comments the keyword on LinkedIn or X and never gets the guide → a daily keyword check is part of the 15-minute reply block, with a saved reply (Task 8).
+- The source piece is edited after its five versions exist and they drift apart → Notion "Source piece" link lets the weekly plan list siblings to re-check (Task 5, Task 11).
+
+---
+
+### Task 1: Check what already runs
+
+**Files:** Create `content/memory/content-system-status-2026-11.md` (author: claude, short).
+
+- [ ] Check whether the Notion → post-bridge sync is deployed on Railway and running (Railway tools: list services, recent logs).
+- [ ] Check which accounts are connected in post-bridge and whether post-bridge supports Instagram Reels + carousels, TikTok, YouTube (long + Shorts), LinkedIn PDF, X threads/images, evergreen recycling and auto self-replies — from post-bridge docs and its API.
+- [ ] Read the Notion Content DB schema (properties, select options) and the Research DB.
+- [ ] Write the status note: what works, what's missing, current post-bridge plan and price.
+- [ ] Show Juan the note in plain words. No changes yet.
+
+### Task 2: Rewrite the near-term posting plan
+
+**Files:** Modify `content/wiki/content-strategy.md` — Phase 1 "Channels & Cadence" and "What NOT to Post" only; changelog line.
+
+- [ ] Draft the new Phase 1 table: five platforms, weekly volume per platform, purpose, from playbook section 10. Keep jcgiusto.com 1/month; ASTEROI blog stays paused.
+- [ ] Add the weekly calendar (playbook section 10, every evening slot marked scheduled) and the 4-week ramp with hours (8–10 → 13–16 → 20–25 → 27–37; first YouTube long in week 4).
+- [ ] Add to "What NOT to Post": paid tool sponsorships while at Mars Men; men's-health brands in rankings; Mars Men named in bios.
+- [ ] Add "Funnel" paragraph: email list via jcgiusto.com, MentorPass as the one paid link.
+- [ ] Show Juan the exact new text; write only after his yes. Set `updated: <today>`, add changelog.
+
+### Task 3: Playbooks for the three new platforms
+
+**Files:** Create `content/wiki/platforms/instagram.md`, `youtube.md`, `tiktok.md` (author: claude, same shape as `platforms/linkedin.md`). Modify `platforms/linkedin.md`, `platforms/twitter.md` (cadence sections only).
+
+- [ ] Each new page: what works on the platform (from `content/raw/research/max-wellcopy-2026-11/<platform>/findings.md`), formats Juan uses there, posting slots, length/size limits, caption and hashtag rules, what not to copy (playbook section 8).
+- [ ] Update LinkedIn and X cadence to match Task 2.
+- [ ] Add the three pages to `content/wiki/content-index.md`.
+- [ ] Juan approves before write.
+
+### Task 4: Format catalog and one-to-five chains
+
+**Files:** Modify `content/wiki/engine/content-types.md`, `content/wiki/engine/repurpose.md`, `content/wiki/engine/hooks.md`.
+
+- [ ] Add one entry per format from playbook section 9: ranking ladder, 10/10 to steal, non-negotiables list, brand study, yearly how-to, mega-class, life-lesson list, learning diary, keyword lead magnet, contrarian, quote reaction, live brand fix. Each entry: structure (beat by beat), draft hook pattern, platforms, hard-limit check line, time cost.
+- [ ] Add a platform limits table (characters, slides, video length, aspect ratio) used before any piece is marked Ready.
+- [ ] Rewrite `repurpose.md` chains: vertical video → Reel + TikTok + Short; carousel → LinkedIn PDF + IG carousel + X images; YouTube long → cut-downs + LinkedIn lead magnet; X winners recycled after ~6 months. Keep Juan's existing long-form-first chain.
+- [ ] Add Max-derived hook patterns to `hooks.md`, rewritten as patterns, no copied lines.
+- [ ] Update `/content` (`.claude/commands/content.md`) platform list to five and point it at the new pages.
+- [ ] Juan approves before write.
+
+### Task 5: Notion Content DB for five platforms
+
+**Files:** Modify `content/scripts/notion-content.ps1`; Notion schema.
+
+- [ ] Propose schema changes to Juan: Platform options + Instagram, YouTube, TikTok (remove stale ones if unused); new `Format` select (Task 4 names); `Source piece` relation to the same DB (links the five versions to their source); `Slot` date-time; result numbers `Views`, `Comments`, `Saves`, `Follows`, `Signups`; `Swipes` database (screenshot, brand, what's good, format it could feed, Used? checkbox).
+- [ ] Apply after Juan's yes (via `automation/notion-pb-sync/scripts/apply-schema.js` pattern or Notion tools).
+- [ ] Extend `notion-content.ps1 create-draft` with `-Format`, `-SourcePiece`, `-Slot`; run it once against a test row and delete the test row.
+- [ ] Add a "This week" view grouped by day and a "Swipes unused" view.
+
+### Task 6: Swipe intake
+
+**Files:** Modify `.claude/commands/process-inbox.md`; create `content/wiki/swipe-sources.md` (author: claude).
+
+- [ ] `/process-inbox`: captures starting with "swipe" (text or photo) go to the Notion Swipes DB, not the wiki.
+- [ ] Draft `swipe-sources.md`: 50–100 DTC brands outside men's health to subscribe to (emails, SMS), grouped by category, each screened against the hard limits.
+- [ ] Juan approves list; he subscribes himself (email signups are his).
+
+### Task 7: Scheduling all five platforms
+
+**Files:** `automation/notion-pb-sync/` (worktree, branch `feat/five-platform-sync`), only if Task 1 shows gaps.
+
+- [ ] Show Juan a tool table within $60/month: post-bridge plan, ManyChat (IG keyword DMs), email tool for jcgiusto.com, CapCut/Captions. Current prices checked on each site. Nothing paid until he says yes; account sign-ups are his.
+- [ ] If the sync lacks Instagram/TikTok/YouTube or video media: write failing vitest tests first for each new platform mapping (post type, media, caption limit rejection), then implement in `src/post-bridge.js` / `src/media.js`, run `npm test`.
+- [ ] Add evening-slot check: a row with a Slot but no schedule 2 h before → flagged in Notion.
+- [ ] X recycling and auto self-reply plug: use post-bridge if supported; else propose the cheapest add-on inside budget.
+- [ ] Deploy to Railway only after Juan approves; ask before commit/PR.
+
+### Task 8: First free guide and email signup
+
+**Files:** Guide PDF (Figma via `/figma-post` or `/visual`); jcgiusto.com signup page; email tool automation; `content/wiki/lead-magnets.md` (author: claude).
+
+- [ ] Draft the 40-point product page audit checklist text from vault CRO material (no Mars Men specifics). Juan approves text.
+- [ ] Design it in his brand (purple + grey); Juan approves design.
+- [ ] Find what jcgiusto.com is built on; build the signup page and the delivery email in the chosen email tool. Juan approves page and email copy.
+- [ ] Keyword flow: ManyChat on Instagram (keyword "AUDIT" → DM with link); LinkedIn and X by hand with one saved reply, checked inside the daily 15-minute block.
+- [ ] Test end to end with a test email address Juan supplies.
+- [ ] Record the guide, keyword, link and delivery steps in `lead-magnets.md`.
+
+### Task 9: Visual and video templates
+
+**Files:** Figma Contenido file (via `/figma-post`); `content/wiki/engine/templates.md` (author: claude).
+
+- [ ] Carousel card in the post-style look, purple + grey, all three sizes. Agree design + text with Juan before building (memory `feedback-visuals-align-and-airy.md`).
+- [ ] YouTube thumbnail template (product shot + one number badge). Juan approves.
+- [ ] Reel template spec for CapCut/Captions: caption style, score sticker for rankings, intro length, end card. Juan saves it in the app.
+- [ ] YouTube description + pinned comment text template (signup link, MentorPass link). Juan approves.
+
+### Task 10: Bios on all five platforms
+
+**Files:** `content/wiki/bios.md` (author: claude).
+
+- [ ] Draft one bio per platform within each platform's length limit, using the approved bio line, link to the jcgiusto.com signup page and MentorPass; no ASTEROI, no Mars Men name.
+- [ ] Juan approves; he pastes them himself (account settings are his). Flag the Spanish-primary LinkedIn profile for him to check.
+
+### Task 11: Weekly plan and weekly review
+
+**Files:** Create `.claude/commands/week-plan.md`, `.claude/commands/week-review.md` (read-only commands; writes to Notion only after approval). Modify `.claude/slash-commands.md`; check `life/wiki/engagement-targets.md` fits $2–50M DTC founders.
+
+- [ ] `/week-plan` (Sunday): fill each calendar slot from Notion ideas + unused swipes, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits.
+- [ ] `/week-review`: pull last week's results from Notion, compare formats and platforms, list best and worst; in week 4, propose the weakest format to cut. Append summary to `content/memory/log.md` after approval.
+- [ ] Propose additions to `engagement-targets.md` for DTC founders in range; Juan approves.
+
+### Task 12: Week-one batch
+
+- [ ] Run `/week-plan` for week one of the ramp: LinkedIn 3, X 1–2/day, first carousel.
+- [ ] Draft each piece with `/content`, run `/humanize`, Juan approves each; file to Notion as Ready with Slots.
+- [ ] Confirm each scheduled post shows in post-bridge.
+
+---
+
+## Order and dependencies
+
+Task 1 first (it decides Task 7's scope). Tasks 2–4 are writing and can run side by side. Task 5 before 6, 7, 11. Task 9 before 8's design and 12's carousel. Task 12 last.
