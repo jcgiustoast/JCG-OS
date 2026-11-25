@@ -79,10 +79,10 @@
 
 **Files:** Notion schema (via the Notion connector); modify `.claude/commands/content.md` STEP 6 to file drafts through the connector instead of `content/scripts/notion-content.ps1`.
 
-- [ ] Propose schema changes to Juan: Platform options + Instagram, YouTube, TikTok (remove stale ones if unused); new `Format` select (Task 4 names); `Source piece` relation to the same DB (links the five versions to their source); `Slot` date-time; result numbers `Views`, `Comments`, `Saves`, `Follows`, `Signups`; `Swipes` database (screenshot, brand, what's good, format it could feed, Used? checkbox).
-- [ ] Apply after Juan's yes, with the Notion connector.
-- [ ] Switch `/content` filing to the connector, with Format, Source piece and Slot set; file one test row, then move it to trash.
-- [ ] Add a "This week" view grouped by day and a "Swipes unused" view.
+- [x] Propose schema changes to Juan: Platform options + Instagram, YouTube, TikTok (remove stale ones if unused); new `Format` select (Task 4 names); `Source piece` relation to the same DB (links the five versions to their source); `Slot` date-time; result numbers `Views`, `Comments`, `Saves`, `Follows`, `Signups`; `Swipes` database (screenshot, brand, what's good, format it could feed, Used? checkbox).
+- [x] Apply after Juan's yes, with the Notion connector.
+- [x] Switch `/content` filing to the connector, with Format, Source piece and Slot set; file one test row, then move it to trash.
+- [x] Add a "This week" view grouped by day and a "Swipes unused" view.
 
 ### Task 6: Swipe intake
 

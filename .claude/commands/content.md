@@ -218,41 +218,34 @@ After presenting, ask:
 
 ## STEP 6: FILE TO NOTION CONTENT DB (IF APPROVED)
 
-If Juan approves the piece, file it to the Notion Content DB via `content/scripts/notion-content.ps1`. The local `content/raw/drafts/` folder is no longer used; the Notion Content DB is the operational source of truth (since 2026-05-24).
+If Juan approves the piece, file it to the Notion Content DB with the **Notion connector** (MCP tools `notion-*`; load them with ToolSearch). Do not use `content/scripts/notion-content.ps1` or `content/.notion-config.json` — that local key is dead and is not being renewed (Juan, 2026-11-25). The Notion Content DB is the operational source of truth; `content/raw/drafts/` is no longer used.
 
-**Two modes:**
+**Where:** Content DB, data source `collection://36aeedc9-595f-81f9-88f2-000b60546d69`. Fetch it first if you need the current field list.
 
-A. **Promote an existing Idea row** (preferred — Juan often runs `/content` no-args, which picks the oldest Idea):
-```powershell
-.\content\scripts\notion-content.ps1 promote-idea `
-  -PageId <pageId from query-ideas> `
-  -BodyFile C:\tmp\draft.md `
-  -HookType "Economics Reveal" `
-  -Status Drafting
-```
-The script auto-inherits `Source articles` / `Source wiki` tags already on the Idea row, so you usually don't need to pass them on promote.
+**One row per platform version.** A piece going to five platforms is one source row plus one row per platform.
+- The **source row** is the piece itself (usually the long or main version). Set `Format`, leave `Source piece` empty.
+- Each **platform row** links back with `Source piece` = the source row's URL. Its sibling list shows up on the source row under `Versions`.
+- X and Threads share one row (`Platform` = Twitter + Threads), since Threads gets a copy of every X post.
 
-B. **Create a fresh draft** (when no matching Idea exists):
-```powershell
-.\content\scripts\notion-content.ps1 create-draft `
-  -Title "Your 3.0 ROAS is a 1.33" `
-  -Platform LinkedIn `
-  -Topic Incrementality `
-  -HookType "Economics Reveal" `
-  -SourceArticles "asteroi-en-roas-doesnt-mean-shit" `
-  -SourceWiki "measurement-incrementality,ecommerce-metrics-hierarchy" `
-  -BodyFile C:\tmp\draft.md
-```
+**Fields to set on every row:**
+| Field | Value |
+|---|---|
+| `Title` | The hook or working title |
+| `Platform` | One or more of LinkedIn, Twitter, Threads, Instagram, TikTok, YouTube, Blog |
+| `Format` | One of the twelve: Ranking, Pages worth stealing, Checklist, Brand study, Yearly tutorial, Free course, Life-lesson list, Learning diary, Free-guide post, Contrarian take, Quote reaction, Live brand fix |
+| `Type` | The shape of the post if one fits (Thread, Carousel, Short, YouTube Video, Infographic, Personal Post…) |
+| `Status` | `Drafting` (Juan moves it to `Ready` himself once the media is attached and it passes the platform limits check) |
+| `Date` | The posting slot from the weekly calendar, as a Madrid date and time (`date:Date:is_datetime` = 1). This is the time the scheduler posts at. |
+| `Source piece` | Source row URL (platform rows only) |
+| `Notes` | Hook pattern used, plus the wiki pages and articles it draws on, by name |
 
-**`-SourceArticles` / `-SourceWiki` behavior (important):**
-Pass filename **stems** (no `.md`, no directory) matching files in `content/raw/articles/` or `content/wiki/`. The script:
-1. Sets the `Source articles` / `Source wiki` multi-select tags.
-2. Resolves each stem to its Knowledge Mirror page via `content/memory/notion-sync-state.json` and sets the `Source links` rich_text property with native Notion page mentions.
-3. Prepends a `**Sources:** [stem](mirror-url)` header to the page body so the links render inline at the top of the draft.
+Body of the page = the post text, ready to paste, in Notion Markdown.
 
-If a stem doesn't exist in the sync state (e.g. a brand-new wiki page not yet synced), the script still tags it and emits a warning; run `notion-sync.ps1 wiki` (or `articles`) afterwards to populate the mirror, then re-run with the same args to fill in the mentions.
+**Promoting an existing Idea row** (Juan often runs `/content` with no topic, which picks the oldest Idea): update that row with `notion-update-page` instead of creating a new one: set the fields above and replace the body with the draft. It becomes the source row.
 
-After filing, also append a short entry to `content/memory/log.md` with the Notion page URL. Local drafts and `content/wiki/pipeline.md` are historical only — do not touch them.
+**Never touch** `Post Bridge ID`, `Last Sync At`, `Synced Edit Token` or `Published URLs` — the scheduler on Railway owns them. Result numbers (`Views`, `Comments`, `Saves`, `Follows`, `Signups`) are filled in at the weekly review, not at filing.
+
+After filing, append a short entry to `content/memory/log.md` with the Notion page URL(s). `content/wiki/pipeline.md` and local drafts are historical only — do not touch them.
 
 ---
 
