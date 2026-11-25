@@ -42,6 +42,9 @@ Extracted from `/content` command on 2026-04-20 so voice, platform rules, hooks,
 ### Platforms
 - [[platforms/twitter]] — DNA, formats (single / 3-7 thread / 8-12 thread / long-form tweet), Phase 1 firewall, posting strategy.
 - [[platforms/linkedin]] — DNA, formats (short 500-800 / standard 1,000-1,800 / long 1,800-3,000), first-line rules, hashtag rules.
+- [[platforms/instagram]] — 3 Reels + 2 reused carousels + daily story a week; score in first 3 seconds; AUDIT comment → automatic DM to the jcgiusto.com signup. Added 2026-11-25.
+- [[platforms/youtube]] — 1 long video Tuesdays from week 4 (famous-brand studies, how-tos) + 3 Shorts reused from Reels; thumbnail and description templates. Added 2026-11-25.
+- [[platforms/tiktok]] — the same 3 vertical videos as the Reels, scheduled Mon/Wed/Fri 19:00 ET; clean uploads, short captions. Added 2026-11-25.
 - [[platforms/blog]] — DNA, 6-part article structure for jcgiusto.com, SEO rules, 1,500-3,000 words.
 
 ### Engine

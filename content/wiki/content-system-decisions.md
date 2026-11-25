@@ -37,7 +37,7 @@ Grilled 2026-11-25, after the [[max-wellcopy-playbook]] research. Every answer b
 |---|---|---|
 | Hours by the end of month one | 27–37 a week, YouTube included | Juan |
 | When YouTube starts | Week four, following the playbook's ramp | Juan (follows from hours) |
-| Weekends | Sunday post on X only | Juan (accepted rec) |
+| Weekends | Sunday post on X, plus the daily Instagram story (kept on Sundays, 2026-11-25). Nothing else on weekends. | Juan |
 | Replies | 15 minutes a day to other DTC accounts on X | Juan (accepted rec) |
 
 ## Accounts, look and voice
