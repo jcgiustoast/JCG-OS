@@ -26,3 +26,10 @@ __pycache__/
 
 # Superpowers brainstorm scratch (ephemeral preview-server sessions, large duplicated assets)
 .superpowers/
+
+# Max Wellcopy scrape — raw data stays local (kept: decisions, findings, playbook source)
+content/raw/research/max-wellcopy-2026-11/**
+!content/raw/research/max-wellcopy-2026-11/*.md
+!content/raw/research/max-wellcopy-2026-11/*.py
+!content/raw/research/max-wellcopy-2026-11/*/
+!content/raw/research/max-wellcopy-2026-11/*/findings.md

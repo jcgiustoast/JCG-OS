@@ -3,12 +3,24 @@ title: Content Memory Log
 description: Append-only chronological log of content-related activity. Most recent first.
 type: log
 created: 2026-04-06
-updated: 2026-09-03
+updated: 2026-11-25
 ---
 
 # Content Memory Log
 
 *Append-only. Most recent entries at the top. Never edit past entries.*
+
+---
+
+## [2026-11-25] ingest | Max Wellcopy five-platform teardown → playbook
+- Scraped LinkedIn, X, Instagram (Reels, stories, highlights), YouTube, TikTok via Apify (~$6). Last 90 days + all-time best.
+- Juan's decisions: personal brand, all five platforms, Max's method in Juan's voice/topics, hours = whatever it takes (cost shown).
+- Core finding: team makes cheap screenshot-and-verdict volume; Max's few long personal posts earn reach; scheduler + auto-repost + keyword auto-DM → Skool $247/mo → agency.
+- Contract flags: no men's-health brand teardowns, no Mars Men / ASTEROI client numbers, no Meta ads advice.
+- Open for Juan: what the funnel sells, naming ASTEROI / Mars Men in bio, editor hire, tool partnerships, first free guide, rewrite content-strategy cadence (still says X 3–5/wk, LinkedIn 1–2/wk).
+- Pages created: wiki/max-wellcopy-playbook.html
+- Pages updated: wiki/content-index.md
+- Raw: raw/research/max-wellcopy-2026-11/
 
 ---
 

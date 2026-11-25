@@ -3,7 +3,7 @@ title: Content Wiki Index
 description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, reference posts) lives in Notion.
 type: index
 created: 2026-04-06
-updated: 2026-09-03
+updated: 2026-11-25
 confidence: high
 ---
 
@@ -169,6 +169,9 @@ Reference posts saved by `/content-research` live in the Notion Research DB (one
 The DB feeds `/content`: when writing for a topic, Claude can query the Research DB for recent high-performers to see what's working in the niche.
 
 Historical briefs (pre-2026-05-25 aggregated format) in `content/raw/research/`, if any exist, are retained but not updated.
+
+### Creator teardowns
+- **Max Wellcopy (Max Sturtevant) playbook** — `wiki/max-wellcopy-playbook.html` (web page, open in a browser). How he runs LinkedIn, X, Instagram, YouTube and TikTok: daily schedule, formats, hooks, funnel, real hours, plus Juan's version and weekly calendar. Every example post linked, screenshots embedded. Researched 2026-11-25. Raw scrape, per-platform findings, decisions and the markdown source: `content/raw/research/max-wellcopy-2026-11/`.
 
 ## Memory
 - [[log]] — Content activity log. Most recent first.
