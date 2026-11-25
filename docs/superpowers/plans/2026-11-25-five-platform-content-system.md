@@ -92,10 +92,11 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 
 **Files:** `automation/notion-pb-sync/` (worktree, branch `feat/five-platform-sync`), only if Task 1 shows gaps.
 
-- [ ] Show Juan a tool table within $60/month: post-bridge plan, ManyChat (IG keyword DMs), email tool for jcgiusto.com, CapCut/Captions. Current prices checked on each site. Nothing paid until he says yes; account sign-ups are his.
-- [ ] If the sync lacks Instagram/TikTok/YouTube or video media: write failing vitest tests first for each new platform mapping (post type, media, caption limit rejection), then implement in `src/post-bridge.js` / `src/media.js`, run `npm test`.
-- [ ] Add evening-slot check: a row with a Slot but no schedule 2 h before → flagged in Notion.
-- [ ] X recycling and auto self-reply plug: use post-bridge if supported; else propose the cheapest add-on inside budget.
+- [x] Show Juan a tool table within $60/month: post-bridge plan, ManyChat (IG keyword DMs), email tool for jcgiusto.com, CapCut/Captions. Current prices checked on each site. Nothing paid until he says yes; account sign-ups are his. (Shown 2026-11-25: ≈$54/mo if on post-bridge Marketer; Juan to confirm his plan and ManyChat price. Table in `content/memory/content-system-status-2026-11.md`.)
+- [x] If the sync lacks Instagram/TikTok/YouTube or video media: write failing vitest tests first for each new platform mapping (post type, media, caption limit rejection), then implement in `src/post-bridge.js` / `src/media.js`, run `npm test`. (Platforms were already mapped. Added: YouTube title from Notion Title, X links moved to first comment. 96 tests pass.)
+- [ ] Video test: post one short clip privately (TikTok private, YouTube private; Reel has no private mode — Juan decides). Needs a clip and Juan's yes. YouTube long can't go through post-bridge (5-min cap) — upload by hand.
+- [x] Add evening-slot check: a row with a Slot but no schedule 2 h before → flagged in Notion. (Written: one "NOT SCHEDULED" line appended to Notes. Not deployed.)
+- [x] X recycling and auto self-reply plug: use post-bridge if supported; else propose the cheapest add-on inside budget. (Self-reply = post-bridge first comment, no add-on. No recycling in post-bridge → repost rule runs through `/week-plan`, Task 11.)
 - [ ] Deploy to Railway only after Juan approves; ask before commit/PR.
 
 ### Task 8: First free guide and email signup
@@ -129,7 +130,7 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 
 **Files:** Create `.claude/commands/week-plan.md`, `.claude/commands/week-review.md` (read-only commands; writes to Notion only after approval). Modify `.claude/slash-commands.md`; check `life/wiki/engagement-targets.md` fits $2–50M DTC founders.
 
-- [ ] `/week-plan` (Sunday): fill each calendar slot from Notion ideas, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits.
+- [ ] `/week-plan` (Sunday): fill each calendar slot from Notion ideas, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits. Also list posts whose "Can come back on" date has arrived; on Juan's yes, copy them into new Notion rows with a new Date (post-bridge has no repost feature).
 - [ ] `/week-review`: pull last week's results from Notion, compare formats and platforms, list best and worst; in week 4, propose the weakest format to cut. Append summary to `content/memory/log.md` after approval.
 - [ ] Propose additions to `engagement-targets.md` for DTC founders in range; Juan approves.
 
