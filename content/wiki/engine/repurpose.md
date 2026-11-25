@@ -69,10 +69,13 @@ Paths A and B still decide where a written idea starts. These four chains cover 
 - **What changes:** Each cut-down is one finding with its own hook. Not a trailer for the long video.
 - **Timing:** Cut-downs spread over the 2 weeks after the long video.
 
-### Chain F: X winners come back
-- **Source:** X posts that did well (rule of thumb: top 10% by likes + bookmarks).
-- **Goes to:** The same post, re-posted about 6 months later. Strong ones also become a LinkedIn post or a carousel.
-- **Status:** Automatic re-posting waits until it's confirmed the scheduler can do it. Until then, the weekly review lists posts that are old enough to come back.
+### Chain F: Winners come back (revised 2026-11-25: 2–3 months, all platforms)
+- **X:** a post in the top 10% (likes + bookmarks) comes back word for word after 10 weeks. About 2 a day, automatic, once the scheduler is confirmed to do it. Until then the Sunday plan lists them and they're scheduled by hand.
+- **LinkedIn:** a strong post comes back after 2–3 months with a new first line, or rebuilt as a carousel. Never the same text twice.
+- **Short videos:** the best video of the month goes up again after 3 months on Instagram, TikTok and Shorts. The best ranking gets refilmed with fresh examples, the way Max refilmed his order-confirmation ranking before Black Friday.
+- **Long YouTube videos:** these don't get reposted. They come back as new short cuts.
+- **Tracking:** when a post does well, set "Can come back on" in the Notion content table (X +10 weeks, LinkedIn and video +3 months). The Sunday plan lists everything due.
+- **Start:** nothing old exists yet, so this starts around February 2027.
 
 ### Threads
 Every X post is copied to Threads by the scheduler. No separate writing.

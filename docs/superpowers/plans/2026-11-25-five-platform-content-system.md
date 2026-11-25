@@ -84,13 +84,9 @@
 - [x] Switch `/content` filing to the connector, with Format, Source piece and Slot set; file one test row, then move it to trash.
 - [x] Add a "This week" view grouped by day and a "Swipes unused" view.
 
-### Task 6: Swipe intake
+### Task 6: Swipe intake — DROPPED (2026-11-25)
 
-**Files:** Modify `.claude/commands/process-inbox.md`; create `content/wiki/swipe-sources.md` (author: claude).
-
-- [ ] `/process-inbox`: captures starting with "swipe" (text or photo) go to the Notion Swipes DB, not the wiki.
-- [ ] Draft `swipe-sources.md`: 50–100 DTC brands outside men's health to subscribe to (emails, SMS), grouped by category, each screened against the hard limits.
-- [ ] Juan approves list; he subscribes himself (email signups are his).
+Juan's call: no raw-material collection. Ideas come from Juan; research comes from Max Wellcopy and other DTC thought leaders. The Notion Swipes table was moved to Notion's trash (restorable). No inbox change, no brand list.
 
 ### Task 7: Scheduling all five platforms
 
@@ -133,7 +129,7 @@
 
 **Files:** Create `.claude/commands/week-plan.md`, `.claude/commands/week-review.md` (read-only commands; writes to Notion only after approval). Modify `.claude/slash-commands.md`; check `life/wiki/engagement-targets.md` fits $2–50M DTC founders.
 
-- [ ] `/week-plan` (Sunday): fill each calendar slot from Notion ideas + unused swipes, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits.
+- [ ] `/week-plan` (Sunday): fill each calendar slot from Notion ideas, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits.
 - [ ] `/week-review`: pull last week's results from Notion, compare formats and platforms, list best and worst; in week 4, propose the weakest format to cut. Append summary to `content/memory/log.md` after approval.
 - [ ] Propose additions to `engagement-targets.md` for DTC founders in range; Juan approves.
 

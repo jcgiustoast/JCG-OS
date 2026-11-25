@@ -64,7 +64,7 @@ Open follow-ups: Instagram's handle (jc.giusto) is the only one that differs fro
 
 | Decision | Answer | Given by |
 |---|---|---|
-| Ideas and drafts | The Notion content system ([[pipeline]]), with swipes coming in through Telegram to `life/raw/inbox/` | Juan (accepted rec) |
+| Ideas and drafts | The Notion content system ([[pipeline]]). Ideas come from Juan; research from Max Wellcopy and other DTC thought leaders. No swipe collection | Juan (2026-11-25) |
 | Strategy page | Rewrite only the near-term posting plan in [[content-strategy]] | Juan (accepted rec) |
 
 ## Hard limits (from contract and firewall, not open to change)
@@ -83,3 +83,4 @@ How the system is built: file layout, template formats, how scheduling is wired,
 
 ### Changelog
 - **2026-11-25:** Created from the grilling session after the Max Wellcopy research.
+- **2026-11-25:** Dropped swipe collection (no brand subscriptions, no Swipes table). Ideas from Juan, research from DTC thought leaders.
