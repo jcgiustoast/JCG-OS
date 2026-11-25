@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import crypto from 'node:crypto'
 import { tick } from '../src/tick.js'
 
-function makeRow({ id = 'page_1', status = 'Ready', title = 'A post', platforms = ['LinkedIn'], date = '2026-06-01T12:00:00.000Z', postBridgeId = '', media = [] } = {}) {
+function makeRow({ id = 'page_1', status = 'Ready', title = 'A post', platforms = ['LinkedIn'], date = '2026-06-01T12:00:00.000Z', postBridgeId = '', media = [], notes = '' } = {}) {
   return {
     id,
     last_edited_time: '2026-05-26T10:00:00.000Z',
@@ -12,15 +12,17 @@ function makeRow({ id = 'page_1', status = 'Ready', title = 'A post', platforms 
       Platform: { multi_select: platforms.map(name => ({ name })) },
       Date: { date: { start: date } },
       'Post Bridge ID': { rich_text: postBridgeId ? [{ plain_text: postBridgeId }] : [] },
-      Media: { type: 'files', files: media }
+      Media: { type: 'files', files: media },
+      Notes: { rich_text: notes ? [{ plain_text: notes }] : [] }
     }
   }
 }
 
-function fakeNotion({ activeRows = [], blocks = [] } = {}) {
+function fakeNotion({ activeRows = [], blocks = [], lateRows = [] } = {}) {
   return {
     queryByStatus: vi.fn(async () => activeRows),
     queryRowsWithPostBridgeIdInUserState: vi.fn(async () => []),
+    queryUnscheduledSoon: vi.fn(async () => lateRows),
     fetchPageBlocks: vi.fn(async () => blocks),
     updateRow: vi.fn(async () => ({}))
   }
@@ -509,5 +511,114 @@ describe('tick — revert / cancel', () => {
     expect(pb.deletePost).toHaveBeenCalledWith('pb_500')
     // Critical: do NOT clear the ID — the row must stay linked so next tick retries
     expect(notion.updateRow).not.toHaveBeenCalled()
+  })
+})
+
+const para = text => ({ type: 'paragraph', paragraph: { rich_text: [{ plain_text: text }] } })
+
+describe('tick — X links go to the first comment', () => {
+  it('sends X a caption without the link and the link as first comment; other platforms keep it', async () => {
+    const row = makeRow({ platforms: ['Twitter', 'LinkedIn'] })
+    const notion = fakeNotion({ activeRows: [row], blocks: [para('Free guide: https://jcgiusto.com/guide')] })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    const payload = pb.createPost.mock.calls[0][0]
+    expect(payload.caption).toBe('Free guide: https://jcgiusto.com/guide')
+    expect(payload.platform_configurations.twitter).toEqual({
+      caption: 'Free guide:',
+      first_comment: 'https://jcgiusto.com/guide'
+    })
+  })
+
+  it('adds no X config when the post has no link', async () => {
+    const row = makeRow({ platforms: ['Twitter'] })
+    const notion = fakeNotion({ activeRows: [row], blocks: [para('No links here')] })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost.mock.calls[0][0].platform_configurations).toBeUndefined()
+  })
+
+  it('checks the 280 limit on the X text after the link is moved out', async () => {
+    const text = 'x'.repeat(270) + ' https://jcgiusto.com/a-long-guide-path'
+    const row = makeRow({ platforms: ['Twitter'] })
+    const notion = fakeNotion({ activeRows: [row], blocks: [para(text)] })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost).toHaveBeenCalled()
+  })
+
+  it('also sends the X config when an edit is pushed to a scheduled post', async () => {
+    const row = makeRow({ status: 'Scheduled', platforms: ['Twitter'], postBridgeId: 'pb_1' })
+    row.properties['Synced Edit Token'] = { rich_text: [{ plain_text: 'stale' }] }
+    const notion = fakeNotion({ activeRows: [row], blocks: [para('New: jcgiusto.com')] })
+    const pb = fakePb()
+    pb.getPost.mockResolvedValue({ id: 'pb_1', status: 'scheduled' })
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.updatePost).toHaveBeenCalledWith('pb_1', expect.objectContaining({
+      platform_configurations: { twitter: { caption: 'New:', first_comment: 'jcgiusto.com' } }
+    }))
+  })
+})
+
+describe('tick — YouTube title', () => {
+  it('sends the Notion title as the YouTube title', async () => {
+    const row = makeRow({ platforms: ['YouTube'], title: 'Why your PDP loses buyers' })
+    const notion = fakeNotion({ activeRows: [row], blocks: [para('Description')] })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost.mock.calls[0][0].platform_configurations.youtube).toEqual({ title: 'Why your PDP loses buyers' })
+  })
+
+  it('marks Failed when the title is over the YouTube 100-character limit', async () => {
+    const row = makeRow({ platforms: ['YouTube'], title: 'T'.repeat(101) })
+    const notion = fakeNotion({ activeRows: [row], blocks: [para('Description')] })
+    const pb = fakePb()
+    await tick({ notion, pb, accountMap: ACCOUNT_MAP, fetchImpl: vi.fn() })
+    expect(pb.createPost).not.toHaveBeenCalled()
+    expect(notion.updateRow).toHaveBeenCalledWith('page_1', expect.objectContaining({
+      Status: { select: { name: 'Failed' } },
+      Notes: { rich_text: [{ text: { content: expect.stringMatching(/YouTube title/) } }] }
+    }))
+  })
+})
+
+describe('tick — rows not scheduled 2 hours before their slot', () => {
+  const NOW = new Date('2026-11-25T22:00:00.000Z')
+
+  it('looks two hours ahead and adds a warning line under existing notes', async () => {
+    const late = makeRow({ id: 'late_1', status: 'Drafting', date: '2026-11-26T00:00:00.000Z', notes: 'my own note' })
+    const notion = fakeNotion({ lateRows: [late] })
+    await tick({ notion, pb: fakePb(), accountMap: ACCOUNT_MAP, fetchImpl: vi.fn(), now: NOW })
+    expect(notion.queryUnscheduledSoon).toHaveBeenCalledWith({
+      from: '2026-11-25T22:00:00.000Z', to: '2026-11-26T00:00:00.000Z'
+    })
+    const [id, props] = notion.updateRow.mock.calls[0]
+    expect(id).toBe('late_1')
+    expect(Object.keys(props)).toEqual(['Notes'])
+    const text = props.Notes.rich_text[0].text.content
+    expect(text.startsWith('my own note\n')).toBe(true)
+    expect(text).toMatch(/NOT SCHEDULED/)
+  })
+
+  it('does not add the warning twice', async () => {
+    const late = makeRow({ id: 'late_1', status: 'Drafting', date: '2026-11-26T00:00:00.000Z', notes: 'x\n⚠ NOT SCHEDULED — slot 2026-11-26T00:00:00.000Z' })
+    const notion = fakeNotion({ lateRows: [late] })
+    await tick({ notion, pb: fakePb(), accountMap: ACCOUNT_MAP, fetchImpl: vi.fn(), now: NOW })
+    expect(notion.updateRow).not.toHaveBeenCalled()
+  })
+
+  it('skips rows with a date but no time (no real slot)', async () => {
+    const late = makeRow({ id: 'late_1', status: 'Idea', date: '2026-11-26' })
+    const notion = fakeNotion({ lateRows: [late] })
+    await tick({ notion, pb: fakePb(), accountMap: ACCOUNT_MAP, fetchImpl: vi.fn(), now: NOW })
+    expect(notion.updateRow).not.toHaveBeenCalled()
+  })
+
+  it('skips Ready rows that this same tick just scheduled', async () => {
+    const ready = makeRow({ id: 'r1', status: 'Ready', date: '2026-11-25T23:00:00.000Z' })
+    const notion = fakeNotion({ activeRows: [ready], blocks: [para('Hi')], lateRows: [ready] })
+    await tick({ notion, pb: fakePb(), accountMap: ACCOUNT_MAP, fetchImpl: vi.fn(), now: NOW })
+    const noteWrites = notion.updateRow.mock.calls.filter(([, p]) => p.Notes && !p.Status)
+    expect(noteWrites).toHaveLength(0)
   })
 })

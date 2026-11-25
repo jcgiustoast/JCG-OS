@@ -1,12 +1,17 @@
 import crypto from 'node:crypto'
 import { STATUS } from './state.js'
-import { blocksToCaption, stripSourcesHeader, validateForPlatforms } from './caption.js'
+import { blocksToCaption, stripSourcesHeader, validateForPlatforms, splitLinksForX } from './caption.js'
 import { checkPhase1Firewall } from './firewall.js'
 import { extractFiles, uploadNotionFilesToPostBridge } from './media.js'
 
-export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
+const YOUTUBE_TITLE_LIMIT = 100
+const LATE_WINDOW_MS = 2 * 60 * 60 * 1000
+const LATE_MARKER = 'NOT SCHEDULED'
+
+export async function tick({ notion, pb, accountMap, fetchImpl = fetch, now = new Date() }) {
   const activeStatuses = [STATUS.READY, STATUS.SCHEDULING, STATUS.SCHEDULED]
   const rows = await notion.queryByStatus(activeStatuses)
+  const handledIds = new Set(rows.map(r => r.id))
 
   for (const row of rows) {
     const status = row.properties.Status?.select?.name
@@ -47,6 +52,56 @@ export async function tick({ notion, pb, accountMap, fetchImpl = fetch }) {
       })
     }
   }
+
+  try {
+    await flagUnscheduledSoon({ notion, now, handledIds })
+  } catch (err) {
+    console.error(`Late-row check failed: ${err.message}`)
+  }
+}
+
+// A row whose posting time is under 2 hours away and still isn't scheduled gets one
+// warning line added under its Notes. Existing notes are kept; the line is added once.
+async function flagUnscheduledSoon({ notion, now, handledIds }) {
+  const from = now.toISOString()
+  const to = new Date(now.getTime() + LATE_WINDOW_MS).toISOString()
+  const rows = await notion.queryUnscheduledSoon({ from, to })
+  for (const row of rows) {
+    if (handledIds.has(row.id)) continue
+    const slot = row.properties.Date?.date?.start
+    if (!slot || !slot.includes('T')) continue
+    const existing = (row.properties.Notes?.rich_text || []).map(t => t.plain_text).join('')
+    if (existing.includes(LATE_MARKER)) continue
+    const warning = `⚠ ${LATE_MARKER} — slot ${slot}`
+    const room = 1900 - warning.length - 1
+    const kept = existing.length > room ? existing.slice(0, room) : existing
+    const content = kept ? `${kept}\n${warning}` : warning
+    await notion.updateRow(row.id, {
+      Notes: { rich_text: [{ text: { content } }] }
+    })
+  }
+}
+
+// Per-platform settings post-bridge needs beyond the shared caption.
+function buildPlatformConfigurations({ caption, platforms, title }) {
+  const configs = {}
+  if (platforms.includes('Twitter')) {
+    const x = splitLinksForX(caption)
+    if (x.firstComment) configs.twitter = { caption: x.text, first_comment: x.firstComment }
+  }
+  if (platforms.includes('YouTube')) {
+    configs.youtube = { title }
+  }
+  return Object.keys(configs).length ? configs : undefined
+}
+
+function validateYouTubeTitle(title, platforms) {
+  if (!platforms.includes('YouTube')) return { ok: true }
+  if (!title) return { ok: false, reason: 'YouTube title is empty — fill in the row Title' }
+  if (title.length > YOUTUBE_TITLE_LIMIT) {
+    return { ok: false, reason: `YouTube title is ${title.length} chars, limit is ${YOUTUBE_TITLE_LIMIT}` }
+  }
+  return { ok: true }
 }
 
 async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {
@@ -79,6 +134,12 @@ async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {
     return
   }
 
+  const titleCheck = validateYouTubeTitle(title, platforms)
+  if (!titleCheck.ok) {
+    await markFailed(row.id, notion, titleCheck.reason)
+    return
+  }
+
   // Phase 1 of two-phase commit: flip to Scheduling
   await notion.updateRow(row.id, {
     Status: { select: { name: STATUS.SCHEDULING } }
@@ -97,6 +158,8 @@ async function handleReady(row, { notion, pb, accountMap, fetchImpl }) {
   }
   if (scheduledAt) createPayload.scheduled_at = scheduledAt
   if (mediaIds.length) createPayload.media = mediaIds
+  const createConfigs = buildPlatformConfigurations({ caption, platforms, title })
+  if (createConfigs) createPayload.platform_configurations = createConfigs
 
   const created = await pb.createPost(createPayload)
 
@@ -190,6 +253,8 @@ async function retryCreate(row, caption, { notion, pb, accountMap, fetchImpl }) 
   const payload = { caption, social_accounts: mappedAccounts }
   if (scheduledAt) payload.scheduled_at = scheduledAt
   if (mediaIds.length) payload.media = mediaIds
+  const retryConfigs = buildPlatformConfigurations({ caption, platforms, title: extractTitle(row) })
+  if (retryConfigs) payload.platform_configurations = retryConfigs
 
   const created = await pb.createPost(payload)
   const token = computeEditToken(caption, scheduledAt, mappedAccounts, files.map(f => f.name))
@@ -264,6 +329,8 @@ async function maybePropagateEdit(row, postBridgeId, { notion, pb, accountMap })
 
   const patch = { caption, social_accounts: mappedAccounts }
   if (scheduledAt) patch.scheduled_at = scheduledAt
+  const patchConfigs = buildPlatformConfigurations({ caption, platforms, title: extractTitle(row) })
+  if (patchConfigs) patch.platform_configurations = patchConfigs
 
   await pb.updatePost(postBridgeId, patch)
   await notion.updateRow(row.id, {

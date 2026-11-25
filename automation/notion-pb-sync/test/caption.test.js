@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { blocksToCaption, stripSourcesHeader, validateForPlatforms } from '../src/caption.js'
+import { blocksToCaption, stripSourcesHeader, validateForPlatforms, splitLinksForX } from '../src/caption.js'
 
 describe('blocksToCaption', () => {
   it('joins paragraph blocks with double newlines', () => {
@@ -95,5 +95,25 @@ describe('validateForPlatforms', () => {
   it('allows long captions when Twitter not selected', () => {
     const longCaption = 'x'.repeat(500)
     expect(validateForPlatforms(longCaption, ['LinkedIn']).ok).toBe(true)
+  })
+})
+
+describe('splitLinksForX', () => {
+  it('moves full URLs out of the X text and into the first comment', () => {
+    const r = splitLinksForX('Grab the guide here: https://jcgiusto.com/guide')
+    expect(r.text).toBe('Grab the guide here:')
+    expect(r.firstComment).toBe('https://jcgiusto.com/guide')
+  })
+
+  it('catches www. links and bare domains, and keeps trailing punctuation in the text', () => {
+    const r = splitLinksForX('See www.example.com/a. Also jcgiusto.com, thanks')
+    expect(r.text).toBe('See. Also, thanks')
+    expect(r.firstComment).toBe('www.example.com/a\njcgiusto.com')
+  })
+
+  it('leaves text without links untouched and gives no first comment', () => {
+    const r = splitLinksForX('Price is $100M. e.g. not a link')
+    expect(r.text).toBe('Price is $100M. e.g. not a link')
+    expect(r.firstComment).toBeNull()
   })
 })
