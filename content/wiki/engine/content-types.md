@@ -5,7 +5,7 @@ type: concept
 author: juan
 related: [twitter, linkedin, blog, instagram, tiktok, youtube, repurpose, hooks, content-system-decisions, max-wellcopy-playbook]
 created: 2026-04-20
-updated: 2026-11-25
+updated: 2026-11-26
 confidence: high
 ---
 
@@ -85,7 +85,7 @@ Twelve formats taken from how Max Wellcopy works ([[max-wellcopy-playbook]]), re
 - **What it is:** "I studied every $100M DTC brand's checkout so you don't have to." Famous public brands only, outside men's health.
 - **Beats:** Tension title → which brands and why → 3–5 patterns, each with screenshots → where the brands disagree → what a $2–50M brand should copy → guide plug.
 - **Draft hook:** "I studied every $100M DTC brand's checkout so you don't have to."
-- **Platforms:** YouTube long, then 3–5 cut-downs for Reels/TikTok/Shorts, then a LinkedIn free-guide post.
+- **Platforms:** YouTube long, then 3–5 cut-downs for Reels/TikTok/Shorts, then a LinkedIn resource post.
 - **Extra check:** Brand list screened before research starts, not after.
 - **Time:** 12–18 hours (research, script, filming, editing, thumbnail).
 
@@ -100,7 +100,7 @@ Twelve formats taken from how Max Wellcopy works ([[max-wellcopy-playbook]]), re
 ### Free course (mega-class)
 - **What it is:** Several tutorials stitched into one long free CRO course. Only once 4+ tutorials exist.
 - **Beats:** Course title → chapters → each chapter is an existing tutorial.
-- **Platforms:** YouTube long, then a LinkedIn free-guide post.
+- **Platforms:** YouTube long, then a LinkedIn resource post.
 - **Time:** 3–4 hours of stitching, once the tutorials exist.
 
 ### Life-lesson list
@@ -119,13 +119,13 @@ Twelve formats taken from how Max Wellcopy works ([[max-wellcopy-playbook]]), re
 - **Extra check:** If the lesson only makes sense with a work number, drop it.
 - **Time:** 30–45 minutes.
 
-### Free-guide post (comment keyword)
-- **What it is:** A post that gives away a free guide to anyone who comments a keyword. First guide: the 40-point product page audit checklist, keyword AUDIT.
-- **Beats:** Why the guide exists → 3–5 things in it (a preview, not a tease) → "Comment AUDIT and I'll send it."
-- **Draft hook:** "Comment AUDIT and I'll send my 40-point product page checklist."
+### Resource (comment keyword)
+- **What it is:** A post that gives away one of Juan's free resources to anyone who comments a keyword. First resource: the eCom Subscription Checklist (50+ tasks, a Notion list), keyword CHECKLIST.
+- **Beats:** Why the resource exists → 3–5 things in it (a preview, not a tease) → "Comment CHECKLIST and I'll send it."
+- **Draft hook:** "Comment CHECKLIST and I'll send my subscription eCommerce checklist."
 - **Platforms:** LinkedIn (every other Friday), Instagram (automatic DM), X.
-- **Extra check:** The guide link goes to the jcgiusto.com signup page, never straight to the file.
-- **Time:** 30 minutes per post (the guide itself is built once).
+- **Extra check:** The link goes to the resource's jcgiusto.com page (name + email form), never straight to the Notion list. Current page: jcgiusto.com/the-ultimate-subscription-ecommerce-checklist/
+- **Time:** 30 minutes per post (the resource already exists).
 
 ### Contrarian take
 - **What it is:** One belief the audience holds that is wrong, with the math. Comes from the vault (the ROAS draft is one).

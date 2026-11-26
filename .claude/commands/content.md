@@ -123,7 +123,7 @@ If the user says "repurpose [article]", read the raw article from `content/raw/a
 - [ ] Does NOT mention Mars Men, Raheel, Zach Stuck, Benjamin Smith by name
 - [ ] Does NOT discuss Meta Ads tactics, creative strategy, ad spend management, or performance marketing
 - [ ] Does NOT position Juan as an agency founder or mention ASTEROI
-- [ ] Does NOT include CTAs for services, consulting, or agency work. Allowed: the free-guide keyword (sends to the jcgiusto.com signup page) and the MentorPass link.
+- [ ] Does NOT include CTAs for services, consulting, or agency work. Allowed: the resource keyword (sends to the resource's jcgiusto.com page) and the MentorPass link.
 - [ ] Does NOT feature any men's-health, hormone, testosterone or men's-supplement brand (rankings, studies, screenshots, quotes)
 - [ ] Does NOT use "we" in a way that implies an agency team
 - [ ] Every piece teaches something reusable (a framework, data insight, or methodology) -- no pure "look at my cool job" content
@@ -232,7 +232,7 @@ If Juan approves the piece, file it to the Notion Content DB with the **Notion c
 |---|---|
 | `Title` | The hook or working title |
 | `Platform` | One or more of LinkedIn, Twitter, Threads, Instagram, TikTok, YouTube, Blog |
-| `Format` | One of the twelve: Ranking, Pages worth stealing, Checklist, Brand study, Yearly tutorial, Free course, Life-lesson list, Learning diary, Free-guide post, Contrarian take, Quote reaction, Live brand fix |
+| `Format` | One of the twelve: Ranking, Pages worth stealing, Checklist, Brand study, Yearly tutorial, Free course, Life-lesson list, Learning diary, Resource, Contrarian take, Quote reaction, Live brand fix |
 | `Type` | The shape of the post if one fits (Thread, Carousel, Short, YouTube Video, Infographic, Personal Post…) |
 | `Status` | `Drafting` (Juan moves it to `Ready` himself once the media is attached and it passes the platform limits check) |
 | `Date` | The posting slot from the weekly calendar, as a Madrid date and time (`date:Date:is_datetime` = 1). This is the time the scheduler posts at. |

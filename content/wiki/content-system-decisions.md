@@ -6,7 +6,7 @@ author: claude
 sources: [content/raw/research/max-wellcopy-2026-11/playbook.md, content/raw/research/max-wellcopy-2026-11/decisions.md]
 related: [content-strategy, max-wellcopy-playbook, pipeline]
 created: 2026-11-25
-updated: 2026-11-25
+updated: 2026-11-26
 confidence: high
 ---
 
@@ -28,8 +28,9 @@ Grilled 2026-11-25, after the [[max-wellcopy-playbook]] research. Every answer b
 
 | Decision | Answer | Given by |
 |---|---|---|
-| Where keyword comments send people | A signup page on jcgiusto.com | Juan (accepted rec) |
-| First free guide | 40-point product page audit checklist | Juan (accepted rec) |
+| Name of the format | "Resource" (was "Free-guide post"), 2026-11-26 | Juan |
+| Where keyword comments send people | The resource's own jcgiusto.com page, which already asks for name + email | Juan (accepted rec) |
+| First resource | eCom Subscription Checklist (already live, jcgiusto.com/the-ultimate-subscription-ecommerce-checklist/), keyword CHECKLIST. Replaces the planned 40-point product page audit, 2026-11-26 | Juan |
 
 ## Volume and timing
 

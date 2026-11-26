@@ -99,14 +99,14 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 - [x] X recycling and auto self-reply plug: use post-bridge if supported; else propose the cheapest add-on inside budget. (Self-reply = post-bridge first comment, no add-on. No recycling in post-bridge → repost rule runs through `/week-plan`, Task 11.)
 - [x] Deploy to Railway only after Juan approves; ask before commit/PR. (Deployed 2026-11-25 after Juan's yes; runs clean every 5 min, checked 2026-11-26.)
 
-### Task 8: First free guide and email signup
+### Task 8: First resource and email signup
 
-**Files:** Guide PDF (Figma via `/figma-post` or `/visual`); jcgiusto.com signup page; email tool automation; `content/wiki/lead-magnets.md` (author: claude).
+**Changed 2026-11-26:** the format is now called "Resource". The first one is Juan's existing eCom Subscription Checklist (jcgiusto.com/the-ultimate-subscription-ecommerce-checklist/), already behind a name + email form, so no new guide, design or signup page is needed. Obvi (a supplement brand) is named in the checklist — flagged to Juan 2026-11-26, his call.
 
-- [ ] Draft the 40-point product page audit checklist text from vault CRO material (no Mars Men specifics). Juan approves text.
-- [ ] Design it in his brand (purple + grey); Juan approves design.
-- [ ] Find what jcgiusto.com is built on; build the signup page and the delivery email in the chosen email tool. Juan approves page and email copy.
-- [ ] Keyword flow: ManyChat on Instagram (keyword "AUDIT" → DM with link); LinkedIn and X by hand with one saved reply, checked inside the daily 15-minute block.
+**Files:** email tool automation; `content/wiki/lead-magnets.md` (author: claude).
+
+- [ ] Find which email tool the checklist page's form uses and what the delivery email says. Juan confirms it still works.
+- [ ] Keyword flow: ManyChat on Instagram (keyword "CHECKLIST" → DM with link); LinkedIn and X by hand with one saved reply, checked inside the daily 15-minute block.
 - [ ] Test end to end with a test email address Juan supplies.
 - [ ] Record the guide, keyword, link and delivery steps in `lead-magnets.md`.
 
