@@ -3,7 +3,7 @@ title: Content System — What Already Runs (2026-11-25)
 description: Status check for the five-platform system. Scheduler live, all accounts connected, what post-bridge can't do (reposting, long YouTube), tool prices, sync fixes pending deploy.
 author: claude
 created: 2026-11-25
-updated: 2026-11-25
+updated: 2026-11-26
 ---
 
 # What already runs (checked 2026-11-25)
@@ -12,7 +12,7 @@ Build plan: `docs/superpowers/plans/2026-11-25-five-platform-content-system.md`.
 
 ## Works
 - Notion → post-bridge sync is live on Railway (project jcg-content-sync), running every 5 minutes, latest deploy succeeded today.
-- post-bridge has all accounts connected: LinkedIn (Juan Cruz Giusto), X (JCGiusto), Instagram (jc.giusto), TikTok, YouTube, plus Threads (jc.giusto).
+- post-bridge has accounts for LinkedIn (Juan Cruz Giusto), X (JCGiusto), Instagram (jc.giusto), TikTok, YouTube, plus Threads (jc.giusto). As of 2026-11-26 the TikTok and YouTube connections are expired (see video test below).
 - The sync already maps all six accounts. Last posts went out through it on 2026-11-16.
 - Notion Content DB already has platform options Instagram, TikTok, YouTube, Threads, and a Type field (Thread, YouTube Video, Short, Carousel, Resource, Podcast, Authority, Infographic, Personal Post). Statuses: Idea → Researching → Drafting → Ready → Scheduling → Scheduled → Published / Failed.
 - Notion Content DB (2026-11-25, Task 5): new fields Format (the twelve formats), Source piece / Versions (two-way link from each platform version to its source), Views, Comments, Saves, Follows, Signups. Spotify platform removed (unused); Blog kept. No separate Slot field — the Date field is the posting time, because the scheduler reads it. New view "This week" (next 7 days, board; switch its date grouping to Day by hand in Notion).
@@ -21,7 +21,7 @@ Build plan: `docs/superpowers/plans/2026-11-25-five-platform-content-system.md`.
 
 ## Missing or broken
 - The local Notion key in `content/.notion-config.json` is rejected ("token is invalid"). Juan's call (2026-11-25): don't renew it — use the Notion connector (MCP tools) for all Notion work, including schema changes and filing drafts. `/content` STEP 6 now files through the connector (done 2026-11-25). The Railway sync has its own key and is unaffected.
-- Video posting (Reels, TikTok, Shorts) through the sync has never been tested. Test pending: needs a short clip from Juan.
+- Video test (2026-11-26, one 53 s vertical MP4 sent straight to post-bridge with the sync's own client, not via a Notion row): **Instagram Reel worked** (instagram.com/reel/DgM8akAq0Ja, public). **TikTok failed** ("refresh token is invalid or expired") and **YouTube failed** ("invalid_grant"): both account connections in post-bridge have expired. Juan has to reconnect TikTok and YouTube in post-bridge, then re-run the test for those two (TikTok `privacy_status: private`; YouTube has no private switch, so use `publish_at` far in the future and delete after). The sync itself still doesn't send TikTok privacy or YouTube `publish_at`.
 - Not yet known: which post-bridge plan Juan is on.
 - Threads: Juan decided (2026-11-25) it gets a copy of every X post.
 
