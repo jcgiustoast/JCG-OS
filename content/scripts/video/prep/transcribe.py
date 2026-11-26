@@ -39,5 +39,5 @@ def transcribe(path: Path, model: str = "small", language: str = "en") -> list[W
         for w in seg.words or []:
             text = w.word.strip()
             if text:
-                words.append(Word(text, round(w.start, 3), round(w.end, 3)))
+                words.append(Word(text, round(float(w.start), 3), round(float(w.end), 3)))
     return words
