@@ -24,5 +24,6 @@
     "maxWidth": 486,
     "fontSize": 41,
     "lineHeight": 1.18
-  }
+  },
+  "cut": { "blendFrames": 2, "blendMaxRemoved": 0.5 }
 }
