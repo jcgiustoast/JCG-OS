@@ -40,7 +40,7 @@ Not this skill: exporting PNG/PDF or posting; writing the caption (`/content`); 
 ## The steps
 
 ### 1. Read the input
-A post or draft: use it. A topic only: ask once, e.g. **"Do you want me to draft the key points?"** plus one recommendation sentence. Take numbers and claims only from what Juan gave you, in the currency he used ($ stays $, € stays €; never convert).
+A post or draft of Juan's: use it. A topic only: ask him for his text (a post, an article or a few bullets) and stop. Never draft the key points for him (Juan writes his content, 2026-11-26). Put his sentences on the slides: cut and shorten, add nothing. Take numbers and claims only from what Juan gave you, in the currency he used ($ stays $, € stays €; never convert).
 
 ### 2. Suggest the type — checkpoint
 - **Carousel:** several separate points, or a story in steps.
