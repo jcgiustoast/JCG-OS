@@ -4,18 +4,20 @@ description: Sunday review of last week's posts — read the numbers on each pla
 
 Weekly results review for the five-platform content system. Run it on Sunday, BEFORE `/week-plan` (the plan uses what this finds). READ-ONLY until Juan approves a shown list of writes.
 
-Today is {{date}}. "Last week" = Monday to Sunday of the week that ends today (Madrid time).
+Today is {{date}}. "Last week" = the most recent Monday-to-Sunday week that has ended, counting today if today is Sunday (Madrid time). Run on another day, it is the week that ended last Sunday.
 
 ## Before you start
 
 - Notion ONLY through the Notion connector (`notion-*` MCP tools; load with ToolSearch). Never `content/.notion-config.json` or `content/scripts/`.
-- Content table: `collection://36aeedc9-595f-81f9-88f2-000b60546d69`. Never write Post Bridge ID, Last Sync At, Synced Edit Token or Published URLs.
+- Content table: `collection://36aeedc9-595f-81f9-88f2-000b60546d69`. Never write Post Bridge ID, Last Sync At, Synced Edit Token or Published URLs. X is called "Twitter" in the Platform field.
 - Numbers are read in Juan's Chrome with Claude in Chrome (`mcp__claude-in-chrome__*`; load the core set in one ToolSearch call). Work in a new tab. If a platform shows a sign-in page, ask Juan to sign in. Don't switch browsers.
 - Talk to Juan in plain words (CLAUDE.md "Plain Speech"): say "the Monday ranking video", not a row ID.
 
 ## Steps
 
-1. **Find last week's posts.** Query the content table: Status = Published, Date within last week. For each row keep: title, platform, format, type, Date, Published URLs, Source piece. If there are none, say so in one line, skip to step 8 and log a quiet week.
+1. **Find last week's posts.** Query the content table: Status = Published, Date within last week. For each row keep: title, platform, format, type, Date, Published URLs, Source piece. If there are none:
+   - no row in the table has ever been Published → say in one line that nothing has gone out yet, and stop. No log entry.
+   - something was published before, just not last week → say so in one line, skip to step 8 and log a quiet week (only the Posts line, "Posts: 0", and the Cut proposal line).
 2. **Read the numbers.** Open each Published URL in Chrome and read what the platform shows:
 
    | Platform | Where | Views | Comments | Saves | Follows |
@@ -42,7 +44,7 @@ Today is {{date}}. "Last week" = Monday to Sunday of the week that ends today (M
 8. **Log entry.** Draft:
 
    ```
-   ## [YYYY-MM-DD] session | Weekly review — week N
+   ## [YYYY-MM-DD] session | Weekly review — week N   (if "Ramp week one starts" isn't set yet, use the dates: "week of DD Mon")
    - Posts: <count> across <platforms>
    - Best: <post> — <why>
    - Worst: <post> — <why>

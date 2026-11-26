@@ -4,12 +4,12 @@ description: Sunday plan for next week's five-platform posts — fill each slot 
 
 Weekly plan for the five-platform content system. Run it on Sunday, AFTER `/week-review`. READ-ONLY until Juan approves a shown list of writes.
 
-Today is {{date}}. "Next week" = the Monday to Sunday that starts tomorrow (Madrid time).
+Today is {{date}}. "Next week" = the next Monday to Sunday (Madrid time). On a Sunday that is the week starting tomorrow.
 
 ## Before you start
 
 - Notion ONLY through the Notion connector (`notion-*` MCP tools; load with ToolSearch). Never `content/.notion-config.json` or `content/scripts/`.
-- Content table: `collection://36aeedc9-595f-81f9-88f2-000b60546d69`. Never write Post Bridge ID, Last Sync At, Synced Edit Token or Published URLs. The Date field is the posting time, and the scheduler reads it.
+- Content table: `collection://36aeedc9-595f-81f9-88f2-000b60546d69`. Never write Post Bridge ID, Last Sync At, Synced Edit Token or Published URLs. The Date field is the posting time, and the scheduler reads it. X is called "Twitter" in the Platform field.
 - Read: the weekly calendar and ramp in `content/wiki/content-strategy.md` (Phase 1 "Channels & Cadence"); formats and time per format in `content/wiki/engine/content-types.md`; chains and winners-come-back rules in `content/wiki/engine/repurpose.md`; this week's `/week-review` entry at the top of `content/memory/log.md` (if it's missing, say so and plan without it).
 - Ideas come from Juan. Never invent topics to fill a slot.
 - Talk to Juan in plain words (CLAUDE.md "Plain Speech"): "Monday's LinkedIn carousel", not a slot code.
@@ -27,13 +27,24 @@ Today is {{date}}. "Next week" = the Monday to Sunday that starts tomorrow (Madr
    | 4 and after | Full calendar: YouTube long on Tuesday, Resource post on LinkedIn every other Friday |
 
    Show this row to Juan as part of the plan, so he can change it.
-3. **Ideas and the brand check.** Query all rows with Status = Idea (title, notes, format, platform, created). For every brand or person named in an idea, check the hard limits:
+3. **Ideas and the brand check.** Query all rows with Status = Idea (title, notes, format, type, platform, created), then fetch each idea's page: brands, sources and framing rules are often only in the page text. Rows with the same title are one idea already split by platform: place each row on its own platform and don't plan new sister rows for platforms it already has. Rows on Blog have no weekly slot; list them apart as "for the monthly jcgiusto.com piece". For every brand or person named in an idea, check the hard limits:
    - no Mars Men numbers, tests or implementations;
    - no ASTEROI client names or numbers;
    - no men's-health, hormone, testosterone or men's-supplement brands in rankings or studies;
    - no Meta ads, creative or ad-spend advice.
-   If you aren't sure what a brand sells, look it up before placing it. A flagged idea gets no slot. List it with the reason.
-4. **Fill the slots.** Match each slot to an idea whose format fits. If an idea has no format, suggest one from `content-types.md`. Give the stronger slots (Monday, Wednesday, the video slots) to the formats that did best in the review. Oldest ideas go first when two fit equally. For each slot, list its sister versions from the chains: a carousel → LinkedIn PDF, Instagram the next morning, X images; a video → Reel, TikTok, Short. Check each sister against the platform limits table before planning it.
+   If you aren't sure what a brand sells, look it up before placing it. A flagged idea gets no slot. List it with the reason. If its page already carries a framing rule meant to keep it inside the limits (for example "share the belief, never the number or the implementation"), quote that rule next to it, so Juan can clear it himself.
+4. **Fill the slots.** Match each slot to an idea whose format fits. If an idea has no format, suggest one from `content-types.md`. Some slots have no Format option in Notion; for those, set Type instead and leave Format empty:
+
+   | Slot | Set in Notion |
+   |---|---|
+   | LinkedIn long personal post | Type = Personal Post |
+   | LinkedIn long framework post | Type = Authority |
+   | X list post | Type = Thread |
+   | X lesson I learned | Format = Learning diary |
+   | X screenshot of a page worth stealing | Format = Pages worth stealing |
+   | X quick fix | Nothing; say so in the plan |
+
+   Give the stronger slots (Monday, Wednesday, the video slots) to the formats that did best in the review. Oldest ideas go first when two fit equally. For each slot, list its sister versions from the chains: a carousel → LinkedIn PDF, Instagram the next morning, X images; a video → Reel, TikTok, Short. Check each sister against the platform limits table before planning it.
 5. **Empty slots.** List every slot with no fitting idea, and ask Juan for ideas: `Give me ideas for these and I'll place them.`
 6. **Filming list.** Every vertical video of the week, plus the YouTube long from week 4, in shooting order for one sitting: the idea, the format and what to have ready (screenshots from the brand's live site, the script).
 7. **Hours.** Add up the time per format for every planned piece (sisters made from the same file add only caption time). Compare with the ramp week's hours (week 1: 8–10, week 2: 13–16, week 3: 20–25, week 4: 27–37). If it's over, say what to drop.
@@ -56,7 +67,7 @@ Then ask: `Write these dates and formats to Notion, and copy the winners?`
 
 ## On Juan's yes
 
-- For each placed idea: set Date (the slot's posting time, Madrid) and Format on its row. Status stays Idea. `/content` drafts it and creates the sister rows.
+- For each placed idea: set Date (the slot's posting time, Madrid) and Format (or Type, per the table in step 4) on its row. Status stays Idea. `/content` drafts it and creates the sister rows.
 - For each approved winner: create a new row with the same Title, Platform, Format, Type and page text, a new Date, Status Drafting, and Notes "Repost of <old row link>". If the Media files can't be copied through the connector, say so; Juan re-attaches them. Clear "Can come back on" on the old row. Flag LinkedIn reposts: they need a new first line before they're marked Ready.
 - Report what was written, with links.
 
