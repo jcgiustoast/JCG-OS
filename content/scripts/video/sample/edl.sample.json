@@ -1,0 +1,97 @@
+{
+ "format": "ranking",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "video": "job/face.mp4",
+ "duration": 6.0,
+ "safe": {
+  "x": 60,
+  "y": 260,
+  "w": 880,
+  "h": 1220
+ },
+ "caption": {
+  "x": 514,
+  "y": 1310,
+  "w": 426,
+  "h": 170
+ },
+ "spans": [
+  {
+   "srcStart": 0.5,
+   "srcEnd": 3.5,
+   "outStart": 0.0
+  },
+  {
+   "srcStart": 4.0,
+   "srcEnd": 7.0,
+   "outStart": 3.0
+  }
+ ],
+ "items": [
+  {
+   "score": 1,
+   "shot": "job/shots/1.png",
+   "layout": "tall",
+   "box": {
+    "x": 65,
+    "y": 551,
+    "w": 421,
+    "h": 702
+   },
+   "crop": false,
+   "imgW": 1080,
+   "imgH": 1800,
+   "outStart": 0.0,
+   "outEnd": 3.0,
+   "redact": [
+    {
+     "x": 60,
+     "y": 1180,
+     "w": 420,
+     "h": 150
+    }
+   ],
+   "badge": {
+    "right": 510,
+    "top": 498,
+    "h": 106
+   }
+  },
+  {
+   "score": 10,
+   "shot": "job/shots/2.png",
+   "layout": "tall",
+   "box": {
+    "x": 65,
+    "y": 313,
+    "w": 421,
+    "h": 1167
+   },
+   "crop": true,
+   "imgW": 1080,
+   "imgH": 6000,
+   "outStart": 3.0,
+   "outEnd": 6.0,
+   "redact": [],
+   "badge": {
+    "right": 510,
+    "top": 260,
+    "h": 106
+   }
+  }
+ ],
+ "captions": [
+  {
+   "text": "adding a little bit of branding to it",
+   "outStart": 0.0,
+   "outEnd": 3.0
+  },
+  {
+   "text": "and this one is a 10 out of 10",
+   "outStart": 3.0,
+   "outEnd": 6.0
+  }
+ ]
+}

@@ -33,3 +33,9 @@ content/raw/research/max-wellcopy-2026-11/**
 !content/raw/research/max-wellcopy-2026-11/*.py
 !content/raw/research/max-wellcopy-2026-11/*/
 !content/raw/research/max-wellcopy-2026-11/*/findings.md
+
+# Short-video editor — job folders hold large raw/rendered files
+content/video/
+content/scripts/video/node_modules/
+content/scripts/video/public/job/
+content/scripts/video/out/

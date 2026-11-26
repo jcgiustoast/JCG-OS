@@ -1,0 +1,29 @@
+{
+  "_about": "The ranking short's layout, in px of the 1080x1920 frame. ONE source for prep/edl.py (places the screenshot, badge and caption boxes) and the Remotion look (sizes, colours). safe = margins Instagram Reels and TikTok cover with their buttons, username, description and top bar; everything we draw stays inside them. Numbers are the strictest of: TikTok 108 top / 320 bottom / 60 left / 120 right; Reels 220 top / 420 bottom (Ignite Social Media) and 210 / 310 / 84 right (Adaptly 2026); cross-platform 900x1400 centred (260 top). Plus a little extra at the bottom for two-line descriptions.",
+  "frame": { "width": 1080, "height": 1920, "fps": 30 },
+  "safe": { "top": 260, "bottom": 440, "left": 60, "right": 140 },
+  "column": {
+    "x": 65,
+    "width": 421,
+    "wideWidth": 508,
+    "tallCentre": 0.47,
+    "fitMin": 0.75
+  },
+  "badge": {
+    "height": 106,
+    "minWidth": 173,
+    "overhang": 24,
+    "radius": 14,
+    "padX": 18,
+    "fontScale": 0.62,
+    "purple": "#B084D3"
+  },
+  "caption": {
+    "gapToShot": 28,
+    "height": 170,
+    "maxWidth": 486,
+    "fontSize": 41,
+    "lineHeight": 1.18
+  },
+  "cut": { "blendFrames": 2, "blendMaxRemoved": 0.5 }
+}
