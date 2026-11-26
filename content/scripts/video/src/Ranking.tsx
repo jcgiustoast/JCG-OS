@@ -33,7 +33,7 @@ export const Ranking: React.FC<EdlProps> = (edl) => {
           </React.Fragment>
         );
       })}
-      <Captions captions={edl.captions} fps={fps} width={width} height={height} />
+      <Captions captions={edl.captions} items={edl.items} fps={fps} width={width} height={height} />
     </AbsoluteFill>
   );
 };
