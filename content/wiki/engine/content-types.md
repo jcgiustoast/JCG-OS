@@ -62,8 +62,8 @@ Twelve formats taken from how Max Wellcopy works ([[max-wellcopy-playbook]]), re
 - **Beats:** Name the thing being ranked → the worst one, with its score in the first 3 seconds → each next one, one reason per score → the 10/10 → "Agree?" or the guide keyword.
 - **Draft hook:** "Ranking subscribe-and-save offers from 0/10 to 10/10."
 - **Platforms:** Reel + TikTok + Short (one file), LinkedIn carousel.
-- **Extra check:** Every brand on screen is a public brand outside men's health. Screenshots from Juan's own swipe folder.
-- **Time:** About 1.5 hours a video once the swipes exist.
+- **Extra check:** Every brand on screen is a public brand outside men's health. Screenshots are taken from the brand's live site when the post is written.
+- **Time:** About 1.5 hours a video, plus taking the screenshots.
 
 ### Pages worth stealing (10/10 to steal)
 - **What it is:** The best product pages, landing pages or upsells Juan saw this week, framed as things to copy.
@@ -71,7 +71,7 @@ Twelve formats taken from how Max Wellcopy works ([[max-wellcopy-playbook]]), re
 - **Draft hook:** "10/10 product pages I'd steal in 2026."
 - **Platforms:** X image, Instagram carousel, TikTok.
 - **Extra check:** Same brand screen as rankings.
-- **Time:** 30–45 minutes once the swipes exist.
+- **Time:** 30–45 minutes, plus taking the screenshots.
 
 ### Checklist (non-negotiables)
 - **What it is:** A short list of things every DTC brand must have in one area. Product page, subscription checkout, A/B test hygiene.

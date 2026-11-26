@@ -5,7 +5,7 @@ type: concept
 author: juan
 related: [hooks, brand-voice, platform-tone, content-types, twitter, linkedin, blog, instagram, tiktok, youtube]
 created: 2026-04-20
-updated: 2026-11-25
+updated: 2026-11-26
 confidence: high
 ---
 
@@ -65,7 +65,7 @@ Paths A and B still decide where a written idea starts. These four chains cover 
 
 ### Chain E: One YouTube long video → many pieces
 - **Source:** A brand study or yearly tutorial.
-- **Goes to:** 3–5 cut-downs (each becomes a Chain C video), one LinkedIn free-guide post built on it, one X list post of the main findings.
+- **Goes to:** 3–5 cut-downs (each becomes a Chain C video), one LinkedIn resource post built on it, one X list post of the main findings.
 - **What changes:** Each cut-down is one finding with its own hook. Not a trailer for the long video.
 - **Timing:** Cut-downs spread over the 2 weeks after the long video.
 
