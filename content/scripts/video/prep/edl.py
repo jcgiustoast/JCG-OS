@@ -7,20 +7,40 @@ from pathlib import Path
 
 from .captions import make_captions
 from .cuts import keep_spans, to_out, total
-from .media import FPS, HEIGHT, WIDTH, image_size, probe
+from .media import FPS, HEIGHT, WIDTH, detect_silences, image_size, probe
 from .scores import ScoreHit, find_scores
 from .words import Word
 
 SHOT_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
 
-# layout, in px of the 1080x1920 frame (see the plan's Global Constraints)
-COL_X = round(0.06 * WIDTH)  # 65
-TALL_W = round(0.39 * WIDTH)  # 421 (6% -> 45%)
-WIDE_W = round(0.47 * WIDTH)  # 508
-WIDE_Y = 230
-BAND_TOP = round(0.05 * HEIGHT)  # 96
-BAND_BOTTOM = int(0.96 * HEIGHT)  # 1843
-TALL_CENTRE = 0.47 * HEIGHT
+# Layout numbers live in ONE file, shared with the Remotion look (src/layout.ts).
+LAYOUT = json.loads((Path(__file__).resolve().parents[1] / "layout.json").read_text(encoding="utf-8"))
+_safe, _col, _badge, _cap = LAYOUT["safe"], LAYOUT["column"], LAYOUT["badge"], LAYOUT["caption"]
+
+# safe area: what Reels/TikTok buttons, username, description and top bar leave clear
+SAFE_X0 = _safe["left"]  # 60
+SAFE_X1 = WIDTH - _safe["right"]  # 940
+SAFE_Y0 = _safe["top"]  # 260
+SAFE_Y1 = HEIGHT - _safe["bottom"]  # 1480
+SAFE = {"x": SAFE_X0, "y": SAFE_Y0, "w": SAFE_X1 - SAFE_X0, "h": SAFE_Y1 - SAFE_Y0}
+
+BADGE_H = _badge["height"]  # 106
+BADGE_OVERHANG = _badge["overhang"]  # badge's right edge sits this far past the shot's
+
+COL_X = _col["x"]  # 65
+TALL_W = _col["width"]  # 421
+WIDE_W = _col["wideWidth"]  # 508
+BAND_TOP = SAFE_Y0 + BADGE_H // 2  # 313: the badge straddles the shot's top edge
+BAND_BOTTOM = SAFE_Y1  # 1480
+TALL_CENTRE = _col["tallCentre"] * HEIGHT
+FIT_MIN = _col["fitMin"]  # shrink a too-tall shot to fit if that keeps >= 75% width; else crop
+
+CAPTION_BOX = {
+    "x": COL_X + TALL_W + _cap["gapToShot"],
+    "y": SAFE_Y1 - _cap["height"],
+    "w": min(_cap["maxWidth"], SAFE_X1 - (COL_X + TALL_W + _cap["gapToShot"])),
+    "h": _cap["height"],
+}
 CAPTION_BRIDGE = 0.4  # hold a caption over short silences so it doesn't flicker
 
 
@@ -62,17 +82,33 @@ def item_cut(words: list[Word], hit: ScoreHit, lookback: float = 2.5, min_index:
 
 
 def _layout(img_w: int, img_h: int) -> dict:
+    band = BAND_BOTTOM - BAND_TOP
     if img_h > img_w:
         h = round(TALL_W * img_h / img_w)
-        band = BAND_BOTTOM - BAND_TOP
-        if h > band:
-            return {"layout": "tall", "crop": True,
-                    "box": {"x": COL_X, "y": BAND_TOP, "w": TALL_W, "h": band}}
-        y = round(TALL_CENTRE - h / 2)
-        y = min(max(y, BAND_TOP), BAND_BOTTOM - h)
-        return {"layout": "tall", "crop": False, "box": {"x": COL_X, "y": y, "w": TALL_W, "h": h}}
-    h = round(WIDE_W * img_h / img_w)
-    return {"layout": "wide", "crop": False, "box": {"x": COL_X, "y": WIDE_Y, "w": WIDE_W, "h": h}}
+        if h <= band:
+            y = round(TALL_CENTRE - h / 2)
+            y = min(max(y, BAND_TOP), BAND_BOTTOM - h)
+            box = {"x": COL_X, "y": y, "w": TALL_W, "h": h}
+            return {"layout": "tall", "crop": False, "box": box, "badge": _badge_for(box)}
+        if band / h >= FIT_MIN:  # a little too tall: shrink it to fit, show all of it
+            box = {"x": COL_X, "y": BAND_TOP, "w": round(band * img_w / img_h), "h": band}
+            return {"layout": "tall", "crop": False, "box": box, "badge": _badge_for(box)}
+        box = {"x": COL_X, "y": BAND_TOP, "w": TALL_W, "h": band}  # very long page: its top part
+        return {"layout": "tall", "crop": True, "box": box, "badge": _badge_for(box)}
+    h = min(round(WIDE_W * img_h / img_w), band)
+    box = {"x": COL_X, "y": BAND_TOP, "w": WIDE_W, "h": h}
+    return {"layout": "wide", "crop": False, "box": box, "badge": _badge_for(box)}
+
+
+def _badge_for(box: dict) -> dict:
+    """Score badge on the screenshot's top-right corner: straddles its top edge,
+    right edge a little past the shot's, so it follows the shot and stays off the face.
+    The box grows leftwards for "10/10"."""
+    return {
+        "right": box["x"] + box["w"] + BADGE_OVERHANG,
+        "top": box["y"] - BADGE_H // 2,
+        "h": BADGE_H,
+    }
 
 
 def _load_redact(shots_dir: Path) -> dict:
@@ -82,7 +118,10 @@ def _load_redact(shots_dir: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def build_ranking_edl(job: Path, words: list[Word]) -> dict:
+def build_ranking_edl(
+    job: Path, words: list[Word], silences: list[tuple[float, float]] | None = None
+) -> dict:
+    """`silences`: quiet stretches of face.mp4 (seconds); measured from its audio when None."""
     job = Path(job)
     shots = list_shots(job / "shots")
     hits = find_scores(words)
@@ -100,7 +139,9 @@ def build_ranking_edl(job: Path, words: list[Word]) -> dict:
 
     face = job / "face.mp4"
     duration = probe(face)["duration"] if face.exists() else None
-    spans = keep_spans(words, duration=duration)
+    if silences is None:
+        silences = detect_silences(face) if face.exists() else []
+    spans = keep_spans(words, duration=duration, silences=silences)
     out_total = round(total(spans), 3)
 
     cuts: list[int] = []
@@ -145,6 +186,8 @@ def build_ranking_edl(job: Path, words: list[Word]) -> dict:
         "height": HEIGHT,
         "video": "job/face.mp4",
         "duration": out_total,
+        "safe": SAFE,
+        "caption": CAPTION_BOX,
         "spans": [
             {"srcStart": s.src_start, "srcEnd": s.src_end, "outStart": s.out_start} for s in spans
         ],

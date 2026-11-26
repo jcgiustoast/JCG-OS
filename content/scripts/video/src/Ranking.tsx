@@ -10,7 +10,7 @@ import { FaceTrack } from "./parts/FaceTrack";
 import { Shot } from "./parts/Shot";
 
 export const Ranking: React.FC<EdlProps> = (edl) => {
-  const { fps, width, height } = edl;
+  const { fps, width } = edl;
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       <FaceTrack video={edl.video} spans={edl.spans} fps={fps} />
@@ -27,13 +27,13 @@ export const Ranking: React.FC<EdlProps> = (edl) => {
             )}
             {end > badgeFrom && (
               <Sequence from={badgeFrom} durationInFrames={end - badgeFrom} layout="none">
-                <Badge score={item.score} width={width} height={height} />
+                <Badge score={item.score} anchor={item.badge} width={width} />
               </Sequence>
             )}
           </React.Fragment>
         );
       })}
-      <Captions captions={edl.captions} items={edl.items} fps={fps} width={width} height={height} />
+      <Captions captions={edl.captions} box={edl.caption} fps={fps} />
     </AbsoluteFill>
   );
 };

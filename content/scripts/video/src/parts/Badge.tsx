@@ -1,41 +1,42 @@
 // The score badge: black rounded box, white score, purple "/10".
-// Position and minimum size are fixed fractions of the frame; a two-digit
-// score ("10/10") lets the box grow to the right instead of shrinking the text.
+// Anchored to its screenshot's top-right corner (prep/edl.py works out where),
+// so it follows the screenshot and stays off the face. A two-digit score
+// ("10/10") makes the box grow to the left instead of shrinking the text.
 import React from "react";
+import { BadgeAnchor } from "../edl";
 import { BADGE_FONT } from "../fonts";
+import { LAYOUT } from "../layout";
 
-const PURPLE = "#B084D3";
-
-export const Badge: React.FC<{ score: number; width: number; height: number }> = ({
+export const Badge: React.FC<{ score: number; anchor: BadgeAnchor; width: number }> = ({
   score,
+  anchor,
   width,
-  height,
 }) => {
-  const boxH = Math.round(0.055 * height);
+  const { minWidth, radius, padX, fontScale, purple } = LAYOUT.badge;
   return (
     <div
       style={{
         position: "absolute",
-        left: Math.round(0.68 * width),
-        top: Math.round(0.26 * height),
-        minWidth: Math.round(0.16 * width),
-        height: boxH,
-        padding: "0 18px",
+        right: width - anchor.right,
+        top: anchor.top,
+        minWidth,
+        height: anchor.h,
+        padding: `0 ${padX}px`,
         boxSizing: "border-box",
         background: "#000",
-        borderRadius: 14,
+        borderRadius: radius,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         fontFamily: BADGE_FONT,
         fontWeight: 500,
-        fontSize: Math.round(boxH * 0.62),
+        fontSize: Math.round(anchor.h * fontScale),
         lineHeight: 1,
         whiteSpace: "nowrap",
       }}
     >
       <span style={{ color: "#fff" }}>{score}</span>
-      <span style={{ color: PURPLE }}>/10</span>
+      <span style={{ color: purple }}>/10</span>
     </div>
   );
 };

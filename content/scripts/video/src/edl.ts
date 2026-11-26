@@ -5,11 +5,15 @@ export type Box = { x: number; y: number; w: number; h: number };
 
 export type Span = { srcStart: number; srcEnd: number; outStart: number };
 
+// Score badge anchor (px): right edge and top; it grows leftwards for "10/10".
+export type BadgeAnchor = { right: number; top: number; h: number };
+
 export type Item = {
   score: number;
   shot: string;
   layout: "tall" | "wide";
   box: Box;
+  badge: BadgeAnchor;
   crop: boolean;
   imgW: number;
   imgH: number;
@@ -27,6 +31,8 @@ export type Edl = {
   height: number;
   video: string;
   duration: number;
+  safe: Box; // area Reels/TikTok overlays leave clear; everything drawn stays inside
+  caption: Box; // where caption text sits (bottom-aligned), clear of every screenshot
   spans: Span[];
   items: Item[];
   captions: Caption[];
