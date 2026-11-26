@@ -136,9 +136,13 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 
 ### Task 12: Week-one batch
 
-- [ ] Run `/week-plan` for week one of the ramp: LinkedIn 3, X 1–2/day, first carousel.
+- [ ] Run `/week-plan` for week one of the v2 ramp (spec 2026-11-26).
 - [ ] Draft each piece with `/content`, run `/humanize`, Juan approves each; file to Notion as Ready with Slots.
 - [ ] Confirm each scheduled post shows in post-bridge.
+
+Open items:
+- [ ] Resources hub page on jcgiusto.com listing every resource (one-off; separate site task).
+- [ ] One short resource per topic, starting with a product page checklist for weeks 3–4.
 
 ---
 
