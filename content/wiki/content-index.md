@@ -3,7 +3,7 @@ title: Content Wiki Index
 description: Master catalog of content strategy, published content, topics under exploration, and research. Bridges to life/wiki/strategy for business phase context. Operational layer (ideas, drafts, pipeline, reference posts) lives in Notion.
 type: index
 created: 2026-04-06
-updated: 2026-11-25
+updated: 2026-11-26
 confidence: high
 ---
 
@@ -51,6 +51,7 @@ Extracted from `/content` command on 2026-04-20 so voice, platform rules, hooks,
 - [[engine/hooks]] — Five hook formulas codified from Juan's signature moves. Economics Reveal, Contrarian Premise, Framework-First, Specificity, Credential Anchor (Phase 1 only). Plus ten patterns from Max Wellcopy (rankings, worth stealing, so-you-don't-have-to, comment keyword…). Fit matrix across six platforms.
 - [[engine/repurpose]] — Two-path chain (Path A framework-heavy → seed blog/LinkedIn; Path B hot-take → seed Twitter). Reverses the generic "X-first" default because Juan's Economics Reveal needs math room. Plus five-platform chains: one video → Reel + TikTok + Short; one carousel → LinkedIn + Instagram + X; YouTube long → cut-downs; X winners re-posted.
 - [[engine/content-types]] — Format catalog (short take, thread, narrative post, long-form article, case study) plus twelve five-platform formats (ranking, checklist, brand study, tutorial, free-guide post…). Platform limits table, checked on the platforms' own help pages 2026-11-25.
+- [[engine/templates]] — The two carousel templates as Figma kits that fit the copy: X-post look on Max's dark grey with the blue tick (quick tactics) and the "space" designed deck (brand studies). Thumbnail, Reel and YouTube description to come.
 
 ### Audience
 - [[audience/operators]] — Primary audience. CMOs/Heads of eComm/VPs of Growth at 7-9 fig DTC brands. Finance-literate. Want math, frameworks, systems.

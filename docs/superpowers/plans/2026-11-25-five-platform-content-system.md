@@ -114,7 +114,7 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 
 **Files:** Figma Contenido file (via `/figma-post`); `content/wiki/engine/templates.md` (author: claude).
 
-- [ ] Carousel card in the post-style look, purple + grey, all three sizes. Agree design + text with Juan before building (memory `feedback-visuals-align-and-airy.md`).
+- [x] Carousel templates, all three sizes (done 2026-11-26): two Figma kits of slide kinds that fit each post's copy, the X-post look on Max's #111 with the blue tick (quick tactics) and the "space" designed deck (brand studies). Looks picked by Juan from Figma variants; see `content/wiki/engine/templates.md`.
 - [ ] YouTube thumbnail template (product shot + one number badge). Juan approves.
 - [ ] Reel template spec for CapCut/Captions: caption style, score sticker for rankings, intro length, end card. Juan saves it in the app.
 - [ ] YouTube description + pinned comment text template (signup link, MentorPass link). Juan approves.
