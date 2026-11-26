@@ -1,0 +1,23 @@
+{
+  "name": "short-video",
+  "version": "1.0.0",
+  "description": "Remotion renderer for the short-video editor (reads edl.json from make_short.py)",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "still": "remotion still src/index.ts Ranking",
+    "render": "remotion render src/index.ts Ranking"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@remotion/cli": "4.0.547",
+    "@remotion/fonts": "4.0.547",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.547"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.3",
+    "typescript": "7.0.2"
+  },
+  "private": true
+}
