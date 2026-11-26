@@ -31,12 +31,33 @@ Grilled 2026-11-25, after the [[max-wellcopy-playbook]] research. Every answer b
 | Name of the format | "Resource" (was "Free-guide post"), 2026-11-26 | Juan |
 | Where keyword comments send people | The resource's own jcgiusto.com page, which already asks for name + email | Juan (accepted rec) |
 | First resource | eCom Subscription Checklist (already live, jcgiusto.com/the-ultimate-subscription-ecommerce-checklist/), keyword CHECKLIST. Replaces the planned 40-point product page audit, 2026-11-26 | Juan |
+| Keyword Reel | One of the four weekly videos (Friday of week B), not a fifth. Each new keyword needs its automatic DM set up before it posts, 2026-11-26 | Juan (approved default) |
+
+### Resources and keywords
+
+Every keyword a Resource has ever used. `/week-plan` reads this first; add a row when a week B brings a new keyword.
+
+| Resource | Topic | Page | Keyword | First used | Automatic DM set up |
+|---|---|---|---|---|---|
+| eCom Subscription Checklist | Subscriptions | jcgiusto.com/the-ultimate-subscription-ecommerce-checklist/ | CHECKLIST | ramp week 1 | not yet (ramp week 2) |
+| Product page checklist | Product pages | not built yet: Juan builds it in ramp week 4, ready before week 5's Friday | Juan picks | ramp week 4 | not yet |
+
+### Topic cycle
+
+Which topic runs when. `/week-plan` reads this before Notion. Dates fill in once "Ramp week one starts" is set.
+
+| Topic | Ramp weeks | Starts Monday | Week A | Week B | Resource | Keyword |
+|---|---|---|---|---|---|---|
+| Subscriptions | 1–3 (ramp, no A/B) | (week 1) | – | – | eCom Subscription Checklist | CHECKLIST |
+| Product pages | 4–5 | (week 4) | 4 (first YouTube video) | 5 (first Resource post) | Product page checklist | Juan picks |
+| Checkout | 6–7 | (week 6) | 6 | 7 | to build | – |
+| A/B testing | 8–9 | (week 8) | 8 | 9 | to build | – |
 
 ## Volume and timing
 
 | Decision | Answer | Given by |
 |---|---|---|
-| Hours by the end of month one | 27–37 a week, YouTube included | Juan |
+| Hours by the end of month one | 27–37 a week, YouTube included. That is the most Juan can spend; the hours table in [[content-strategy]] counts every piece and says what drops first, 2026-11-26 | Juan |
 | When YouTube starts | Week four, following the playbook's ramp | Juan (follows from hours) |
 | How often YouTube | One long video every week from week four, so two per two-week topic (kept weekly over one-per-topic), 2026-11-26 | Juan |
 | Weekends | Sunday post on X, plus the daily Instagram story (kept on Sundays, 2026-11-25). Nothing else on weekends. | Juan |
@@ -45,7 +66,12 @@ Grilled 2026-11-25, after the [[max-wellcopy-playbook]] research. Every answer b
 | Screenshots | (a) A real brand's page (product page, subscribe box, checkout, cart drawer, upsell) + Juan's 1–2 line verdict; Claude finds the pages in Chrome and takes the screenshots. (b) A list Juan types in his phone's notes and screenshots. Never client or Mars Men numbers. 2026-11-26 | Juan |
 | Framework carousels | Weekly, starting from the six framework ideas already in Notion (growth formula, metric tree, 11 profitability levers, 7 habits, ICE, LTV), 2026-11-26 | Juan |
 | Long post image | Matches the post: a photo of Juan for personal stories, an infographic for idea posts. Each framework carousel also becomes one summary infographic, 2026-11-26 | Juan |
-| Topic cycle | One topic every two weeks. Every keyword sends that topic's resource on jcgiusto.com. A resources hub page on jcgiusto.com lists every resource, 2026-11-26 | Juan |
+| Topic cycle | Subscriptions runs ramp weeks 1–3; from week 4, one topic every two weeks (week A, week B), two YouTube videos each, 2026-11-26. One topic every two weeks. Every keyword sends that topic's resource on jcgiusto.com. A resources hub page on jcgiusto.com lists every resource, 2026-11-26 | Juan |
+| Monday contrarian take | May be off the cycle's topic, as long as it's one of Juan's approved topics, 2026-11-26 | Juan (approved default) |
+| Sunday life-lesson list | Runs only when Juan has added life lessons to Notion; otherwise Sunday is skipped, 2026-11-26 | Juan (approved default) |
+| Week A's video on X | X takes 2 min 20 s at most through the scheduler, so week B posts a clip under 2:20 of week A's video, with a link, 2026-11-26 | Juan (approved default) |
+| Held Mars Men threads | The seven held "CRO things we got right at Mars Men" threads become single long X posts if Juan clears them, 2026-11-26 | Juan (approved default) |
+| Instagram shapes | Carousels and infographics 1080×1350; notes-app screenshots in a 4:5 frame. Open: whether the scheduler can post stories; if not, Juan posts them by hand in the daytime, 2026-11-26 | Juan (approved default) |
 | Kept from before (not Max's) | Weekends off (Sunday X post + daily Instagram story only), 15 minutes a day of X replies, Threads copy of every X post, 2026-11-26 | Juan |
 
 ## Accounts, look and voice
@@ -93,3 +119,4 @@ How the system is built: file layout, template formats, how scheduling is wired,
 - **2026-11-25:** Created from the grilling session after the Max Wellcopy research.
 - **2026-11-25:** Dropped swipe collection (no brand subscriptions, no Swipes table). Ideas from Juan, research from DTC thought leaders.
 - **2026-11-26:** Weekly content v2 decisions added to "Volume and timing": Max's way, screenshots (brand pages found by Claude + Juan's verdict, notes-app lists), weekly framework carousel, long post image, two-week topic cycle with a resources hub, and what was kept from before.
+- **2026-11-26:** Dry-run fixes, Juan's approved defaults: "Resources and keywords" and "Topic cycle" tables (subscriptions weeks 1–3, product pages from week 4), keyword Reel is one of the four videos, hours cap, contrarian take, Sunday list, week A's clip on X, held Mars Men threads, Instagram shapes and the stories check.

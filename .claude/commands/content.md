@@ -120,11 +120,12 @@ If the user says "repurpose [article]", read the raw article from `content/raw/a
 
 **Phase 1 firewall (April 2026 - Q1 2027). BLOCK content that violates ANY of these:**
 
-- [ ] Does NOT mention Mars Men, Raheel, Zach Stuck, Benjamin Smith by name
+- [ ] Does NOT name Raheel, Zach Stuck or Benjamin Smith; Mars Men only for beliefs and methods (see Credential usage)
 - [ ] Does NOT discuss Meta Ads tactics, creative strategy, ad spend management, or performance marketing
 - [ ] Does NOT position Juan as an agency founder or mention ASTEROI
 - [ ] Does NOT include CTAs for services, consulting, or agency work. Allowed: the resource keyword (sends to the resource's jcgiusto.com page) and the MentorPass link.
-- [ ] Does NOT feature any men's-health, hormone, testosterone or men's-supplement brand (rankings, studies, screenshots, quotes)
+- [ ] Does NOT feature any men's-health, hormone, testosterone or men's-supplement brand (rankings, studies, screenshots, quotes). Protein and functional foods count as supplement-adjacent. No men's grooming or men's wellness brands either (near competitors of Mars Men)
+- [ ] No ASTEROI client names or numbers, including in a source article the piece draws on
 - [ ] Does NOT use "we" in a way that implies an agency team
 - [ ] Every piece teaches something reusable (a framework, data insight, or methodology) -- no pure "look at my cool job" content
 
@@ -173,6 +174,17 @@ Pick the format from the five-platform formats in `content/wiki/engine/content-t
 
 Each platform node defines DNA, Phase 1 firewall, content rules, formats, posting strategy, and repurposing notes. Also read `content/wiki/engine/content-types.md` if unsure which format fits the topic.
 
+### Weekly content v2 pieces (Juan makes the core; /content does the rest)
+
+| Piece | What Juan does | What /content does | Steps it skips |
+|---|---|---|---|
+| Notes list (Format = Notes list) | Types the list in his phone and screenshots it | Writes the X caption, notes the 4:5 frame for Instagram, files the row | 0 research, 3 voice drafting, 4.5 hook |
+| Brand verdict (Format = Brand verdict) | Writes the 1–2 line verdict | Attaches Claude's screenshot from the live site, writes captions, files the row. Never writes the verdict | 0, 3, 4.5 |
+| Framework carousel (Type = Carousel) | Gives the framework or corrects Claude's draft from the source article | Drafts the slide text in Juan's voice (last slide "Comment [KEYWORD]"), hands it to `/figma-post` for the 1080×1350 build, writes the LinkedIn text, Instagram caption and X images (cover + 3 best) | 0 unless asked |
+| Infographic (Type = Infographic) | Approves it | Takes the text from its source (the framework carousel or the idea long post), hands it to `/figma-post` at 1080×1350, writes captions | 0, 3 (text already approved), 4.5 |
+
+All four still go through Step 2 (constraints) and the limits check in Step 5.
+
 ---
 
 ## STEP 4.5: PICK A HOOK
@@ -183,7 +195,7 @@ Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\hooks.md`. Draft 2-3 c
 
 ## STEP 4.6: IF PRODUCING FOR MULTIPLE PLATFORMS
 
-Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determine whether the topic fits Path A (framework-heavy, seed from blog or LinkedIn) or Path B (hot-take, seed from Twitter). Follow the chain order. Video → Chain C. Carousel → Chain D. YouTube long → Chain E. Re-post of an X winner → Chain F. Apply the litmus test before publishing: if a three-platform follower would find the content redundant, rethink rather than reformat.
+Read `C:\Users\jcgiu\Documents\JCG-OS\content\wiki\engine\repurpose.md`. Determine whether the topic fits Path A (framework-heavy, seed from blog or LinkedIn) or Path B (hot-take, seed from Twitter). Follow the chain order. Video → Chain C. Carousel → Chain D. YouTube long → Chain E (no cut-downs to Shorts; week B gets a clip under 2:20 of week A's video on X). Re-post of an X winner → Chain F. Apply the litmus test before publishing: if a three-platform follower would find the content redundant, rethink rather than reformat.
 
 ---
 
@@ -232,10 +244,10 @@ If Juan approves the piece, file it to the Notion Content DB with the **Notion c
 |---|---|
 | `Title` | The hook or working title |
 | `Platform` | One or more of LinkedIn, Twitter, Threads, Instagram, TikTok, YouTube, Blog |
-| `Format` | One of the twelve: Ranking, Pages worth stealing, Checklist, Brand study, Yearly tutorial, Free course, Life-lesson list, Learning diary, Resource, Contrarian take, Quote reaction, Live brand fix |
+| `Format` | One of the fourteen: Ranking, Pages worth stealing, Checklist, Brand study, Yearly tutorial, Free course, Life-lesson list, Learning diary, Resource, Contrarian take, Quote reaction, Live brand fix, Notes list, Brand verdict |
 | `Type` | The shape of the post if one fits (Thread, Carousel, Short, YouTube Video, Infographic, Personal Post…) |
 | `Status` | `Drafting` (Juan moves it to `Ready` himself once the media is attached and it passes the platform limits check) |
-| `Date` | The posting slot from the weekly calendar, as a Madrid date and time (`date:Date:is_datetime` = 1). This is the time the scheduler posts at. |
+| `Date` | The posting slot from the weekly calendar, as a Madrid date and time (`date:Date:is_datetime` = 1). This is the time the scheduler posts at. A 01:00 slot is the night after its day (Monday's 01:00 = Tuesday 01:00). |
 | `Source piece` | Source row URL (platform rows only) |
 | `Notes` | Hook pattern used, plus the wiki pages and articles it draws on, by name |
 
@@ -263,3 +275,6 @@ When the user mentions a topic, read the corresponding wiki page for source mate
 | Incrementality, ROAS critique, MMM | content/wiki/measurement-incrementality.md |
 | Forecasting, cohort projection | content/wiki/ecommerce-forecasting.md |
 | Metrics hierarchy, MER, AOV critique | content/wiki/ecommerce-metrics-hierarchy.md |
+
+---
+Updated 2026-11-26: knows the notes list, brand verdict, framework carousel and infographic; wider brand screen; fourteen Formats; Mars Men rule matches Credential usage.
