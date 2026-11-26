@@ -61,7 +61,7 @@ Max's real example: Instagram reel Db3PqznPy6B — his face full screen, the ema
 7. Sets loudness to −14 LUFS. No music, no sound effects.
 8. Renders 1080×1920, 30 fps MP4.
 
-**Look:** Max's measured layout, Juan's brand on the badge and captions. Badge = Archimoto numbers on a rounded box, either black box with white score and purple "/10", or purple box with black text — **Juan picks** (mock: two options next to Max's frame). Captions = Archivo Medium, white, soft shadow.
+**Look:** Max's measured layout, Juan's brand on the badge and captions. Badge = Archimoto numbers on a black rounded box, white score, purple (#B084D3) "/10" — **Juan picked black, 2026-11-26** (mock: `assets/short-video/ranking-badge-options.png`, middle). Captions = Archivo Medium, white, soft shadow.
 
 ### Hack ("changing backgrounds")
 
