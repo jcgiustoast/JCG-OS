@@ -178,7 +178,7 @@ Each platform node defines DNA, Phase 1 firewall, content rules, formats, postin
 
 | Piece | What Juan does | What /content does | Steps it skips |
 |---|---|---|---|
-| Notes list (Format = Notes list) | Types the list in his phone and screenshots it | Writes the X caption, notes the 4:5 frame for Instagram, files the row | 0 research, 3 voice drafting, 4.5 hook |
+| Notes list (Format = Notes list) | Writes the list (Claude never drafts it) | Puts his words into the Figma notes template (Contenido, page "Notes list template": tall X version + 4:5), writes the X caption for Instagram, files the row | 0 research, 3 voice drafting, 4.5 hook |
 | Brand verdict (Format = Brand verdict) | Writes the 1–2 line verdict | Attaches Claude's screenshot from the live site, writes captions, files the row. Never writes the verdict | 0, 3, 4.5 |
 | Framework carousel (Type = Carousel) | Gives the framework or corrects Claude's draft from the source article | Drafts the slide text in Juan's voice (last slide "Comment [KEYWORD]"), hands it to `/figma-post` for the 1080×1350 build, writes the LinkedIn text, Instagram caption and X images (cover + 3 best) | 0 unless asked |
 | Infographic (Type = Infographic) | Approves it | Takes the text from its source (the framework carousel or the idea long post), hands it to `/figma-post` at 1080×1350, writes captions | 0, 3 (text already approved), 4.5 |

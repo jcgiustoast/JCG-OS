@@ -96,11 +96,11 @@ Personal brand in English on five platforms, following the method from [[max-wel
 
 | Day | LinkedIn 19:55 | X | Instagram | TikTok + YouTube |
 |---|---|---|---|---|
-| Mon | Checklist carousel (from last week's notes list) | 13:00 video · 14:00 contrarian take · 16:00 last Thu's framework carousel as images + its infographic · 19:55 brand verdict · 01:00 notes list | 12:00 story · 13:00 video · 14:00 Mon's carousel | Short 17:00 · TikTok 01:00 |
-| Tue | Long post (photo or infographic) | 13:00 video · 17:00 "new video" post (from week 4) · 18:00 quote reaction (by hand) · 19:55 brand verdict | 12:00 story · 13:00 video | Short 17:00 · TikTok 01:00 · YouTube long 17:00 (from week 4) |
-| Wed | "Pages worth stealing" carousel (week's brand verdicts) | 14:00 Tue's long post as one long X post · 16:00 Wed carousel as images (cover + 3 best) · 18:00 quote reaction (by hand) · 19:55 brand verdict · 01:00 notes list | 12:00 story · 13:00 an old X image (4:5 frame) · 14:00 Wed's carousel | – |
-| Thu | Framework carousel | 13:00 video · 14:00 week B only: a clip under 2:20 of week A's YouTube video, with a link · 18:00 quote reaction (by hand) · 19:55 brand verdict | 12:00 story · 13:00 video · 14:00 Thu's framework carousel | Short 17:00 · TikTok 01:00 |
-| Fri | Resource post every other week (week B); other weeks a brand verdict or notes-list image | 13:00 video · 16:00 Mon's carousel as images (cover + 3 best) · 19:55 brand verdict · 01:00 notes list | 12:00 story · 13:00 video (week B: the keyword Reel) · 14:00 framework infographic | Short 17:00 · TikTok 01:00 |
+| Mon | Checklist carousel (from last week's notes list) | 13:00 video · 14:00 contrarian take · 16:00 last Thu's framework carousel as images + its infographic · 19:55 verdict or infographic · 01:00 notes list | 12:00 story · 13:00 video · 14:00 Mon's carousel | Short 17:00 · TikTok 01:00 |
+| Tue | Long post (photo or infographic) | 13:00 video · 17:00 "new video" post (from week 4) · 18:00 quote reaction (by hand) · 19:55 verdict or infographic | 12:00 story · 13:00 video | Short 17:00 · TikTok 01:00 · YouTube long 17:00 (from week 4) |
+| Wed | "Pages worth stealing" carousel (week's brand verdicts) | 14:00 Tue's long post as one long X post · 16:00 Wed carousel as images (cover + 3 best) · 18:00 quote reaction (by hand) · 19:55 verdict or infographic · 01:00 notes list | 12:00 story · 13:00 an old X image (4:5 frame) · 14:00 Wed's carousel | – |
+| Thu | Framework carousel | 13:00 video · 14:00 week B only: a clip under 2:20 of week A's YouTube video, with a link · 18:00 quote reaction (by hand) · 19:55 verdict or infographic | 12:00 story · 13:00 video · 14:00 Thu's framework carousel | Short 17:00 · TikTok 01:00 |
+| Fri | Resource post every other week (week B); other weeks a brand verdict or notes-list image | 13:00 video · 16:00 Mon's carousel as images (cover + 3 best) · 19:55 verdict or infographic · 01:00 notes list | 12:00 story · 13:00 video (week B: the keyword Reel) · 14:00 framework infographic | Short 17:00 · TikTok 01:00 |
 | Sat | – | – | 12:00 story | – |
 | Sun | – | 01:00 life-lesson list, only when Juan has added life lessons to Notion | 12:00 story | – |
 | Daily | – | 15 min replies (17:00–20:00, by hand) · ~2 auto-reposts of old winners (once the scheduler can) · Threads copy of every X post | one brand page as a story, daytime | – |
@@ -109,17 +109,22 @@ Totals: X ~22 + reposts (Max ~22) · LinkedIn 5 (Max 7) · Instagram 9 + stories
 
 Every carousel goes to Instagram the same day as LinkedIn, as Max does: Monday's on Monday, Wednesday's on Wednesday, Thursday's framework carousel on Thursday. The framework's summary infographic goes to Instagram on Friday.
 
-**Shapes.** Carousels and infographics are 1080×1350 (4:5), the tallest shape the scheduler takes on Instagram. A notes-app screenshot is taller than that, so on Instagram it sits inside a 4:5 frame. X takes 4 images a post, so a carousel goes to X as the cover plus the 3 best slides. X takes video up to 2 min 20 s through the scheduler.
+**The weekday X post at 19:55** is either a brand verdict (Juan writes 1–2 lines on a real brand's page) or a framework infographic (one part of a framework from his Notion ideas; Claude drafts it, Juan checks it). Juan picks the mix each Sunday; the first week he chose infographics Mon, Wed, Fri and verdicts Tue, Thu. The Sunday plan asks him; it never assumes he writes verdicts or notes lists.
 
-**Stories.** One brand page a day, so 7 a week: find 7 brand pages, or reuse the week's best two on the weekend. Still to check: whether the scheduler can post Instagram stories. If it can't, Juan posts them by hand in the daytime.
+**Looks.** List carousels (Monday's checklist, Wednesday's "Pages worth stealing") look like X posts. Framework carousels and every infographic use his designed `/figma-post` look. Notes lists use the notes template in his Contenido Figma file (page "Notes list template"): a copy of Max's iPhone Notes screenshot, white with no purple, in a tall X version and a 4:5 version for Instagram and LinkedIn. Juan writes every list's words; Claude only puts them in.
+
+**Shapes.** Carousels and infographics are 1080×1350 (4:5), the tallest shape the scheduler takes on Instagram. A notes list is taller than that, so on Instagram it uses the template's 4:5 version. X takes 4 images a post, so a carousel goes to X as the cover plus the 3 best slides. X takes video up to 2 min 20 s through the scheduler.
+
+**Stories.** From week 2, one brand page a day, so 7 a week: the week's verdict pages plus extra pages, or reuse the best ones on the other days. Week 1 has no Instagram, so no stories. Still to check: whether the scheduler can post Instagram stories. If it can't, Juan posts them by hand in the daytime.
 
 **What Juan creates each week, and his hours** (one table; every ramp-week figure below is added up from it)
 
 | Piece | Count | His time (estimate) |
 |---|---|---|
 | Long LinkedIn post (life/career story or idea) | 1 | 1–1.5 h |
-| Verdict on a brand page (Claude finds + screenshots) | 5 (7 if the weekend stories don't reuse two) | ~30 min (~40 min for 7) |
-| Notes-app list, screenshotted | 3 | ~1 h |
+| Verdict on a brand page (Claude finds + screenshots) | 0–5, Juan picks each week | ~6 min each |
+| Framework infographic for X (Claude drafts from his framework) | the weekdays without a verdict | ~5 min each to check |
+| Notes list, his own words in the Figma notes template | 0–3, Juan picks each week | ~20 min each |
 | Framework for the carousel (or corrects Claude's draft from the source article) | 1 | ~1 h |
 | Short videos, one sitting: 3 one-page teardowns + 1 ranking/roundup (Claude preps pages + script); in week B one of the four is the keyword Reel | 4 (2 in ramp week 2) | ~3.5 h (~2 h for 2) |
 | Quote reactions on X, by hand | 3 | ~30 min |
@@ -135,8 +140,9 @@ Full speed: week A ~23–33 h, week B ~22–31 h. **27–37 h is the most Juan c
 **How each piece spreads**
 
 - Long post → LinkedIn Tue (+ photo or infographic) → one long single X post Wed 14:00 (no threads, like Max).
-- Brand verdict (×5) → X image the same day → Instagram story → best one LinkedIn image (Fri, non-Resource weeks) → all five into Wednesday's carousel (Juan writes all five verdicts on Sunday, so Thursday's and Friday's exist by then) → Instagram Wed → X images Wed (cover + 3 best).
-- Notes list (×3) → X image → one expanded into next Monday's checklist carousel → Instagram the same day → X images Fri (cover + 3 best).
+- Brand verdict (as many as Juan picks) → X image the same day → Instagram story → best one LinkedIn image (Fri, non-Resource weeks) → all of them into Wednesday's carousel (Juan writes them all on Sunday, so Thursday's and Friday's exist by then; with fewer than 3, the plan asks him what Wednesday's carousel does) → Instagram Wed → X images Wed (cover + 3 best).
+- Framework infographic (the weekdays without a verdict) → X image at 19:55, one part of a framework each, on the topic, best from the framework of Thursday's carousel so they lead into it → later an X image on Instagram (4:5).
+- Notes list (as many as Juan picks, up to 3) → X image → one expanded into next Monday's checklist carousel → Instagram the same day → X images Fri (cover + 3 best).
 - Framework (×1) → Thursday carousel (Figma, /figma-post), on the cycle's topic; from week 4 it comes from that week's Tuesday video → LinkedIn + Instagram Thu → one summary infographic → Instagram Fri + X next Mon (with the carousel images). Last slide: "Comment [KEYWORD]" for the topic's Resource.
 - Video (×4) → same file to Reel, TikTok, Short, X; caption per platform.
 - Long YouTube video (week 4+) → Tue 17:00 + X "new video" post → its main framework becomes Thursday's carousel → in week B, a clip under 2:20 of week A's video goes on X with a link (Thu 14:00). No cut-downs to Shorts: Shorts are filmed on their own.
@@ -162,7 +168,8 @@ Resources:
 - Today there is one Resource: the eCom Subscription Checklist (keyword CHECKLIST). A new topic needs a new Resource: a short checklist or Notion list, not a 40-page guide. About 2–3 hours of Juan's time, once per topic. When no new one is ready, the cycle reuses an existing Resource.
 
 First four topics (proposal, Juan picks):
-- Weeks 1–3: Subscriptions, while the ramp runs. Resource: the existing Subscription Checklist (CHECKLIST). No video yet, no Resource post. The long post alternates idea and story week by week.
+- Weeks 1–3: Subscriptions, while the ramp runs. Resource: the existing Subscription Checklist (CHECKLIST). No video yet, no Resource post. The long post is an idea in week 1, a story in week 2, an idea in week 3.
+- Holidays: week 4 (the first YouTube video) can land on Christmas week, and a Resource Friday on 1 January. When a week holds 24 Dec–1 Jan or a public holiday, the Sunday plan asks Juan whether to run, move or skip it; moving it moves the later topic dates too.
 - Weeks 4–5: Product pages. Week 4 is its week A, with the first YouTube video (e.g. a study of famous brands' product pages, outside men's health). New Resource: a product page checklist. **Task: Juan builds the product page checklist during week 4, ready before week 5's Friday (its Resource Friday).**
 - Weeks 6–7: Checkout.
 - Weeks 8–9: A/B testing (a yearly setup tutorial on YouTube).
@@ -173,7 +180,7 @@ Before each topic starts, Juan gives one YouTube idea per week of it (two per to
 
 | Week | What runs | Hours |
 |---|---|---|
-| 1 | LinkedIn: Mon checklist carousel, Tue long post, Thu framework carousel. X: daily brand verdict, notes lists, quote reactions, contrarian take, the long X post, carousel images, Sunday list (if lessons) | ~7–7.5 |
+| 1 | LinkedIn: Mon checklist carousel, Tue long post, Thu framework carousel. X: weekday verdict or infographic, notes lists, quote reactions, contrarian take, the long X post, carousel images, Sunday list (if lessons). No Instagram, so no stories | ~6.75–7.25 |
 | 2 | + 2 videos (Mon, Fri), Instagram carousels + stories, Wednesday carousel, keyword auto-DM for CHECKLIST | ~9.5–10 |
 | 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 5. Verify the YouTube channel by phone | ~11.5–12 |
 | 4 | + YouTube long (product pages, week A), the new product page checklist, first format-cut review | ~23–33 |
@@ -181,12 +188,12 @@ Before each topic starts, Juan gives one YouTube idea per week of it (two per to
 
 The daily auto-reposts of old X winners start only once it's confirmed the scheduler can re-post old posts.
 
-**First-ever week.** Some pieces lean on last week. In week 1 they don't exist yet, so: Monday's checklist carousel comes from the Resource (the Subscription Checklist's strongest items) instead of last week's notes list; Monday's X images of last Thursday's framework are skipped; Instagram's old X image starts once an X image is at least a week old; week B's clip of week A's video starts in week 5.
+**First-ever week.** Some pieces lean on last week. In week 1 they don't exist yet, so: Monday's checklist carousel comes from the Resource (the Subscription Checklist's strongest items) instead of last week's notes list; Monday's X images of last Thursday's framework are skipped; week 1's Thursday carousel still gets its summary infographic, which first posts on week 2's Monday (X, 16:00); Instagram's old X image starts once an X image is at least a week old; week B's clip of week A's video starts in week 5.
 
 ### Content That Converts (What Actually Drives ASTEROI Revenue)
 1. **Specificity posts:** "We tested 47 subscription offers..." — shows depth no generalist has
 2. **Framework posts:** "Here's the exact diagnostic I run when contribution margin declines" — proves system
-3. **Contrarian takes:** "ROAS doesn't mean shit" (already published) — earns attention + filters for right audience
+3. **Contrarian takes:** "Judge tests on profit per visitor, not conversion rate" — earns attention + filters for right audience. (The old example, "ROAS doesn't mean shit", is Meta-ads advice in its source article, so it's off limits as written.)
 4. **Mini case studies:** Anonymized results from ASTEROI clients (once available)
 
 ### What NOT to Post
@@ -273,3 +280,4 @@ Juan has 37+ published articles across three properties. These are a foundation,
 - **2026-11-26:** Weekly calendar v2 (Max's way: a few cheap pieces Juan makes, each reused sideways). New channel counts, new week table, "What Juan creates each week", "How each piece spreads", the two-week topic cycle (one topic and one resource every two weeks) and a new four-week ramp (~7–8 h in week 1 to ~24–29 h in week 4). Monday's carousel moved to Instagram the same day, per the topic cycle. Approved by Juan. Spec: `docs/superpowers/specs/2026-11-26-weekly-content-v2-design.md`.
 - **2026-11-26:** YouTube long video confirmed weekly from week 4 (two per topic; week B gets its own video, week A's still goes native on X). Fixed leftover counts (LinkedIn 5, Instagram 9) and the calendar's Instagram column so every carousel posts the same day. Juan's call.
 - **2026-11-26:** Fixes from a dry run of a full-speed week, Juan's approved defaults: every calendar slot has a time and the 01:00 posts belong to the night after; subscriptions runs weeks 1–3 and product pages starts in week 4 (task: build the product page checklist before week 5's Friday), so the first Resource post is week 5; all three carousels every week; Wednesday's carousel on Instagram Wednesday; week B posts a clip under 2:20 of week A's video on X; no cut-downs to Shorts; keyword Reel is one of the four videos; contrarian take may be off-topic; Sunday list only when Juan has lessons in Notion; shapes (1080×1350, 4:5 frame for notes screenshots); stories check; one hours table with every piece and a drop order; first-ever week fallbacks; "free guide" → Resource.
+- **2026-11-26:** Fixes from a second dry run, Juan's calls: the weekday X post is a verdict or a framework infographic, Juan picks the mix each week (verdicts and notes lists are never assumed); notes lists use a Figma copy of Max's iPhone Notes look, Juan writes the words; list carousels look like X posts, framework carousels and infographics keep his designed look; long post order in weeks 1–3; holiday rule; week 1 has no stories and still makes its summary infographic; week 1 hours 6.75–7.25; ROAS example replaced.

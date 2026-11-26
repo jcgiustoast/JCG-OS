@@ -67,11 +67,17 @@ Which topic runs when. `/week-plan` reads this before Notion. Dates fill in once
 | Framework carousels | Weekly, starting from the six framework ideas already in Notion (growth formula, metric tree, 11 profitability levers, 7 habits, ICE, LTV), 2026-11-26 | Juan |
 | Long post image | Matches the post: a photo of Juan for personal stories, an infographic for idea posts. Each framework carousel also becomes one summary infographic, 2026-11-26 | Juan |
 | Topic cycle | Subscriptions runs ramp weeks 1–3; from week 4, one topic every two weeks (week A, week B), two YouTube videos each, 2026-11-26. One topic every two weeks. Every keyword sends that topic's resource on jcgiusto.com. A resources hub page on jcgiusto.com lists every resource, 2026-11-26 | Juan |
+| How the week gets planned | With Juan, one choice at a time; the Sunday plan never assumes what he makes. The full table comes only at the end, 2026-11-26 | Juan |
+| Weekday X post (19:55) | A brand verdict or a framework infographic (one part of a framework, Claude drafts, Juan checks). Juan picks the mix each week; first pick: infographics Mon/Wed/Fri, verdicts Tue/Thu, 2026-11-26 | Juan |
+| Notes lists | Juan writes the words; Claude puts them into the notes template in his Contenido Figma file (a copy of Max's iPhone Notes look, no purple, tall X version + 4:5). Claude never drafts them, 2026-11-26 | Juan |
+| Carousel looks | List carousels (Monday checklist, Wednesday "Pages worth stealing") look like X posts; framework carousels and infographics keep his designed look. The X-post template still needs building and his OK, 2026-11-26 | Juan |
+| Mars Men in takes | Ideas from the held Mars Men series run without naming Mars Men, unless Juan says otherwise, 2026-11-26 | Juan |
+| Claude suggesting verdict lines | Parked for later, 2026-11-26 | Juan |
 | Monday contrarian take | May be off the cycle's topic, as long as it's one of Juan's approved topics, 2026-11-26 | Juan (approved default) |
 | Sunday life-lesson list | Runs only when Juan has added life lessons to Notion; otherwise Sunday is skipped, 2026-11-26 | Juan (approved default) |
 | Week A's video on X | X takes 2 min 20 s at most through the scheduler, so week B posts a clip under 2:20 of week A's video, with a link, 2026-11-26 | Juan (approved default) |
 | Held Mars Men threads | The seven held "CRO things we got right at Mars Men" threads become single long X posts if Juan clears them, 2026-11-26 | Juan (approved default) |
-| Instagram shapes | Carousels and infographics 1080×1350; notes-app screenshots in a 4:5 frame. Open: whether the scheduler can post stories; if not, Juan posts them by hand in the daytime, 2026-11-26 | Juan (approved default) |
+| Instagram shapes | Carousels and infographics 1080×1350; notes lists use the 4:5 version of the Figma notes template. Open: whether the scheduler can post stories; if not, Juan posts them by hand in the daytime, 2026-11-26 | Juan (approved default) |
 | Kept from before (not Max's) | Weekends off (Sunday X post + daily Instagram story only), 15 minutes a day of X replies, Threads copy of every X post, 2026-11-26 | Juan |
 
 ## Accounts, look and voice
@@ -81,7 +87,7 @@ Which topic runs when. `/week-plan` reads this before Notion. Dates fill in once
 | Accounts | All five exist: tiktok.com/@jcgiusto · instagram.com/jc.giusto · x.com/JCGiusto · youtube.com/@JCGiusto · linkedin.com/in/jcgiusto | Juan |
 | Threads | Gets a copy of every X post (already connected to the scheduler, no extra time) | Juan (accepted rec) |
 | Filming | On camera at his desk, no green screen at first | Juan (accepted rec) |
-| Carousel look | A post-style card in his purple and grey. Juan approves it before any template is built. | Juan (accepted rec) |
+| Carousel look | See "Carousel looks" in Volume and timing (2026-11-26). Originally: a post-style card in his purple and grey, approved before any template is built. | Juan (accepted rec) |
 | Platform bios | Claude drafts them. Juan approves before they go live. | Juan (accepted rec) |
 
 Open follow-ups: Instagram's handle (jc.giusto) is the only one that differs from jcgiusto. The LinkedIn link Juan gave opens the Spanish profile; check that the English profile is the main one.
@@ -120,3 +126,4 @@ How the system is built: file layout, template formats, how scheduling is wired,
 - **2026-11-25:** Dropped swipe collection (no brand subscriptions, no Swipes table). Ideas from Juan, research from DTC thought leaders.
 - **2026-11-26:** Weekly content v2 decisions added to "Volume and timing": Max's way, screenshots (brand pages found by Claude + Juan's verdict, notes-app lists), weekly framework carousel, long post image, two-week topic cycle with a resources hub, and what was kept from before.
 - **2026-11-26:** Dry-run fixes, Juan's approved defaults: "Resources and keywords" and "Topic cycle" tables (subscriptions weeks 1–3, product pages from week 4), keyword Reel is one of the four videos, hours cap, contrarian take, Sunday list, week A's clip on X, held Mars Men threads, Instagram shapes and the stories check.
+- **2026-11-26:** Second dry run, Juan's calls: plan the week with him one choice at a time; weekday X post is a verdict or a framework infographic, his pick each week; notes lists in a Figma notes template, his words only; carousel looks by job; Mars Men not named in takes; Claude-suggested verdict lines parked.
