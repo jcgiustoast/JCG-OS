@@ -3,7 +3,7 @@ title: Weekly content v2 — what Juan creates and how it spreads
 description: Rebuild of the five-platform weekly calendar around Max's sideways reuse — a few things Juan creates, Claude adapts the rest per channel
 created: 2026-11-26
 updated: 2026-11-26
-status: draft for Juan's approval
+status: approved 2026-11-26; topic cycle added same day, pending Juan's yes
 ---
 
 # Weekly content v2
@@ -70,11 +70,41 @@ Totals: X ~21 + reposts (Max ~22) · LinkedIn 6 (Max 7) · Instagram 8 + stories
 - Long post → LinkedIn Tue (+ photo or infographic) → one long single X post Wed (no threads, like Max).
 - Brand verdict (×5) → X image same day → Instagram story → best one LinkedIn image (Fri, non-Resource weeks) → all five into Wednesday's carousel → Instagram Thu → X images Wed.
 - Notes list (×3) → X image → one expanded into next Monday's checklist carousel → Instagram Tue → X images Fri.
-- Framework (×1) → Thursday carousel (Figma, /figma-post) → one summary infographic → Instagram Fri + X Mon.
+- Framework (×1) → Thursday carousel (Figma, /figma-post), on the cycle's topic; in video weeks it comes from Tuesday's video → one summary infographic → Instagram the same day + X Mon. Last slide: "Comment [KEYWORD]" for the topic's resource.
 - Video (×4) → same file to Reel, TikTok, Short, X; caption per platform.
 - Quote reactions → X only.
 - From Notion ideas → Claude drafts Monday's contrarian take and the Sunday life-lesson list; Juan approves.
 - Free copies → Threads (every X post); X images to Instagram weeks later; old X winners auto-repost.
+
+## How it all connects: the two-week topic cycle (added 2026-11-26, after checking Max)
+
+**What Max does (Sep–Nov 2026, research + live checks):**
+- Every piece orbits a topic. The anchor is a long YouTube video for teaching topics (abandoned carts, after-purchase emails, the three $100M brands), or a free guide for giveaway topics (subscriptions, Black Friday).
+- Around the anchor: a carousel the same day on LinkedIn and Instagram; a long X post; short videos on the same topic (same file on Reels, TikTok, Shorts); a "new video just dropped" X post the day the video goes up; the full video uploaded natively on X 6–19 days later; carousels from the video 1–48 days later.
+- The comment keyword almost always sends a free guide (CART, SUB, SUBSCRIPTION, BFCM, FUNNEL…), and the guide pages on his site ask for an email. He asks for the same guide again a week later with a new keyword. Instagram is where keywords pull most (134–451 comments).
+- All guides sit in one hub (a Google Doc listing 9 guides) linked from every YouTube description, LinkedIn Featured and his link page. Video description order: book a call → Skool → guides hub. Every video ends naming the next video.
+- Not confirmed: what a keyword DM contains, and whether a carousel's last slide ever sends the video itself.
+
+**Juan's version:** one topic every two weeks. Everything in those two weeks is about it, and every keyword sends that topic's resource on jcgiusto.com (name + email). Before YouTube starts, the resource is the anchor; from week four, the video is.
+
+| | Week A | Week B |
+|---|---|---|
+| Anchor | Tue: long YouTube video on the topic (from week 4) + X "new video" post | Full video uploaded natively on X (~10 days after) |
+| Long post | Tue LinkedIn: the topic's idea (infographic) or a personal story tied to it | Tue LinkedIn: the other kind |
+| Carousels | Thu framework carousel from the video's main idea, same day on LinkedIn + Instagram, last slide "Comment [KEYWORD]" | Mon checklist carousel on the topic, same day LinkedIn + Instagram, last slide "Comment [KEYWORD]" |
+| Brand verdicts + notes lists | On the topic (subscription week → subscribe boxes; checkout week → checkouts) | Same |
+| Short videos | Teardowns of pages on the topic; ranking on the topic once a month | Same; one Reel ends "Comment [KEYWORD]" |
+| Resource | Keyword on every carousel and in every Instagram caption | Fri: the Resource post on LinkedIn (every other Friday lines up with week B) + an Instagram keyword Reel with a new keyword for the same resource |
+
+**Resources:**
+- A resources hub page on jcgiusto.com listing every resource, linked from every bio, every YouTube description and LinkedIn Featured. Video description order: the topic's resource → the hub → a MentorPass call → the next video. Pinned comment: the topic's resource. Every video ends naming the next one.
+- Today there is one resource: the eCom Subscription Checklist (keyword CHECKLIST). A new topic needs a new resource: a short checklist or Notion list, not a 40-page guide. About 2–3 hours of Juan's time, once per topic. When no new one is ready, the cycle reuses an existing resource.
+
+**First four topics (proposal, Juan picks):**
+- Weeks 1–2: Subscriptions. Anchor: the existing Subscription Checklist. No video yet.
+- Weeks 3–4: Product pages. First YouTube video in week 4 (e.g. a study of famous brands' product pages, outside men's health). New resource: a product page checklist.
+- Weeks 5–6: Checkout.
+- Weeks 7–8: A/B testing (a yearly setup tutorial on YouTube).
 
 ## Ramp
 
@@ -89,10 +119,13 @@ Totals: X ~21 + reposts (Max ~22) · LinkedIn 6 (Max 7) · Instagram 8 + stories
 
 - `content/wiki/content-strategy.md` — replace the weekly calendar and ramp tables with the two above (Claude edits after Juan's yes).
 - `content/wiki/content-system-decisions.md` — add today's decisions (Claude edits after yes).
-- `.claude/commands/week-plan.md` — slot table per ramp week; slots typed by what Juan creates; add "find 5 brand pages in Chrome" and the framework/infographic step.
+- `.claude/commands/week-plan.md` — reads the cycle's topic and week (A or B), keeps every piece on the topic, puts the topic's keyword on every carousel and Instagram caption; slot table per ramp week; slots typed by what Juan creates; add "find 5 brand pages in Chrome" and the framework/infographic step.
 - `content/wiki/engine/content-types.md` and `content/wiki/engine/repurpose.md` — author: juan. Claude shows exact wording; Juan pastes it. New entries: notes-app list, brand verdict (single image), framework carousel, infographic; chains as above.
 
 ## Open, not decided here
+
+- The topic list after week 8, and which resource each topic gets.
+- Building the resources hub page on jcgiusto.com (one-off).
 
 - When ramp week one starts (week-plan asks).
 - Whether the scheduler can auto-repost old X posts.
