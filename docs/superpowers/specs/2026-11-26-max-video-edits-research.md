@@ -30,7 +30,7 @@ Files: IG Db3PqznPy6B (= TikTok 7672412934127013134, same file posted twice), IG
 9. **Audio:** dry voice only, −14 to −16 LUFS. No music, no sound effects.
 
 ### Other shorts
-- **Hack short:** 3 s title box at start (white Title Case on black, 3 lines, ~30% from top), cut-out body over full-screen screenshot, overlay cards change ~every 3 s, captions centred.
+- **Transparent Background short (Max's "hack"):** 3 s title box at start (white Title Case on black, 3 lines, ~30% from top), cut-out body over full-screen screenshot, overlay cards change ~every 3 s, captions centred.
 - **Podcast clip (editor-made):** letterboxed 16:9, word-by-word text with neon-green bold italic key words, red "BAD" sticker, red underlines.
 - **Music-only "you be the judge":** b-roll + thin lowercase text, emails as full-height strips ~2.5 s each, closing "which was ur favorite?".
 

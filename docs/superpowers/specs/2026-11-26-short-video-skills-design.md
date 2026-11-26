@@ -6,7 +6,7 @@ author: claude
 sources: [docs/superpowers/specs/2026-11-26-max-video-edits-research.md]
 related: [max-wellcopy-playbook, templates, content-strategy]
 created: 2026-11-26
-updated: 2026-11-26
+updated: 2026-11-27
 confidence: medium (approved pieces marked; the rest is Claude's proposal)
 ---
 
@@ -31,7 +31,7 @@ Juan posts on five platforms, modelled on Max Wellcopy. Short videos are the pie
 | Edit | the raw recording + screenshots | the finished MP4 |
 | Clip | a long video (podcast or his YouTube) | the best 30–60 s moments, ready for the Edit skill |
 
-Build order (agreed): the Edit skill with the ranking look first → Juan sees a real finished file → the hack and edited-clip looks → the Clip skill → Ideas and Script.
+Build order (agreed): the Edit skill with the ranking look first → Juan sees a real finished file → the Transparent Background and edited-clip looks → the Clip skill → Ideas and Script.
 
 ## Approaches (decided)
 
@@ -63,11 +63,30 @@ Max's real example: Instagram reel Db3PqznPy6B — his face full screen, the ema
 
 **Look:** Max's measured layout, Juan's brand on the badge and captions. Badge = Archimoto numbers on a black rounded box, white score, purple (#B084D3) "/10" — **Juan picked black, 2026-11-26** (mock: `assets/short-video/ranking-badge-options.png`, middle). Captions = Archivo Medium, white, soft shadow.
 
-### Hack ("changing backgrounds")
+### Transparent Background (approved 2026-11-27)
+
+Juan rejected the old working name ("hack"); always call it Transparent Background.
 
 Max's example: YouTube short Wi7TmhMsiAA. 3 s title box over his face, then screenshot cards in the top half changing every ~3 s, sometimes a full-screen page with him cut out in front.
 
-Juan's version: title box black with Big Shoulders headline; cards as in ranking. The cut-out works on his PC (see the test below), as long as he films against a plain wall.
+**Reference, Juan's call (2026-11-27):** follow Max's look, not Juan's own past cut-out shorts. Those were studied first (youtube.com/@JCGiusto/shorts, ~30 cut-out shorts): cut out nearly the whole time, backgrounds held 4–8 s, purple caption pills with a yellow key word, title in heavy caps over a stock photo. All of that is dropped.
+
+**Juan hands over:**
+1. His selfie recording.
+2. The pictures, in the order he talks about them.
+3. The headline. Juan writes it.
+
+**The look:**
+- **First 3 s:** black title box near the top, headline in Big Shoulders. Off his face, inside the safe zone.
+- **Most of the video:** his face in his real room, not cut out. Pictures appear as cards in the top half, changing about every 3 s, each one landing when he starts talking about it.
+- **A few moments only (Juan's call):** he is cut out and stands in front of a full-screen page. Claude's proposal: tall full-page website screenshots get this; smaller pictures (tweets, charts) become cards. Juan can switch any.
+- **Captions, silence cuts, blended short cuts, loudness, safe zones:** same as the ranking short.
+
+**Placement (Juan's call):** Claude reads the transcript and proposes where each picture goes. Before rendering, Juan checks one list: each picture, the words where it appears, card or full-screen, plus the captions. He can move or switch anything.
+
+**Filming:** the cut-out moments come from the same take, so the room still matters. First real video: test the cut-out on his recording. If the painting wall leaves rough edges, he films these against a plain wall.
+
+**Build:** an extra look in the existing video maker (`content/scripts/video/`) and the video-edit skill, reusing the ranking short's prep, captions and layout. Other ways dropped: a separate tool would duplicate all of it; finishing in CapCut was rejected.
 
 ### Edited clip ("steal this")
 
@@ -85,7 +104,7 @@ Tested on Juan's PC 2026-11-26 (an earlier message said it had been tested; it h
 - **Weak spot:** a very fast, blurred hand wave loses part of the hand for 1–3 frames. Slower gestures are fine.
 - **Best case only:** plain, evenly lit wall. A cluttered room or a window behind him will look worse. Film against a plain wall.
 - MediaPipe: fast but blocky edges, leaves bits of the room. rembg: halo around hair, or 20+ min per clip for the good model. Both dropped.
-- Setup that worked: onnxruntime-gpu plus NVIDIA's CUDA 13 runtime packages in a Python venv; model file from the project's GitHub release. Test script kept at `scratchpad/bgtest/scripts/matte.py` (session scratch — copy into `content/scripts/video/` when the hack look is built).
+- Setup that worked: onnxruntime-gpu plus NVIDIA's CUDA 13 runtime packages in a Python venv; model file from the project's GitHub release. Test script kept at `scratchpad/bgtest/scripts/matte.py` (session scratch — copy into `content/scripts/video/` when the Transparent Background look is built).
 
 ## Constraints
 

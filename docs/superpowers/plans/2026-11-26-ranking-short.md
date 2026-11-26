@@ -183,5 +183,5 @@ Layout (numbers from `layout.json`, see Global Constraints): `tall` (h > w) → 
 - [ ] **Step 1:** Write the skill: when to use ("edit my video", "make the ranking short"); what Juan hands over (recording against a plain wall, score said out loud per item, one screenshot per item named 1, 2, 3…); the steps — make job folder → `--step prep` → look at every screenshot and fill `shots/redact.json` for names/emails/addresses → show Juan the review (items, scores, caption words) in plain words and screen the hard limits → fix caption typos in `edl.json` if he asks → `--step render` → watch frames from the output (`ffmpeg -ss … -frames:v 1`) before sending → `SendUserFile` the MP4. Plain-speech rules apply to every message.
 - [ ] **Step 2:** Juan's recording: copy it into `content/video/2026-11-26-<slug>/raw/`, his screenshots into `shots/`; run the skill end to end.
 - [ ] **Step 3:** Check 5 frames (one per item + one caption change) against the mock; fix and re-render if off.
-- [ ] **Step 4:** Send Juan the finished file. Don't start the hack or edited-clip looks until he's seen it.
+- [ ] **Step 4:** Send Juan the finished file. Don't start the Transparent Background or edited-clip looks until he's seen it.
 - [ ] **Step 5: Commit** `add video-edit skill — ranking short`

@@ -1,6 +1,6 @@
 ---
 name: video-edit
-description: Use when Juan hands over a selfie recording and wants a finished short ("edit my video", "make the ranking short", "rank these", a phone video plus screenshots) — turns the raw recording and one screenshot per item into a ready-to-post 1080×1920 MP4 in Max Wellcopy's ranking layout and Juan's brand. Ranking format only for now; the hack and edited-clip looks are not built yet.
+description: Use when Juan hands over a selfie recording and wants a finished short ("edit my video", "make the ranking short", "rank these", a phone video plus screenshots) — turns the raw recording and one screenshot per item into a ready-to-post 1080×1920 MP4 in Max Wellcopy's ranking layout and Juan's brand. Ranking format only for now; the Transparent Background and edited-clip looks are not built yet.
 ---
 
 # Video edit — the ranking short
