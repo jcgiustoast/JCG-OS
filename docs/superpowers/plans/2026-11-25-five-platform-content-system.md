@@ -97,7 +97,7 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 - [ ] Video test: post one short clip privately (TikTok private, YouTube private; Reel has no private mode — Juan decides). Needs a clip and Juan's yes. YouTube long can't go through post-bridge (5-min cap) — upload by hand.
 - [x] Add evening-slot check: a row with a Slot but no schedule 2 h before → flagged in Notion. (Written: one "NOT SCHEDULED" line appended to Notes. Not deployed.)
 - [x] X recycling and auto self-reply plug: use post-bridge if supported; else propose the cheapest add-on inside budget. (Self-reply = post-bridge first comment, no add-on. No recycling in post-bridge → repost rule runs through `/week-plan`, Task 11.)
-- [ ] Deploy to Railway only after Juan approves; ask before commit/PR.
+- [x] Deploy to Railway only after Juan approves; ask before commit/PR. (Deployed 2026-11-25 after Juan's yes; runs clean every 5 min, checked 2026-11-26.)
 
 ### Task 8: First free guide and email signup
 
