@@ -80,15 +80,15 @@ Personal brand in English on five platforms, following the method from [[max-wel
 
 | Channel | Per week at full speed | What it's for |
 |---|---|---|
-| LinkedIn | 6 posts: checklist carousel, long post, "Pages worth stealing" carousel, framework carousel, a Resource post every other Friday (other Fridays a brand verdict or notes-list image) | Credibility with DTC founders; main source of email signups |
+| LinkedIn | 5 posts: checklist carousel, long post, "Pages worth stealing" carousel, framework carousel, a Resource post every other Friday (other Fridays a brand verdict or notes-list image) | Credibility with DTC founders; main source of email signups |
 | X (copied to Threads) | ~21 posts + ~2 auto-reposts a day of old winners (once the scheduler can) + 15 minutes a day of replies to other DTC accounts | Short opinionated takes; replies are how the account grows |
-| Instagram | 8 posts (4 videos, 2 carousels, the framework infographic, an old X image) + 1 story a day | Reach through rankings; the topic's comment keyword gets an automatic DM with its resource |
+| Instagram | 9 posts (4 videos, 3 carousels, the framework infographic, an old X image) + 1 story a day | Reach through rankings; the topic's comment keyword gets an automatic DM with its resource |
 | TikTok | 4 videos (same files as the Reels) | Extra reach for almost no extra time |
 | YouTube | 1 long video from week 4 + 4 Shorts (same files as the Reels) | Brand studies and how-tos; feeds the free guides |
 | jcgiusto.com | 1 deep piece a month + the email signup page | Home of the email list |
 | ASTEROI blog | **PAUSED** | Until spring 2027 |
 
-**Where it leads.** Every piece points to the email list: a free guide behind a comment keyword, delivered through a signup page on jcgiusto.com. First guide: a 40-point product page audit checklist. MentorPass calls are the only paid link. Mars Men may be named in posts (beliefs and methods only), never in bios — bios say "Head of eCommerce at a $100M subscription brand".
+**Where it leads.** Every piece points to the email list: a free guide behind a comment keyword, delivered through a signup page on jcgiusto.com. Each two-week topic has its own resource, and every keyword sends it; the first is the eCom Subscription Checklist (keyword CHECKLIST). All resources are listed on one resources page on jcgiusto.com. MentorPass calls are the only paid link. Mars Men may be named in posts (beliefs and methods only), never in bios — bios say "Head of eCommerce at a $100M subscription brand".
 
 **Weekly calendar (v2, 2026-11-26)** (Madrid times; evening slots through the scheduler, never posted by hand). Built on Max's way: a few cheap pieces Juan makes, each reused sideways on every channel. Full spec: `docs/superpowers/specs/2026-11-26-weekly-content-v2-design.md`.
 
@@ -105,7 +105,7 @@ Personal brand in English on five platforms, following the method from [[max-wel
 
 Totals: X ~21 + reposts (Max ~22) · LinkedIn 6 (Max 7) · Instagram 8 + stories (Max 13) · TikTok 4 · Shorts 4 · YouTube 1.
 
-Monday's checklist carousel goes to Instagram the same day as LinkedIn, as the two-week topic cycle below says (the spec's week table still shows it on Tuesday). The cycle also puts Thursday's framework carousel on Instagram the same day, but the calendar only has its infographic there on Friday. Open for Juan: add the carousel on Thursday (Instagram 9 a week) or keep the Friday infographic only.
+Every carousel goes to Instagram the same day as LinkedIn, as Max does: Monday's on Monday, Thursday's framework carousel on Thursday (its summary infographic still goes Friday). Instagram is 9 posts a week plus the daily story.
 
 **What Juan creates each week** (full speed, week 4+)
 
