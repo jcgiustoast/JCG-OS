@@ -7,7 +7,7 @@ description: Use when Juan hands over a selfie recording and wants a finished sh
 
 Raw selfie recording + one screenshot per item in, finished vertical video out. Juan gets the finished file, not a CapCut project.
 
-The look: his face full screen with his **real room behind him** (no cut-out, no blur), each screenshot in a column on the left, a black badge top right with the white score and a purple "/10", small white lowercase captions under his face. Pauses removed. Loudness −14 LUFS. No music, no sound effects.
+The look: his face full screen with his **real room behind him** (no cut-out, no blur), each screenshot in a column on the left, a black badge with the white score and a purple "/10" sitting on that screenshot's top-right corner (never on his face), small white lowercase captions right of the screenshot, low on his chest. Everything stays inside the area Instagram and TikTok leave clear of their buttons and text (260 px from the top, 440 from the bottom, 60 left, 140 right; numbers in `content/scripts/video/layout.json`). Pauses over 0.3 s removed, including silences whisper hides inside stretched words; small cuts blend over 2 frames so they don't stutter. Loudness −14 LUFS. No music, no sound effects.
 
 Design: `docs/superpowers/specs/2026-11-26-short-video-skills-design.md`. Code: `content/scripts/video/` (Python prep + Remotion look + `make_short.py`). Tests: `python -m pytest tests/video -q`.
 
@@ -27,7 +27,7 @@ Design: `docs/superpowers/specs/2026-11-26-short-video-skills-design.md`. Code: 
 4. **Screen the hard limits** — no Mars Men numbers, no ASTEROI client names, no men's-health brands, no Meta ads advice, no paid tool deals. Also check each screenshot actually matches what he says about that item.
 5. **Show Juan the review** in chat: each item with its brand, score and the caption words under it. Fix transcription slips in `edl.json` captions (brand names especially: "I am 8" → "im8"). Wait for his OK.
 6. **Render:** `python content/scripts/video/make_short.py ranking <job> --step render` (~1 min per 10 s of video). It checks size, fps and loudness itself (exit 3 if off).
-7. **Watch it before sending:** pull one frame per item plus one caption change (`ffmpeg -ss <t> -i <job>/out/<name>.mp4 -frames:v 1 frame.png`) and look at each. Badge right score, right screenshot, captions readable and not over the screenshot.
+7. **Watch it before sending:** pull one frame per item plus one caption change (`ffmpeg -ss <t> -i <job>/out/<name>.mp4 -frames:v 1 frame.png`) and look at each. Badge right score, right screenshot, on the screenshot's corner not his face, captions readable and not over the screenshot, nothing outside the safe area. Prep overwrites `edl.json`, so caption fixes have to be redone after any re-prep.
 8. **Send** `<job>/out/<job-name>.mp4` with SendUserFile.
 
 ## Talking to Juan

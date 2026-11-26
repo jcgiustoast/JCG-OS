@@ -13,11 +13,13 @@
 ## Global Constraints
 
 - Output: 1080×1920, 30 fps, H.264 + AAC, integrated loudness −14 LUFS (±1), no music, no sound effects.
-- Pauses longer than 0.3 s removed.
+- Pauses longer than 0.3 s removed — both gaps between whisper's words and quiet stretches measured from the audio (20 ms windows; silent = below halfway between room noise and voice, in dB), since whisper stretches words across pauses. 0.08 s kept either side of each cut.
+- Cuts that remove ≤ 0.5 s blend over 2 frames (a skip of a few frames otherwise reads as a dropped-frame stutter); bigger cuts stay hard jump cuts.
 - Screenshot appears 0.2 s after each item's cut. No border, shadow, rounding or animation.
-- Tall screenshot column: x 6–45% of width, y 5–96% of height. Wide screenshot (width ≥ height): 47% of width, upper half.
-- Badge: black (#000) rounded box, score white, "/10" purple #B084D3, Archimoto V00 Medium; left 68%, top 26%, width 16%, height 5.5% of frame; appears on the cut, no animation.
-- Captions: Archivo Medium, white, soft shadow, no box, 41 px, block max-width 45% of width, centred at x 65%, vertical band 82–88%; lowercase; 5–13 words per phrase; ≤3 s each; no word highlight, no emoji; score phrases written as digits ("3 out of 10").
+- Safe area (Reels + TikTok overlays clear): top 260, bottom 440, left 60, right 140 px of 1080×1920 → x 60–940, y 260–1480. Screenshot, badge and captions all inside it. Numbers live once in `content/scripts/video/layout.json` (read by `prep/edl.py` and the Remotion look). Source: strictest of TikTok 108/320/60/120, Reels 220/420 (Ignite Social Media) and 210/310/84 right (Adaptly 2026), cross-platform 900×1400 centred.
+- Screenshot column: x 65, width 421, y 313–1480 (top leaves room for half the badge). Tall screenshot centred at 47% height; a bit too tall (fits at ≥ 75% width) → shrunk to fit; much taller → top part shown. Wide screenshot (width ≥ height): width 508, at the top of the column.
+- Badge: black (#000) rounded box, score white, "/10" purple #B084D3, Archimoto V00 Medium; height 106 px, min width 173 px; sits on its screenshot's top-right corner (vertically centred on the shot's top edge, right edge 24 px past the shot's), so it follows the shot and stays off the face; grows left for "10/10"; appears on the cut, no animation.
+- Captions: Archivo Medium, white, soft shadow, no box, 41 px; box x 514–940 (right of the column, 28 px gap), y 1310–1480, text bottom-aligned; lowercase; 5–13 words per phrase; ≤3 s each; no word highlight, no emoji; score phrases written as digits ("3 out of 10").
 - Fonts come from `content/scripts/visual/assets/fonts/` (already committed: `archimoto-medium.otf`, `archivo-medium.ttf`). Don't duplicate them.
 - Job folders `content/video/<date>-<slug>/` are gitignored (large files). Layout: `raw/` (recording), `shots/` (1.png, 2.png…), `face.mp4`, `words.json`, `edl.json`, `review.md`, `out/`.
 - Hard limits (checked by Claude in review, not code): no Mars Men numbers, no ASTEROI client names, no men's-health brands, no Meta ads advice, no paid tool deals.
