@@ -40,6 +40,12 @@ Grilled 2026-11-25, after the [[max-wellcopy-playbook]] research. Every answer b
 | When YouTube starts | Week four, following the playbook's ramp | Juan (follows from hours) |
 | Weekends | Sunday post on X, plus the daily Instagram story (kept on Sundays, 2026-11-25). Nothing else on weekends. | Juan |
 | Replies | 15 minutes a day to other DTC accounts on X | Juan (accepted rec) |
+| Weekly content (v2) | Max's way: a few cheap repeatable pieces Juan makes, each reused sideways on every channel. Calendar in [[content-strategy]], 2026-11-26 | Juan |
+| Screenshots | (a) A real brand's page (product page, subscribe box, checkout, cart drawer, upsell) + Juan's 1–2 line verdict; Claude finds the pages in Chrome and takes the screenshots. (b) A list Juan types in his phone's notes and screenshots. Never client or Mars Men numbers. 2026-11-26 | Juan |
+| Framework carousels | Weekly, starting from the six framework ideas already in Notion (growth formula, metric tree, 11 profitability levers, 7 habits, ICE, LTV), 2026-11-26 | Juan |
+| Long post image | Matches the post: a photo of Juan for personal stories, an infographic for idea posts. Each framework carousel also becomes one summary infographic, 2026-11-26 | Juan |
+| Topic cycle | One topic every two weeks. Every keyword sends that topic's resource on jcgiusto.com. A resources hub page on jcgiusto.com lists every resource, 2026-11-26 | Juan |
+| Kept from before (not Max's) | Weekends off (Sunday X post + daily Instagram story only), 15 minutes a day of X replies, Threads copy of every X post, 2026-11-26 | Juan |
 
 ## Accounts, look and voice
 
@@ -85,3 +91,4 @@ How the system is built: file layout, template formats, how scheduling is wired,
 ### Changelog
 - **2026-11-25:** Created from the grilling session after the Max Wellcopy research.
 - **2026-11-25:** Dropped swipe collection (no brand subscriptions, no Swipes table). Ideas from Juan, research from DTC thought leaders.
+- **2026-11-26:** Weekly content v2 decisions added to "Volume and timing": Max's way, screenshots (brand pages found by Claude + Juan's verdict, notes-app lists), weekly framework carousel, long post image, two-week topic cycle with a resources hub, and what was kept from before.
