@@ -125,7 +125,7 @@ Rule (not determined by tests alone): add words to the current phrase; close it 
 }
 ```
 
-Layout: `tall` (h > w) → width 421 px (x 65 = 6%), height scaled, vertically centred on 47% of frame height and clamped inside y 96–1843 (5–96%); if taller than the band, `crop: true` and box = full band (renderer shows the image's top, `object-fit: cover; object-position: top`). `wide` → width 508 px (47%), x 65, y 230. Item `outStart` = `to_out(words[item_cut].start)`; its shot shows from `outStart + 0.2`; `outEnd` = next item's `outStart` (last item → end). `redact` boxes come from `shots/redact.json` (`{"1.png": [[x,y,w,h]]}` in image pixels; optional file) — Claude fills it after looking at each screenshot.
+Layout (numbers from `layout.json`, see Global Constraints): `tall` (h > w) → width 421 px (x 65), height scaled, vertically centred on 47% of frame height and clamped inside y 313–1480; if a bit taller than the band (fits at ≥ 75% width) it's shrunk to fit, otherwise `crop: true` and box = full band (renderer shows the image's top). `wide` → width 508 px, x 65, y 313. Each item also gets `badge` (`right`, `top`, `h`: on the shot's top-right corner); the edl gets `safe` and `caption` boxes. Item `outStart` = `to_out(words[item_cut].start)`; its shot shows from `outStart + 0.2`; `outEnd` = next item's `outStart` (last item → end). `redact` boxes come from `shots/redact.json` (`{"1.png": [[x,y,w,h]]}` in image pixels; optional file) — Claude fills it after looking at each screenshot.
 
 - [ ] **Step 1: Write failing tests**
   - `test_normalize_landscape_60fps` (`test_media.py`): make a 3 s 1920×1080 60 fps test clip with `ffmpeg -f lavfi testsrc2 + sine`, normalise → probe says 1080×1920, 30 fps, has audio
