@@ -46,7 +46,8 @@ Review page with Max's examples and every variant Juan saw: https://claude.ai/ar
 
 ## Still to build
 
-- YouTube thumbnail, Reel template (CapCut) and YouTube description + pinned comment, each shown against Max's examples first. Earlier proposals, none approved yet: https://claude.ai/artifact/CCcVbS1S7Tc3mGu354q5qX
+- Reel template (CapCut), next, shown against Max's examples first.
+- YouTube thumbnail and YouTube description + pinned comment: deferred (Juan, 2026-11-26, "leave YouTube for later"). Earlier proposals, none approved yet: https://claude.ai/artifact/CCcVbS1S7Tc3mGu354q5qX
 
 ## Changelog
 
