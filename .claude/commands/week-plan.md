@@ -18,14 +18,14 @@ Today is {{date}}. "Next week" = the next Monday to Sunday (Madrid time). On a S
 ## Steps
 
 1. **Ramp week.** Read "Ramp week one starts" in `content/wiki/content-system-decisions.md`. If it's missing, ask Juan for the Monday his week one starts. On his answer, add the line to the "Volume and timing" table and set `updated:`. Next week's number = weeks since that Monday + 1.
-1b. **Topic and week A or B.** One topic runs for two weeks (week A, then week B), per **Two-week topic cycle**. Query the rows placed most recently (latest Dates) and read "Topic: …" in their Notes. If that topic's first rows are dated last week, next week is its week B. If it has already run two weeks, or no row has a topic, next week is week A of a new topic: propose the next one from "First four topics" and ask Juan to confirm. If the Notes don't settle it, ask Juan. Then find the topic's resource and keyword. If the topic has no resource yet, say so and reuse the Subscription Checklist (keyword CHECKLIST). Week A: from ramp week 4, Thursday's framework carousel comes from Tuesday's YouTube video. Week B: Friday is the Resource post, plus an Instagram keyword Reel with a new keyword for the same resource.
+1b. **Topic and week A or B.** One topic runs for two weeks (week A, then week B), per **Two-week topic cycle**. Query the rows placed most recently (latest Dates) and read "Topic: …" in their Notes. If that topic's first rows are dated last week, next week is its week B. If it has already run two weeks, or no row has a topic, next week is week A of a new topic: propose the next one from "First four topics" and ask Juan to confirm. If the Notes don't settle it, ask Juan. Then find the topic's resource and keyword. If the topic has no resource yet, say so and reuse the Subscription Checklist (keyword CHECKLIST). From ramp week 4, every week has a long YouTube video on the topic (Tuesday), and Thursday's framework carousel comes from it. Week B also posts week A's video natively on X. Week B: Friday is the Resource post, plus an Instagram keyword Reel with a new keyword for the same resource.
 2. **Open slots.** Take **Weekly calendar (v2, 2026-11-26)** (times from it, Madrid) and keep only the slots open in that ramp week, per **First four weeks**:
 
    | Ramp week | Open slots |
    |---|---|
    | 1 | LinkedIn: Mon checklist carousel, Tue long post, Thu framework carousel. X: daily brand verdict, notes lists, quote reactions, Sunday list |
    | 2 | Week 1 + 2 videos (Mon, Fri), Instagram carousels + stories, Wednesday carousel, keyword auto-DM |
-   | 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 6 |
+   | 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 5 |
    | 4 and after | Full calendar: + YouTube long, first Resource post (then every other Friday), first format-cut review |
 
    Ramp week 1 plans no videos, no Instagram carousels and no YouTube. Show this row to Juan as part of the plan, so he can change it.

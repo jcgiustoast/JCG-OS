@@ -96,14 +96,14 @@ Personal brand in English on five platforms, following the method from [[max-wel
 |---|---|---|---|---|
 | Mon | Checklist carousel (from last week's notes list) | 14:00 contrarian take · 19:55 brand verdict · 01:00 notes list · video · last Thu's framework carousel as images/infographic | 13:00 video · 14:00 Mon's carousel | Short 17:00 · TikTok 01:00 |
 | Tue | Long post (photo or infographic) | 19:55 brand verdict · quote reaction · video | 13:00 video | Short · TikTok · YouTube long 17:00 |
-| Wed | "Pages worth stealing" carousel (week's brand verdicts) | 14:00 Tue's long post as one long X post · 19:55 brand verdict · 01:00 notes list · quote reaction · Wed carousel as images | 14:00 an old X image | – |
-| Thu | Framework carousel | 19:55 brand verdict · quote reaction · video | 13:00 video · 14:00 Wed's carousel | Short · TikTok |
+| Wed | "Pages worth stealing" carousel (week's brand verdicts) | 14:00 Tue's long post as one long X post · 19:55 brand verdict · 01:00 notes list · quote reaction · Wed carousel as images | 13:00 an old X image · 14:00 Wed's carousel | – |
+| Thu | Framework carousel | 19:55 brand verdict · quote reaction · video | 13:00 video · 14:00 Thu's framework carousel | Short · TikTok |
 | Fri | Resource post every other week; other weeks a brand verdict or notes-list image | 19:55 brand verdict · 01:00 notes list · video · Mon's carousel as images | 13:00 video · 14:00 framework infographic | Short · TikTok |
 | Sat | – | – | story | – |
 | Sun | – | 01:00 life-lesson list | story | – |
 | Daily | – | 15 min replies · ~2 auto-reposts of old winners (once the scheduler can) · Threads copy of every post | one brand page as a story | – |
 
-Totals: X ~21 + reposts (Max ~22) · LinkedIn 6 (Max 7) · Instagram 8 + stories (Max 13) · TikTok 4 · Shorts 4 · YouTube 1.
+Totals: X ~21 + reposts (Max ~22) · LinkedIn 5 (Max 7) · Instagram 9 + stories (Max 13) · TikTok 4 · Shorts 4 · YouTube 1 long a week from week 4.
 
 Every carousel goes to Instagram the same day as LinkedIn, as Max does: Monday's on Monday, Thursday's framework carousel on Thursday (its summary infographic still goes Friday). Instagram is 9 posts a week plus the daily story.
 
@@ -118,7 +118,7 @@ Every carousel goes to Instagram the same day as LinkedIn, as Max does: Monday's
 | Short videos, one sitting: 3 one-page teardowns + 1 ranking/roundup (Claude preps pages + script) | 4 | ~3.5 h |
 | Quote reactions on X, by hand | 3 | ~30 min |
 | X replies | 15 min/day | ~1.75 h |
-| Long YouTube video | 1 | 10–18 h |
+| Long YouTube video (every week, two per topic) | 1 | 10–18 h |
 
 About 10–11 h a week with approvals before YouTube; 20–29 h with it (limit 27–37). Estimates, to be checked in the Sunday review.
 
@@ -127,7 +127,7 @@ About 10–11 h a week with approvals before YouTube; 20–29 h with it (limit 2
 - Long post → LinkedIn Tue (+ photo or infographic) → one long single X post Wed (no threads, like Max).
 - Brand verdict (×5) → X image same day → Instagram story → best one LinkedIn image (Fri, non-Resource weeks) → all five into Wednesday's carousel → Instagram Thu → X images Wed.
 - Notes list (×3) → X image → one expanded into next Monday's checklist carousel → Instagram the same day → X images Fri.
-- Framework (×1) → Thursday carousel (Figma, /figma-post), on the cycle's topic; in video weeks it comes from Tuesday's video → one summary infographic → Instagram the same day + X Mon. Last slide: "Comment [KEYWORD]" for the topic's resource.
+- Framework (×1) → Thursday carousel (Figma, /figma-post), on the cycle's topic; from week 4 it comes from that week's Tuesday video → one summary infographic → Instagram the same day + X Mon. Last slide: "Comment [KEYWORD]" for the topic's resource.
 - Video (×4) → same file to Reel, TikTok, Short, X; caption per platform.
 - Quote reactions → X only.
 - From Notion ideas → Claude drafts Monday's contrarian take and the Sunday life-lesson list; Juan approves.
@@ -135,13 +135,13 @@ About 10–11 h a week with approvals before YouTube; 20–29 h with it (limit 2
 
 **Two-week topic cycle**
 
-One topic every two weeks. Everything in those two weeks is about it, and every keyword sends that topic's resource on jcgiusto.com (name + email). Before YouTube starts, the resource is the anchor; from week four, the video is.
+One topic every two weeks. Everything in those two weeks is about it, and every keyword sends that topic's resource on jcgiusto.com (name + email). Before YouTube starts, the resource is the anchor; from week four, that week's video is. YouTube is weekly, so each topic gets two long videos.
 
 | | Week A | Week B |
 |---|---|---|
-| Anchor | Tue: long YouTube video on the topic (from week 4) + X "new video" post | Full video uploaded natively on X (~10 days after) |
+| Anchor | Tue: long YouTube video on the topic (from week 4) + X "new video" post | Tue: a second long YouTube video on the same topic + X "new video" post; week A's video uploaded natively on X (~10 days after) |
 | Long post | Tue LinkedIn: the topic's idea (infographic) or a personal story tied to it | Tue LinkedIn: the other kind |
-| Carousels | Thu framework carousel from the video's main idea, same day on LinkedIn + Instagram, last slide "Comment [KEYWORD]" | Mon checklist carousel on the topic, same day LinkedIn + Instagram, last slide "Comment [KEYWORD]" |
+| Carousels | Thu framework carousel from the video's main idea, same day on LinkedIn + Instagram, last slide "Comment [KEYWORD]" | Mon checklist carousel on the topic + Thu framework carousel from that week's video, same day LinkedIn + Instagram, last slide "Comment [KEYWORD]" |
 | Brand verdicts + notes lists | On the topic (subscription week → subscribe boxes; checkout week → checkouts) | Same |
 | Short videos | Teardowns of pages on the topic; ranking on the topic once a month | Same; one Reel ends "Comment [KEYWORD]" |
 | Resource | Keyword on every carousel and in every Instagram caption | Fri: the Resource post on LinkedIn (every other Friday lines up with week B) + an Instagram keyword Reel with a new keyword for the same resource |
@@ -162,7 +162,7 @@ First four topics (proposal, Juan picks):
 |---|---|---|
 | 1 | LinkedIn: Mon checklist carousel, Tue long post, Thu framework carousel. X: daily brand verdict, notes lists, quote reactions, Sunday list | ~7–8 |
 | 2 | + 2 videos (Mon, Fri), Instagram carousels + stories, Wednesday carousel, keyword auto-DM | ~11–13 |
-| 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 6 | ~14–16 |
+| 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 5 | ~14–16 |
 | 4 | + YouTube long, first Resource post, first format-cut review | ~24–29 |
 
 The daily auto-reposts of old X winners start only once it's confirmed the scheduler can re-post old posts.
@@ -255,3 +255,4 @@ Juan has 37+ published articles across three properties. These are a foundation,
 - **2026-08-27:** Firewall revised per Juan's decision. Mars Men may now be named (methodology/beliefs framing only; no internal numbers, test results, or implementation specifics; team members stay unnamed). Meta constraint narrowed to "as advice" with a measurement carve-out for CRO-experiment impact on paid media. Prompted by the "CRO things we got right at Mars Men" series (7 ideas filed to Notion).
 - **2026-11-25:** Phase 1 channels and cadence replaced with the five-platform plan (LinkedIn, X + Threads, Instagram, TikTok, YouTube) from the Max Wellcopy playbook: weekly calendar, four-week ramp to 27–37 h/week, funnel to the email list via jcgiusto.com (MentorPass the only paid link), bio rule. Four lines added to "What NOT to Post". Approved by Juan. Answers in [[content-system-decisions]].
 - **2026-11-26:** Weekly calendar v2 (Max's way: a few cheap pieces Juan makes, each reused sideways). New channel counts, new week table, "What Juan creates each week", "How each piece spreads", the two-week topic cycle (one topic and one resource every two weeks) and a new four-week ramp (~7–8 h in week 1 to ~24–29 h in week 4). Monday's carousel moved to Instagram the same day, per the topic cycle. Approved by Juan. Spec: `docs/superpowers/specs/2026-11-26-weekly-content-v2-design.md`.
+- **2026-11-26:** YouTube long video confirmed weekly from week 4 (two per topic; week B gets its own video, week A's still goes native on X). Fixed leftover counts (LinkedIn 5, Instagram 9) and the calendar's Instagram column so every carousel posts the same day. Juan's call.
