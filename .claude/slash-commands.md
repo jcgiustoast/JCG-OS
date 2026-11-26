@@ -21,5 +21,7 @@ Custom commands live in `.claude/commands/`. Each is a markdown prompt invoked b
 | `/content-research` | Scrape reference creators to find what's performing; feeds `/content` |
 | `/figma-post` | Design a LinkedIn/X carousel, infographic or single image in Juan's look in the Contenido Figma file, all three sizes (skill in `.claude/skills/figma-post/`). Writes to Figma only — a new page, after Juan approves the type and the outline; no repo files |
 | `/engage` | Daily Twitter engagement briefing — pulls 24h tweets from curated DTC targets, scores reply opportunities. LinkedIn is manual (not automated) — see engagement-targets.md |
+| `/week-review` | Sunday, run first: reads last week's numbers off each platform in Chrome, compares formats and platforms, best/worst, winners to bring back, format to cut every fourth week. Writes numbers + dates to Notion and an entry to `content/memory/log.md` only after approval |
+| `/week-plan` | Sunday, run second: fills next week's slots from Notion ideas by ramp week, screens every brand against the hard limits, filming list, hours, winners due back. Writes dates/formats and repost rows to Notion only after approval |
 
-Only `/closeday`, `/graduate`, and `/process-inbox` write files, and all require explicit approval before doing so.
+Only `/closeday`, `/graduate`, `/process-inbox`, `/week-review` and `/week-plan` write (files or Notion), and all require explicit approval before doing so.

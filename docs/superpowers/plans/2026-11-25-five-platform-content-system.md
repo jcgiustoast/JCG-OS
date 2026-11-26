@@ -130,8 +130,8 @@ Juan's call: no raw-material collection. Ideas come from Juan; research comes fr
 
 **Files:** Create `.claude/commands/week-plan.md`, `.claude/commands/week-review.md` (read-only commands; writes to Notion only after approval). Modify `.claude/slash-commands.md`; check `life/wiki/engagement-targets.md` fits $2–50M DTC founders.
 
-- [ ] `/week-plan` (Sunday): fill each calendar slot from Notion ideas, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits. Also list posts whose "Can come back on" date has arrived; on Juan's yes, copy them into new Notion rows with a new Date (post-bridge has no repost feature).
-- [ ] `/week-review`: pull last week's results from Notion, compare formats and platforms, list best and worst; in week 4, propose the weakest format to cut. Append summary to `content/memory/log.md` after approval.
+- [x] `/week-plan` (Sunday): fill each calendar slot from Notion ideas, list the one-to-five siblings, the filming list for the batch session, and the hours estimate for the week; screen every brand against the hard limits. Also list posts whose "Can come back on" date has arrived; on Juan's yes, copy them into new Notion rows with a new Date (post-bridge has no repost feature).
+- [x] `/week-review`: pull last week's results from Notion, compare formats and platforms, list best and worst; in week 4, propose the weakest format to cut. Append summary to `content/memory/log.md` after approval. **2026-11-26: both written (design `docs/superpowers/specs/2026-11-26-weekly-plan-review-design.md`); read-only dry run against Notion still to do.**
 - [ ] Propose additions to `engagement-targets.md` for DTC founders in range; Juan approves.
 
 ### Task 12: Week-one batch
