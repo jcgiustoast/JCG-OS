@@ -80,6 +80,7 @@ Max's example: YouTube short Wi7TmhMsiAA. 3 s title box over his face, then scre
 - **First 3 s:** black title box near the top, headline in Big Shoulders. Off his face, inside the safe zone.
 - **Most of the video:** his face in his real room, not cut out. Pictures appear as cards in the top half, changing about every 3 s, each one landing when he starts talking about it.
 - **A few moments only (Juan's call):** he is cut out and stands in front of a full-screen page. Claude's proposal: tall full-page website screenshots get this; smaller pictures (tweets, charts) become cards. Juan can switch any.
+- **Cut-out size and place (Juan's call 2026-11-27, matching his own past shorts):** during full-screen pictures he is shown at 60% size in the bottom-left, bottom edge on the frame's bottom edge, 60 px off the left edge, so his body runs off the bottom (and left). His face lands inside the safe zone. Numbers: `transparent.cutout` in `layout.json`. The room face underneath, the page, cards, title and captions are unchanged.
 - **Captions, silence cuts, blended short cuts, loudness, safe zones:** same as the ranking short.
 
 **Placement (Juan's call):** Claude reads the transcript and proposes where each picture goes. Before rendering, Juan checks one list: each picture, the words where it appears, card or full-screen, plus the captions. He can move or switch anything.

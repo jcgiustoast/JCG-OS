@@ -10,6 +10,19 @@ import { Card } from "./parts/Card";
 import { FaceTrack } from "./parts/FaceTrack";
 import { FullPage } from "./parts/FullPage";
 import { TitleBox } from "./parts/TitleBox";
+import { LAYOUT } from "./layout";
+
+// the cut-out is drawn smaller, tucked into the bottom-left, body running off the edges
+const CUT = LAYOUT.transparent.cutout;
+const CUT_STYLE: React.CSSProperties = {
+  position: "absolute",
+  left: CUT.x,
+  top: CUT.bottom - 1920 * CUT.scale,
+  width: 1080,
+  height: 1920,
+  transform: `scale(${CUT.scale})`,
+  transformOrigin: "top left",
+};
 
 export const TransparentBackground: React.FC<TransparentProps> = (edl) => {
   const { fps } = edl;
@@ -28,7 +41,9 @@ export const TransparentBackground: React.FC<TransparentProps> = (edl) => {
             </Sequence>
             {p.matte && (
               // matte spans carry absolute outStarts, so this sits outside the Sequence
-              <FaceTrack video={p.matte.file} spans={p.matte.spans} fps={fps} muted />
+              <div style={CUT_STYLE}>
+                <FaceTrack video={p.matte.file} spans={p.matte.spans} fps={fps} muted />
+              </div>
             )}
           </React.Fragment>
         );

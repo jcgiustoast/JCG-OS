@@ -26,5 +26,5 @@
     "lineHeight": 1.18
   },
   "cut": { "blendFrames": 2, "blendMaxRemoved": 0.5 },
-  "transparent": {"title": {"top": 300, "centreX": 500, "maxWidth": 880, "padX": 36, "padY": 24, "sizes": [104, 96, 88, 80, 72], "lineHeight": 1.05, "maxLines": 3, "seconds": 3.0, "slack": 1.04}, "card": {"x": 100, "y": 300, "w": 800, "h": 620, "radius": 20}, "caption": {"x": 150, "w": 700}, "fullRatio": 2.5, "minOn": {"card": 1.5, "full": 2.0}, "maxOn": {"card": 6.0, "full": 8.0}}
+  "transparent": {"title": {"top": 300, "centreX": 500, "maxWidth": 880, "padX": 36, "padY": 24, "sizes": [104, 96, 88, 80, 72], "lineHeight": 1.05, "maxLines": 3, "seconds": 3.0, "slack": 1.04}, "card": {"x": 100, "y": 300, "w": 800, "h": 620, "radius": 20}, "cutout": {"scale": 0.6, "x": -60, "bottom": 1920}, "caption": {"x": 150, "w": 700}, "fullRatio": 2.5, "minOn": {"card": 1.5, "full": 2.0}, "maxOn": {"card": 6.0, "full": 8.0}}
 }
