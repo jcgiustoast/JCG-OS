@@ -112,6 +112,15 @@ def plan_transparent(job: Path) -> Path:
     return edl_path
 
 
+def _face_key(job: Path) -> list | None:
+    """Identity of the current face.mp4, so cut-outs made from another take are never reused."""
+    face = Path(job) / "face.mp4"
+    if not face.exists():
+        return None
+    st = face.stat()
+    return [st.st_mtime_ns, st.st_size]
+
+
 def matte_transparent(job: Path) -> None:
     job = Path(job)
     edl_path = job / "edl.json"
@@ -127,8 +136,7 @@ def matte_transparent(job: Path) -> None:
         index = json.loads(index_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         index = {}
-    st = (job / "face.mp4").stat() if (job / "face.mp4").exists() else None
-    face_key = [st.st_mtime_ns, st.st_size] if st else None
+    face_key = _face_key(job)
     wanted = {Path(m["out"]).name for m in todo}
     for f in matte_dir.iterdir():
         if f.name != "index.json" and f.name not in wanted:
@@ -228,7 +236,7 @@ def render(job: Path) -> Path:
             continue
         name = Path(m["file"]).name
         rec = index.get(name)
-        fresh = (job / "matte" / name).exists() and rec and (rec["start"], rec["end"]) == (m["srcStart"], m["srcEnd"])
+        fresh = (job / "matte" / name).exists() and rec and (rec["start"], rec["end"]) == (m["srcStart"], m["srcEnd"]) and rec.get("face") == _face_key(job)
         if not fresh:
             raise PrepError(f"Picture {p['picture']} needs its cut-out but the matte file is missing or out of date. Run --step matte.")
     _stage_media(job)

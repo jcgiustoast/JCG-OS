@@ -224,3 +224,28 @@ def test_render_rejects_stale_matte(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr(make_short, "PUBLIC_JOB", tmp_path / "public_job")
     assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
     assert "--step matte" in capsys.readouterr().err
+
+
+def test_render_rejects_matte_from_another_take(tmp_path, monkeypatch, capsys):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    make_short.matte_transparent(job)
+    (job / "face.mp4").write_bytes(b"a re-recorded take")
+    monkeypatch.setattr(make_short, "PUBLIC_JOB", tmp_path / "public_job")
+    assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
+    assert "--step matte" in capsys.readouterr().err
+
+
+def test_render_passes_matte_check_after_fresh_matte(tmp_path, monkeypatch):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    make_short.matte_transparent(job)
+    monkeypatch.setattr(make_short, "PUBLIC_JOB", tmp_path / "public_job")
+
+    class Reached(Exception):
+        pass
+
+    def stop(cmd, **kw):
+        raise Reached
+
+    monkeypatch.setattr(make_short.subprocess, "run", stop)
+    with pytest.raises(Reached):  # got past the matte check, up to the Remotion call
+        make_short.render(job)
