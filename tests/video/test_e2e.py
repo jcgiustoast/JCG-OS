@@ -118,7 +118,7 @@ def _speak_transparent(wav: Path) -> None:
     parts = ["$p = New-Object System.Speech.Synthesis.PromptBuilder"]
     for s in T_SENTENCES:
         parts.append(f"$p.AppendText('{s}')")
-        parts.append("$p.AppendBreak([TimeSpan]::FromMilliseconds(800))")
+        parts.append("$p.AppendBreak([TimeSpan]::FromMilliseconds(1200))")
     script = "; ".join([
         "Add-Type -AssemblyName System.Speech",
         "$s = New-Object System.Speech.Synthesis.SpeechSynthesizer",
@@ -153,6 +153,8 @@ def _frame_luma(video: Path, t: float, crop: str | None = None) -> float:
 @pytest.mark.slow
 @pytest.mark.skipif(sys.platform != "win32", reason="uses Windows SAPI speech")
 def test_e2e_transparent(tmp_path):
+    if not (MATTE_PY.exists() and MATTE_MODEL.exists()):
+        pytest.skip("the cut-out tool isn't set up (run content/scripts/video/setup_matte.ps1)")
     from content.scripts.video.make_short import check_output
 
     job = tmp_path / "2026-11-27-e2e-transparent"
@@ -179,16 +181,16 @@ def test_e2e_transparent(tmp_path):
 
     r = run("prep")
     assert r.returncode == 0, r.stdout[-3000:] + r.stderr[-3000:]
-    heard = " ".join(w["text"] for w in json.loads((job / "words.json").read_text(encoding="utf-8")))
+    import re
+    heard = [re.sub(r"[^a-z0-9']", "", w["text"].lower())
+             for w in json.loads((job / "words.json").read_text(encoding="utf-8"))]
     stub = json.loads((job / "pictures.json").read_text(encoding="utf-8"))
     assert [p["show"] for p in stub] == ["card", "card", "full"]
-
-    can_matte = MATTE_PY.exists() and MATTE_MODEL.exists()
-    rows = [{"picture": p["picture"], "words": T_PHRASES[i],
-             "show": p["show"] if (p["show"] == "card" or can_matte) else "card"}
+    rows = [{"picture": p["picture"], "words": T_PHRASES[i], "show": p["show"]}
             for i, p in enumerate(stub)]
-    for row in rows:
-        assert row["words"].split()[0] in heard.lower(), heard
+    for phrase in T_PHRASES:
+        w = phrase.split()
+        assert any(heard[k:k + len(w)] == w for k in range(len(heard))), (phrase, heard)
     (job / "pictures.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
 
     result = run("all")
@@ -216,6 +218,21 @@ def test_e2e_transparent(tmp_path):
     card = _frame_luma(final, card_t, "crop=800:620:100:300")
     face = _frame_luma(final, 2.9, "crop=800:620:100:300")
     assert abs(card - face) > 5
+
+    # the tall page goes full-screen with a cut-out that crosses a removed pause
+    full = edl["pictures"][2]
+    assert full["show"] == "full" and full["matte"]
+    matte_file = job / "matte" / Path(full["matte"]["file"]).name
+    assert matte_file.exists()
+    pr = json.loads(subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+         "stream=codec_name:stream_tags=alpha_mode", "-of", "json", str(matte_file)],
+        capture_output=True, text=True, check=True).stdout)["streams"][0]
+    assert pr["codec_name"] == "vp9" and pr["tags"]["alpha_mode"] == "1"
+    assert len(full["matte"]["spans"]) >= 2
+    # a frame inside the full page is far from the plain face: the page covers the frame
+    page = _frame_luma(final, starts[2] + 1.0)
+    assert abs(page - face) > 40, (page, face)
 
     T_KEEP_COPY.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(final, T_KEEP_COPY)
