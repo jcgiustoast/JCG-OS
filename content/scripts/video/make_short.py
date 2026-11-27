@@ -127,26 +127,34 @@ def matte_transparent(job: Path) -> None:
         index = json.loads(index_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         index = {}
-    new_index = {}
+    st = (job / "face.mp4").stat() if (job / "face.mp4").exists() else None
+    face_key = [st.st_mtime_ns, st.st_size] if st else None
+    wanted = {Path(m["out"]).name for m in todo}
+    for f in matte_dir.iterdir():
+        if f.name != "index.json" and f.name not in wanted:
+            f.unlink()
+            index.pop(f.name, None)
+    index = {k: v for k, v in index.items() if k in wanted}
+    index_path.write_text(json.dumps(index, indent=1), encoding="utf-8")
     for m in todo:
         name = Path(m["out"]).name
-        rec = {"start": m["start"], "end": m["end"]}
+        rec = {"start": m["start"], "end": m["end"], "face": face_key}
         if index.get(name) == rec and (job / m["out"]).exists():
             print(f"cut-out {name}: already done", flush=True)
-        else:
-            print(f"cutting out {name} ({m['start']:.2f}-{m['end']:.2f} s)", flush=True)
-            res = subprocess.run(
-                [str(MATTE_PY), "-I", str(VIDEO_DIR / "matte.py"), str(job / "face.mp4"),
-                 str(job / m["out"]), "--start", str(m["start"]), "--end", str(m["end"]),
-                 "--model", str(MATTE_MODEL)],
-            )
-            if res.returncode != 0:
-                raise PrepError(f"The cut-out tool failed on {name} (exit {res.returncode}).")
-        new_index[name] = rec
-    for f in matte_dir.iterdir():
-        if f.name != "index.json" and f.name not in new_index:
-            f.unlink()
-    index_path.write_text(json.dumps(new_index, indent=1), encoding="utf-8")
+            continue
+        # drop the record first, so a crash can't leave a half-written clip counted as done
+        index.pop(name, None)
+        index_path.write_text(json.dumps(index, indent=1), encoding="utf-8")
+        print(f"cutting out {name} ({m['start']:.2f}-{m['end']:.2f} s)", flush=True)
+        res = subprocess.run(
+            [str(MATTE_PY), "-I", str(VIDEO_DIR / "matte.py"), str(job / "face.mp4"),
+             str(job / m["out"]), "--start", str(m["start"]), "--end", str(m["end"]),
+             "--model", str(MATTE_MODEL)],
+        )
+        if res.returncode != 0:
+            raise PrepError(f"The cut-out tool failed on {name} (exit {res.returncode}).")
+        index[name] = rec
+        index_path.write_text(json.dumps(index, indent=1), encoding="utf-8")
 
 
 def _stage_media(job: Path) -> None:
@@ -210,9 +218,19 @@ def render(job: Path) -> Path:
     if not edl_path.exists():
         raise PrepError(f"No edl.json in {job}. Run --step prep first.")
     edl = json.loads(edl_path.read_text(encoding="utf-8"))
+    try:
+        index = json.loads((job / "matte" / "index.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        index = {}
     for p in edl.get("pictures", []):
-        if p.get("matte") and not (job / "matte" / Path(p["matte"]["file"]).name).exists():
-            raise PrepError(f"Picture {p['picture']} needs its cut-out but there is no matte file. Run --step matte.")
+        m = p.get("matte")
+        if not m:
+            continue
+        name = Path(m["file"]).name
+        rec = index.get(name)
+        fresh = (job / "matte" / name).exists() and rec and (rec["start"], rec["end"]) == (m["srcStart"], m["srcEnd"])
+        if not fresh:
+            raise PrepError(f"Picture {p['picture']} needs its cut-out but the matte file is missing or out of date. Run --step matte.")
     _stage_media(job)
     out_dir = job / "out"
     out_dir.mkdir(exist_ok=True)

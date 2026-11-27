@@ -140,3 +140,87 @@ def test_matte_without_venv_exits_2(tmp_path, monkeypatch, capsys):
 def test_ranking_rejects_plan_step(tmp_path, capsys):
     assert make_short.main(["ranking", str(tmp_path), "--step", "plan"]) == 2
     assert make_short.main(["ranking", str(tmp_path), "--step", "matte"]) == 2
+
+
+def _matte_setup(tmp_path, monkeypatch, clips):
+    """Job with a planned edl of full pictures; the cut-out tool is faked (never the GPU)."""
+    job = _tjob(tmp_path)
+    (job / "face.mp4").write_bytes(b"face")
+    pics = [{"picture": f"{i}.png", "show": "full",
+             "matte": {"file": f"job/matte/{i}.webm", "srcStart": s, "srcEnd": e}}
+            for i, (s, e) in enumerate(clips, start=1)]
+    (job / "edl.json").write_text(json.dumps({"format": "transparent", "pictures": pics}))
+    py, model = tmp_path / "py.exe", tmp_path / "m.onnx"
+    py.write_bytes(b"")
+    model.write_bytes(b"")
+    monkeypatch.setattr(make_short, "MATTE_PY", py)
+    monkeypatch.setattr(make_short, "MATTE_MODEL", model)
+    calls = []
+
+    def fake_run(cmd, **kw):
+        out = Path(cmd[cmd.index("--start") - 1])
+        calls.append(out.name)
+        if out.name in fail_on:
+            return subprocess.CompletedProcess(cmd, 1)
+        out.write_bytes(b"webm")
+        return subprocess.CompletedProcess(cmd, 0)
+
+    fail_on = set()
+    monkeypatch.setattr(make_short.subprocess, "run", fake_run)
+    return job, calls, fail_on
+
+
+def test_matte_skips_when_nothing_changed(tmp_path, monkeypatch):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    make_short.matte_transparent(job)
+    make_short.matte_transparent(job)
+    assert calls == ["1.webm"]
+
+
+def test_matte_redoes_when_times_change(tmp_path, monkeypatch):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    make_short.matte_transparent(job)
+    edl = json.loads((job / "edl.json").read_text())
+    edl["pictures"][0]["matte"]["srcEnd"] = 5.0
+    (job / "edl.json").write_text(json.dumps(edl))
+    make_short.matte_transparent(job)
+    assert calls == ["1.webm", "1.webm"]
+
+
+def test_matte_redoes_when_face_changes(tmp_path, monkeypatch):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    make_short.matte_transparent(job)
+    (job / "face.mp4").write_bytes(b"a different take")
+    make_short.matte_transparent(job)
+    assert calls == ["1.webm", "1.webm"]
+
+
+def test_matte_deletes_unlisted_files(tmp_path, monkeypatch):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    (job / "matte").mkdir()
+    (job / "matte" / "old.webm").write_bytes(b"x")
+    make_short.matte_transparent(job)
+    assert not (job / "matte" / "old.webm").exists()
+    assert (job / "matte" / "1.webm").exists()
+
+
+def test_matte_failing_second_clip_keeps_first_recorded(tmp_path, monkeypatch, capsys):
+    job, calls, fail_on = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0), (6.0, 9.0)])
+    fail_on.add("2.webm")
+    assert make_short.main(["transparent", str(job), "--step", "matte"]) == 2
+    index = json.loads((job / "matte" / "index.json").read_text())
+    assert list(index) == ["1.webm"]
+    fail_on.clear()
+    make_short.matte_transparent(job)
+    assert calls == ["1.webm", "2.webm", "2.webm"]
+
+
+def test_render_rejects_stale_matte(tmp_path, monkeypatch, capsys):
+    job, calls, _ = _matte_setup(tmp_path, monkeypatch, [(1.0, 4.0)])
+    make_short.matte_transparent(job)
+    edl = json.loads((job / "edl.json").read_text())
+    edl["pictures"][0]["matte"]["srcEnd"] = 5.0
+    (job / "edl.json").write_text(json.dumps(edl))
+    monkeypatch.setattr(make_short, "PUBLIC_JOB", tmp_path / "public_job")
+    assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
+    assert "--step matte" in capsys.readouterr().err
