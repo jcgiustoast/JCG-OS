@@ -28,7 +28,7 @@ export const TransparentBackground: React.FC<TransparentProps> = (edl) => {
             </Sequence>
             {p.matte && (
               // matte spans carry absolute outStarts, so this sits outside the Sequence
-              <FaceTrack video={p.matte.file} spans={p.matte.spans} fps={fps} transparent muted />
+              <FaceTrack video={p.matte.file} spans={p.matte.spans} fps={fps} muted />
             )}
           </React.Fragment>
         );

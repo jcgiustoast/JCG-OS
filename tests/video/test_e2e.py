@@ -192,10 +192,6 @@ def test_e2e_transparent(tmp_path):
     (job / "pictures.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
 
     result = run("all")
-    if result.returncode != 0 and "No frame found at position" in result.stdout:
-        # Remotion's frame reader intermittently fails on face.mp4 (same file, passes on retry);
-        # the cut-out is cached by now, so the retry only re-renders.
-        result = run("all")
     noise = ("Rendered ", "Encoded ", "Bundling ")
     shown = chr(10).join(ln for ln in result.stdout.splitlines() if not ln.startswith(noise))
     assert result.returncode == 0, shown[-4000:] + result.stderr[:3000]

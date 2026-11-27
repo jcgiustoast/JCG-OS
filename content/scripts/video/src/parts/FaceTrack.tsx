@@ -8,8 +8,15 @@
 // blended it reads as a quick move. Joins that remove more than
 // `blendMaxRemoved` seconds stay hard cuts: the head moved a lot, a blend would
 // show a double face, and a clean jump cut reads as a deliberate edit.
+//
+// Frames come from <Video> (@remotion/media), which decodes inside the render's
+// browser. Not <OffthreadVideo>: that one reads frames through Remotion's
+// separate frame store, which halves itself for good every time the computer
+// dips under 100 MB free and, once empty, kills the render with "No frame found
+// at position ...". <Video> reads the cut-out clip's see-through parts on its own.
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { Video } from "@remotion/media";
+import { AbsoluteFill, Sequence, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { Span, toFrame } from "../edl";
 import { LAYOUT } from "../layout";
 
@@ -30,9 +37,8 @@ export const FaceTrack: React.FC<{
   video: string;
   spans: Span[];
   fps: number;
-  transparent?: boolean; // the file has an alpha channel (cut-out clip)
   muted?: boolean;
-}> = ({ video, spans, fps, transparent = false, muted = false }) => {
+}> = ({ video, spans, fps, muted = false }) => {
   const src = staticFile(video);
   return (
     <AbsoluteFill>
@@ -47,12 +53,13 @@ export const FaceTrack: React.FC<{
         return (
           <Sequence key={i} from={from} durationInFrames={own + tail} layout="none">
             <FadeIn frames={blendInto(spans[i - 1], span)}>
-              <OffthreadVideo
+              <Video
                 src={src}
                 trimBefore={toFrame(span.srcStart, fps)}
                 volume={(f) => (!muted && f < own ? 1 : 0)}
-                transparent={transparent}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                objectFit="cover"
+                disallowFallbackToOffthreadVideo
+                style={{ width: "100%", height: "100%" }}
               />
             </FadeIn>
           </Sequence>
