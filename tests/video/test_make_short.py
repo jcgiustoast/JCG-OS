@@ -249,3 +249,113 @@ def test_render_passes_matte_check_after_fresh_matte(tmp_path, monkeypatch):
     monkeypatch.setattr(make_short.subprocess, "run", stop)
     with pytest.raises(Reached):  # got past the matte check, up to the Remotion call
         make_short.render(job)
+
+
+# ---- out-of-date edit list ---------------------------------------------------
+
+import os  # noqa: E402
+
+
+class _Reached(Exception):
+    pass
+
+
+def _stop(cmd, **kw):
+    raise _Reached
+
+
+def _planned_job(tmp_path, monkeypatch):
+    """Job that went through prep, got a filled-in pictures.json, and was planned (edl written)."""
+    job = _tjob(tmp_path)
+    _fake_prep(monkeypatch)
+    make_short.prep_transparent(job)
+    (job / "pictures.json").write_text(json.dumps([
+        {"picture": "1.png", "words": "first page", "show": "card"},
+        {"picture": "2.png", "words": "long page", "show": "card"}]))
+    monkeypatch.setattr(make_short, "build_transparent_edl",
+                        lambda j, w, s=None: {"format": "transparent", "pictures": []})
+    monkeypatch.setattr(make_short, "write_transparent_review", lambda e, p: Path(p).write_text("r"))
+    make_short.plan_transparent(job)
+    monkeypatch.setattr(make_short, "PUBLIC_JOB", tmp_path / "public_job")
+    monkeypatch.setattr(make_short.subprocess, "run", _stop)  # never a real render
+    return job
+
+
+def _newer(path, seconds=10):
+    st = path.stat()
+    os.utime(path, (st.st_atime, st.st_mtime + seconds))
+
+
+def test_prep_removes_old_edl_and_review(tmp_path, monkeypatch):
+    job = _planned_job(tmp_path, monkeypatch)
+    assert (job / "edl.json").exists() and (job / "review.md").exists()
+    make_short.prep_transparent(job)
+    assert not (job / "edl.json").exists()
+    assert not (job / "review.md").exists()
+
+
+def test_render_after_new_prep_says_run_plan(tmp_path, monkeypatch, capsys):
+    job = _planned_job(tmp_path, monkeypatch)
+    make_short.prep_transparent(job)
+    assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
+    assert "--step plan" in capsys.readouterr().err
+
+
+def test_render_after_editing_pictures_says_run_plan(tmp_path, monkeypatch, capsys):
+    job = _planned_job(tmp_path, monkeypatch)
+    _newer(job / "pictures.json")
+    assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
+    err = capsys.readouterr().err
+    assert "--step plan" in err and "pictures.json" in err
+
+
+@pytest.mark.parametrize("name", ["words.json", "fixes.json", "headline.txt"])
+def test_render_after_editing_other_inputs_says_run_plan(tmp_path, monkeypatch, capsys, name):
+    job = _planned_job(tmp_path, monkeypatch)
+    if not (job / name).exists():
+        (job / name).write_text("{}")
+    _newer(job / name)
+    assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
+    assert "--step plan" in capsys.readouterr().err
+
+
+def test_render_after_editing_redact_says_run_plan(tmp_path, monkeypatch, capsys):
+    job = _planned_job(tmp_path, monkeypatch)
+    (job / "shots" / "redact.json").write_text("{}")
+    _newer(job / "shots" / "redact.json")
+    assert make_short.main(["transparent", str(job), "--step", "render"]) == 2
+    assert "--step plan" in capsys.readouterr().err
+
+
+def test_matte_after_editing_pictures_says_run_plan(tmp_path, monkeypatch, capsys):
+    job = _planned_job(tmp_path, monkeypatch)
+    _newer(job / "pictures.json")
+    assert make_short.main(["transparent", str(job), "--step", "matte"]) == 2
+    assert "--step plan" in capsys.readouterr().err
+
+
+def test_render_after_plan_passes_the_check(tmp_path, monkeypatch):
+    job = _planned_job(tmp_path, monkeypatch)
+    (job / "face.mp4").write_bytes(b"face")
+    with pytest.raises(_Reached):
+        make_short.render(job)
+
+
+def test_ranking_missing_edl_still_says_prep(tmp_path, capsys):
+    assert make_short.main(["ranking", str(tmp_path), "--step", "render"]) == 2
+    assert "--step prep" in capsys.readouterr().err
+
+
+def test_transparent_render_with_no_edl_says_plan(tmp_path, capsys):
+    assert make_short.main(["transparent", str(tmp_path), "--step", "render"]) == 2
+    assert "--step plan" in capsys.readouterr().err
+
+
+def test_step_all_passes_the_freshness_checks(tmp_path, monkeypatch):
+    job = _planned_job(tmp_path, monkeypatch)
+    (job / "face.mp4").write_bytes(b"face")
+    old = job / "edl.json"
+    st = old.stat()
+    os.utime(old, (st.st_atime, st.st_mtime - 60))  # an out-of-date edit list; "all" plans again first
+    with pytest.raises(_Reached):  # got through plan and matte up to the Remotion call
+        make_short.main(["transparent", str(job), "--step", "all"])

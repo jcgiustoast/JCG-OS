@@ -58,6 +58,30 @@ def list_shots(shots_dir: Path) -> list[Path]:
     )
 
 
+IGNORED_FILES = {"redact.json", "desktop.ini", "thumbs.db", ".ds_store"}
+
+
+def unsupported_pictures(shots_dir: Path) -> list[str]:
+    """Files in the shots folder that look like pictures to Juan but that the maker can't use (e.g. .heic)."""
+    return sorted(
+        p.name
+        for p in Path(shots_dir).iterdir()
+        if p.is_file()
+        and p.suffix.lower() not in SHOT_EXTS
+        and not p.name.startswith(".")
+        and p.name.lower() not in IGNORED_FILES
+    )
+
+
+def check_pictures_usable(shots_dir: Path) -> None:
+    bad = unsupported_pictures(shots_dir)
+    if bad:
+        raise PrepError(
+            f"The shots folder has files I can't use as pictures: {', '.join(bad)}. "
+            "Save them as .png or .jpg, or remove them."
+        )
+
+
 def item_cut(words: list[Word], hit: ScoreHit, lookback: float = 2.5, min_index: int = 0) -> int:
     """First word of the sentence that gives this score.
 

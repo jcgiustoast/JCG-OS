@@ -29,7 +29,12 @@ REPO = VIDEO_DIR.parents[2]
 if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
-from content.scripts.video.prep.edl import PrepError, build_ranking_edl, write_review  # noqa: E402
+from content.scripts.video.prep.edl import (  # noqa: E402
+    PrepError,
+    build_ranking_edl,
+    check_pictures_usable,
+    write_review,
+)
 from content.scripts.video.prep.media import FPS, HEIGHT, WIDTH, normalize, probe  # noqa: E402
 from content.scripts.video.prep.pictures import write_stub  # noqa: E402
 from content.scripts.video.prep.transparent import (  # noqa: E402
@@ -87,12 +92,17 @@ def prep_transparent(job: Path, whisper_model: str = "small") -> None:
 
     job = Path(job)
     recording = find_recording(job)
+    if (job / "shots").is_dir():
+        check_pictures_usable(job / "shots")
     face = job / "face.mp4"
     print(f"normalising {recording.name} -> face.mp4", flush=True)
     normalize(recording, face)
     print(f"transcribing (whisper {whisper_model})", flush=True)
     words = transcribe(face, model=whisper_model)
     save_words(words, job / "words.json")
+    # The old edit list was timed against the old recording; drop it so nothing renders from it.
+    for old in ("edl.json", "review.md"):
+        (job / old).unlink(missing_ok=True)
     if write_stub(job):
         print("pictures.json ready for words", flush=True)
     else:
@@ -112,6 +122,23 @@ def plan_transparent(job: Path) -> Path:
     return edl_path
 
 
+PLAN_INPUTS = ("words.json", "pictures.json", "fixes.json", "headline.txt", "shots/redact.json")
+
+
+def _require_fresh_edl(job: Path) -> None:
+    """Transparent short: stop if the edit list is missing or older than anything it was built from."""
+    edl_path = job / "edl.json"
+    if not edl_path.exists():
+        raise PrepError(f"No edl.json in {job}. Run --step plan first.")
+    built = edl_path.stat().st_mtime
+    newer = [n for n in PLAN_INPUTS if (job / n).exists() and (job / n).stat().st_mtime > built]
+    if newer:
+        raise PrepError(
+            f"The edit list is out of date: {', '.join(Path(n).name for n in newer)} changed after it was made. "
+            "Run --step plan again."
+        )
+
+
 def _face_key(job: Path) -> list | None:
     """Identity of the current face.mp4, so cut-outs made from another take are never reused."""
     face = Path(job) / "face.mp4"
@@ -123,9 +150,8 @@ def _face_key(job: Path) -> list | None:
 
 def matte_transparent(job: Path) -> None:
     job = Path(job)
+    _require_fresh_edl(job)
     edl_path = job / "edl.json"
-    if not edl_path.exists():
-        raise PrepError(f"No edl.json in {job}. Run --step plan first.")
     todo = matte_jobs(json.loads(edl_path.read_text(encoding="utf-8")))
     if todo and not (MATTE_PY.exists() and MATTE_MODEL.exists()):
         raise PrepError("Cut-out tool isn't set up — run setup_matte.ps1")
@@ -220,11 +246,14 @@ def check_output(path: Path) -> dict:
     return {"width": info["width"], "height": info["height"], "fps": info["fps"], "lufs": lufs}
 
 
-def render(job: Path) -> Path:
+def render(job: Path, fmt: str | None = None) -> Path:
     job = Path(job).resolve()
     edl_path = job / "edl.json"
     if not edl_path.exists():
-        raise PrepError(f"No edl.json in {job}. Run --step prep first.")
+        step = "plan" if fmt == "transparent" else "prep"
+        raise PrepError(f"No edl.json in {job}. Run --step {step} first.")
+    if fmt == "transparent" or json.loads(edl_path.read_text(encoding="utf-8")).get("format") == "transparent":
+        _require_fresh_edl(job)
     edl = json.loads(edl_path.read_text(encoding="utf-8"))
     try:
         index = json.loads((job / "matte" / "index.json").read_text(encoding="utf-8"))
@@ -292,7 +321,7 @@ def main(argv: list[str] | None = None) -> int:
             if args.step in ("matte", "all"):
                 matte_transparent(args.job)
         if args.step in ("render", "all"):
-            render(args.job)
+            render(args.job, args.format)
     except PrepError as e:
         print(f"stopped: {e}", file=sys.stderr)
         return 2

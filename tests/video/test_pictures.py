@@ -183,3 +183,52 @@ def test_full_needs_two_seconds():
     with pytest.raises(PrepError) as e:
         place(words, choices, _spans(words))
     assert "1.png" in str(e.value) and "2.png" in str(e.value)
+
+
+def test_load_choices_rejects_duplicate_picture(tmp_path):
+    job = _job(tmp_path)
+    _write(job, [{"picture": "1.png", "words": "a b", "show": "card"},
+                 {"picture": "1.png", "words": "c d", "show": "card"},
+                 {"picture": "2.png", "words": "e f", "show": "card"}])
+    with pytest.raises(PrepError, match="1.png.*twice"):
+        load_choices(job)
+
+
+def test_load_choices_rejects_two_pictures_with_same_name_stem(tmp_path):
+    job = _job(tmp_path, names=("1.png", "1.jpg"))
+    _write(job, [{"picture": "1.png", "words": "a b", "show": "card"},
+                 {"picture": "1.jpg", "words": "c d", "show": "card"}])
+    with pytest.raises(PrepError, match="1.png.*1.jpg"):
+        load_choices(job)
+
+
+def test_load_choices_names_unsupported_picture_files(tmp_path):
+    job = _job(tmp_path)
+    (job / "shots" / "3.heic").write_bytes(b"x")
+    (job / "shots" / "redact.json").write_text("{}")
+    (job / "shots" / "Thumbs.db").write_bytes(b"x")
+    (job / "shots" / "desktop.ini").write_bytes(b"x")
+    (job / "shots" / ".DS_Store").write_bytes(b"x")
+    _write(job, [{"picture": "1.png", "words": "a b", "show": "card"},
+                 {"picture": "2.png", "words": "c d", "show": "card"}])
+    with pytest.raises(PrepError, match="3.heic") as e:
+        load_choices(job)
+    assert "Thumbs" not in str(e.value) and "redact" not in str(e.value)
+
+
+def test_load_choices_ignores_housekeeping_files(tmp_path):
+    job = _job(tmp_path)
+    (job / "shots" / "redact.json").write_text("{}")
+    (job / "shots" / "Thumbs.db").write_bytes(b"x")
+    _write(job, [{"picture": "1.png", "words": "a b", "show": "card"},
+                 {"picture": "2.png", "words": "c d", "show": "card"}])
+    assert len(load_choices(job)) == 2
+
+
+def test_load_choices_reads_file_with_byte_order_mark(tmp_path):
+    job = _job(tmp_path)
+    (job / "pictures.json").write_text(
+        json.dumps([{"picture": "1.png", "words": "a b", "show": "card"},
+                    {"picture": "2.png", "words": "c d", "show": "card"}]),
+        encoding="utf-8-sig")
+    assert len(load_choices(job)) == 2

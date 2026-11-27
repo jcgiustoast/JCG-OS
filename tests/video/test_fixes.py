@@ -19,3 +19,12 @@ def test_load_fixes_missing_is_empty(tmp_path):
 def test_load_fixes_reads_file(tmp_path):
     (tmp_path / "fixes.json").write_text(json.dumps({"a b": "ab"}), encoding="utf-8")
     assert load_fixes(tmp_path) == {"a b": "ab"}
+
+
+def test_load_fixes_reads_file_with_byte_order_mark(tmp_path):
+    (tmp_path / "fixes.json").write_text('{"a": "b"}', encoding="utf-8-sig")
+    assert load_fixes(tmp_path) == {"a": "b"}
+
+
+def test_apply_fixes_skips_blank_keys():
+    assert apply_fixes("hello  there, ok", {"": "X", "  ": "Y", "hello": "hi"}) == "hi  there, ok"

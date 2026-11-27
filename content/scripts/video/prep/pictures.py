@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Literal
 
 from .cuts import Span, to_out, total
-from .edl import LAYOUT, PrepError, list_shots
+from .edl import LAYOUT, PrepError, check_pictures_usable, list_shots
 from .media import image_size
 from .scores import normalize
 from .words import Word
@@ -55,9 +55,10 @@ def load_choices(job: Path) -> list[PictureChoice]:
     if not path.exists():
         raise PrepError(f"There is no {FILE} yet. It lists which words Juan says when each picture appears.")
     try:
-        rows = json.loads(path.read_text(encoding="utf-8"))
+        rows = json.loads(path.read_text(encoding="utf-8-sig"))
     except json.JSONDecodeError as e:
         raise PrepError(f"{FILE} is not valid JSON ({e}). Check commas and quotes.") from e
+    check_pictures_usable(Path(job) / "shots")
     on_disk = {p.name for p in list_shots(Path(job) / "shots")}
     choices: list[PictureChoice] = []
     for row in rows:
@@ -70,6 +71,14 @@ def load_choices(job: Path) -> list[PictureChoice]:
             raise PrepError(f"Picture {name} has no words yet. Write the few words Juan says when it should appear.")
         if show not in ("card", "full"):
             raise PrepError(f'Picture {name} has show={show!r}. It must be "card" or "full".')
+        if any(c.picture == name for c in choices):
+            raise PrepError(f"{FILE} lists the picture {name} twice. Each picture can appear only once.")
+        same_stem = [c.picture for c in choices if Path(c.picture).stem == Path(name).stem]
+        if same_stem:
+            raise PrepError(
+                f"The pictures {same_stem[0]} and {name} have the same name apart from the ending. "
+                "Rename one of them so they differ."
+            )
         choices.append(PictureChoice(name, words, show))
     listed = {c.picture for c in choices}
     for missing in sorted(on_disk - listed):

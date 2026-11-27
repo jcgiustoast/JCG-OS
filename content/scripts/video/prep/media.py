@@ -8,7 +8,7 @@ from array import array
 from fractions import Fraction
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 from .cuts import find_silences, speech_threshold
 
@@ -55,7 +55,7 @@ def probe(path: Path) -> dict:
 
 def image_size(path: Path) -> tuple[int, int]:
     with Image.open(path) as im:
-        return im.size
+        return ImageOps.exif_transpose(im).size  # as a browser shows it (phone photos carry a rotation)
 
 
 LEVEL_STEP = 0.02  # seconds per loudness window

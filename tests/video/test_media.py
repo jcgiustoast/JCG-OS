@@ -55,3 +55,12 @@ def test_detect_silences_finds_the_quiet_stretch(tmp_path):
     assert len(found) == 1
     a, b = found[0]
     assert a == pytest.approx(1.0, abs=0.05) and b == pytest.approx(1.8, abs=0.05)
+
+
+def test_image_size_follows_exif_rotation(tmp_path):
+    p = tmp_path / "phone.jpg"
+    im = Image.new("RGB", (300, 700))
+    exif = Image.Exif()
+    exif[0x0112] = 6  # stored sideways; shown rotated 90 degrees
+    im.save(p, exif=exif)
+    assert image_size(p) == (700, 300)
