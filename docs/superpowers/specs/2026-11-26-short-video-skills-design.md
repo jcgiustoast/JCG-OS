@@ -104,7 +104,7 @@ Tested on Juan's PC 2026-11-26 (an earlier message said it had been tested; it h
 - **Weak spot:** a very fast, blurred hand wave loses part of the hand for 1–3 frames. Slower gestures are fine.
 - **Best case only:** plain, evenly lit wall. A cluttered room or a window behind him will look worse. Film against a plain wall.
 - MediaPipe: fast but blocky edges, leaves bits of the room. rembg: halo around hair, or 20+ min per clip for the good model. Both dropped.
-- Setup that worked: onnxruntime-gpu plus NVIDIA's CUDA 13 runtime packages in a Python venv; model file from the project's GitHub release. Test script kept at `scratchpad/bgtest/scripts/matte.py` (session scratch — copy into `content/scripts/video/` when the Transparent Background look is built).
+- Setup that worked: onnxruntime-gpu plus NVIDIA's CUDA 13 runtime packages in a Python venv; model file from the project's GitHub release. Cut-out tool: `content/scripts/video/matte.py`, set up with `setup_matte.ps1`.
 
 ## Constraints
 
