@@ -4,18 +4,44 @@
  "width": 1080,
  "height": 1920,
  "video": "job/face.mp4",
- "duration": 6.0,
- "safe": {"x": 60, "y": 260, "w": 880, "h": 1220},
- "caption": {"x": 150, "y": 1310, "w": 700, "h": 170},
+ "duration": 7.0,
+ "safe": {
+  "x": 60,
+  "y": 260,
+  "w": 880,
+  "h": 1220
+ },
+ "caption": {
+  "x": 150,
+  "y": 1310,
+  "w": 700,
+  "h": 170
+ },
  "spans": [
-  {"srcStart": 0.5, "srcEnd": 3.5, "outStart": 0.0},
-  {"srcStart": 4.0, "srcEnd": 7.0, "outStart": 3.0}
+  {
+   "srcStart": 0.5,
+   "srcEnd": 5.5,
+   "outStart": 0.0
+  },
+  {
+   "srcStart": 6.0,
+   "srcEnd": 8.0,
+   "outStart": 5.0
+  }
  ],
  "title": {
-  "lines": ["THE EMAIL THAT", "MAKES MORE SALES"],
+  "lines": [
+   "THE EMAIL THAT",
+   "MAKES MORE SALES"
+  ],
   "fontSize": 104,
   "lineHeight": 1.05,
-  "box": {"x": 60, "y": 300, "w": 880, "h": 267},
+  "box": {
+   "x": 60,
+   "y": 300,
+   "w": 880,
+   "h": 267
+  },
   "outEnd": 3.0
  },
  "pictures": [
@@ -23,40 +49,96 @@
    "picture": "1.png",
    "show": "card",
    "shot": "job/shots/1.png",
-   "box": {"x": 314, "y": 300, "w": 371, "h": 620},
+   "box": {
+    "x": 314,
+    "y": 300,
+    "w": 371,
+    "h": 620
+   },
    "imgW": 1080,
    "imgH": 1800,
    "crop": false,
    "outStart": 3.0,
    "outEnd": 4.5,
    "pushed": false,
-   "redact": [{"x": 60, "y": 1200, "w": 400, "h": 110}],
+   "redact": [
+    {
+     "x": 60,
+     "y": 1200,
+     "w": 400,
+     "h": 110
+    }
+   ],
    "matte": null
   },
   {
    "picture": "2.png",
    "show": "full",
    "shot": "job/shots/2.png",
-   "box": {"x": 0, "y": 0, "w": 1080, "h": 1920},
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 1080,
+    "h": 1920
+   },
    "imgW": 1080,
    "imgH": 6000,
    "crop": true,
    "outStart": 4.5,
-   "outEnd": 6.0,
+   "outEnd": 6.5,
    "pushed": false,
-   "redact": [{"x": 60, "y": 1200, "w": 400, "h": 110}],
+   "redact": [
+    {
+     "x": 60,
+     "y": 1200,
+     "w": 400,
+     "h": 110
+    }
+   ],
    "matte": {
     "file": "job/matte/2.webm",
-    "srcStart": 5.5,
-    "srcEnd": 7.0,
-    "spans": [{"srcStart": 0.0, "srcEnd": 1.5, "outStart": 4.5}]
+    "srcStart": 5.0,
+    "srcEnd": 7.5,
+    "spans": [
+     {
+      "srcStart": 0.0,
+      "srcEnd": 0.5,
+      "outStart": 4.5
+     },
+     {
+      "srcStart": 1.0,
+      "srcEnd": 2.5,
+      "outStart": 5.0
+     }
+    ]
    }
   }
  ],
  "captions": [
-  {"text": "this one email brings back", "outStart": 0.0, "outEnd": 1.5},
-  {"text": "the people who left their cart", "outStart": 1.5, "outEnd": 3.0},
-  {"text": "and it is the first thing i set up", "outStart": 3.0, "outEnd": 4.5},
-  {"text": "on every new store i work with", "outStart": 4.5, "outEnd": 6.0}
+  {
+   "text": "this one email brings back",
+   "outStart": 0.0,
+   "outEnd": 1.5
+  },
+  {
+   "text": "the people who left their cart",
+   "outStart": 1.5,
+   "outEnd": 3.0
+  },
+  {
+   "text": "and it is the first thing i set up",
+   "outStart": 3.0,
+   "outEnd": 4.5
+  },
+  {
+   "text": "on every new store i work with",
+   "outStart": 4.5,
+   "outEnd": 6.5
+  },
+  {
+   "text": "every single time",
+   "outStart": 6.5,
+   "outEnd": 7.0
+  }
  ]
 }

@@ -34,17 +34,23 @@ def fake_email(path: Path, w: int, h: int) -> None:
     im.save(path)
 
 
-def alpha_webm(path: Path) -> None:
-    """3 s of fully see-through video with a white circle: stands in for the cut-out."""
+def alpha_webm(path: Path, src_start: float, seconds: float) -> None:
+    """See-through clip standing in for the cut-out: a white circle whose x follows
+    the SOURCE time (src_start + t) plus that time as text, so a still shows whether
+    it is in step with the timestamp burned into face.mp4."""
     path.parent.mkdir(parents=True, exist_ok=True)
+    src_t = f"({src_start}+T)"
+    font = r"C\:/Windows/Fonts/arial.ttf"
+    vf = (
+        f"color=c=black@0.0:s=1080x1920:r=30:d={seconds},format=rgba,"
+        f"geq=r='255':g='255':b='255':a='if(lt(hypot(X-(100+120*{src_t}),Y-1300),200),255,0)',"
+        rf"drawtext=fontfile='{font}':text='src %{{eif\:{src_start}+t\:d}}.%{{eif\:mod(({src_start}+t)*10\,10)\:d}}':"
+        "fontsize=90:fontcolor=red:box=1:boxcolor=black:x=300:y=1000,"
+        "format=yuva420p"
+    )
     subprocess.run(
-        [
-            "ffmpeg", "-y", "-loglevel", "error",
-            "-f", "lavfi", "-i", "color=c=black@0.0:s=1080x1920:r=30:d=3,format=yuva420p,"
-            "geq=lum='if(lt(hypot(X-540,Y-1300),260),255,16)':cb=128:cr=128:a='if(lt(hypot(X-540,Y-1300),260),255,0)'",
-            "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-auto-alt-ref", "0",
-            str(path),
-        ],
+        ["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", vf,
+         "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-auto-alt-ref", "0", str(path)],
         check=True,
     )
 
@@ -67,7 +73,7 @@ def main() -> None:
     fake_email(JOB / "shots" / "1.png", 1080, 1800)
     fake_email(JOB / "shots" / "2.png", 1080, 6000)
     if transparent:
-        alpha_webm(JOB / "matte" / "2.webm")
+        alpha_webm(JOB / "matte" / "2.webm", src_start=5.0, seconds=2.5)
     print(f"sample media written to {JOB}")
 
 
