@@ -26,11 +26,13 @@ const FadeIn: React.FC<{ frames: number; children: React.ReactNode }> = ({ frame
   return <AbsoluteFill style={{ opacity }}>{children}</AbsoluteFill>;
 };
 
-export const FaceTrack: React.FC<{ video: string; spans: Span[]; fps: number }> = ({
-  video,
-  spans,
-  fps,
-}) => {
+export const FaceTrack: React.FC<{
+  video: string;
+  spans: Span[];
+  fps: number;
+  transparent?: boolean; // the file has an alpha channel (cut-out clip)
+  muted?: boolean;
+}> = ({ video, spans, fps, transparent = false, muted = false }) => {
   const src = staticFile(video);
   return (
     <AbsoluteFill>
@@ -48,7 +50,8 @@ export const FaceTrack: React.FC<{ video: string; spans: Span[]; fps: number }> 
               <OffthreadVideo
                 src={src}
                 trimBefore={toFrame(span.srcStart, fps)}
-                volume={(f) => (f < own ? 1 : 0)}
+                volume={(f) => (!muted && f < own ? 1 : 0)}
+                transparent={transparent}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </FadeIn>

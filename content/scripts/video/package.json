@@ -5,6 +5,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "still": "remotion still src/index.ts Ranking",
+    "still:tb": "remotion still src/index.ts TransparentBackground",
     "render": "remotion render src/index.ts Ranking"
   },
   "type": "commonjs",
