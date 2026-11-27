@@ -151,3 +151,35 @@ def test_too_close_stops():
     with pytest.raises(PrepError) as e:
         place(words, choices, _spans(words))
     assert "1.png" in str(e.value) and "2.png" in str(e.value)
+
+
+def test_last_picture_too_close_to_the_end_stops():
+    words = _talk(60)  # ends 18 s
+    with pytest.raises(PrepError) as e:
+        place(words, [PictureChoice("1.png", "w58 w59", "card")], _spans(words))
+    assert "1.png" in str(e.value)
+
+
+def test_place_uses_out_time_after_a_removed_pause():
+    a = words_from(" ".join(f"a{i}" for i in range(20)))  # 0-6 s
+    b = words_from(" ".join(f"b{i}" for i in range(20)), start=8.0)  # 2 s pause, then 8-14 s
+    words = a + b
+    spans = keep_spans(words, pad=0.0)
+    p = place(words, [PictureChoice("1.png", "b10 b11", "card")], spans)
+    assert words[30].start == pytest.approx(11.0)
+    assert p[0]["outStart"] == pytest.approx(9.0)
+
+
+def test_place_caps_full_at_eight_seconds():
+    words = _talk(90)  # 27 s
+    choices = [PictureChoice("1.png", "w15 w16", "full"), PictureChoice("2.png", "w60 w61", "card")]
+    p = place(words, choices, _spans(words))
+    assert p[0]["outEnd"] - p[0]["outStart"] == pytest.approx(8.0)
+
+
+def test_full_needs_two_seconds():
+    words = _talk(60)
+    choices = [PictureChoice("1.png", "w15 w16", "full"), PictureChoice("2.png", "w21 w22", "card")]  # 1.8 s apart
+    with pytest.raises(PrepError) as e:
+        place(words, choices, _spans(words))
+    assert "1.png" in str(e.value) and "2.png" in str(e.value)

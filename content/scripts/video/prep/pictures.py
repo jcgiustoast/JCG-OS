@@ -121,11 +121,16 @@ def place(words: list[Word], choices: list[PictureChoice], spans: list[Span]) ->
     for n, (c, idx, start, pushed) in enumerate(found):
         has_next = n + 1 < len(found)
         nxt = found[n + 1][2] if has_next else end_of_video
-        if has_next and nxt - start < MIN_ON[c.show]:
+        if nxt - start < MIN_ON[c.show]:
+            if has_next:
+                raise PrepError(
+                    f"Pictures {c.picture} and {found[n + 1][0].picture} are only {nxt - start:.1f}s apart. "
+                    f"A {c.show} picture needs at least {MIN_ON[c.show]}s on screen. "
+                    f"Change the words of one of them."
+                )
             raise PrepError(
-                f"Pictures {c.picture} and {found[n + 1][0].picture} are only {nxt - start:.1f}s apart. "
-                f"A {c.show} picture needs at least {MIN_ON[c.show]}s on screen. "
-                f"Change the words of one of them."
+                f'Picture {c.picture}: "{c.words}" is only {max(nxt - start, 0):.1f}s before the video ends. '
+                f"A {c.show} picture needs at least {MIN_ON[c.show]}s on screen. Use words said earlier."
             )
         out.append(
             {
