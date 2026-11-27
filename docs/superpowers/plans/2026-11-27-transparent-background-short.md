@@ -17,10 +17,10 @@
 - Reused as is: pause removal (`keep_spans`, >0.3 s, audio silences), cut blending (cuts removing ≤0.5 s blend over 2 frames — `FaceTrack`), captions (`make_captions`, Archivo Medium 41 px white, lowercase, 5–13 words, ≤3 s, `CAPTION_BRIDGE`), safe zone 260 top / 440 bottom / 60 left / 140 right (x 60–940, y 260–1480) from `layout.json`.
 - Inputs in job folder `content/video/<date>-<slug>/` (gitignored): `raw/` (one recording), `shots/` (pictures named 1, 2, 3… in spoken order; optional `redact.json` as in ranking), `headline.txt` (Juan's words, shown exactly as he typed them — no case change).
 - Hand-edited files, never written by any step once they exist: `pictures.json`, `fixes.json`, `headline.txt`, `shots/redact.json`. Derived files, rewritten every run, never hand-edited: `words.json`, `edl.json`, `review.md`, `matte/`.
-- Title: first 3.0 s, black (#000) box, white text, Big Shoulders ExtraBold (`content/scripts/visual/assets/fonts/bigshoulders-extrabold.ttf`, no copy), ≤3 lines, top edge y 300, centred on the safe area's centre x 500, max box width 880 (safe width). No animation.
-- Cards: inside the region x 100–900, y 300–920 (top half, inside safe zone), contain-fit and centred in it; 20 px rounded corners, soft shadow (pending Juan's OK — the ranking short has neither); hard cut in, no animation. No card before 3.0 s (title time).
+- Title: first 3.0 s, black (#000) box, white text, Big Shoulders ExtraBold (`content/scripts/visual/assets/fonts/bigshoulders-extrabold.ttf`, no copy), ≤3 lines, top edge y 300 (top of the safe area — Juan chose this over ~30% down, 2026-11-27), centred on the safe area's centre x 500, max box width 880 (safe width). No animation.
+- Cards: inside the region x 100–900, y 300–920 (top half, inside safe zone), contain-fit and centred in it; 20 px rounded corners, soft shadow (Juan OK'd 2026-11-27 — the ranking short has neither); hard cut in, no animation. No card before 3.0 s (title time).
 - Full-screen page: picture scaled to 1080 wide, top-anchored, covers the frame (very tall page shows its top 1920 px); Juan's cut-out on top at camera position; captions on top of both.
-- Default show: picture height/width ≥ 1.6 → `full`, else `card`. Juan can switch any.
+- Default show: picture height/width ≥ 2.5 → `full`, else `card` — long full-page website screenshots go full; phone screenshots (tweets, ~2.2) stay cards (Juan, 2026-11-27). Juan can switch any.
 - On-screen time: card 1.5–6.0 s, full 2.0–8.0 s. Each picture starts at the first word of its phrase; ends at the next picture's start, capped at its max (face alone after). Below its min → plan stops.
 - Matting: RVM `rvm_resnet50_fp32.onnx` (GitHub release `PeterL1n/RobustVideoMatting` v1.0.0), CUDA provider, `downsample_ratio` 0.25, full 1080×1920, only over each full moment's source range plus 0.5 s warm-up before it (warm-up frames discarded). Output VP9 WebM, `yuva420p`, 30 fps.
 - Venv `content/scripts/video/.venv-matte/` and model folder `content/scripts/video/models/` are gitignored. Downloading wheels or the model needs Juan's yes first.
@@ -71,7 +71,7 @@
 - Produces in `cuts.py`: `to_src(t_out: float, spans: list[Span]) -> float` (inverse of `to_out`; clamps to the nearest span edge).
 - Produces in `pictures.py`:
   - `@dataclass(frozen=True) PictureChoice(picture: str, words: str, show: Literal["card","full"])`
-  - `suggest_show(img_w: int, img_h: int) -> str` — `"full"` if `img_h / img_w >= 1.6`.
+  - `suggest_show(img_w: int, img_h: int) -> str` — `"full"` if `img_h / img_w >= 2.5` (layout `fullRatio`).
   - `write_stub(job: Path) -> bool` — writes `pictures.json` (`[{"picture": "1.png", "words": "", "show": <suggested>}, …]` from `shots/`) **only if it doesn't exist**; returns whether it wrote.
   - `load_choices(job: Path) -> list[PictureChoice]` — PrepError if missing, any `words` empty, a `show` not card/full, a picture name not in `shots/`, or a file in `shots/` not listed.
   - `find_phrase(words: list[Word], phrase: str, after: int = 0) -> int` — index of the phrase's first word: first contiguous match of the normalised tokens at index ≥ `after`; -1 if none.
@@ -81,7 +81,7 @@ Decision (how pictures get matched to words): Claude reads `words.json` and writ
 
 - [ ] **Step 1: Write failing tests** (use `helpers.words_from`, 0.3 s/word, `keep_spans` with no gaps so out = source time):
   - `test_to_src_inverts_to_out`: spans with a removed gap → `to_src(to_out(t)) == t` for spoken t.
-  - `test_suggest_show`: 1080×3000 → `"full"`; 1080×1200 → `"card"`; 1200×800 → `"card"`.
+  - `test_suggest_show`: 1080×3000 → `"full"`; 1170×2532 phone screenshot → `"card"`; 1080×1200 → `"card"`; 1200×800 → `"card"`.
   - `test_write_stub_never_overwrites`: write stub, edit `words`, call again → returns False, edit still there.
   - `test_load_choices_rejects_empty_words`, `test_load_choices_rejects_unlisted_picture` → PrepError mentioning the picture name.
   - `test_find_phrase_ignores_case_and_punctuation`: "So, Bloom's page IS great." / phrase `"blooms page is"` → index 1.
@@ -106,7 +106,7 @@ Decision (how pictures get matched to words): Claude reads `words.json` and writ
 - Test: `tests/video/test_title.py`, `tests/video/test_fixes.py`
 
 **Interfaces:**
-- `layout.json` adds: `"transparent": {"title": {"top": 300, "centreX": 500, "maxWidth": 880, "padX": 36, "padY": 24, "sizes": [104, 96, 88, 80, 72], "lineHeight": 1.05, "maxLines": 3, "seconds": 3.0, "slack": 1.04}, "card": {"x": 100, "y": 300, "w": 800, "h": 620, "radius": 20}, "caption": {"x": 150, "w": 700}, "fullRatio": 1.6, "minOn": {"card": 1.5, "full": 2.0}, "maxOn": {"card": 6.0, "full": 8.0}}`.
+- `layout.json` adds: `"transparent": {"title": {"top": 300, "centreX": 500, "maxWidth": 880, "padX": 36, "padY": 24, "sizes": [104, 96, 88, 80, 72], "lineHeight": 1.05, "maxLines": 3, "seconds": 3.0, "slack": 1.04}, "card": {"x": 100, "y": 300, "w": 800, "h": 620, "radius": 20}, "caption": {"x": 150, "w": 700}, "fullRatio": 2.5, "minOn": {"card": 1.5, "full": 2.0}, "maxOn": {"card": 6.0, "full": 8.0}}`.
 - `title.py`: `fit_title(text: str) -> dict` → `{"lines": list[str], "fontSize": int, "lineHeight": float, "box": {"x","y","w","h"}, "outEnd": 3.0}`. Greedy word wrap measured with Pillow `ImageFont.truetype(bigshoulders-extrabold.ttf, size).getlength(line) * slack`; sizes largest first; PrepError("The headline doesn't fit in 3 lines — shorten it") if none fits; PrepError if empty.
 - `fixes.py`: `load_fixes(job: Path) -> dict[str, str]` (`{}` if absent); `apply_fixes(text: str, fixes: dict[str, str]) -> str` (whole-word, case-insensitive, longest key first).
 
