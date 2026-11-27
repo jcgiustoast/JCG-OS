@@ -5,6 +5,13 @@
 Job folder: raw/ (one recording), shots/ (1.png, 2.png, ...; optional redact.json).
 prep   -> face.mp4, words.json, edl.json, review.md
 render -> out/render.mp4 (Remotion), out/<job-name>.mp4 (loudness -14 LUFS, checked)
+
+    python content/scripts/video/make_short.py transparent <job_dir> --step prep|plan|matte|render|all
+
+prep   -> face.mp4, words.json, pictures.json (stub, never overwritten)
+plan   -> edl.json, review.md (needs headline.txt and Claude's pictures.json)
+matte  -> matte/*.webm (cut-out of Juan for each full-screen picture, GPU)
+render -> as ranking; "all" for transparent = plan, matte, render
 """
 from __future__ import annotations
 
@@ -24,10 +31,19 @@ if str(REPO) not in sys.path:
 
 from content.scripts.video.prep.edl import PrepError, build_ranking_edl, write_review  # noqa: E402
 from content.scripts.video.prep.media import FPS, HEIGHT, WIDTH, normalize, probe  # noqa: E402
-from content.scripts.video.prep.words import save_words  # noqa: E402
+from content.scripts.video.prep.pictures import write_stub  # noqa: E402
+from content.scripts.video.prep.transparent import (  # noqa: E402
+    build_transparent_edl,
+    matte_jobs,
+    write_transparent_review,
+)
+from content.scripts.video.prep.words import load_words, save_words  # noqa: E402
 
 VIDEO_EXTS = {".mp4", ".mov", ".m4v", ".mkv", ".webm"}
 PUBLIC_JOB = VIDEO_DIR / "public" / "job"
+MATTE_PY = VIDEO_DIR / ".venv-matte" / "Scripts" / "python.exe"
+MATTE_MODEL = VIDEO_DIR / "models" / "rvm_resnet50_fp32.onnx"
+COMPOSITIONS = {"ranking": "Ranking", "transparent": "TransparentBackground"}
 TARGET_LUFS = -14.0
 LUFS_TOLERANCE = 1.0
 
@@ -66,12 +82,81 @@ def prep(job: Path, whisper_model: str = "small") -> Path:
     return edl_path
 
 
+def prep_transparent(job: Path, whisper_model: str = "small") -> None:
+    from content.scripts.video.prep.transcribe import transcribe  # loads whisper; keep lazy
+
+    job = Path(job)
+    recording = find_recording(job)
+    face = job / "face.mp4"
+    print(f"normalising {recording.name} -> face.mp4", flush=True)
+    normalize(recording, face)
+    print(f"transcribing (whisper {whisper_model})", flush=True)
+    words = transcribe(face, model=whisper_model)
+    save_words(words, job / "words.json")
+    if write_stub(job):
+        print("pictures.json ready for words", flush=True)
+    else:
+        print("kept your pictures.json", flush=True)
+
+
+def plan_transparent(job: Path) -> Path:
+    job = Path(job)
+    words_path = job / "words.json"
+    if not words_path.exists():
+        raise PrepError(f"No words.json in {job}. Run --step prep first.")
+    edl = build_transparent_edl(job, load_words(words_path), None)
+    edl_path = job / "edl.json"
+    edl_path.write_text(json.dumps(edl, indent=1, ensure_ascii=False), encoding="utf-8")
+    write_transparent_review(edl, job / "review.md")
+    print(f"review: {job / 'review.md'}", flush=True)
+    return edl_path
+
+
+def matte_transparent(job: Path) -> None:
+    job = Path(job)
+    edl_path = job / "edl.json"
+    if not edl_path.exists():
+        raise PrepError(f"No edl.json in {job}. Run --step plan first.")
+    todo = matte_jobs(json.loads(edl_path.read_text(encoding="utf-8")))
+    if todo and not (MATTE_PY.exists() and MATTE_MODEL.exists()):
+        raise PrepError("Cut-out tool isn't set up — run setup_matte.ps1")
+    matte_dir = job / "matte"
+    matte_dir.mkdir(exist_ok=True)
+    index_path = matte_dir / "index.json"
+    try:
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        index = {}
+    new_index = {}
+    for m in todo:
+        name = Path(m["out"]).name
+        rec = {"start": m["start"], "end": m["end"]}
+        if index.get(name) == rec and (job / m["out"]).exists():
+            print(f"cut-out {name}: already done", flush=True)
+        else:
+            print(f"cutting out {name} ({m['start']:.2f}-{m['end']:.2f} s)", flush=True)
+            res = subprocess.run(
+                [str(MATTE_PY), "-I", str(VIDEO_DIR / "matte.py"), str(job / "face.mp4"),
+                 str(job / m["out"]), "--start", str(m["start"]), "--end", str(m["end"]),
+                 "--model", str(MATTE_MODEL)],
+            )
+            if res.returncode != 0:
+                raise PrepError(f"The cut-out tool failed on {name} (exit {res.returncode}).")
+        new_index[name] = rec
+    for f in matte_dir.iterdir():
+        if f.name != "index.json" and f.name not in new_index:
+            f.unlink()
+    index_path.write_text(json.dumps(new_index, indent=1), encoding="utf-8")
+
+
 def _stage_media(job: Path) -> None:
     if PUBLIC_JOB.exists():
         shutil.rmtree(PUBLIC_JOB)
     PUBLIC_JOB.mkdir(parents=True)
     shutil.copy2(job / "face.mp4", PUBLIC_JOB / "face.mp4")
     shutil.copytree(job / "shots", PUBLIC_JOB / "shots")
+    if (job / "matte").is_dir():
+        shutil.copytree(job / "matte", PUBLIC_JOB / "matte")
 
 
 def _npx() -> str:
@@ -124,6 +209,10 @@ def render(job: Path) -> Path:
     edl_path = job / "edl.json"
     if not edl_path.exists():
         raise PrepError(f"No edl.json in {job}. Run --step prep first.")
+    edl = json.loads(edl_path.read_text(encoding="utf-8"))
+    for p in edl.get("pictures", []):
+        if p.get("matte") and not (job / "matte" / Path(p["matte"]["file"]).name).exists():
+            raise PrepError(f"Picture {p['picture']} needs its cut-out but there is no matte file. Run --step matte.")
     _stage_media(job)
     out_dir = job / "out"
     out_dir.mkdir(exist_ok=True)
@@ -131,7 +220,7 @@ def render(job: Path) -> Path:
 
     started = time.monotonic()
     subprocess.run(
-        [_npx(), "remotion", "render", "src/index.ts", "Ranking", str(raw_render),
+        [_npx(), "remotion", "render", "src/index.ts", COMPOSITIONS[edl.get("format", "ranking")], str(raw_render),
          f"--props={edl_path}"],
         cwd=VIDEO_DIR, check=True,
     )
@@ -157,15 +246,25 @@ def render(job: Path) -> Path:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("format", choices=["ranking"])
+    ap.add_argument("format", choices=["ranking", "transparent"])
     ap.add_argument("job", type=Path)
-    ap.add_argument("--step", choices=["prep", "render", "all"], default="all")
+    ap.add_argument("--step", choices=["prep", "plan", "matte", "render", "all"], default="all")
     ap.add_argument("--whisper-model", default="small")
     args = ap.parse_args(argv)
 
     try:
-        if args.step in ("prep", "all"):
-            prep(args.job, args.whisper_model)
+        if args.format == "ranking":
+            if args.step in ("plan", "matte"):
+                raise PrepError(f"The ranking short has no {args.step} step. Use prep or render.")
+            if args.step in ("prep", "all"):
+                prep(args.job, args.whisper_model)
+        else:
+            if args.step == "prep":
+                prep_transparent(args.job, args.whisper_model)
+            if args.step in ("plan", "all"):
+                plan_transparent(args.job)
+            if args.step in ("matte", "all"):
+                matte_transparent(args.job)
         if args.step in ("render", "all"):
             render(args.job)
     except PrepError as e:
