@@ -39,3 +39,6 @@ content/video/
 content/scripts/video/node_modules/
 content/scripts/video/public/job/
 content/scripts/video/out/
+# Cut-out tool — own venv + model (set up by setup_matte.ps1)
+content/scripts/video/.venv-matte/
+content/scripts/video/models/
