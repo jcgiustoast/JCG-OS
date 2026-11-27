@@ -93,6 +93,8 @@ def test_matte_spans_mirror_face_spans_across_a_cut(tmp_path):
             expect = face["srcStart"]
         assert m["srcStart"] + ms["srcStart"] == pytest.approx(expect, abs=0.001)
         assert ms["srcEnd"] > ms["srcStart"]
+        piece_end = min(face["srcEnd"], face["srcStart"] + (p["outEnd"] - face["outStart"]))
+        assert ms["srcEnd"] - ms["srcStart"] == pytest.approx(piece_end - expect, abs=0.002)
 
 
 def test_captions_get_fixes(tmp_path):
@@ -130,3 +132,9 @@ def test_review_flags_pushed_picture(tmp_path):
     out = tmp_path / "review.md"
     write_transparent_review(edl, out)
     assert "moved to 3.0 s so it doesn't cover the title" in out.read_text(encoding="utf-8")
+
+
+def test_missing_face_video_stops_when_silences_not_given(tmp_path):
+    job, words = _job(tmp_path, [(1200, 675)], phrases=["first page"], show={1: "card"})
+    with pytest.raises(PrepError, match="face.mp4"):
+        build_transparent_edl(job, words)

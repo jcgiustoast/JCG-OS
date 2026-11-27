@@ -3,16 +3,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .captions import make_captions
-from .cuts import keep_spans, to_out, total
+from .cuts import keep_spans, total
 from .edl import (
-    CAPTION_BRIDGE,
     LAYOUT,
     SAFE,
     SAFE_Y1,
     PrepError,
     _load_redact,
-    list_shots,
+    build_captions,
 )
 from .fixes import apply_fixes, load_fixes
 from .media import FPS, HEIGHT, WIDTH, detect_silences, image_size, probe
@@ -82,7 +80,9 @@ def build_transparent_edl(
     face = job / "face.mp4"
     duration = probe(face)["duration"] if face.exists() else None
     if silences is None:
-        silences = detect_silences(face) if face.exists() else []
+        if not face.exists():
+            raise PrepError("There is no face.mp4 in the job folder yet, so I can't find the pauses to cut.")
+        silences = detect_silences(face)
     spans = keep_spans(words, duration=duration, silences=silences)
     out_total = round(total(spans), 3)
 
@@ -113,17 +113,9 @@ def build_transparent_edl(
         })
 
     fixes = load_fixes(job)
-    captions = [
-        {
-            "text": apply_fixes(c.text, fixes),
-            "outStart": round(to_out(c.src_start, spans), 3),
-            "outEnd": round(to_out(c.src_end, spans), 3),
-        }
-        for c in make_captions(words, breaks=[p["wordIndex"] for p in placed])
-    ]
-    for a, b in zip(captions, captions[1:]):
-        if b["outStart"] - a["outEnd"] <= CAPTION_BRIDGE:
-            a["outEnd"] = b["outStart"]
+    captions = build_captions(
+        words, spans, [p["wordIndex"] for p in placed], lambda t: apply_fixes(t, fixes)
+    )
 
     return {
         "format": "transparent",

@@ -118,6 +118,22 @@ def _load_redact(shots_dir: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def build_captions(words: list[Word], spans, breaks: list[int], text_fn=lambda t: t) -> list[dict]:
+    """Caption list in finished-video time; `text_fn` post-processes each caption's text."""
+    captions = [
+        {
+            "text": text_fn(c.text),
+            "outStart": round(to_out(c.src_start, spans), 3),
+            "outEnd": round(to_out(c.src_end, spans), 3),
+        }
+        for c in make_captions(words, breaks=breaks)
+    ]
+    for a, b in zip(captions, captions[1:]):
+        if b["outStart"] - a["outEnd"] <= CAPTION_BRIDGE:
+            a["outEnd"] = b["outStart"]
+    return captions
+
+
 def build_ranking_edl(
     job: Path, words: list[Word], silences: list[tuple[float, float]] | None = None
 ) -> dict:
@@ -168,16 +184,7 @@ def build_ranking_edl(
         a["outEnd"] = b["outStart"]
     items[-1]["outEnd"] = out_total
 
-    captions = []
-    for c in make_captions(words, breaks=cuts):
-        captions.append({
-            "text": c.text,
-            "outStart": round(to_out(c.src_start, spans), 3),
-            "outEnd": round(to_out(c.src_end, spans), 3),
-        })
-    for a, b in zip(captions, captions[1:]):
-        if b["outStart"] - a["outEnd"] <= CAPTION_BRIDGE:
-            a["outEnd"] = b["outStart"]
+    captions = build_captions(words, spans, cuts)
 
     return {
         "format": "ranking",
