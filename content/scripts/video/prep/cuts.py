@@ -126,3 +126,15 @@ def to_out(t: float, spans: list[Span]) -> float:
         if t <= s.src_end:
             return s.out_start + (t - s.src_start)
     return total(spans)
+
+
+def to_src(t_out: float, spans: list[Span]) -> float:
+    """Finished-video time -> source time (inverse of to_out). Clamps to the nearest edge."""
+    if not spans:
+        return 0.0
+    if t_out <= spans[0].out_start:
+        return spans[0].src_start
+    for s in spans:
+        if t_out <= s.out_start + (s.src_end - s.src_start):
+            return s.src_start + (t_out - s.out_start)
+    return spans[-1].src_end

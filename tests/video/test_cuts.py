@@ -117,3 +117,12 @@ def test_speech_threshold_none_when_no_quiet_part():
     # wall-to-wall talking: no level is far enough below the voice to call silence
     levels = [-22.0, -20.0, -18.0, -24.0] * 30
     assert speech_threshold(levels) is None
+
+
+def test_to_src_inverts_to_out():
+    from content.scripts.video.prep.cuts import to_src
+
+    words = [Word("a", 0.5, 1.0), Word("b", 1.0, 1.5), Word("c", 2.5, 3.0), Word("d", 3.0, 3.5)]
+    spans = keep_spans(words, max_gap=0.3, pad=PAD)
+    for t in (0.6, 1.2, 2.7, 3.2):
+        assert to_src(to_out(t, spans), spans) == pytest.approx(t)
