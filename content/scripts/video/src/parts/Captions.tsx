@@ -8,19 +8,23 @@ import { Box, Caption, toFrame } from "../edl";
 import { CAPTION_FONT } from "../fonts";
 import { LAYOUT } from "../layout";
 
-// boxed (off by default, so the ranking look is unchanged): each phrase sits in
-// a solid black box that hugs its lines, like the Transparent Background title
-// box, so white text reads over any picture.
+// strongShadow (off by default, so the ranking look is unchanged): layered dark
+// shadows, tight plus wide and soft, so white text still reads over a white page.
+// No box, no outline.
+const STRONG_SHADOW =
+  "0 0 2px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.85), 0 2px 12px rgba(0,0,0,0.7)";
+const DEFAULT_SHADOW = "0 2px 6px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.35)";
+
 export const Captions: React.FC<{
   captions: Caption[];
   box: Box;
   fps: number;
-  boxed?: boolean;
+  strongShadow?: boolean;
 }> = ({
   captions,
   box,
   fps,
-  boxed = false,
+  strongShadow = false,
 }) => (
   <>
     {captions.map((c, i) => {
@@ -50,27 +54,10 @@ export const Captions: React.FC<{
                 color: "#fff",
                 textAlign: "center",
                 textWrap: "balance", // no lone last word ("... out of / 10")
-                textShadow: boxed
-                  ? "none"
-                  : "0 2px 6px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.35)",
+                textShadow: strongShadow ? STRONG_SHADOW : DEFAULT_SHADOW,
               }}
             >
-              {boxed ? (
-                <span
-                  style={{
-                    background: "#000",
-                    padding: "10px 18px",
-                    WebkitBoxDecorationBreak: "clone",
-                    boxDecorationBreak: "clone",
-                    // padding sits on the first/last line only horizontally; lines stack tight
-                    lineHeight: 1.45,
-                  }}
-                >
-                  {c.text}
-                </span>
-              ) : (
-                c.text
-              )}
+              {c.text}
             </div>
           </div>
         </Sequence>

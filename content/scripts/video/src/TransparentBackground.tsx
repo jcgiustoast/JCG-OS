@@ -63,7 +63,7 @@ export const TransparentBackground: React.FC<TransparentProps> = (edl) => {
           <TitleBox title={edl.title} />
         </Sequence>
       )}
-      <Captions captions={edl.captions} box={edl.caption} fps={fps} boxed />
+      <Captions captions={edl.captions} box={edl.caption} fps={fps} strongShadow />
     </AbsoluteFill>
   );
 };

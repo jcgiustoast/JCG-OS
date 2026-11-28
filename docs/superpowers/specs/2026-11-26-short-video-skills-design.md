@@ -76,7 +76,7 @@ Max's example: YouTube short Wi7TmhMsiAA. 3 s title box over his face, then scre
 2. The pictures, in the order he talks about them.
 3. The headline. Juan writes it.
 
-**Captions, Juan's call (2026-11-28):** captions sit in a black box (white text alone was unreadable over busy pages).
+**Captions, Juan's call (2026-11-28):** white text with a strong soft shadow, no box (like Max, but strong enough to read on white pages).
 
 **The look:**
 - **First 3 s:** black title box near the top, headline in Big Shoulders. Off his face, inside the safe zone.
