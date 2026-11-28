@@ -76,6 +76,8 @@ Max's example: YouTube short Wi7TmhMsiAA. 3 s title box over his face, then scre
 2. The pictures, in the order he talks about them.
 3. The headline. Juan writes it.
 
+**Captions, Juan's call (2026-11-28):** captions sit in a black box (white text alone was unreadable over busy pages).
+
 **The look:**
 - **First 3 s:** black title box near the top, headline in Big Shoulders. Off his face, inside the safe zone.
 - **Most of the video:** his face in his real room, not cut out. Pictures appear as cards in the top half, changing about every 3 s, each one landing when he starts talking about it.

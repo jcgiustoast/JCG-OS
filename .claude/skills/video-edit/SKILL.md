@@ -38,7 +38,7 @@ Plain-speech rules from his global CLAUDE.md apply to every message: say the bra
 
 # Transparent Background short
 
-Recording + pictures + a headline in, finished vertical video out. The headline shows in a black box for the first 3 seconds. After that each picture shows when Juan says its words: either a card in the top half (his room behind him) or full screen, with Juan cut out of his room and standing on top of the picture. Same captions, pause cuts, loudness (−14 LUFS) and safe zones as the ranking short. During full-screen pictures the cut-out is shown at 60% size in the bottom-left, with his body running off the bottom edge and his face inside the safe zone (Juan's call 2026-11-27, matching his own past shorts; numbers in `layout.json` `transparent.cutout`). Always call it Transparent Background, nothing else.
+Recording + pictures + a headline in, finished vertical video out. The headline shows in a black box for the first 3 seconds. After that each picture shows when Juan says its words: either a card in the top half (his room behind him) or full screen, with Juan cut out of his room and standing on top of the picture. Same captions, pause cuts, loudness (−14 LUFS) and safe zones as the ranking short. During full-screen pictures the cut-out is shown at 60% size in the bottom-left, with his body running off the bottom edge and his face inside the safe zone (Juan's call 2026-11-27, matching his own past shorts; numbers in `layout.json` `transparent.cutout`). Captions sit in a solid black box (Juan, 2026-11-28: white text alone was unreadable over busy pages). Always call it Transparent Background, nothing else.
 
 Code format name is `transparent`. Design: same spec as above.
 
