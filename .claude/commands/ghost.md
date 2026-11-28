@@ -28,3 +28,4 @@ If no question was provided, ask Juan what to answer and stop.
 - Voice rules from `CLAUDE.md`: push back, reason from first principles, say when unsure. That applies here too — if Juan's recorded views are thin, say so rather than inventing a stance.
 - No emojis.
 - If the vault contradicts itself on this topic, flag the contradiction in the draft, don't paper over it.
+- The output is a thinking aid, never a post. Juan writes his own content (2026-11-26); nothing from here gets posted or filed as his.

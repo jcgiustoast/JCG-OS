@@ -109,13 +109,15 @@ Totals: X ~22 + reposts (Max ~22) · LinkedIn 5 (Max 7) · Instagram 9 + stories
 
 Every carousel goes to Instagram the same day as LinkedIn, as Max does: Monday's on Monday, Wednesday's on Wednesday, Thursday's framework carousel on Thursday. The framework's summary infographic goes to Instagram on Friday.
 
-**The weekday X post at 19:55** is either a brand verdict (Juan writes 1–2 lines on a real brand's page) or a framework infographic (one part of a framework from his Notion ideas; Claude drafts it, Juan checks it). Juan picks the mix each Sunday; the first week he chose infographics Mon, Wed, Fri and verdicts Tue, Thu. The Sunday plan asks him; it never assumes he writes verdicts or notes lists.
+**The weekday X post at 19:55** is either a brand verdict (Juan writes 1–2 lines on a real brand's page) or a framework infographic (one part of a framework; Claude adapts the text from Juan's framework source, adding nothing, and Juan approves it). Juan picks the mix each Sunday; the first week he chose infographics Mon, Wed, Fri and verdicts Tue, Thu. The Sunday plan asks him; it never assumes he writes verdicts or notes lists.
 
-**Looks.** List carousels (Monday's checklist, Wednesday's "Pages worth stealing") look like X posts. Framework carousels and every infographic use his designed `/figma-post` look. Notes lists use the notes template in his Contenido Figma file (page "Notes list template"): a copy of Max's iPhone Notes screenshot, white with no purple, in a tall X version and a 4:5 version for Instagram and LinkedIn. Juan writes every list's words; Claude only puts them in.
+**Looks.** List carousels (Monday's checklist, Wednesday's "Pages worth stealing") look like X posts, built from the template in his Contenido Figma file (page "Template · Post look (X)", approved 2026-11-26). Framework carousels and every infographic use his designed `/figma-post` look. Notes lists use the notes template in his Contenido Figma file (page "Notes list template"): a copy of Max's iPhone Notes screenshot, white with no purple, in a tall X version and a 4:5 version for Instagram and LinkedIn. Juan writes every list's words; Claude only puts them in.
 
 **Shapes.** Carousels and infographics are 1080×1350 (4:5), the tallest shape the scheduler takes on Instagram. A notes list is taller than that, so on Instagram it uses the template's 4:5 version. X takes 4 images a post, so a carousel goes to X as the cover plus the 3 best slides. X takes video up to 2 min 20 s through the scheduler.
 
 **Stories.** From week 2, one brand page a day, so 7 a week: the week's verdict pages plus extra pages, or reuse the best ones on the other days. Week 1 has no Instagram, so no stories. Still to check: whether the scheduler can post Instagram stories. If it can't, Juan posts them by hand in the daytime.
+
+**Who writes what** (Juan, 2026-11-26). Juan writes the source of each piece: the long post, the long video script, a few bullets per short video, brand verdicts, notes lists; for the framework carousel, his article when one exists, else his bullets. Claude corrects a source one suggestion at a time (his sentence, the suggested one, why) and Juan says yes or no. Claude adapts the source into the smaller pieces (carousel slides, infographic text, short X posts, captions, YouTube descriptions), using his sentences and adding no idea, example or number that isn't in the source. Claude may recommend short X posts from his Notion ideas (the Monday take). Claude shows adapted pieces one at a time; nothing is posted or marked ready without Juan's yes. Bios: Claude suggests, Juan approves.
 
 **What Juan creates each week, and his hours** (one table; every ramp-week figure below is added up from it)
 
@@ -123,19 +125,19 @@ Every carousel goes to Instagram the same day as LinkedIn, as Max does: Monday's
 |---|---|---|
 | Long LinkedIn post (life/career story or idea) | 1 | 1–1.5 h |
 | Verdict on a brand page (Claude finds + screenshots) | 0–5, Juan picks each week | ~6 min each |
-| Framework infographic for X (Claude drafts from his framework) | the weekdays without a verdict | ~5 min each to check |
+| Framework infographic for X (Claude adapts the text from his framework source) | the weekdays without a verdict | ~5 min each to approve |
 | Notes list, his own words in the Figma notes template | 0–3, Juan picks each week | ~20 min each |
-| Framework for the carousel (or corrects Claude's draft from the source article) | 1 | ~1 h |
-| Short videos, one sitting: 3 one-page teardowns + 1 ranking/roundup (Claude preps pages + script); in week B one of the four is the keyword Reel | 4 (2 in ramp week 2) | ~3.5 h (~2 h for 2) |
+| Source for the framework carousel: his article when one exists, else his bullets; from week 4 his video script. He approves the slide text | 1 | ~1 h |
+| Short videos, one sitting: 3 one-page teardowns + 1 ranking/roundup (Juan writes a few bullets per video; Claude preps the pages); in week B one of the four is the keyword Reel | 4 (2 in ramp week 2) | ~4 h (~2.25 h for 2) |
 | Quote reactions on X, by hand | 3 | ~30 min |
 | X replies | 15 min/day | ~1.75 h |
-| Checking what Claude drafts: captions, sister posts, the Monday and Wednesday carousels, the infographics, the contrarian take, the Sunday list, the long X post | every post | ~1 h in week 1, ~1.5 h in week 2, ~2 h from week 3 |
+| Approving what Claude adapts from his sources, one piece at a time: captions, sister posts, the Monday and Wednesday carousels, the infographics, the long X post; plus the Monday take Claude recommends | every post | ~1.5 h in week 1, ~2 h in week 2, ~3 h from week 3 |
 | Resource post (week B Fridays) + setting up the automatic DM for the new keyword | 1 every other week | ~45 min |
 | A new Resource for a new topic (short checklist or Notion list) | 1 per topic, in its week A | 2–3 h |
 | Long YouTube video (every week from week 4, two per topic) | 1 | 10–18 h |
 | One-offs: automatic DM for CHECKLIST (week 2); verifying the YouTube channel by phone (week 3, before the first long video) | once | ~15 min each |
 
-Full speed: week A ~23–33 h, week B ~22–31 h. **27–37 h is the most Juan can spend.** Above 27 h, the Sunday plan warns; above 37 h, it drops pieces in this order until it fits: quote reactions → the ranking video → one notes list → a lighter YouTube video (screen-recorded tutorial instead of a brand study) → week B's YouTube video (week A's clip on X stays). Never dropped: the long post, the framework carousel, the Resource post, X replies. Juan can change the order. Estimates, to be checked in the Sunday review.
+Full speed: week A ~24.5–34.5 h, week B ~23.5–32.5 h. **27–37 h is the most Juan can spend.** Above 27 h, the Sunday plan warns; above 37 h, it drops pieces in this order until it fits: quote reactions → the ranking video → one notes list → a lighter YouTube video (screen-recorded tutorial instead of a brand study) → week B's YouTube video (week A's clip on X stays). Never dropped: the long post, the framework carousel, the Resource post, X replies. Juan can change the order. Estimates, to be checked in the Sunday review.
 
 **How each piece spreads**
 
@@ -147,7 +149,7 @@ Full speed: week A ~23–33 h, week B ~22–31 h. **27–37 h is the most Juan c
 - Video (×4) → same file to Reel, TikTok, Short, X; caption per platform.
 - Long YouTube video (week 4+) → Tue 17:00 + X "new video" post → its main framework becomes Thursday's carousel → in week B, a clip under 2:20 of week A's video goes on X with a link (Thu 14:00). No cut-downs to Shorts: Shorts are filmed on their own.
 - Quote reactions → X only, by hand, Tue/Wed/Thu 18:00.
-- From Notion ideas → Claude drafts Monday's contrarian take (it may be off the cycle's topic, as long as it's one of Juan's approved topics) and the Sunday life-lesson list (only when Juan has added life lessons to Notion; otherwise Sunday is skipped); Juan approves.
+- From Notion ideas → Claude recommends Monday's contrarian take (it may be off the cycle's topic, as long as it's one of Juan's approved topics); Juan approves or rewrites it. The Sunday life-lesson list is built only from the life lessons Juan added to Notion, in his words (none added, Sunday is skipped).
 - Free copies → Threads (every X post); X images to Instagram weeks later (in a 4:5 frame); old X winners auto-repost.
 
 **Two-week topic cycle**
@@ -180,11 +182,11 @@ Before each topic starts, Juan gives one YouTube idea per week of it (two per to
 
 | Week | What runs | Hours |
 |---|---|---|
-| 1 | LinkedIn: Mon checklist carousel, Tue long post, Thu framework carousel. X: weekday verdict or infographic, notes lists, quote reactions, contrarian take, the long X post, carousel images, Sunday list (if lessons). No Instagram, so no stories | ~6.75–7.25 |
-| 2 | + 2 videos (Mon, Fri), Instagram carousels + stories, Wednesday carousel, keyword auto-DM for CHECKLIST | ~9.5–10 |
-| 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 5. Verify the YouTube channel by phone | ~11.5–12 |
-| 4 | + YouTube long (product pages, week A), the new product page checklist, first format-cut review | ~23–33 |
-| 5 | Full calendar: + first Resource post and keyword Reel (product pages, week B), then every other Friday | ~22–31 |
+| 1 | LinkedIn: Mon checklist carousel, Tue long post, Thu framework carousel. X: weekday verdict or infographic, notes lists, quote reactions, contrarian take, the long X post, carousel images, Sunday list (if lessons). No Instagram, so no stories | ~7.25–7.75 |
+| 2 | + 2 videos (Mon, Fri), Instagram carousels + stories, Wednesday carousel, keyword auto-DM for CHECKLIST | ~10.25–10.75 |
+| 3 | Everything except YouTube and the Resource post: 4 videos, LinkedIn 5. Verify the YouTube channel by phone | ~13–13.5 |
+| 4 | + YouTube long (product pages, week A), the new product page checklist, first format-cut review | ~24.5–34.5 |
+| 5 | Full calendar: + first Resource post and keyword Reel (product pages, week B), then every other Friday | ~23.5–32.5 |
 
 The daily auto-reposts of old X winners start only once it's confirmed the scheduler can re-post old posts.
 
@@ -281,3 +283,5 @@ Juan has 37+ published articles across three properties. These are a foundation,
 - **2026-11-26:** YouTube long video confirmed weekly from week 4 (two per topic; week B gets its own video, week A's still goes native on X). Fixed leftover counts (LinkedIn 5, Instagram 9) and the calendar's Instagram column so every carousel posts the same day. Juan's call.
 - **2026-11-26:** Fixes from a dry run of a full-speed week, Juan's approved defaults: every calendar slot has a time and the 01:00 posts belong to the night after; subscriptions runs weeks 1–3 and product pages starts in week 4 (task: build the product page checklist before week 5's Friday), so the first Resource post is week 5; all three carousels every week; Wednesday's carousel on Instagram Wednesday; week B posts a clip under 2:20 of week A's video on X; no cut-downs to Shorts; keyword Reel is one of the four videos; contrarian take may be off-topic; Sunday list only when Juan has lessons in Notion; shapes (1080×1350, 4:5 frame for notes screenshots); stories check; one hours table with every piece and a drop order; first-ever week fallbacks; "free guide" → Resource.
 - **2026-11-26:** Fixes from a second dry run, Juan's calls: the weekday X post is a verdict or a framework infographic, Juan picks the mix each week (verdicts and notes lists are never assumed); notes lists use a Figma copy of Max's iPhone Notes look, Juan writes the words; list carousels look like X posts, framework carousels and infographics keep his designed look; long post order in weeks 1–3; holiday rule; week 1 has no stories and still makes its summary infographic; week 1 hours 6.75–7.25; ROAS example replaced.
+- **2026-11-26:** "Looks" now names the X-post carousel template (page "Template · Post look (X)" in Contenido), approved by Juan.
+- **2026-11-26:** Juan writes, Claude corrects and adapts (Juan's call): new "Who writes what" paragraph; Claude no longer drafts the infographics, the carousel, the take or the Sunday list; Juan writes bullets for each short video; hours table and the first five weeks raised by the bullets (~30 min) and one-at-a-time approving (~1 h at full speed).

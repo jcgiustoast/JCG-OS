@@ -25,7 +25,7 @@ Add under "## Five-Platform Formats", after "Live brand fix"; set `updated:`.
 - **Time:** About 6 minutes each (0–5 a week, Juan picks).
 
 ### Framework carousel
-- **What it is:** One framework as a carousel, built in Figma with `/figma-post`. Starts from the six framework ideas in Notion (growth formula, metric tree, 11 profitability levers, 7 habits, ICE, LTV). In video weeks it comes from Tuesday's video. Juan gives the framework or corrects Claude's draft from the source article.
+- **What it is:** One framework as a carousel, built in Figma with `/figma-post`. Starts from the six framework ideas in Notion (growth formula, metric tree, 11 profitability levers, 7 habits, ICE, LTV). In video weeks it comes from Tuesday's video. Juan gives the source: his article when one exists, else his bullets (in video weeks, his video script). Claude adapts it into the slide text, adding nothing, and Juan approves it before the build.
 - **Platforms:** LinkedIn and Instagram Thursday, X next Monday as images (cover + 3 best). Becomes one summary infographic. 1080×1350.
 - **Extra check:** On the cycle's topic. Last slide: "Comment [KEYWORD]" for the topic's resource.
 - **Time:** About 1 hour.
@@ -34,7 +34,7 @@ Add under "## Five-Platform Formats", after "Live brand fix"; set `updated:`.
 - **What it is:** One designed image, built with `/figma-post`. Either the summary of the week's framework carousel, the image for an idea long post, or one part of a framework for the weekday X post (on the days without a verdict).
 - **Platforms:** Instagram (Friday), X (Monday, with the carousel images; weekdays 19:55 for framework parts), LinkedIn (Tuesday's idea post). 1080×1350 (4:5), the tallest the scheduler takes on Instagram.
 - **Extra check:** Same as the piece it comes from.
-- **Time:** Claude makes it; Juan only approves it.
+- **Time:** Claude adapts the text from Juan's source and builds it; Juan approves the text, then the image (about 5 minutes).
 
 Also in this page (fixes from the dry run):
 - In "Quote reaction", change "Platforms:" to: `X (Tuesday, Wednesday and Thursday, 18:00 Madrid, posted by hand).`
@@ -72,7 +72,8 @@ A few pieces Juan makes, each reused sideways. Not long-to-short: Max films his 
 - **Long video (week 4+, weekly):** Tuesday 17:00, with an X "new video" post the same day → its main framework becomes Thursday's carousel → in week B, a clip under 2:20 of week A's video on X with a link. No cut-downs to Shorts: those are filmed on their own. Description: the topic's resource → the resources page → a MentorPass call → the next video. Ends naming the next video.
 - **Video (×4):** same file to Reel, TikTok, Short, X; caption per platform (Chain C).
 - **Quote reactions:** X only, by hand, Tuesday to Thursday 18:00.
-- **From Notion ideas:** Claude drafts Monday's contrarian take (may be off-topic, inside Juan's approved topics) and the Sunday life-lesson list (only when Juan has added lessons); Juan approves.
+- **From Notion ideas:** Claude recommends Monday's contrarian take (may be off-topic, inside Juan's approved topics); Juan approves or rewrites it. The Sunday life-lesson list is built only from the lessons Juan added, in his words.
+- **Who writes what (2026-11-26):** Juan writes every source (long post, long video script, a few bullets per short video, verdicts, notes lists, the carousel's article or bullets). Claude corrects it one suggestion at a time and adapts it into the other versions, adding nothing. Juan approves each version, one at a time.
 - **Free copies:** Threads gets every X post; X images go to Instagram weeks later; old X winners auto-repost (Chain F).
 
 Changelog line: `- **2026-11-26:** Chain C adds X and is never cut from a long video; every carousel on Instagram the same day; Chain E rewritten (weekly long video, clip on X, no cut-downs); added the weekly content v2 chains.`
